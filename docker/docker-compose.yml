@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: comicai-postgres
+    environment:
+      POSTGRES_USER: comicai
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: comicai_studio
+    ports:
+      - "5432:5432"
+    volumes:
+      - comicai_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  comicai_postgres_data:

@@ -37,3 +37,7 @@ out/
 # =========================
 *.log
 npm-debug.log*
+# Environment variables
+.env
+docker/.env
+backend/.env

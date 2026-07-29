@@ -1,10 +1,27 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
+
+type Project = {
+  id: string;
+  name: string;
+  content_type: string;
+  status: string;
+  created_at: string;
+};
 
 type BackendStatus = "checking" | "online" | "offline";
 
 export default function Home() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/projects/")
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data.projects);
+      });
+  }, []);
   const [backendStatus, setBackendStatus] = useState<BackendStatus>("checking");
   const [aiStatus, setAiStatus] = useState<BackendStatus>("checking");
 
@@ -69,9 +86,29 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex gap-3">
-              <button className="rounded-xl bg-white px-5 py-3 font-medium text-black transition hover:bg-white/90">
+              <p className="mt-4 text-sm text-white/50">
+                Total projects: {projects.length}
+              </p>
+              <div className="mt-6 space-y-3">
+                {projects.map((project) => (
+                  <Link
+                    key={project.id}
+                    href={`/projects/${project.id}`}
+                    className="rounded-xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <p className="font-medium">{project.name}</p>
+                    <p className="mt-1 text-sm text-white/50">
+                      {project.content_type} · {project.status}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/new-project"
+                className="rounded-xl bg-white px-5 py-3 font-medium text-black transition hover:bg-white/90"
+              >
                 New Project
-              </button>
+              </Link>
 
               <button className="rounded-xl border border-white/10 bg-white/5 px-5 py-3 font-medium text-white transition hover:bg-white/10">
                 Open Project
