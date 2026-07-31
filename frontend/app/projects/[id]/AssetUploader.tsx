@@ -11,6 +11,7 @@ interface Asset {
   url: string;
 }
 export default function AssetUploader({ projectId }: { projectId: string }) {
+  const PAGE_LIMIT = 9;
   const [files, setFiles] = useState<File[]>([]);
   const [assets, setAssets] = useState<Asset[]>([]);
   const [page, setPage] = useState(1);
@@ -21,7 +22,7 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
   const [selectedAssets, setSelectedAssets] = useState<string[]>([]);
   useEffect(() => {
     fetch(
-      `http://127.0.0.1:8000/assets/project/${projectId}?page=${page}&limit=9`,
+      `http://127.0.0.1:8000/assets/project/${projectId}?page=${page}&limit=${PAGE_LIMIT}`,
     )
       .then((response) => response.json())
       .then((data) => {
@@ -30,9 +31,13 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
         setTotalAssets(data.total);
       });
   }, [projectId, page]);
-  async function loadAssets() {
+
+  async function loadAssets(targetPage = page) {
     const response = await fetch(
-      `http://127.0.0.1:8000/assets/project/${projectId}?page=${page}&limit=10`,
+      `http://127.0.0.1:8000/assets/project/${projectId}?page=${targetPage}&limit=${PAGE_LIMIT}&t=${Date.now()}`,
+      {
+        cache: "no-store",
+      },
     );
 
     const data = await response.json();
@@ -65,7 +70,8 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
       const data = await response.json();
       console.log(data);
 
-      await loadAssets();
+      await loadAssets(page);
+
       setFiles([]);
       setMessage(`Uploaded ${files.length} images successfully.`);
     } catch (error) {
@@ -111,7 +117,7 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
 
       const remainingAssets = totalAssets - data.deleted_count;
 
-      if (page > 1 && remainingAssets <= (page - 1) * 10) {
+      if (page > 1 && remainingAssets <= (page - 1) * PAGE_LIMIT) {
         setPage(page - 1);
       } else {
         await loadAssets();
@@ -123,16 +129,20 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
   }
   return (
     <div className="mt-4">
-      <input
-        type="file"
-        accept="image/*"
-        multiple
-        onChange={(e) => {
-          if (e.target.files) {
-            setFiles(Array.from(e.target.files));
-          }
-        }}
-      />
+      <label className="inline-flex cursor-pointer items-center rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10">
+        + Thêm file
+        <input
+          type="file"
+          accept="image/*"
+          multiple
+          className="hidden"
+          onChange={(e) => {
+            if (e.target.files) {
+              setFiles(Array.from(e.target.files));
+            }
+          }}
+        />
+      </label>
 
       {files.length > 0 && (
         <p className="mt-3 text-sm text-white/60">
