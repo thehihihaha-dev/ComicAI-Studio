@@ -1,11 +1,8 @@
 from datetime import datetime
 
-from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
-
-class Base(DeclarativeBase):
-    pass
+from app.database import Base
 class Project(Base):
     __tablename__ = "projects"
 

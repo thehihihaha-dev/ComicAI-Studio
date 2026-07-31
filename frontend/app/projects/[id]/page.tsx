@@ -1,3 +1,4 @@
+import AssetUploader from "./AssetUploader";
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -24,6 +25,7 @@ export default async function ProjectDetailPage({
             <p className="mt-2 text-sm text-white/50">
               Upload images, PDF, ZIP or video.
             </p>
+            <AssetUploader projectId={id} />
           </div>
 
           <div className="rounded-xl border border-white/10 bg-white/5 p-5">

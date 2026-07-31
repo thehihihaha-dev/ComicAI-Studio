@@ -2,13 +2,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
 from app.routers.projects import router as projects_router
-
+from app.routers.assets import router as assets_router
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
     title="ComicAI Studio API",
     version="0.0.1",
 )
 app.include_router(projects_router)
+app.include_router(assets_router)
+
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 app.add_middleware(
     CORSMiddleware,
