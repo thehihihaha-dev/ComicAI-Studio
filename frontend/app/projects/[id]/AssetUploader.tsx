@@ -8,6 +8,7 @@ interface Asset {
   file_path: string;
   page_order: number;
   created_at: string;
+  status: string;
   url: string;
 }
 export default function AssetUploader({ projectId }: { projectId: string }) {
@@ -163,6 +164,9 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
       <p className="mt-4 text-sm text-white/50">
         Uploaded assets: {totalAssets}
       </p>
+      {totalAssets > 0 && (
+        <p className="mt-2 text-sm text-green-400">● Ready for AI</p>
+      )}
 
       <div className="mt-4 grid grid-cols-3 gap-3">
         {assets.map((asset) => (

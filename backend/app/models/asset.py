@@ -1,8 +1,7 @@
 from app.database import Base
-from sqlalchemy import String, Integer, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime
-
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 
 class Asset(Base):
     __tablename__ = "assets"
@@ -17,3 +16,4 @@ class Asset(Base):
     file_path: Mapped[str] = mapped_column(String, nullable=False)
     page_order: Mapped[int] = mapped_column(Integer, nullable=False)
     created_at: Mapped[datetime] = mapped_column(nullable=False)
+    status = Column(String, nullable=False, default="ready")

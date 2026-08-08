@@ -6,6 +6,15 @@ from datetime import datetime, timezone
 from app.database import SessionLocal
 from app.models.asset import Asset
 from sqlalchemy import func
+from app.services.asset_processor import (
+    natural_sort_key,
+    is_valid_image_filename,
+    is_valid_image_file,
+    ASSET_STATUS_READY,
+    ASSET_STATUS_PROCESSING,
+    ASSET_STATUS_FAILED,
+    ASSET_STATUS_EXCLUDED,
+)
 UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(exist_ok=True)
 
@@ -48,6 +57,7 @@ def get_project_assets(
         "file_path": asset.file_path,
         "page_order": asset.page_order,
         "created_at": asset.created_at,
+        "status": asset.status,
         "url": f"http://127.0.0.1:8000/{asset.file_path}",
     }
     for asset in assets
@@ -62,6 +72,46 @@ def get_project_assets(
     "limit": limit,
     "total_pages": total_pages,
 }
+@router.post("/project/{project_id}/process")
+def process_project_assets(project_id: str):
+    db = SessionLocal()
+
+    try:
+        assets = (
+            db.query(Asset)
+            .filter(
+                Asset.project_id == project_id,
+                Asset.status == ASSET_STATUS_READY,
+            )
+            .order_by(Asset.page_order.asc())
+            .all()
+        )
+
+        if not assets:
+            return {
+                "project_id": project_id,
+                "processed": 0,
+                "message": "No assets ready for processing",
+            }
+
+        for asset in assets:
+            asset.status = ASSET_STATUS_PROCESSING
+
+        db.commit()
+        
+        for asset in assets:
+            asset.status = ASSET_STATUS_READY
+
+        db.commit()
+
+        return {
+            "project_id": project_id,
+            "processed": len(assets),
+            "status": ASSET_STATUS_PROCESSING,
+        }
+
+    finally:
+        db.close()
 @router.post("/upload")
 async def upload_assets(
     project_id: str = Form(...),
@@ -75,8 +125,12 @@ async def upload_assets(
     .scalar()
     or 0
 )
+    files.sort(key=lambda file: natural_sort_key(file.filename))
 
     for index, file in enumerate(files, start=1):
+        if not is_valid_image_filename(file.filename):
+            continue
+
         stored_filename = f"{uuid4()}_{file.filename}"
         file_path = UPLOAD_DIR / stored_filename
 
@@ -93,8 +147,27 @@ async def upload_assets(
         content = await file.read()
         file_path.write_bytes(content)
 
+        if not is_valid_image_file(file_path):
+            file_path.unlink(missing_ok=True)
+            continue
+
         db.add(new_asset)
         saved_files.append(file.filename)
+
+    db.commit()
+    # Sort lại toàn bộ assets của project theo filename
+    all_assets = (
+        db.query(Asset)
+        .filter(Asset.project_id == project_id)
+        .all()
+    )
+
+    all_assets.sort(
+        key=lambda asset: natural_sort_key(asset.filename)
+    )
+
+    for order, asset in enumerate(all_assets, start=1):
+        asset.page_order = order
 
     db.commit()
     db.close()
