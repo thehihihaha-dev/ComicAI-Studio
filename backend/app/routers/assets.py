@@ -1,7 +1,13 @@
-from fastapi import APIRouter, UploadFile, File, Form
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from pathlib import Path
 from uuid import uuid4
 from datetime import datetime, timezone
+from app.services.ocr_service import (
+    extract_text_from_image,
+    extract_ocr_blocks,
+)
+import json
+
 
 from app.database import SessionLocal
 from app.models.asset import Asset
@@ -58,6 +64,8 @@ def get_project_assets(
         "page_order": asset.page_order,
         "created_at": asset.created_at,
         "status": asset.status,
+        "ocr_text": asset.ocr_text,
+        "ocr_blocks": json.loads(asset.ocr_blocks) if asset.ocr_blocks else [],
         "url": f"http://127.0.0.1:8000/{asset.file_path}",
     }
     for asset in assets
@@ -72,6 +80,62 @@ def get_project_assets(
     "limit": limit,
     "total_pages": total_pages,
 }
+@router.post("/{asset_id}/ocr")
+def process_single_asset(asset_id: str):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset:
+            raise HTTPException(
+                status_code=404,
+                detail="Asset not found",
+            )
+
+        asset.status = ASSET_STATUS_PROCESSING
+        db.commit()
+
+        try:
+            blocks = extract_ocr_blocks(asset.file_path)
+
+            asset.ocr_blocks = json.dumps(
+                blocks,
+                ensure_ascii=False,
+            )
+
+            asset.ocr_text = "\n".join(
+                block["text"]
+                for block in blocks
+                if block["text"].strip()
+            )
+
+            asset.status = ASSET_STATUS_READY
+            db.commit()
+
+            return {
+                "asset_id": asset.id,
+                "filename": asset.filename,
+                "status": asset.status,
+                "ocr_text": asset.ocr_text,
+                "ocr_blocks": blocks,
+            }
+
+        except Exception as error:
+            asset.status = ASSET_STATUS_FAILED
+            db.commit()
+
+            raise HTTPException(
+                status_code=500,
+                detail=str(error),
+            )
+
+    finally:
+        db.close()
 @router.post("/project/{project_id}/process")
 def process_project_assets(project_id: str):
     db = SessionLocal()
@@ -94,20 +158,40 @@ def process_project_assets(project_id: str):
                 "message": "No assets ready for processing",
             }
 
+        processed_count = 0
+        failed_count = 0
+
         for asset in assets:
             asset.status = ASSET_STATUS_PROCESSING
+            db.commit()
 
-        db.commit()
-        
-        for asset in assets:
-            asset.status = ASSET_STATUS_READY
+            try:
+                blocks = extract_ocr_blocks(asset.file_path)
 
-        db.commit()
+                asset.ocr_blocks = json.dumps(
+                    blocks,
+                    ensure_ascii=False,
+                )
+
+                asset.ocr_text = "\n".join(
+                    block["text"]
+                    for block in blocks
+                    if block["text"].strip()
+                )
+                asset.status = ASSET_STATUS_READY
+                processed_count += 1
+
+            except Exception as error:
+                print(f"OCR failed for {asset.filename}: {error}")
+                asset.status = ASSET_STATUS_FAILED
+                failed_count += 1
+
+            db.commit()
 
         return {
             "project_id": project_id,
-            "processed": len(assets),
-            "status": ASSET_STATUS_PROCESSING,
+            "processed": processed_count,
+            "failed": failed_count,
         }
 
     finally:

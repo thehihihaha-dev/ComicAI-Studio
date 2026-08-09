@@ -9,6 +9,12 @@ interface Asset {
   page_order: number;
   created_at: string;
   status: string;
+  ocr_text: string | null;
+  ocr_blocks: {
+    text: string;
+    confidence: number;
+    box: number[][];
+  }[];
   url: string;
 }
 export default function AssetUploader({ projectId }: { projectId: string }) {
