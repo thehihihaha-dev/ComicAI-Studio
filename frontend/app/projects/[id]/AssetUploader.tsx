@@ -27,6 +27,14 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
   const [selectedAssets, setSelectedAssets] = useState<string[]>([]);
+  const [ocrProgress, setOcrProgress] = useState({
+    status: "idle",
+    total: 0,
+    completed: 0,
+    processing: 0,
+    failed: 0,
+    percent: 0,
+  });
   useEffect(() => {
     fetch(
       `http://127.0.0.1:8000/assets/project/${projectId}?page=${page}&limit=${PAGE_LIMIT}`,
@@ -38,7 +46,25 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
         setTotalAssets(data.total);
       });
   }, [projectId, page]);
+  useEffect(() => {
+    async function loadProgress() {
+      const response = await fetch(
+        `http://127.0.0.1:8000/assets/project/${projectId}/progress`,
+        {
+          cache: "no-store",
+        },
+      );
 
+      const data = await response.json();
+      setOcrProgress(data);
+    }
+
+    loadProgress();
+
+    const interval = setInterval(loadProgress, 2000);
+
+    return () => clearInterval(interval);
+  }, [projectId]);
   async function loadAssets(targetPage = page) {
     const response = await fetch(
       `http://127.0.0.1:8000/assets/project/${projectId}?page=${targetPage}&limit=${PAGE_LIMIT}&t=${Date.now()}`,
@@ -134,6 +160,33 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
       setMessage("Delete failed. Please try again.");
     }
   }
+  async function startOcrProcessing() {
+    setMessage("Starting image analysis...");
+
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/assets/project/${projectId}/process`,
+        {
+          method: "POST",
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to start OCR");
+      }
+
+      const data = await response.json();
+
+      if (data.queued === 0) {
+        setMessage("No new images need processing.");
+      } else {
+        setMessage(`Analyzing ${data.queued} images...`);
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage("Could not start image analysis.");
+    }
+  }
   return (
     <div className="mt-4">
       <label className="inline-flex cursor-pointer items-center rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10">
@@ -170,7 +223,31 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
       <p className="mt-4 text-sm text-white/50">
         Uploaded assets: {totalAssets}
       </p>
-      {totalAssets > 0 && (
+      {totalAssets > 0 && ocrProgress.status !== "processing" && (
+        <button
+          onClick={startOcrProcessing}
+          className="mt-3 rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10"
+        >
+          Analyze Images
+        </button>
+      )}
+      {ocrProgress.status === "processing" && (
+        <div className="mt-3">
+          <p className="text-sm text-white/60">
+            Analyzing images... {ocrProgress.completed} / {ocrProgress.total}
+          </p>
+
+          <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full bg-white transition-all"
+              style={{ width: `${ocrProgress.percent}%` }}
+            />
+          </div>
+
+          <p className="mt-1 text-xs text-white/40">{ocrProgress.percent}%</p>
+        </div>
+      )}
+      {totalAssets > 0 && ocrProgress.status === "completed" && (
         <p className="mt-2 text-sm text-green-400">● Ready for AI</p>
       )}
 

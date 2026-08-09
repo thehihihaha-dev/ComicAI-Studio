@@ -1,4 +1,11 @@
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+from fastapi import (
+    APIRouter,
+    UploadFile,
+    File,
+    Form,
+    HTTPException,
+    BackgroundTasks,
+)
 from pathlib import Path
 from uuid import uuid4
 from datetime import datetime, timezone
@@ -136,8 +143,7 @@ def process_single_asset(asset_id: str):
 
     finally:
         db.close()
-@router.post("/project/{project_id}/process")
-def process_project_assets(project_id: str):
+def process_project_in_background(project_id: str):
     db = SessionLocal()
 
     try:
@@ -145,26 +151,13 @@ def process_project_assets(project_id: str):
             db.query(Asset)
             .filter(
                 Asset.project_id == project_id,
-                Asset.status == ASSET_STATUS_READY,
+                Asset.status == ASSET_STATUS_PROCESSING,
             )
             .order_by(Asset.page_order.asc())
             .all()
         )
 
-        if not assets:
-            return {
-                "project_id": project_id,
-                "processed": 0,
-                "message": "No assets ready for processing",
-            }
-
-        processed_count = 0
-        failed_count = 0
-
         for asset in assets:
-            asset.status = ASSET_STATUS_PROCESSING
-            db.commit()
-
             try:
                 blocks = extract_ocr_blocks(asset.file_path)
 
@@ -178,20 +171,116 @@ def process_project_assets(project_id: str):
                     for block in blocks
                     if block["text"].strip()
                 )
+
                 asset.status = ASSET_STATUS_READY
-                processed_count += 1
 
             except Exception as error:
-                print(f"OCR failed for {asset.filename}: {error}")
+                print(
+                    f"OCR failed for {asset.filename}: {error}"
+                )
+
                 asset.status = ASSET_STATUS_FAILED
-                failed_count += 1
 
             db.commit()
 
+    finally:
+        db.close()
+@router.post("/project/{project_id}/process")
+def process_project_assets(
+    project_id: str,
+    background_tasks: BackgroundTasks,
+):
+    db = SessionLocal()
+
+    try:
+        assets = (
+            db.query(Asset)
+            .filter(
+                Asset.project_id == project_id,
+                Asset.status == ASSET_STATUS_READY,
+                Asset.ocr_text.is_(None),
+            )
+            .order_by(Asset.page_order.asc())
+            .all()
+        )
+
+        if not assets:
+            return {
+                "project_id": project_id,
+                "queued": 0,
+                "message": "No assets ready for processing",
+            }
+
+        for asset in assets:
+            asset.status = ASSET_STATUS_PROCESSING
+
+        db.commit()
+
+        background_tasks.add_task(
+            process_project_in_background,
+            project_id,
+        )
+
         return {
             "project_id": project_id,
-            "processed": processed_count,
-            "failed": failed_count,
+            "queued": len(assets),
+            "status": "processing",
+            "message": "OCR processing started",
+        }
+
+    finally:
+        db.close()
+@router.get("/project/{project_id}/progress")
+def get_processing_progress(project_id: str):
+    db = SessionLocal()
+
+    try:
+        assets = (
+            db.query(Asset)
+            .filter(Asset.project_id == project_id)
+            .all()
+        )
+
+        total = len(assets)
+
+        processing = sum(
+            1 for asset in assets
+            if asset.status == ASSET_STATUS_PROCESSING
+        )
+
+        failed = sum(
+            1 for asset in assets
+            if asset.status == ASSET_STATUS_FAILED
+        )
+
+        completed = sum(
+            1 for asset in assets
+            if asset.ocr_text is not None
+        )
+
+        if processing > 0:
+            status = "processing"
+        elif failed > 0:
+            status = "completed_with_errors"
+        elif total > 0 and completed == total:
+            status = "completed"
+        else:
+            status = "idle"
+
+        percent = (
+            round((completed / total) * 100)
+            if total > 0
+            else 0
+        )
+
+        return {
+            "project_id": project_id,
+            "status": status,
+            "total": total,
+            "completed": completed,
+            "processing": processing,
+            "failed": failed,
+            "percent": percent,
         }
 
     finally:
