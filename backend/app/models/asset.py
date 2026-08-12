@@ -19,3 +19,28 @@ class Asset(Base):
     status = Column(String, nullable=False, default="ready")
     ocr_text = Column(Text, nullable=True)
     ocr_blocks = Column(Text, nullable=True)
+    vision_regions: Mapped[str | None] = mapped_column(
+        Text,
+        nullable=True,
+    )
+
+    reading_order: Mapped[str | None] = mapped_column(
+        Text,
+        nullable=True,
+    )
+
+    vision_status: Mapped[str] = mapped_column(
+        String,
+        nullable=False,
+        default="pending",
+    )
+    dialogues: Mapped[str | None] = mapped_column(
+    Text,
+    nullable=True,
+)
+
+    dialogue_status: Mapped[str] = mapped_column(
+        String,
+        nullable=False,
+        default="pending",
+    )

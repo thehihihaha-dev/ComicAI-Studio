@@ -15,6 +15,31 @@ interface Asset {
     confidence: number;
     box: number[][];
   }[];
+  vision_status: string;
+
+  vision_regions: {
+    id: number;
+    type: string;
+    block_ids: number[];
+    recovered?: boolean;
+    confidence?: number;
+  }[];
+
+  reading_order: number[];
+  dialogue_status: string;
+
+  dialogues: {
+    order: number;
+    region_id: number;
+    raw_text: string;
+    clean_text: string;
+    confidence: number;
+    needs_review: boolean;
+    reason: string;
+    ocr_confidence: number;
+    text_similarity: number;
+    correction_score: number;
+  }[];
   url: string;
 }
 export default function AssetUploader({ projectId }: { projectId: string }) {
@@ -67,7 +92,7 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
   }, [projectId]);
   async function loadAssets(targetPage = page) {
     const response = await fetch(
-      `http://127.0.0.1:8000/assets/project/${projectId}?page=${targetPage}&limit=${PAGE_LIMIT}&t=${Date.now()}`,
+      `http://127.0.0.1:8000/assets/project/${projectId}?page=${targetPage}&limit=${PAGE_LIMIT}`,
       {
         cache: "no-store",
       },
@@ -187,6 +212,68 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
       setMessage("Could not start image analysis.");
     }
   }
+  async function pollLayoutStatus(assetId: string) {
+    const interval = setInterval(async () => {
+      try {
+        const response = await fetch(
+          `http://127.0.0.1:8000/assets/project/${projectId}?page=${page}&limit=${PAGE_LIMIT}&t=${Date.now()}`,
+          {
+            cache: "no-store",
+          },
+        );
+
+        const data = await response.json();
+
+        const currentAsset = data.items.find(
+          (asset: Asset) => asset.id === assetId,
+        );
+
+        if (!currentAsset) return;
+
+        if (
+          currentAsset.vision_status === "completed" ||
+          currentAsset.vision_status === "failed"
+        ) {
+          clearInterval(interval);
+          await loadAssets();
+        }
+      } catch (error) {
+        console.error("Layout polling error:", error);
+      }
+    }, 2000);
+  }
+
+  async function analyzeLayout(assetId: string) {
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/assets/${assetId}/analyze-layout`,
+        {
+          method: "POST",
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to start layout analysis");
+      }
+
+      // Đổi UI sang processing ngay
+      setAssets((currentAssets) =>
+        currentAssets.map((asset) =>
+          asset.id === assetId
+            ? {
+                ...asset,
+                vision_status: "processing",
+              }
+            : asset,
+        ),
+      );
+
+      pollLayoutStatus(assetId);
+    } catch (error) {
+      console.error("Layout analysis error:", error);
+      setMessage("Could not analyze layout.");
+    }
+  }
   return (
     <div className="mt-4">
       <label className="inline-flex cursor-pointer items-center rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10">
@@ -271,6 +358,44 @@ export default function AssetUploader({ projectId }: { projectId: string }) {
             <p className="mt-2 text-center text-xs text-white/50">
               Page {asset.page_order}
             </p>
+            <button
+              onClick={(event) => {
+                event.stopPropagation();
+                analyzeLayout(asset.id);
+              }}
+              disabled={asset.vision_status === "processing"}
+              className="mt-2 w-full rounded-lg border border-white/20 px-2 py-2 text-xs text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {asset.vision_status === "processing"
+                ? "Analyzing Layout..."
+                : asset.vision_status === "completed"
+                  ? "Analyze Again"
+                  : "Analyze Layout"}
+            </button>
+
+            {asset.vision_status === "completed" && (
+              <div className="mt-2 text-center text-xs text-green-400">
+                Layout ✓ · {asset.vision_regions?.length ?? 0} regions
+              </div>
+            )}
+
+            {asset.vision_status === "completed" &&
+              asset.reading_order?.length > 0 && (
+                <div className="mt-1 text-center text-xs text-white/40">
+                  Order: {asset.reading_order.join(" → ")}
+                </div>
+              )}
+            {asset.dialogue_status === "completed" && (
+              <p className="mt-1 text-center text-xs text-green-400">
+                Dialogue ✓
+              </p>
+            )}
+
+            {asset.dialogue_status === "needs_review" && (
+              <p className="mt-1 text-center text-xs text-yellow-400">
+                Dialogue ⚠ Needs Review
+              </p>
+            )}
           </div>
         ))}
       </div>

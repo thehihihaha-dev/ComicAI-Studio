@@ -42,3 +42,5 @@ npm-debug.log*
 docker/.env
 backend/.env
 backend/uploads/
+# Temporary backend files
+backend/tmp/

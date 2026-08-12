@@ -1,3 +1,9 @@
+from app.services.dialogue_builder import build_dialogues
+from app.services.dialogue_corrector import (
+    correct_dialogues,
+    validate_corrected_dialogues,
+    calculate_correction_score,
+)
 from fastapi import (
     APIRouter,
     UploadFile,
@@ -14,6 +20,7 @@ from app.services.ocr_service import (
     extract_ocr_blocks,
 )
 import json
+from app.services.vision_analyzer import analyze_comic_page
 
 
 from app.database import SessionLocal
@@ -73,7 +80,28 @@ def get_project_assets(
         "status": asset.status,
         "ocr_text": asset.ocr_text,
         "ocr_blocks": json.loads(asset.ocr_blocks) if asset.ocr_blocks else [],
+        "vision_status": asset.vision_status,
+
+        "vision_regions": (
+            json.loads(asset.vision_regions)
+            if asset.vision_regions
+            else []
+        ),
+
+        "reading_order": (
+            json.loads(asset.reading_order)
+            if asset.reading_order
+            else []
+        ),
+        "dialogue_status": asset.dialogue_status,
+
+        "dialogues": (
+            json.loads(asset.dialogues)
+            if asset.dialogues
+            else []
+        ),
         "url": f"http://127.0.0.1:8000/{asset.file_path}",
+        
     }
     for asset in assets
 ]
@@ -143,6 +171,190 @@ def process_single_asset(asset_id: str):
 
     finally:
         db.close()
+def run_layout_analysis(asset_id: str):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset or not asset.ocr_blocks:
+            return
+
+        try:
+            ocr_blocks = json.loads(asset.ocr_blocks)
+
+            result = analyze_comic_page(
+                image_path=asset.file_path,
+                ocr_blocks=ocr_blocks,
+            )
+
+            if not result["validation"]["is_valid"]:
+                asset.vision_status = "failed"
+                db.commit()
+                return
+
+            vision_result = result["vision_result"]
+
+            asset.vision_regions = json.dumps(
+                vision_result["regions"],
+                ensure_ascii=False,
+            )
+
+            asset.reading_order = json.dumps(
+                vision_result["reading_order"],
+                ensure_ascii=False,
+            )
+
+            asset.vision_status = "completed"
+            db.commit()
+
+        except Exception as error:
+            print(
+                f"Layout analysis failed "
+                f"for {asset_id}: {error}"
+            )
+
+            asset.vision_status = "failed"
+            db.commit()
+
+    finally:
+        db.close()
+def run_dialogue_analysis(asset_id: str):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset:
+            return
+
+        try:
+            if (
+                not asset.ocr_blocks
+                or not asset.vision_regions
+                or not asset.reading_order
+            ):
+                asset.dialogue_status = "failed"
+                db.commit()
+                return
+
+            ocr_blocks = json.loads(asset.ocr_blocks)
+            regions = json.loads(asset.vision_regions)
+            reading_order = json.loads(asset.reading_order)
+
+            # 1. Ghép dialogue theo reading order
+            raw_dialogues = build_dialogues(
+                ocr_blocks,
+                regions,
+                reading_order,
+            )
+
+            # 2. AI sửa OCR
+            corrected_dialogues = correct_dialogues(
+                asset.file_path,
+                raw_dialogues,
+            )
+
+            # 3. Kiểm tra AI có phá cấu trúc không
+            validation = validate_corrected_dialogues(
+                raw_dialogues,
+                corrected_dialogues,
+            )
+
+            if not validation["is_valid"]:
+                asset.dialogue_status = "failed"
+                db.commit()
+                return
+
+            # 4. Tính score của ComicAI
+            scored_dialogues = calculate_correction_score(
+                raw_dialogues,
+                corrected_dialogues,
+                ocr_blocks,
+            )
+
+            # 5. Kiểm tra có câu nào cần review
+            needs_review = any(
+                dialogue.get("needs_review", False)
+                for dialogue in scored_dialogues
+            )
+
+            # 6. Lưu kết quả
+            asset.dialogues = json.dumps(
+                scored_dialogues,
+                ensure_ascii=False,
+            )
+
+            asset.dialogue_status = (
+                "needs_review"
+                if needs_review
+                else "completed"
+            )
+
+            db.commit()
+
+        except Exception as error:
+            print(
+                f"Dialogue analysis failed "
+                f"for {asset_id}: {error}"
+            )
+
+            asset.dialogue_status = "failed"
+            db.commit()
+
+    finally:
+        db.close()
+@router.post("/{asset_id}/analyze-layout")
+def analyze_asset_layout(
+    asset_id: str,
+    background_tasks: BackgroundTasks,
+):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset:
+            raise HTTPException(
+                status_code=404,
+                detail="Asset not found",
+            )
+
+        if not asset.ocr_blocks:
+            raise HTTPException(
+                status_code=400,
+                detail="Asset has no OCR blocks",
+            )
+
+        asset.vision_status = "processing"
+        db.commit()
+
+        background_tasks.add_task(
+            run_layout_analysis,
+            asset_id,
+        )
+
+        return {
+            "asset_id": asset.id,
+            "filename": asset.filename,
+            "vision_status": "processing",
+            "message": "Layout analysis started",
+        }
+
+    finally:
+        db.close()
 def process_project_in_background(project_id: str):
     db = SessionLocal()
 
@@ -182,6 +394,59 @@ def process_project_in_background(project_id: str):
                 asset.status = ASSET_STATUS_FAILED
 
             db.commit()
+
+    finally:
+        db.close()
+@router.post("/{asset_id}/build-dialogues")
+def build_asset_dialogues(
+    asset_id: str,
+    background_tasks: BackgroundTasks,
+):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset:
+            raise HTTPException(
+                status_code=404,
+                detail="Asset not found",
+            )
+
+        if asset.vision_status != "completed":
+            raise HTTPException(
+                status_code=400,
+                detail="Layout analysis is not completed",
+            )
+
+        if (
+            not asset.ocr_blocks
+            or not asset.vision_regions
+            or not asset.reading_order
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail="Asset is missing analysis data",
+            )
+
+        asset.dialogue_status = "processing"
+        db.commit()
+
+        background_tasks.add_task(
+            run_dialogue_analysis,
+            asset_id,
+        )
+
+        return {
+            "asset_id": asset.id,
+            "filename": asset.filename,
+            "dialogue_status": "processing",
+            "message": "Dialogue analysis started",
+        }
 
     finally:
         db.close()
