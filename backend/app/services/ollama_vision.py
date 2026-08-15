@@ -1,6 +1,7 @@
 import base64
 import json
 import urllib.request
+import urllib.error
 from typing import Any
 
 
@@ -25,7 +26,9 @@ def call_vision_model(
         "prompt": prompt,
         "images": [image_base64],
         "stream": False,
-        "format": "json",
+        "options": {
+            "num_ctx": 8192,
+        },
     }
 
     request = urllib.request.Request(
@@ -37,23 +40,50 @@ def call_vision_model(
         method="POST",
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=timeout,
-    ) as response:
-        result = json.loads(
-            response.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(
+            request,
+            timeout=timeout,
+        ) as response:
+            response_data = response.read().decode(
+                "utf-8"
+            )
+
+    except urllib.error.HTTPError as error:
+        error_body = error.read().decode(
+            "utf-8",
+            errors="replace",
         )
 
-    raw_response = result.get("response", "")
+        print("\n=== OLLAMA HTTP ERROR ===")
+        print("Status:", error.code)
+        print("Reason:", error.reason)
+        print("Body:", error_body)
+
+        raise
+
+    # Parse response của Ollama
+    result = json.loads(response_data)
+
+    raw_response = result.get(
+        "response",
+        "",
+    )
 
     if not raw_response.strip():
         raise RuntimeError(
             "Vision model returned an empty response"
         )
+    cleaned_response = raw_response.strip()
+
+    if cleaned_response.startswith("```"):
+        cleaned_response = cleaned_response.removeprefix("```json")
+        cleaned_response = cleaned_response.removeprefix("```")
+        cleaned_response = cleaned_response.removesuffix("```")
+        cleaned_response = cleaned_response.strip()
 
     try:
-        return json.loads(raw_response)
+        return json.loads(cleaned_response)
 
     except json.JSONDecodeError as error:
         raise RuntimeError(

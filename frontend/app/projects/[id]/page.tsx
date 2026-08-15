@@ -1,4 +1,5 @@
 import AssetUploader from "./AssetUploader";
+import ReviewQueue from "./ReviewQueue";
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -30,9 +31,12 @@ export default async function ProjectDetailPage({
 
           <div className="rounded-xl border border-white/10 bg-white/5 p-5">
             <h2 className="font-medium">AI Pipeline</h2>
+
             <p className="mt-2 text-sm text-white/50">
-              OCR, translation, summary, script and video.
+              OCR, dialogue recovery, review and story analysis.
             </p>
+
+            <ReviewQueue projectId={id} />
           </div>
         </div>
         <p className="mt-2 text-white/50">ComicAI Studio project workspace.</p>

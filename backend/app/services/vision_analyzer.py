@@ -45,10 +45,42 @@ def validate_vision_result(
                 seen_ids.add(block_id)
                 assigned_ids.append(block_id)
 
-    missing_ids = sorted(all_block_ids - seen_ids)
+    missing_ids = sorted(
+        all_block_ids - seen_ids
+    )
+
+    ignored_missing_ids = []
+    important_missing_ids = []
+
+    for block_id in missing_ids:
+        if not (
+            0 <= block_id < len(ocr_blocks)
+        ):
+            important_missing_ids.append(
+                block_id
+            )
+            continue
+
+        confidence = float(
+            ocr_blocks[block_id].get(
+                "confidence",
+                0.0,
+            )
+        )
+
+        # OCR confidence quá thấp:
+        # nhiều khả năng chỉ là text rác
+        if confidence < 0.20:
+            ignored_missing_ids.append(
+                block_id
+            )
+        else:
+            important_missing_ids.append(
+                block_id
+            )
 
     is_valid = (
-        len(missing_ids) == 0
+        len(important_missing_ids) == 0
         and len(duplicate_ids) == 0
         and len(invalid_ids) == 0
     )
@@ -58,8 +90,18 @@ def validate_vision_result(
         "total_blocks": len(all_block_ids),
         "assigned_blocks": len(seen_ids),
         "missing_block_ids": missing_ids,
-        "duplicate_block_ids": sorted(set(duplicate_ids)),
-        "invalid_block_ids": sorted(set(invalid_ids)),
+        "ignored_missing_block_ids": (
+            ignored_missing_ids
+        ),
+        "important_missing_block_ids": (
+            important_missing_ids
+        ),
+        "duplicate_block_ids": sorted(
+            set(duplicate_ids)
+        ),
+        "invalid_block_ids": sorted(
+            set(invalid_ids)
+        ),
     }
 def get_unassigned_blocks(
     validation: dict[str, Any],
@@ -91,6 +133,98 @@ def get_unassigned_blocks(
         )
 
     return unassigned_blocks
+def recover_missing_blocks(
+    image_path: str,
+    vision_result: dict[str, Any],
+    validation: dict[str, Any],
+    ocr_blocks: list[dict[str, Any]],
+) -> dict[str, Any]:
+    important_missing_ids = validation.get(
+        "important_missing_block_ids",
+        [],
+    )
+
+    if not important_missing_ids:
+        return vision_result
+
+    missing_blocks = []
+
+    for block_id in important_missing_ids:
+        if 0 <= block_id < len(ocr_blocks):
+            block = ocr_blocks[block_id]
+
+            missing_blocks.append(
+                {
+                    "id": block_id,
+                    "text": block.get("text", ""),
+                    "confidence": block.get(
+                        "confidence",
+                        0.0,
+                    ),
+                    "box": block.get("box", []),
+                }
+            )
+
+    prompt = f"""
+You are recovering OCR blocks that were not assigned
+to any text region on a comic page.
+
+CURRENT VISION RESULT:
+
+{json.dumps(
+    vision_result,
+    ensure_ascii=False,
+    indent=2,
+)}
+
+IMPORTANT UNASSIGNED OCR BLOCKS:
+
+{json.dumps(
+    missing_blocks,
+    ensure_ascii=False,
+    indent=2,
+)}
+
+Look at the original image carefully.
+
+For each unassigned block:
+- Determine whether it belongs to an existing region.
+- If yes, add its block id to that region.
+- If it belongs to a separate visible text region, create a new region.
+- Preserve all existing region ids when possible.
+- Do NOT invent OCR block ids.
+- Do NOT remove valid existing blocks.
+
+Allowed region types include:
+- speech_bubble
+- narration
+- thought
+- title
+- game_ui
+- note
+- translator_note
+- other
+
+Return ONLY valid JSON:
+
+{{
+  "regions": [
+    {{
+      "id": 1,
+      "type": "narration",
+      "block_ids": [0, 1]
+    }}
+  ],
+  "reading_order": [1]
+}}
+"""
+
+    recovered = call_vision_model(
+        image_path=image_path,
+        prompt=prompt,
+    )
+
+    return recovered
 def create_recovery_crop(
     image_path: str,
     blocks: list[dict[str, Any]],
@@ -560,6 +694,57 @@ Schema:
         vision_result,
         ocr_blocks,
     )
+    if (
+        len(vision_result.get("regions", [])) == 0
+        and len(vision_result.get("reading_order", [])) == 0
+    ):
+        low_confidence_count = sum(
+            1
+            for block in ocr_blocks
+            if float(block.get("confidence", 0.0)) < 0.40
+        )
+
+        low_confidence_ratio = (
+            low_confidence_count / len(ocr_blocks)
+            if ocr_blocks
+            else 1.0
+        )
+
+        if low_confidence_ratio >= 0.60:
+            return {
+                "vision_result": {
+                    "regions": [],
+                    "reading_order": [],
+                },
+                "validation": {
+                    **validation,
+                    "is_valid": True,
+                    "page_type": "no_dialogue",
+                    "reason": (
+                        "No dialogue regions detected and "
+                        "most OCR blocks have low confidence."
+                    ),
+                },
+                "recovery_results": [],
+            }
+    if not validation["is_valid"]:
+        important_missing_ids = validation.get(
+            "important_missing_block_ids",
+            [],
+        )
+
+        if important_missing_ids:
+            vision_result = recover_missing_blocks(
+                image_path=image_path,
+                vision_result=vision_result,
+                validation=validation,
+                ocr_blocks=ocr_blocks,
+            )
+
+            validation = validate_vision_result(
+                vision_result,
+                ocr_blocks,
+            )
 
     recovery_results = []
 

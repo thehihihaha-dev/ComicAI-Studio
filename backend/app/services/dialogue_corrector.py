@@ -1,5 +1,6 @@
 import json
 from typing import Any
+from difflib import SequenceMatcher
 
 from app.services.ollama_vision import call_vision_model
 
@@ -258,6 +259,223 @@ def calculate_correction_score(
                 "needs_review": (
                     model_needs_review
                     or score < 0.75
+                ),
+            }
+        )
+
+    return results
+def has_risky_text_change(
+    raw_text: str,
+    clean_text: str,
+) -> bool:
+    raw_words = raw_text.upper().split()
+    clean_words = clean_text.upper().split()
+
+    if raw_words == clean_words:
+        return False
+
+    # Nếu số từ thay đổi thì coi là đáng kiểm tra hơn
+    if len(raw_words) != len(clean_words):
+        return True
+
+    changed_words = 0
+
+    for raw_word, clean_word in zip(
+        raw_words,
+        clean_words,
+    ):
+        if raw_word != clean_word:
+            changed_words += 1
+
+    # Một câu rất ngắn mà AI đổi từ
+    # thì không nên auto-accept quá dễ dàng.
+    if len(raw_words) <= 12 and changed_words >= 1:
+        return True
+
+    # Câu dài: nếu AI thay nhiều từ thì recovery
+    if changed_words >= 2:
+        return True
+
+    return False
+def decide_dialogue_action(
+    dialogue: dict[str, Any],
+) -> dict[str, Any]:
+    score = float(
+        dialogue.get("correction_score", 0.0)
+    )
+
+    ocr_confidence = float(
+        dialogue.get("ocr_confidence", 0.0)
+    )
+
+    model_needs_review = dialogue.get(
+        "needs_review",
+        False,
+    )
+
+    raw_text = dialogue.get(
+        "raw_text",
+        "",
+    )
+
+    clean_text = dialogue.get(
+        "clean_text",
+        "",
+    )
+
+    risky_change = has_risky_text_change(
+        raw_text,
+        clean_text,
+    )
+
+    if (
+        score >= 0.90
+        and not model_needs_review
+        and not risky_change
+    ):
+        decision = "auto_accepted"
+
+    elif (
+        score >= 0.75
+        and ocr_confidence >= 0.65
+        and not model_needs_review
+        and not risky_change
+    ):
+        decision = "auto_accepted"
+
+    else:
+        decision = "needs_recovery"
+
+    return {
+        **dialogue,
+        "risky_text_change": risky_change,
+        "decision": decision,
+    }
+
+
+def apply_dialogue_decisions(
+    dialogues: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    return [
+        decide_dialogue_action(dialogue)
+        for dialogue in dialogues
+    ]
+def recover_dialogue(
+    image_path: str,
+    dialogue: dict[str, Any],
+    previous_dialogue: dict[str, Any] | None = None,
+    next_dialogue: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    context = {
+        "current": dialogue,
+        "previous": previous_dialogue,
+        "next": next_dialogue,
+    }
+
+    context_json = json.dumps(
+        context,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+    prompt = f"""
+You are performing a second-pass OCR recovery
+for a comic dialogue.
+
+The first pass was uncertain.
+
+CONTEXT:
+
+{context_json}
+
+Your task:
+- Look carefully at the original comic image.
+- Re-check ONLY the current dialogue.
+- Use surrounding dialogue context when helpful.
+- Preserve names and meaning.
+- Do NOT translate.
+- Do NOT summarize.
+- Do NOT invent text.
+- Return a better correction only if supported by the image/context.
+- If still uncertain, say so.
+
+Return ONLY valid JSON:
+
+{{
+  "region_id": {dialogue["region_id"]},
+  "recovered_text": "corrected text",
+  "confidence": 0.0,
+  "still_uncertain": true,
+  "reason": "explanation"
+}}
+"""
+
+    result = call_vision_model(
+        image_path=image_path,
+        prompt=prompt,
+    )
+
+    return result
+def recover_uncertain_dialogues(
+    image_path: str,
+    dialogues: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    results = []
+
+    for index, dialogue in enumerate(dialogues):
+        if dialogue.get("decision") != "needs_recovery":
+            results.append(dialogue)
+            continue
+
+        previous_dialogue = (
+            dialogues[index - 1]
+            if index > 0
+            else None
+        )
+
+        next_dialogue = (
+            dialogues[index + 1]
+            if index + 1 < len(dialogues)
+            else None
+        )
+
+        recovery = recover_dialogue(
+            image_path=image_path,
+            dialogue=dialogue,
+            previous_dialogue=previous_dialogue,
+            next_dialogue=next_dialogue,
+        )
+
+        recovered_text = recovery.get(
+            "recovered_text",
+            dialogue.get("clean_text", ""),
+        )
+
+        confidence = float(
+            recovery.get("confidence", 0.0)
+        )
+
+        still_uncertain = recovery.get(
+            "still_uncertain",
+            True,
+        )
+
+        results.append(
+            {
+                **dialogue,
+                "recovered_text": recovered_text,
+                "recovery_confidence": confidence,
+                "recovery_reason": recovery.get(
+                    "reason",
+                    "",
+                ),
+                "decision": (
+                    "auto_recovered"
+                    if (
+                        confidence >= 0.90
+                        and not still_uncertain
+                    )
+                    else "needs_review"
                 ),
             }
         )

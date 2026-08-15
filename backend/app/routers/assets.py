@@ -1,8 +1,11 @@
 from app.services.dialogue_builder import build_dialogues
+from app.models.dialogue_ground_truth import DialogueGroundTruth
 from app.services.dialogue_corrector import (
     correct_dialogues,
     validate_corrected_dialogues,
     calculate_correction_score,
+    apply_dialogue_decisions,
+    recover_uncertain_dialogues,
 )
 from fastapi import (
     APIRouter,
@@ -11,6 +14,7 @@ from fastapi import (
     Form,
     HTTPException,
     BackgroundTasks,
+    Body,
 )
 from pathlib import Path
 from uuid import uuid4
@@ -193,11 +197,36 @@ def run_layout_analysis(asset_id: str):
             )
 
             if not result["validation"]["is_valid"]:
+                print(
+                    f"\n=== VISION VALIDATION FAILED: {asset.filename} ==="
+                )
+
+                print(
+                    json.dumps(
+                        result["validation"],
+                        ensure_ascii=False,
+                        indent=2,
+                    )
+                )
+
+                print("\n=== VISION RESULT ===")
+
+                print(
+                    json.dumps(
+                        result.get("vision_result", {}),
+                        ensure_ascii=False,
+                        indent=2,
+                    )
+                )
+
                 asset.vision_status = "failed"
                 db.commit()
                 return
 
             vision_result = result["vision_result"]
+            page_type = result["validation"].get(
+                "page_type"
+            )
 
             asset.vision_regions = json.dumps(
                 vision_result["regions"],
@@ -209,7 +238,11 @@ def run_layout_analysis(asset_id: str):
                 ensure_ascii=False,
             )
 
-            asset.vision_status = "completed"
+            asset.vision_status = (
+                "no_dialogue"
+                if page_type == "no_dialogue"
+                else "completed"
+            )
             db.commit()
 
         except Exception as error:
@@ -280,16 +313,24 @@ def run_dialogue_analysis(asset_id: str):
                 corrected_dialogues,
                 ocr_blocks,
             )
+            decided_dialogues = apply_dialogue_decisions(
+                scored_dialogues,
+            )
+
+            final_dialogues = recover_uncertain_dialogues(
+                image_path=asset.file_path,
+                dialogues=decided_dialogues,
+            )
 
             # 5. Kiểm tra có câu nào cần review
             needs_review = any(
-                dialogue.get("needs_review", False)
-                for dialogue in scored_dialogues
+                dialogue.get("decision") == "needs_review"
+                for dialogue in final_dialogues
             )
 
             # 6. Lưu kết quả
             asset.dialogues = json.dumps(
-                scored_dialogues,
+                final_dialogues,
                 ensure_ascii=False,
             )
 
@@ -662,3 +703,164 @@ def delete_asset(asset_id: str):
     db.close()
 
     return {"message": "Asset deleted successfully"}
+@router.get("/project/{project_id}/review-queue")
+def get_review_queue(project_id: str):
+    db = SessionLocal()
+
+    try:
+        assets = (
+            db.query(Asset)
+            .filter(Asset.project_id == project_id)
+            .all()
+        )
+
+        review_items = []
+
+        for asset in assets:
+            if not asset.dialogues:
+                continue
+
+            try:
+                dialogues = json.loads(asset.dialogues)
+            except (json.JSONDecodeError, TypeError):
+                continue
+
+            for dialogue in dialogues:
+                if dialogue.get("decision") != "needs_review":
+                    continue
+
+                review_items.append(
+                    {
+                        "asset_id": str(asset.id),
+                        "filename": asset.filename,
+                        "page_order": asset.page_order,
+                        "region_id": dialogue.get("region_id"),
+                        "raw_text": dialogue.get("raw_text"),
+                        "clean_text": dialogue.get("clean_text"),
+                        "recovered_text": dialogue.get(
+                            "recovered_text"
+                        ),
+                        "correction_score": dialogue.get(
+                            "correction_score"
+                        ),
+                        "recovery_confidence": dialogue.get(
+                            "recovery_confidence"
+                        ),
+                        "reason": dialogue.get(
+                            "recovery_reason",
+                            dialogue.get("reason", ""),
+                        ),
+                        "image_url": (
+                            f"http://127.0.0.1:8000/"
+                            f"{asset.file_path}"
+                        ),
+                    }
+                )
+
+        return {
+            "project_id": project_id,
+            "review_count": len(review_items),
+            "items": review_items,
+        }
+
+    finally:
+        db.close()
+@router.post("/{asset_id}/dialogues/{region_id}/verify")
+def verify_dialogue(
+    asset_id: str,
+    region_id: int,
+    verified_text: str = Body(..., embed=True),
+):
+    db = SessionLocal()
+
+    try:
+        asset = (
+            db.query(Asset)
+            .filter(Asset.id == asset_id)
+            .first()
+        )
+
+        if not asset:
+            raise HTTPException(
+                status_code=404,
+                detail="Asset not found",
+            )
+
+        if not asset.dialogues:
+            raise HTTPException(
+                status_code=400,
+                detail="Asset has no dialogues",
+            )
+
+        dialogues = json.loads(asset.dialogues)
+
+        target = None
+
+        for dialogue in dialogues:
+            if dialogue.get("region_id") == region_id:
+                target = dialogue
+                break
+
+        if target is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Dialogue region not found",
+            )
+
+        clean_verified_text = verified_text.strip()
+
+        if not clean_verified_text:
+            raise HTTPException(
+                status_code=400,
+                detail="Verified text cannot be empty",
+            )
+
+        target["verified_text"] = clean_verified_text
+        target["human_verified"] = True
+        target["decision"] = "verified"
+
+        asset.dialogues = json.dumps(
+            dialogues,
+            ensure_ascii=False,
+        )
+
+        still_needs_review = any(
+            dialogue.get("decision") == "needs_review"
+            for dialogue in dialogues
+        )
+
+        asset.dialogue_status = (
+            "needs_review"
+            if still_needs_review
+            else "completed"
+        )
+        ground_truth = DialogueGroundTruth(
+            asset_id=asset.id,
+            region_id=region_id,
+            raw_text=target.get("raw_text", ""),
+            ai_text=(
+                target.get("recovered_text")
+                or target.get("clean_text")
+            ),
+            verified_text=clean_verified_text,
+            correction_score=target.get(
+                "correction_score"
+            ),
+            recovery_confidence=target.get(
+                "recovery_confidence"
+            ),
+        )
+
+        db.add(ground_truth)
+        db.commit()
+
+        return {
+            "asset_id": asset.id,
+            "region_id": region_id,
+            "verified_text": clean_verified_text,
+            "decision": "verified",
+            "dialogue_status": asset.dialogue_status,
+        }
+
+    finally:
+        db.close()
