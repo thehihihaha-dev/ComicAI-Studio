@@ -1,6 +1,7 @@
 import json
-from typing import Any
+from collections import Counter
 from difflib import SequenceMatcher
+from typing import Any
 
 from app.services.ollama_vision import call_vision_model
 
@@ -77,6 +78,16 @@ def validate_corrected_dialogues(
         for dialogue in original_dialogues
     }
 
+    corrected_region_ids = [
+        dialogue.get("region_id")
+        for dialogue in corrected_dialogues
+    ]
+    duplicate_region_ids = sorted(
+        region_id
+        for region_id, count in Counter(corrected_region_ids).items()
+        if count > 1 and region_id is not None
+    )
+
     corrected_map = {
         dialogue.get("region_id"): dialogue
         for dialogue in corrected_dialogues
@@ -85,7 +96,9 @@ def validate_corrected_dialogues(
     missing_region_ids = []
     invalid_region_ids = []
     order_mismatches = []
+    raw_text_mismatches = []
     empty_clean_text = []
+    invalid_confidence_region_ids = []
 
     # Region mà AI tự bịa thêm
     for region_id in corrected_map:
@@ -109,17 +122,31 @@ def validate_corrected_dialogues(
                 }
             )
 
+        if corrected.get("raw_text") != original.get("raw_text"):
+            raw_text_mismatches.append(region_id)
+
         clean_text = corrected.get("clean_text", "")
 
         if not isinstance(clean_text, str) or not clean_text.strip():
             empty_clean_text.append(region_id)
 
+        confidence = corrected.get("confidence")
+        if (
+            not isinstance(confidence, (int, float))
+            or isinstance(confidence, bool)
+            or not 0.0 <= float(confidence) <= 1.0
+        ):
+            invalid_confidence_region_ids.append(region_id)
+
     is_valid = (
         len(corrected_dialogues) == len(original_dialogues)
         and not missing_region_ids
         and not invalid_region_ids
+        and not duplicate_region_ids
         and not order_mismatches
+        and not raw_text_mismatches
         and not empty_clean_text
+        and not invalid_confidence_region_ids
     )
 
     return {
@@ -128,8 +155,11 @@ def validate_corrected_dialogues(
         "total_corrected": len(corrected_dialogues),
         "missing_region_ids": missing_region_ids,
         "invalid_region_ids": invalid_region_ids,
+        "duplicate_region_ids": duplicate_region_ids,
         "order_mismatches": order_mismatches,
+        "raw_text_mismatches": raw_text_mismatches,
         "empty_clean_text": empty_clean_text,
+        "invalid_confidence_region_ids": invalid_confidence_region_ids,
     }
 def evaluate_correction_safety(
     corrected_dialogues: list[dict[str, Any]],
@@ -172,9 +202,6 @@ def evaluate_correction_safety(
         "review_count": len(review_region_ids),
         "review_items": review_items,
     }
-from difflib import SequenceMatcher
-
-
 def calculate_correction_score(
     original_dialogues: list[dict[str, Any]],
     corrected_dialogues: list[dict[str, Any]],
@@ -360,6 +387,38 @@ def apply_dialogue_decisions(
         decide_dialogue_action(dialogue)
         for dialogue in dialogues
     ]
+
+
+def apply_verified_ground_truth(
+    dialogues: list[dict[str, Any]],
+    verified_text_by_region: dict[int, str],
+) -> list[dict[str, Any]]:
+    results = []
+
+    for dialogue in dialogues:
+        region_id = dialogue.get("region_id")
+        verified_text = verified_text_by_region.get(region_id)
+
+        if not isinstance(verified_text, str) or not verified_text.strip():
+            results.append(dialogue)
+            continue
+
+        final_text = verified_text.strip()
+        results.append(
+            {
+                **dialogue,
+                "pre_verification_text": dialogue.get("clean_text", ""),
+                "clean_text": final_text,
+                "verified_text": final_text,
+                "human_verified": True,
+                "needs_review": False,
+                "decision": "verified",
+            }
+        )
+
+    return results
+
+
 def recover_dialogue(
     image_path: str,
     dialogue: dict[str, Any],
@@ -451,19 +510,30 @@ def recover_uncertain_dialogues(
             dialogue.get("clean_text", ""),
         )
 
-        confidence = float(
-            recovery.get("confidence", 0.0)
-        )
+        try:
+            confidence = float(recovery.get("confidence", 0.0))
+        except (TypeError, ValueError):
+            confidence = 0.0
 
-        still_uncertain = recovery.get(
-            "still_uncertain",
-            True,
+        confidence = max(0.0, min(1.0, confidence))
+
+        still_uncertain = recovery.get("still_uncertain") is not False
+        if recovery.get("region_id") != dialogue.get("region_id"):
+            still_uncertain = True
+            confidence = 0.0
+
+        effective_text = (
+            recovered_text.strip()
+            if isinstance(recovered_text, str) and recovered_text.strip()
+            else dialogue.get("clean_text", "")
         )
 
         results.append(
             {
                 **dialogue,
-                "recovered_text": recovered_text,
+                "initial_clean_text": dialogue.get("clean_text", ""),
+                "clean_text": effective_text,
+                "recovered_text": effective_text,
                 "recovery_confidence": confidence,
                 "recovery_reason": recovery.get(
                     "reason",

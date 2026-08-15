@@ -2,6 +2,7 @@ from typing import Any
 from pathlib import Path
 from PIL import Image
 import json
+import tempfile
 
 from app.services.ollama_vision import call_vision_model
 
@@ -367,25 +368,31 @@ def recover_dialogue_regions(
         missing_blocks,
     )
 
-    crops = create_recovery_crops(
-        image_path,
-        groups,
-    )
-
     recovery_results = []
 
-    for crop, group in zip(crops, groups):
-        block_ids = [
-            block["id"]
-            for block in group
-        ]
+    Path("tmp").mkdir(exist_ok=True)
+    with tempfile.TemporaryDirectory(
+        prefix="vision-recovery-",
+        dir="tmp",
+    ) as recovery_dir:
+        crops = create_recovery_crops(
+            image_path,
+            groups,
+            output_dir=recovery_dir,
+        )
 
-        texts = [
-            block.get("text", "")
-            for block in group
-        ]
+        for crop, group in zip(crops, groups):
+            block_ids = [
+                block["id"]
+                for block in group
+            ]
 
-        prompt = f"""
+            texts = [
+                block.get("text", "")
+                for block in group
+            ]
+
+            prompt = f"""
 You are validating a cropped region from a comic page.
 
 OCR detected these blocks inside or near this crop:
@@ -411,12 +418,12 @@ Return ONLY valid JSON:
 }}
 """
 
-        result = call_vision_model(
-            image_path=crop["crop_path"],
-            prompt=prompt,
-        )
+            result = call_vision_model(
+                image_path=crop["crop_path"],
+                prompt=prompt,
+            )
 
-        recovery_results.append(result)
+            recovery_results.append(result)
 
     return recovery_results
 def merge_recovered_regions(

@@ -75,9 +75,11 @@ export default function ReviewQueue({ projectId }: { projectId: string }) {
     }
 
     void fetchReviewQueue();
+    const interval = window.setInterval(fetchReviewQueue, 3000);
 
     return () => {
       cancelled = true;
+      window.clearInterval(interval);
     };
   }, [projectId]);
 

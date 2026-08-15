@@ -77,10 +77,13 @@ def call_vision_model(
     cleaned_response = raw_response.strip()
 
     if cleaned_response.startswith("```"):
-        cleaned_response = cleaned_response.removeprefix("```json")
-        cleaned_response = cleaned_response.removeprefix("```")
-        cleaned_response = cleaned_response.removesuffix("```")
-        cleaned_response = cleaned_response.strip()
+        response_lines = cleaned_response.splitlines()
+        response_lines = response_lines[1:]
+
+        if response_lines and response_lines[-1].strip() == "```":
+            response_lines = response_lines[:-1]
+
+        cleaned_response = "\n".join(response_lines).strip()
 
     try:
         return json.loads(cleaned_response)

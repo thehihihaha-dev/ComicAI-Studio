@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 import uuid
 
-from sqlalchemy import String, Text, Float, DateTime, ForeignKey
+from sqlalchemy import DateTime, Float, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database import Base
@@ -9,6 +9,13 @@ from app.database import Base
 
 class DialogueGroundTruth(Base):
     __tablename__ = "dialogue_ground_truths"
+    __table_args__ = (
+        UniqueConstraint(
+            "asset_id",
+            "region_id",
+            name="uq_dialogue_ground_truth_asset_region",
+        ),
+    )
 
     id: Mapped[str] = mapped_column(
         String,
@@ -18,7 +25,7 @@ class DialogueGroundTruth(Base):
 
     asset_id: Mapped[str] = mapped_column(
         String,
-        ForeignKey("assets.id"),
+        ForeignKey("assets.id", ondelete="CASCADE"),
         nullable=False,
         index=True,
     )

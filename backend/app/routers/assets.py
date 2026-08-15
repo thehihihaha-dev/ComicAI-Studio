@@ -5,6 +5,7 @@ from app.services.dialogue_corrector import (
     validate_corrected_dialogues,
     calculate_correction_score,
     apply_dialogue_decisions,
+    apply_verified_ground_truth,
     recover_uncertain_dialogues,
 )
 from fastapi import (
@@ -29,6 +30,7 @@ from app.services.vision_analyzer import analyze_comic_page
 
 from app.database import SessionLocal
 from app.models.asset import Asset
+from app.models.project import Project  # Ensure projects table is in Base metadata.
 from sqlalchemy import func
 from app.services.asset_processor import (
     natural_sort_key,
@@ -46,6 +48,8 @@ router = APIRouter(
     prefix="/assets",
     tags=["Assets"],
 )
+
+
 @router.get("/")
 def get_assets():
     return {"message": "Assets API is working"}
@@ -243,6 +247,13 @@ def run_layout_analysis(asset_id: str):
                 if page_type == "no_dialogue"
                 else "completed"
             )
+
+            if page_type == "no_dialogue":
+                asset.dialogues = json.dumps([])
+                asset.dialogue_status = "completed"
+            else:
+                asset.dialogues = None
+                asset.dialogue_status = "pending"
             db.commit()
 
         except Exception as error:
@@ -322,6 +333,19 @@ def run_dialogue_analysis(asset_id: str):
                 dialogues=decided_dialogues,
             )
 
+            ground_truth_rows = (
+                db.query(DialogueGroundTruth)
+                .filter(DialogueGroundTruth.asset_id == asset.id)
+                .all()
+            )
+            final_dialogues = apply_verified_ground_truth(
+                final_dialogues,
+                {
+                    row.region_id: row.verified_text
+                    for row in ground_truth_rows
+                },
+            )
+
             # 5. Kiểm tra có câu nào cần review
             needs_review = any(
                 dialogue.get("decision") == "needs_review"
@@ -348,6 +372,10 @@ def run_dialogue_analysis(asset_id: str):
                 f"for {asset_id}: {error}"
             )
 
+            db.rollback()
+            asset = db.get(Asset, asset_id)
+            if asset is None:
+                return
             asset.dialogue_status = "failed"
             db.commit()
 
@@ -380,6 +408,8 @@ def analyze_asset_layout(
             )
 
         asset.vision_status = "processing"
+        asset.dialogues = None
+        asset.dialogue_status = "pending"
         db.commit()
 
         background_tasks.add_task(
@@ -655,6 +685,8 @@ async def upload_assets(
         "files": saved_files,
         "project_id": project_id,
     }
+
+
 @router.delete("/batch/")
 def delete_assets_batch(asset_ids: list[str]):
     db = SessionLocal()
@@ -815,6 +847,8 @@ def verify_dialogue(
                 detail="Verified text cannot be empty",
             )
 
+        target["pre_verification_text"] = target.get("clean_text", "")
+        target["clean_text"] = clean_verified_text
         target["verified_text"] = clean_verified_text
         target["human_verified"] = True
         target["decision"] = "verified"
@@ -834,22 +868,38 @@ def verify_dialogue(
             if still_needs_review
             else "completed"
         )
-        ground_truth = DialogueGroundTruth(
-            asset_id=asset.id,
-            region_id=region_id,
-            raw_text=target.get("raw_text", ""),
-            ai_text=(
-                target.get("recovered_text")
-                or target.get("clean_text")
-            ),
-            verified_text=clean_verified_text,
-            correction_score=target.get(
-                "correction_score"
-            ),
-            recovery_confidence=target.get(
-                "recovery_confidence"
-            ),
+        ground_truth = (
+            db.query(DialogueGroundTruth)
+            .filter(
+                DialogueGroundTruth.asset_id == asset.id,
+                DialogueGroundTruth.region_id == region_id,
+            )
+            .first()
         )
+
+        ai_text = (
+            target.get("recovered_text")
+            or target.get("pre_verification_text")
+        )
+
+        if ground_truth is None:
+            ground_truth = DialogueGroundTruth(
+                asset_id=asset.id,
+                region_id=region_id,
+                raw_text=target.get("raw_text", ""),
+                ai_text=ai_text,
+                verified_text=clean_verified_text,
+                correction_score=target.get("correction_score"),
+                recovery_confidence=target.get("recovery_confidence"),
+            )
+        else:
+            ground_truth.raw_text = target.get("raw_text", "")
+            ground_truth.ai_text = ai_text
+            ground_truth.verified_text = clean_verified_text
+            ground_truth.correction_score = target.get("correction_score")
+            ground_truth.recovery_confidence = target.get(
+                "recovery_confidence"
+            )
 
         db.add(ground_truth)
         db.commit()
