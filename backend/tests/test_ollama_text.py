@@ -25,6 +25,20 @@ class OllamaTextTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "empty response"):
             call_text_model("prompt")
 
+    @patch("app.services.ollama_text.urllib.request.urlopen")
+    def test_json_mode_sets_ollama_format(self, urlopen):
+        response = MagicMock()
+        response.read.return_value = json.dumps(
+            {"response": "{\"decisions\": []}"}
+        ).encode()
+        urlopen.return_value.__enter__.return_value = response
+
+        call_text_model("prompt", json_mode=True)
+
+        request = urlopen.call_args.args[0]
+        payload = json.loads(request.data.decode())
+        self.assertEqual(payload["format"], "json")
+
 
 if __name__ == "__main__":
     unittest.main()

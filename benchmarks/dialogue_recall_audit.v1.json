@@ -1,0 +1,60 @@
+{
+  "snapshot_version": "dialogue_recall_audit.v1",
+  "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+  "oracle_source": "human_visual_inspection",
+  "notes": "Approximate boxes are audit-only and must never be imported by production code.",
+  "pages": [
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "visible_counts": {"dialogue": 3, "narration": 1, "thought": 0, "game_ui": 0, "obvious_sfx": 3},
+      "important_ocr_blocks": 14,
+      "assigned_important_ocr_blocks": 14,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "CORRECT",
+      "expected_regions": [
+        {"audit_id": "p1_b1", "role": "dialogue", "approx_box": [95, 370, 265, 585], "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p1_n1", "role": "narration", "approx_box": [380, 775, 515, 1000], "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p1_b2", "role": "dialogue", "approx_box": [715, 760, 815, 890], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p1_b3", "role": "dialogue", "approx_box": [570, 770, 710, 965], "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    },
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "visible_counts": {"dialogue": 4, "narration": 4, "thought": 0, "game_ui": 0, "obvious_sfx": 7},
+      "important_ocr_blocks": 35,
+      "assigned_important_ocr_blocks": 35,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "PARTIALLY_CORRECT",
+      "expected_regions": [
+        {"audit_id": "p2_n1", "role": "narration", "approx_box": [655, 120, 780, 330], "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b1", "role": "dialogue", "approx_box": [110, 335, 270, 530], "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b2", "role": "dialogue", "approx_box": [615, 345, 725, 495], "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n2", "role": "narration", "approx_box": [275, 630, 415, 840], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n3", "role": "narration", "approx_box": [105, 725, 245, 930], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b3", "role": "dialogue", "approx_box": [190, 895, 260, 975], "required": true, "detected_region_ids": [], "classification": "OCR_MISSING", "text_quality": "UNREADABLE", "note": "Visible standalone 'Hãy' has no OCR block."},
+        {"audit_id": "p2_b4", "role": "dialogue", "approx_box": [345, 895, 445, 1005], "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n4", "role": "narration", "approx_box": [625, 650, 805, 875], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    },
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg",
+      "visible_counts": {"dialogue": 7, "narration": 3, "thought": 0, "game_ui": 0, "obvious_sfx": 0},
+      "important_ocr_blocks": 29,
+      "assigned_important_ocr_blocks": 29,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "PARTIALLY_CORRECT",
+      "expected_regions": [
+        {"audit_id": "p3_n1", "role": "narration", "approx_box": [660, 90, 790, 180], "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b1", "role": "dialogue", "approx_box": [105, 115, 275, 325], "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b2", "role": "dialogue", "approx_box": [625, 190, 745, 330], "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_n2", "role": "narration", "approx_box": [665, 380, 790, 465], "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b3", "role": "dialogue", "approx_box": [95, 445, 260, 610], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b4", "role": "dialogue", "approx_box": [630, 500, 760, 625], "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_n3", "role": "narration", "approx_box": [660, 710, 785, 800], "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b5", "role": "dialogue", "approx_box": [165, 735, 295, 875], "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b6", "role": "dialogue", "approx_box": [625, 835, 780, 1030], "required": true, "detected_region_ids": [5], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b7", "role": "dialogue", "approx_box": [85, 850, 275, 1100], "required": true, "detected_region_ids": [6], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    }
+  ]
+}

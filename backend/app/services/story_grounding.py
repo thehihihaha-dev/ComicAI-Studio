@@ -1,6 +1,7 @@
 import re
 import unicodedata
 from typing import Any
+from app.services.performance import timed_stage
 
 
 GROUNDING_VERSION = "story_grounding.v1"
@@ -73,6 +74,7 @@ def build_story_source_index(
     return source_index
 
 
+@timed_stage("story_grounding")
 def ground_story_result(
     story_input: dict[str, Any],
     story_result: dict[str, Any],

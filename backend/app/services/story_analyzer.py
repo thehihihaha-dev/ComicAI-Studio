@@ -2,11 +2,13 @@ import json
 from typing import Any
 
 from app.services.ollama_text import call_text_model
+from app.services.performance import model_call_context, timed_stage
 
 
 ANALYZER_VERSION = "story_analyzer.v1"
 
 
+@timed_stage("story_analyzer")
 def analyze_story(
     story_input: dict[str, Any],
     max_retries: int = 2,
@@ -118,10 +120,19 @@ Return ONLY valid JSON using this schema:
 """
 
     last_error: Exception | None = None
+    repair_attempts = 0
     for attempt in range(1, max_retries + 2):
         try:
-            model_result = call_text_model(prompt=prompt)
-            normalized = validate_story_result_structure(model_result)
+            with model_call_context("story_analyzer", attempt=attempt):
+                model_result = call_text_model(prompt=prompt)
+            try:
+                normalized = validate_story_result_structure(model_result)
+            except ValueError as validation_error:
+                repair_attempts += 1
+                normalized = repair_story_result_structure(
+                    model_result,
+                    validation_error,
+                )
             if _has_primary_evidence(story_input) and not normalized["events"]:
                 raise ValueError("Story model returned no events for primary evidence.")
             break
@@ -138,8 +149,32 @@ Return ONLY valid JSON using this schema:
         "analyzer_version": ANALYZER_VERSION,
         "project_id": story_input["project_id"],
         "analysis_attempts": attempt,
+        "repair_attempts": repair_attempts,
         **normalized,
     }
+
+
+def repair_story_result_structure(
+    invalid_result: dict[str, Any],
+    validation_error: ValueError,
+) -> dict[str, Any]:
+    compact_result = json.dumps(invalid_result, ensure_ascii=False, separators=(",", ":"))
+    prompt = f"""
+Repair the JSON structure below. Preserve all factual content, IDs, claims, and
+source references exactly. Do not add facts or infer missing story content.
+
+VALIDATION ERROR:
+{validation_error}
+
+INVALID RESULT:
+{compact_result}
+
+Required top-level keys: characters, events, main_progression.
+Return ONLY the repaired JSON object.
+"""
+    with model_call_context("story_analyzer_repair", attempt=1):
+        repaired = call_text_model(prompt=prompt)
+    return validate_story_result_structure(repaired)
 
 
 def _has_primary_evidence(story_input: dict[str, Any]) -> bool:

@@ -1,4 +1,5 @@
 import easyocr
+from app.services.performance import timed_stage
 
 _reader = None
 
@@ -19,6 +20,7 @@ def get_ocr():
     return _reader
 
 
+@timed_stage("ocr")
 def extract_ocr_blocks(image_path: str) -> list[dict]:
     reader = get_ocr()
 

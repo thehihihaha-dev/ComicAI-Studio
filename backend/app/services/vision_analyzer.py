@@ -5,6 +5,18 @@ import json
 import tempfile
 
 from app.services.ollama_vision import call_vision_model
+from app.services.performance import model_call_context, timed_stage
+from app.services.dialogue_structure_recovery import (
+    insert_recovered_region,
+    recover_ocr_empty_candidate,
+    split_merged_regions,
+)
+from app.services.empty_dialogue_detector import (
+    detect_empty_dialogue_candidates,
+    run_local_candidate_ocr,
+    run_visual_candidate_ocr,
+)
+from app.services.ocr_service import get_ocr
 
 def build_vision_context(
     ocr_blocks: list[dict[str, Any]],
@@ -134,6 +146,7 @@ def get_unassigned_blocks(
         )
 
     return unassigned_blocks
+@timed_stage("vision_recovery")
 def recover_missing_blocks(
     image_path: str,
     vision_result: dict[str, Any],
@@ -351,6 +364,7 @@ def create_recovery_crops(
         )
 
     return results
+@timed_stage("vision_recovery")
 def recover_dialogue_regions(
     image_path: str,
     ocr_blocks: list[dict[str, Any]],
@@ -364,52 +378,26 @@ def recover_dialogue_regions(
     if not missing_blocks:
         return []
 
-    groups = group_recovery_candidates(
-        missing_blocks,
-    )
-
+    groups = group_recovery_candidates(missing_blocks)
     recovery_results = []
-
     Path("tmp").mkdir(exist_ok=True)
-    with tempfile.TemporaryDirectory(
-        prefix="vision-recovery-",
-        dir="tmp",
-    ) as recovery_dir:
-        crops = create_recovery_crops(
-            image_path,
-            groups,
-            output_dir=recovery_dir,
-        )
-
+    with tempfile.TemporaryDirectory(prefix="vision-recovery-", dir="tmp") as recovery_dir:
+        crops = create_recovery_crops(image_path, groups, output_dir=recovery_dir)
         for crop, group in zip(crops, groups):
-            block_ids = [
-                block["id"]
-                for block in group
-            ]
-
-            texts = [
-                block.get("text", "")
-                for block in group
-            ]
-
+            block_ids = [block["id"] for block in group]
+            texts = [block.get("text", "") for block in group]
             prompt = f"""
 You are validating a cropped region from a comic page.
 
 OCR detected these blocks inside or near this crop:
-
 Block IDs: {block_ids}
 OCR texts: {texts}
 
-Look carefully at the IMAGE.
-
-Determine whether these OCR blocks belong to a distinct
-speech bubble or dialogue region.
-
-Do not perform OCR again.
-Do not invent block IDs.
+Look carefully at the IMAGE. Determine whether these OCR blocks belong to a
+distinct speech bubble or dialogue region. Do not perform OCR again or invent
+block IDs.
 
 Return ONLY valid JSON:
-
 {{
   "is_dialogue_region": true,
   "type": "speech_bubble",
@@ -417,14 +405,9 @@ Return ONLY valid JSON:
   "confidence": 0.0
 }}
 """
-
-            result = call_vision_model(
-                image_path=crop["crop_path"],
-                prompt=prompt,
+            recovery_results.append(
+                call_vision_model(image_path=crop["crop_path"], prompt=prompt)
             )
-
-            recovery_results.append(result)
-
     return recovery_results
 def merge_recovered_regions(
     vision_result: dict[str, Any],
@@ -532,6 +515,7 @@ def build_region_geometry(
         )
 
     return result
+@timed_stage("reading_order")
 def analyze_reading_order(
     image_path: str,
     regions: list[dict[str, Any]],
@@ -616,6 +600,19 @@ Return ONLY valid JSON:
         )
 
     return reading_order
+
+
+def valid_reading_order(
+    reading_order: Any,
+    regions: list[dict[str, Any]],
+) -> bool:
+    region_ids = [region.get("id") for region in regions]
+    return (
+        isinstance(reading_order, list)
+        and len(reading_order) == len(region_ids)
+        and len(set(reading_order)) == len(reading_order)
+        and set(reading_order) == set(region_ids)
+    )
 def analyze_page_layout(
     image_path: str,
     ocr_blocks: list[dict[str, Any]],
@@ -631,6 +628,7 @@ def analyze_page_layout(
         "reading_order": [],
         "ocr_block_count": len(vision_context),
     }
+@timed_stage("vision_layout")
 def analyze_comic_page(
     image_path: str,
     ocr_blocks: list[dict[str, Any]],
@@ -692,10 +690,8 @@ Schema:
 }}
 """
 
-    vision_result = call_vision_model(
-        image_path=image_path,
-        prompt=prompt,
-    )
+    with model_call_context("vision_layout"):
+        vision_result = call_vision_model(image_path=image_path, prompt=prompt)
 
     validation = validate_vision_result(
         vision_result,
@@ -772,12 +768,49 @@ Schema:
             ocr_blocks,
         )
     reading_order = []
+    empty_candidate_report = {"candidates": [], "recoveries": []}
 
     if validation["is_valid"]:
-        reading_order = analyze_reading_order(
-            image_path=image_path,
-            regions=vision_result["regions"],
-            ocr_blocks=ocr_blocks,
+        vision_result = split_merged_regions(vision_result, ocr_blocks)
+        validation = validate_vision_result(vision_result, ocr_blocks)
+        detection = detect_empty_dialogue_candidates(image_path, ocr_blocks)
+        empty_candidate_report = {**detection, "recoveries": []}
+        vision_fallback_used = False
+        reader = get_ocr() if detection["candidates"] else None
+        for candidate in detection["candidates"]:
+            def local_resolver(path: str, bbox: list[int]) -> dict[str, Any] | None:
+                return run_local_candidate_ocr(path, bbox, reader)
+
+            def vision_resolver(path: str, bbox: list[int]) -> dict[str, Any] | None:
+                nonlocal vision_fallback_used
+                if vision_fallback_used:
+                    return None
+                vision_fallback_used = True
+                with model_call_context("vision_ocr_recovery"):
+                    return run_visual_candidate_ocr(path, bbox, call_vision_model)
+
+            recovered = recover_ocr_empty_candidate(
+                image_path,
+                candidate["bbox"],
+                local_resolver,
+                vision_resolver,
+            )
+            recovered["candidate_id"] = candidate["candidate_id"]
+            empty_candidate_report["recoveries"].append(recovered)
+            if recovered["resolved"]:
+                vision_result = insert_recovered_region(
+                    vision_result, ocr_blocks, recovered
+                )
+        validation = validate_vision_result(vision_result, ocr_blocks)
+        candidate_order = vision_result.get("reading_order", [])
+        reading_order = (
+            candidate_order
+            if valid_reading_order(candidate_order, vision_result["regions"])
+            else analyze_reading_order(
+                image_path=image_path,
+                regions=vision_result["regions"],
+                ocr_blocks=ocr_blocks,
+            )
         )
 
         vision_result["reading_order"] = reading_order
@@ -785,4 +818,6 @@ Schema:
         "vision_result": vision_result,
         "validation": validation,
         "recovery_results": recovery_results,
+        "empty_candidate_report": empty_candidate_report,
+        "ocr_blocks": ocr_blocks,
     }

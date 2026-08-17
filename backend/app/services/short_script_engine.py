@@ -3,13 +3,21 @@ import re
 from typing import Any
 
 from app.services.ollama_text import call_text_model
+from app.services.performance import model_call_context, timed_stage
 
 
 SCRIPT_VERSION = "short_script.v1"
-SCRIPT_STYLES = {"funny", "emotional", "dramatic"}
+SCRIPT_STYLES = {"natural", "funny", "emotional", "dramatic"}
 SEGMENT_TYPES = ("hook", "setup", "development", "payoff", "ending")
 
 STYLE_PHRASES = {
+    "natural": {
+        "hook": {"natural_hook": "Mở đầu câu chuyện, "},
+        "setup": {"natural_setup": "Trong hoàn cảnh đó, "},
+        "development": {"natural_development": "Sau đó, "},
+        "payoff": {"natural_payoff": "Điểm quan trọng là, "},
+        "ending": {"natural_ending": "Cuối cùng, "},
+    },
     "funny": {
         "hook": {"funny_hook": "Nói vui một chút: "},
         "setup": {"funny_setup": "Trước hết: "},
@@ -42,6 +50,7 @@ FALLBACK_PHRASES = {
 }
 
 
+@timed_stage("short_script_engine")
 def generate_short_script(
     reliability_result: dict[str, Any],
     style: str,
@@ -54,9 +63,10 @@ def generate_short_script(
     model_error: str | None = None
 
     try:
-        raw = call_text_model(
-            prompt=_build_script_prompt(content_plan, normalized_style)
-        )
+        with model_call_context("short_script_engine", attempt=1):
+            raw = call_text_model(
+                prompt=_build_script_prompt(content_plan, normalized_style)
+            )
         selections = _validate_style_selections(raw, content_plan, normalized_style)
         model_candidate = _render_plan(
             content_plan,

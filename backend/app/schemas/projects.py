@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class ProjectCreate(BaseModel):
@@ -9,4 +9,21 @@ class ProjectCreate(BaseModel):
 
 
 class ShortScriptCreate(BaseModel):
-    style: Literal["funny", "emotional", "dramatic"]
+    style: Literal["natural", "funny", "emotional", "dramatic"]
+
+
+class ShortScriptSegmentEdit(BaseModel):
+    text: str = Field(min_length=1, max_length=4000)
+
+
+class StoryEventEdit(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+    source_revision: str = Field(min_length=1, max_length=128)
+
+
+class StoryEvidenceResolution(BaseModel):
+    source_revision: str = Field(min_length=1, max_length=128)
+
+
+class StoryEvidenceAdd(StoryEvidenceResolution):
+    text: str = Field(min_length=1, max_length=2000)

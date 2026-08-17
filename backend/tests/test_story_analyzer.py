@@ -109,6 +109,27 @@ class StoryAnalyzerTests(unittest.TestCase):
         self.assertEqual(call_model.call_count, 2)
 
     @patch("app.services.story_analyzer.call_text_model")
+    def test_repairs_structural_output_with_compact_call(self, call_model):
+        call_model.side_effect = [{"events": []}, valid_model_result()]
+        result = analyze_story(ready_story_input(), max_retries=1)
+        self.assertEqual(result["analysis_attempts"], 1)
+        self.assertEqual(result["repair_attempts"], 1)
+        self.assertEqual(call_model.call_count, 2)
+        self.assertIn("VALIDATION ERROR", call_model.call_args.kwargs["prompt"])
+
+    @patch("app.services.story_analyzer.call_text_model")
+    def test_full_retry_after_repair_cannot_recover(self, call_model):
+        call_model.side_effect = [
+            {"events": []},
+            {"characters": [], "events": "invalid", "main_progression": []},
+            valid_model_result(),
+        ]
+        result = analyze_story(ready_story_input(), max_retries=1)
+        self.assertEqual(result["analysis_attempts"], 2)
+        self.assertEqual(result["repair_attempts"], 1)
+        self.assertEqual(call_model.call_count, 3)
+
+    @patch("app.services.story_analyzer.call_text_model")
     def test_analyzes_structured_story_input(self, call_model):
         call_model.return_value = valid_model_result()
 

@@ -1,0 +1,9 @@
+{
+  "snapshot_version": "vision_correctness.v1",
+  "pages": {
+    "2.jpg": {"final_status": "completed", "important_missing_blocks": 0, "reading_order_complete": true},
+    "4.jpg": {"final_status": "completed", "important_missing_blocks": 0, "reading_order_complete": true},
+    "images (6).jpeg": {"final_status": "completed", "important_missing_blocks": 0, "reading_order_complete": true},
+    "images (7).jpeg": {"final_status": "completed", "important_missing_blocks": 0, "reading_order_complete": true}
+  }
+}

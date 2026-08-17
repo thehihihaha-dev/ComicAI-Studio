@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
-import ReviewQueue from "./ReviewQueue";
 export interface Asset {
   id: string;
   project_id: string;
@@ -49,7 +48,7 @@ export interface Asset {
   }[];
   url: string;
 }
-export default function AssetUploader({ projectId, selectedAssetId, onSelectAsset, onAssetsChange }: { projectId: string; selectedAssetId: string | null; onSelectAsset: (assetId: string) => void; onAssetsChange: (assets: Asset[]) => void }) {
+export default function AssetUploader({ projectId, selectedAssetId, onSelectAsset, onAssetsChange, onSourceChanged, refreshToken }: { projectId: string; selectedAssetId: string | null; onSelectAsset: (assetId: string) => void; onAssetsChange: (assets: Asset[]) => void; onSourceChanged: () => void; refreshToken: number }) {
   const PAGE_LIMIT = 30;
   const [files, setFiles] = useState<File[]>([]);
   const [assets, setAssets] = useState<Asset[]>([]);
@@ -93,7 +92,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
         setNextPage(2);
         setHasMore(data.page < data.total_pages);
       });
-  }, [projectId, onAssetsChange]);
+  }, [projectId, onAssetsChange, refreshToken]);
   useEffect(() => {
     async function loadProgress() {
       const response = await fetch(
@@ -117,6 +116,13 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
     if (holdTimer.current) clearTimeout(holdTimer.current);
     if (autoScrollFrame.current !== null) cancelAnimationFrame(autoScrollFrame.current);
   }, []);
+  useEffect(() => {
+    if (!selectedAssetId) return;
+    const thumbnail = thumbnailScrollRef.current?.querySelector<HTMLElement>(
+      `[data-thumbnail-asset-id="${CSS.escape(selectedAssetId)}"]`,
+    );
+    thumbnail?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, [selectedAssetId]);
   async function loadAssets() {
     const response = await fetch(
       `http://127.0.0.1:8000/assets/project/${projectId}?page=1&limit=${PAGE_LIMIT}`,
@@ -174,6 +180,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
       console.log(data);
 
       await loadAssets();
+      onSourceChanged();
 
       setFiles([]);
       setMessage(`Uploaded ${files.length} images successfully.`);
@@ -200,6 +207,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
       }
 
       const data = await response.json();
+      if (data.queued > 0) onSourceChanged();
 
       if (data.queued === 0) {
         setMessage("No new images need processing.");
@@ -260,6 +268,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
       setAssets((currentAssets) => currentAssets.map((asset) =>
         asset.id === assetId ? { ...asset, vision_status: "processing" } : asset,
       ));
+      onSourceChanged();
 
       pollLayoutStatus(assetId);
     } catch (error) {
@@ -309,6 +318,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
       setAssets((currentAssets) => currentAssets.map((asset) =>
         asset.id === assetId ? { ...asset, dialogue_status: "processing" } : asset,
       ));
+      onSourceChanged();
       void pollDialogueStatus(assetId);
     } catch (error) {
       console.error("Dialogue analysis error:", error);
@@ -319,6 +329,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
     if (!window.confirm(`Xóa Trang ${asset.page_order}?`)) return;
     const response = await fetch(`http://127.0.0.1:8000/assets/${asset.id}`, { method: "DELETE" });
     if (!response.ok) { setMessage("Không thể xóa trang."); return; }
+    onSourceChanged();
     setActiveAsset(null); setOpenMenuId(null); await loadAssets();
   }
   function toggleSelectedAsset(assetId: string) {
@@ -430,6 +441,7 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
     if (!selectedAssets.length || !window.confirm(`Xóa ${selectedAssets.length} trang đã chọn?`)) return;
     const response = await fetch("http://127.0.0.1:8000/assets/batch/", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify(selectedAssets) });
     if (!response.ok) { setMessage("Không thể xóa các trang đã chọn."); return; }
+    onSourceChanged();
     setSelectedAssets([]);
     await loadAssets();
   }
@@ -466,7 +478,6 @@ export default function AssetUploader({ projectId, selectedAssetId, onSelectAsse
       </div>
     </div>
 
-    <details className="max-h-[35%] shrink-0 overflow-y-auto border-t border-white/[0.08] p-3"><summary className="cursor-pointer text-[11px] text-white/25">Developer tools</summary><ReviewQueue projectId={projectId} /></details>
     {activeAsset && <PageModal asset={activeAsset} technicalOpen={technicalOpen} onTechnical={() => setTechnicalOpen((current) => !current)} onClose={() => setActiveAsset(null)} onLayout={() => void analyzeLayout(activeAsset.id)} onDialogue={() => void buildDialogues(activeAsset.id)} />}
   </div>;
 }

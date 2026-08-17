@@ -1,0 +1,8 @@
+{
+  "snapshot_version": "vision_correctness.v2",
+  "pages": {
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg": {"final_status": "completed", "region_count": 4, "reading_order": [1, 2, 3, 4], "important_missing_blocks": 0, "reading_order_complete": true},
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg": {"final_status": "completed", "region_count": 4, "reading_order": [1, 2, 3, 4], "important_missing_blocks": 0, "reading_order_complete": true},
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg": {"final_status": "completed", "region_count": 6, "reading_order": [1, 2, 3, 4, 5, 6], "important_missing_blocks": 0, "reading_order_complete": true}
+  }
+}

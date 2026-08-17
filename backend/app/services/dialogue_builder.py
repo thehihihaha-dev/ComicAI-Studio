@@ -1,6 +1,8 @@
 from typing import Any
+from app.services.performance import timed_stage
 
 
+@timed_stage("dialogue_construction")
 def build_dialogues(
     ocr_blocks: list[dict[str, Any]],
     regions: list[dict[str, Any]],

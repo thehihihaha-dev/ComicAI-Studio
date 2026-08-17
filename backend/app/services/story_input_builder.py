@@ -9,6 +9,7 @@ from app.services.asset_processor import (
     ASSET_STATUS_EXCLUDED,
     ASSET_STATUS_READY,
 )
+from app.services.performance import timed_stage
 
 
 CONTRACT_VERSION = "story_input.v1"
@@ -201,6 +202,7 @@ def build_story_input_from_assets(
     }
 
 
+@timed_stage("story_input_builder")
 def build_story_input(project_id: str) -> dict[str, Any]:
     db = SessionLocal()
 

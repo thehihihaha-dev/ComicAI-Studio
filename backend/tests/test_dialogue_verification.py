@@ -11,7 +11,7 @@ from app.database import Base
 from app.models.asset import Asset
 from app.models.dialogue_ground_truth import DialogueGroundTruth
 from app.models.project import Project
-from app.routers.assets import verify_dialogue
+from app.routers.assets import get_review_queue, verify_dialogue
 
 
 class DialogueVerificationTests(unittest.TestCase):
@@ -46,6 +46,12 @@ class DialogueVerificationTests(unittest.TestCase):
                     dialogues=json.dumps(
                         [
                             {
+                                "region_id": 1,
+                                "raw_text": "SAFE",
+                                "clean_text": "SAFE",
+                                "decision": "auto_recovered",
+                            },
+                            {
                                 "region_id": 3,
                                 "raw_text": "NGUYỆN YẾU",
                                 "clean_text": "NGUYỆN YÊU",
@@ -79,7 +85,34 @@ class DialogueVerificationTests(unittest.TestCase):
 
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0].verified_text, "NGUYỆN YÊU!")
-        self.assertEqual(json.loads(asset.dialogues)[0]["clean_text"], "NGUYỆN YÊU!")
+        dialogues = json.loads(asset.dialogues)
+        self.assertEqual(dialogues[0]["clean_text"], "SAFE")
+        self.assertEqual(dialogues[0]["decision"], "auto_recovered")
+        self.assertEqual(dialogues[1]["clean_text"], "NGUYỆN YÊU!")
+        self.assertTrue(dialogues[1]["human_verified"])
+        self.assertFalse(dialogues[1]["needs_review"])
+        self.assertEqual(asset.dialogue_status, "completed")
+
+    def test_review_item_disappears_only_after_successful_verification(self):
+        with patch("app.routers.assets.SessionLocal", self.session_factory):
+            before = get_review_queue("project-1")
+            verify_dialogue("asset-1", 3, "NGUYỆN YÊU")
+            after = get_review_queue("project-1")
+
+        self.assertEqual(before["review_count"], 1)
+        self.assertEqual(after["review_count"], 0)
+
+    def test_dialogue_region_bbox_uses_only_region_blocks(self):
+        from app.routers.assets import dialogue_region_bbox
+
+        bbox = dialogue_region_bbox(
+            {"id": 8, "block_ids": [1]},
+            [
+                {"box": [[0, 0], [10, 0], [10, 10], [0, 10]]},
+                {"box": [[20, 30], [50, 30], [50, 60], [20, 60]]},
+            ],
+        )
+        self.assertEqual(bbox, [20, 30, 50, 60])
 
 
 if __name__ == "__main__":

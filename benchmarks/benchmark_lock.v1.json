@@ -1,0 +1,22 @@
+{
+  "lock_version": "benchmark_lock.v1",
+  "project_id": "bb0149a8-30a7-4385-879a-5df784467d31",
+  "model": "qwen3-vl:8b-instruct",
+  "generation_options": {
+    "num_ctx": 8192,
+    "temperature": 0,
+    "seed": 424242,
+    "top_k": 1,
+    "top_p": 1.0,
+    "repeat_penalty": 1.0
+  },
+  "pipeline_hash": "a8e53d99241517115e94a7a32be112c42ea69745b0710e2266ecc11cec60ef76",
+  "snapshot_hash": "db326a1d66df5bb08dda2efd9e58155de46aa08a7f46bfd4464461959490e0e0",
+  "ground_truth_count": 1,
+  "assets": [
+    {"asset_id": "b60da4a1-56ae-49e2-b42e-563d58cc1ad7", "filename": "2.jpg", "page_order": 1, "image_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832", "ocr_hash": "92027217a2165a89b29ec5a7cf12c2629dbb434360b2088f23b1491e20df57c6"},
+    {"asset_id": "d5ffc546-83d2-4215-bf2c-9ff888d5e2f0", "filename": "4.jpg", "page_order": 2, "image_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086", "ocr_hash": "0b27ef9063db83bed0524ff3a1ebbc1ab4420d6c190da9d3e1bef5c5b958b5a1"},
+    {"asset_id": "963312b7-eef0-4601-b6c1-79e60907b6cf", "filename": "images (6).jpeg", "page_order": 3, "image_hash": "13c617b54b8209d93b021ebda87e8a25bf6f83ba8042e0a3ef7318d5d2c1a05d", "ocr_hash": "befc108380e8f72d6834ddc34e4e747df35fd8b2cc1fa541e890bf0dc4d1e07a"},
+    {"asset_id": "41f55fb2-653c-4d38-a7f7-52027653b8db", "filename": "images (7).jpeg", "page_order": 4, "image_hash": "0caacbb3e16458f47a02c1717254305293ad26308f0730b01b5b9631770ee990", "ocr_hash": "cc604b9795705947b7b182bbee85ad3eaacaab3d4338b15f299a8d383e949c1e"}
+  ]
+}

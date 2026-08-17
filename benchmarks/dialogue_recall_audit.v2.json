@@ -1,0 +1,60 @@
+{
+  "snapshot_version": "dialogue_recall_audit.v2",
+  "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+  "oracle_source": "human_visual_inspection_after_geometry_recovery",
+  "notes": "Approximate boxes are audit-only and must never be imported by production code. OCR-empty Hãy remains unresolved because current layout output supplies no safe candidate bbox.",
+  "pages": [
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "visible_counts": {"dialogue": 3, "narration": 1, "thought": 0, "game_ui": 0, "obvious_sfx": 3},
+      "important_ocr_blocks": 14,
+      "assigned_important_ocr_blocks": 14,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "CORRECT",
+      "expected_regions": [
+        {"audit_id": "p1_b1", "role": "dialogue", "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p1_n1", "role": "narration", "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p1_b2", "role": "dialogue", "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p1_b3", "role": "dialogue", "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    },
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "visible_counts": {"dialogue": 4, "narration": 4, "thought": 0, "game_ui": 0, "obvious_sfx": 7},
+      "important_ocr_blocks": 35,
+      "assigned_important_ocr_blocks": 35,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "PARTIALLY_CORRECT",
+      "expected_regions": [
+        {"audit_id": "p2_n1", "role": "narration", "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b1", "role": "dialogue", "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b2", "role": "dialogue", "required": true, "detected_region_ids": [5], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n2", "role": "narration", "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n3", "role": "narration", "required": true, "detected_region_ids": [7], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_b3", "role": "dialogue", "required": true, "detected_region_ids": [], "classification": "OCR_MISSING", "text_quality": "UNREADABLE", "note": "Visible standalone Hãy has no OCR block and no production candidate bbox."},
+        {"audit_id": "p2_b4", "role": "dialogue", "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p2_n4", "role": "narration", "required": true, "detected_region_ids": [6], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    },
+    {
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg",
+      "visible_counts": {"dialogue": 7, "narration": 3, "thought": 0, "game_ui": 0, "obvious_sfx": 0},
+      "important_ocr_blocks": 29,
+      "assigned_important_ocr_blocks": 29,
+      "ignored_meaningful_blocks": 0,
+      "reading_order": "CORRECT",
+      "expected_regions": [
+        {"audit_id": "p3_n1", "role": "narration", "required": true, "detected_region_ids": [1], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b1", "role": "dialogue", "required": true, "detected_region_ids": [7], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b2", "role": "dialogue", "required": true, "detected_region_ids": [8], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_n2", "role": "narration", "required": true, "detected_region_ids": [2], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b3", "role": "dialogue", "required": true, "detected_region_ids": [3], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b4", "role": "dialogue", "required": true, "detected_region_ids": [9], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_n3", "role": "narration", "required": true, "detected_region_ids": [4], "classification": "DETECTED_COMPLETE", "text_quality": "COMPLETE"},
+        {"audit_id": "p3_b5", "role": "dialogue", "required": true, "detected_region_ids": [10], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b6", "role": "dialogue", "required": true, "detected_region_ids": [5], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"},
+        {"audit_id": "p3_b7", "role": "dialogue", "required": true, "detected_region_ids": [11], "classification": "DETECTED_COMPLETE", "text_quality": "GARBLED"}
+      ]
+    }
+  ]
+}

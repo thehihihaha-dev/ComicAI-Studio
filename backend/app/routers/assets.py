@@ -1,4 +1,5 @@
 from app.services.dialogue_builder import build_dialogues
+from app.services.dialogue_structure_recovery import enforce_recovered_region_review
 from app.models.dialogue_ground_truth import DialogueGroundTruth
 from app.services.dialogue_corrector import (
     correct_dialogues,
@@ -7,6 +8,7 @@ from app.services.dialogue_corrector import (
     apply_dialogue_decisions,
     apply_verified_ground_truth,
     recover_uncertain_dialogues,
+    process_dialogue_batches,
 )
 from fastapi import (
     APIRouter,
@@ -16,7 +18,10 @@ from fastapi import (
     HTTPException,
     BackgroundTasks,
     Body,
+    Response,
 )
+from io import BytesIO
+from PIL import Image
 from pathlib import Path
 from uuid import uuid4
 from datetime import datetime, timezone
@@ -241,6 +246,10 @@ def run_layout_analysis(asset_id: str):
                 vision_result["reading_order"],
                 ensure_ascii=False,
             )
+            asset.ocr_blocks = json.dumps(
+                result.get("ocr_blocks", ocr_blocks),
+                ensure_ascii=False,
+            )
 
             asset.vision_status = (
                 "no_dialogue"
@@ -301,49 +310,31 @@ def run_dialogue_analysis(asset_id: str):
                 reading_order,
             )
 
-            # 2. AI sửa OCR
-            corrected_dialogues = correct_dialogues(
-                asset.file_path,
-                raw_dialogues,
-            )
-
-            # 3. Kiểm tra AI có phá cấu trúc không
-            validation = validate_corrected_dialogues(
-                raw_dialogues,
-                corrected_dialogues,
-            )
-
-            if not validation["is_valid"]:
-                asset.dialogue_status = "failed"
-                db.commit()
-                return
-
-            # 4. Tính score của ComicAI
-            scored_dialogues = calculate_correction_score(
-                raw_dialogues,
-                corrected_dialogues,
-                ocr_blocks,
-            )
-            decided_dialogues = apply_dialogue_decisions(
-                scored_dialogues,
-            )
-
-            final_dialogues = recover_uncertain_dialogues(
-                image_path=asset.file_path,
-                dialogues=decided_dialogues,
-            )
-
             ground_truth_rows = (
                 db.query(DialogueGroundTruth)
                 .filter(DialogueGroundTruth.asset_id == asset.id)
                 .all()
             )
+            verified_text_by_region = {
+                row.region_id: row.verified_text
+                for row in ground_truth_rows
+            }
+
+            # 2–4. Correct/recover normal evidence separately from OCR-empty recovery.
+            final_dialogues = process_dialogue_batches(
+                asset.file_path,
+                raw_dialogues,
+                ocr_blocks,
+                regions,
+                verified_text_by_region,
+            )
             final_dialogues = apply_verified_ground_truth(
                 final_dialogues,
-                {
-                    row.region_id: row.verified_text
-                    for row in ground_truth_rows
-                },
+                verified_text_by_region,
+            )
+            final_dialogues = enforce_recovered_region_review(
+                final_dialogues,
+                regions,
             )
 
             # 5. Kiểm tra có câu nào cần review
@@ -761,6 +752,18 @@ def get_review_queue(project_id: str):
                 if dialogue.get("decision") != "needs_review":
                     continue
 
+                ocr_blocks = json.loads(asset.ocr_blocks or "[]")
+                regions = json.loads(asset.vision_regions or "[]")
+                region = next(
+                    (
+                        item
+                        for item in regions
+                        if item.get("id") == dialogue.get("region_id")
+                    ),
+                    None,
+                )
+                bbox = dialogue_region_bbox(region, ocr_blocks)
+
                 review_items.append(
                     {
                         "asset_id": str(asset.id),
@@ -782,6 +785,23 @@ def get_review_queue(project_id: str):
                             "recovery_reason",
                             dialogue.get("reason", ""),
                         ),
+                        "reason_code": (
+                            dialogue.get("reason_code")
+                            if dialogue.get("reason_code")
+                            == "recovered_visual_text_requires_review"
+                            else dialogue.get(
+                                "recovery_reason_code",
+                                dialogue.get("reason_code", "needs_review"),
+                            )
+                        ),
+                        "confidence": dialogue.get("confidence"),
+                        "bbox": bbox,
+                        "crop_url": (
+                            f"http://127.0.0.1:8000/assets/{asset.id}"
+                            f"/regions/{dialogue.get('region_id')}/crop"
+                            if bbox
+                            else None
+                        ),
                         "image_url": (
                             f"http://127.0.0.1:8000/"
                             f"{asset.file_path}"
@@ -789,12 +809,97 @@ def get_review_queue(project_id: str):
                     }
                 )
 
+        review_items.sort(
+            key=lambda item: (
+                item["page_order"],
+                item["region_id"],
+            )
+        )
         return {
             "project_id": project_id,
             "review_count": len(review_items),
             "items": review_items,
         }
 
+    finally:
+        db.close()
+
+
+def dialogue_region_bbox(
+    region: dict | None,
+    ocr_blocks: list[dict],
+) -> list[int] | None:
+    if not region:
+        return None
+    points = [
+        point
+        for block_id in region.get("block_ids", [])
+        if isinstance(block_id, int) and 0 <= block_id < len(ocr_blocks)
+        for point in ocr_blocks[block_id].get("box", [])
+        if isinstance(point, list) and len(point) == 2
+    ]
+    if not points:
+        return None
+    return [
+        int(min(point[0] for point in points)),
+        int(min(point[1] for point in points)),
+        int(max(point[0] for point in points)),
+        int(max(point[1] for point in points)),
+    ]
+
+
+@router.get("/{asset_id}/regions/{region_id}")
+def get_dialogue_region(asset_id: str, region_id: int):
+    db = SessionLocal()
+    try:
+        asset = db.get(Asset, asset_id)
+        if asset is None:
+            raise HTTPException(status_code=404, detail="Asset not found")
+        regions = json.loads(asset.vision_regions or "[]")
+        blocks = json.loads(asset.ocr_blocks or "[]")
+        region = next((item for item in regions if item.get("id") == region_id), None)
+        bbox = dialogue_region_bbox(region, blocks)
+        if region is None or bbox is None:
+            raise HTTPException(status_code=404, detail="Region evidence not found")
+        with Image.open(asset.file_path) as image:
+            image_size = {"width": image.width, "height": image.height}
+        return {
+            "asset_id": asset.id,
+            "region_id": region_id,
+            "bbox": bbox,
+            "text_role": region.get("type", "unknown"),
+            "image_size": image_size,
+        }
+    finally:
+        db.close()
+
+
+@router.get("/{asset_id}/regions/{region_id}/crop")
+def get_dialogue_region_crop(asset_id: str, region_id: int):
+    db = SessionLocal()
+    try:
+        asset = db.get(Asset, asset_id)
+        if asset is None:
+            raise HTTPException(status_code=404, detail="Asset not found")
+        regions = json.loads(asset.vision_regions or "[]")
+        blocks = json.loads(asset.ocr_blocks or "[]")
+        region = next((item for item in regions if item.get("id") == region_id), None)
+        bbox = dialogue_region_bbox(region, blocks)
+        if bbox is None:
+            raise HTTPException(status_code=404, detail="Region evidence not found")
+        with Image.open(asset.file_path) as image:
+            padding = 32
+            crop = image.convert("RGB").crop(
+                (
+                    max(0, bbox[0] - padding),
+                    max(0, bbox[1] - padding),
+                    min(image.width, bbox[2] + padding),
+                    min(image.height, bbox[3] + padding),
+                )
+            )
+            output = BytesIO()
+            crop.save(output, format="JPEG", quality=92)
+        return Response(content=output.getvalue(), media_type="image/jpeg")
     finally:
         db.close()
 @router.post("/{asset_id}/dialogues/{region_id}/verify")
@@ -851,6 +956,7 @@ def verify_dialogue(
         target["clean_text"] = clean_verified_text
         target["verified_text"] = clean_verified_text
         target["human_verified"] = True
+        target["needs_review"] = False
         target["decision"] = "verified"
 
         asset.dialogues = json.dumps(

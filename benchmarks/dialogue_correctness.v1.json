@@ -1,0 +1,24 @@
+{
+  "snapshot_version": "dialogue_correctness.v1",
+  "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+  "ground_truth_count": 0,
+  "pages": {
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg": {
+      "expected_region_ids": [1, 2, 3, 4],
+      "structural_result": "valid",
+      "review_allowed": true
+    },
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg": {
+      "expected_region_ids": [1, 2, 3, 4],
+      "structural_result": "valid",
+      "review_allowed": true,
+      "note": "Low-confidence fragmented OCR; exact text is not Ground Truth."
+    },
+    "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg": {
+      "expected_region_ids": [1, 2, 3, 4, 5, 6],
+      "structural_result": "valid_after_immutable_field_normalization",
+      "review_allowed": true,
+      "note": "Exact text is not Ground Truth; raw_text/order/region_id must remain input-derived."
+    }
+  }
+}

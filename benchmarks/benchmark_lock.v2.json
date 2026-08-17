@@ -1,0 +1,23 @@
+{
+  "lock_version": "benchmark_lock.v2",
+  "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+  "model": "qwen3-vl:8b-instruct",
+  "generation_options": {
+    "num_ctx": 8192,
+    "temperature": 0,
+    "seed": 424242,
+    "top_k": 1,
+    "top_p": 1.0,
+    "repeat_penalty": 1.0
+  },
+  "pipeline_hash": "5cda0864c0d91ea68fe1e14dfdb1779a3113193c877c0f121035bc4b90f62428",
+  "correctness_snapshot": "benchmarks/vision_correctness.v2.json",
+  "snapshot_hash": "f6863927a22ef34871cf70de3e4c97e1d0b882231aa28d07d85c74cea28680ca",
+  "ground_truth_count": 0,
+  "story_input_contract": "ready_after_all_dialogue_pages_are_completed_or_no_dialogue",
+  "assets": [
+    {"asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6", "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg", "page_order": 1, "image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4", "ocr_hash": "46c2d4bb148e618d9a4391f028701e87379473008751c3005a5d792eb302630f"},
+    {"asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7", "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg", "page_order": 2, "image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067", "ocr_hash": "ce18dd670cba8fe03a7ffcf4b7d6600fa6cabedc66f734498dfda8be0a341ef1"},
+    {"asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed", "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg", "page_order": 3, "image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29", "ocr_hash": "8fb470d20b54f5b426778e390c678e9b5d0affea1b3646ebe4931dcf61cf0f8a"}
+  ]
+}
