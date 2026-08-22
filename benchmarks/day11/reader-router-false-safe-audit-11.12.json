@@ -1,0 +1,1726 @@
+{
+  "schema_version": "reader-router-false-safe-audit.v1",
+  "checkpoint": "11.12",
+  "false_safe_count": 36,
+  "taxonomy": {
+    "extra character/text": 6,
+    "merged/split reconstruction": 24,
+    "diacritic error": 5,
+    "wrong character": 17,
+    "short-text ambiguity": 4,
+    "plausible single-block text": 8,
+    "symbol/background contamination": 2,
+    "missing character/text": 13,
+    "punctuation error": 1
+  },
+  "short_text_buckets": {
+    "9+": 32,
+    "4-8": 3,
+    "1-3": 1
+  },
+  "high_confidence_wrong_count": 0,
+  "high_confidence_wrong_samples": [],
+  "runtime_signal_rule": "Human GT labels correctness only; no GT-derived feature is exposed to routers.",
+  "cases": [
+    {
+      "sample_id": "p1:LR_28e2fc3b47b8",
+      "asset_id": "7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "page_order": 1,
+      "logical_region_id": "LR_28e2fc3b47b8",
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "bbox": [
+        142.0,
+        374.0,
+        262.0,
+        508.0
+      ],
+      "source_fragment_ids": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ocr_output": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+      "human_gt": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ KAZU SUỐT ĐỜI KHÔNG ?",
+      "features": {
+        "text": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+        "min_confidence": 0.26689694752844634,
+        "mean_confidence": 0.6444156947536357,
+        "confidence_spread": 0.7094534063337801,
+        "character_count": 55,
+        "word_count": 16,
+        "symbol_ratio": 0.014285714285714285,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 120.0,
+        "bbox_height": 134.0,
+        "text_to_crop_density": 0.003420398009950249,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_708761617ca5",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_708761617ca5",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        691.0,
+        147.0,
+        789.0,
+        255.0
+      ],
+      "source_fragment_ids": [
+        1,
+        2,
+        4
+      ],
+      "ocr_output": "HÁC BINH NGUYÊN",
+      "human_gt": "HẮC BÌNH NGUYÊN",
+      "features": {
+        "text": "HÁC BINH NGUYÊN",
+        "min_confidence": 0.6711854425749473,
+        "mean_confidence": 0.8727164568677463,
+        "confidence_spread": 0.3283207329430886,
+        "character_count": 13,
+        "word_count": 3,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 3,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 98.0,
+        "bbox_height": 108.0,
+        "text_to_crop_density": 0.0012282690854119426,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "diacritic error",
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_6847589abd58",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_6847589abd58",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        163.0,
+        205.0,
+        295.0,
+        379.0
+      ],
+      "source_fragment_ids": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ocr_output": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+      "human_gt": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+      "features": {
+        "text": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+        "min_confidence": 0.4919894929325195,
+        "mean_confidence": 0.7060038114631163,
+        "confidence_spread": 0.36941297742416956,
+        "character_count": 37,
+        "word_count": 12,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 5,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 132.0,
+        "bbox_height": 174.0,
+        "text_to_crop_density": 0.001610936955764542,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "diacritic error",
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_1b80a3ba7eba",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_1b80a3ba7eba",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        647.0,
+        579.0,
+        779.0,
+        792.0
+      ],
+      "source_fragment_ids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "ocr_output": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "human_gt": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ TẬN HƯỞNG NHẬP VAI TUỲ THÍCH",
+      "features": {
+        "text": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+        "min_confidence": 0.13937112641068816,
+        "mean_confidence": 0.6613978669686174,
+        "confidence_spread": 0.843401971852696,
+        "character_count": 58,
+        "word_count": 16,
+        "symbol_ratio": 0.0136986301369863,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 7,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 132.0,
+        "bbox_height": 213.0,
+        "text_to_crop_density": 0.0020628823445724854,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_301b7ed055be",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_301b7ed055be",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        514.0,
+        906.0,
+        815.853376071303,
+        1061.9302301859036
+      ],
+      "source_fragment_ids": [
+        17,
+        18,
+        26
+      ],
+      "ocr_output": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "human_gt": "ĐÃ MỞ ĐƯỢC THÀNH TỰ TRANG PHỤC [VÉT ĐUÔI TÔM]*",
+      "features": {
+        "text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+        "min_confidence": 0.06714758487834717,
+        "mean_confidence": 0.4422602646518815,
+        "confidence_spread": 0.8233840744670429,
+        "character_count": 40,
+        "word_count": 11,
+        "symbol_ratio": 0.04,
+        "digit_ratio": 0.075,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 3,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 301.85337607130305,
+        "bbox_height": 155.9302301859036,
+        "text_to_crop_density": 0.0008498330831960913,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_016a11675840",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_016a11675840",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        328.0,
+        962.0,
+        420.0,
+        1058.0
+      ],
+      "source_fragment_ids": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "ocr_output": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+      "human_gt": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+      "features": {
+        "text": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+        "min_confidence": 0.19554154871489066,
+        "mean_confidence": 0.4785215823885412,
+        "confidence_spread": 0.6806696515401109,
+        "character_count": 26,
+        "word_count": 8,
+        "symbol_ratio": 0.030303030303030304,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 4,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 92.0,
+        "bbox_height": 96.0,
+        "text_to_crop_density": 0.002943840579710145,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p3:LR_38a547aad429",
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "logical_region_id": "LR_38a547aad429",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "bbox": [
+        213.0,
+        1091.0,
+        251.0,
+        1123.0
+      ],
+      "source_fragment_ids": [
+        23,
+        24
+      ],
+      "ocr_output": "KAZL NAY",
+      "human_gt": "KAZU NÀY",
+      "features": {
+        "text": "KAZL NAY",
+        "min_confidence": 0.5081281661987305,
+        "mean_confidence": 0.5170910032445386,
+        "confidence_spread": 0.017925674091616384,
+        "character_count": 7,
+        "word_count": 2,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 2,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 38.0,
+        "bbox_height": 32.0,
+        "text_to_crop_density": 0.005756578947368421,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.84,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p4:LR_a4e0fdad0903",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "logical_region_id": "LR_a4e0fdad0903",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "source_fragment_ids": [
+        1
+      ],
+      "ocr_output": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "human_gt": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ!",
+      "features": {
+        "text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+        "min_confidence": 0.37108381990559347,
+        "mean_confidence": 0.37108381990559347,
+        "confidence_spread": 0.0,
+        "character_count": 23,
+        "word_count": 6,
+        "symbol_ratio": 0.03571428571428571,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 118.0,
+        "bbox_height": 104.0,
+        "text_to_crop_density": 0.0018741851368970013,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "diacritic error",
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p4:LR_d403d992f246",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "logical_region_id": "LR_d403d992f246",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "source_fragment_ids": [
+        2
+      ],
+      "ocr_output": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "human_gt": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "features": {
+        "text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+        "min_confidence": 0.49371222295182904,
+        "mean_confidence": 0.49371222295182904,
+        "confidence_spread": 0.0,
+        "character_count": 42,
+        "word_count": 13,
+        "symbol_ratio": 0.037037037037037035,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 104.0,
+        "bbox_height": 168.0,
+        "text_to_crop_density": 0.002403846153846154,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p4:LR_d8230ac855ba",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "logical_region_id": "LR_d8230ac855ba",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "bbox": [
+        596.0,
+        822.0,
+        690.0,
+        932.0
+      ],
+      "source_fragment_ids": [
+        4
+      ],
+      "ocr_output": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+      "human_gt": "ANH CHỈ BIẾT NÓI \"AH' THÔI SAO!?",
+      "features": {
+        "text": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+        "min_confidence": 0.1332415714980577,
+        "mean_confidence": 0.1332415714980577,
+        "confidence_spread": 0.0,
+        "character_count": 27,
+        "word_count": 7,
+        "symbol_ratio": 0.15151515151515152,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 94.0,
+        "bbox_height": 110.0,
+        "text_to_crop_density": 0.002611218568665377,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_f27fb5ffabf9",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_f27fb5ffabf9",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "source_fragment_ids": [
+        1
+      ],
+      "ocr_output": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+      "human_gt": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC...",
+      "features": {
+        "text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+        "min_confidence": 0.2741900218601268,
+        "mean_confidence": 0.2741900218601268,
+        "confidence_spread": 0.0,
+        "character_count": 41,
+        "word_count": 14,
+        "symbol_ratio": 0.018518518518518517,
+        "digit_ratio": 0.04878048780487805,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 99.0,
+        "bbox_height": 124.0,
+        "text_to_crop_density": 0.0033398501140436626,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_26795b95ef26",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_26795b95ef26",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "source_fragment_ids": [
+        2
+      ],
+      "ocr_output": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+      "human_gt": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+      "features": {
+        "text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+        "min_confidence": 0.2695610028509003,
+        "mean_confidence": 0.2695610028509003,
+        "confidence_spread": 0.0,
+        "character_count": 35,
+        "word_count": 10,
+        "symbol_ratio": 0.022727272727272728,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 108.0,
+        "bbox_height": 111.0,
+        "text_to_crop_density": 0.0029195862529195864,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_1dfca31c24d7",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_1dfca31c24d7",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "source_fragment_ids": [
+        5
+      ],
+      "ocr_output": "Mìnb là Rin",
+      "human_gt": "Mình là Rin",
+      "features": {
+        "text": "Mìnb là Rin",
+        "min_confidence": 0.7781219482421875,
+        "mean_confidence": 0.7781219482421875,
+        "confidence_spread": 0.0,
+        "character_count": 9,
+        "word_count": 3,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 62.0,
+        "bbox_height": 45.0,
+        "text_to_crop_density": 0.0032258064516129032,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_a0587957c904",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_a0587957c904",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "source_fragment_ids": [
+        3
+      ],
+      "ocr_output": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+      "human_gt": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỖI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU..",
+      "features": {
+        "text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+        "min_confidence": 0.26758805745254033,
+        "mean_confidence": 0.26758805745254033,
+        "confidence_spread": 0.0,
+        "character_count": 70,
+        "word_count": 22,
+        "symbol_ratio": 0.01098901098901099,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 114.0,
+        "bbox_height": 150.0,
+        "text_to_crop_density": 0.004093567251461989,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_d9caab3d7c4a",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_d9caab3d7c4a",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "source_fragment_ids": [
+        6
+      ],
+      "ocr_output": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "human_gt": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "features": {
+        "text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+        "min_confidence": 0.3190965089588873,
+        "mean_confidence": 0.3190965089588873,
+        "confidence_spread": 0.0,
+        "character_count": 56,
+        "word_count": 15,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 146.0,
+        "bbox_height": 138.0,
+        "text_to_crop_density": 0.0027794322017073653,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_b71bcd7a275c",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_b71bcd7a275c",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "source_fragment_ids": [
+        7
+      ],
+      "ocr_output": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "human_gt": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "features": {
+        "text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+        "min_confidence": 0.5166323205283971,
+        "mean_confidence": 0.5166323205283971,
+        "confidence_spread": 0.0,
+        "character_count": 81,
+        "word_count": 22,
+        "symbol_ratio": 0.00980392156862745,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 111.0,
+        "bbox_height": 138.0,
+        "text_to_crop_density": 0.005287896592244419,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_bf3e79736d0c",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_bf3e79736d0c",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        197.0,
+        922.0,
+        246.0,
+        967.0
+      ],
+      "source_fragment_ids": [
+        8
+      ],
+      "ocr_output": "Hôy",
+      "human_gt": "Hầy",
+      "features": {
+        "text": "Hôy",
+        "min_confidence": 0.5543474151097662,
+        "mean_confidence": 0.5543474151097662,
+        "confidence_spread": 0.0,
+        "character_count": 3,
+        "word_count": 1,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 49.0,
+        "bbox_height": 45.0,
+        "text_to_crop_density": 0.0013605442176870747,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character"
+      ]
+    },
+    {
+      "sample_id": "p5:LR_7ee4baf217d7",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "logical_region_id": "LR_7ee4baf217d7",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "source_fragment_ids": [
+        4
+      ],
+      "ocr_output": "Ha #êp #ên cút ~al",
+      "human_gt": "Hạ thấp thêm chút nữa!!",
+      "features": {
+        "text": "Ha #êp #ên cút ~al",
+        "min_confidence": 0.09109958071988083,
+        "mean_confidence": 0.09109958071988083,
+        "confidence_spread": 0.0,
+        "character_count": 14,
+        "word_count": 5,
+        "symbol_ratio": 0.16666666666666666,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 62.0,
+        "bbox_height": 61.0,
+        "text_to_crop_density": 0.0037017451084082496,
+        "boundary_clipping_warning": false,
+        "region_type": "speech_bubble",
+        "aggregation_confidence": 1.0,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text"
+      ]
+    },
+    {
+      "sample_id": "p7:LR_5787cb8d10ad",
+      "asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "page_order": 7,
+      "logical_region_id": "LR_5787cb8d10ad",
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "bbox": [
+        139.0,
+        953.0,
+        247.0,
+        1072.0
+      ],
+      "source_fragment_ids": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "ocr_output": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+      "human_gt": "CỨ NHƯ VẬY CHÚNG TÔI ĐÃ KẾT HÔN VỚI NHAU",
+      "features": {
+        "text": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+        "min_confidence": 0.4678848909869884,
+        "mean_confidence": 0.6283605765049147,
+        "confidence_spread": 0.3132138527899426,
+        "character_count": 31,
+        "word_count": 10,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 4,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 108.0,
+        "bbox_height": 119.0,
+        "text_to_crop_density": 0.002412075941487706,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_dfef3de3ed48",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_dfef3de3ed48",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        626.0,
+        122.0,
+        738.0,
+        266.0
+      ],
+      "source_fragment_ids": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "ocr_output": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+      "human_gt": "NHƯNG MÀ TỚ LẠI CÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM",
+      "features": {
+        "text": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+        "min_confidence": 0.37794747568293696,
+        "mean_confidence": 0.7446710245531799,
+        "confidence_spread": 0.6151722216115244,
+        "character_count": 49,
+        "word_count": 12,
+        "symbol_ratio": 0.03333333333333333,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 112.0,
+        "bbox_height": 144.0,
+        "text_to_crop_density": 0.0030381944444444445,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_35d30a3b10e1",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_35d30a3b10e1",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        453.0,
+        176.0,
+        591.0,
+        312.0
+      ],
+      "source_fragment_ids": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        12
+      ],
+      "ocr_output": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+      "human_gt": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG CÓ, BIỂU CẢM CŨNG KHÔNG THAY ĐỔI",
+      "features": {
+        "text": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+        "min_confidence": 0.27699235786789167,
+        "mean_confidence": 0.5163877459824922,
+        "confidence_spread": 0.5445938929109893,
+        "character_count": 60,
+        "word_count": 16,
+        "symbol_ratio": 0.013333333333333334,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 138.0,
+        "bbox_height": 136.0,
+        "text_to_crop_density": 0.00319693094629156,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_9636706b4855",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_9636706b4855",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        110.0,
+        359.0,
+        236.0,
+        535.0
+      ],
+      "source_fragment_ids": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        49
+      ],
+      "ocr_output": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+      "human_gt": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+      "features": {
+        "text": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO? QUÁ",
+        "min_confidence": 0.3595372260869536,
+        "mean_confidence": 0.6004672295094318,
+        "confidence_spread": 0.529117615850965,
+        "character_count": 63,
+        "word_count": 19,
+        "symbol_ratio": 0.012345679012345678,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 9,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 126.0,
+        "bbox_height": 176.0,
+        "text_to_crop_density": 0.002840909090909091,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_f6dbfc4d4913",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_f6dbfc4d4913",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        658.0,
+        674.0,
+        786.0,
+        829.0
+      ],
+      "source_fragment_ids": [
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33
+      ],
+      "ocr_output": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+      "human_gt": "À THÌ ĐÚNG LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA...",
+      "features": {
+        "text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+        "min_confidence": 0.39641179258088594,
+        "mean_confidence": 0.6684483061225721,
+        "confidence_spread": 0.5344516971848714,
+        "character_count": 68,
+        "word_count": 21,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 7,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 128.0,
+        "bbox_height": 155.0,
+        "text_to_crop_density": 0.0034274193548387098,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_bf3e65667bd9",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_bf3e65667bd9",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        155.0,
+        689.0,
+        271.0,
+        819.0
+      ],
+      "source_fragment_ids": [
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "ocr_output": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "human_gt": "ỪM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐƯỢC RỒI!",
+      "features": {
+        "text": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+        "min_confidence": 0.14573426297928327,
+        "mean_confidence": 0.46785283963260177,
+        "confidence_spread": 0.764211412570184,
+        "character_count": 52,
+        "word_count": 14,
+        "symbol_ratio": 0.03076923076923077,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 116.0,
+        "bbox_height": 130.0,
+        "text_to_crop_density": 0.0034482758620689655,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p15:LR_0856a888b8df",
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "logical_region_id": "LR_0856a888b8df",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "bbox": [
+        658.0,
+        974.0,
+        794.0,
+        1110.0
+      ],
+      "source_fragment_ids": [
+        35,
+        36,
+        38,
+        40,
+        42,
+        44
+      ],
+      "ocr_output": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+      "human_gt": "MÀ TỚ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RỒI!",
+      "features": {
+        "text": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+        "min_confidence": 0.19301361340177559,
+        "mean_confidence": 0.6527948684982009,
+        "confidence_spread": 0.7828087518451298,
+        "character_count": 54,
+        "word_count": 16,
+        "symbol_ratio": 0.014492753623188406,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 136.0,
+        "bbox_height": 136.0,
+        "text_to_crop_density": 0.0029195501730103807,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p17:LR_554cd55f1a6a",
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "logical_region_id": "LR_554cd55f1a6a",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "bbox": [
+        699.0,
+        199.0,
+        798.0,
+        279.0
+      ],
+      "source_fragment_ids": [
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "ocr_output": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+      "human_gt": "VẬY CHẮC TÌM HIỂU THÔNG TIN VỀ SỰ KIỆN MỚI THÔI...",
+      "features": {
+        "text": "CHÁC TÌM VAY HIỂL THÔNG TIN 'vỀ Sự KIỆN MỚl THÔL\"",
+        "min_confidence": 0.2865566529902871,
+        "mean_confidence": 0.6350024664192712,
+        "confidence_spread": 0.7123422888331059,
+        "character_count": 39,
+        "word_count": 11,
+        "symbol_ratio": 0.04081632653061224,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 5,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 99.0,
+        "bbox_height": 80.0,
+        "text_to_crop_density": 0.004924242424242424,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p17:LR_0c630f218964",
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "logical_region_id": "LR_0c630f218964",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "bbox": [
+        257.0,
+        218.0,
+        423.0,
+        280.0
+      ],
+      "source_fragment_ids": [
+        3,
+        7
+      ],
+      "ocr_output": "Cậpnhật tin túc Hắc Bình Nguyên",
+      "human_gt": "CẬP NHẬT TIN TỨC HẮC BÌNH NGUYÊN",
+      "features": {
+        "text": "Cậpnhật tin túc Hắc Bình Nguyên",
+        "min_confidence": 0.8570391033024914,
+        "mean_confidence": 0.8835335753993514,
+        "confidence_spread": 0.05298894419372002,
+        "character_count": 26,
+        "word_count": 6,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 2,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 166.0,
+        "bbox_height": 62.0,
+        "text_to_crop_density": 0.0025262339681305867,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.84,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p17:LR_de7b43ae45f7",
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "logical_region_id": "LR_de7b43ae45f7",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "bbox": [
+        92.0,
+        328.0,
+        242.0,
+        426.0
+      ],
+      "source_fragment_ids": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "ocr_output": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+      "human_gt": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY...",
+      "features": {
+        "text": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+        "min_confidence": 0.34962417101972176,
+        "mean_confidence": 0.41983584009642805,
+        "confidence_spread": 0.20526198580757438,
+        "character_count": 42,
+        "word_count": 13,
+        "symbol_ratio": 0.018518518518518517,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 4,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 150.0,
+        "bbox_height": 98.0,
+        "text_to_crop_density": 0.002857142857142857,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p17:LR_952c7eac9aef",
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "logical_region_id": "LR_952c7eac9aef",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "bbox": [
+        99.0,
+        551.0,
+        217.0,
+        676.0
+      ],
+      "source_fragment_ids": [
+        27,
+        28,
+        31,
+        33
+      ],
+      "ocr_output": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+      "human_gt": "CHẮC LÀ NGHE THỬ MỘT LẦN XEM SAO",
+      "features": {
+        "text": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+        "min_confidence": 0.631172634886187,
+        "mean_confidence": 0.7693241892036473,
+        "confidence_spread": 0.26429360902036936,
+        "character_count": 25,
+        "word_count": 8,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 4,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 118.0,
+        "bbox_height": 125.0,
+        "text_to_crop_density": 0.001694915254237288,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "diacritic error",
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p17:LR_0523c7b7b258",
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "logical_region_id": "LR_0523c7b7b258",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "bbox": [
+        716.0,
+        580.0,
+        794.0,
+        647.0
+      ],
+      "source_fragment_ids": [
+        29,
+        30,
+        32
+      ],
+      "ocr_output": "CũNG CÒN THÒI GIAN",
+      "human_gt": "CŨNG CÒN THỜI GIAN",
+      "features": {
+        "text": "CũNG CÒN THÒI GIAN",
+        "min_confidence": 0.5889509566579387,
+        "mean_confidence": 0.8282392901829257,
+        "confidence_spread": 0.38305280129570507,
+        "character_count": 15,
+        "word_count": 4,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 3,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 78.0,
+        "bbox_height": 67.0,
+        "text_to_crop_density": 0.0028702640642939152,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "diacritic error",
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p18:LR_aac2ef08be0e",
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "logical_region_id": "LR_aac2ef08be0e",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "bbox": [
+        722.0,
+        178.0,
+        764.0,
+        236.0
+      ],
+      "source_fragment_ids": [
+        1,
+        2
+      ],
+      "ocr_output": "SAO LẠl",
+      "human_gt": "SAO LẠI",
+      "features": {
+        "text": "SAO LẠl",
+        "min_confidence": 0.5530220539938531,
+        "mean_confidence": 0.7669178825772099,
+        "confidence_spread": 0.42779165716671375,
+        "character_count": 6,
+        "word_count": 2,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 2,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 42.0,
+        "bbox_height": 58.0,
+        "text_to_crop_density": 0.0024630541871921183,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.84,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "wrong character",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p18:LR_77b6cc0407da",
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "logical_region_id": "LR_77b6cc0407da",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "bbox": [
+        120.0,
+        298.0,
+        216.0,
+        382.0
+      ],
+      "source_fragment_ids": [
+        3,
+        4,
+        5
+      ],
+      "ocr_output": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+      "human_gt": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ...",
+      "features": {
+        "text": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+        "min_confidence": 0.889581753450497,
+        "mean_confidence": 0.9318572778815343,
+        "confidence_spread": 0.08154792194113614,
+        "character_count": 22,
+        "word_count": 6,
+        "symbol_ratio": 0.037037037037037035,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 2,
+        "suspicious_whitespace": false,
+        "fragment_count": 3,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 96.0,
+        "bbox_height": 84.0,
+        "text_to_crop_density": 0.002728174603174603,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p18:LR_1c3c89ee5ac1",
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "logical_region_id": "LR_1c3c89ee5ac1",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "bbox": [
+        161.0,
+        671.0,
+        265.0,
+        709.0
+      ],
+      "source_fragment_ids": [
+        6
+      ],
+      "ocr_output": "HAY QUÁ.",
+      "human_gt": "HAY QÚA...",
+      "features": {
+        "text": "HAY QUÁ.",
+        "min_confidence": 0.745040325809653,
+        "mean_confidence": 0.745040325809653,
+        "confidence_spread": 0.0,
+        "character_count": 7,
+        "word_count": 2,
+        "symbol_ratio": 0.125,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 1,
+        "reconstruction_mode": "single_block",
+        "merge_split_warning": false,
+        "bbox_width": 104.0,
+        "bbox_height": 38.0,
+        "text_to_crop_density": 0.001771255060728745,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.78,
+        "geometry_stable": true,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text"
+      ]
+    },
+    {
+      "sample_id": "p38:LR_ac01f1796688",
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "logical_region_id": "LR_ac01f1796688",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "bbox": [
+        474.0,
+        180.0,
+        548.0,
+        284.0
+      ],
+      "source_fragment_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ocr_output": "XÁC NHÂN BÀ LUÔN Rồl",
+      "human_gt": "XÁC NHẬN BÀ LUÔN RỒI...",
+      "features": {
+        "text": "XÁC NHÂN BÀ LUÔN Rồl",
+        "min_confidence": 0.3590928018093109,
+        "mean_confidence": 0.7478168339895064,
+        "confidence_spread": 0.6235765007374517,
+        "character_count": 16,
+        "word_count": 5,
+        "symbol_ratio": 0.0,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 4,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 74.0,
+        "bbox_height": 104.0,
+        "text_to_crop_density": 0.002079002079002079,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p38:LR_2da60c343d36",
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "logical_region_id": "LR_2da60c343d36",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "bbox": [
+        682.0,
+        800.0,
+        764.0,
+        873.0
+      ],
+      "source_fragment_ids": [
+        16,
+        17,
+        18
+      ],
+      "ocr_output": "THẰNG ẤT Ơ NÀO KIA_",
+      "human_gt": "THẰNG ẤT Ơ NÀO KIA...",
+      "features": {
+        "text": "THẰNG ẤT Ơ NÀO KIA_",
+        "min_confidence": 0.7465194698454295,
+        "mean_confidence": 0.8576321793525318,
+        "confidence_spread": 0.21618495024429218,
+        "character_count": 15,
+        "word_count": 5,
+        "symbol_ratio": 0.05263157894736842,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 3,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 82.0,
+        "bbox_height": 73.0,
+        "text_to_crop_density": 0.002505846976277982,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "punctuation error",
+        "missing character/text",
+        "merged/split reconstruction"
+      ]
+    },
+    {
+      "sample_id": "p38:LR_563eb986d1f9",
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "logical_region_id": "LR_563eb986d1f9",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "bbox": [
+        234.0,
+        970.0,
+        334.0,
+        1105.0
+      ],
+      "source_fragment_ids": [
+        21,
+        22,
+        23,
+        25,
+        27,
+        30
+      ],
+      "ocr_output": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+      "human_gt": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN CHẰM CHẰM VẬY...",
+      "features": {
+        "text": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+        "min_confidence": 0.39643931078843925,
+        "mean_confidence": 0.6589221925684732,
+        "confidence_spread": 0.5927708311555049,
+        "character_count": 41,
+        "word_count": 12,
+        "symbol_ratio": 0.019230769230769232,
+        "digit_ratio": 0.0,
+        "max_repeated_run": 1,
+        "suspicious_whitespace": false,
+        "fragment_count": 6,
+        "reconstruction_mode": "multi_fragment_merge",
+        "merge_split_warning": true,
+        "bbox_width": 100.0,
+        "bbox_height": 135.0,
+        "text_to_crop_density": 0.003037037037037037,
+        "boundary_clipping_warning": false,
+        "region_type": "logical_text_region",
+        "aggregation_confidence": 0.9,
+        "geometry_stable": false,
+        "baseline_accepted": true
+      },
+      "error_types": [
+        "extra character/text",
+        "merged/split reconstruction"
+      ]
+    }
+  ]
+}

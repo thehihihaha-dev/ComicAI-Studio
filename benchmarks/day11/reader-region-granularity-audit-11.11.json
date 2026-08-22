@@ -1,0 +1,92 @@
+{
+  "schema_version": "reader-region-granularity-audit.v1",
+  "checkpoint": "11.11",
+  "source_pages": 10,
+  "displayed_regions": 189,
+  "classification": {
+    "logical_text_region_or_bubble": 12,
+    "ocr_line_or_fragment": 177,
+    "narration_box": 0,
+    "sfx": 0,
+    "other_detected_text": 0
+  },
+  "logical_regions_after_aggregation": 63,
+  "fragments_merged_into_multi_fragment_logical_regions": 126,
+  "legacy_fragment_level_gt_compatibility": "INCOMPATIBLE_WITH_LOGICAL_V1",
+  "legacy_gt_conversion": "NONE — preserved without conversion or overwrite",
+  "per_page": [
+    {
+      "page_order": 1,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 14,
+      "logical_region_count": 4,
+      "representation_hash": "7775330438d4a117730bfeda9ed0137123f557b9db59a79de4c4c437efdf9cbc"
+    },
+    {
+      "page_order": 2,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 5,
+      "logical_region_count": 2,
+      "representation_hash": "40b35d6f02dfdbffcfa6e1c0d45cdd02d70a2fc9c46b8d8da7059a6a9869b61c"
+    },
+    {
+      "page_order": 3,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 26,
+      "logical_region_count": 8,
+      "representation_hash": "da3305c3fda7ff5ea7607547cdb9eec4631f573733af66dc76f1656519dde25b"
+    },
+    {
+      "page_order": 4,
+      "geometry_source": "persisted_logical_regions",
+      "raw_fragment_count": 4,
+      "logical_region_count": 4,
+      "representation_hash": "c3065b05bc9c118bd6097cdbce324f380a4e4bda81acfd7293fd8c789772a5fc"
+    },
+    {
+      "page_order": 5,
+      "geometry_source": "persisted_logical_regions",
+      "raw_fragment_count": 8,
+      "logical_region_count": 8,
+      "representation_hash": "d44025d1aaa904df212e2d252ea309396be462513cb7198de5c3380de2c2e884"
+    },
+    {
+      "page_order": 7,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 5,
+      "logical_region_count": 2,
+      "representation_hash": "9e325aca5bac1e5816c571090a88bb13d92df78aa1455ca991429501569eaf3e"
+    },
+    {
+      "page_order": 15,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 52,
+      "logical_region_count": 12,
+      "representation_hash": "6da89d7ba3ce6b2b4efba2f61918145708f8d7164720bee337de9fde763f3ab2"
+    },
+    {
+      "page_order": 17,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 34,
+      "logical_region_count": 10,
+      "representation_hash": "d4047e7dc05d8fbb40beea75038c983ee27c4c2d0cc9a895b095fe565a258d1a"
+    },
+    {
+      "page_order": 18,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 6,
+      "logical_region_count": 3,
+      "representation_hash": "3d7375ef749d24a5bf905b3e7c4199eb1af9f99e3f797585e923a3acf3ec101e"
+    },
+    {
+      "page_order": 38,
+      "geometry_source": "easyocr_transient_detection",
+      "raw_fragment_count": 35,
+      "logical_region_count": 10,
+      "representation_hash": "c5258e0d45613599f63ec557d3a25e2bcfedfc2756806f74d230649afb665066"
+    }
+  ],
+  "production_data_modified": false,
+  "vlm_calls": 0,
+  "ollama_calls": 0
+}

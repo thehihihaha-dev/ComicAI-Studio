@@ -1,0 +1,328 @@
+{
+  "schema_version": "reader-v2-scale.v1",
+  "checkpoint": "11.10",
+  "artifact_kind": "review_sample",
+  "status": "prepared_not_human_verified",
+  "N": 40,
+  "pages": [
+    {
+      "asset_id": "7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "page_order": 1,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR",
+        "DETERMINISTIC_EASY_SAMPLE"
+      ]
+    },
+    {
+      "asset_id": "6ee61fc2-c530-45e4-9266-887612ac789f",
+      "page_order": 2,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR",
+        "KNOWN_11.9_REGRESSION"
+      ]
+    },
+    {
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "categories": [
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "categories": [
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 6,
+      "categories": [
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "page_order": 7,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "8a1d898d-147b-44e8-8965-7e5aff42371b",
+      "page_order": 8,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "8a012bf3-d17d-47fc-9e5e-da617d341246",
+      "page_order": 9,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "f04be431-5ae7-4a99-8cc8-cea0aa7b51b0",
+      "page_order": 10,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "bc8edc4d-dc0f-46a4-bb3a-6253c469f01e",
+      "page_order": 11,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "74068cf6-f1be-452f-a651-f1538cf2132f",
+      "page_order": 12,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "cd477304-2381-454b-93ad-86f9927a48d0",
+      "page_order": 13,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "4f88aaac-de33-49af-adf2-e372551e2f68",
+      "page_order": 14,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "4234adf6-3203-4795-8cb1-cc6dae92422c",
+      "page_order": 16,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "3fdbafe1-9cad-4b01-840d-96c43ae71cd6",
+      "page_order": 19,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS"
+      ]
+    },
+    {
+      "asset_id": "f99daf67-d53e-4520-8449-187b0917893f",
+      "page_order": 20,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "ea5d0958-051e-4abb-a1be-5cb91efbb59e",
+      "page_order": 21,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "ea998f26-7908-4074-97f9-551c55c736c6",
+      "page_order": 22,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "a3933ed1-8970-4ba6-98fb-5edb03ca189a",
+      "page_order": 23,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "9242622e-3df1-4ab5-a180-4519d69917be",
+      "page_order": 24,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "3168d35d-28ae-4c71-b83c-8ff99811b544",
+      "page_order": 25,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "61069974-b2d7-421b-a683-4496e2c90c53",
+      "page_order": 26,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "069a8cda-4763-4165-b59b-8eac893e7eb6",
+      "page_order": 27,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "17569c63-1a39-4246-9826-97ab910fbe59",
+      "page_order": 28,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "cc8accc4-69c5-4990-8443-510cefa87c75",
+      "page_order": 29,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "b215c30e-2af0-40f1-b16d-e7c9bdca9ca4",
+      "page_order": 30,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "32e89f56-86d2-43ec-bb9c-c36ddd50df05",
+      "page_order": 31,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "13b83895-0142-446a-b47e-a428f746566a",
+      "page_order": 32,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "9f9b92eb-13c9-4f42-807b-3e5e94a812ee",
+      "page_order": 33,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "ce014787-2a03-474f-96e4-02b9b2fe8371",
+      "page_order": 34,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "73d812aa-2b33-4bb7-a4fd-e76a3e7e31e8",
+      "page_order": 35,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "23794560-2c85-4971-8283-e572af6cd767",
+      "page_order": 36,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "3064f5aa-1ff4-4e56-a601-226257331cbf",
+      "page_order": 37,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "26bcd569-ebf6-4a87-a6db-cdffd575991a",
+      "page_order": 39,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    },
+    {
+      "asset_id": "10ea1273-c797-4c4f-84a6-833abb87cb8f",
+      "page_order": 40,
+      "categories": [
+        "UNUSUAL_GEOMETRY_TRANSIENT_LINE_REGIONS",
+        "LOW_CONFIDENCE_OCR"
+      ]
+    }
+  ],
+  "selection_note": "Predicted difficulty sampling only; no correctness claim and no human GT created."
+}

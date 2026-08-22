@@ -1,0 +1,156 @@
+{
+  "schema_version": "reader-ocr-expanded.v1",
+  "checkpoint": "11.4",
+  "artifact_kind": "engine",
+  "status": "completed",
+  "created_at": "2026-08-22T13:40:19.897700+00:00",
+  "engine": "paddleocr",
+  "configuration": {
+    "version": "3.7.0",
+    "runtime": "CPU/Paddle Inference",
+    "concurrency": 1,
+    "preprocessing": "identical RGB crop passed directly to PP-OCR recognizer",
+    "source_crop_pixels": "identical bbox and source image",
+    "downloads_installations": [],
+    "production_engine_changed": false
+  },
+  "results": [
+    {
+      "sample_id": "7937513a822d5b1937ac",
+      "language": "vi",
+      "text_role": "speech_bubble",
+      "difficulty_tags": [
+        "multiline",
+        "punctuation_heavy"
+      ],
+      "cache_key": "dcf3a54c12782f710435de5b91691120688090711b2219b7e712483437b7c506",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.028622,
+      "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+      "hypothesis_raw": "新 ",
+      "reference_normalized": "anh chỉ biết nói \"ah\" thôi sao!?",
+      "hypothesis_normalized": "新",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.96875,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 30,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9375,
+        "substitutions": 0.03125
+      },
+      "missing_text": false,
+      "confidence": 0.269295871257782,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "LANGUAGE_CONFUSION",
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "813cdd84342ca90fd7c6",
+      "language": "vi",
+      "text_role": "speech_bubble",
+      "difficulty_tags": [
+        "small_text"
+      ],
+      "cache_key": "d21b574b2a9c091f21d3d02cfb6a5a2d362772225cf085c0188d2540ccfe0adb",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.018019,
+      "reference_raw": "Hây",
+      "hypothesis_raw": "Háy",
+      "reference_normalized": "hây",
+      "hypothesis_normalized": "háy",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.3333333333333333,
+      "normalized_cer": 0.3333333333333333,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.3333333333333333
+      },
+      "missing_text": false,
+      "confidence": 0.8596861362457275,
+      "confidence_bucket": "0.80-0.90",
+      "error_types": [
+        "DIACRITIC_ERROR",
+        "SUBSTITUTION"
+      ]
+    }
+  ],
+  "aggregate": {
+    "sample_count": 2,
+    "raw_exact_rate": 0.0,
+    "normalized_exact_rate": 0.0,
+    "micro_raw_cer": 0.9142857142857143,
+    "mean_normalized_cer": 0.6666666666666666,
+    "mean_wer": 1.0,
+    "missing_text_rate": 0.0,
+    "edit_counts": {
+      "insertions": 0,
+      "deletions": 30,
+      "substitutions": 2
+    },
+    "edit_rates": {
+      "insertions": 0.0,
+      "deletions": 0.8571428571428571,
+      "substitutions": 0.05714285714285714
+    }
+  },
+  "performance": {
+    "cold_initialization_seconds": 1.835458,
+    "warm_region_total_seconds": 0.046641,
+    "mean_region_seconds": 0.023321,
+    "total_benchmark_seconds": 1.882099,
+    "per_page_latency": "N/A: trusted-crop recognition benchmark"
+  },
+  "resources": {
+    "before": {
+      "timestamp": "2026-08-22T13:40:17.870145+00:00",
+      "process_rss_bytes": 78168064,
+      "process_peak_rss_bytes": 78168064,
+      "system_available_memory_bytes": 10836934656,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1682838650,
+      "process_cpu_seconds": 0.195742,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T13:40:19.765343+00:00",
+      "process_rss_bytes": 1106952192,
+      "process_peak_rss_bytes": 1106952192,
+      "system_available_memory_bytes": 9994846208,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1682838650,
+      "process_cpu_seconds": 2.075739,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "peak_rss_bytes": 1106952192,
+    "swap_delta_bytes": 0,
+    "safety_state": "NORMAL"
+  },
+  "authoritative_state": {
+    "before_hash": "a61e3f19461b7019cd169a61dff71601bcec0499fbe2c20e2adfd1121f3f2561",
+    "after_hash": "a61e3f19461b7019cd169a61dff71601bcec0499fbe2c20e2adfd1121f3f2561",
+    "unchanged": true
+  },
+  "vlm_calls": 0
+}

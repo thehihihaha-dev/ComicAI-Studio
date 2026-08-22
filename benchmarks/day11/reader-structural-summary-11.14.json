@@ -1,0 +1,459 @@
+{
+  "schema_version": "reader-structural-summary.v1",
+  "checkpoint": "11.14",
+  "decision": "B. PARTIAL STRUCTURAL IMPROVEMENT",
+  "dataset": {
+    "verified": 71,
+    "structural_errors": 47,
+    "unreadable": 10
+  },
+  "control": {
+    "n": 71,
+    "exact": 8,
+    "exact_rate": 0.11267605633802817,
+    "normalized_cer": 0.14845663890249877,
+    "wer": 0.3887733887733888
+  },
+  "best_candidate": "adaptive_bounded",
+  "best_metrics": {
+    "n": 71,
+    "exact": 8,
+    "exact_rate": 0.11267605633802817,
+    "normalized_cer": 0.14551690347868693,
+    "wer": 0.3991683991683992,
+    "improved": 14,
+    "unchanged": 35,
+    "regressed": 22,
+    "correct_to_wrong": 1,
+    "large_cer_regressions": 5
+  },
+  "structural_47": {
+    "control": {
+      "n": 47,
+      "exact": 0,
+      "exact_rate": 0.0,
+      "normalized_cer": 0.15454545454545454,
+      "wer": 0.39805825242718446
+    },
+    "candidate": {
+      "n": 47,
+      "exact": 1,
+      "exact_rate": 0.02127659574468085,
+      "normalized_cer": 0.1471590909090909,
+      "wer": 0.39563106796116504
+    },
+    "repaired": 1,
+    "improved": 13,
+    "unchanged": 17,
+    "regressed": 17
+  },
+  "false_safe_replay": {
+    "11.13": {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "control_output": "\"STAR",
+      "candidate_output": "\"STAR",
+      "human_gt": "STAR",
+      "candidate_exact": false,
+      "structural_fix_result": "FALSE_SAFE_TEXT_ERROR_REMAINS",
+      "frozen_r2_result": "GENERALIZATION FAIL remains historical; router not reclassified or tuned"
+    },
+    "11.12_baseline_false_safe": {
+      "n": 36,
+      "repaired_exact": 2,
+      "improved": 15,
+      "unchanged": 12,
+      "regressed": 9,
+      "cases": [
+        {
+          "sample_id": "p1:LR_28e2fc3b47b8",
+          "control_output": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+          "candidate_output": "THÌ CON CÓ CHẤP NHẬN THỂ NGuYỆN YÊL vÀ LÀM vỢ CủA KAZU SUỐT Đờl KHÔNG?",
+          "human_gt": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ KAZU SUỐT ĐỜI KHÔNG ?",
+          "control_cer": 0.13432835820895522,
+          "candidate_cer": 0.11940298507462686,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_708761617ca5",
+          "control_output": "HÁC BINH NGUYÊN",
+          "candidate_output": "HẮC BÌNH NGUYÊN",
+          "human_gt": "HẮC BÌNH NGUYÊN",
+          "control_cer": 0.13333333333333333,
+          "candidate_cer": 0.0,
+          "candidate_exact": true
+        },
+        {
+          "sample_id": "p3:LR_6847589abd58",
+          "control_output": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+          "candidate_output": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VỚI ĐỔ HOẠ CHÂN THỰC",
+          "human_gt": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+          "control_cer": 0.08333333333333333,
+          "candidate_cer": 0.0625,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_1b80a3ba7eba",
+          "control_output": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "candidate_output": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "human_gt": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ TẬN HƯỞNG NHẬP VAI TUỲ THÍCH",
+          "control_cer": 0.08333333333333333,
+          "candidate_cer": 0.08333333333333333,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_301b7ed055be",
+          "control_output": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+          "candidate_output": "Đã mỉ được thành tựu trang phục [Vét đuôi tôm] 70y",
+          "human_gt": "ĐÃ MỞ ĐƯỢC THÀNH TỰ TRANG PHỤC [VÉT ĐUÔI TÔM]*",
+          "control_cer": 0.15217391304347827,
+          "candidate_cer": 0.13043478260869565,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_016a11675840",
+          "control_output": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+          "candidate_output": "ĐÃ ĐẠT ĐUỢC ĐẶC QUYỄN KẾT HÔN RỖl",
+          "human_gt": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+          "control_cer": 0.12121212121212122,
+          "candidate_cer": 0.12121212121212122,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_38a547aad429",
+          "control_output": "KAZL NAY",
+          "candidate_output": "KAZL NAY",
+          "human_gt": "KAZU NÀY",
+          "control_cer": 0.25,
+          "candidate_cer": 0.25,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p4:LR_a4e0fdad0903",
+          "control_output": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+          "candidate_output": "HÃY CÙng NHAU HẠNH PHÚC NHÉ!",
+          "human_gt": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ!",
+          "control_cer": 0.03571428571428571,
+          "candidate_cer": 0.0,
+          "candidate_exact": true
+        },
+        {
+          "sample_id": "p4:LR_d403d992f246",
+          "control_output": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "candidate_output": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "human_gt": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "control_cer": 0.037037037037037035,
+          "candidate_cer": 0.037037037037037035,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p4:LR_d8230ac855ba",
+          "control_output": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "candidate_output": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "human_gt": "ANH CHỈ BIẾT NÓI \"AH' THÔI SAO!?",
+          "control_cer": 0.15625,
+          "candidate_cer": 0.15625,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_f27fb5ffabf9",
+          "control_output": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+          "candidate_output": "LẨN GẶP Gõ ĐẨU TIÊN CỦA CHÚNG TÔl LÀ VÀO 4 NĂM TRUÓC .",
+          "human_gt": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC...",
+          "control_cer": 0.12727272727272726,
+          "candidate_cer": 0.14545454545454545,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_26795b95ef26",
+          "control_output": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+          "candidate_output": "Mìnb là nGười chơi mới nên mone cậu ciúp đỡ!",
+          "human_gt": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+          "control_cer": 0.045454545454545456,
+          "candidate_cer": 0.06818181818181818,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_1dfca31c24d7",
+          "control_output": "Mìnb là Rin",
+          "candidate_output": "Mìnb là Rin",
+          "human_gt": "Mình là Rin",
+          "control_cer": 0.09090909090909091,
+          "candidate_cer": 0.09090909090909091,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_a0587957c904",
+          "control_output": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+          "candidate_output": "VÀ Tôl ĐÃ CHỈ BẢO Cho newbie RIN CaCh CHOI GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TÔl BẮT ĐẨU .",
+          "human_gt": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỖI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU..",
+          "control_cer": 0.08695652173913043,
+          "candidate_cer": 0.09782608695652174,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_d9caab3d7c4a",
+          "control_output": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+          "candidate_output": "RIN ĐUBC GHÉP THÀNH CẶP NGẨU NHIÊN VÓI TÔl TRONG MỘT TRẬN ĐẤU Ỏ DUNGEON",
+          "human_gt": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+          "control_cer": 0.09859154929577464,
+          "candidate_cer": 0.08450704225352113,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_b71bcd7a275c",
+          "control_output": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+          "candidate_output": "THÔNG QUA VIỆC GẶP NHAU THUờNG XUYÊN THÌ SỤ GÁN KẾT CỦA CHÚNG Tôl ĐẴ TĂNG LÊN TÙNG CHÚT, TÙNG CHÚT MỘT",
+          "human_gt": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+          "control_cer": 0.0392156862745098,
+          "candidate_cer": 0.06862745098039216,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_bf3e79736d0c",
+          "control_output": "Hôy",
+          "candidate_output": "Hôy",
+          "human_gt": "Hầy",
+          "control_cer": 0.3333333333333333,
+          "candidate_cer": 0.3333333333333333,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_7ee4baf217d7",
+          "control_output": "Ha #êp #ên cút ~al",
+          "candidate_output": "Ha #êp #êm cút ~al",
+          "human_gt": "Hạ thấp thêm chút nữa!!",
+          "control_cer": 0.5217391304347826,
+          "candidate_cer": 0.4782608695652174,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p7:LR_5787cb8d10ad",
+          "control_output": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+          "candidate_output": "CÚ NHU VẬY CHÚNG TÔl ĐÃ KẾT HÔN VÓI NHAU",
+          "human_gt": "CỨ NHƯ VẬY CHÚNG TÔI ĐÃ KẾT HÔN VỚI NHAU",
+          "control_cer": 0.125,
+          "candidate_cer": 0.1,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_dfef3de3ed48",
+          "control_output": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+          "candidate_output": "NHLNG MÀ, TỚ LẠl có PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÁM,",
+          "human_gt": "NHƯNG MÀ TỚ LẠI CÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM",
+          "control_cer": 0.06779661016949153,
+          "candidate_cer": 0.1016949152542373,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_35d30a3b10e1",
+          "control_output": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "candidate_output": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CHNG KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "human_gt": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG CÓ, BIỂU CẢM CŨNG KHÔNG THAY ĐỔI",
+          "control_cer": 0.08,
+          "candidate_cer": 0.08,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_9636706b4855",
+          "control_output": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+          "candidate_output": "CÁC CẬU KHÔNG CẢM THẤY Sự LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LLÔN RỔI SAo?",
+          "human_gt": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+          "control_cer": 0.07407407407407407,
+          "candidate_cer": 0.04938271604938271,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_f6dbfc4d4913",
+          "control_output": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+          "candidate_output": "À THÌ ĐÚNC LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA.",
+          "human_gt": "À THÌ ĐÚNG LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA...",
+          "control_cer": 0.11702127659574468,
+          "candidate_cer": 0.05319148936170213,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_bf3e65667bd9",
+          "control_output": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+          "candidate_output": "ừM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NCLỠNG MIZLKI-SAN Từ XA LÀ ĐLỢc PỖI",
+          "human_gt": "ỪM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐƯỢC RỒI!",
+          "control_cer": 0.09090909090909091,
+          "candidate_cer": 0.10606060606060606,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_0856a888b8df",
+          "control_output": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "candidate_output": "MÀ TÓ CÙNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlÓI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "human_gt": "MÀ TỚ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RỒI!",
+          "control_cer": 0.07246376811594203,
+          "candidate_cer": 0.08695652173913043,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_554cd55f1a6a",
+          "control_output": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+          "candidate_output": "VẬY CHÁC TÌM HIỂU THÔNG TIN vỂ Sự KIỆN MỚl THÔL\"",
+          "human_gt": "VẬY CHẮC TÌM HIỂU THÔNG TIN VỀ SỰ KIỆN MỚI THÔI...",
+          "control_cer": 0.46,
+          "candidate_cer": 0.14,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_0c630f218964",
+          "control_output": "Cậpnhật tin túc Hắc Bình Nguyên",
+          "candidate_output": "Cập nhật tin tức HÉc Bình Nguyên",
+          "human_gt": "CẬP NHẬT TIN TỨC HẮC BÌNH NGUYÊN",
+          "control_cer": 0.0625,
+          "candidate_cer": 0.03125,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_de7b43ae45f7",
+          "control_output": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+          "candidate_output": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP C`NG ĐĂ NÓI VỀ CÁl NÀY.",
+          "human_gt": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY...",
+          "control_cer": 0.10714285714285714,
+          "candidate_cer": 0.08928571428571429,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_952c7eac9aef",
+          "control_output": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+          "candidate_output": "CHẮc LÀ NGHE THỬ MỘT LÂN XEM SAO",
+          "human_gt": "CHẮC LÀ NGHE THỬ MỘT LẦN XEM SAO",
+          "control_cer": 0.03125,
+          "candidate_cer": 0.03125,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_0523c7b7b258",
+          "control_output": "CũNG CÒN THÒI GIAN",
+          "candidate_output": "CũNG CÒN THàI GAN",
+          "human_gt": "CŨNG CÒN THỜI GIAN",
+          "control_cer": 0.05555555555555555,
+          "candidate_cer": 0.1111111111111111,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_aac2ef08be0e",
+          "control_output": "SAO LẠl",
+          "candidate_output": "SAO LẠl",
+          "human_gt": "SAO LẠI",
+          "control_cer": 0.14285714285714285,
+          "candidate_cer": 0.14285714285714285,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_77b6cc0407da",
+          "control_output": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+          "candidate_output": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ",
+          "human_gt": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ...",
+          "control_cer": 0.13793103448275862,
+          "candidate_cer": 0.1724137931034483,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_1c3c89ee5ac1",
+          "control_output": "HAY QUÁ.",
+          "candidate_output": "HAY QUÁ.",
+          "human_gt": "HAY QÚA...",
+          "control_cer": 0.4,
+          "candidate_cer": 0.4,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_ac01f1796688",
+          "control_output": "XÁC NHÂN BÀ LUÔN Rồl",
+          "candidate_output": "xÁC NHẬN BÀ LUÔN RỖl",
+          "human_gt": "XÁC NHẬN BÀ LUÔN RỒI...",
+          "control_cer": 0.21739130434782608,
+          "candidate_cer": 0.21739130434782608,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_2da60c343d36",
+          "control_output": "THẰNG ẤT Ơ NÀO KIA_",
+          "candidate_output": "THẰNG ẤT Ơ NÀO KIA .",
+          "human_gt": "THẰNG ẤT Ơ NÀO KIA...",
+          "control_cer": 0.14285714285714285,
+          "candidate_cer": 0.09523809523809523,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_563eb986d1f9",
+          "control_output": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+          "candidate_output": "SAO MẤY NGUà XUNG QUANH Cứ NHIN MINH CHẰM CHẰM VẬY.",
+          "human_gt": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN CHẰM CHẰM VẬY...",
+          "control_cer": 0.24489795918367346,
+          "candidate_cer": 0.22448979591836735,
+          "candidate_exact": false
+        }
+      ]
+    }
+  },
+  "unreadable_geometry_counts": {
+    "MORE_COMPLETE_GEOMETRY": 10
+  },
+  "runtime": {
+    "easyocr_initialization_seconds": 1.3549774590064771,
+    "crop_reconstruction_overhead_seconds": 0.013085887883789837,
+    "ocr_seconds": 9.365881494013593,
+    "primary_benchmark_seconds": 9.732177417026833,
+    "total_ocr_calls": 430,
+    "total_benchmark_wall_seconds": 14.241728,
+    "per_region_overhead_seconds": 0.00016155417140481282
+  },
+  "resources": {
+    "before": {
+      "timestamp": "2026-08-22T20:05:52.149551+00:00",
+      "process_rss_bytes": 88195072,
+      "process_peak_rss_bytes": 88195072,
+      "system_available_memory_bytes": 6583631872,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.222357,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after_init": {
+      "timestamp": "2026-08-22T20:05:54.547830+00:00",
+      "process_rss_bytes": 1044463616,
+      "process_peak_rss_bytes": 1044463616,
+      "system_available_memory_bytes": 6368493568,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 2.618041,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T20:06:06.391455+00:00",
+      "process_rss_bytes": 1548288000,
+      "process_peak_rss_bytes": 1548288000,
+      "system_available_memory_bytes": 6381010944,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 20.083505,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "peak_rss_bytes": 1548288000,
+    "swap_delta_bytes": 0,
+    "resource_guard": "NORMAL"
+  },
+  "safety": {
+    "sequential_ocr": true,
+    "ocr_concurrency": 1,
+    "vlm_calls": 0,
+    "ollama_calls": 0,
+    "authoritative_state_unchanged": true,
+    "human_gt_unchanged": true,
+    "r2_unchanged": true,
+    "reading_order_unchanged": true,
+    "production_changes": false
+  },
+  "recommended_next_experiment": "Preserve the best candidate for later Reader V2 integration and isolate remaining recognition errors."
+}

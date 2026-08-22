@@ -1,0 +1,31 @@
+{
+  "schema_version": "reader-v2-final-manifest.v1",
+  "checkpoint": "11.17",
+  "mode": "OFFLINE_EXPERIMENTAL",
+  "dataset": "11.10 Gate D",
+  "pages": 40,
+  "unique_source_hashes": 40,
+  "contract_version": "reader-v2.offline-contract.v1",
+  "geometry_version": "logical-region-pad.v1",
+  "reading_order": {
+    "rule": "A_VERTICAL_OVERLAP",
+    "normalized_vertical_overlap_min": 0.5,
+    "version": "vertical-overlap-0.50.benchmark-fitted.v1",
+    "parameter_status": "BENCHMARK_FITTED",
+    "manga": "TOP_TO_BOTTOM_TIERS_RIGHT_TO_LEFT_PEERS",
+    "webtoon": "SEPARATE_SOURCE_POLICY_NOT_BENCHMARKED"
+  },
+  "ocr": {
+    "engine": "easyocr",
+    "source": "genuine replay with frozen 11.10 engine/config and region geometry",
+    "confidence_is_authority": false
+  },
+  "gt_policy": "evaluation-only; excluded from prediction and cache fingerprints",
+  "input_artifact_hashes": {
+    "reader-v2-scale-40p-11.10.json": "1d48b158bad280cd4fa450c4bba63c9f95586bf12ce30c556023b3297773ddb1",
+    "reader-logical-region-sample-11.11.json": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+    "reader-correctness-human-verified-11.11.json": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235",
+    "reader-router-validation-results-11.13.json": "2eead1414da06aa45e5d47adbcfc5cffe8a317774e17e0fe91a0d96522836aca",
+    "reader-router-validation-human-gt-11.13.json": "6fa30534e7bbb79aebce38eb092bc5a713d9a86ab7c8d62b1374243c2e9ec85e"
+  }
+}

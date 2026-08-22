@@ -1,0 +1,119 @@
+{
+  "schema_version": "reader-v2-fast-pass.v1",
+  "checkpoint": "11.8",
+  "artifact_kind": "reading_order",
+  "status": "completed",
+  "N": 20,
+  "policy": "MANGA_RTL",
+  "pages": [
+    {
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "reading_order": [
+        1,
+        2,
+        3
+      ],
+      "detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          2,
+          3
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": []
+        }
+      }
+    },
+    {
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "reading_order": [
+        1,
+        5,
+        2,
+        6,
+        3,
+        7,
+        4
+      ],
+      "detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          5,
+          2,
+          6,
+          3,
+          7,
+          4
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        }
+      }
+    },
+    {
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "reading_order": [
+        1,
+        7,
+        8,
+        2,
+        3,
+        9,
+        4,
+        10,
+        5,
+        11
+      ],
+      "detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          7,
+          8,
+          2,
+          3,
+          9,
+          4,
+          10,
+          5,
+          11
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "7": [],
+          "8": [],
+          "9": [],
+          "10": [],
+          "11": []
+        }
+      }
+    }
+  ],
+  "panel_detection": "not run; page fallback groups reuse benchmark-safe logical regions"
+}

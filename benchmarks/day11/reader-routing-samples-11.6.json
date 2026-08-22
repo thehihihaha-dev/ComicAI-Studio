@@ -1,0 +1,947 @@
+{
+  "schema_version": "reader-routing-signals.v1",
+  "checkpoint": "11.6",
+  "artifact_kind": "samples",
+  "status": "completed",
+  "N": 20,
+  "samples": [
+    {
+      "sample_id": "future-p1_b1",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "aa8ec935bc3fefb10b902320d0f465a8a66f50aedf5b6b18bbe86efe15031cc9",
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "language": "unknown",
+      "text_role": "dialogue",
+      "human_gt": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ",
+      "easyocr": {
+        "text": "%s",
+        "confidence": 0.012161367071280262,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "MAN M",
+        "confidence": 0.31672948598861694,
+        "raw_cer": 0.8888888888888888,
+        "normalized_cer": 0.8888888888888888,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "fa1d217d190233b68ee1cb674f6346971b57eb37f3db365165e5284b9a9251c9",
+      "bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "language": "unknown",
+      "text_role": "dialogue",
+      "human_gt": "AH",
+      "easyocr": {
+        "text": "AH",
+        "confidence": 0.661653523790493,
+        "raw_cer": 0.0,
+        "normalized_cer": 0.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "AH",
+        "confidence": 0.9902478456497192,
+        "raw_cer": 0.0,
+        "normalized_cer": 0.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 1.0,
+      "normalized_exact_agreement": true,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": true,
+          "paddleocr": true
+        },
+        "0.05": {
+          "easyocr": true,
+          "paddleocr": true
+        },
+        "0.1": {
+          "easyocr": true,
+          "paddleocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "202b5119a5ab04b2c1b08a261fb3ad0b84f0794c5a639355544973bbd0d8dac5",
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ RIN\n",
+      "easyocr": {
+        "text": "5",
+        "confidence": 0.8677971110566354,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "",
+        "confidence": 0.0,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "empty",
+        "suspiciously_short"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "756ce74d89ca9d58bf82e60f432cbe9bd6c653df6024bffdf8355accc6b80123",
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "MÌNH LẦ NGƯỜI CHƠI MỚI NÊN MONG CẬU GIÚP ĐỠ",
+      "easyocr": {
+        "text": "=",
+        "confidence": 0.2560762170981121,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "— ",
+        "confidence": 0.3635587692260742,
+        "raw_cer": 0.9767441860465116,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "excessive_whitespace",
+        "suspiciously_short",
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "c0dcf239243d1f42ae24bfc141ed9bc37062ba953dc6f52c5837dc7e11657867",
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "language": "unknown",
+      "text_role": "dialogue",
+      "human_gt": "MÌNH LÀ RIN",
+      "easyocr": {
+        "text": "là inh",
+        "confidence": 0.11576497971209375,
+        "raw_cer": 0.9090909090909091,
+        "normalized_cer": 0.6363636363636364,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "Minh",
+        "confidence": 0.7120946645736694,
+        "raw_cer": 0.9090909090909091,
+        "normalized_cer": 0.7272727272727273,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.5,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "59328d576c47c6db4aef453d82eef7fbb07da964eb9b4f79a483a0a3bcd9959d",
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "HẠ THẤP THÊM CHÚT NỮA!!",
+      "easyocr": {
+        "text": "23",
+        "confidence": 0.08463606007430452,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "Hem",
+        "confidence": 0.34048494696617126,
+        "raw_cer": 0.9565217391304348,
+        "normalized_cer": 0.9130434782608695,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "56618ee00d6b2dcc14ba1e984c22256376b898605d66a4763f4a9c7d044bf193",
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC",
+      "easyocr": {
+        "text": "=",
+        "confidence": 0.6537530064217698,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "二",
+        "confidence": 0.545668363571167,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "script_mismatch_between_engines",
+        "suspiciously_short",
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "0816affb388b03af9da9a79eed87ab722d754bbfb97ed71d24144311ba348811",
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU...",
+      "easyocr": {
+        "text": "@",
+        "confidence": 0.23213927127943013,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "0",
+        "confidence": 0.22025881707668304,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "suspiciously_short",
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "0af4ff71a1809b54dfb4b3ddafc75e4848048774152009b39566345a8cd66132",
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CHỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "easyocr": {
+        "text": "3",
+        "confidence": 0.1306615189122562,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "2",
+        "confidence": 0.6381663680076599,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "suspiciously_short"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "068431981174f09826fe565baeb947aab56e06b862f46c2cb1fb8b813a428746",
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "easyocr": {
+        "text": "5",
+        "confidence": 0.7361422829188804,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "二",
+        "confidence": 0.4598862826824188,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "script_mismatch_between_engines",
+        "suspiciously_short"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "c8126b8cb80480b39c0893881b805a656c5c9d15f95faf5a2af0bd29651c6798",
+      "bbox": [
+        140.0,
+        157.0,
+        246.0,
+        296.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "HÔM NAY CHÚNG TA SẼ CÙNG NHAU THÁM HIỂM DUNGEON CHỨ ?",
+      "easyocr": {
+        "text": "=",
+        "confidence": 0.24416915505380477,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "1",
+        "confidence": 0.19324664771556854,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "suspiciously_short",
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "5271c390b5ed54b48fe690556ca86f202e88944b5280b2f4673697f5b612e354",
+      "bbox": [
+        647.0,
+        247.0,
+        707.0,
+        293.0
+      ],
+      "language": "unknown",
+      "text_role": "dialogue",
+      "human_gt": "KAZU-SAN",
+      "easyocr": {
+        "text": "KSZn-",
+        "confidence": 0.21476198752356612,
+        "raw_cer": 0.625,
+        "normalized_cer": 0.625,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "KAZN",
+        "confidence": 0.7108525037765503,
+        "raw_cer": 0.5,
+        "normalized_cer": 0.5,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.6,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "9cca1e8ff5455baee757f1b1065f05fa1439076b6ed50a333ad1428efdbc9dd2",
+      "bbox": [
+        122.0,
+        474.0,
+        230.0,
+        576.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "HÔM NAY CẬU MUỐN ĐI CHƠI GÌ KHÔNG ? ",
+      "easyocr": {
+        "text": "3",
+        "confidence": 0.33065247354358007,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "",
+        "confidence": 0.0,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "empty",
+        "suspiciously_short"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "602be081cc496faae9794b964cb4cbd037ca841f54822f0a0920c0e297cd240f",
+      "bbox": [
+        668.0,
+        550.0,
+        738.0,
+        578.0
+      ],
+      "language": "unknown",
+      "text_role": "dialogue",
+      "human_gt": "KAZU!",
+      "easyocr": {
+        "text": "Kazul",
+        "confidence": 0.7126173784822984,
+        "raw_cer": 0.8,
+        "normalized_cer": 0.2,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "Kazu!",
+        "confidence": 0.9994586706161499,
+        "raw_cer": 0.6,
+        "normalized_cer": 0.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.8,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": true
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": true
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "a1ed4e3f36f1cacecd4fad562dfca5508e4d839cf225e8ff224bd46a040f9650",
+      "bbox": [
+        195.0,
+        766.0,
+        272.0,
+        857.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "HÔM NAY CHÚNG TA SẼ ĐI DÀO M-",
+      "easyocr": {
+        "text": "2",
+        "confidence": 0.5113574257051177,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": " ",
+        "confidence": 0.23549135029315948,
+        "raw_cer": 0.9655172413793104,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "empty",
+        "excessive_whitespace",
+        "suspiciously_short"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "efd946529e52b851026a3dd94e3dd8f7757ed2b3b17e77461f4ac269a0594245",
+      "bbox": [
+        659.0,
+        892.0,
+        755.0,
+        1003.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "ĐI CÂU CÁ NÀO!!",
+      "easyocr": {
+        "text": "caoci",
+        "confidence": 0.083284188462858,
+        "raw_cer": 1.0,
+        "normalized_cer": 0.8666666666666667,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "CA ",
+        "confidence": 0.4733203947544098,
+        "raw_cer": 0.8666666666666667,
+        "normalized_cer": 0.9333333333333333,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.4,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "excessive_whitespace"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "33913ce3eced7912334fdf0f2156e456d6bd8a9e4fab00d4807cd93383332ff4",
+      "bbox": [
+        117.0,
+        930.0,
+        239.0,
+        1071.0
+      ],
+      "language": "vi",
+      "text_role": "dialogue",
+      "human_gt": "ĐI CÂU CÁ THÔI NÀO!!!",
+      "easyocr": {
+        "text": "%5",
+        "confidence": 0.12387093634619369,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "DA ",
+        "confidence": 0.3239351809024811,
+        "raw_cer": 0.9523809523809523,
+        "normalized_cer": 1.0,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.0,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [
+        "excessive_whitespace",
+        "unusual_symbol_ratio"
+      ],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "8e3f8f157c9eb57ddcffe848a384fff57c25db03b7b722551b69982ddb50f63a",
+      "bbox": [
+        674.0,
+        120.0,
+        774.0,
+        174.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "NĂM THỨ NHẤT",
+      "easyocr": {
+        "text": "THMQMẾT",
+        "confidence": 0.16074305006022502,
+        "raw_cer": 0.75,
+        "normalized_cer": 0.75,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "THUNMAT",
+        "confidence": 0.765895664691925,
+        "raw_cer": 0.6666666666666666,
+        "normalized_cer": 0.6666666666666666,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.5714285714285714,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "8a17c9812a52079debeebc0b8c14ee9bce87992a3a076c50d84eb6ab66c73923",
+      "bbox": [
+        686.0,
+        400.0,
+        764.0,
+        452.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "NĂM THỨ HAI",
+      "easyocr": {
+        "text": "THMAI",
+        "confidence": 0.8787837274959137,
+        "raw_cer": 0.6363636363636364,
+        "normalized_cer": 0.6363636363636364,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "THOMAI",
+        "confidence": 0.7107391953468323,
+        "raw_cer": 0.6363636363636364,
+        "normalized_cer": 0.6363636363636364,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.8333333333333334,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "9eb045b56e99ff04d283dfa991d6c54643094639d6f66a82627d4c04046d9d4e",
+      "bbox": [
+        684.0,
+        734.0,
+        758.0,
+        788.0
+      ],
+      "language": "vi",
+      "text_role": "narration",
+      "human_gt": "NĂM THỨ BA",
+      "easyocr": {
+        "text": "TNIIBA",
+        "confidence": 0.32499223907713887,
+        "raw_cer": 0.7,
+        "normalized_cer": 0.7,
+        "cache_status": "measured_this_run"
+      },
+      "paddleocr": {
+        "text": "THOMA",
+        "confidence": 0.856661319732666,
+        "raw_cer": 0.7,
+        "normalized_cer": 0.7,
+        "cache_status": "measured_this_run"
+      },
+      "similarity": 0.33333333333333337,
+      "normalized_exact_agreement": false,
+      "sanity_flags": [],
+      "correctness": {
+        "0.0": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.05": {
+          "easyocr": false,
+          "paddleocr": false
+        },
+        "0.1": {
+          "easyocr": false,
+          "paddleocr": false
+        }
+      }
+    }
+  ],
+  "input_equality": "same human-verified source/crop identity; adapter preprocessing recorded in engine artifacts",
+  "vlm_calls": 0
+}

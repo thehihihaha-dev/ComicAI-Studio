@@ -1,0 +1,210 @@
+{
+  "schema_version": "reader-v2-final-summary.v1",
+  "checkpoint": "11.17",
+  "verdict": "B. READER V2 FOUNDATION PASS WITH KNOWN OCR LIMITATION",
+  "scale": {
+    "pages": 40,
+    "regions": 858,
+    "wall_seconds": 13.334802999976091,
+    "ocr_inference_calls": 858,
+    "ocr_observations_reused": 0
+  },
+  "cache": {
+    "wall_seconds": 6.849999772384763e-05,
+    "hit_rate": 1.0,
+    "deterministic": true
+  },
+  "machine": {
+    "peak_rss_bytes": 1211645952,
+    "available_memory_after_bytes": 6545899520,
+    "swap_delta_bytes": 0,
+    "resource_guard": "NORMAL"
+  },
+  "reading_order": {
+    "exact_pages": {
+      "correct": 7,
+      "total": 10,
+      "accuracy": 0.7
+    },
+    "exact_positions": {
+      "correct": 43,
+      "total": 50,
+      "accuracy": 0.86
+    },
+    "pairwise": {
+      "correct": 120,
+      "total": 124,
+      "accuracy": 0.967741935483871
+    },
+    "inversions": 4
+  },
+  "ocr": {
+    "n": 71,
+    "raw_exact": {
+      "correct": 8,
+      "accuracy": 0.11267605633802817
+    },
+    "cer": 0.14845663890249877,
+    "wer": 0.3887733887733888,
+    "unsafe_promoted_to_authoritative": 0
+  },
+  "reliability_state_distribution_scale": {
+    "OBSERVED": 763,
+    "HARD": 59,
+    "UNREADABLE_OR_UNKNOWN": 36
+  },
+  "requires_repair_scale": {
+    "count": 858,
+    "rate": 1.0
+  },
+  "safety": {
+    "schema_version": "reader-v2-final-safety.v1",
+    "checkpoint": "11.17",
+    "known_false_safe_cases": 1,
+    "known_false_safe_safely_blocked": 1,
+    "known_false_safe_sample_ids": [
+      "11.13:725a6a01324b:LR_fc624020f5d6"
+    ],
+    "unreadable": {
+      "total": 10,
+      "r2_safe_risk_cases": 2,
+      "safely_blocked": 2,
+      "authoritative_unreadable": 0,
+      "reliability_state_distribution": {
+        "HARD": 10
+      },
+      "requires_repair": true,
+      "sample_ids": [
+        "11.13:774a019f7f27:LR_218e1d60e667",
+        "11.13:774a019f7f27:LR_691c6e0ae1b4"
+      ],
+      "contract_replay": [
+        {
+          "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        },
+        {
+          "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+          "reliability_state": "HARD",
+          "requires_repair": true,
+          "authoritative": false,
+          "reasons": [
+            "day11_router_not_trusted"
+          ],
+          "human_gt_in_prediction": false
+        }
+      ]
+    },
+    "known_false_safe_contract_replay": [
+      {
+        "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+        "human_state_evaluation_only": "VERIFIED",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      }
+    ],
+    "all_day11_ocr_authoritative": false,
+    "unsafe_promoted_to_authoritative": 0,
+    "human_gt_in_prediction": false,
+    "r2_integrated": false,
+    "adaptive_padding_11_14_integrated": false,
+    "paddleocr_11_15_integrated": false,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "production_state": "UNCHANGED; offline experimental only",
+  "day11_close": true,
+  "carry_forward": "HARD/STRUCTURAL OCR repair remains an open Reader V2 module.",
+  "proposed_day12_focus": "Reader V2 -> Repair Boundary -> Page Understanding -> Scene/Chunk construction -> Carry-over state -> grounded Story events"
+}

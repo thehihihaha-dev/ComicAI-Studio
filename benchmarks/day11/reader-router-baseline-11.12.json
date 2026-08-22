@@ -1,0 +1,32 @@
+{
+  "schema_version": "reader-router-baseline.v1",
+  "checkpoint": "11.12",
+  "dataset_size": 50,
+  "gt_source": "Human VERIFIED 11.11",
+  "historical_expected": {
+    "accepted": 44,
+    "false_accepts": 36
+  },
+  "reproduced": {
+    "candidate": "BASELINE",
+    "safe_count": 44,
+    "safe_coverage": 0.88,
+    "safe_correct": 8,
+    "false_safe": 36,
+    "false_safe_rate": 0.8181818181818182,
+    "safe_precision": 0.18181818181818182,
+    "hard_count": 6,
+    "hard_rate": 0.12,
+    "structural_review_count": 0,
+    "structural_review_rate": 0.0,
+    "correct_ocr_routed_hard": 2,
+    "routing_nanoseconds": 7041,
+    "nanoseconds_per_region": 140.82
+  },
+  "hard_count": 6,
+  "hard_rate": 0.12,
+  "human_gt_hash": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235",
+  "ocr_inference_calls": 0,
+  "vlm_calls": 0,
+  "ollama_calls": 0
+}

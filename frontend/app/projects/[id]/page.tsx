@@ -21,6 +21,9 @@ export default async function ProjectDetailPage({
         <header className="flex h-16 shrink-0 items-center border-b border-white/10">
           <Link href="/" className="mr-3 flex h-8 w-8 items-center justify-center rounded-md text-white/45 transition hover:bg-white/5 hover:text-white" aria-label="Về dự án">←</Link>
           <div><p className="text-sm font-semibold tracking-tight">ComicAI Studio</p><h1 className="mt-0.5 text-xs font-normal text-white/40">{project.name} · {project.content_type === "short" ? "Video ngắn" : "Video dài"} · {assetData.total ?? 0} trang · {analyzed ? "Đã phân tích" : "Đang chuẩn bị"}</h1></div>
+          <Link href={`/projects/${id}/ocr-benchmark`} className="ml-auto rounded-lg border border-white/10 px-3 py-2 text-xs text-white/55 transition hover:bg-white/5 hover:text-white">OCR Ground Truth</Link>
+          <Link href={`/projects/${id}/reading-order-benchmark`} className="ml-2 rounded-lg border border-white/10 px-3 py-2 text-xs text-white/55 transition hover:bg-white/5 hover:text-white">Reading Order GT</Link>
+          <Link href={`/projects/${id}/reader-correctness`} className="ml-2 rounded-lg border border-violet-400/30 px-3 py-2 text-xs text-violet-200 transition hover:bg-violet-500/10">Reader Correctness GT</Link>
         </header>
         <ProjectWorkspace projectId={id} />
       </div>

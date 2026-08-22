@@ -1,0 +1,602 @@
+{
+  "schema_version": "reader-line-aware.v1",
+  "checkpoint": "11.7",
+  "artifact_kind": "diagnostics",
+  "status": "completed",
+  "N": 20,
+  "samples": [
+    {
+      "sample_id": "future-p1_b1",
+      "logical_bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "crop_dimensions": [
+        118.0,
+        104.0
+      ],
+      "detected_lines": 3,
+      "persisted_line_order": [
+        0,
+        1,
+        2
+      ],
+      "geometry_line_order": [
+        0,
+        1,
+        2
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "logical_bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "crop_dimensions": [
+        104.0,
+        168.0
+      ],
+      "detected_lines": 6,
+      "persisted_line_order": [
+        3,
+        5,
+        7,
+        9,
+        12,
+        13
+      ],
+      "geometry_line_order": [
+        3,
+        5,
+        7,
+        9,
+        12,
+        13
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "logical_bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "crop_dimensions": [
+        34.0,
+        24.0
+      ],
+      "detected_lines": 1,
+      "persisted_line_order": [
+        4
+      ],
+      "geometry_line_order": [
+        4
+      ],
+      "diagnostic_tags": [
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "logical_bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "crop_dimensions": [
+        99.0,
+        124.0
+      ],
+      "detected_lines": 5,
+      "persisted_line_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "geometry_line_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "logical_bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "crop_dimensions": [
+        108.0,
+        111.0
+      ],
+      "detected_lines": 6,
+      "persisted_line_order": [
+        5,
+        6,
+        8,
+        10,
+        11,
+        12
+      ],
+      "geometry_line_order": [
+        5,
+        6,
+        8,
+        11,
+        10,
+        12
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "LINE_ORDER_ERROR",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "logical_bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "crop_dimensions": [
+        114.0,
+        150.0
+      ],
+      "detected_lines": 7,
+      "persisted_line_order": [
+        13,
+        14,
+        15,
+        17,
+        20,
+        23,
+        26
+      ],
+      "geometry_line_order": [
+        13,
+        14,
+        15,
+        17,
+        20,
+        23,
+        26
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "logical_bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "crop_dimensions": [
+        62.0,
+        61.0
+      ],
+      "detected_lines": 3,
+      "persisted_line_order": [
+        32,
+        33,
+        34
+      ],
+      "geometry_line_order": [
+        32,
+        33,
+        34
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "logical_bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "crop_dimensions": [
+        62.0,
+        45.0
+      ],
+      "detected_lines": 2,
+      "persisted_line_order": [
+        7,
+        9
+      ],
+      "geometry_line_order": [
+        7,
+        9
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "logical_bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "crop_dimensions": [
+        146.0,
+        138.0
+      ],
+      "detected_lines": 5,
+      "persisted_line_order": [
+        16,
+        18,
+        21,
+        24,
+        28
+      ],
+      "geometry_line_order": [
+        16,
+        18,
+        21,
+        24,
+        28
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "logical_bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "crop_dimensions": [
+        111.0,
+        138.0
+      ],
+      "detected_lines": 7,
+      "persisted_line_order": [
+        19,
+        22,
+        25,
+        27,
+        29,
+        30,
+        31
+      ],
+      "geometry_line_order": [
+        19,
+        22,
+        25,
+        27,
+        29,
+        30,
+        31
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "logical_bbox": [
+        674.0,
+        120.0,
+        774.0,
+        174.0
+      ],
+      "crop_dimensions": [
+        100.0,
+        54.0
+      ],
+      "detected_lines": 2,
+      "persisted_line_order": [
+        0,
+        2
+      ],
+      "geometry_line_order": [
+        0,
+        2
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "logical_bbox": [
+        686.0,
+        400.0,
+        764.0,
+        452.0
+      ],
+      "crop_dimensions": [
+        78.0,
+        52.0
+      ],
+      "detected_lines": 2,
+      "persisted_line_order": [
+        10,
+        11
+      ],
+      "geometry_line_order": [
+        10,
+        11
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "logical_bbox": [
+        122.0,
+        474.0,
+        230.0,
+        576.0
+      ],
+      "crop_dimensions": [
+        108.0,
+        102.0
+      ],
+      "detected_lines": 4,
+      "persisted_line_order": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "geometry_line_order": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "logical_bbox": [
+        684.0,
+        734.0,
+        758.0,
+        788.0
+      ],
+      "crop_dimensions": [
+        74.0,
+        54.0
+      ],
+      "detected_lines": 2,
+      "persisted_line_order": [
+        17,
+        19
+      ],
+      "geometry_line_order": [
+        17,
+        19
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "logical_bbox": [
+        659.0,
+        892.0,
+        755.0,
+        1003.0
+      ],
+      "crop_dimensions": [
+        96.0,
+        111.0
+      ],
+      "detected_lines": 3,
+      "persisted_line_order": [
+        23,
+        25,
+        26
+      ],
+      "geometry_line_order": [
+        23,
+        25,
+        26
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "logical_bbox": [
+        140.0,
+        157.0,
+        246.0,
+        296.0
+      ],
+      "crop_dimensions": [
+        106.0,
+        139.0
+      ],
+      "detected_lines": 6,
+      "persisted_line_order": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "geometry_line_order": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "logical_bbox": [
+        647.0,
+        247.0,
+        707.0,
+        293.0
+      ],
+      "crop_dimensions": [
+        60.0,
+        46.0
+      ],
+      "detected_lines": 2,
+      "persisted_line_order": [
+        7,
+        9
+      ],
+      "geometry_line_order": [
+        7,
+        9
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "logical_bbox": [
+        668.0,
+        550.0,
+        738.0,
+        578.0
+      ],
+      "crop_dimensions": [
+        70.0,
+        28.0
+      ],
+      "detected_lines": 1,
+      "persisted_line_order": [
+        16
+      ],
+      "geometry_line_order": [
+        16
+      ],
+      "diagnostic_tags": [
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "logical_bbox": [
+        195.0,
+        766.0,
+        272.0,
+        857.0
+      ],
+      "crop_dimensions": [
+        77.0,
+        91.0
+      ],
+      "detected_lines": 4,
+      "persisted_line_order": [
+        18,
+        20,
+        21,
+        22
+      ],
+      "geometry_line_order": [
+        18,
+        20,
+        21,
+        22
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "logical_bbox": [
+        117.0,
+        930.0,
+        239.0,
+        1071.0
+      ],
+      "crop_dimensions": [
+        122.0,
+        141.0
+      ],
+      "detected_lines": 3,
+      "persisted_line_order": [
+        24,
+        27,
+        28
+      ],
+      "geometry_line_order": [
+        24,
+        27,
+        28
+      ],
+      "diagnostic_tags": [
+        "MULTILINE_FRAGMENTATION",
+        "CROP_TOO_TIGHT"
+      ]
+    }
+  ],
+  "failure_attribution": {
+    "crop_geometry": 18,
+    "insufficient_evidence_or_no_failure": 1,
+    "ocr_recognition": 1
+  },
+  "attribution_note": "Observed evidence suggests; not causal proof."
+}

@@ -1,0 +1,817 @@
+{
+  "schema_version": "reader-ocr-expanded.v1",
+  "checkpoint": "11.4",
+  "artifact_kind": "engine",
+  "status": "completed",
+  "created_at": "2026-08-22T14:08:44.026483+00:00",
+  "engine": "paddleocr",
+  "configuration": {
+    "version": "3.7.0",
+    "runtime": "CPU/Paddle Inference",
+    "concurrency": 1,
+    "preprocessing": "identical RGB crop passed directly to PP-OCR recognizer",
+    "source_crop_pixels": "identical bbox and source image",
+    "downloads_installations": [],
+    "production_engine_changed": false
+  },
+  "results": [
+    {
+      "sample_id": "future-p1_b1",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "eb93516960d18467f17ec5f450917b32b89e9b056cda902cb3c3eb059fb0bbe9",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.028122,
+      "reference_raw": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ",
+      "hypothesis_raw": "MAN M",
+      "reference_normalized": "hãy cùng nhau hạnh phúc nhé",
+      "hypothesis_normalized": "man m",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.8888888888888888,
+      "normalized_cer": 0.8888888888888888,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 22,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.8148148148148148,
+        "substitutions": 0.07407407407407407
+      },
+      "missing_text": false,
+      "confidence": 0.31672948598861694,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "5ec8381f0d2bd465944b47a424e40894c6de0ce932d8186cb648e28ce06253c3",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.018169,
+      "reference_raw": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ RIN\n",
+      "hypothesis_raw": "",
+      "reference_normalized": "cô gái tóc vàng với dáng vẻ tăng động này tên là rin",
+      "hypothesis_normalized": "",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 53,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 1.0,
+        "substitutions": 0.0
+      },
+      "missing_text": true,
+      "confidence": 0.0,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "MISSING_REGION"
+      ]
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "e988982d45d951db80a726018b58c09613012d6cd2804d8acd5464a267ef226e",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017423,
+      "reference_raw": "AH",
+      "hypothesis_raw": "AH",
+      "reference_normalized": "ah",
+      "hypothesis_normalized": "ah",
+      "raw_exact_match": true,
+      "normalized_exact_match": true,
+      "raw_cer": 0.0,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.9902478456497192,
+      "confidence_bucket": "0.95-1.00",
+      "error_types": []
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "19796b4d203f7da4048a33a1911901b9cf49f14d9dca85b50d72d891ee79c0f8",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017333,
+      "reference_raw": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC",
+      "hypothesis_raw": "二",
+      "reference_normalized": "lần gặp gỡ đầu tiên của chúng tôi là vào 4 năm trước",
+      "hypothesis_normalized": "二",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 51,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9807692307692307,
+        "substitutions": 0.019230769230769232
+      },
+      "missing_text": false,
+      "confidence": 0.545668363571167,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "LANGUAGE_CONFUSION",
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "d88f790631a4133be1220e5ced286e02e1471218311fd6f4c963b3b46b0aa9c0",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017693,
+      "reference_raw": "MÌNH LẦ NGƯỜI CHƠI MỚI NÊN MONG CẬU GIÚP ĐỠ",
+      "hypothesis_raw": "— ",
+      "reference_normalized": "mình lầ người chơi mới nên mong cậu giúp đỡ",
+      "hypothesis_normalized": "—",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.9767441860465116,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 41,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9534883720930233,
+        "substitutions": 0.023255813953488372
+      },
+      "missing_text": false,
+      "confidence": 0.3635587692260742,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "3c4009a28db9ea0dfde769efacddc7e5f018fead251311fdace3d946b2bca124",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.01771,
+      "reference_raw": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU...",
+      "hypothesis_raw": "0",
+      "reference_normalized": "và tôi đã chỉ bảo cho newbie rin cách chơi game và từ đó mối quan hệ của chúng tôi bắt đầu...",
+      "hypothesis_normalized": "0",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 92,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.989247311827957,
+        "substitutions": 0.010752688172043012
+      },
+      "missing_text": false,
+      "confidence": 0.22025881707668304,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "62df9cee51dd4122e5de41bfa5d31d76b8903ee4ec97279f67be8dddba32f0b7",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017859,
+      "reference_raw": "HẠ THẤP THÊM CHÚT NỮA!!",
+      "hypothesis_raw": "Hem",
+      "reference_normalized": "hạ thấp thêm chút nữa!!",
+      "hypothesis_normalized": "hem",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.9565217391304348,
+      "normalized_cer": 0.9130434782608695,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 20,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.8695652173913043,
+        "substitutions": 0.08695652173913043
+      },
+      "missing_text": false,
+      "confidence": 0.34048494696617126,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "d56c460b59107f8367424bfe86bb7c6263bb27f8f948e0546f6b160d68c779ed",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017716,
+      "reference_raw": "MÌNH LÀ RIN",
+      "hypothesis_raw": "Minh",
+      "reference_normalized": "mình là rin",
+      "hypothesis_normalized": "minh",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.9090909090909091,
+      "normalized_cer": 0.7272727272727273,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 7,
+        "substitutions": 3
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.6363636363636364,
+        "substitutions": 0.2727272727272727
+      },
+      "missing_text": false,
+      "confidence": 0.7120946645736694,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "dbb62caea581a62df31c2bbbb43bba6cee5f6e8b4857b0ce4f2c6732b6a4b3d0",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017683,
+      "reference_raw": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "hypothesis_raw": "二",
+      "reference_normalized": "rin được ghép thành cặp ngẫu nhiên với tôi trong một trận đấu ở dungeon",
+      "hypothesis_normalized": "二",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 70,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9859154929577465,
+        "substitutions": 0.014084507042253521
+      },
+      "missing_text": false,
+      "confidence": 0.4598862826824188,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "LANGUAGE_CONFUSION",
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "ad98ffcbac6c5e4dd47d18e38ba868b5ddaa99ffa200e92d70c9bcbb4f1c872d",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.01769,
+      "reference_raw": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CHỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "hypothesis_raw": "2",
+      "reference_normalized": "thông qua việc gặp nhau thường xuyên thì sự gắn kết chủa chúng tôi đã tăng lên từng chút, từng chút một",
+      "hypothesis_normalized": "2",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 102,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9902912621359223,
+        "substitutions": 0.009708737864077669
+      },
+      "missing_text": false,
+      "confidence": 0.6381663680076599,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "c7bbde7354b041a050deb3ad1f0e2a8e4620742ed127702709e13ee8da2018c8",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017672,
+      "reference_raw": "NĂM THỨ NHẤT",
+      "hypothesis_raw": "THUNMAT",
+      "reference_normalized": "năm thứ nhất",
+      "hypothesis_normalized": "thunmat",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.6666666666666666,
+      "normalized_cer": 0.6666666666666666,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 5,
+        "substitutions": 3
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.4166666666666667,
+        "substitutions": 0.25
+      },
+      "missing_text": false,
+      "confidence": 0.765895664691925,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "a384c9ebf9e7a705df4f09d21825e122eb5ff5e51ab668157d3b4bcfc3872648",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017301,
+      "reference_raw": "NĂM THỨ HAI",
+      "hypothesis_raw": "THOMAI",
+      "reference_normalized": "năm thứ hai",
+      "hypothesis_normalized": "thomai",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.6363636363636364,
+      "normalized_cer": 0.6363636363636364,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 5,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.45454545454545453,
+        "substitutions": 0.18181818181818182
+      },
+      "missing_text": false,
+      "confidence": 0.7107391953468323,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "f010dc502bc26d541ae08c43875e50b6c1929d924c59926ebcc25f03ebb52302",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017316,
+      "reference_raw": "HÔM NAY CẬU MUỐN ĐI CHƠI GÌ KHÔNG ? ",
+      "hypothesis_raw": "",
+      "reference_normalized": "hôm nay cậu muốn đi chơi gì không ?",
+      "hypothesis_normalized": "",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 36,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 1.0,
+        "substitutions": 0.0
+      },
+      "missing_text": true,
+      "confidence": 0.0,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "MISSING_REGION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "e8811838dda65cb5b510353459bfbd724a4c508dd7714ca1188b754e69b76ea8",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017351,
+      "reference_raw": "NĂM THỨ BA",
+      "hypothesis_raw": "THOMA",
+      "reference_normalized": "năm thứ ba",
+      "hypothesis_normalized": "thoma",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.7,
+      "normalized_cer": 0.7,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 5,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.5,
+        "substitutions": 0.2
+      },
+      "missing_text": false,
+      "confidence": 0.856661319732666,
+      "confidence_bucket": "0.80-0.90",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "8fb0125e7cc34208efbaf70d624bcf1cf86c15cc67349d0a90de3213399dd6f9",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017308,
+      "reference_raw": "ĐI CÂU CÁ NÀO!!",
+      "hypothesis_raw": "CA ",
+      "reference_normalized": "đi câu cá nào!!",
+      "hypothesis_normalized": "ca",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.8666666666666667,
+      "normalized_cer": 0.9333333333333333,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 12,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.8,
+        "substitutions": 0.06666666666666667
+      },
+      "missing_text": false,
+      "confidence": 0.4733203947544098,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "b4f175bef00734f2e42eadd6e1d0a939bd9f81cb1710e44d06cd9036fef262dd",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017291,
+      "reference_raw": "HÔM NAY CHÚNG TA SẼ CÙNG NHAU THÁM HIỂM DUNGEON CHỨ ?",
+      "hypothesis_raw": "1",
+      "reference_normalized": "hôm nay chúng ta sẽ cùng nhau thám hiểm dungeon chứ ?",
+      "hypothesis_normalized": "1",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 1.0,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 52,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9811320754716981,
+        "substitutions": 0.018867924528301886
+      },
+      "missing_text": false,
+      "confidence": 0.19324664771556854,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "91d888378df056918cc2ac3bf5c5120d28b5e4b253fbadbfe45a5e57115a08d4",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017223,
+      "reference_raw": "KAZU-SAN",
+      "hypothesis_raw": "KAZN",
+      "reference_normalized": "kazu-san",
+      "hypothesis_normalized": "kazn",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.5,
+      "normalized_cer": 0.5,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 4,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.5,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.7108525037765503,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "191615f5129672a38fdb505156d6638f9c6139ba63f6c3fe8b811ffb82594f1c",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017168,
+      "reference_raw": "KAZU!",
+      "hypothesis_raw": "Kazu!",
+      "reference_normalized": "kazu!",
+      "hypothesis_normalized": "kazu!",
+      "raw_exact_match": false,
+      "normalized_exact_match": true,
+      "raw_cer": 0.6,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 3
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.6
+      },
+      "missing_text": false,
+      "confidence": 0.9994586706161499,
+      "confidence_bucket": "0.95-1.00",
+      "error_types": [
+        "CASE_ERROR",
+        "PUNCTUATION_ERROR",
+        "DIACRITIC_ERROR",
+        "SUBSTITUTION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "870e72b018b1224e2bbe74a09da5d04ed243c4a61b4a00475e5da70232a8e9b0",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017294,
+      "reference_raw": "HÔM NAY CHÚNG TA SẼ ĐI DÀO M-",
+      "hypothesis_raw": " ",
+      "reference_normalized": "hôm nay chúng ta sẽ đi dào m-",
+      "hypothesis_normalized": "",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.9655172413793104,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 28,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9655172413793104,
+        "substitutions": 0.0
+      },
+      "missing_text": true,
+      "confidence": 0.23549135029315948,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "DELETION"
+      ]
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "cache_key": "0ae88bd8c91588019a4f948276bec08536e63afb3d2b33cd20ec4c797c75eb2a",
+      "cache_status": "measured_this_run",
+      "latency_seconds": 0.017259,
+      "reference_raw": "ĐI CÂU CÁ THÔI NÀO!!!",
+      "hypothesis_raw": "DA ",
+      "reference_normalized": "đi câu cá thôi nào!!!",
+      "hypothesis_normalized": "da",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.9523809523809523,
+      "normalized_cer": 1.0,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 18,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.8571428571428571,
+        "substitutions": 0.09523809523809523
+      },
+      "missing_text": false,
+      "confidence": 0.3239351809024811,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ]
+    }
+  ],
+  "aggregate": {
+    "sample_count": 20,
+    "raw_exact_rate": 0.05,
+    "normalized_exact_rate": 0.1,
+    "micro_raw_cer": 0.9572271386430679,
+    "mean_normalized_cer": 0.7982784365393061,
+    "mean_wer": 0.9,
+    "missing_text_rate": 0.15,
+    "edit_counts": {
+      "insertions": 0,
+      "deletions": 623,
+      "substitutions": 26
+    },
+    "edit_rates": {
+      "insertions": 0.0,
+      "deletions": 0.9188790560471977,
+      "substitutions": 0.038348082595870206
+    }
+  },
+  "performance": {
+    "cold_initialization_seconds": 1.664299,
+    "warm_region_total_seconds": 0.360581,
+    "mean_region_seconds": 0.018029,
+    "total_benchmark_seconds": 2.02488,
+    "per_page_latency": "N/A: trusted-crop recognition benchmark"
+  },
+  "resources": {
+    "before": {
+      "timestamp": "2026-08-22T14:08:41.784099+00:00",
+      "process_rss_bytes": 1078116352,
+      "process_peak_rss_bytes": 1078116352,
+      "system_available_memory_bytes": 7077478400,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1540232314,
+      "process_cpu_seconds": 2.861924,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T14:08:43.863662+00:00",
+      "process_rss_bytes": 1854504960,
+      "process_peak_rss_bytes": 1854504960,
+      "system_available_memory_bytes": 7165362176,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1540232314,
+      "process_cpu_seconds": 4.58114,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "peak_rss_bytes": 1854504960,
+    "swap_delta_bytes": 0,
+    "safety_state": "NORMAL"
+  },
+  "authoritative_state": {
+    "before_hash": "ebca39b12a433d4740d029dfff86aefbc31cd9350a6cd8420defaa2ae976e7e4",
+    "after_hash": "ebca39b12a433d4740d029dfff86aefbc31cd9350a6cd8420defaa2ae976e7e4",
+    "unchanged": true
+  },
+  "vlm_calls": 0
+}

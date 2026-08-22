@@ -1,0 +1,342 @@
+{
+  "schema_version": "reader-reading-order-human.v1",
+  "checkpoint": "11.9",
+  "artifact_kind": "human_verified",
+  "status": "completed",
+  "verified_only": true,
+  "N": 3,
+  "samples": [
+    {
+      "review_id": "reading-order:dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "source_image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "source_compatible": true,
+      "reader_revision": "reader-v2.fast-pass.v1",
+      "reading_policy": "MANGA_RTL",
+      "predicted_sequence": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "human_sequence": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "predicted_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            4,
+            2,
+            3
+          ]
+        }
+      ],
+      "human_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            4,
+            2,
+            3
+          ]
+        }
+      ],
+      "human_dispositions": {
+        "1": "ORDERED",
+        "4": "ORDERED",
+        "2": "ORDERED",
+        "3": "ORDERED"
+      },
+      "sequence_metrics": {
+        "exact": true,
+        "pairwise_total": 6,
+        "inversions": 0,
+        "pairwise_accuracy": 1.0,
+        "corrections": 0
+      },
+      "group_metrics": {
+        "exact": true,
+        "predicted": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "human": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      "ambiguous": false,
+      "human_orphan_ids": [],
+      "error_taxonomy": []
+    },
+    {
+      "review_id": "reading-order:69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "source_compatible": true,
+      "reader_revision": "reader-v2.fast-pass.v1",
+      "reading_policy": "MANGA_RTL",
+      "predicted_sequence": [
+        1,
+        5,
+        2,
+        6,
+        3,
+        7,
+        4,
+        8
+      ],
+      "human_sequence": [
+        1,
+        5,
+        2,
+        6,
+        3,
+        7,
+        4,
+        8
+      ],
+      "predicted_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            5,
+            2,
+            6,
+            3,
+            7,
+            4,
+            8
+          ]
+        }
+      ],
+      "human_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            5,
+            2,
+            6,
+            3,
+            7,
+            4,
+            8
+          ]
+        }
+      ],
+      "human_dispositions": {
+        "1": "ORDERED",
+        "5": "ORDERED",
+        "2": "ORDERED",
+        "6": "ORDERED",
+        "3": "ORDERED",
+        "7": "ORDERED",
+        "4": "ORDERED",
+        "8": "ORDERED"
+      },
+      "sequence_metrics": {
+        "exact": true,
+        "pairwise_total": 28,
+        "inversions": 0,
+        "pairwise_accuracy": 1.0,
+        "corrections": 0
+      },
+      "group_metrics": {
+        "exact": true,
+        "predicted": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        "human": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "ambiguous": false,
+      "human_orphan_ids": [],
+      "error_taxonomy": []
+    },
+    {
+      "review_id": "reading-order:7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "source_compatible": true,
+      "reader_revision": "reader-v2.fast-pass.v1",
+      "reading_policy": "MANGA_RTL",
+      "predicted_sequence": [
+        1,
+        7,
+        8,
+        2,
+        3,
+        9,
+        4,
+        10,
+        5,
+        11
+      ],
+      "human_sequence": [
+        1,
+        8,
+        7,
+        2,
+        9,
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "predicted_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            7,
+            8,
+            2,
+            3,
+            9,
+            4,
+            10,
+            5,
+            11
+          ]
+        }
+      ],
+      "human_groups": [
+        {
+          "group_id": "PAGE",
+          "region_ids": [
+            1,
+            8,
+            7,
+            2,
+            9,
+            3,
+            4,
+            5,
+            10,
+            11
+          ]
+        }
+      ],
+      "human_dispositions": {
+        "1": "ORDERED",
+        "8": "ORDERED",
+        "7": "ORDERED",
+        "2": "ORDERED",
+        "9": "ORDERED",
+        "3": "ORDERED",
+        "4": "ORDERED",
+        "5": "ORDERED",
+        "10": "ORDERED",
+        "11": "ORDERED"
+      },
+      "sequence_metrics": {
+        "exact": false,
+        "pairwise_total": 45,
+        "inversions": 3,
+        "pairwise_accuracy": 0.9333333333333333,
+        "corrections": 6
+      },
+      "group_metrics": {
+        "exact": true,
+        "predicted": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        "human": [
+          {
+            "group_id": "PAGE",
+            "region_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ]
+      },
+      "ambiguous": false,
+      "human_orphan_ids": [],
+      "error_taxonomy": [
+        "WRONG_TEXT_ORDER"
+      ]
+    }
+  ],
+  "model_calls": {
+    "vlm": 0,
+    "ollama": 0,
+    "ocr": 0
+  }
+}

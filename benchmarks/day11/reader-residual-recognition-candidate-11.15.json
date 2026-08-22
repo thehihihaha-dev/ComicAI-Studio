@@ -1,0 +1,3956 @@
+{
+  "schema_version": "reader-residual-recognition-candidate.v1",
+  "checkpoint": "11.15",
+  "candidate": {
+    "engine": "PaddleX create_model recognizer API",
+    "model": "PP-OCRv6_medium_rec",
+    "model_cache_bytes": 76863990,
+    "framework_versions": {
+      "paddlex": "3.7.2",
+      "paddleocr": "3.7.0",
+      "paddlepaddle": "3.2.1"
+    },
+    "model_file_sha256": {
+      "inference.json": "0b2e25e990bd072f1bf77d59d67d508bce6c4bd44af6624e0fb27d6da2cd00e8",
+      "inference.pdiparams": "1b01c79a914587933f615569e75de54f2e638ebb5d3f3b3c1b38c24ede8c7319",
+      "inference.yml": "991b700facf5b50a7de193468207d5f4255b538dde0d312ae3b7c7a9b6873129"
+    },
+    "recognizer_only": true,
+    "detector_used": false,
+    "device": "cpu",
+    "downloads": []
+  },
+  "protocol_hash": "69325b808e0640d5b482f197a6e2048c78dab45ffca43f4e3737b7ba5cb9ca00",
+  "metrics": {
+    "C": {
+      "n": 71,
+      "exact": 6,
+      "exact_rate": 0.08450704225352113,
+      "normalized_cer": 0.9279764821166095,
+      "wer": 0.9833679833679834,
+      "improved": 5,
+      "unchanged": 7,
+      "regressed": 59,
+      "wrong_to_correct": 3,
+      "correct_to_wrong": 5
+    },
+    "D": {
+      "n": 71,
+      "exact": 6,
+      "exact_rate": 0.08450704225352113,
+      "normalized_cer": 0.9265066144047036,
+      "wer": 0.9833679833679834,
+      "improved": 6,
+      "unchanged": 7,
+      "regressed": 58,
+      "wrong_to_correct": 3,
+      "correct_to_wrong": 5
+    }
+  },
+  "selected_mode": "D",
+  "selection_rule": "highest exact, then lowest micro CER, fewer correct-to-wrong, stable mode",
+  "mode_c": [
+    {
+      "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+      "crop_bbox": [
+        674,
+        120,
+        774,
+        174
+      ],
+      "output": "THAMAT UT",
+      "confidence": 0.6544458270072937,
+      "latency_seconds": 0.05784620903432369,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 12,
+        "cer": 0.75,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+      "crop_bbox": [
+        140,
+        157,
+        246,
+        296
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03966920799575746,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 52,
+        "human_chars": 52,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+      "crop_bbox": [
+        647,
+        247,
+        707,
+        293
+      ],
+      "output": "KAZN- ",
+      "confidence": 0.8062047958374023,
+      "latency_seconds": 0.03917174995876849,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 8,
+        "cer": 0.5,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+      "crop_bbox": [
+        686,
+        400,
+        764,
+        452
+      ],
+      "output": "TNJMAI AAI",
+      "confidence": 0.584071159362793,
+      "latency_seconds": 0.03924170898972079,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 11,
+        "cer": 0.6363636363636364,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+      "crop_bbox": [
+        122,
+        474,
+        230,
+        576
+      ],
+      "output": " ",
+      "confidence": 0.3463641405105591,
+      "latency_seconds": 0.03921233303844929,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 34,
+        "human_chars": 34,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+      "crop_bbox": [
+        668,
+        550,
+        738,
+        578
+      ],
+      "output": "Kazu!",
+      "confidence": 0.9999598264694214,
+      "latency_seconds": 0.039103415969293565,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+      "crop_bbox": [
+        684,
+        734,
+        758,
+        788
+      ],
+      "output": "NMB A",
+      "confidence": 0.7293993234634399,
+      "latency_seconds": 0.03911541699199006,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 6,
+        "human_chars": 10,
+        "cer": 0.6,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+      "crop_bbox": [
+        195,
+        766,
+        272,
+        857
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03966700000455603,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 31,
+        "human_chars": 31,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_76735185b241",
+      "crop_bbox": [
+        659,
+        892,
+        755,
+        1003
+      ],
+      "output": "CAuCÁ ",
+      "confidence": 0.7194836735725403,
+      "latency_seconds": 0.04015616700053215,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 11,
+        "human_chars": 15,
+        "cer": 0.7333333333333333,
+        "word_errors": 4,
+        "human_words": 4,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_50519209704f",
+      "crop_bbox": [
+        117,
+        930,
+        239,
+        1071
+      ],
+      "output": "DAn ",
+      "confidence": 0.36832717061042786,
+      "latency_seconds": 0.04015774995787069,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 20,
+        "human_chars": 21,
+        "cer": 0.9523809523809523,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+      "crop_bbox": [
+        112,
+        131,
+        247,
+        184
+      ],
+      "output": "DAanhaoaudc Td)",
+      "confidence": 0.5407293438911438,
+      "latency_seconds": 0.04057029099203646,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 15,
+        "human_chars": 19,
+        "cer": 0.7894736842105263,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+      "crop_bbox": [
+        729,
+        165,
+        789,
+        203
+      ],
+      "output": "Hây",
+      "confidence": 0.998809278011322,
+      "latency_seconds": 0.03968666697619483,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 3,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+      "crop_bbox": [
+        55,
+        509,
+        129,
+        632
+      ],
+      "output": "0",
+      "confidence": 0.29959067702293396,
+      "latency_seconds": 0.039131542027462274,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+      "crop_bbox": [
+        700,
+        510,
+        724,
+        556
+      ],
+      "output": "101",
+      "confidence": 0.4641949236392975,
+      "latency_seconds": 0.03918045898899436,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+      "crop_bbox": [
+        550,
+        580,
+        574,
+        620
+      ],
+      "output": "OTT",
+      "confidence": 0.5040920376777649,
+      "latency_seconds": 0.03911983303260058,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+      "crop_bbox": [
+        742,
+        604,
+        806,
+        628
+      ],
+      "output": "Ehehe",
+      "confidence": 0.9965012669563293,
+      "latency_seconds": 0.03921887499745935,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+      "crop_bbox": [
+        470,
+        874,
+        536,
+        930
+      ],
+      "output": "Kazyu u",
+      "confidence": 0.8740162253379822,
+      "latency_seconds": 0.04008141701342538,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 8,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+      "crop_bbox": [
+        72,
+        979,
+        186,
+        1066
+      ],
+      "output": "YMUNA !",
+      "confidence": 0.5700253844261169,
+      "latency_seconds": 0.03968258301028982,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 10,
+        "human_chars": 13,
+        "cer": 0.7692307692307693,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+      "crop_bbox": [
+        321,
+        188,
+        447,
+        300
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04004783398704603,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 64,
+        "human_chars": 64,
+        "cer": 1.0,
+        "word_errors": 14,
+        "human_words": 14,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+      "crop_bbox": [
+        708,
+        189,
+        786,
+        240
+      ],
+      "output": "ONCAU O.",
+      "confidence": 0.44875094294548035,
+      "latency_seconds": 0.03908445802517235,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 11,
+        "cer": 0.8181818181818182,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+      "crop_bbox": [
+        97,
+        277,
+        195,
+        366
+      ],
+      "output": "TAd",
+      "confidence": 0.4779062271118164,
+      "latency_seconds": 0.0400614999816753,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 32,
+        "human_chars": 34,
+        "cer": 0.9411764705882353,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+      "crop_bbox": [
+        663,
+        505,
+        749,
+        602
+      ],
+      "output": "G6AI ",
+      "confidence": 0.6145804524421692,
+      "latency_seconds": 0.039436208026017994,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 19,
+        "human_chars": 21,
+        "cer": 0.9047619047619048,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+      "crop_bbox": [
+        462,
+        546,
+        554,
+        619
+      ],
+      "output": "NAON ,",
+      "confidence": 0.4897010326385498,
+      "latency_seconds": 0.03907420800533146,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 23,
+        "cer": 0.782608695652174,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+      "crop_bbox": [
+        153,
+        553,
+        337,
+        589
+      ],
+      "output": "Rin đã Offline",
+      "confidence": 0.9913782477378845,
+      "latency_seconds": 0.03917308402014896,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 14,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+      "crop_bbox": [
+        160,
+        754,
+        260,
+        860
+      ],
+      "output": "小",
+      "confidence": 0.7438879609107971,
+      "latency_seconds": 0.03904970799339935,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+      "crop_bbox": [
+        682,
+        822,
+        730,
+        846
+      ],
+      "output": "PHù.",
+      "confidence": 0.8965883851051331,
+      "latency_seconds": 0.04020533402217552,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+      "crop_bbox": [
+        318,
+        1010,
+        416,
+        1104
+      ],
+      "output": "CHONOA A",
+      "confidence": 0.4720453917980194,
+      "latency_seconds": 0.03998595802113414,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 17,
+        "human_chars": 20,
+        "cer": 0.85,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+      "crop_bbox": [
+        101,
+        1021,
+        237,
+        1167
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.040111125039402395,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 4,
+        "cer": 1.0,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+      "crop_bbox": [
+        536,
+        184,
+        652,
+        314
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03915583301568404,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 44,
+        "human_chars": 44,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+      "crop_bbox": [
+        704,
+        224,
+        762,
+        277
+      ],
+      "output": "L盆T. ",
+      "confidence": 0.7530306577682495,
+      "latency_seconds": 0.039169833005871624,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 10,
+        "cer": 0.7,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+      "crop_bbox": [
+        99,
+        449,
+        255,
+        629
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04022866702871397,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 54,
+        "human_chars": 54,
+        "cer": 1.0,
+        "word_errors": 13,
+        "human_words": 13,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+      "crop_bbox": [
+        130,
+        771,
+        246,
+        896
+      ],
+      "output": "1",
+      "confidence": 0.358812153339386,
+      "latency_seconds": 0.03952766698785126,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 49,
+        "human_chars": 49,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_92071c223e96",
+      "crop_bbox": [
+        688,
+        784,
+        794,
+        868
+      ],
+      "output": "Ml ",
+      "confidence": 0.48171746730804443,
+      "latency_seconds": 0.03921008395263925,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 20,
+        "human_chars": 21,
+        "cer": 0.9523809523809523,
+        "word_errors": 4,
+        "human_words": 4,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+      "crop_bbox": [
+        250,
+        1040,
+        354,
+        1138
+      ],
+      "output": "T",
+      "confidence": 0.6465980410575867,
+      "latency_seconds": 0.040091542003210634,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 34,
+        "human_chars": 35,
+        "cer": 0.9714285714285714,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+      "crop_bbox": [
+        688,
+        156,
+        788,
+        311
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04023008397780359,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 62,
+        "human_chars": 62,
+        "cer": 1.0,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+      "crop_bbox": [
+        434,
+        284,
+        510,
+        378
+      ],
+      "output": "N",
+      "confidence": 0.3994034230709076,
+      "latency_seconds": 0.04013533401302993,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 23,
+        "human_chars": 24,
+        "cer": 0.9583333333333334,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+      "crop_bbox": [
+        130,
+        632,
+        260,
+        801
+      ],
+      "output": "建",
+      "confidence": 0.20079655945301056,
+      "latency_seconds": 0.039120791014283895,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 100,
+        "human_chars": 100,
+        "cer": 1.0,
+        "word_errors": 25,
+        "human_words": 25,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "crop_bbox": [
+        692,
+        640,
+        750,
+        666
+      ],
+      "output": "\"STAR",
+      "confidence": 0.9999504089355469,
+      "latency_seconds": 0.039214084041304886,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 4,
+        "cer": 0.25,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "SAFE_CANDIDATE"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+      "crop_bbox": [
+        688,
+        688,
+        756,
+        712
+      ],
+      "output": "MINES\"",
+      "confidence": 0.999919593334198,
+      "latency_seconds": 0.039147417002823204,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+      "crop_bbox": [
+        137,
+        1032,
+        239,
+        1157
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.039151791017502546,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 50,
+        "human_chars": 50,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+      "crop_bbox": [
+        674,
+        1036,
+        750,
+        1110
+      ],
+      "output": "Td M ",
+      "confidence": 0.6288625001907349,
+      "latency_seconds": 0.040197999973315746,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 21,
+        "cer": 0.8571428571428571,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+      "crop_bbox": [
+        113,
+        174,
+        172,
+        251
+      ],
+      "output": "GN ",
+      "confidence": 0.42378368973731995,
+      "latency_seconds": 0.03952674998436123,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 16,
+        "human_chars": 17,
+        "cer": 0.9411764705882353,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+      "crop_bbox": [
+        730,
+        194,
+        784,
+        250
+      ],
+      "output": "Tu ",
+      "confidence": 0.47393426299095154,
+      "latency_seconds": 0.0401414999505505,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 8,
+        "cer": 0.875,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+      "crop_bbox": [
+        534,
+        196,
+        676,
+        289
+      ],
+      "output": "BA",
+      "confidence": 0.3207652270793915,
+      "latency_seconds": 0.03958862501895055,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 49,
+        "human_chars": 50,
+        "cer": 0.98,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+      "crop_bbox": [
+        643,
+        449,
+        709,
+        549
+      ],
+      "output": "究",
+      "confidence": 0.23982484638690948,
+      "latency_seconds": 0.04021283402107656,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 39,
+        "human_chars": 39,
+        "cer": 1.0,
+        "word_errors": 9,
+        "human_words": 9,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+      "crop_bbox": [
+        481,
+        460,
+        591,
+        561
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03916991699952632,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 61,
+        "human_chars": 61,
+        "cer": 1.0,
+        "word_errors": 15,
+        "human_words": 15,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+      "crop_bbox": [
+        125,
+        468,
+        227,
+        557
+      ],
+      "output": "GNGR",
+      "confidence": 0.6297023296356201,
+      "latency_seconds": 0.039195834018755704,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 35,
+        "human_chars": 38,
+        "cer": 0.9210526315789473,
+        "word_errors": 9,
+        "human_words": 9,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+      "crop_bbox": [
+        583,
+        929,
+        619,
+        989
+      ],
+      "output": "è",
+      "confidence": 0.2640221118927002,
+      "latency_seconds": 0.03932425001403317,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 2,
+        "cer": 1.0,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+      "crop_bbox": [
+        146,
+        969,
+        272,
+        1086
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03920500003732741,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 61,
+        "human_chars": 61,
+        "cer": 1.0,
+        "word_errors": 15,
+        "human_words": 15,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+      "crop_bbox": [
+        490,
+        1024,
+        576,
+        1130
+      ],
+      "output": "O",
+      "confidence": 0.4105505645275116,
+      "latency_seconds": 0.03915625001536682,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 26,
+        "human_chars": 27,
+        "cer": 0.9629629629629629,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+      "crop_bbox": [
+        154,
+        138,
+        216,
+        186
+      ],
+      "output": "十千",
+      "confidence": 0.667801558971405,
+      "latency_seconds": 0.04121291701449081,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+      "crop_bbox": [
+        284,
+        154,
+        372,
+        279
+      ],
+      "output": "1",
+      "confidence": 0.44407665729522705,
+      "latency_seconds": 0.04041495802812278,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 34,
+        "human_chars": 34,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+      "crop_bbox": [
+        674,
+        185,
+        790,
+        294
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04017774999374524,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 53,
+        "human_chars": 53,
+        "cer": 1.0,
+        "word_errors": 12,
+        "human_words": 12,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+      "crop_bbox": [
+        612,
+        224,
+        646,
+        248
+      ],
+      "output": "00",
+      "confidence": 0.6874113082885742,
+      "latency_seconds": 0.03925100003834814,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+      "crop_bbox": [
+        672,
+        904,
+        752,
+        980
+      ],
+      "output": "ANiR ",
+      "confidence": 0.38057902455329895,
+      "latency_seconds": 0.03917579195694998,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 26,
+        "human_chars": 28,
+        "cer": 0.9285714285714286,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+      "crop_bbox": [
+        324,
+        918,
+        448,
+        1006
+      ],
+      "output": "GaA I! R",
+      "confidence": 0.4124903082847595,
+      "latency_seconds": 0.03917712497059256,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 30,
+        "human_chars": 35,
+        "cer": 0.8571428571428571,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+      "crop_bbox": [
+        118,
+        972,
+        238,
+        1026
+      ],
+      "output": "SinIli Minh ",
+      "confidence": 0.5690265893936157,
+      "latency_seconds": 0.03917012503370643,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 26,
+        "cer": 0.6923076923076923,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+      "crop_bbox": [
+        518,
+        977,
+        642,
+        1051
+      ],
+      "output": "G",
+      "confidence": 0.3931571841239929,
+      "latency_seconds": 0.03913554101018235,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 26,
+        "human_chars": 26,
+        "cer": 1.0,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+      "crop_bbox": [
+        394,
+        287,
+        446,
+        364
+      ],
+      "output": "DON T",
+      "confidence": 0.36751118302345276,
+      "latency_seconds": 0.03908541600685567,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 10,
+        "human_chars": 12,
+        "cer": 0.8333333333333334,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+      "crop_bbox": [
+        126,
+        525,
+        204,
+        621
+      ],
+      "output": "N A",
+      "confidence": 0.3271597623825073,
+      "latency_seconds": 0.03911295800935477,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 26,
+        "human_chars": 29,
+        "cer": 0.896551724137931,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+      "crop_bbox": [
+        371,
+        607,
+        415,
+        651
+      ],
+      "output": "地",
+      "confidence": 0.17623262107372284,
+      "latency_seconds": 0.04007229197304696,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+      "crop_bbox": [
+        620,
+        852,
+        780,
+        950
+      ],
+      "output": "MO",
+      "confidence": 0.31856465339660645,
+      "latency_seconds": 0.040461375028826296,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 64,
+        "human_chars": 66,
+        "cer": 0.9696969696969697,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+      "crop_bbox": [
+        169,
+        853,
+        227,
+        873
+      ],
+      "output": "KAZU!",
+      "confidence": 0.9997800588607788,
+      "latency_seconds": 0.03910862497286871,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+      "crop_bbox": [
+        262,
+        148,
+        362,
+        290
+      ],
+      "output": "1",
+      "confidence": 0.25827115774154663,
+      "latency_seconds": 0.03930549998767674,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 55,
+        "human_chars": 55,
+        "cer": 1.0,
+        "word_errors": 12,
+        "human_words": 12,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+      "crop_bbox": [
+        678,
+        172,
+        782,
+        286
+      ],
+      "output": "#",
+      "confidence": 0.4679472744464874,
+      "latency_seconds": 0.03914616600377485,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 30,
+        "human_chars": 30,
+        "cer": 1.0,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+      "crop_bbox": [
+        129,
+        244,
+        207,
+        318
+      ],
+      "output": "Lana ",
+      "confidence": 0.5982383489608765,
+      "latency_seconds": 0.03912516700802371,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 20,
+        "cer": 0.9,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+      "crop_bbox": [
+        676,
+        462,
+        788,
+        578
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.039182166976388544,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 47,
+        "human_chars": 47,
+        "cer": 1.0,
+        "word_errors": 10,
+        "human_words": 10,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+      "crop_bbox": [
+        132,
+        479,
+        232,
+        566
+      ],
+      "output": "DAN NA ",
+      "confidence": 0.49495187401771545,
+      "latency_seconds": 0.03918595897266641,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 24,
+        "human_chars": 27,
+        "cer": 0.8888888888888888,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+      "crop_bbox": [
+        282,
+        497,
+        402,
+        621
+      ],
+      "output": "1",
+      "confidence": 0.7500098943710327,
+      "latency_seconds": 0.03922708297614008,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 77,
+        "human_chars": 77,
+        "cer": 1.0,
+        "word_errors": 18,
+        "human_words": 18,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+      "crop_bbox": [
+        684,
+        748,
+        799,
+        930
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04031195800052956,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 70,
+        "human_chars": 70,
+        "cer": 1.0,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+      "crop_bbox": [
+        268,
+        1000,
+        322,
+        1024
+      ],
+      "output": "STAR",
+      "confidence": 0.9999812245368958,
+      "latency_seconds": 0.041174667014274746,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 4,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+      "crop_bbox": [
+        265,
+        1049,
+        325,
+        1094
+      ],
+      "output": "IO! ",
+      "confidence": 0.5870959758758545,
+      "latency_seconds": 0.03936387499561533,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 9,
+        "cer": 0.7777777777777778,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+      "crop_bbox": [
+        445,
+        120,
+        523,
+        173
+      ],
+      "output": "phut",
+      "confidence": 0.9043558835983276,
+      "latency_seconds": 0.03921016596723348,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+      "crop_bbox": [
+        184,
+        120,
+        265,
+        175
+      ],
+      "output": "phut",
+      "confidence": 0.9417998790740967,
+      "latency_seconds": 0.039139874977990985,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+      "crop_bbox": [
+        689,
+        127,
+        759,
+        171
+      ],
+      "output": "phut",
+      "confidence": 0.971976637840271,
+      "latency_seconds": 0.0391586659825407,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+      "crop_bbox": [
+        157,
+        129,
+        193,
+        165
+      ],
+      "output": "3",
+      "confidence": 0.9999635219573975,
+      "latency_seconds": 0.03909041697625071,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+      "crop_bbox": [
+        418,
+        130,
+        448,
+        164
+      ],
+      "output": "2",
+      "confidence": 0.999996542930603,
+      "latency_seconds": 0.03909274999750778,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+      "crop_bbox": [
+        640,
+        582,
+        770,
+        727
+      ],
+      "output": "1",
+      "confidence": 0.5450301170349121,
+      "latency_seconds": 0.03912504098843783,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 47,
+        "human_chars": 47,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+      "crop_bbox": [
+        122,
+        666,
+        240,
+        820
+      ],
+      "output": "二",
+      "confidence": 0.20270277559757233,
+      "latency_seconds": 0.040122915990650654,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 72,
+        "human_chars": 72,
+        "cer": 1.0,
+        "word_errors": 17,
+        "human_words": 17,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+      "crop_bbox": [
+        691,
+        961,
+        794,
+        1019
+      ],
+      "output": "サバン",
+      "confidence": 0.5792957544326782,
+      "latency_seconds": 0.039155624981503934,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+      "crop_bbox": [
+        400,
+        992,
+        500,
+        1072
+      ],
+      "output": "NeGL ",
+      "confidence": 0.5238847732543945,
+      "latency_seconds": 0.040167916973587126,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 24,
+        "human_chars": 25,
+        "cer": 0.96,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    }
+  ],
+  "mode_d": [
+    {
+      "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+      "crop_bbox": [
+        670,
+        116,
+        778,
+        178
+      ],
+      "output": "THN M A RAT",
+      "confidence": 0.6544890403747559,
+      "latency_seconds": 0.039279500022530556,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 12,
+        "cer": 0.75,
+        "word_errors": 4,
+        "human_words": 3,
+        "wer": 1.3333333333333333
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+      "crop_bbox": [
+        134,
+        151,
+        252,
+        302
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03940916695864871,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 52,
+        "human_chars": 52,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+      "crop_bbox": [
+        644,
+        244,
+        710,
+        296
+      ],
+      "output": "KAZu- ",
+      "confidence": 0.6989745497703552,
+      "latency_seconds": 0.03912208299152553,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 8,
+        "cer": 0.375,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+      "crop_bbox": [
+        683,
+        397,
+        767,
+        455
+      ],
+      "output": "TNMAI AAI",
+      "confidence": 0.5265936851501465,
+      "latency_seconds": 0.039281000033952296,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 11,
+        "cer": 0.6363636363636364,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+      "crop_bbox": [
+        118,
+        470,
+        234,
+        580
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03923008299898356,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 34,
+        "human_chars": 34,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+      "crop_bbox": [
+        665,
+        547,
+        741,
+        581
+      ],
+      "output": "Kazu!",
+      "confidence": 0.9996646642684937,
+      "latency_seconds": 0.03912858298281208,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+      "crop_bbox": [
+        681,
+        731,
+        761,
+        791
+      ],
+      "output": "NM A A",
+      "confidence": 0.8573399186134338,
+      "latency_seconds": 0.03919795801630244,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 10,
+        "cer": 0.5,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+      "crop_bbox": [
+        191,
+        762,
+        276,
+        861
+      ],
+      "output": "MNA",
+      "confidence": 0.29570093750953674,
+      "latency_seconds": 0.04010404204018414,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 28,
+        "human_chars": 31,
+        "cer": 0.9032258064516129,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_76735185b241",
+      "crop_bbox": [
+        655,
+        888,
+        759,
+        1007
+      ],
+      "output": "CAuNÁ ",
+      "confidence": 0.5843420028686523,
+      "latency_seconds": 0.039259000041056424,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 12,
+        "human_chars": 15,
+        "cer": 0.8,
+        "word_errors": 4,
+        "human_words": 4,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_50519209704f",
+      "crop_bbox": [
+        111,
+        924,
+        245,
+        1077
+      ],
+      "output": "DiAin ",
+      "confidence": 0.3622858226299286,
+      "latency_seconds": 0.04032983398064971,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 21,
+        "cer": 0.8571428571428571,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+      "crop_bbox": [
+        107,
+        126,
+        252,
+        189
+      ],
+      "output": "And Te)",
+      "confidence": 0.5227299928665161,
+      "latency_seconds": 0.03917620796710253,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 17,
+        "human_chars": 19,
+        "cer": 0.8947368421052632,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+      "crop_bbox": [
+        726,
+        162,
+        792,
+        206
+      ],
+      "output": "Hây",
+      "confidence": 0.9987285733222961,
+      "latency_seconds": 0.03910929098492488,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 3,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+      "crop_bbox": [
+        50,
+        504,
+        134,
+        637
+      ],
+      "output": "0",
+      "confidence": 0.4001220762729645,
+      "latency_seconds": 0.03922779200365767,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+      "crop_bbox": [
+        697,
+        507,
+        727,
+        559
+      ],
+      "output": "101",
+      "confidence": 0.3958538770675659,
+      "latency_seconds": 0.03923437499906868,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+      "crop_bbox": [
+        547,
+        577,
+        577,
+        623
+      ],
+      "output": "07",
+      "confidence": 0.6446757316589355,
+      "latency_seconds": 0.03904487501131371,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+      "crop_bbox": [
+        739,
+        601,
+        809,
+        631
+      ],
+      "output": "Ehehe",
+      "confidence": 0.9951297640800476,
+      "latency_seconds": 0.038954459014348686,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+      "crop_bbox": [
+        467,
+        871,
+        539,
+        933
+      ],
+      "output": "Kazyu u",
+      "confidence": 0.8142070174217224,
+      "latency_seconds": 0.04006854194449261,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 8,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+      "crop_bbox": [
+        67,
+        974,
+        191,
+        1071
+      ],
+      "output": "YMUNCA !",
+      "confidence": 0.46790453791618347,
+      "latency_seconds": 0.04001458396669477,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 13,
+        "cer": 0.6923076923076923,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+      "crop_bbox": [
+        316,
+        183,
+        452,
+        305
+      ],
+      "output": "1",
+      "confidence": 0.32720357179641724,
+      "latency_seconds": 0.0401463329908438,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 64,
+        "human_chars": 64,
+        "cer": 1.0,
+        "word_errors": 14,
+        "human_words": 14,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+      "crop_bbox": [
+        705,
+        186,
+        789,
+        243
+      ],
+      "output": "CCA .",
+      "confidence": 0.5183457136154175,
+      "latency_seconds": 0.03906999999890104,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 11,
+        "cer": 0.7272727272727273,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+      "crop_bbox": [
+        93,
+        273,
+        199,
+        370
+      ],
+      "output": "E",
+      "confidence": 0.15032273530960083,
+      "latency_seconds": 0.03912691702134907,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 33,
+        "human_chars": 34,
+        "cer": 0.9705882352941176,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+      "crop_bbox": [
+        659,
+        501,
+        753,
+        606
+      ],
+      "output": "GAI A",
+      "confidence": 0.4698786735534668,
+      "latency_seconds": 0.039140457985922694,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 17,
+        "human_chars": 21,
+        "cer": 0.8095238095238095,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+      "crop_bbox": [
+        458,
+        542,
+        558,
+        623
+      ],
+      "output": "CANi, ",
+      "confidence": 0.7018999457359314,
+      "latency_seconds": 0.039049583952873945,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 20,
+        "human_chars": 23,
+        "cer": 0.8695652173913043,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+      "crop_bbox": [
+        146,
+        546,
+        344,
+        596
+      ],
+      "output": "Rin đã Offline",
+      "confidence": 0.9944757223129272,
+      "latency_seconds": 0.03907837497536093,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 14,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+      "crop_bbox": [
+        156,
+        750,
+        264,
+        864
+      ],
+      "output": "米",
+      "confidence": 0.37517574429512024,
+      "latency_seconds": 0.040093874966260046,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+      "crop_bbox": [
+        679,
+        819,
+        733,
+        849
+      ],
+      "output": "PHù..",
+      "confidence": 0.9336748123168945,
+      "latency_seconds": 0.04031108401250094,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 6,
+        "cer": 0.16666666666666666,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+      "crop_bbox": [
+        314,
+        1006,
+        420,
+        1108
+      ],
+      "output": "HOA R",
+      "confidence": 0.5750669240951538,
+      "latency_seconds": 0.04007629200350493,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 16,
+        "human_chars": 20,
+        "cer": 0.8,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+      "crop_bbox": [
+        95,
+        1015,
+        243,
+        1173
+      ],
+      "output": "IS",
+      "confidence": 0.4444536566734314,
+      "latency_seconds": 0.03918816603254527,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 4,
+        "cer": 1.0,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+      "crop_bbox": [
+        531,
+        179,
+        657,
+        319
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.0391666250070557,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 44,
+        "human_chars": 44,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+      "crop_bbox": [
+        701,
+        221,
+        765,
+        280
+      ],
+      "output": "L盆T. ",
+      "confidence": 0.7925378680229187,
+      "latency_seconds": 0.03912266599945724,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 10,
+        "cer": 0.7,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+      "crop_bbox": [
+        92,
+        442,
+        262,
+        636
+      ],
+      "output": "1",
+      "confidence": 0.39162853360176086,
+      "latency_seconds": 0.039152041950728744,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 54,
+        "human_chars": 54,
+        "cer": 1.0,
+        "word_errors": 13,
+        "human_words": 13,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+      "crop_bbox": [
+        125,
+        766,
+        251,
+        901
+      ],
+      "output": "1",
+      "confidence": 0.888538658618927,
+      "latency_seconds": 0.03915100003359839,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 49,
+        "human_chars": 49,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_92071c223e96",
+      "crop_bbox": [
+        684,
+        780,
+        798,
+        872
+      ],
+      "output": "Mile. .",
+      "confidence": 0.44002580642700195,
+      "latency_seconds": 0.03909824998117983,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 21,
+        "cer": 0.8571428571428571,
+        "word_errors": 4,
+        "human_words": 4,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+      "crop_bbox": [
+        246,
+        1036,
+        358,
+        1142
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.0402262500138022,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 35,
+        "human_chars": 35,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+      "crop_bbox": [
+        682,
+        150,
+        794,
+        317
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.039872416004072875,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 62,
+        "human_chars": 62,
+        "cer": 1.0,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+      "crop_bbox": [
+        430,
+        280,
+        514,
+        382
+      ],
+      "output": " ",
+      "confidence": 0.3319248855113983,
+      "latency_seconds": 0.04011458298191428,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 24,
+        "human_chars": 24,
+        "cer": 1.0,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+      "crop_bbox": [
+        123,
+        625,
+        267,
+        808
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03921054204693064,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 100,
+        "human_chars": 100,
+        "cer": 1.0,
+        "word_errors": 25,
+        "human_words": 25,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "crop_bbox": [
+        689,
+        637,
+        753,
+        669
+      ],
+      "output": "\"STAR",
+      "confidence": 0.9993345141410828,
+      "latency_seconds": 0.03909608302637935,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 4,
+        "cer": 0.25,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "SAFE_CANDIDATE"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+      "crop_bbox": [
+        685,
+        685,
+        759,
+        715
+      ],
+      "output": "MINES\"",
+      "confidence": 0.9990971684455872,
+      "latency_seconds": 0.03907237498788163,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+      "crop_bbox": [
+        132,
+        1027,
+        244,
+        1162
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03910604101838544,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 50,
+        "human_chars": 50,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+      "crop_bbox": [
+        671,
+        1033,
+        753,
+        1113
+      ],
+      "output": "TRdSN ",
+      "confidence": 0.5784370303153992,
+      "latency_seconds": 0.0390957499621436,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 21,
+        "cer": 0.8571428571428571,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+      "crop_bbox": [
+        110,
+        171,
+        175,
+        254
+      ],
+      "output": "N ",
+      "confidence": 0.3017579913139343,
+      "latency_seconds": 0.0401267500128597,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 16,
+        "human_chars": 17,
+        "cer": 0.9411764705882353,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+      "crop_bbox": [
+        727,
+        191,
+        787,
+        253
+      ],
+      "output": "u ",
+      "confidence": 0.4564511775970459,
+      "latency_seconds": 0.04022687498945743,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 8,
+        "cer": 1.0,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+      "crop_bbox": [
+        528,
+        190,
+        682,
+        295
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04011079197516665,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 50,
+        "human_chars": 50,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+      "crop_bbox": [
+        639,
+        445,
+        713,
+        553
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.039282833982724696,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 39,
+        "human_chars": 39,
+        "cer": 1.0,
+        "word_errors": 9,
+        "human_words": 9,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+      "crop_bbox": [
+        477,
+        456,
+        595,
+        565
+      ],
+      "output": "理",
+      "confidence": 0.23691023886203766,
+      "latency_seconds": 0.039177624974399805,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 61,
+        "human_chars": 61,
+        "cer": 1.0,
+        "word_errors": 15,
+        "human_words": 15,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+      "crop_bbox": [
+        121,
+        464,
+        231,
+        561
+      ],
+      "output": "GUNR",
+      "confidence": 0.3491135537624359,
+      "latency_seconds": 0.0415713339461945,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 36,
+        "human_chars": 38,
+        "cer": 0.9473684210526315,
+        "word_errors": 9,
+        "human_words": 9,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+      "crop_bbox": [
+        580,
+        926,
+        622,
+        992
+      ],
+      "output": "ê",
+      "confidence": 0.3219718039035797,
+      "latency_seconds": 0.03917383402585983,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 2,
+        "cer": 1.0,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+      "crop_bbox": [
+        141,
+        964,
+        277,
+        1091
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.039141957997344434,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 61,
+        "human_chars": 61,
+        "cer": 1.0,
+        "word_errors": 15,
+        "human_words": 15,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+      "crop_bbox": [
+        486,
+        1020,
+        580,
+        1134
+      ],
+      "output": "司",
+      "confidence": 0.5603876709938049,
+      "latency_seconds": 0.039113457954954356,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 27,
+        "human_chars": 27,
+        "cer": 1.0,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+      "crop_bbox": [
+        151,
+        135,
+        219,
+        189
+      ],
+      "output": "力千",
+      "confidence": 0.7136577367782593,
+      "latency_seconds": 0.04014262498822063,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+      "crop_bbox": [
+        279,
+        149,
+        377,
+        284
+      ],
+      "output": "—1",
+      "confidence": 0.7859081029891968,
+      "latency_seconds": 0.0395576250157319,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 34,
+        "human_chars": 34,
+        "cer": 1.0,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+      "crop_bbox": [
+        669,
+        180,
+        795,
+        299
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.040280249959323555,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 53,
+        "human_chars": 53,
+        "cer": 1.0,
+        "word_errors": 12,
+        "human_words": 12,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+      "crop_bbox": [
+        609,
+        221,
+        649,
+        251
+      ],
+      "output": "00",
+      "confidence": 0.714743435382843,
+      "latency_seconds": 0.03923362499335781,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+      "crop_bbox": [
+        669,
+        901,
+        755,
+        983
+      ],
+      "output": "uieie A",
+      "confidence": 0.42737582325935364,
+      "latency_seconds": 0.03934779204428196,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 25,
+        "human_chars": 28,
+        "cer": 0.8928571428571429,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+      "crop_bbox": [
+        319,
+        913,
+        453,
+        1011
+      ],
+      "output": "aA OR ",
+      "confidence": 0.5894495844841003,
+      "latency_seconds": 0.03917029098374769,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 32,
+        "human_chars": 35,
+        "cer": 0.9142857142857143,
+        "word_errors": 8,
+        "human_words": 8,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+      "crop_bbox": [
+        113,
+        967,
+        243,
+        1031
+      ],
+      "output": "dinI Minh TES",
+      "confidence": 0.49508291482925415,
+      "latency_seconds": 0.03915708401473239,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 26,
+        "cer": 0.6923076923076923,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+      "crop_bbox": [
+        513,
+        972,
+        647,
+        1056
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03921833302592859,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 26,
+        "human_chars": 26,
+        "cer": 1.0,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+      "crop_bbox": [
+        391,
+        284,
+        449,
+        367
+      ],
+      "output": "D T",
+      "confidence": 0.26165613532066345,
+      "latency_seconds": 0.03904320899164304,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 11,
+        "human_chars": 12,
+        "cer": 0.9166666666666666,
+        "word_errors": 3,
+        "human_words": 3,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+      "crop_bbox": [
+        122,
+        521,
+        208,
+        625
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.03918249998241663,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 29,
+        "human_chars": 29,
+        "cer": 1.0,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+      "crop_bbox": [
+        368,
+        604,
+        418,
+        654
+      ],
+      "output": "4",
+      "confidence": 0.1267988234758377,
+      "latency_seconds": 0.04015608294866979,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+      "crop_bbox": [
+        614,
+        846,
+        786,
+        956
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04020091699203476,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 66,
+        "human_chars": 66,
+        "cer": 1.0,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+      "crop_bbox": [
+        166,
+        850,
+        230,
+        876
+      ],
+      "output": "KAZU!",
+      "confidence": 0.9993194341659546,
+      "latency_seconds": 0.03907229099422693,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+      "crop_bbox": [
+        256,
+        142,
+        368,
+        296
+      ],
+      "output": "1",
+      "confidence": 0.17874263226985931,
+      "latency_seconds": 0.0391002080286853,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 55,
+        "human_chars": 55,
+        "cer": 1.0,
+        "word_errors": 12,
+        "human_words": 12,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+      "crop_bbox": [
+        673,
+        167,
+        787,
+        291
+      ],
+      "output": "局",
+      "confidence": 0.13803322613239288,
+      "latency_seconds": 0.03902945900335908,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 30,
+        "human_chars": 30,
+        "cer": 1.0,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+      "crop_bbox": [
+        126,
+        241,
+        210,
+        321
+      ],
+      "output": "Lan ",
+      "confidence": 0.693976879119873,
+      "latency_seconds": 0.03910091699799523,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 20,
+        "cer": 0.9,
+        "word_errors": 5,
+        "human_words": 5,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+      "crop_bbox": [
+        671,
+        457,
+        793,
+        583
+      ],
+      "output": " ",
+      "confidence": 0.17613177001476288,
+      "latency_seconds": 0.03908891597529873,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 47,
+        "human_chars": 47,
+        "cer": 1.0,
+        "word_errors": 10,
+        "human_words": 10,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+      "crop_bbox": [
+        128,
+        475,
+        236,
+        570
+      ],
+      "output": "UANA NA A",
+      "confidence": 0.4424324929714203,
+      "latency_seconds": 0.03912662499351427,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 22,
+        "human_chars": 27,
+        "cer": 0.8148148148148148,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+      "crop_bbox": [
+        277,
+        492,
+        407,
+        626
+      ],
+      "output": "二",
+      "confidence": 0.39331600069999695,
+      "latency_seconds": 0.03919166699051857,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 77,
+        "human_chars": 77,
+        "cer": 1.0,
+        "word_errors": 18,
+        "human_words": 18,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+      "crop_bbox": [
+        677,
+        741,
+        806,
+        937
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.040096124983392656,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 70,
+        "human_chars": 70,
+        "cer": 1.0,
+        "word_errors": 16,
+        "human_words": 16,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+      "crop_bbox": [
+        265,
+        997,
+        325,
+        1027
+      ],
+      "output": "STAR",
+      "confidence": 0.99998939037323,
+      "latency_seconds": 0.039129165990743786,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 4,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+      "crop_bbox": [
+        262,
+        1046,
+        328,
+        1097
+      ],
+      "output": "MIó! ",
+      "confidence": 0.6403018236160278,
+      "latency_seconds": 0.039124625036492944,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 9,
+        "cer": 0.5555555555555556,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+      "crop_bbox": [
+        442,
+        117,
+        526,
+        176
+      ],
+      "output": "phat",
+      "confidence": 0.9618476629257202,
+      "latency_seconds": 0.03915533301187679,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+      "crop_bbox": [
+        181,
+        117,
+        268,
+        178
+      ],
+      "output": "phut",
+      "confidence": 0.8705787062644958,
+      "latency_seconds": 0.03912408399628475,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+      "crop_bbox": [
+        686,
+        124,
+        762,
+        174
+      ],
+      "output": "phút",
+      "confidence": 0.9038817882537842,
+      "latency_seconds": 0.03916841698810458,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 2,
+        "wer": 0.5
+      },
+      "r2_state": "HARD"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+      "crop_bbox": [
+        154,
+        126,
+        196,
+        168
+      ],
+      "output": "3",
+      "confidence": 0.9997755885124207,
+      "latency_seconds": 0.03903045802144334,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+      "crop_bbox": [
+        415,
+        127,
+        451,
+        167
+      ],
+      "output": "2",
+      "confidence": 0.9999957084655762,
+      "latency_seconds": 0.03902987501351163,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+      "crop_bbox": [
+        634,
+        576,
+        776,
+        733
+      ],
+      "output": "1",
+      "confidence": 0.4083839952945709,
+      "latency_seconds": 0.03960804099915549,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 47,
+        "human_chars": 47,
+        "cer": 1.0,
+        "word_errors": 11,
+        "human_words": 11,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+      "crop_bbox": [
+        116,
+        660,
+        246,
+        826
+      ],
+      "output": "",
+      "confidence": 0.0,
+      "latency_seconds": 0.04003870900487527,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 72,
+        "human_chars": 72,
+        "cer": 1.0,
+        "word_errors": 17,
+        "human_words": 17,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+      "crop_bbox": [
+        687,
+        957,
+        798,
+        1023
+      ],
+      "output": "サバン",
+      "confidence": 0.6962849497795105,
+      "latency_seconds": 0.04001554101705551,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+      "crop_bbox": [
+        396,
+        988,
+        504,
+        1076
+      ],
+      "output": "NeNGL J",
+      "confidence": 0.6363596320152283,
+      "latency_seconds": 0.03932037501363084,
+      "cache_status": "MEASURED_THIS_RUN",
+      "recognizer_only": true,
+      "score": {
+        "exact": false,
+        "char_errors": 22,
+        "human_chars": 25,
+        "cer": 0.88,
+        "word_errors": 6,
+        "human_words": 6,
+        "wer": 1.0
+      },
+      "r2_state": "STRUCTURAL_REVIEW"
+    }
+  ],
+  "unreadable_diagnostic": [
+    {
+      "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "0",
+          "confidence": 0.29959067702293396,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "0",
+          "confidence": 0.4001220762729645,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "101",
+          "confidence": 0.4641949236392975,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "101",
+          "confidence": 0.3958538770675659,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "OTT",
+          "confidence": 0.5040920376777649,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "07",
+          "confidence": 0.6446757316589355,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "小",
+          "confidence": 0.7438879609107971,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "米",
+          "confidence": 0.37517574429512024,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "十千",
+          "confidence": 0.667801558971405,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "力千",
+          "confidence": 0.7136577367782593,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "00",
+          "confidence": 0.6874113082885742,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "00",
+          "confidence": 0.714743435382843,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "地",
+          "confidence": 0.17623262107372284,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "4",
+          "confidence": 0.1267988234758377,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "3",
+          "confidence": 0.9999635219573975,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "3",
+          "confidence": 0.9997755885124207,
+          "disagrees_with_easyocr": true
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "2",
+          "confidence": 0.999996542930603,
+          "disagrees_with_easyocr": false
+        },
+        "D": {
+          "produced_output": true,
+          "output": "2",
+          "confidence": 0.9999957084655762,
+          "disagrees_with_easyocr": false
+        }
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+      "human_state": "UNREADABLE",
+      "structural_flags": [
+        "CROP_TOO_TIGHT"
+      ],
+      "modes": {
+        "C": {
+          "produced_output": true,
+          "output": "サバン",
+          "confidence": 0.5792957544326782,
+          "disagrees_with_easyocr": true
+        },
+        "D": {
+          "produced_output": true,
+          "output": "サバン",
+          "confidence": 0.6962849497795105,
+          "disagrees_with_easyocr": true
+        }
+      }
+    }
+  ]
+}

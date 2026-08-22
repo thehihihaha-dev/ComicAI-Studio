@@ -6,7 +6,10 @@ import functools
 import statistics
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from typing import Any, Callable, Iterator, TypeVar
+
+from app.services.resource_safety import sample_resources
 
 
 _collector_var: contextvars.ContextVar[PerformanceCollector | None] = (
@@ -25,12 +28,22 @@ F = TypeVar("F", bound=Callable[..., Any])
 class PerformanceCollector:
     stages: list[dict[str, Any]] = field(default_factory=list)
     model_calls: list[dict[str, Any]] = field(default_factory=list)
+    resource_samples: list[dict[str, Any]] = field(default_factory=list)
     started_at: float = field(default_factory=time.perf_counter)
+    started_at_utc: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     ended_at: float | None = None
+    ended_at_utc: str | None = None
 
     def finish(self) -> None:
         if self.ended_at is None:
             self.ended_at = time.perf_counter()
+            self.ended_at_utc = datetime.now(timezone.utc).isoformat()
+            self.observe_resources("collector_end")
+
+    def observe_resources(self, point: str, **metadata: Any) -> dict[str, Any]:
+        sample = {"point": point, **sample_resources(), **metadata}
+        self.resource_samples.append(sample)
+        return sample
 
     @property
     def wall_clock_seconds(self) -> float:
@@ -111,11 +124,42 @@ class PerformanceCollector:
                 project_timings[item["stage"]] = round(
                     project_timings.get(item["stage"], 0.0) + item["duration_seconds"], 6
                 )
+        rss_values = [
+            value
+            for sample in self.resource_samples
+            for value in [sample.get("process_rss_bytes")]
+            if isinstance(value, int)
+        ]
+        peak_rss_values = [
+            value
+            for sample in self.resource_samples
+            for value in [sample.get("process_peak_rss_bytes")]
+            if isinstance(value, int)
+        ]
+        first_sample = self.resource_samples[0] if self.resource_samples else {}
+        last_sample = self.resource_samples[-1] if self.resource_samples else {}
+        swap_before = first_sample.get("swap_used_bytes")
+        swap_after = last_sample.get("swap_used_bytes")
+        cpu_before = first_sample.get("process_cpu_seconds")
+        cpu_after = last_sample.get("process_cpu_seconds")
+        cpu_percent = (
+            max(0.0, cpu_after - cpu_before) / self.wall_clock_seconds * 100
+            if isinstance(cpu_before, (int, float))
+            and isinstance(cpu_after, (int, float))
+            and self.wall_clock_seconds > 0
+            else None
+        )
+        states = [sample.get("safety_state") for sample in self.resource_samples]
+        overall_state = (
+            "CRITICAL" if "CRITICAL" in states else "WARNING" if "WARNING" in states else "NORMAL"
+        )
         return {
             "total_assets": len(pages),
             "completed_assets": completed - len(failed_ids),
             "failed_assets": len(failed_ids),
             "wall_clock_seconds": round(self.wall_clock_seconds, 6),
+            "started_at": self.started_at_utc,
+            "ended_at": self.ended_at_utc,
             "stage_work_seconds": {key: round(value, 6) for key, value in stage_work.items()},
             "average_page_seconds": round(statistics.mean(durations), 6) if durations else 0.0,
             "median_page_seconds": round(statistics.median(durations), 6) if durations else 0.0,
@@ -130,6 +174,19 @@ class PerformanceCollector:
             "call_budget": {"pages": page_call_budget, "project": project_call_budget},
             "stages": self.stages,
             "model_calls": self.model_calls,
+            "resources": {
+                "safety_state": overall_state,
+                "process_rss_start_bytes": first_sample.get("process_rss_bytes"),
+                "process_rss_end_bytes": last_sample.get("process_rss_bytes"),
+                "peak_observed_rss_bytes": max(rss_values + peak_rss_values) if rss_values or peak_rss_values else None,
+                "system_available_memory_start_bytes": first_sample.get("system_available_memory_bytes"),
+                "system_available_memory_end_bytes": last_sample.get("system_available_memory_bytes"),
+                "swap_before_bytes": swap_before,
+                "swap_after_bytes": swap_after,
+                "swap_delta_bytes": swap_after - swap_before if isinstance(swap_before, int) and isinstance(swap_after, int) else None,
+                "process_cpu_utilization_percent": round(cpu_percent, 3) if cpu_percent is not None else None,
+                "samples": self.resource_samples,
+            },
         }
 
 
@@ -138,6 +195,7 @@ def collect_performance(collector: PerformanceCollector | None = None) -> Iterat
     active = collector or PerformanceCollector()
     token = _collector_var.set(active)
     try:
+        active.observe_resources("collector_start")
         yield active
     finally:
         active.finish()
@@ -154,6 +212,7 @@ def measure_stage(stage: str, **metadata: Any) -> Iterator[None]:
     effective_metadata = {**inherited_metadata, **metadata}
     metadata_token = _stage_metadata_var.set(effective_metadata)
     started = time.perf_counter()
+    collector.observe_resources("stage_start", **{**effective_metadata, "stage": stage})
     current_model_context = _model_context_var.get()
     model_token = _model_context_var.set({**current_model_context, "stage": stage})
     success = False
@@ -165,6 +224,9 @@ def measure_stage(stage: str, **metadata: Any) -> Iterator[None]:
         _stage_metadata_var.reset(metadata_token)
         collector.stages.append(
             {"stage": stage, "duration_seconds": round(time.perf_counter() - started, 6), "success": success, **effective_metadata}
+        )
+        collector.observe_resources(
+            "stage_end", **{**effective_metadata, "stage": stage, "success": success}
         )
 
 
@@ -195,6 +257,7 @@ def measure_model_call(model: str, **metadata: Any) -> Iterator[dict[str, Any]]:
         yield result_metadata
         return
     started = time.perf_counter()
+    collector.observe_resources("model_call_start", model=model, **_model_context_var.get())
     success = False
     try:
         yield result_metadata
@@ -213,6 +276,7 @@ def measure_model_call(model: str, **metadata: Any) -> Iterator[dict[str, Any]]:
                 "success": success,
             }
         )
+        collector.observe_resources("model_call_end", model=model, success=success, **_model_context_var.get())
 
 
 def _percentile(values: list[float], quantile: float) -> float:

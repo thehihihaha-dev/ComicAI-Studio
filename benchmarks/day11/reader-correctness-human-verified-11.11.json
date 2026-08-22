@@ -1,0 +1,269 @@
+{
+  "schema_version": "reader-human-verified.v2",
+  "checkpoint": "11.11",
+  "status": "VERIFIED",
+  "total_pages": 10,
+  "ordered_regions": 50,
+  "excluded_regions": 13,
+  "human_transcriptions": 50,
+  "unreadable_regions": 0,
+  "pages": [
+    {
+      "asset_id": "7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "page_order": 1,
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "representation_hash": "7775330438d4a117730bfeda9ed0137123f557b9db59a79de4c4c437efdf9cbc",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_615c8d24c678",
+        "LR_086859ae76f4",
+        "LR_28e2fc3b47b8",
+        "LR_2284efd8ada7"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_615c8d24c678": "RIN",
+        "LR_086859ae76f4": "CHO DÙ LÀ LÚC ỐM ĐAU HAY BỆNH TẬT",
+        "LR_28e2fc3b47b8": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ KAZU SUỐT ĐỜI KHÔNG ?",
+        "LR_2284efd8ada7": "CON XIN THỀ!"
+      },
+      "verified": true,
+      "revision": 13
+    },
+    {
+      "asset_id": "6ee61fc2-c530-45e4-9266-887612ac789f",
+      "page_order": 2,
+      "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "representation_hash": "40b35d6f02dfdbffcfa6e1c0d45cdd02d70a2fc9c46b8d8da7059a6a9869b61c",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_ef4ab22072a8",
+        "LR_a77493ec9ff9"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_ef4ab22072a8": "TÔI ĐÃ KẾT HÔN",
+        "LR_a77493ec9ff9": "TRONG GAME"
+      },
+      "verified": true,
+      "revision": 5
+    },
+    {
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "representation_hash": "da3305c3fda7ff5ea7607547cdb9eec4631f573733af66dc76f1656519dde25b",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_708761617ca5",
+        "LR_6847589abd58",
+        "LR_1b80a3ba7eba",
+        "LR_301b7ed055be",
+        "LR_016a11675840",
+        "LR_38a547aad429"
+      ],
+      "excluded_region_ids": [
+        "LR_363ecd1531dc",
+        "LR_0f41713aa3ea"
+      ],
+      "human_transcriptions": {
+        "LR_708761617ca5": "HẮC BÌNH NGUYÊN",
+        "LR_6847589abd58": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+        "LR_1b80a3ba7eba": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ TẬN HƯỞNG NHẬP VAI TUỲ THÍCH",
+        "LR_301b7ed055be": "ĐÃ MỞ ĐƯỢC THÀNH TỰ TRANG PHỤC [VÉT ĐUÔI TÔM]*",
+        "LR_016a11675840": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+        "LR_38a547aad429": "KAZU NÀY"
+      },
+      "verified": true,
+      "revision": 18
+    },
+    {
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "representation_hash": "c3065b05bc9c118bd6097cdbce324f380a4e4bda81acfd7293fd8c789772a5fc",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_a4e0fdad0903": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ!",
+        "LR_ec9604a02d80": "AH",
+        "LR_d8230ac855ba": "ANH CHỈ BIẾT NÓI \"AH' THÔI SAO!?",
+        "LR_d403d992f246": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\""
+      },
+      "verified": true,
+      "revision": 9
+    },
+    {
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "representation_hash": "d44025d1aaa904df212e2d252ea309396be462513cb7198de5c3380de2c2e884",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_f27fb5ffabf9",
+        "LR_1dfca31c24d7",
+        "LR_26795b95ef26",
+        "LR_d9caab3d7c4a",
+        "LR_a0587957c904",
+        "LR_b71bcd7a275c",
+        "LR_7ee4baf217d7",
+        "LR_bf3e79736d0c"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_f27fb5ffabf9": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC...",
+        "LR_1dfca31c24d7": "Mình là Rin",
+        "LR_26795b95ef26": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+        "LR_d9caab3d7c4a": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+        "LR_a0587957c904": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỖI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU..",
+        "LR_b71bcd7a275c": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+        "LR_7ee4baf217d7": "Hạ thấp thêm chút nữa!!",
+        "LR_bf3e79736d0c": "Hầy"
+      },
+      "verified": true,
+      "revision": 19
+    },
+    {
+      "asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "page_order": 7,
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "representation_hash": "9e325aca5bac1e5816c571090a88bb13d92df78aa1455ca991429501569eaf3e",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_5facc1321e92",
+        "LR_5787cb8d10ad"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_5facc1321e92": "VÂNG!",
+        "LR_5787cb8d10ad": "CỨ NHƯ VẬY CHÚNG TÔI ĐÃ KẾT HÔN VỚI NHAU"
+      },
+      "verified": true,
+      "revision": 7
+    },
+    {
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "representation_hash": "6da89d7ba3ce6b2b4efba2f61918145708f8d7164720bee337de9fde763f3ab2",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_dfef3de3ed48",
+        "LR_35d30a3b10e1",
+        "LR_9636706b4855",
+        "LR_f6dbfc4d4913",
+        "LR_bf3e65667bd9",
+        "LR_0856a888b8df",
+        "LR_5bdd1160b3a0",
+        "LR_f3054b9c1820"
+      ],
+      "excluded_region_ids": [
+        "LR_4156c86e9141",
+        "LR_f3c952a6f77f",
+        "LR_d9afc322c62f",
+        "LR_6378f74595c3"
+      ],
+      "human_transcriptions": {
+        "LR_dfef3de3ed48": "NHƯNG MÀ TỚ LẠI CÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM",
+        "LR_35d30a3b10e1": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG CÓ, BIỂU CẢM CŨNG KHÔNG THAY ĐỔI",
+        "LR_9636706b4855": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+        "LR_f6dbfc4d4913": "À THÌ ĐÚNG LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA...",
+        "LR_bf3e65667bd9": "ỪM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐƯỢC RỒI!",
+        "LR_0856a888b8df": "MÀ TỚ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RỒI!",
+        "LR_5bdd1160b3a0": "NẾU LÀ MÌNH THÌ SẼ NẠP TIỀN VÀO GAME RỒI HA...",
+        "LR_f3054b9c1820": "PÍP!"
+      },
+      "verified": true,
+      "revision": 34
+    },
+    {
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "representation_hash": "d4047e7dc05d8fbb40beea75038c983ee27c4c2d0cc9a895b095fe565a258d1a",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_554cd55f1a6a",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "excluded_region_ids": [
+        "LR_ce3c26e9b336",
+        "LR_3a2842ab274e",
+        "LR_bd1a6a09cea9"
+      ],
+      "human_transcriptions": {
+        "LR_0523c7b7b258": "CŨNG CÒN THỜI GIAN",
+        "LR_952c7eac9aef": "CHẮC LÀ NGHE THỬ MỘT LẦN XEM SAO",
+        "LR_11117a0bc73a": "À RẾ",
+        "LR_554cd55f1a6a": "VẬY CHẮC TÌM HIỂU THÔNG TIN VỀ SỰ KIỆN MỚI THÔI...",
+        "LR_8a526b453c10": "HỬ?",
+        "LR_0c630f218964": "CẬP NHẬT TIN TỨC HẮC BÌNH NGUYÊN",
+        "LR_de7b43ae45f7": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY..."
+      },
+      "verified": true,
+      "revision": 28
+    },
+    {
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "representation_hash": "3d7375ef749d24a5bf905b3e7c4199eb1af9f99e3f797585e923a3acf3ec101e",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_aac2ef08be0e",
+        "LR_77b6cc0407da",
+        "LR_1c3c89ee5ac1"
+      ],
+      "excluded_region_ids": [],
+      "human_transcriptions": {
+        "LR_aac2ef08be0e": "SAO LẠI",
+        "LR_77b6cc0407da": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ...",
+        "LR_1c3c89ee5ac1": "HAY QÚA..."
+      },
+      "verified": true,
+      "revision": 8
+    },
+    {
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "representation_hash": "c5258e0d45613599f63ec557d3a25e2bcfedfc2756806f74d230649afb665066",
+      "representation_version": "click-dialogue-order.v2",
+      "ordered_region_ids": [
+        "LR_ac01f1796688",
+        "LR_2da60c343d36",
+        "LR_2010e3d36608",
+        "LR_5cb918f74103",
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "excluded_region_ids": [
+        "LR_0d55cb96bbc4",
+        "LR_0f895e9b98b6",
+        "LR_bfb519537dac",
+        "LR_4e90149299b7"
+      ],
+      "human_transcriptions": {
+        "LR_ac01f1796688": "XÁC NHẬN BÀ LUÔN RỒI...",
+        "LR_2da60c343d36": "THẰNG ẤT Ơ NÀO KIA...",
+        "LR_2010e3d36608": "GHEN TỊ VL...",
+        "LR_5cb918f74103": "KHÔNG THỂ THA THỨ ĐƯỢC...",
+        "LR_505a871ebd18": "MIZUKI-SAN ĂN CÙNG VỚI CON TRAI SAO!?",
+        "LR_563eb986d1f9": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN CHẰM CHẰM VẬY..."
+      },
+      "verified": true,
+      "revision": 24
+    }
+  ]
+}

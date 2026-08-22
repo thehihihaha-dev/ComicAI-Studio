@@ -1,0 +1,52 @@
+{
+  "schema_version": "reader-order-stability.v1",
+  "checkpoint": "11.16",
+  "parameter_status": "BENCHMARK-FITTED",
+  "leave_one_page_out": [
+    {
+      "held_out_page": 1,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 2,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 3,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 4,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 5,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 7,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 15,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 17,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 18,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    },
+    {
+      "held_out_page": 38,
+      "selected_rule": "A_VERTICAL_OVERLAP"
+    }
+  ],
+  "selected_rule_counts": {
+    "A_VERTICAL_OVERLAP": 10
+  },
+  "stable_selection": true,
+  "small_data_warning": "10 page-grouped Human GT pages"
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": "reader-v2-final-safety.v1",
+  "checkpoint": "11.17",
+  "known_false_safe_cases": 1,
+  "known_false_safe_safely_blocked": 1,
+  "known_false_safe_sample_ids": [
+    "11.13:725a6a01324b:LR_fc624020f5d6"
+  ],
+  "unreadable": {
+    "total": 10,
+    "r2_safe_risk_cases": 2,
+    "safely_blocked": 2,
+    "authoritative_unreadable": 0,
+    "reliability_state_distribution": {
+      "HARD": 10
+    },
+    "requires_repair": true,
+    "sample_ids": [
+      "11.13:774a019f7f27:LR_218e1d60e667",
+      "11.13:774a019f7f27:LR_691c6e0ae1b4"
+    ],
+    "contract_replay": [
+      {
+        "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+        "reliability_state": "HARD",
+        "requires_repair": true,
+        "authoritative": false,
+        "reasons": [
+          "day11_router_not_trusted"
+        ],
+        "human_gt_in_prediction": false
+      }
+    ]
+  },
+  "known_false_safe_contract_replay": [
+    {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "human_state_evaluation_only": "VERIFIED",
+      "reliability_state": "HARD",
+      "requires_repair": true,
+      "authoritative": false,
+      "reasons": [
+        "day11_router_not_trusted"
+      ],
+      "human_gt_in_prediction": false
+    }
+  ],
+  "all_day11_ocr_authoritative": false,
+  "unsafe_promoted_to_authoritative": 0,
+  "human_gt_in_prediction": false,
+  "r2_integrated": false,
+  "adaptive_padding_11_14_integrated": false,
+  "paddleocr_11_15_integrated": false,
+  "vlm_calls": 0,
+  "ollama_calls": 0
+}

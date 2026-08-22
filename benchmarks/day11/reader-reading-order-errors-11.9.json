@@ -1,0 +1,44 @@
+{
+  "schema_version": "reader-reading-order-human.v1",
+  "checkpoint": "11.9",
+  "artifact_kind": "errors",
+  "status": "completed",
+  "N": 3,
+  "pages": [
+    {
+      "page_order": 3,
+      "taxonomy": [
+        "WRONG_TEXT_ORDER"
+      ],
+      "predicted_sequence": [
+        1,
+        7,
+        8,
+        2,
+        3,
+        9,
+        4,
+        10,
+        5,
+        11
+      ],
+      "human_sequence": [
+        1,
+        8,
+        7,
+        2,
+        9,
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "inversions": 3
+    }
+  ],
+  "taxonomy_counts": {
+    "WRONG_TEXT_ORDER": 1
+  },
+  "taxonomy_note": "Only sequence/group evidence is classified; no semantic cause is inferred."
+}

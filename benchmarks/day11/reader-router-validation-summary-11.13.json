@@ -1,0 +1,116 @@
+{
+  "schema_version": "reader-router-validation-summary.v1",
+  "checkpoint": "11.13",
+  "decision": "C. R2 GENERALIZATION FAIL",
+  "interpretation": "NOT PRODUCTION-SAFE",
+  "human_completeness": {
+    "total": 81,
+    "verified": 71,
+    "unreadable": 10,
+    "pending": 0,
+    "source_unavailable": 0
+  },
+  "leakage_checks": {
+    "calibration_samples_excluded": true,
+    "validation_pages_unseen": true,
+    "source_hashes_unique_and_separated": true,
+    "human_gt_not_router_feature": true,
+    "annotation_payload_blinded": true
+  },
+  "calibration_vs_validation": {
+    "calibration_11_12": {
+      "n": 50,
+      "safe": 1,
+      "safe_coverage": 0.02,
+      "false_safe": 0,
+      "safe_precision": 1.0
+    },
+    "validation_11_13_verified": {
+      "n": 71,
+      "safe": 1,
+      "safe_coverage": 0.014084507042253521,
+      "false_safe": 1,
+      "safe_precision": 0.0
+    },
+    "combined_non_independent_descriptive": {
+      "n": 121,
+      "safe": 2,
+      "false_safe": 1,
+      "note": "Excludes 10 unreadable validation samples; calibration data was used to select R2."
+    }
+  },
+  "metrics_verified_only": {
+    "verified_transcriptions": 71,
+    "safe_count": 1,
+    "safe_coverage": 0.014084507042253521,
+    "safe_correct": 0,
+    "false_safe": 1,
+    "false_safe_rate": 1.0,
+    "safe_precision": 0.0,
+    "hard_count": 21,
+    "hard_rate": 0.29577464788732394,
+    "structural_review_count": 49,
+    "structural_review_rate": 0.6901408450704225,
+    "exact_match": {
+      "correct": 8,
+      "accuracy": 0.11267605633802817
+    },
+    "normalized_cer": 0.14845663890249877,
+    "wer": 0.3887733887733888
+  },
+  "unreadable_safety": {
+    "total": 10,
+    "safe_candidate": 2,
+    "hard": 8,
+    "structural_review": 0,
+    "unreadable_safe_risk": 2,
+    "unreadable_safe_risk_samples": [
+      "11.13:774a019f7f27:LR_218e1d60e667",
+      "11.13:774a019f7f27:LR_691c6e0ae1b4"
+    ]
+  },
+  "resource_safety": {
+    "before": {
+      "timestamp": "2026-08-22T19:55:54.940128+00:00",
+      "process_rss_bytes": 88784896,
+      "process_peak_rss_bytes": 88784896,
+      "system_available_memory_bytes": 6818906112,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.266193,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T19:55:55.015279+00:00",
+      "process_rss_bytes": 94584832,
+      "process_peak_rss_bytes": 94568448,
+      "system_available_memory_bytes": 6820855808,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.30537,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "swap_delta_bytes": 0,
+    "ocr_inference_calls": 0,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "preservation": {
+    "manifest_unchanged": true,
+    "manifest_sha256": "480d02ca3ac77f54bc3bb557d78dea87cc4e6fbe4ecbdbcb0671c11d39b9c635",
+    "authoritative_state_unchanged": true,
+    "human_gt_mutated_by_analysis": false,
+    "production_changes": false
+  },
+  "reading_order_deferred": "shared tier/row grouping geometry; unchanged",
+  "recommended_11_14_experiment": "11.14: improve logical crop/merge/split reconstruction on the observed false-safe and structural-review cases; keep R2 frozen and do not threshold-tune.",
+  "artifact_content_hashes": {
+    "human_gt": "0033b4796be2444e27950207ab373aaabffb504d3c9a30ccbd0d87da2ec8150d",
+    "results": "2eb23bf756770b23ebe1cb122205b4c4eb324122e5334520620a6ce82b3d7302",
+    "errors": "16976f9cc22fd86115cdbf1ff4c0a19a7b5a72233668e803b36866039d1c2f91"
+  }
+}

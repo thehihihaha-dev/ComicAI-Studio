@@ -3,6 +3,7 @@ from typing import Any
 
 from app.services.ollama_text import call_text_model
 from app.services.performance import model_call_context, timed_stage
+from app.services.model_runtime import resolve_story_model
 
 
 ANALYZER_VERSION = "story_analyzer.v1"
@@ -124,7 +125,9 @@ Return ONLY valid JSON using this schema:
     for attempt in range(1, max_retries + 2):
         try:
             with model_call_context("story_analyzer", attempt=attempt):
-                model_result = call_text_model(prompt=prompt)
+                model_result = call_text_model(
+                    prompt=prompt, model=resolve_story_model()
+                )
             try:
                 normalized = validate_story_result_structure(model_result)
             except ValueError as validation_error:
@@ -173,7 +176,7 @@ Required top-level keys: characters, events, main_progression.
 Return ONLY the repaired JSON object.
 """
     with model_call_context("story_analyzer_repair", attempt=1):
-        repaired = call_text_model(prompt=prompt)
+        repaired = call_text_model(prompt=prompt, model=resolve_story_model())
     return validate_story_result_structure(repaired)
 
 

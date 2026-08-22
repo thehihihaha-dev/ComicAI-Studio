@@ -1,0 +1,3 @@
+import Link from "next/link";
+import ReaderCorrectnessReview from "./ReaderCorrectnessReview";
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;return <main className="min-h-screen bg-[#09090b] text-white"><header className="flex h-16 items-center border-b border-white/10 px-5"><Link href={`/projects/${id}`} className="mr-4 text-white/45">←</Link><div><h1 className="text-sm font-semibold">Reader V2 Correctness Ground Truth</h1><p className="text-xs text-white/35">Human-only · blinded OCR · no AI transcription</p></div></header><ReaderCorrectnessReview projectId={id}/></main>}

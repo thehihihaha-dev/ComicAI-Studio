@@ -1,0 +1,2631 @@
+{
+  "schema_version": "reader-structural-comparison.v1",
+  "checkpoint": "11.14",
+  "metrics": {
+    "control": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14845663890249877,
+      "wer": 0.3887733887733888
+    },
+    "logical_2pct": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14600685938265556,
+      "wer": 0.3866943866943867,
+      "improved": 12,
+      "unchanged": 42,
+      "regressed": 17,
+      "correct_to_wrong": 0,
+      "large_cer_regressions": 2
+    },
+    "adaptive_bounded": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14551690347868693,
+      "wer": 0.3991683991683992,
+      "improved": 14,
+      "unchanged": 35,
+      "regressed": 22,
+      "correct_to_wrong": 1,
+      "large_cer_regressions": 5
+    },
+    "fragment_line_2pct": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.1474767270945615,
+      "wer": 0.38461538461538464,
+      "improved": 1,
+      "unchanged": 69,
+      "regressed": 1,
+      "correct_to_wrong": 0,
+      "large_cer_regressions": 0
+    }
+  },
+  "best_candidate": "adaptive_bounded",
+  "per_sample_diffs": {
+    "logical_2pct": [
+      {
+        "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+        "control_output": "NĂM THỨ NHẤT",
+        "candidate_output": "NĂM THỨ NHẤT",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+        "control_output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "candidate_output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.07692307692307693,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+        "control_output": "KAZL SAN",
+        "candidate_output": "KAZL SAN",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+        "control_output": "NĂM THỨ HAI",
+        "candidate_output": "NĂM THỨ HAI",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+        "control_output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "candidate_output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "control_cer": 0.029411764705882353,
+        "candidate_cer": 0.029411764705882353,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+        "control_output": "Kazul",
+        "candidate_output": "Kazul",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+        "control_output": "NĂM THỨ BA",
+        "candidate_output": "NĂM THỨ BA",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+        "control_output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "candidate_output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "control_cer": 0.06451612903225806,
+        "candidate_cer": 0.06451612903225806,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_76735185b241",
+        "control_output": "ĐI CÂU CÁ NÀO\"",
+        "candidate_output": "ĐI CÂU CÁ NÀO\"",
+        "control_cer": 0.13333333333333333,
+        "candidate_cer": 0.13333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_50519209704f",
+        "control_output": "ĐI CÂU CÁ THÔI NÀOW!",
+        "candidate_output": "ĐI CÂU CÁ THÔI NÀOW!",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+        "control_output": "Đã nhận đudc item 'bó hoa",
+        "candidate_output": "Đã nhận đưdc item \"bú hoa",
+        "control_cer": 0.42105263157894735,
+        "candidate_cer": 0.42105263157894735,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+        "control_output": "Hôy",
+        "candidate_output": "Hôy",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+        "control_output": "Ehehe",
+        "candidate_output": "Ehehe",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+        "control_output": "Kazu này",
+        "candidate_output": "Kazu này",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+        "control_output": "MiNH YÊU CẬU! ~",
+        "candidate_output": "MÌNH YÊU CẬU! =",
+        "control_cer": 0.23076923076923078,
+        "candidate_cer": 0.15384615384615385,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+        "control_output": "TỪ BÂY GlỜ HZY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+        "candidate_output": "TỪ BÂY GIỜ HĂY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game THẬT NHIỂL NHÉ!",
+        "control_cer": 0.09375,
+        "candidate_cer": 0.0625,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+        "control_output": "CAM ƠN CẬL.",
+        "candidate_output": "CAM ƠN CẬL.",
+        "control_cer": 0.18181818181818182,
+        "candidate_cer": 0.18181818181818182,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+        "control_output": "MÀ MÌNH SẮP PHẢl THOÁT GAME RỔL.",
+        "candidate_output": "MÀ MÌNH SÁP PHẢl THOÁT GAME RỔL.",
+        "control_cer": 0.14705882352941177,
+        "candidate_cer": 0.17647058823529413,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+        "control_output": "GẶp LaI SAU NHÉ KAZU!",
+        "candidate_output": "GẶp LaI SAU NHÉ NAZU!",
+        "control_cer": 0.047619047619047616,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+        "control_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "candidate_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "control_cer": 0.08695652173913043,
+        "candidate_cer": 0.08695652173913043,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+        "control_output": "Rin đã Offline",
+        "candidate_output": "Rin đã Offline",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+        "control_output": "PHù.",
+        "candidate_output": "PHù.",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+        "control_output": "HÔM NAY CHƠl ĐĂ RỒL,",
+        "candidate_output": "HÔM NAY CHƠl ĐĂ RỒI,",
+        "control_cer": 0.2,
+        "candidate_cer": 0.15,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+        "control_output": "4 mól 'in nhấn 5 Nunen / PÍP!",
+        "candidate_output": "< 1 1 4 1 nhấn , 5 Noinen Qởr PÍP!",
+        "control_cer": 6.25,
+        "candidate_cer": 7.5,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+        "control_output": "Cảm câu vì lễ cưới tuyệt vời bôm nay nbé",
+        "candidate_output": "Cảm ơn cậu vì lễ cưới tuyệt vời bôm nay nbé!",
+        "control_cer": 0.1590909090909091,
+        "candidate_cer": 0.045454545454545456,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+        "control_output": "LÀ Từ RIN",
+        "candidate_output": "LÀ Từ RIN,",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+        "control_output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+        "candidate_output": "TỪ BÂY GIỜ HÃY giup %0 NhAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+        "control_cer": 0.05555555555555555,
+        "candidate_cer": 0.07407407407407407,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+        "control_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl Ncủ SÓM THÔI.",
+        "candidate_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl NGù SÓM THÔL.",
+        "control_cer": 0.10204081632653061,
+        "candidate_cer": 0.12244897959183673,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_92071c223e96",
+        "control_output": "MONC CẬU GlÚP ĐỠ VẬY",
+        "candidate_output": "MONC CẬU GlÚP ĐỠ. vẬY",
+        "control_cer": 0.19047619047619047,
+        "candidate_cer": 0.14285714285714285,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+        "control_output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO Mò THÔI NHỈ.",
+        "candidate_output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO MÒ THÔI NHỈ..",
+        "control_cer": 0.2571428571428571,
+        "candidate_cer": 0.22857142857142856,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+        "control_output": "CẬU NÓI CHO CẬU BlẾT VỂ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+        "candidate_output": "CẬU NÓI CHO CẬL ẤY BlẾT vỀ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+        "control_cer": 0.11290322580645161,
+        "candidate_cer": 0.06451612903225806,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+        "control_output": "KHÔNG ĐÂL, TÓ CHIL RỒI\"!",
+        "candidate_output": "KHÔNG ĐÂL , TÓ CHIL RỒI\"!",
+        "control_cer": 0.20833333333333334,
+        "candidate_cer": 0.25,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+        "control_output": "LÀ MỘT NHÓM NHaC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc SỤ CHú VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "candidate_output": "LÀ MỘT NHÓM NHẠC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc VÀ TẤT SỰ CHÚ cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "control_cer": 0.09,
+        "candidate_cer": 0.17,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+        "control_output": "\"STAR",
+        "candidate_output": "\"STAR",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+        "control_output": "MINES\"",
+        "candidate_output": "MINES\"",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+        "control_output": "LÀ CÔ BẠN IDOL NGẩU LÒI HỌC CÙNG LÓP MIZUKI RINKA",
+        "candidate_output": "LÀ Cô BẠN IDOL NGẩU LÒI HỌC CÙNG L6P; MIZUKI RINKA",
+        "control_cer": 0.06,
+        "candidate_cer": 0.06,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+        "control_output": "TRONG 4Ó CÓ MỘT NGUỜI",
+        "candidate_output": "TRONG ĐÓ CÓ MỘT NGUỜI",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.047619047619047616,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+        "control_output": "CŨNG ĐUỢC THÔL.",
+        "candidate_output": "CũNG ĐUƠC THÔL.",
+        "control_cer": 0.23529411764705882,
+        "candidate_cer": 0.29411764705882354,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+        "control_output": "Từ RIN À",
+        "candidate_output": "Từ RIN À",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+        "control_output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAme MỘT CHÚT KHÔNG?",
+        "candidate_output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAMe MỘT CHÚT KHÔNG?",
+        "control_cer": 0.06,
+        "candidate_cer": 0.06,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+        "control_output": "NGỦ CHO ĐÊN Lúc TIẾT HỌc BẮT ĐẦu VẬY.",
+        "candidate_output": "NGủ CHO ĐẾN Lúc TlÊT HỌC BẮT ĐẦu VẬY.",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.10256410256410256,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+        "control_output": "ĐỐỈ vá MÌNH THÌ NẾU có VIỆC Gi THú HWN VIỆc HÚ VỊ NGẮM IDol Thi",
+        "candidate_output": "ĐỐỈ vá MINH THÌ NỂU CÓ VIỆC Gi THú HMM HCN VIỆC IDol ThI",
+        "control_cer": 0.2459016393442623,
+        "candidate_cer": 0.26229508196721313,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+        "control_output": "CHẮC SẼ LÀ CÙNG CHaI GAME VÓl RIN NHI?",
+        "candidate_output": "CHẮC SẼ LÀ CÙNG CHOI GaME VÓ RIN NHI?",
+        "control_cer": 0.10526315789473684,
+        "candidate_cer": 0.10526315789473684,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+        "control_output": "Ể",
+        "candidate_output": "Ể",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+        "control_output": "MÌNH ĐM NcHĨ LÀ CHO ĐẾN LÚC RIN TỚl THÌ ĐI ĐÀO MỎ CHÚT VẬY MÀ",
+        "candidate_output": "MÌNH ĐẴ NCHĨ LÀ CHO ĐẾN LÚC RIN TÓl THÌ Đ1 ĐÀO MỎ CHÚT VẬY MÀ",
+        "control_cer": 0.14754098360655737,
+        "candidate_cer": 0.16393442622950818,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+        "control_output": "BẢO TeÌ CHO ĐẾN 20 6IỜ SAO?",
+        "candidate_output": "BẢO TeÌ CHO ĐẾN 20 61ờ SAO?",
+        "control_cer": 0.07407407407407407,
+        "candidate_cer": 0.1111111111111111,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+        "control_output": "CHẮc NCHE THử vÀI BÀI KHÁC NZA NHI",
+        "candidate_output": "CHẮc NCHE THử vÀI BÀI KHÁC NỬA NHỈ.",
+        "control_cer": 0.11764705882352941,
+        "candidate_cer": 0.11764705882352941,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+        "control_output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIỌNG HÁT HAY VẬY SAo",
+        "candidate_output": "VẬY LẢ MIZUKI-SAN; Cô ẤY Có MỘT GIỌNG HÁT HAY VẬY SAO",
+        "control_cer": 0.018867924528301886,
+        "candidate_cer": 0.03773584905660377,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+        "control_output": "uẩỵ MÌVH NGHE HÊT LUÔN RổL.",
+        "candidate_output": "Uẩỵ MiNH NGHE HÊT LUÔN RổL.",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+        "control_output": "CHẾT MOE! QUÁ GIỜ HẸN MÁT TIÊU RỖI!",
+        "candidate_output": "CHẾT MOE! QUÁ GIỜ HEN MÁT TIÊU RỖI!",
+        "control_cer": 0.08571428571428572,
+        "candidate_cer": 0.11428571428571428,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+        "control_output": "Xin lẫi! Minh sẽ vào ngayl",
+        "candidate_output": "Xin lẫi! Minh sẽ vào ngayl",
+        "control_cer": 0.11538461538461539,
+        "candidate_cer": 0.11538461538461539,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+        "control_output": "[Rin] Cqu đã vào chua vậy- YouTuve",
+        "candidate_output": "[Rin] dã vào chua vqy Cau YouTuve",
+        "control_cer": 0.4230769230769231,
+        "candidate_cer": 0.7307692307692307,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+        "control_output": "RIN ĐÂL RỒI?",
+        "candidate_output": "RIN ĐÂL RỒI?",
+        "control_cer": 0.08333333333333333,
+        "candidate_cer": 0.08333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+        "control_output": "NHÊ ClẬN RỒI SAO. CHẢ",
+        "candidate_output": "CHẢ NHÊ CÔ ẨY GlẬN RỒl SAo",
+        "control_cer": 0.5517241379310345,
+        "candidate_cer": 0.2413793103448276,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+        "control_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+        "candidate_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+        "control_cer": 0.12121212121212122,
+        "candidate_cer": 0.12121212121212122,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+        "control_output": "KAZL!",
+        "candidate_output": "KAZL!",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+        "control_output": "KHÔNG PHẢI NÓI CHUYỆN ĐỜl THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+        "candidate_output": "KHÔNG PHẢl NÓI CHUYỆN ĐỜI THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+        "control_cer": 0.01818181818181818,
+        "candidate_cer": 0.01818181818181818,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+        "control_output": "#ể~ tại sa0 lại là Idol co cbú?",
+        "candidate_output": "#ể~ tại 5a0 lại là Idol co cbú?",
+        "control_cer": 0.2,
+        "candidate_cer": 0.23333333333333334,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+        "control_output": "Lần này là ncoai lệ!",
+        "candidate_output": "Lần này là naoai lệ!",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+        "control_output": "LÚC TRUÓC, KHI MÌNH NÓI CHUYỆN ĐỠI THỰC VÓI RIN",
+        "candidate_output": "LÚC TRUÓC;, KHI MÌNH NÓI CHUYỆN ĐỜI THỰC VÓI RIN",
+        "control_cer": 0.0851063829787234,
+        "candidate_cer": 0.0851063829787234,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+        "control_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "candidate_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "control_cer": 0.14814814814814814,
+        "candidate_cer": 0.14814814814814814,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+        "control_output": "ĐOl THựC CHI THứ . GÂY CẢN TRƠ VẢ LAM HỎNG MỐl QUAN HỆ TRONG SÁNG THÔL MA",
+        "candidate_output": "ĐỜl THựC CHI LÀ THÚ 6ÂY CẢN TPỞ vÀ LÀM HỎNG MỐl QUAN HỆ TRONG SÁNG MÀ THÔL.",
+        "control_cer": 0.24675324675324675,
+        "candidate_cer": 0.11688311688311688,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+        "control_output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "candidate_output": "VẬY THÌ MINH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "control_cer": 0.014285714285714285,
+        "candidate_cer": 0.02857142857142857,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+        "control_output": "Star",
+        "candidate_output": "Star",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+        "control_output": "MINES ĐÓỊ",
+        "candidate_output": "MINES ĐÓ'",
+        "control_cer": 0.1111111111111111,
+        "candidate_cer": 0.1111111111111111,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+        "control_output": "Phúf",
+        "candidate_output": "Phúf",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+        "control_output": "pl6}",
+        "candidate_output": "pl6}",
+        "control_cer": 0.8333333333333334,
+        "candidate_cer": 0.8333333333333334,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+        "control_output": "Phút",
+        "candidate_output": "Phút",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+        "control_output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓI GÌ DẠl DỘT Rồl!?",
+        "candidate_output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓl GÌ DẠI DỘT Rồl!?",
+        "control_cer": 0.06382978723404255,
+        "candidate_cer": 0.06382978723404255,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+        "control_output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+        "candidate_output": "XIN LỖI CẬu, MÌNH KHÔNG KIỄM CHẾ puợc NÊN CHẮC %i Nói MẤY ĐlỄU LẠ GÌ ĐÓ RỔl4!",
+        "control_cer": 0.25,
+        "candidate_cer": 0.20833333333333334,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+        "control_output": "NÊN CẬU HĂY QLÊN NHÉ ĐI",
+        "candidate_output": "NÊN CẬU HĂY QLÊN Đ1 NHÉ,",
+        "control_cer": 0.32,
+        "candidate_cer": 0.2,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      }
+    ],
+    "adaptive_bounded": [
+      {
+        "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+        "control_output": "NĂM THỨ NHẤT",
+        "candidate_output": "NĂM THỨ NHẤT",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+        "control_output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "candidate_output": "HÔM NAY CHÚNG TA sỀ CÙNG NHAL THÁM HIỂM DUNGEON CHÚ?",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.057692307692307696,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+        "control_output": "KAZL SAN",
+        "candidate_output": "KAZLI - SAN",
+        "control_cer": 0.25,
+        "candidate_cer": 0.5,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+        "control_output": "NĂM THỨ HAI",
+        "candidate_output": "NĂM THU HAI",
+        "control_cer": 0.0,
+        "candidate_cer": 0.09090909090909091,
+        "classification": "REGRESSED",
+        "correct_to_wrong": true,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+        "control_output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "candidate_output": "Hôm nay câu muốn đi cbƠi Gi kbônG?",
+        "control_cer": 0.029411764705882353,
+        "candidate_cer": 0.11764705882352941,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+        "control_output": "Kazul",
+        "candidate_output": "Kazul",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+        "control_output": "NĂM THỨ BA",
+        "candidate_output": "NĂM THỨ BA",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+        "control_output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "candidate_output": "HÔM NAY CHÚNG TA PHẢl Đ1 ĐÀO M -",
+        "control_cer": 0.06451612903225806,
+        "candidate_cer": 0.0967741935483871,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_76735185b241",
+        "control_output": "ĐI CÂU CÁ NÀO\"",
+        "candidate_output": "ĐI CÂU CÁ NÀO\"",
+        "control_cer": 0.13333333333333333,
+        "candidate_cer": 0.13333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_50519209704f",
+        "control_output": "ĐI CÂU CÁ THÔI NÀOW!",
+        "candidate_output": "ĐI CÂU CÁ THÔI NÀO\"!",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+        "control_output": "Đã nhận đudc item 'bó hoa",
+        "candidate_output": "Đã nhận đudc \"'bú hoa item",
+        "control_cer": 0.42105263157894735,
+        "candidate_cer": 0.5263157894736842,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+        "control_output": "Hôy",
+        "candidate_output": "Hôy",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+        "control_output": "Ehehe",
+        "candidate_output": "Ehehe",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+        "control_output": "Kazu này",
+        "candidate_output": "Kazu này",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+        "control_output": "MiNH YÊU CẬU! ~",
+        "candidate_output": "MÌNH YÊU CẬU!",
+        "control_cer": 0.23076923076923078,
+        "candidate_cer": 0.0,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+        "control_output": "TỪ BÂY GlỜ HZY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+        "candidate_output": "TỪ BÂY GIỜ HĂY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+        "control_cer": 0.09375,
+        "candidate_cer": 0.078125,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+        "control_output": "CAM ƠN CẬL.",
+        "candidate_output": "CẢM ƠN CẬL.",
+        "control_cer": 0.18181818181818182,
+        "candidate_cer": 0.09090909090909091,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+        "control_output": "MÀ MÌNH SẮP PHẢl THOÁT GAME RỔL.",
+        "candidate_output": "MÀ MÌNH SÁP PHẢl THOÁT GAME RỔL.",
+        "control_cer": 0.14705882352941177,
+        "candidate_cer": 0.17647058823529413,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+        "control_output": "GẶp LaI SAU NHÉ KAZU!",
+        "candidate_output": "GẶp LaI SAU NHÉ NAZU!",
+        "control_cer": 0.047619047619047616,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+        "control_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "candidate_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "control_cer": 0.08695652173913043,
+        "candidate_cer": 0.08695652173913043,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+        "control_output": "Rin đã Offline",
+        "candidate_output": "Rin đã Offline",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+        "control_output": "PHù.",
+        "candidate_output": "PHù.",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+        "control_output": "HÔM NAY CHƠl ĐĂ RỒL,",
+        "candidate_output": "HÔM NAY CHƠl ĐĂ RỒL,",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+        "control_output": "4 mól 'in nhấn 5 Nunen / PÍP!",
+        "candidate_output": "[ 1 4 1 5 'Mac Bih / 1nhán _ 6 Qo PÍPỊ",
+        "control_cer": 6.25,
+        "candidate_cer": 8.75,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+        "control_output": "Cảm câu vì lễ cưới tuyệt vời bôm nay nbé",
+        "candidate_output": "Cảm ơn cậu vì lễ cưới tuyệt vời bôm nay nbé!",
+        "control_cer": 0.1590909090909091,
+        "candidate_cer": 0.045454545454545456,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+        "control_output": "LÀ Từ RIN",
+        "candidate_output": "LÀ Từ RIN_",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+        "control_output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+        "candidate_output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHONG\" NHÉ",
+        "control_cer": 0.05555555555555555,
+        "candidate_cer": 0.05555555555555555,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+        "control_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl Ncủ SÓM THÔI.",
+        "candidate_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl NGủ SÓM THÔL.",
+        "control_cer": 0.10204081632653061,
+        "candidate_cer": 0.10204081632653061,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_92071c223e96",
+        "control_output": "MONC CẬU GlÚP ĐỠ VẬY",
+        "candidate_output": "MONG CẬU GlÚP ĐỠ. VẬY",
+        "control_cer": 0.19047619047619047,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+        "control_output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO Mò THÔI NHỈ.",
+        "candidate_output": "CHẮC TlẾP THEo NÊN Đ1 ĐÀO MÒ THÔI NHỈ.",
+        "control_cer": 0.2571428571428571,
+        "candidate_cer": 0.2857142857142857,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+        "control_output": "CẬU NÓI CHO CẬU BlẾT VỂ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+        "candidate_output": "CẬU NÓI CHO CÂL ẨY BlẾT VỂ ẤN TLỢNC CùA BẢN THÂN KHI XEM MV ĐI",
+        "control_cer": 0.11290322580645161,
+        "candidate_cer": 0.12903225806451613,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+        "control_output": "KHÔNG ĐÂL, TÓ CHIL RỒI\"!",
+        "candidate_output": "KHÔNG ĐẨL, TÓ CHIL PỒIl!",
+        "control_cer": 0.20833333333333334,
+        "candidate_cer": 0.2916666666666667,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+        "control_output": "LÀ MỘT NHÓM NHaC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc SỤ CHú VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "candidate_output": "LÀ MỘT NHÓM NHẠC IDOL GổM 5 THÀNH VIÊN ĐANG NHẬN ĐUộc SỤ CHÚ Ý VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "control_cer": 0.09,
+        "candidate_cer": 0.06,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+        "control_output": "\"STAR",
+        "candidate_output": "\"STAR",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+        "control_output": "MINES\"",
+        "candidate_output": "MINES\"",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+        "control_output": "LÀ CÔ BẠN IDOL NGẩU LÒI HỌC CÙNG LÓP MIZUKI RINKA",
+        "candidate_output": "LÀ Cô BẠN IDOL NGÂU LÒI HỌC CÙNG L6P MIZUKI RINKA",
+        "control_cer": 0.06,
+        "candidate_cer": 0.06,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+        "control_output": "TRONG 4Ó CÓ MỘT NGUỜI",
+        "candidate_output": "(TRONG ĐÓ CÓ MỘT NGUỜI",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+        "control_output": "CŨNG ĐUỢC THÔL.",
+        "candidate_output": "CŨNG ĐUỢC THÔL..",
+        "control_cer": 0.23529411764705882,
+        "candidate_cer": 0.17647058823529413,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+        "control_output": "Từ RIN À",
+        "candidate_output": "Từ RIN À",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+        "control_output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAme MỘT CHÚT KHÔNG?",
+        "candidate_output": "2OH TỐl NAY; CẬU CÓ MHỐN CHƠI Game MỘT CHÚT KHÔNG?",
+        "control_cer": 0.06,
+        "candidate_cer": 0.08,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+        "control_output": "NGỦ CHO ĐÊN Lúc TIẾT HỌc BẮT ĐẦu VẬY.",
+        "candidate_output": "NGủ CHO ĐẾN Lúc TlỂT HOC BẮT ĐẦu VẬY..",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.10256410256410256,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+        "control_output": "ĐỐỈ vá MÌNH THÌ NẾU có VIỆC Gi THú HWN VIỆc HÚ VỊ NGẮM IDol Thi",
+        "candidate_output": "DỐl vá MÌNH THÌ NẾU CÓ VIỆC Gi THú ỴỊ HQN VIỆC NGẮM IDoL ThI",
+        "control_cer": 0.2459016393442623,
+        "candidate_cer": 0.13114754098360656,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+        "control_output": "CHẮC SẼ LÀ CÙNG CHaI GAME VÓl RIN NHI?",
+        "candidate_output": "CHẮC SẼ LÀ CÙNG CHOI GAME VÓ RIN NHI?",
+        "control_cer": 0.10526315789473684,
+        "candidate_cer": 0.10526315789473684,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+        "control_output": "Ể",
+        "candidate_output": "Ể",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+        "control_output": "MÌNH ĐM NcHĨ LÀ CHO ĐẾN LÚC RIN TỚl THÌ ĐI ĐÀO MỎ CHÚT VẬY MÀ",
+        "candidate_output": "MÌNH ĐẴ NCHĨ LÀ CHO ĐẾN LÚC RIN TÓl THÌ Đ1 ĐÀO MÒ CHÚT VẬY MÀ",
+        "control_cer": 0.14754098360655737,
+        "candidate_cer": 0.18032786885245902,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+        "control_output": "BẢO TeÌ CHO ĐẾN 20 6IỜ SAO?",
+        "candidate_output": "BẢO TeÌ CHO ĐẾN 20 61ờ SAO?",
+        "control_cer": 0.07407407407407407,
+        "candidate_cer": 0.1111111111111111,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+        "control_output": "CHẮc NCHE THử vÀI BÀI KHÁC NZA NHI",
+        "candidate_output": "CHẮc Nehe TH4 vÀI BÀI KHÁC NZA NHỈ.",
+        "control_cer": 0.11764705882352941,
+        "candidate_cer": 0.14705882352941177,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+        "control_output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIỌNG HÁT HAY VẬY SAo",
+        "candidate_output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIONG HÁT HAY VẬY SAo",
+        "control_cer": 0.018867924528301886,
+        "candidate_cer": 0.03773584905660377,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+        "control_output": "uẩỵ MÌVH NGHE HÊT LUÔN RổL.",
+        "candidate_output": "Uẩỵ MÌgH NGHE HÊT LUÔN RỖL.",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+        "control_output": "CHẾT MOE! QUÁ GIỜ HẸN MÁT TIÊU RỖI!",
+        "candidate_output": "CHẾT MOẸ! QUÁ GIỜ HEN MẤT TIÊU RỖI!",
+        "control_cer": 0.08571428571428572,
+        "candidate_cer": 0.05714285714285714,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+        "control_output": "Xin lẫi! Minh sẽ vào ngayl",
+        "candidate_output": "Xin lẫi! Minh sẼ vào ngayl",
+        "control_cer": 0.11538461538461539,
+        "candidate_cer": 0.11538461538461539,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+        "control_output": "[Rin] Cqu đã vào chua vậy- YouTuve",
+        "candidate_output": "[Rin] đã vào chua vqy Cau YouTuve",
+        "control_cer": 0.4230769230769231,
+        "candidate_cer": 0.6923076923076923,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+        "control_output": "RIN ĐÂL RỒI?",
+        "candidate_output": "RIN ĐÂU QỒl?",
+        "control_cer": 0.08333333333333333,
+        "candidate_cer": 0.16666666666666666,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+        "control_output": "NHÊ ClẬN RỒI SAO. CHẢ",
+        "candidate_output": "CHẢ NHÊ CÔ Ấy ClẬN RỒI SAO.,",
+        "control_cer": 0.5517241379310345,
+        "candidate_cer": 0.1724137931034483,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+        "control_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+        "candidate_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CỦA IDOL NÊN MỚl TeỄ HỆN ĐLỢC!",
+        "control_cer": 0.12121212121212122,
+        "candidate_cer": 0.12121212121212122,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+        "control_output": "KAZL!",
+        "candidate_output": "KAZH'",
+        "control_cer": 0.2,
+        "candidate_cer": 0.4,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": true
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+        "control_output": "KHÔNG PHẢI NÓI CHUYỆN ĐỜl THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+        "candidate_output": "KHÔNG PHẢl NÓI CHUYỆN ĐỜl THựC Ờ ĐÂY LÀ KHÔNG ĐưỢC S4O?",
+        "control_cer": 0.01818181818181818,
+        "candidate_cer": 0.07272727272727272,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+        "control_output": "#ể~ tại sa0 lại là Idol co cbú?",
+        "candidate_output": "Hể~ tại 5a0 lại là Idol cơ chú?",
+        "control_cer": 0.2,
+        "candidate_cer": 0.13333333333333333,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+        "control_output": "Lần này là ncoai lệ!",
+        "candidate_output": "Lần này là ncOai lệ!",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+        "control_output": "LÚC TRUÓC, KHI MÌNH NÓI CHUYỆN ĐỠI THỰC VÓI RIN",
+        "candidate_output": "LÚC TRƯÓC; KHI MÌNH NÓI CHUYỆN ĐỜI THUC VÓI RIN",
+        "control_cer": 0.0851063829787234,
+        "candidate_cer": 0.0851063829787234,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+        "control_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "candidate_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "control_cer": 0.14814814814814814,
+        "candidate_cer": 0.14814814814814814,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+        "control_output": "ĐOl THựC CHI THứ . GÂY CẢN TRƠ VẢ LAM HỎNG MỐl QUAN HỆ TRONG SÁNG THÔL MA",
+        "candidate_output": "ĐỜl THựC CHI LÀ THÚ GÂY CẢN TPỞ vÀ LÀM HỎNG MỐl QUAN HỆ TRONG SÁNG MÀ THÔL",
+        "control_cer": 0.24675324675324675,
+        "candidate_cer": 0.11688311688311688,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+        "control_output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "candidate_output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐĂ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "control_cer": 0.014285714285714285,
+        "candidate_cer": 0.02857142857142857,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+        "control_output": "Star",
+        "candidate_output": "Star",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+        "control_output": "MINES ĐÓỊ",
+        "candidate_output": "MINES ĐÓ'",
+        "control_cer": 0.1111111111111111,
+        "candidate_cer": 0.1111111111111111,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+        "control_output": "Phúf",
+        "candidate_output": "Phat",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+        "control_output": "pl6}",
+        "candidate_output": "pl8}",
+        "control_cer": 0.8333333333333334,
+        "candidate_cer": 0.8333333333333334,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+        "control_output": "Phút",
+        "candidate_output": "Phút",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+        "control_output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓI GÌ DẠl DỘT Rồl!?",
+        "candidate_output": "LẼ NÀO MÌNH LẠI BUỘT MIỆNG NÓI GÌ DẠl DộT Rồ1ì?",
+        "control_cer": 0.06382978723404255,
+        "candidate_cer": 0.06382978723404255,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+        "control_output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+        "candidate_output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+        "control_output": "NÊN CẬU HĂY QLÊN NHÉ ĐI",
+        "candidate_output": "NÊN CẬU HĂY QLÊN Đ1 NHÉ,",
+        "control_cer": 0.32,
+        "candidate_cer": 0.2,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      }
+    ],
+    "fragment_line_2pct": [
+      {
+        "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+        "control_output": "NĂM THỨ NHẤT",
+        "candidate_output": "NĂM THỨ NHẤT",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+        "control_output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "candidate_output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.07692307692307693,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+        "control_output": "KAZL SAN",
+        "candidate_output": "KAZL SAN",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+        "control_output": "NĂM THỨ HAI",
+        "candidate_output": "NĂM THỨ HAI",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+        "control_output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "candidate_output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "control_cer": 0.029411764705882353,
+        "candidate_cer": 0.029411764705882353,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+        "control_output": "Kazul",
+        "candidate_output": "Kazul",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+        "control_output": "NĂM THỨ BA",
+        "candidate_output": "NĂM THỨ BA",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+        "control_output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "candidate_output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "control_cer": 0.06451612903225806,
+        "candidate_cer": 0.06451612903225806,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_76735185b241",
+        "control_output": "ĐI CÂU CÁ NÀO\"",
+        "candidate_output": "ĐI CÂU CÁ NÀO\"",
+        "control_cer": 0.13333333333333333,
+        "candidate_cer": 0.13333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:11cc81607764:LR_50519209704f",
+        "control_output": "ĐI CÂU CÁ THÔI NÀOW!",
+        "candidate_output": "ĐI CÂU CÁ THÔI NÀOW!",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+        "control_output": "Đã nhận đudc item 'bó hoa",
+        "candidate_output": "Đã nhận đudc item 'bó hoa",
+        "control_cer": 0.42105263157894735,
+        "candidate_cer": 0.42105263157894735,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+        "control_output": "Hôy",
+        "candidate_output": "Hôy",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+        "control_output": "Ehehe",
+        "candidate_output": "Ehehe",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+        "control_output": "Kazu này",
+        "candidate_output": "Kazu này",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+        "control_output": "MiNH YÊU CẬU! ~",
+        "candidate_output": "MiNH YÊU CẬU! ~",
+        "control_cer": 0.23076923076923078,
+        "candidate_cer": 0.23076923076923078,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+        "control_output": "TỪ BÂY GlỜ HZY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+        "candidate_output": "TỪ BÂY GlỜ HZY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+        "control_cer": 0.09375,
+        "candidate_cer": 0.09375,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+        "control_output": "CAM ƠN CẬL.",
+        "candidate_output": "CAM ƠN CẬL.",
+        "control_cer": 0.18181818181818182,
+        "candidate_cer": 0.18181818181818182,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+        "control_output": "MÀ MÌNH SẮP PHẢl THOÁT GAME RỔL.",
+        "candidate_output": "MÀ MÌNH SẮP PHẢl THOÁT GAME RỔL.",
+        "control_cer": 0.14705882352941177,
+        "candidate_cer": 0.14705882352941177,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+        "control_output": "GẶp LaI SAU NHÉ KAZU!",
+        "candidate_output": "GẶp LaI SAU NHÉ KAZU!",
+        "control_cer": 0.047619047619047616,
+        "candidate_cer": 0.047619047619047616,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+        "control_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "candidate_output": "CHÚC Ncủ NGON NHÉ RIN!",
+        "control_cer": 0.08695652173913043,
+        "candidate_cer": 0.08695652173913043,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+        "control_output": "Rin đã Offline",
+        "candidate_output": "Rin đã Offline",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+        "control_output": "PHù.",
+        "candidate_output": "PHù.",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+        "control_output": "HÔM NAY CHƠl ĐĂ RỒL,",
+        "candidate_output": "HÔM NAY CHƠl ĐĂ RỒL,",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+        "control_output": "4 mól 'in nhấn 5 Nunen / PÍP!",
+        "candidate_output": "4 'in nhấn 5 Nunen / mól PÍP!",
+        "control_cer": 6.25,
+        "candidate_cer": 6.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+        "control_output": "Cảm câu vì lễ cưới tuyệt vời bôm nay nbé",
+        "candidate_output": "Cảm câu vì lễ cưới tuyệt vời bôm nay nbé",
+        "control_cer": 0.1590909090909091,
+        "candidate_cer": 0.1590909090909091,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+        "control_output": "LÀ Từ RIN",
+        "candidate_output": "LÀ Từ RIN",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+        "control_output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+        "candidate_output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+        "control_cer": 0.05555555555555555,
+        "candidate_cer": 0.05555555555555555,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+        "control_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl Ncủ SÓM THÔI.",
+        "candidate_output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl Ncủ SÓM THÔI.",
+        "control_cer": 0.10204081632653061,
+        "candidate_cer": 0.10204081632653061,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_92071c223e96",
+        "control_output": "MONC CẬU GlÚP ĐỠ VẬY",
+        "candidate_output": "MONC CẬU GlÚP ĐỠ VẬY",
+        "control_cer": 0.19047619047619047,
+        "candidate_cer": 0.19047619047619047,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+        "control_output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO Mò THÔI NHỈ.",
+        "candidate_output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO Mò THÔI NHỈ.",
+        "control_cer": 0.2571428571428571,
+        "candidate_cer": 0.2571428571428571,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+        "control_output": "CẬU NÓI CHO CẬU BlẾT VỂ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+        "candidate_output": "CẬU NÓI CHO CẬU BlẾT VỂ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+        "control_cer": 0.11290322580645161,
+        "candidate_cer": 0.11290322580645161,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+        "control_output": "KHÔNG ĐÂL, TÓ CHIL RỒI\"!",
+        "candidate_output": "KHÔNG ĐÂL, TÓ CHIL RỒI\"!",
+        "control_cer": 0.20833333333333334,
+        "candidate_cer": 0.20833333333333334,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+        "control_output": "LÀ MỘT NHÓM NHaC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc SỤ CHú VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "candidate_output": "LÀ MỘT NHÓM NHaC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc SỤ CHú VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+        "control_cer": 0.09,
+        "candidate_cer": 0.09,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+        "control_output": "\"STAR",
+        "candidate_output": "\"STAR",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+        "control_output": "MINES\"",
+        "candidate_output": "MINES\"",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+        "control_output": "LÀ CÔ BẠN IDOL NGẩU LÒI HỌC CÙNG LÓP MIZUKI RINKA",
+        "candidate_output": "LÀ CÔ BẠN IDOL NGẩU LÒI HỌC CÙNG LÓP MIZUKI RINKA",
+        "control_cer": 0.06,
+        "candidate_cer": 0.06,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+        "control_output": "TRONG 4Ó CÓ MỘT NGUỜI",
+        "candidate_output": "TRONG 4Ó CÓ MỘT NGUỜI",
+        "control_cer": 0.09523809523809523,
+        "candidate_cer": 0.09523809523809523,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+        "control_output": "CŨNG ĐUỢC THÔL.",
+        "candidate_output": "CŨNG ĐUỢC THÔL.",
+        "control_cer": 0.23529411764705882,
+        "candidate_cer": 0.23529411764705882,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+        "control_output": "Từ RIN À",
+        "candidate_output": "Từ RIN À",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+        "control_output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAme MỘT CHÚT KHÔNG?",
+        "candidate_output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAme MỘT CHÚT KHÔNG?",
+        "control_cer": 0.06,
+        "candidate_cer": 0.06,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+        "control_output": "NGỦ CHO ĐÊN Lúc TIẾT HỌc BẮT ĐẦu VẬY.",
+        "candidate_output": "NGỦ CHO ĐÊN Lúc TIẾT HỌc BẮT ĐẦu VẬY.",
+        "control_cer": 0.07692307692307693,
+        "candidate_cer": 0.07692307692307693,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+        "control_output": "ĐỐỈ vá MÌNH THÌ NẾU có VIỆC Gi THú HWN VIỆc HÚ VỊ NGẮM IDol Thi",
+        "candidate_output": "ĐỐỈ vá MÌNH THÌ NẾU có VIỆC Gi THú HÚ VỊ NGẮM HWN VIỆc IDol Thi",
+        "control_cer": 0.2459016393442623,
+        "candidate_cer": 0.3114754098360656,
+        "classification": "REGRESSED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+        "control_output": "CHẮC SẼ LÀ CÙNG CHaI GAME VÓl RIN NHI?",
+        "candidate_output": "CHẮC SẼ LÀ CÙNG CHaI GAME VÓl RIN NHI?",
+        "control_cer": 0.10526315789473684,
+        "candidate_cer": 0.10526315789473684,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+        "control_output": "Ể",
+        "candidate_output": "Ể",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+        "control_output": "MÌNH ĐM NcHĨ LÀ CHO ĐẾN LÚC RIN TỚl THÌ ĐI ĐÀO MỎ CHÚT VẬY MÀ",
+        "candidate_output": "MÌNH ĐM NcHĨ LÀ CHO ĐẾN LÚC RIN TỚl THÌ ĐI ĐÀO MỎ CHÚT VẬY MÀ",
+        "control_cer": 0.14754098360655737,
+        "candidate_cer": 0.14754098360655737,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+        "control_output": "BẢO TeÌ CHO ĐẾN 20 6IỜ SAO?",
+        "candidate_output": "BẢO TeÌ CHO ĐẾN 20 6IỜ SAO?",
+        "control_cer": 0.07407407407407407,
+        "candidate_cer": 0.07407407407407407,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+        "control_output": "CHẮc NCHE THử vÀI BÀI KHÁC NZA NHI",
+        "candidate_output": "CHẮc NCHE THử vÀI BÀI KHÁC NZA NHI",
+        "control_cer": 0.11764705882352941,
+        "candidate_cer": 0.11764705882352941,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+        "control_output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIỌNG HÁT HAY VẬY SAo",
+        "candidate_output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIỌNG HÁT HAY VẬY SAo",
+        "control_cer": 0.018867924528301886,
+        "candidate_cer": 0.018867924528301886,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+        "control_output": "uẩỵ MÌVH NGHE HÊT LUÔN RổL.",
+        "candidate_output": "uẩỵ MÌVH NGHE HÊT LUÔN RổL.",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+        "control_output": "CHẾT MOE! QUÁ GIỜ HẸN MÁT TIÊU RỖI!",
+        "candidate_output": "CHẾT MOE! QUÁ GIỜ HẸN MÁT TIÊU RỖI!",
+        "control_cer": 0.08571428571428572,
+        "candidate_cer": 0.08571428571428572,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+        "control_output": "Xin lẫi! Minh sẽ vào ngayl",
+        "candidate_output": "Xin lẫi! Minh sẽ vào ngayl",
+        "control_cer": 0.11538461538461539,
+        "candidate_cer": 0.11538461538461539,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+        "control_output": "[Rin] Cqu đã vào chua vậy- YouTuve",
+        "candidate_output": "[Rin] Cqu đã vào chua vậy- YouTuve",
+        "control_cer": 0.4230769230769231,
+        "candidate_cer": 0.4230769230769231,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+        "control_output": "RIN ĐÂL RỒI?",
+        "candidate_output": "RIN ĐÂL RỒI?",
+        "control_cer": 0.08333333333333333,
+        "candidate_cer": 0.08333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+        "control_output": "NHÊ ClẬN RỒI SAO. CHẢ",
+        "candidate_output": "CHẢ NHÊ ClẬN RỒI SAO.",
+        "control_cer": 0.5517241379310345,
+        "candidate_cer": 0.3448275862068966,
+        "classification": "IMPROVED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+        "control_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+        "candidate_output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+        "control_cer": 0.12121212121212122,
+        "candidate_cer": 0.12121212121212122,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+        "control_output": "KAZL!",
+        "candidate_output": "KAZL!",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+        "control_output": "KHÔNG PHẢI NÓI CHUYỆN ĐỜl THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+        "candidate_output": "KHÔNG PHẢI NÓI CHUYỆN ĐỜl THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+        "control_cer": 0.01818181818181818,
+        "candidate_cer": 0.01818181818181818,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+        "control_output": "#ể~ tại sa0 lại là Idol co cbú?",
+        "candidate_output": "#ể~ tại sa0 lại là Idol co cbú?",
+        "control_cer": 0.2,
+        "candidate_cer": 0.2,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+        "control_output": "Lần này là ncoai lệ!",
+        "candidate_output": "Lần này là ncoai lệ!",
+        "control_cer": 0.1,
+        "candidate_cer": 0.1,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+        "control_output": "LÚC TRUÓC, KHI MÌNH NÓI CHUYỆN ĐỠI THỰC VÓI RIN",
+        "candidate_output": "LÚC TRUÓC, KHI MÌNH NÓI CHUYỆN ĐỠI THỰC VÓI RIN",
+        "control_cer": 0.0851063829787234,
+        "candidate_cer": 0.0851063829787234,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+        "control_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "candidate_output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+        "control_cer": 0.14814814814814814,
+        "candidate_cer": 0.14814814814814814,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+        "control_output": "ĐOl THựC CHI THứ . GÂY CẢN TRƠ VẢ LAM HỎNG MỐl QUAN HỆ TRONG SÁNG THÔL MA",
+        "candidate_output": "ĐOl THựC CHI THứ . GÂY CẢN TRƠ VẢ LAM HỎNG MỐl QUAN HỆ TRONG SÁNG THÔL MA",
+        "control_cer": 0.24675324675324675,
+        "candidate_cer": 0.24675324675324675,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+        "control_output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "candidate_output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+        "control_cer": 0.014285714285714285,
+        "candidate_cer": 0.014285714285714285,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+        "control_output": "Star",
+        "candidate_output": "Star",
+        "control_cer": 0.0,
+        "candidate_cer": 0.0,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+        "control_output": "MINES ĐÓỊ",
+        "candidate_output": "MINES ĐÓỊ",
+        "control_cer": 0.1111111111111111,
+        "candidate_cer": 0.1111111111111111,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+        "control_output": "Phúf",
+        "candidate_output": "Phúf",
+        "control_cer": 0.5,
+        "candidate_cer": 0.5,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+        "control_output": "pl6}",
+        "candidate_output": "pl6}",
+        "control_cer": 0.8333333333333334,
+        "candidate_cer": 0.8333333333333334,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+        "control_output": "Phút",
+        "candidate_output": "Phút",
+        "control_cer": 0.3333333333333333,
+        "candidate_cer": 0.3333333333333333,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+        "control_output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓI GÌ DẠl DỘT Rồl!?",
+        "candidate_output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓI GÌ DẠl DỘT Rồl!?",
+        "control_cer": 0.06382978723404255,
+        "candidate_cer": 0.06382978723404255,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+        "control_output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+        "candidate_output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+        "control_cer": 0.25,
+        "candidate_cer": 0.25,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      },
+      {
+        "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+        "control_output": "NÊN CẬU HĂY QLÊN NHÉ ĐI",
+        "candidate_output": "NÊN CẬU HĂY QLÊN NHÉ ĐI",
+        "control_cer": 0.32,
+        "candidate_cer": 0.32,
+        "classification": "UNCHANGED",
+        "correct_to_wrong": false,
+        "large_cer_regression": false
+      }
+    ]
+  },
+  "structural_47": {
+    "control": {
+      "n": 47,
+      "exact": 0,
+      "exact_rate": 0.0,
+      "normalized_cer": 0.15454545454545454,
+      "wer": 0.39805825242718446
+    },
+    "candidate": {
+      "n": 47,
+      "exact": 1,
+      "exact_rate": 0.02127659574468085,
+      "normalized_cer": 0.1471590909090909,
+      "wer": 0.39563106796116504
+    },
+    "repaired": 1,
+    "improved": 13,
+    "unchanged": 17,
+    "regressed": 17
+  },
+  "regression_safety": {
+    "correct_to_wrong": 1,
+    "large_cer_regressions": 5,
+    "newly_clipped_crops": 0,
+    "newly_merged_unrelated_text": 14,
+    "newly_split_valid_text": 0
+  },
+  "false_safe_replay": {
+    "11.13": {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "control_output": "\"STAR",
+      "candidate_output": "\"STAR",
+      "human_gt": "STAR",
+      "candidate_exact": false,
+      "structural_fix_result": "FALSE_SAFE_TEXT_ERROR_REMAINS",
+      "frozen_r2_result": "GENERALIZATION FAIL remains historical; router not reclassified or tuned"
+    },
+    "11.12_baseline_false_safe": {
+      "n": 36,
+      "repaired_exact": 2,
+      "improved": 15,
+      "unchanged": 12,
+      "regressed": 9,
+      "cases": [
+        {
+          "sample_id": "p1:LR_28e2fc3b47b8",
+          "control_output": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+          "candidate_output": "THÌ CON CÓ CHẤP NHẬN THỂ NGuYỆN YÊL vÀ LÀM vỢ CủA KAZU SUỐT Đờl KHÔNG?",
+          "human_gt": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ KAZU SUỐT ĐỜI KHÔNG ?",
+          "control_cer": 0.13432835820895522,
+          "candidate_cer": 0.11940298507462686,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_708761617ca5",
+          "control_output": "HÁC BINH NGUYÊN",
+          "candidate_output": "HẮC BÌNH NGUYÊN",
+          "human_gt": "HẮC BÌNH NGUYÊN",
+          "control_cer": 0.13333333333333333,
+          "candidate_cer": 0.0,
+          "candidate_exact": true
+        },
+        {
+          "sample_id": "p3:LR_6847589abd58",
+          "control_output": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+          "candidate_output": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VỚI ĐỔ HOẠ CHÂN THỰC",
+          "human_gt": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+          "control_cer": 0.08333333333333333,
+          "candidate_cer": 0.0625,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_1b80a3ba7eba",
+          "control_output": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "candidate_output": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "human_gt": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ TẬN HƯỞNG NHẬP VAI TUỲ THÍCH",
+          "control_cer": 0.08333333333333333,
+          "candidate_cer": 0.08333333333333333,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_301b7ed055be",
+          "control_output": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+          "candidate_output": "Đã mỉ được thành tựu trang phục [Vét đuôi tôm] 70y",
+          "human_gt": "ĐÃ MỞ ĐƯỢC THÀNH TỰ TRANG PHỤC [VÉT ĐUÔI TÔM]*",
+          "control_cer": 0.15217391304347827,
+          "candidate_cer": 0.13043478260869565,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_016a11675840",
+          "control_output": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+          "candidate_output": "ĐÃ ĐẠT ĐUỢC ĐẶC QUYỄN KẾT HÔN RỖl",
+          "human_gt": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+          "control_cer": 0.12121212121212122,
+          "candidate_cer": 0.12121212121212122,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p3:LR_38a547aad429",
+          "control_output": "KAZL NAY",
+          "candidate_output": "KAZL NAY",
+          "human_gt": "KAZU NÀY",
+          "control_cer": 0.25,
+          "candidate_cer": 0.25,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p4:LR_a4e0fdad0903",
+          "control_output": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+          "candidate_output": "HÃY CÙng NHAU HẠNH PHÚC NHÉ!",
+          "human_gt": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ!",
+          "control_cer": 0.03571428571428571,
+          "candidate_cer": 0.0,
+          "candidate_exact": true
+        },
+        {
+          "sample_id": "p4:LR_d403d992f246",
+          "control_output": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "candidate_output": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "human_gt": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "control_cer": 0.037037037037037035,
+          "candidate_cer": 0.037037037037037035,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p4:LR_d8230ac855ba",
+          "control_output": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "candidate_output": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "human_gt": "ANH CHỈ BIẾT NÓI \"AH' THÔI SAO!?",
+          "control_cer": 0.15625,
+          "candidate_cer": 0.15625,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_f27fb5ffabf9",
+          "control_output": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+          "candidate_output": "LẨN GẶP Gõ ĐẨU TIÊN CỦA CHÚNG TÔl LÀ VÀO 4 NĂM TRUÓC .",
+          "human_gt": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC...",
+          "control_cer": 0.12727272727272726,
+          "candidate_cer": 0.14545454545454545,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_26795b95ef26",
+          "control_output": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+          "candidate_output": "Mìnb là nGười chơi mới nên mone cậu ciúp đỡ!",
+          "human_gt": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+          "control_cer": 0.045454545454545456,
+          "candidate_cer": 0.06818181818181818,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_1dfca31c24d7",
+          "control_output": "Mìnb là Rin",
+          "candidate_output": "Mìnb là Rin",
+          "human_gt": "Mình là Rin",
+          "control_cer": 0.09090909090909091,
+          "candidate_cer": 0.09090909090909091,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_a0587957c904",
+          "control_output": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+          "candidate_output": "VÀ Tôl ĐÃ CHỈ BẢO Cho newbie RIN CaCh CHOI GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TÔl BẮT ĐẨU .",
+          "human_gt": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỖI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU..",
+          "control_cer": 0.08695652173913043,
+          "candidate_cer": 0.09782608695652174,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_d9caab3d7c4a",
+          "control_output": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+          "candidate_output": "RIN ĐUBC GHÉP THÀNH CẶP NGẨU NHIÊN VÓI TÔl TRONG MỘT TRẬN ĐẤU Ỏ DUNGEON",
+          "human_gt": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+          "control_cer": 0.09859154929577464,
+          "candidate_cer": 0.08450704225352113,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_b71bcd7a275c",
+          "control_output": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+          "candidate_output": "THÔNG QUA VIỆC GẶP NHAU THUờNG XUYÊN THÌ SỤ GÁN KẾT CỦA CHÚNG Tôl ĐẴ TĂNG LÊN TÙNG CHÚT, TÙNG CHÚT MỘT",
+          "human_gt": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+          "control_cer": 0.0392156862745098,
+          "candidate_cer": 0.06862745098039216,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_bf3e79736d0c",
+          "control_output": "Hôy",
+          "candidate_output": "Hôy",
+          "human_gt": "Hầy",
+          "control_cer": 0.3333333333333333,
+          "candidate_cer": 0.3333333333333333,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p5:LR_7ee4baf217d7",
+          "control_output": "Ha #êp #ên cút ~al",
+          "candidate_output": "Ha #êp #êm cút ~al",
+          "human_gt": "Hạ thấp thêm chút nữa!!",
+          "control_cer": 0.5217391304347826,
+          "candidate_cer": 0.4782608695652174,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p7:LR_5787cb8d10ad",
+          "control_output": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+          "candidate_output": "CÚ NHU VẬY CHÚNG TÔl ĐÃ KẾT HÔN VÓI NHAU",
+          "human_gt": "CỨ NHƯ VẬY CHÚNG TÔI ĐÃ KẾT HÔN VỚI NHAU",
+          "control_cer": 0.125,
+          "candidate_cer": 0.1,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_dfef3de3ed48",
+          "control_output": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+          "candidate_output": "NHLNG MÀ, TỚ LẠl có PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÁM,",
+          "human_gt": "NHƯNG MÀ TỚ LẠI CÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM",
+          "control_cer": 0.06779661016949153,
+          "candidate_cer": 0.1016949152542373,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_35d30a3b10e1",
+          "control_output": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "candidate_output": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CHNG KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "human_gt": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG CÓ, BIỂU CẢM CŨNG KHÔNG THAY ĐỔI",
+          "control_cer": 0.08,
+          "candidate_cer": 0.08,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_9636706b4855",
+          "control_output": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+          "candidate_output": "CÁC CẬU KHÔNG CẢM THẤY Sự LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LLÔN RỔI SAo?",
+          "human_gt": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+          "control_cer": 0.07407407407407407,
+          "candidate_cer": 0.04938271604938271,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_f6dbfc4d4913",
+          "control_output": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+          "candidate_output": "À THÌ ĐÚNC LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA.",
+          "human_gt": "À THÌ ĐÚNG LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA...",
+          "control_cer": 0.11702127659574468,
+          "candidate_cer": 0.05319148936170213,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_bf3e65667bd9",
+          "control_output": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+          "candidate_output": "ừM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NCLỠNG MIZLKI-SAN Từ XA LÀ ĐLỢc PỖI",
+          "human_gt": "ỪM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐƯỢC RỒI!",
+          "control_cer": 0.09090909090909091,
+          "candidate_cer": 0.10606060606060606,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p15:LR_0856a888b8df",
+          "control_output": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "candidate_output": "MÀ TÓ CÙNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlÓI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "human_gt": "MÀ TỚ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RỒI!",
+          "control_cer": 0.07246376811594203,
+          "candidate_cer": 0.08695652173913043,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_554cd55f1a6a",
+          "control_output": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+          "candidate_output": "VẬY CHÁC TÌM HIỂU THÔNG TIN vỂ Sự KIỆN MỚl THÔL\"",
+          "human_gt": "VẬY CHẮC TÌM HIỂU THÔNG TIN VỀ SỰ KIỆN MỚI THÔI...",
+          "control_cer": 0.46,
+          "candidate_cer": 0.14,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_0c630f218964",
+          "control_output": "Cậpnhật tin túc Hắc Bình Nguyên",
+          "candidate_output": "Cập nhật tin tức HÉc Bình Nguyên",
+          "human_gt": "CẬP NHẬT TIN TỨC HẮC BÌNH NGUYÊN",
+          "control_cer": 0.0625,
+          "candidate_cer": 0.03125,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_de7b43ae45f7",
+          "control_output": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+          "candidate_output": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP C`NG ĐĂ NÓI VỀ CÁl NÀY.",
+          "human_gt": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY...",
+          "control_cer": 0.10714285714285714,
+          "candidate_cer": 0.08928571428571429,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_952c7eac9aef",
+          "control_output": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+          "candidate_output": "CHẮc LÀ NGHE THỬ MỘT LÂN XEM SAO",
+          "human_gt": "CHẮC LÀ NGHE THỬ MỘT LẦN XEM SAO",
+          "control_cer": 0.03125,
+          "candidate_cer": 0.03125,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p17:LR_0523c7b7b258",
+          "control_output": "CũNG CÒN THÒI GIAN",
+          "candidate_output": "CũNG CÒN THàI GAN",
+          "human_gt": "CŨNG CÒN THỜI GIAN",
+          "control_cer": 0.05555555555555555,
+          "candidate_cer": 0.1111111111111111,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_aac2ef08be0e",
+          "control_output": "SAO LẠl",
+          "candidate_output": "SAO LẠl",
+          "human_gt": "SAO LẠI",
+          "control_cer": 0.14285714285714285,
+          "candidate_cer": 0.14285714285714285,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_77b6cc0407da",
+          "control_output": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+          "candidate_output": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ",
+          "human_gt": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ...",
+          "control_cer": 0.13793103448275862,
+          "candidate_cer": 0.1724137931034483,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p18:LR_1c3c89ee5ac1",
+          "control_output": "HAY QUÁ.",
+          "candidate_output": "HAY QUÁ.",
+          "human_gt": "HAY QÚA...",
+          "control_cer": 0.4,
+          "candidate_cer": 0.4,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_ac01f1796688",
+          "control_output": "XÁC NHÂN BÀ LUÔN Rồl",
+          "candidate_output": "xÁC NHẬN BÀ LUÔN RỖl",
+          "human_gt": "XÁC NHẬN BÀ LUÔN RỒI...",
+          "control_cer": 0.21739130434782608,
+          "candidate_cer": 0.21739130434782608,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_2da60c343d36",
+          "control_output": "THẰNG ẤT Ơ NÀO KIA_",
+          "candidate_output": "THẰNG ẤT Ơ NÀO KIA .",
+          "human_gt": "THẰNG ẤT Ơ NÀO KIA...",
+          "control_cer": 0.14285714285714285,
+          "candidate_cer": 0.09523809523809523,
+          "candidate_exact": false
+        },
+        {
+          "sample_id": "p38:LR_563eb986d1f9",
+          "control_output": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+          "candidate_output": "SAO MẤY NGUà XUNG QUANH Cứ NHIN MINH CHẰM CHẰM VẬY.",
+          "human_gt": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN CHẰM CHẰM VẬY...",
+          "control_cer": 0.24489795918367346,
+          "candidate_cer": 0.22448979591836735,
+          "candidate_exact": false
+        }
+      ]
+    }
+  },
+  "unreadable_geometry": [
+    {
+      "sample_id": "11.13:428525d33157:LR_1583fd1062a8",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 9033.084608312338,
+      "candidate_area": 11172,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_e95a7aea418f",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 1104.0,
+      "candidate_area": 1560,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_27cfdce9442d",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 960.0,
+      "candidate_area": 1380,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_ab038e5b4e94",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 10600.0,
+      "candidate_area": 12312,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_6e16736c8963",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 2976.0,
+      "candidate_area": 3672,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_e650719336c2",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 816.0,
+      "candidate_area": 1200,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_88d52c7a0404",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 1936.0,
+      "candidate_area": 2500,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_691c6e0ae1b4",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 1296.0,
+      "candidate_area": 1764,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_218e1d60e667",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 1020.0,
+      "candidate_area": 1440,
+      "human_text_inferred": false
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_8e36198a145a",
+      "result": "MORE_COMPLETE_GEOMETRY",
+      "original_area": 5935.448281478181,
+      "candidate_area": 7326,
+      "human_text_inferred": false
+    }
+  ]
+}

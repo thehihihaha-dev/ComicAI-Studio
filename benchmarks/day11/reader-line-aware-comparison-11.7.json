@@ -1,0 +1,126 @@
+{
+  "schema_version": "reader-line-aware.v1",
+  "checkpoint": "11.7",
+  "artifact_kind": "comparison",
+  "status": "completed",
+  "N": 20,
+  "winning_padding": 0.02,
+  "metrics": {
+    "current": {
+      "N": 20,
+      "raw_exact": 1,
+      "normalized_exact": 1,
+      "micro_raw_cer": 0.9749262536873157,
+      "mean_normalized_cer": 0.8207196969696969,
+      "mean_wer": 0.9333333333333333,
+      "missing": 0,
+      "edit_counts": {
+        "insertions": 0,
+        "deletions": 622,
+        "substitutions": 39
+      }
+    },
+    "logical_crop": {
+      "N": 20,
+      "raw_exact": 4,
+      "normalized_exact": 4,
+      "micro_raw_cer": 0.22713864306784662,
+      "mean_normalized_cer": 0.11038388444956719,
+      "mean_wer": 0.4055798368298368,
+      "missing": 0,
+      "edit_counts": {
+        "insertions": 6,
+        "deletions": 14,
+        "substitutions": 134
+      }
+    },
+    "line_aware": {
+      "N": 20,
+      "raw_exact": 4,
+      "normalized_exact": 4,
+      "micro_raw_cer": 0.2374631268436578,
+      "mean_normalized_cer": 0.1264788637022307,
+      "mean_wer": 0.4700922688422688,
+      "missing": 0,
+      "edit_counts": {
+        "insertions": 11,
+        "deletions": 11,
+        "substitutions": 139
+      }
+    },
+    "padding_grid": {
+      "0.0": {
+        "N": 20,
+        "raw_exact": 4,
+        "normalized_exact": 4,
+        "micro_raw_cer": 0.23303834808259588,
+        "mean_normalized_cer": 0.11739003591862338,
+        "mean_wer": 0.40338286713286714,
+        "missing": 0,
+        "edit_counts": {
+          "insertions": 7,
+          "deletions": 22,
+          "substitutions": 129
+        }
+      },
+      "0.02": {
+        "N": 20,
+        "raw_exact": 4,
+        "normalized_exact": 4,
+        "micro_raw_cer": 0.22713864306784662,
+        "mean_normalized_cer": 0.11038388444956719,
+        "mean_wer": 0.4055798368298368,
+        "missing": 0,
+        "edit_counts": {
+          "insertions": 6,
+          "deletions": 14,
+          "substitutions": 134
+        }
+      },
+      "0.05": {
+        "N": 20,
+        "raw_exact": 4,
+        "normalized_exact": 4,
+        "micro_raw_cer": 0.23303834808259588,
+        "mean_normalized_cer": 0.1278073596061406,
+        "mean_wer": 0.48128690753690756,
+        "missing": 0,
+        "edit_counts": {
+          "insertions": 11,
+          "deletions": 13,
+          "substitutions": 134
+        }
+      },
+      "0.08": {
+        "N": 20,
+        "raw_exact": 4,
+        "normalized_exact": 4,
+        "micro_raw_cer": 0.22713864306784662,
+        "mean_normalized_cer": 0.12099683007006616,
+        "mean_wer": 0.4370697358197358,
+        "missing": 0,
+        "edit_counts": {
+          "insertions": 10,
+          "deletions": 10,
+          "substitutions": 134
+        }
+      }
+    }
+  },
+  "improvement": {
+    "logical_absolute_cer_reduction": 0.7103358125201298,
+    "logical_relative_cer_reduction": 0.8655035515083503,
+    "line_absolute_cer_reduction": 0.6942408332674662,
+    "line_relative_cer_reduction": 0.8458927400314353,
+    "logical_deltas": {
+      "IMPROVED": 18,
+      "UNCHANGED": 2
+    },
+    "line_deltas": {
+      "IMPROVED": 18,
+      "UNCHANGED": 2
+    }
+  },
+  "decision": "B. LOGICAL-REGION CROP HELPS, LINE-AWARE DOES NOT",
+  "vlm_calls": 0
+}

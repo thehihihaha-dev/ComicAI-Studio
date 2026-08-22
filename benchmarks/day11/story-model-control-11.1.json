@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "checkpoint": "11.1",
+  "control_model": "qwen3-vl:8b-instruct",
+  "source_baseline": "benchmarks/day11/machine-baseline-11.1.json",
+  "input": {
+    "source_revision": "c38b7a515ccc6d7dd607f6d62b44de340e1948a3531031c6439ae999f52ee338",
+    "page_count": 3,
+    "project_id_hash": "b9dff15b2208a2fc9eb7dfc2e371981fa3c2357ea6d95c5992c57da266ce12f1"
+  },
+  "performance": {
+    "wall_clock_seconds": 138.28786,
+    "total_inference_seconds": 137.472172,
+    "model_calls": [
+      {
+        "stage": "story_analyzer",
+        "attempt": 1,
+        "model": "qwen3-vl:8b-instruct",
+        "prompt_chars": 11462,
+        "prompt_hash": "01081a941bbae94afc1b0a8754b1d6713e987e216973515887694975d8981195",
+        "generation_options": {
+          "num_ctx": 8192,
+          "temperature": 0,
+          "seed": 424242,
+          "top_k": 1,
+          "top_p": 1.0,
+          "repeat_penalty": 1.0
+        },
+        "prelaunch_safety_state": "NORMAL",
+        "output_chars": 5048,
+        "raw_response_hash": "077de257e93c77491e33131a084731a8dc5ed8ec612cb5c14693868282800186",
+        "duration_seconds": 120.199019,
+        "success": true
+      },
+      {
+        "stage": "coverage_recovery",
+        "attempt": 1,
+        "model": "qwen3-vl:8b-instruct",
+        "prompt_chars": 4236,
+        "prompt_hash": "6e38a4e44283e4158b82bcc983b2daaf2a214d118ca58e448fa150bd8384e536",
+        "generation_options": {
+          "num_ctx": 8192,
+          "temperature": 0,
+          "seed": 424242,
+          "top_k": 1,
+          "top_p": 1.0,
+          "repeat_penalty": 1.0,
+          "num_predict": 2048
+        },
+        "prelaunch_safety_state": "WARNING",
+        "output_chars": 222,
+        "raw_response_hash": "669569b196891b9086af6911d43ed22395ac34c9a377abdad8d33f658f3969bf",
+        "duration_seconds": 17.273153,
+        "success": true
+      }
+    ]
+  },
+  "correctness": {
+    "exact_11_1": {
+      "accepted_unsupported_claims": 0,
+      "analysis_attempts": 1,
+      "recovery_attempts": 1,
+      "unresolved_regions": 10
+    },
+    "same_input_persisted_event_proxy": {
+      "output_structurally_valid": true,
+      "event_count": 1,
+      "main_story_event_count": 1,
+      "grounded_claim_count": 7,
+      "accepted_unsupported_claims": 0,
+      "unsupported_event_count": 0,
+      "unsupported_event_ids": [],
+      "script_ready_event_count": 1,
+      "source_reference_valid": true,
+      "invalid_source_references": [],
+      "grounding_issues": [],
+      "coverage": {
+        "eligible_regions": 22,
+        "important_regions": 22,
+        "covered_regions": 7,
+        "non_story_relevant_regions": 2,
+        "unresolved_regions": 13,
+        "coverage_score": 0.4091
+      },
+      "analysis_attempts": 2,
+      "recovery_attempts": 1,
+      "language": "English",
+      "events": [
+        {
+          "id": "event_1",
+          "claims": [
+            {
+              "id": "event_1_claim_1",
+              "text": "The characters met for the first time four years ago.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    1
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_2",
+              "text": "One character is a new player and asks for help.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    2
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_3",
+              "text": "The character named Rin is introduced as a new player.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    5
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_4",
+              "text": "The characters begin their relationship by the first character teaching Rin how to play the game.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    3
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_5",
+              "text": "Rin and the first character were randomly paired in a dungeon battle.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    6
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_6",
+              "text": "Through regular encounters, their bond gradually deepened.",
+              "sources": [
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    7
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            },
+            {
+              "id": "event_1_claim_7",
+              "text": "The characters express a shared intent to continue engaging with each other.",
+              "sources": [
+                {
+                  "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+                  "page_order": 1,
+                  "region_ids": [
+                    1
+                  ]
+                },
+                {
+                  "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                  "page_order": 2,
+                  "region_ids": [
+                    8
+                  ]
+                }
+              ],
+              "claim_type": "fact"
+            }
+          ],
+          "emotion": "positive",
+          "sources": [
+            {
+              "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+              "page_order": 2,
+              "region_ids": [
+                1,
+                2,
+                3,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+              "page_order": 1,
+              "region_ids": [
+                1
+              ]
+            }
+          ],
+          "summary": "The characters meet for the first time four years ago and begin a friendship through gameplay guidance.",
+          "importance": 0.9,
+          "story_role": "main_story",
+          "script_ready": true,
+          "unsupported_claims": []
+        }
+      ]
+    }
+  },
+  "event_control_note": "11.1 retained exact latency/prompt/call/coverage summary but not event payload; event diff uses the same-source-revision persisted 8B result and is labeled proxy"
+}

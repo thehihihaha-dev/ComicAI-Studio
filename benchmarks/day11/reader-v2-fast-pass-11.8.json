@@ -1,0 +1,5817 @@
+{
+  "schema_version": "reader-v2-fast-pass.v1",
+  "checkpoint": "11.8",
+  "artifact_kind": "fast_pass",
+  "status": "completed",
+  "N": 20,
+  "engine": {
+    "name": "easyocr",
+    "version": "1.7.2",
+    "config": {
+      "languages": [
+        "vi",
+        "en"
+      ],
+      "gpu": false,
+      "detail": 1
+    }
+  },
+  "padding": 0.02,
+  "policy": "MANGA_RTL",
+  "pages": [
+    {
+      "reader_version": "v2",
+      "implementation_revision": "reader-v2.fast-pass.v1",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "fingerprint": "b80d05d4f80708685576c322660ca760308356ce4e3dfc605172fec998995f49",
+      "regions": [
+        {
+          "region_id": 1,
+          "bbox": [
+            128.0,
+            427.0,
+            246.0,
+            531.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            126,
+            425,
+            248,
+            533
+          ],
+          "crop_dimensions": [
+            122,
+            108
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+            "confidence": 0.37108381990559347,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    5.0,
+                    1.0
+                  ],
+                  [
+                    115.0,
+                    1.0
+                  ],
+                  [
+                    115.0,
+                    41.0
+                  ],
+                  [
+                    5.0,
+                    41.0
+                  ]
+                ],
+                "text": "HÃY CÙNg",
+                "confidence": 0.5053884406328951
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    40.0
+                  ],
+                  [
+                    120.0,
+                    40.0
+                  ],
+                  [
+                    120.0,
+                    72.0
+                  ],
+                  [
+                    2.0,
+                    72.0
+                  ]
+                ],
+                "text": "NHAU HANH",
+                "confidence": 0.37108381990559347
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    3.0,
+                    69.0
+                  ],
+                  [
+                    119.0,
+                    69.0
+                  ],
+                  [
+                    119.0,
+                    107.0
+                  ],
+                  [
+                    3.0,
+                    107.0
+                  ]
+                ],
+                "text": "PHÚC NHÉ!",
+                "confidence": 0.8049224766902285
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.37108381990559347,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.03571428571428571
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 2,
+          "bbox": [
+            396.0,
+            804.0,
+            500.0,
+            972.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            393,
+            801,
+            503,
+            975
+          ],
+          "crop_dimensions": [
+            110,
+            174
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+            "confidence": 0.49371222295182904,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    6.0,
+                    4.0
+                  ],
+                  [
+                    106.0,
+                    4.0
+                  ],
+                  [
+                    106.0,
+                    34.0
+                  ],
+                  [
+                    6.0,
+                    34.0
+                  ]
+                ],
+                "text": "cô GÁl TÓC",
+                "confidence": 0.593699259247074
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    14.0,
+                    32.0
+                  ],
+                  [
+                    98.0,
+                    32.0
+                  ],
+                  [
+                    98.0,
+                    60.0
+                  ],
+                  [
+                    14.0,
+                    60.0
+                  ]
+                ],
+                "text": "VÀNG VỔI",
+                "confidence": 0.49371222295182904
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    16.0,
+                    60.0
+                  ],
+                  [
+                    94.0,
+                    60.0
+                  ],
+                  [
+                    94.0,
+                    88.0
+                  ],
+                  [
+                    16.0,
+                    88.0
+                  ]
+                ],
+                "text": "DÁNG VẺ",
+                "confidence": 0.991172740511334
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    4.0,
+                    88.0
+                  ],
+                  [
+                    106.0,
+                    88.0
+                  ],
+                  [
+                    106.0,
+                    116.0
+                  ],
+                  [
+                    4.0,
+                    116.0
+                  ]
+                ],
+                "text": "TĂNG ĐỘNG",
+                "confidence": 0.9680536803465609
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    6.0,
+                    116.0
+                  ],
+                  [
+                    104.0,
+                    116.0
+                  ],
+                  [
+                    104.0,
+                    146.0
+                  ],
+                  [
+                    6.0,
+                    146.0
+                  ]
+                ],
+                "text": "NÀY TÊN LÀ",
+                "confidence": 0.9660550007410595
+              },
+              {
+                "id": 5,
+                "bbox": [
+                  [
+                    31.0,
+                    149.0
+                  ],
+                  [
+                    79.0,
+                    149.0
+                  ],
+                  [
+                    79.0,
+                    169.0
+                  ],
+                  [
+                    31.0,
+                    169.0
+                  ]
+                ],
+                "text": "\"RIN\"",
+                "confidence": 0.9997743805481243
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.49371222295182904,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.037037037037037035
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 3,
+          "bbox": [
+            752.0,
+            812.0,
+            786.0,
+            836.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            751,
+            811,
+            787,
+            837
+          ],
+          "crop_dimensions": [
+            36,
+            26
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "AH",
+            "confidence": 0.7668560032250632,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    36.0,
+                    2.0
+                  ],
+                  [
+                    36.0,
+                    26.0
+                  ],
+                  [
+                    0.0,
+                    26.0
+                  ]
+                ],
+                "text": "AH",
+                "confidence": 0.7668560032250632
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.7668560032250632,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": true,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "HARD"
+        }
+      ],
+      "reading_order": [
+        1,
+        2,
+        3
+      ],
+      "reading_order_detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          2,
+          3
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": []
+        }
+      },
+      "stats": {
+        "region_count": 3,
+        "ACCEPT_CANDIDATE": 2,
+        "HARD": 1,
+        "AMBIGUOUS": 0,
+        "crop_seconds": 0.00015329092275351286,
+        "ocr_inference_seconds": 0.13457241596188396,
+        "reading_order_seconds": 3.875000402331352e-05,
+        "wall_clock_seconds": 0.13683766702888533,
+        "vlm_calls": 0,
+        "ollama_calls": 0
+      }
+    },
+    {
+      "reader_version": "v2",
+      "implementation_revision": "reader-v2.fast-pass.v1",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "fingerprint": "c6cd59fc405018eb1eb48a0d660339d1c02c2200508e856fee0c950b95f47876",
+      "regions": [
+        {
+          "region_id": 1,
+          "bbox": [
+            667.0,
+            172.0,
+            766.0,
+            296.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            665,
+            170,
+            768,
+            298
+          ],
+          "crop_dimensions": [
+            103,
+            128
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+            "confidence": 0.2741900218601268,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    6.0,
+                    2.0
+                  ],
+                  [
+                    98.0,
+                    2.0
+                  ],
+                  [
+                    98.0,
+                    30.0
+                  ],
+                  [
+                    6.0,
+                    30.0
+                  ]
+                ],
+                "text": "LẨN GẶP Gỡ",
+                "confidence": 0.3609375408471065
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    4.0,
+                    28.0
+                  ],
+                  [
+                    100.0,
+                    28.0
+                  ],
+                  [
+                    100.0,
+                    54.0
+                  ],
+                  [
+                    4.0,
+                    54.0
+                  ]
+                ],
+                "text": "ĐÂU TIÊN CỦA",
+                "confidence": 0.5268367401426087
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    2.0,
+                    50.0
+                  ],
+                  [
+                    102.0,
+                    50.0
+                  ],
+                  [
+                    102.0,
+                    78.0
+                  ],
+                  [
+                    2.0,
+                    78.0
+                  ]
+                ],
+                "text": "CHÚNG TÔ1 LÀ",
+                "confidence": 0.6880089566094206
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    12.0,
+                    76.0
+                  ],
+                  [
+                    94.0,
+                    76.0
+                  ],
+                  [
+                    94.0,
+                    100.0
+                  ],
+                  [
+                    12.0,
+                    100.0
+                  ]
+                ],
+                "text": "VÀo 4 NĂM",
+                "confidence": 0.7380436891999895
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    18.0,
+                    96.0
+                  ],
+                  [
+                    76.0,
+                    96.0
+                  ],
+                  [
+                    76.0,
+                    126.0
+                  ],
+                  [
+                    18.0,
+                    126.0
+                  ]
+                ],
+                "text": "TRUớc _",
+                "confidence": 0.2741900218601268
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.2741900218601268,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.018518518518518517
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 2,
+          "bbox": [
+            138.0,
+            389.0,
+            246.0,
+            500.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            136,
+            387,
+            248,
+            502
+          ],
+          "crop_dimensions": [
+            112,
+            115
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+            "confidence": 0.2695610028509003,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    23.0,
+                    3.0
+                  ],
+                  [
+                    91.0,
+                    3.0
+                  ],
+                  [
+                    91.0,
+                    23.0
+                  ],
+                  [
+                    23.0,
+                    23.0
+                  ]
+                ],
+                "text": "Mìnb là",
+                "confidence": 0.7295252075452917
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    22.0
+                  ],
+                  [
+                    110.0,
+                    22.0
+                  ],
+                  [
+                    110.0,
+                    46.0
+                  ],
+                  [
+                    2.0,
+                    46.0
+                  ]
+                ],
+                "text": "nGười chơi",
+                "confidence": 0.6524946735046299
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    15.0,
+                    47.0
+                  ],
+                  [
+                    97.0,
+                    47.0
+                  ],
+                  [
+                    97.0,
+                    67.0
+                  ],
+                  [
+                    15.0,
+                    67.0
+                  ]
+                ],
+                "text": "mới nên",
+                "confidence": 0.7874179630195061
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    11.0,
+                    71.0
+                  ],
+                  [
+                    105.0,
+                    71.0
+                  ],
+                  [
+                    105.0,
+                    91.0
+                  ],
+                  [
+                    11.0,
+                    91.0
+                  ]
+                ],
+                "text": "mone cậu",
+                "confidence": 0.528056552494348
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    16.0,
+                    88.0
+                  ],
+                  [
+                    100.0,
+                    88.0
+                  ],
+                  [
+                    100.0,
+                    114.0
+                  ],
+                  [
+                    16.0,
+                    114.0
+                  ]
+                ],
+                "text": "Giúp đỡ!",
+                "confidence": 0.2695610028509003
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.2695610028509003,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.022727272727272728
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 3,
+          "bbox": [
+            288.0,
+            672.0,
+            402.0,
+            822.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            285,
+            669,
+            405,
+            825
+          ],
+          "crop_dimensions": [
+            120,
+            156
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+            "confidence": 0.26758805745254033,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    14.0,
+                    2.0
+                  ],
+                  [
+                    108.0,
+                    2.0
+                  ],
+                  [
+                    108.0,
+                    26.0
+                  ],
+                  [
+                    14.0,
+                    26.0
+                  ]
+                ],
+                "text": "VÀ Tôl ĐÃ CHỈ",
+                "confidence": 0.26758805745254033
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    7.0,
+                    27.0
+                  ],
+                  [
+                    115.0,
+                    27.0
+                  ],
+                  [
+                    115.0,
+                    47.0
+                  ],
+                  [
+                    7.0,
+                    47.0
+                  ]
+                ],
+                "text": "BẢO CHo newbie",
+                "confidence": 0.27366364636447266
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    12.0,
+                    46.0
+                  ],
+                  [
+                    110.0,
+                    46.0
+                  ],
+                  [
+                    110.0,
+                    70.0
+                  ],
+                  [
+                    12.0,
+                    70.0
+                  ]
+                ],
+                "text": "RIN CÁCH CHỔl",
+                "confidence": 0.718040578417263
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    10.0,
+                    66.0
+                  ],
+                  [
+                    112.0,
+                    66.0
+                  ],
+                  [
+                    112.0,
+                    90.0
+                  ],
+                  [
+                    10.0,
+                    90.0
+                  ]
+                ],
+                "text": "GAME VÀ TÙ ĐÓ",
+                "confidence": 0.5052920027483859
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    4.0,
+                    88.0
+                  ],
+                  [
+                    118.0,
+                    88.0
+                  ],
+                  [
+                    118.0,
+                    112.0
+                  ],
+                  [
+                    4.0,
+                    112.0
+                  ]
+                ],
+                "text": "MỐl QUAN HỆ CỦA",
+                "confidence": 0.9535179891404626
+              },
+              {
+                "id": 5,
+                "bbox": [
+                  [
+                    12.0,
+                    108.0
+                  ],
+                  [
+                    110.0,
+                    108.0
+                  ],
+                  [
+                    110.0,
+                    132.0
+                  ],
+                  [
+                    12.0,
+                    132.0
+                  ]
+                ],
+                "text": "CHÚNG TôI BẮT",
+                "confidence": 0.5183719462456775
+              },
+              {
+                "id": 6,
+                "bbox": [
+                  [
+                    40.0,
+                    130.0
+                  ],
+                  [
+                    76.0,
+                    130.0
+                  ],
+                  [
+                    76.0,
+                    154.0
+                  ],
+                  [
+                    40.0,
+                    154.0
+                  ]
+                ],
+                "text": "ĐẤU.",
+                "confidence": 0.3734254240989685
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.26758805745254033,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.01098901098901099
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 4,
+          "bbox": [
+            366.0,
+            924.0,
+            428.0,
+            985.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            365,
+            923,
+            429,
+            986
+          ],
+          "crop_dimensions": [
+            64,
+            63
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "Ha #êp #ên cút ~al",
+            "confidence": 0.09109958071988083,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    4.0,
+                    0.0
+                  ],
+                  [
+                    54.0,
+                    0.0
+                  ],
+                  [
+                    54.0,
+                    24.0
+                  ],
+                  [
+                    4.0,
+                    24.0
+                  ]
+                ],
+                "text": "Ha #êp",
+                "confidence": 0.17196261772738405
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    3.0,
+                    23.0
+                  ],
+                  [
+                    63.0,
+                    23.0
+                  ],
+                  [
+                    63.0,
+                    43.0
+                  ],
+                  [
+                    3.0,
+                    43.0
+                  ]
+                ],
+                "text": "#ên cút",
+                "confidence": 0.36093722591006994
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    17.0,
+                    43.0
+                  ],
+                  [
+                    43.0,
+                    43.0
+                  ],
+                  [
+                    43.0,
+                    63.0
+                  ],
+                  [
+                    17.0,
+                    63.0
+                  ]
+                ],
+                "text": "~al",
+                "confidence": 0.09109958071988083
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.09109958071988083,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.16666666666666666
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 5,
+          "bbox": [
+            639.0,
+            412.0,
+            701.0,
+            457.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            638,
+            411,
+            702,
+            458
+          ],
+          "crop_dimensions": [
+            64,
+            47
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "Mìnb là Rin",
+            "confidence": 0.7781219482421875,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    12.0,
+                    4.0
+                  ],
+                  [
+                    59.0,
+                    4.0
+                  ],
+                  [
+                    59.0,
+                    25.0
+                  ],
+                  [
+                    12.0,
+                    25.0
+                  ]
+                ],
+                "text": "Mìnb",
+                "confidence": 0.7781219482421875
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    1.0,
+                    27.0
+                  ],
+                  [
+                    63.0,
+                    27.0
+                  ],
+                  [
+                    63.0,
+                    47.0
+                  ],
+                  [
+                    1.0,
+                    47.0
+                  ]
+                ],
+                "text": "là Rin",
+                "confidence": 0.8924842392054112
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.7781219482421875,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 6,
+          "bbox": [
+            642.0,
+            702.0,
+            788.0,
+            840.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            639,
+            699,
+            791,
+            843
+          ],
+          "crop_dimensions": [
+            152,
+            144
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+            "confidence": 0.3190965089588873,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    12.0,
+                    4.0
+                  ],
+                  [
+                    138.0,
+                    4.0
+                  ],
+                  [
+                    138.0,
+                    32.0
+                  ],
+                  [
+                    12.0,
+                    32.0
+                  ]
+                ],
+                "text": "RIN ĐUBC GHÉP",
+                "confidence": 0.49829438119244435
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    4.0,
+                    30.0
+                  ],
+                  [
+                    146.0,
+                    30.0
+                  ],
+                  [
+                    146.0,
+                    60.0
+                  ],
+                  [
+                    4.0,
+                    60.0
+                  ]
+                ],
+                "text": "THÀNH CặP NGẨU",
+                "confidence": 0.7918542687444753
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    18.0,
+                    58.0
+                  ],
+                  [
+                    132.0,
+                    58.0
+                  ],
+                  [
+                    132.0,
+                    86.0
+                  ],
+                  [
+                    18.0,
+                    86.0
+                  ]
+                ],
+                "text": "NHIÊN VÓI Tôl",
+                "confidence": 0.3190965089588873
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    4.0,
+                    86.0
+                  ],
+                  [
+                    146.0,
+                    86.0
+                  ],
+                  [
+                    146.0,
+                    116.0
+                  ],
+                  [
+                    4.0,
+                    116.0
+                  ]
+                ],
+                "text": "TRONG MỘT TRẬN",
+                "confidence": 0.9595990380320593
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    8.0,
+                    112.0
+                  ],
+                  [
+                    142.0,
+                    112.0
+                  ],
+                  [
+                    142.0,
+                    140.0
+                  ],
+                  [
+                    8.0,
+                    140.0
+                  ]
+                ],
+                "text": "ẤU Ỏ DUNGEON",
+                "confidence": 0.567608745880037
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.3190965089588873,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 7,
+          "bbox": [
+            122.0,
+            765.0,
+            233.0,
+            903.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            119,
+            762,
+            236,
+            906
+          ],
+          "crop_dimensions": [
+            117,
+            144
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+            "confidence": 0.5166323205283971,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    9.0,
+                    3.0
+                  ],
+                  [
+                    109.0,
+                    3.0
+                  ],
+                  [
+                    109.0,
+                    23.0
+                  ],
+                  [
+                    9.0,
+                    23.0
+                  ]
+                ],
+                "text": "THÔNG QUA VIỆC",
+                "confidence": 0.5270850271805744
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    3.0,
+                    23.0
+                  ],
+                  [
+                    113.0,
+                    23.0
+                  ],
+                  [
+                    113.0,
+                    43.0
+                  ],
+                  [
+                    3.0,
+                    43.0
+                  ]
+                ],
+                "text": "GẶp NHAU THUỜNG",
+                "confidence": 0.6362106776873736
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    2.0,
+                    40.0
+                  ],
+                  [
+                    114.0,
+                    40.0
+                  ],
+                  [
+                    114.0,
+                    64.0
+                  ],
+                  [
+                    2.0,
+                    64.0
+                  ]
+                ],
+                "text": "XUYÊN THÌ SỰ GẮN",
+                "confidence": 0.5399902958876016
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    11.0,
+                    61.0
+                  ],
+                  [
+                    105.0,
+                    61.0
+                  ],
+                  [
+                    105.0,
+                    81.0
+                  ],
+                  [
+                    11.0,
+                    81.0
+                  ]
+                ],
+                "text": "KẾT CỦA CHÚNG",
+                "confidence": 0.9235952725839157
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    7.0,
+                    81.0
+                  ],
+                  [
+                    109.0,
+                    81.0
+                  ],
+                  [
+                    109.0,
+                    101.0
+                  ],
+                  [
+                    7.0,
+                    101.0
+                  ]
+                ],
+                "text": "Tôl ĐÃ TĂNG LÊN",
+                "confidence": 0.5166323205283971
+              },
+              {
+                "id": 5,
+                "bbox": [
+                  [
+                    7.0,
+                    101.0
+                  ],
+                  [
+                    109.0,
+                    101.0
+                  ],
+                  [
+                    109.0,
+                    121.0
+                  ],
+                  [
+                    7.0,
+                    121.0
+                  ]
+                ],
+                "text": "TUNG CHÚT, TÙNG",
+                "confidence": 0.5927439591605538
+              },
+              {
+                "id": 6,
+                "bbox": [
+                  [
+                    27.0,
+                    121.0
+                  ],
+                  [
+                    89.0,
+                    121.0
+                  ],
+                  [
+                    89.0,
+                    141.0
+                  ],
+                  [
+                    27.0,
+                    141.0
+                  ]
+                ],
+                "text": "CHÚT MỘT",
+                "confidence": 0.9109614372751577
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.5166323205283971,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.00980392156862745
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        }
+      ],
+      "reading_order": [
+        1,
+        5,
+        2,
+        6,
+        3,
+        7,
+        4
+      ],
+      "reading_order_detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          5,
+          2,
+          6,
+          3,
+          7,
+          4
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        }
+      },
+      "stats": {
+        "region_count": 7,
+        "ACCEPT_CANDIDATE": 7,
+        "HARD": 0,
+        "AMBIGUOUS": 0,
+        "crop_seconds": 0.0002906659501604736,
+        "ocr_inference_seconds": 0.40100824896944687,
+        "reading_order_seconds": 9.137502638623118e-05,
+        "wall_clock_seconds": 0.403879290970508,
+        "vlm_calls": 0,
+        "ollama_calls": 0
+      }
+    },
+    {
+      "reader_version": "v2",
+      "implementation_revision": "reader-v2.fast-pass.v1",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "fingerprint": "378dfbd933713de7f1e117fe1177d3d9493acd871b08d2c652e439bf2e8e6a16",
+      "regions": [
+        {
+          "region_id": 1,
+          "bbox": [
+            674.0,
+            120.0,
+            774.0,
+            174.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            672,
+            118,
+            776,
+            176
+          ],
+          "crop_dimensions": [
+            104,
+            58
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "NĂM THỨ NHẤT",
+            "confidence": 0.7193979521342135,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    28.0,
+                    2.0
+                  ],
+                  [
+                    78.0,
+                    2.0
+                  ],
+                  [
+                    78.0,
+                    30.0
+                  ],
+                  [
+                    28.0,
+                    30.0
+                  ]
+                ],
+                "text": "NĂM",
+                "confidence": 0.7193979521342135
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    24.0
+                  ],
+                  [
+                    102.0,
+                    24.0
+                  ],
+                  [
+                    102.0,
+                    56.0
+                  ],
+                  [
+                    2.0,
+                    56.0
+                  ]
+                ],
+                "text": "THỨ NHẤT",
+                "confidence": 0.8899613502808743
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.7193979521342135,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 2,
+          "bbox": [
+            686.0,
+            400.0,
+            764.0,
+            452.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            684,
+            398,
+            766,
+            454
+          ],
+          "crop_dimensions": [
+            82,
+            56
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "NĂM THỨ HAI",
+            "confidence": 0.8554567718704842,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    16.0,
+                    2.0
+                  ],
+                  [
+                    64.0,
+                    2.0
+                  ],
+                  [
+                    64.0,
+                    28.0
+                  ],
+                  [
+                    16.0,
+                    28.0
+                  ]
+                ],
+                "text": "NĂM",
+                "confidence": 0.9929934873109296
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    0.0,
+                    28.0
+                  ],
+                  [
+                    80.0,
+                    28.0
+                  ],
+                  [
+                    80.0,
+                    56.0
+                  ],
+                  [
+                    0.0,
+                    56.0
+                  ]
+                ],
+                "text": "THỨ HAI",
+                "confidence": 0.8554567718704842
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.8554567718704842,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 3,
+          "bbox": [
+            122.0,
+            474.0,
+            230.0,
+            576.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            120,
+            472,
+            232,
+            578
+          ],
+          "crop_dimensions": [
+            112,
+            106
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "Hôm nay cậu muốn đi chơi Gi khônG?",
+            "confidence": 0.2420134907634832,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    4.0,
+                    2.0
+                  ],
+                  [
+                    108.0,
+                    2.0
+                  ],
+                  [
+                    108.0,
+                    30.0
+                  ],
+                  [
+                    4.0,
+                    30.0
+                  ]
+                ],
+                "text": "Hôm nay",
+                "confidence": 0.8466578523562925
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    24.0
+                  ],
+                  [
+                    108.0,
+                    24.0
+                  ],
+                  [
+                    108.0,
+                    54.0
+                  ],
+                  [
+                    2.0,
+                    54.0
+                  ]
+                ],
+                "text": "cậu muốn",
+                "confidence": 0.2420134907634832
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    2.0,
+                    54.0
+                  ],
+                  [
+                    82.0,
+                    54.0
+                  ],
+                  [
+                    82.0,
+                    78.0
+                  ],
+                  [
+                    2.0,
+                    78.0
+                  ]
+                ],
+                "text": "đi chơi",
+                "confidence": 0.8208329577601342
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    87.0,
+                    61.0
+                  ],
+                  [
+                    109.0,
+                    61.0
+                  ],
+                  [
+                    109.0,
+                    77.0
+                  ],
+                  [
+                    87.0,
+                    77.0
+                  ]
+                ],
+                "text": "Gi",
+                "confidence": 0.6999206284323849
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    12.0,
+                    78.0
+                  ],
+                  [
+                    98.0,
+                    78.0
+                  ],
+                  [
+                    98.0,
+                    104.0
+                  ],
+                  [
+                    12.0,
+                    104.0
+                  ]
+                ],
+                "text": "khônG?",
+                "confidence": 0.43625666010157754
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.2420134907634832,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.029411764705882353
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 4,
+          "bbox": [
+            684.0,
+            734.0,
+            758.0,
+            788.0
+          ],
+          "region_type": "narration",
+          "crop_bbox": [
+            683,
+            733,
+            759,
+            789
+          ],
+          "crop_dimensions": [
+            76,
+            56
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "NĂM THỨ BA",
+            "confidence": 0.864324722652712,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    14.0,
+                    0.0
+                  ],
+                  [
+                    64.0,
+                    0.0
+                  ],
+                  [
+                    64.0,
+                    30.0
+                  ],
+                  [
+                    14.0,
+                    30.0
+                  ]
+                ],
+                "text": "NĂM",
+                "confidence": 0.864324722652712
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    26.0
+                  ],
+                  [
+                    74.0,
+                    26.0
+                  ],
+                  [
+                    74.0,
+                    56.0
+                  ],
+                  [
+                    2.0,
+                    56.0
+                  ]
+                ],
+                "text": "THỨ BA",
+                "confidence": 0.9597326531101104
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.864324722652712,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 5,
+          "bbox": [
+            659.0,
+            892.0,
+            755.0,
+            1003.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            657,
+            890,
+            757,
+            1005
+          ],
+          "crop_dimensions": [
+            100,
+            115
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "ĐI CÂU CÁ NÀO\"",
+            "confidence": 0.17040027838310917,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    34.0,
+                    2.0
+                  ],
+                  [
+                    66.0,
+                    2.0
+                  ],
+                  [
+                    66.0,
+                    30.0
+                  ],
+                  [
+                    34.0,
+                    30.0
+                  ]
+                ],
+                "text": "ĐI",
+                "confidence": 0.17040027838310917
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    1.0,
+                    31.0
+                  ],
+                  [
+                    97.0,
+                    31.0
+                  ],
+                  [
+                    97.0,
+                    73.0
+                  ],
+                  [
+                    1.0,
+                    73.0
+                  ]
+                ],
+                "text": "CÂU CÁ",
+                "confidence": 0.9868675746007447
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    13.0,
+                    75.0
+                  ],
+                  [
+                    89.0,
+                    75.0
+                  ],
+                  [
+                    89.0,
+                    113.0
+                  ],
+                  [
+                    13.0,
+                    113.0
+                  ]
+                ],
+                "text": "NÀO\"",
+                "confidence": 0.8127447962760925
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.17040027838310917,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.07142857142857142
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 7,
+          "bbox": [
+            140.0,
+            157.0,
+            246.0,
+            296.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            137,
+            154,
+            249,
+            299
+          ],
+          "crop_dimensions": [
+            112,
+            145
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+            "confidence": 0.36898237077220036,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    19.0,
+                    3.0
+                  ],
+                  [
+                    95.0,
+                    3.0
+                  ],
+                  [
+                    95.0,
+                    23.0
+                  ],
+                  [
+                    19.0,
+                    23.0
+                  ]
+                ],
+                "text": "HÔM NAY",
+                "confidence": 0.9804500688937913
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    5.0,
+                    27.0
+                  ],
+                  [
+                    109.0,
+                    27.0
+                  ],
+                  [
+                    109.0,
+                    47.0
+                  ],
+                  [
+                    5.0,
+                    47.0
+                  ]
+                ],
+                "text": "CHÚNG TA SỀ",
+                "confidence": 0.36898237077220036
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    11.0,
+                    51.0
+                  ],
+                  [
+                    105.0,
+                    51.0
+                  ],
+                  [
+                    105.0,
+                    71.0
+                  ],
+                  [
+                    11.0,
+                    71.0
+                  ]
+                ],
+                "text": "CÙNG NHAV",
+                "confidence": 0.5458368783367973
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    12.0,
+                    72.0
+                  ],
+                  [
+                    102.0,
+                    72.0
+                  ],
+                  [
+                    102.0,
+                    96.0
+                  ],
+                  [
+                    12.0,
+                    96.0
+                  ]
+                ],
+                "text": "THÁM HIỂM",
+                "confidence": 0.8656835668219534
+              },
+              {
+                "id": 4,
+                "bbox": [
+                  [
+                    17.0,
+                    99.0
+                  ],
+                  [
+                    97.0,
+                    99.0
+                  ],
+                  [
+                    97.0,
+                    117.0
+                  ],
+                  [
+                    17.0,
+                    117.0
+                  ]
+                ],
+                "text": "DLNGEON",
+                "confidence": 0.7796731530817803
+              },
+              {
+                "id": 5,
+                "bbox": [
+                  [
+                    34.0,
+                    118.0
+                  ],
+                  [
+                    80.0,
+                    118.0
+                  ],
+                  [
+                    80.0,
+                    142.0
+                  ],
+                  [
+                    34.0,
+                    142.0
+                  ]
+                ],
+                "text": "CHú?",
+                "confidence": 0.7007498145103455
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.36898237077220036,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.019230769230769232
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 8,
+          "bbox": [
+            647.0,
+            247.0,
+            707.0,
+            293.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            646,
+            246,
+            708,
+            294
+          ],
+          "crop_dimensions": [
+            62,
+            48
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "KAZL SAN",
+            "confidence": 0.7208161354064941,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    3.0,
+                    1.0
+                  ],
+                  [
+                    59.0,
+                    1.0
+                  ],
+                  [
+                    59.0,
+                    21.0
+                  ],
+                  [
+                    3.0,
+                    21.0
+                  ]
+                ],
+                "text": "KAZL",
+                "confidence": 0.7208161354064941
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    11.0,
+                    27.0
+                  ],
+                  [
+                    53.0,
+                    27.0
+                  ],
+                  [
+                    53.0,
+                    47.0
+                  ],
+                  [
+                    11.0,
+                    47.0
+                  ]
+                ],
+                "text": "SAN",
+                "confidence": 0.997314292631194
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.7208161354064941,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 9,
+          "bbox": [
+            668.0,
+            550.0,
+            738.0,
+            578.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            667,
+            549,
+            739,
+            579
+          ],
+          "crop_dimensions": [
+            72,
+            30
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "Kazul",
+            "confidence": 0.8750834156269156,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    70.0,
+                    2.0
+                  ],
+                  [
+                    70.0,
+                    28.0
+                  ],
+                  [
+                    0.0,
+                    28.0
+                  ]
+                ],
+                "text": "Kazul",
+                "confidence": 0.8750834156269156
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.8750834156269156,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.0
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 10,
+          "bbox": [
+            195.0,
+            766.0,
+            272.0,
+            857.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            193,
+            764,
+            274,
+            859
+          ],
+          "crop_dimensions": [
+            81,
+            95
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+            "confidence": 0.5633623818419353,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    5.0,
+                    5.0
+                  ],
+                  [
+                    77.0,
+                    5.0
+                  ],
+                  [
+                    77.0,
+                    25.0
+                  ],
+                  [
+                    5.0,
+                    25.0
+                  ]
+                ],
+                "text": "HÔM NAY",
+                "confidence": 0.9948181680583803
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    3.0,
+                    27.0
+                  ],
+                  [
+                    79.0,
+                    27.0
+                  ],
+                  [
+                    79.0,
+                    47.0
+                  ],
+                  [
+                    3.0,
+                    47.0
+                  ]
+                ],
+                "text": "CHÚNG TA",
+                "confidence": 0.9146088014864558
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    15.0,
+                    53.0
+                  ],
+                  [
+                    71.0,
+                    53.0
+                  ],
+                  [
+                    71.0,
+                    71.0
+                  ],
+                  [
+                    15.0,
+                    71.0
+                  ]
+                ],
+                "text": "PHI Đ1",
+                "confidence": 0.5633623818419353
+              },
+              {
+                "id": 3,
+                "bbox": [
+                  [
+                    9.0,
+                    73.0
+                  ],
+                  [
+                    65.0,
+                    73.0
+                  ],
+                  [
+                    65.0,
+                    93.0
+                  ],
+                  [
+                    9.0,
+                    93.0
+                  ]
+                ],
+                "text": "ĐÀO M-",
+                "confidence": 0.8896632417374936
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.5633623818419353,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.03333333333333333
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        },
+        {
+          "region_id": 11,
+          "bbox": [
+            117.0,
+            930.0,
+            239.0,
+            1071.0
+          ],
+          "region_type": "dialogue",
+          "crop_bbox": [
+            114,
+            927,
+            242,
+            1074
+          ],
+          "crop_dimensions": [
+            128,
+            147
+          ],
+          "ocr": {
+            "engine": "easyocr",
+            "version": "1.7.2",
+            "config": {
+              "languages": [
+                "vi",
+                "en"
+              ],
+              "gpu": false,
+              "detail": 1
+            },
+            "text": "ĐI CÂU CÁ THÔI NÀOW!",
+            "confidence": 0.16576065788862426,
+            "lines": [
+              {
+                "id": 0,
+                "bbox": [
+                  [
+                    12.0,
+                    4.0
+                  ],
+                  [
+                    118.0,
+                    4.0
+                  ],
+                  [
+                    118.0,
+                    52.0
+                  ],
+                  [
+                    12.0,
+                    52.0
+                  ]
+                ],
+                "text": "ĐI CÂU",
+                "confidence": 0.9211108421208378
+              },
+              {
+                "id": 1,
+                "bbox": [
+                  [
+                    2.0,
+                    50.0
+                  ],
+                  [
+                    126.0,
+                    50.0
+                  ],
+                  [
+                    126.0,
+                    98.0
+                  ],
+                  [
+                    2.0,
+                    98.0
+                  ]
+                ],
+                "text": "CÁ THÔI",
+                "confidence": 0.858654349582237
+              },
+              {
+                "id": 2,
+                "bbox": [
+                  [
+                    17.0,
+                    99.0
+                  ],
+                  [
+                    113.0,
+                    99.0
+                  ],
+                  [
+                    113.0,
+                    143.0
+                  ],
+                  [
+                    17.0,
+                    143.0
+                  ]
+                ],
+                "text": "NÀOW!",
+                "confidence": 0.16576065788862426
+              }
+            ]
+          },
+          "quality_signals": {
+            "ocr_confidence": 0.16576065788862426,
+            "confidence_is_truth": false,
+            "empty_output": false,
+            "suspiciously_short": false,
+            "unusual_symbol_ratio": 0.05
+          },
+          "ambiguity_reasons": [],
+          "routing_state": "ACCEPT_CANDIDATE"
+        }
+      ],
+      "reading_order": [
+        1,
+        7,
+        8,
+        2,
+        3,
+        9,
+        4,
+        10,
+        5,
+        11
+      ],
+      "reading_order_detail": {
+        "policy": "MANGA_RTL",
+        "panel_source": "page_fallback_no_panel_hierarchy",
+        "panel_order": [
+          "PAGE"
+        ],
+        "reading_order": [
+          1,
+          7,
+          8,
+          2,
+          3,
+          9,
+          4,
+          10,
+          5,
+          11
+        ],
+        "region_ambiguity": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "7": [],
+          "8": [],
+          "9": [],
+          "10": [],
+          "11": []
+        }
+      },
+      "stats": {
+        "region_count": 10,
+        "ACCEPT_CANDIDATE": 10,
+        "HARD": 0,
+        "AMBIGUOUS": 0,
+        "crop_seconds": 0.00036395888309925795,
+        "ocr_inference_seconds": 0.31426858296617866,
+        "reading_order_seconds": 0.00014933297643437982,
+        "wall_clock_seconds": 0.31705650000367314,
+        "vlm_calls": 0,
+        "ollama_calls": 0
+      }
+    }
+  ],
+  "results": [
+    {
+      "sample_id": "future-p1_b1",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 1,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.37108381990559347,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.03571428571428571
+      },
+      "crop_bbox": [
+        126,
+        425,
+        248,
+        533
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+        "confidence": 0.37108381990559347,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                5.0,
+                1.0
+              ],
+              [
+                115.0,
+                1.0
+              ],
+              [
+                115.0,
+                41.0
+              ],
+              [
+                5.0,
+                41.0
+              ]
+            ],
+            "text": "HÃY CÙNg",
+            "confidence": 0.5053884406328951
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                40.0
+              ],
+              [
+                120.0,
+                40.0
+              ],
+              [
+                120.0,
+                72.0
+              ],
+              [
+                2.0,
+                72.0
+              ]
+            ],
+            "text": "NHAU HANH",
+            "confidence": 0.37108381990559347
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                3.0,
+                69.0
+              ],
+              [
+                119.0,
+                69.0
+              ],
+              [
+                119.0,
+                107.0
+              ],
+              [
+                3.0,
+                107.0
+              ]
+            ],
+            "text": "PHÚC NHÉ!",
+            "confidence": 0.8049224766902285
+          }
+        ]
+      },
+      "reference_raw": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ",
+      "hypothesis_raw": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "reference_normalized": "hãy cùng nhau hạnh phúc nhé",
+      "hypothesis_normalized": "hãy cùng nhau hanh phúc nhé!",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.1111111111111111,
+      "normalized_cer": 0.07407407407407407,
+      "wer": 0.3333333333333333,
+      "edit_operations": {
+        "insertions": 1,
+        "deletions": 0,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.037037037037037035,
+        "deletions": 0.0,
+        "substitutions": 0.07407407407407407
+      },
+      "missing_text": false,
+      "confidence": 0.37108381990559347,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "INSERTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.07407407407407407,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 2,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.49371222295182904,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.037037037037037035
+      },
+      "crop_bbox": [
+        393,
+        801,
+        503,
+        975
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+        "confidence": 0.49371222295182904,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                6.0,
+                4.0
+              ],
+              [
+                106.0,
+                4.0
+              ],
+              [
+                106.0,
+                34.0
+              ],
+              [
+                6.0,
+                34.0
+              ]
+            ],
+            "text": "cô GÁl TÓC",
+            "confidence": 0.593699259247074
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                14.0,
+                32.0
+              ],
+              [
+                98.0,
+                32.0
+              ],
+              [
+                98.0,
+                60.0
+              ],
+              [
+                14.0,
+                60.0
+              ]
+            ],
+            "text": "VÀNG VỔI",
+            "confidence": 0.49371222295182904
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                16.0,
+                60.0
+              ],
+              [
+                94.0,
+                60.0
+              ],
+              [
+                94.0,
+                88.0
+              ],
+              [
+                16.0,
+                88.0
+              ]
+            ],
+            "text": "DÁNG VẺ",
+            "confidence": 0.991172740511334
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                4.0,
+                88.0
+              ],
+              [
+                106.0,
+                88.0
+              ],
+              [
+                106.0,
+                116.0
+              ],
+              [
+                4.0,
+                116.0
+              ]
+            ],
+            "text": "TĂNG ĐỘNG",
+            "confidence": 0.9680536803465609
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                6.0,
+                116.0
+              ],
+              [
+                104.0,
+                116.0
+              ],
+              [
+                104.0,
+                146.0
+              ],
+              [
+                6.0,
+                146.0
+              ]
+            ],
+            "text": "NÀY TÊN LÀ",
+            "confidence": 0.9660550007410595
+          },
+          {
+            "id": 5,
+            "bbox": [
+              [
+                31.0,
+                149.0
+              ],
+              [
+                79.0,
+                149.0
+              ],
+              [
+                79.0,
+                169.0
+              ],
+              [
+                31.0,
+                169.0
+              ]
+            ],
+            "text": "\"RIN\"",
+            "confidence": 0.9997743805481243
+          }
+        ]
+      },
+      "reference_raw": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ RIN\n",
+      "hypothesis_raw": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "reference_normalized": "cô gái tóc vàng với dáng vẻ tăng động này tên là rin",
+      "hypothesis_normalized": "cô gál tóc vàng vổi dáng vẻ tăng động này tên là \"rin\"",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.11320754716981132,
+      "normalized_cer": 0.07692307692307693,
+      "wer": 0.23076923076923078,
+      "edit_operations": {
+        "insertions": 1,
+        "deletions": 0,
+        "substitutions": 5
+      },
+      "operation_rates": {
+        "insertions": 0.018867924528301886,
+        "deletions": 0.0,
+        "substitutions": 0.09433962264150944
+      },
+      "missing_text": false,
+      "confidence": 0.49371222295182904,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "INSERTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.07692307692307693,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 3,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "HARD",
+      "quality_signals": {
+        "ocr_confidence": 0.7668560032250632,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": true,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        751,
+        811,
+        787,
+        837
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "AH",
+        "confidence": 0.7668560032250632,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                0.0,
+                2.0
+              ],
+              [
+                36.0,
+                2.0
+              ],
+              [
+                36.0,
+                26.0
+              ],
+              [
+                0.0,
+                26.0
+              ]
+            ],
+            "text": "AH",
+            "confidence": 0.7668560032250632
+          }
+        ]
+      },
+      "reference_raw": "AH",
+      "hypothesis_raw": "AH",
+      "reference_normalized": "ah",
+      "hypothesis_normalized": "ah",
+      "raw_exact_match": true,
+      "normalized_exact_match": true,
+      "raw_cer": 0.0,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.7668560032250632,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [],
+      "baseline_11_7_normalized_cer": 0.0,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 1,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.2741900218601268,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.018518518518518517
+      },
+      "crop_bbox": [
+        665,
+        170,
+        768,
+        298
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+        "confidence": 0.2741900218601268,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                6.0,
+                2.0
+              ],
+              [
+                98.0,
+                2.0
+              ],
+              [
+                98.0,
+                30.0
+              ],
+              [
+                6.0,
+                30.0
+              ]
+            ],
+            "text": "LẨN GẶP Gỡ",
+            "confidence": 0.3609375408471065
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                4.0,
+                28.0
+              ],
+              [
+                100.0,
+                28.0
+              ],
+              [
+                100.0,
+                54.0
+              ],
+              [
+                4.0,
+                54.0
+              ]
+            ],
+            "text": "ĐÂU TIÊN CỦA",
+            "confidence": 0.5268367401426087
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                2.0,
+                50.0
+              ],
+              [
+                102.0,
+                50.0
+              ],
+              [
+                102.0,
+                78.0
+              ],
+              [
+                2.0,
+                78.0
+              ]
+            ],
+            "text": "CHÚNG TÔ1 LÀ",
+            "confidence": 0.6880089566094206
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                12.0,
+                76.0
+              ],
+              [
+                94.0,
+                76.0
+              ],
+              [
+                94.0,
+                100.0
+              ],
+              [
+                12.0,
+                100.0
+              ]
+            ],
+            "text": "VÀo 4 NĂM",
+            "confidence": 0.7380436891999895
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                18.0,
+                96.0
+              ],
+              [
+                76.0,
+                96.0
+              ],
+              [
+                76.0,
+                126.0
+              ],
+              [
+                18.0,
+                126.0
+              ]
+            ],
+            "text": "TRUớc _",
+            "confidence": 0.2741900218601268
+          }
+        ]
+      },
+      "reference_raw": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC",
+      "hypothesis_raw": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+      "reference_normalized": "lần gặp gỡ đầu tiên của chúng tôi là vào 4 năm trước",
+      "hypothesis_normalized": "lẩn gặp gỡ đâu tiên của chúng tô1 là vào 4 năm truớc _",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.19230769230769232,
+      "normalized_cer": 0.11538461538461539,
+      "wer": 0.38461538461538464,
+      "edit_operations": {
+        "insertions": 2,
+        "deletions": 0,
+        "substitutions": 8
+      },
+      "operation_rates": {
+        "insertions": 0.038461538461538464,
+        "deletions": 0.0,
+        "substitutions": 0.15384615384615385
+      },
+      "missing_text": false,
+      "confidence": 0.2741900218601268,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "INSERTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.11538461538461539,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 2,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.2695610028509003,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.022727272727272728
+      },
+      "crop_bbox": [
+        136,
+        387,
+        248,
+        502
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+        "confidence": 0.2695610028509003,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                23.0,
+                3.0
+              ],
+              [
+                91.0,
+                3.0
+              ],
+              [
+                91.0,
+                23.0
+              ],
+              [
+                23.0,
+                23.0
+              ]
+            ],
+            "text": "Mìnb là",
+            "confidence": 0.7295252075452917
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                22.0
+              ],
+              [
+                110.0,
+                22.0
+              ],
+              [
+                110.0,
+                46.0
+              ],
+              [
+                2.0,
+                46.0
+              ]
+            ],
+            "text": "nGười chơi",
+            "confidence": 0.6524946735046299
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                15.0,
+                47.0
+              ],
+              [
+                97.0,
+                47.0
+              ],
+              [
+                97.0,
+                67.0
+              ],
+              [
+                15.0,
+                67.0
+              ]
+            ],
+            "text": "mới nên",
+            "confidence": 0.7874179630195061
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                11.0,
+                71.0
+              ],
+              [
+                105.0,
+                71.0
+              ],
+              [
+                105.0,
+                91.0
+              ],
+              [
+                11.0,
+                91.0
+              ]
+            ],
+            "text": "mone cậu",
+            "confidence": 0.528056552494348
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                16.0,
+                88.0
+              ],
+              [
+                100.0,
+                88.0
+              ],
+              [
+                100.0,
+                114.0
+              ],
+              [
+                16.0,
+                114.0
+              ]
+            ],
+            "text": "Giúp đỡ!",
+            "confidence": 0.2695610028509003
+          }
+        ]
+      },
+      "reference_raw": "MÌNH LẦ NGƯỜI CHƠI MỚI NÊN MONG CẬU GIÚP ĐỠ",
+      "hypothesis_raw": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+      "reference_normalized": "mình lầ người chơi mới nên mong cậu giúp đỡ",
+      "hypothesis_normalized": "mìnb là người chơi mới nên mone cậu giúp đỡ!",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.7441860465116279,
+      "normalized_cer": 0.09302325581395349,
+      "wer": 0.4,
+      "edit_operations": {
+        "insertions": 1,
+        "deletions": 0,
+        "substitutions": 31
+      },
+      "operation_rates": {
+        "insertions": 0.023255813953488372,
+        "deletions": 0.0,
+        "substitutions": 0.7209302325581395
+      },
+      "missing_text": false,
+      "confidence": 0.2695610028509003,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "INSERTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.09302325581395349,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 3,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.26758805745254033,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.01098901098901099
+      },
+      "crop_bbox": [
+        285,
+        669,
+        405,
+        825
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+        "confidence": 0.26758805745254033,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                14.0,
+                2.0
+              ],
+              [
+                108.0,
+                2.0
+              ],
+              [
+                108.0,
+                26.0
+              ],
+              [
+                14.0,
+                26.0
+              ]
+            ],
+            "text": "VÀ Tôl ĐÃ CHỈ",
+            "confidence": 0.26758805745254033
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                7.0,
+                27.0
+              ],
+              [
+                115.0,
+                27.0
+              ],
+              [
+                115.0,
+                47.0
+              ],
+              [
+                7.0,
+                47.0
+              ]
+            ],
+            "text": "BẢO CHo newbie",
+            "confidence": 0.27366364636447266
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                12.0,
+                46.0
+              ],
+              [
+                110.0,
+                46.0
+              ],
+              [
+                110.0,
+                70.0
+              ],
+              [
+                12.0,
+                70.0
+              ]
+            ],
+            "text": "RIN CÁCH CHỔl",
+            "confidence": 0.718040578417263
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                10.0,
+                66.0
+              ],
+              [
+                112.0,
+                66.0
+              ],
+              [
+                112.0,
+                90.0
+              ],
+              [
+                10.0,
+                90.0
+              ]
+            ],
+            "text": "GAME VÀ TÙ ĐÓ",
+            "confidence": 0.5052920027483859
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                4.0,
+                88.0
+              ],
+              [
+                118.0,
+                88.0
+              ],
+              [
+                118.0,
+                112.0
+              ],
+              [
+                4.0,
+                112.0
+              ]
+            ],
+            "text": "MỐl QUAN HỆ CỦA",
+            "confidence": 0.9535179891404626
+          },
+          {
+            "id": 5,
+            "bbox": [
+              [
+                12.0,
+                108.0
+              ],
+              [
+                110.0,
+                108.0
+              ],
+              [
+                110.0,
+                132.0
+              ],
+              [
+                12.0,
+                132.0
+              ]
+            ],
+            "text": "CHÚNG TôI BẮT",
+            "confidence": 0.5183719462456775
+          },
+          {
+            "id": 6,
+            "bbox": [
+              [
+                40.0,
+                130.0
+              ],
+              [
+                76.0,
+                130.0
+              ],
+              [
+                76.0,
+                154.0
+              ],
+              [
+                40.0,
+                154.0
+              ]
+            ],
+            "text": "ĐẤU.",
+            "confidence": 0.3734254240989685
+          }
+        ]
+      },
+      "reference_raw": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU...",
+      "hypothesis_raw": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+      "reference_normalized": "và tôi đã chỉ bảo cho newbie rin cách chơi game và từ đó mối quan hệ của chúng tôi bắt đầu...",
+      "hypothesis_normalized": "và tôl đã chỉ bảo cho newbie rin cách chổl game và tù đó mốl quan hệ của chúng tôi bắt đấu.",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.1827956989247312,
+      "normalized_cer": 0.08602150537634409,
+      "wer": 0.22727272727272727,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 2,
+        "substitutions": 15
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.021505376344086023,
+        "substitutions": 0.16129032258064516
+      },
+      "missing_text": false,
+      "confidence": 0.26758805745254033,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.08602150537634409,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 4,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.09109958071988083,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.16666666666666666
+      },
+      "crop_bbox": [
+        365,
+        923,
+        429,
+        986
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "Ha #êp #ên cút ~al",
+        "confidence": 0.09109958071988083,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                4.0,
+                0.0
+              ],
+              [
+                54.0,
+                0.0
+              ],
+              [
+                54.0,
+                24.0
+              ],
+              [
+                4.0,
+                24.0
+              ]
+            ],
+            "text": "Ha #êp",
+            "confidence": 0.17196261772738405
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                63.0,
+                23.0
+              ],
+              [
+                63.0,
+                43.0
+              ],
+              [
+                3.0,
+                43.0
+              ]
+            ],
+            "text": "#ên cút",
+            "confidence": 0.36093722591006994
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                17.0,
+                43.0
+              ],
+              [
+                43.0,
+                43.0
+              ],
+              [
+                43.0,
+                63.0
+              ],
+              [
+                17.0,
+                63.0
+              ]
+            ],
+            "text": "~al",
+            "confidence": 0.09109958071988083
+          }
+        ]
+      },
+      "reference_raw": "HẠ THẤP THÊM CHÚT NỮA!!",
+      "hypothesis_raw": "Ha #êp #ên cút ~al",
+      "reference_normalized": "hạ thấp thêm chút nữa!!",
+      "hypothesis_normalized": "ha #êp #ên cút ~al",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.782608695652174,
+      "normalized_cer": 0.5217391304347826,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 5,
+        "substitutions": 13
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.21739130434782608,
+        "substitutions": 0.5652173913043478
+      },
+      "missing_text": false,
+      "confidence": 0.09109958071988083,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.5217391304347826,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 5,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.7781219482421875,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        638,
+        411,
+        702,
+        458
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "Mìnb là Rin",
+        "confidence": 0.7781219482421875,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                12.0,
+                4.0
+              ],
+              [
+                59.0,
+                4.0
+              ],
+              [
+                59.0,
+                25.0
+              ],
+              [
+                12.0,
+                25.0
+              ]
+            ],
+            "text": "Mìnb",
+            "confidence": 0.7781219482421875
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                1.0,
+                27.0
+              ],
+              [
+                63.0,
+                27.0
+              ],
+              [
+                63.0,
+                47.0
+              ],
+              [
+                1.0,
+                47.0
+              ]
+            ],
+            "text": "là Rin",
+            "confidence": 0.8924842392054112
+          }
+        ]
+      },
+      "reference_raw": "MÌNH LÀ RIN",
+      "hypothesis_raw": "Mìnb là Rin",
+      "reference_normalized": "mình là rin",
+      "hypothesis_normalized": "mìnb là rin",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.6363636363636364,
+      "normalized_cer": 0.09090909090909091,
+      "wer": 0.3333333333333333,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 7
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.6363636363636364
+      },
+      "missing_text": false,
+      "confidence": 0.7781219482421875,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.09090909090909091,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 6,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.3190965089588873,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        639,
+        699,
+        791,
+        843
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+        "confidence": 0.3190965089588873,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                12.0,
+                4.0
+              ],
+              [
+                138.0,
+                4.0
+              ],
+              [
+                138.0,
+                32.0
+              ],
+              [
+                12.0,
+                32.0
+              ]
+            ],
+            "text": "RIN ĐUBC GHÉP",
+            "confidence": 0.49829438119244435
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                4.0,
+                30.0
+              ],
+              [
+                146.0,
+                30.0
+              ],
+              [
+                146.0,
+                60.0
+              ],
+              [
+                4.0,
+                60.0
+              ]
+            ],
+            "text": "THÀNH CặP NGẨU",
+            "confidence": 0.7918542687444753
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                18.0,
+                58.0
+              ],
+              [
+                132.0,
+                58.0
+              ],
+              [
+                132.0,
+                86.0
+              ],
+              [
+                18.0,
+                86.0
+              ]
+            ],
+            "text": "NHIÊN VÓI Tôl",
+            "confidence": 0.3190965089588873
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                4.0,
+                86.0
+              ],
+              [
+                146.0,
+                86.0
+              ],
+              [
+                146.0,
+                116.0
+              ],
+              [
+                4.0,
+                116.0
+              ]
+            ],
+            "text": "TRONG MỘT TRẬN",
+            "confidence": 0.9595990380320593
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                8.0,
+                112.0
+              ],
+              [
+                142.0,
+                112.0
+              ],
+              [
+                142.0,
+                140.0
+              ],
+              [
+                8.0,
+                140.0
+              ]
+            ],
+            "text": "ẤU Ỏ DUNGEON",
+            "confidence": 0.567608745880037
+          }
+        ]
+      },
+      "reference_raw": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "hypothesis_raw": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "reference_normalized": "rin được ghép thành cặp ngẫu nhiên với tôi trong một trận đấu ở dungeon",
+      "hypothesis_normalized": "rin đubc ghép thành cặp ngẩu nhiên vói tôl trong một trận ấu ỏ dungeon",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.1267605633802817,
+      "normalized_cer": 0.09859154929577464,
+      "wer": 0.4,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 1,
+        "substitutions": 8
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.014084507042253521,
+        "substitutions": 0.11267605633802817
+      },
+      "missing_text": false,
+      "confidence": 0.3190965089588873,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.09859154929577464,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 7,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.5166323205283971,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.00980392156862745
+      },
+      "crop_bbox": [
+        119,
+        762,
+        236,
+        906
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+        "confidence": 0.5166323205283971,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                9.0,
+                3.0
+              ],
+              [
+                109.0,
+                3.0
+              ],
+              [
+                109.0,
+                23.0
+              ],
+              [
+                9.0,
+                23.0
+              ]
+            ],
+            "text": "THÔNG QUA VIỆC",
+            "confidence": 0.5270850271805744
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                3.0,
+                23.0
+              ],
+              [
+                113.0,
+                23.0
+              ],
+              [
+                113.0,
+                43.0
+              ],
+              [
+                3.0,
+                43.0
+              ]
+            ],
+            "text": "GẶp NHAU THUỜNG",
+            "confidence": 0.6362106776873736
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                2.0,
+                40.0
+              ],
+              [
+                114.0,
+                40.0
+              ],
+              [
+                114.0,
+                64.0
+              ],
+              [
+                2.0,
+                64.0
+              ]
+            ],
+            "text": "XUYÊN THÌ SỰ GẮN",
+            "confidence": 0.5399902958876016
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                11.0,
+                61.0
+              ],
+              [
+                105.0,
+                61.0
+              ],
+              [
+                105.0,
+                81.0
+              ],
+              [
+                11.0,
+                81.0
+              ]
+            ],
+            "text": "KẾT CỦA CHÚNG",
+            "confidence": 0.9235952725839157
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                7.0,
+                81.0
+              ],
+              [
+                109.0,
+                81.0
+              ],
+              [
+                109.0,
+                101.0
+              ],
+              [
+                7.0,
+                101.0
+              ]
+            ],
+            "text": "Tôl ĐÃ TĂNG LÊN",
+            "confidence": 0.5166323205283971
+          },
+          {
+            "id": 5,
+            "bbox": [
+              [
+                7.0,
+                101.0
+              ],
+              [
+                109.0,
+                101.0
+              ],
+              [
+                109.0,
+                121.0
+              ],
+              [
+                7.0,
+                121.0
+              ]
+            ],
+            "text": "TUNG CHÚT, TÙNG",
+            "confidence": 0.5927439591605538
+          },
+          {
+            "id": 6,
+            "bbox": [
+              [
+                27.0,
+                121.0
+              ],
+              [
+                89.0,
+                121.0
+              ],
+              [
+                89.0,
+                141.0
+              ],
+              [
+                27.0,
+                141.0
+              ]
+            ],
+            "text": "CHÚT MỘT",
+            "confidence": 0.9109614372751577
+          }
+        ]
+      },
+      "reference_raw": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CHỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "hypothesis_raw": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "reference_normalized": "thông qua việc gặp nhau thường xuyên thì sự gắn kết chủa chúng tôi đã tăng lên từng chút, từng chút một",
+      "hypothesis_normalized": "thông qua việc gặp nhau thuờng xuyên thì sự gắn kết của chúng tôl đã tăng lên tung chút, tùng chút một",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.06796116504854369,
+      "normalized_cer": 0.04854368932038835,
+      "wer": 0.22727272727272727,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 1,
+        "substitutions": 6
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.009708737864077669,
+        "substitutions": 0.05825242718446602
+      },
+      "missing_text": false,
+      "confidence": 0.5166323205283971,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.04854368932038835,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 1,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.7193979521342135,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        672,
+        118,
+        776,
+        176
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "NĂM THỨ NHẤT",
+        "confidence": 0.7193979521342135,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                28.0,
+                2.0
+              ],
+              [
+                78.0,
+                2.0
+              ],
+              [
+                78.0,
+                30.0
+              ],
+              [
+                28.0,
+                30.0
+              ]
+            ],
+            "text": "NĂM",
+            "confidence": 0.7193979521342135
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                24.0
+              ],
+              [
+                102.0,
+                24.0
+              ],
+              [
+                102.0,
+                56.0
+              ],
+              [
+                2.0,
+                56.0
+              ]
+            ],
+            "text": "THỨ NHẤT",
+            "confidence": 0.8899613502808743
+          }
+        ]
+      },
+      "reference_raw": "NĂM THỨ NHẤT",
+      "hypothesis_raw": "NĂM THỨ NHẤT",
+      "reference_normalized": "năm thứ nhất",
+      "hypothesis_normalized": "năm thứ nhất",
+      "raw_exact_match": true,
+      "normalized_exact_match": true,
+      "raw_cer": 0.0,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.7193979521342135,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [],
+      "baseline_11_7_normalized_cer": 0.0,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 2,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.8554567718704842,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        684,
+        398,
+        766,
+        454
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "NĂM THỨ HAI",
+        "confidence": 0.8554567718704842,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                16.0,
+                2.0
+              ],
+              [
+                64.0,
+                2.0
+              ],
+              [
+                64.0,
+                28.0
+              ],
+              [
+                16.0,
+                28.0
+              ]
+            ],
+            "text": "NĂM",
+            "confidence": 0.9929934873109296
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                0.0,
+                28.0
+              ],
+              [
+                80.0,
+                28.0
+              ],
+              [
+                80.0,
+                56.0
+              ],
+              [
+                0.0,
+                56.0
+              ]
+            ],
+            "text": "THỨ HAI",
+            "confidence": 0.8554567718704842
+          }
+        ]
+      },
+      "reference_raw": "NĂM THỨ HAI",
+      "hypothesis_raw": "NĂM THỨ HAI",
+      "reference_normalized": "năm thứ hai",
+      "hypothesis_normalized": "năm thứ hai",
+      "raw_exact_match": true,
+      "normalized_exact_match": true,
+      "raw_cer": 0.0,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.8554567718704842,
+      "confidence_bucket": "0.80-0.90",
+      "error_types": [],
+      "baseline_11_7_normalized_cer": 0.0,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 3,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.2420134907634832,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.029411764705882353
+      },
+      "crop_bbox": [
+        120,
+        472,
+        232,
+        578
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "Hôm nay cậu muốn đi chơi Gi khônG?",
+        "confidence": 0.2420134907634832,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                4.0,
+                2.0
+              ],
+              [
+                108.0,
+                2.0
+              ],
+              [
+                108.0,
+                30.0
+              ],
+              [
+                4.0,
+                30.0
+              ]
+            ],
+            "text": "Hôm nay",
+            "confidence": 0.8466578523562925
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                24.0
+              ],
+              [
+                108.0,
+                24.0
+              ],
+              [
+                108.0,
+                54.0
+              ],
+              [
+                2.0,
+                54.0
+              ]
+            ],
+            "text": "cậu muốn",
+            "confidence": 0.2420134907634832
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                2.0,
+                54.0
+              ],
+              [
+                82.0,
+                54.0
+              ],
+              [
+                82.0,
+                78.0
+              ],
+              [
+                2.0,
+                78.0
+              ]
+            ],
+            "text": "đi chơi",
+            "confidence": 0.8208329577601342
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                87.0,
+                61.0
+              ],
+              [
+                109.0,
+                61.0
+              ],
+              [
+                109.0,
+                77.0
+              ],
+              [
+                87.0,
+                77.0
+              ]
+            ],
+            "text": "Gi",
+            "confidence": 0.6999206284323849
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                12.0,
+                78.0
+              ],
+              [
+                98.0,
+                78.0
+              ],
+              [
+                98.0,
+                104.0
+              ],
+              [
+                12.0,
+                104.0
+              ]
+            ],
+            "text": "khônG?",
+            "confidence": 0.43625666010157754
+          }
+        ]
+      },
+      "reference_raw": "HÔM NAY CẬU MUỐN ĐI CHƠI GÌ KHÔNG ? ",
+      "hypothesis_raw": "Hôm nay cậu muốn đi chơi Gi khônG?",
+      "reference_normalized": "hôm nay cậu muốn đi chơi gì không ?",
+      "hypothesis_normalized": "hôm nay cậu muốn đi chơi gi không?",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.6944444444444444,
+      "normalized_cer": 0.05714285714285714,
+      "wer": 0.3333333333333333,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 2,
+        "substitutions": 23
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.05555555555555555,
+        "substitutions": 0.6388888888888888
+      },
+      "missing_text": false,
+      "confidence": 0.2420134907634832,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.05714285714285714,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 4,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.864324722652712,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        683,
+        733,
+        759,
+        789
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "NĂM THỨ BA",
+        "confidence": 0.864324722652712,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                14.0,
+                0.0
+              ],
+              [
+                64.0,
+                0.0
+              ],
+              [
+                64.0,
+                30.0
+              ],
+              [
+                14.0,
+                30.0
+              ]
+            ],
+            "text": "NĂM",
+            "confidence": 0.864324722652712
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                26.0
+              ],
+              [
+                74.0,
+                26.0
+              ],
+              [
+                74.0,
+                56.0
+              ],
+              [
+                2.0,
+                56.0
+              ]
+            ],
+            "text": "THỨ BA",
+            "confidence": 0.9597326531101104
+          }
+        ]
+      },
+      "reference_raw": "NĂM THỨ BA",
+      "hypothesis_raw": "NĂM THỨ BA",
+      "reference_normalized": "năm thứ ba",
+      "hypothesis_normalized": "năm thứ ba",
+      "raw_exact_match": true,
+      "normalized_exact_match": true,
+      "raw_cer": 0.0,
+      "normalized_cer": 0.0,
+      "wer": 0.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 0
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.0
+      },
+      "missing_text": false,
+      "confidence": 0.864324722652712,
+      "confidence_bucket": "0.80-0.90",
+      "error_types": [],
+      "baseline_11_7_normalized_cer": 0.0,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 5,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.17040027838310917,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.07142857142857142
+      },
+      "crop_bbox": [
+        657,
+        890,
+        757,
+        1005
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "ĐI CÂU CÁ NÀO\"",
+        "confidence": 0.17040027838310917,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                34.0,
+                2.0
+              ],
+              [
+                66.0,
+                2.0
+              ],
+              [
+                66.0,
+                30.0
+              ],
+              [
+                34.0,
+                30.0
+              ]
+            ],
+            "text": "ĐI",
+            "confidence": 0.17040027838310917
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                1.0,
+                31.0
+              ],
+              [
+                97.0,
+                31.0
+              ],
+              [
+                97.0,
+                73.0
+              ],
+              [
+                1.0,
+                73.0
+              ]
+            ],
+            "text": "CÂU CÁ",
+            "confidence": 0.9868675746007447
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                13.0,
+                75.0
+              ],
+              [
+                89.0,
+                75.0
+              ],
+              [
+                89.0,
+                113.0
+              ],
+              [
+                13.0,
+                113.0
+              ]
+            ],
+            "text": "NÀO\"",
+            "confidence": 0.8127447962760925
+          }
+        ]
+      },
+      "reference_raw": "ĐI CÂU CÁ NÀO!!",
+      "hypothesis_raw": "ĐI CÂU CÁ NÀO\"",
+      "reference_normalized": "đi câu cá nào!!",
+      "hypothesis_normalized": "đi câu cá nào\"",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.13333333333333333,
+      "normalized_cer": 0.13333333333333333,
+      "wer": 0.25,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 1,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.06666666666666667,
+        "substitutions": 0.06666666666666667
+      },
+      "missing_text": false,
+      "confidence": 0.17040027838310917,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "PUNCTUATION_ERROR",
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.13333333333333333,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 7,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.36898237077220036,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.019230769230769232
+      },
+      "crop_bbox": [
+        137,
+        154,
+        249,
+        299
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+        "confidence": 0.36898237077220036,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                19.0,
+                3.0
+              ],
+              [
+                95.0,
+                3.0
+              ],
+              [
+                95.0,
+                23.0
+              ],
+              [
+                19.0,
+                23.0
+              ]
+            ],
+            "text": "HÔM NAY",
+            "confidence": 0.9804500688937913
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                5.0,
+                27.0
+              ],
+              [
+                109.0,
+                27.0
+              ],
+              [
+                109.0,
+                47.0
+              ],
+              [
+                5.0,
+                47.0
+              ]
+            ],
+            "text": "CHÚNG TA SỀ",
+            "confidence": 0.36898237077220036
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                11.0,
+                51.0
+              ],
+              [
+                105.0,
+                51.0
+              ],
+              [
+                105.0,
+                71.0
+              ],
+              [
+                11.0,
+                71.0
+              ]
+            ],
+            "text": "CÙNG NHAV",
+            "confidence": 0.5458368783367973
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                12.0,
+                72.0
+              ],
+              [
+                102.0,
+                72.0
+              ],
+              [
+                102.0,
+                96.0
+              ],
+              [
+                12.0,
+                96.0
+              ]
+            ],
+            "text": "THÁM HIỂM",
+            "confidence": 0.8656835668219534
+          },
+          {
+            "id": 4,
+            "bbox": [
+              [
+                17.0,
+                99.0
+              ],
+              [
+                97.0,
+                99.0
+              ],
+              [
+                97.0,
+                117.0
+              ],
+              [
+                17.0,
+                117.0
+              ]
+            ],
+            "text": "DLNGEON",
+            "confidence": 0.7796731530817803
+          },
+          {
+            "id": 5,
+            "bbox": [
+              [
+                34.0,
+                118.0
+              ],
+              [
+                80.0,
+                118.0
+              ],
+              [
+                80.0,
+                142.0
+              ],
+              [
+                34.0,
+                142.0
+              ]
+            ],
+            "text": "CHú?",
+            "confidence": 0.7007498145103455
+          }
+        ]
+      },
+      "reference_raw": "HÔM NAY CHÚNG TA SẼ CÙNG NHAU THÁM HIỂM DUNGEON CHỨ ?",
+      "hypothesis_raw": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+      "reference_normalized": "hôm nay chúng ta sẽ cùng nhau thám hiểm dungeon chứ ?",
+      "hypothesis_normalized": "hôm nay chúng ta sề cùng nhav thám hiểm dlngeon chú?",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.09433962264150944,
+      "normalized_cer": 0.09433962264150944,
+      "wer": 0.4166666666666667,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 1,
+        "substitutions": 4
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.018867924528301886,
+        "substitutions": 0.07547169811320754
+      },
+      "missing_text": false,
+      "confidence": 0.36898237077220036,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.09433962264150944,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 8,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.7208161354064941,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        646,
+        246,
+        708,
+        294
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "KAZL SAN",
+        "confidence": 0.7208161354064941,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                3.0,
+                1.0
+              ],
+              [
+                59.0,
+                1.0
+              ],
+              [
+                59.0,
+                21.0
+              ],
+              [
+                3.0,
+                21.0
+              ]
+            ],
+            "text": "KAZL",
+            "confidence": 0.7208161354064941
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                11.0,
+                27.0
+              ],
+              [
+                53.0,
+                27.0
+              ],
+              [
+                53.0,
+                47.0
+              ],
+              [
+                11.0,
+                47.0
+              ]
+            ],
+            "text": "SAN",
+            "confidence": 0.997314292631194
+          }
+        ]
+      },
+      "reference_raw": "KAZU-SAN",
+      "hypothesis_raw": "KAZL SAN",
+      "reference_normalized": "kazu-san",
+      "hypothesis_normalized": "kazl san",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.25,
+      "normalized_cer": 0.25,
+      "wer": 2.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 2
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.25
+      },
+      "missing_text": false,
+      "confidence": 0.7208161354064941,
+      "confidence_bucket": "0.60-0.80",
+      "error_types": [
+        "SUBSTITUTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.25,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 9,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.8750834156269156,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.0
+      },
+      "crop_bbox": [
+        667,
+        549,
+        739,
+        579
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "Kazul",
+        "confidence": 0.8750834156269156,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                0.0,
+                2.0
+              ],
+              [
+                70.0,
+                2.0
+              ],
+              [
+                70.0,
+                28.0
+              ],
+              [
+                0.0,
+                28.0
+              ]
+            ],
+            "text": "Kazul",
+            "confidence": 0.8750834156269156
+          }
+        ]
+      },
+      "reference_raw": "KAZU!",
+      "hypothesis_raw": "Kazul",
+      "reference_normalized": "kazu!",
+      "hypothesis_normalized": "kazul",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.8,
+      "normalized_cer": 0.2,
+      "wer": 1.0,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 0,
+        "substitutions": 4
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.0,
+        "substitutions": 0.8
+      },
+      "missing_text": false,
+      "confidence": 0.8750834156269156,
+      "confidence_bucket": "0.80-0.90",
+      "error_types": [
+        "SUBSTITUTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.2,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 10,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.5633623818419353,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.03333333333333333
+      },
+      "crop_bbox": [
+        193,
+        764,
+        274,
+        859
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+        "confidence": 0.5633623818419353,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                5.0,
+                5.0
+              ],
+              [
+                77.0,
+                5.0
+              ],
+              [
+                77.0,
+                25.0
+              ],
+              [
+                5.0,
+                25.0
+              ]
+            ],
+            "text": "HÔM NAY",
+            "confidence": 0.9948181680583803
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                3.0,
+                27.0
+              ],
+              [
+                79.0,
+                27.0
+              ],
+              [
+                79.0,
+                47.0
+              ],
+              [
+                3.0,
+                47.0
+              ]
+            ],
+            "text": "CHÚNG TA",
+            "confidence": 0.9146088014864558
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                15.0,
+                53.0
+              ],
+              [
+                71.0,
+                53.0
+              ],
+              [
+                71.0,
+                71.0
+              ],
+              [
+                15.0,
+                71.0
+              ]
+            ],
+            "text": "PHI Đ1",
+            "confidence": 0.5633623818419353
+          },
+          {
+            "id": 3,
+            "bbox": [
+              [
+                9.0,
+                73.0
+              ],
+              [
+                65.0,
+                73.0
+              ],
+              [
+                65.0,
+                93.0
+              ],
+              [
+                9.0,
+                93.0
+              ]
+            ],
+            "text": "ĐÀO M-",
+            "confidence": 0.8896632417374936
+          }
+        ]
+      },
+      "reference_raw": "HÔM NAY CHÚNG TA SẼ ĐI DÀO M-",
+      "hypothesis_raw": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+      "reference_normalized": "hôm nay chúng ta sẽ đi dào m-",
+      "hypothesis_normalized": "hôm nay chúng ta phi đ1 đào m-",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.1724137931034483,
+      "normalized_cer": 0.1724137931034483,
+      "wer": 0.375,
+      "edit_operations": {
+        "insertions": 1,
+        "deletions": 0,
+        "substitutions": 4
+      },
+      "operation_rates": {
+        "insertions": 0.034482758620689655,
+        "deletions": 0.0,
+        "substitutions": 0.13793103448275862
+      },
+      "missing_text": false,
+      "confidence": 0.5633623818419353,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "INSERTION"
+      ],
+      "baseline_11_7_normalized_cer": 0.1724137931034483,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 11,
+      "ground_truth_source": "human_verified_frozen_11.6",
+      "routing_state": "ACCEPT_CANDIDATE",
+      "quality_signals": {
+        "ocr_confidence": 0.16576065788862426,
+        "confidence_is_truth": false,
+        "empty_output": false,
+        "suspiciously_short": false,
+        "unusual_symbol_ratio": 0.05
+      },
+      "crop_bbox": [
+        114,
+        927,
+        242,
+        1074
+      ],
+      "ocr": {
+        "engine": "easyocr",
+        "version": "1.7.2",
+        "config": {
+          "languages": [
+            "vi",
+            "en"
+          ],
+          "gpu": false,
+          "detail": 1
+        },
+        "text": "ĐI CÂU CÁ THÔI NÀOW!",
+        "confidence": 0.16576065788862426,
+        "lines": [
+          {
+            "id": 0,
+            "bbox": [
+              [
+                12.0,
+                4.0
+              ],
+              [
+                118.0,
+                4.0
+              ],
+              [
+                118.0,
+                52.0
+              ],
+              [
+                12.0,
+                52.0
+              ]
+            ],
+            "text": "ĐI CÂU",
+            "confidence": 0.9211108421208378
+          },
+          {
+            "id": 1,
+            "bbox": [
+              [
+                2.0,
+                50.0
+              ],
+              [
+                126.0,
+                50.0
+              ],
+              [
+                126.0,
+                98.0
+              ],
+              [
+                2.0,
+                98.0
+              ]
+            ],
+            "text": "CÁ THÔI",
+            "confidence": 0.858654349582237
+          },
+          {
+            "id": 2,
+            "bbox": [
+              [
+                17.0,
+                99.0
+              ],
+              [
+                113.0,
+                99.0
+              ],
+              [
+                113.0,
+                143.0
+              ],
+              [
+                17.0,
+                143.0
+              ]
+            ],
+            "text": "NÀOW!",
+            "confidence": 0.16576065788862426
+          }
+        ]
+      },
+      "reference_raw": "ĐI CÂU CÁ THÔI NÀO!!!",
+      "hypothesis_raw": "ĐI CÂU CÁ THÔI NÀOW!",
+      "reference_normalized": "đi câu cá thôi nào!!!",
+      "hypothesis_normalized": "đi câu cá thôi nàow!",
+      "raw_exact_match": false,
+      "normalized_exact_match": false,
+      "raw_cer": 0.09523809523809523,
+      "normalized_cer": 0.09523809523809523,
+      "wer": 0.2,
+      "edit_operations": {
+        "insertions": 0,
+        "deletions": 1,
+        "substitutions": 1
+      },
+      "operation_rates": {
+        "insertions": 0.0,
+        "deletions": 0.047619047619047616,
+        "substitutions": 0.047619047619047616
+      },
+      "missing_text": false,
+      "confidence": 0.16576065788862426,
+      "confidence_bucket": "<0.60",
+      "error_types": [
+        "SUBSTITUTION",
+        "DELETION"
+      ],
+      "baseline_11_7_normalized_cer": 0.09523809523809523,
+      "cer_delta_vs_11_7": 0.0,
+      "regression_vs_11_7": false
+    }
+  ],
+  "metrics": {
+    "N": 20,
+    "raw_exact": 4,
+    "normalized_exact": 4,
+    "micro_raw_cer": 0.22713864306784662,
+    "mean_normalized_cer": 0.11038388444956719,
+    "mean_wer": 0.4055798368298368,
+    "missing": 0,
+    "edit_counts": {
+      "insertions": 6,
+      "deletions": 14,
+      "substitutions": 134
+    }
+  },
+  "routing_counts": {
+    "ACCEPT_CANDIDATE": 19,
+    "HARD": 1
+  },
+  "vlm_calls": 0,
+  "ollama_calls": 0
+}

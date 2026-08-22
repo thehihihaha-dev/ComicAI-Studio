@@ -1,0 +1,503 @@
+{
+  "schema_version": "reader-ocr-expanded.v1",
+  "checkpoint": "11.4",
+  "artifact_kind": "manifest",
+  "status": "completed",
+  "created_at": "2026-08-22T13:38:35.818404+00:00",
+  "samples": [
+    {
+      "sample_id": "7937513a822d5b1937ac",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 4,
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "source_path": "backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "bbox": [
+        596.0,
+        822.0,
+        690.0,
+        932.0
+      ],
+      "text_role": "speech_bubble",
+      "language": "vi",
+      "ground_truth": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+      "ground_truth_source": "DialogueGroundTruth.verified_text (human verified)",
+      "difficulty_tags": [
+        "multiline",
+        "punctuation_heavy"
+      ],
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4"
+    },
+    {
+      "sample_id": "813cdd84342ca90fd7c6",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 8,
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "source_path": "backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "bbox": [
+        197.0,
+        922.0,
+        246.0,
+        967.0
+      ],
+      "text_role": "speech_bubble",
+      "language": "vi",
+      "ground_truth": "Hây",
+      "ground_truth_source": "DialogueGroundTruth.verified_text (human verified)",
+      "difficulty_tags": [
+        "small_text"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    }
+  ],
+  "requires_human_transcription": [
+    {
+      "sample_id": "future-p1_b1",
+      "project_id": null,
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 1,
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4"
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "project_id": null,
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 2,
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4"
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "project_id": null,
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 3,
+      "bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4"
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 1,
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 2,
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 5,
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 3,
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 7,
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 4,
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "project_id": null,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 6,
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067"
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 1,
+      "bbox": [
+        674.0,
+        120.0,
+        774.0,
+        174.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 7,
+      "bbox": [
+        140.0,
+        157.0,
+        246.0,
+        296.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 8,
+      "bbox": [
+        647.0,
+        247.0,
+        707.0,
+        293.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 2,
+      "bbox": [
+        686.0,
+        400.0,
+        764.0,
+        452.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 3,
+      "bbox": [
+        122.0,
+        474.0,
+        230.0,
+        576.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 9,
+      "bbox": [
+        668.0,
+        550.0,
+        738.0,
+        578.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 4,
+      "bbox": [
+        684.0,
+        734.0,
+        758.0,
+        788.0
+      ],
+      "text_role": "narration",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 10,
+      "bbox": [
+        195.0,
+        766.0,
+        272.0,
+        857.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 5,
+      "bbox": [
+        659.0,
+        892.0,
+        755.0,
+        1003.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "project_id": null,
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 11,
+      "bbox": [
+        117.0,
+        930.0,
+        239.0,
+        1071.0
+      ],
+      "text_role": "dialogue",
+      "language": "unknown",
+      "ground_truth": null,
+      "ground_truth_source": "REQUIRES_FUTURE_HUMAN_TRANSCRIPTION",
+      "difficulty_tags": [
+        "unlabeled"
+      ],
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29"
+    }
+  ],
+  "unavailable_human_ground_truth": [
+    {
+      "project_id": "5a7c8e09-d161-4f07-8612-b7aec99fcb23",
+      "asset_id": "dbfd9f79-f749-4620-9c25-7033d82b65a2",
+      "page_order": 1,
+      "region_id": 2,
+      "ground_truth_source": "DialogueGroundTruth.verified_text (human verified)",
+      "status": "unavailable_missing_source_image"
+    }
+  ],
+  "counts": {
+    "trusted_samples": 2,
+    "unavailable_human_gt": 1,
+    "future_human_labels": 20
+  },
+  "limitations": [
+    "Only three human-verified rows exist and one source image is missing; only two crops are benchmarkable.",
+    "Benchmark expansion is not statistically substantial.",
+    "No label was derived from OCR, AI correction, or visual inference."
+  ],
+  "authoritative_state": {
+    "before_hash": "a61e3f19461b7019cd169a61dff71601bcec0499fbe2c20e2adfd1121f3f2561",
+    "after_hash": "a61e3f19461b7019cd169a61dff71601bcec0499fbe2c20e2adfd1121f3f2561",
+    "unchanged": true
+  }
+}

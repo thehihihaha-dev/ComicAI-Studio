@@ -1,0 +1,1951 @@
+{
+  "schema_version": "reader-benchmark.v1",
+  "checkpoint": "11.3",
+  "artifact_kind": "control",
+  "status": "completed",
+  "created_at": "2026-08-22T13:23:20.132813+00:00",
+  "engine": "easyocr",
+  "configuration": {
+    "library": "easyocr",
+    "version": "1.7.2",
+    "languages": [
+      "vi",
+      "en"
+    ],
+    "gpu": false,
+    "role": "combined OCR",
+    "runtime": "CPU/PyTorch",
+    "production_equivalence": "exact Reader construction and readtext(detail=1)"
+  },
+  "modes": {
+    "A_end_to_end_page_ocr": "completed",
+    "B_recognition_only_trusted_crops": {
+      "status": "completed",
+      "crop_count": 2,
+      "outputs": [
+        {
+          "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+          "audit_id": "p1_b3",
+          "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+          "hypothesis_raw": "9",
+          "reference_normalized": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+          "hypothesis_normalized": "9",
+          "exact_normalized_match": false,
+          "cer": 1.0,
+          "wer": 1.0,
+          "confidence": 0.34931885835612775,
+          "confidence_bucket": "low",
+          "latency_seconds": 0.020483
+        },
+        {
+          "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+          "audit_id": "p2_b3",
+          "reference_raw": "Hây",
+          "hypothesis_raw": "~Hôy",
+          "reference_normalized": "Hây",
+          "hypothesis_normalized": "~Hôy",
+          "exact_normalized_match": false,
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "confidence": 0.1521681696176529,
+          "confidence_bucket": "low",
+          "latency_seconds": 0.003881
+        }
+      ],
+      "mean_cer": 0.8333333333333333,
+      "mean_wer": 1.0,
+      "exact_normalized_matches": 0,
+      "initialization_seconds": 2.366988,
+      "crop_total_seconds": 0.024364,
+      "resources": {
+        "before": {
+          "timestamp": "2026-08-22T13:26:20.008828+00:00",
+          "process_rss_bytes": 74711040,
+          "process_peak_rss_bytes": 75431936,
+          "system_available_memory_bytes": 12063440896,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1699615866,
+          "process_cpu_seconds": 0.191635,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        },
+        "after": {
+          "timestamp": "2026-08-22T13:26:22.415289+00:00",
+          "process_rss_bytes": 1049624576,
+          "process_peak_rss_bytes": 1049608192,
+          "system_available_memory_bytes": 11157422080,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1699615866,
+          "process_cpu_seconds": 2.59428,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        },
+        "swap_delta_bytes": 0
+      }
+    }
+  },
+  "dataset_manifest_sha256": "4ab7dfd1e86c95f1e879f3b513130a70c5157c8366e2b7f405f4d77c5093d4a1",
+  "pages": [
+    {
+      "asset_id_hash": "1535a3b4ad3f0fdcbe5ae0860fc8aed6556c9413e4a5764b1c56da888415962a",
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "latency_seconds": 1.841069,
+      "detected_regions": 14,
+      "outputs": [
+        {
+          "id": "c1",
+          "bbox": [
+            133.0,
+            427.0,
+            241.0,
+            465.0
+          ],
+          "raw_text": "HÃY CÙNg",
+          "normalized_text": "HÃY CÙNg",
+          "confidence": 0.5935205983659373
+        },
+        {
+          "id": "c2",
+          "bbox": [
+            128.0,
+            466.0,
+            246.0,
+            498.0
+          ],
+          "raw_text": "NHAU HẠNH",
+          "normalized_text": "NHAU HẠNH",
+          "confidence": 0.7225616263682074
+        },
+        {
+          "id": "c3",
+          "bbox": [
+            131.0,
+            495.0,
+            245.0,
+            531.0
+          ],
+          "raw_text": "PHÚC NHÉ!",
+          "normalized_text": "PHÚC NHÉ!",
+          "confidence": 0.8828904703631136
+        },
+        {
+          "id": "c4",
+          "bbox": [
+            398.0,
+            804.0,
+            500.0,
+            834.0
+          ],
+          "raw_text": "cô GÁl TÓC",
+          "normalized_text": "cô GÁl TÓC",
+          "confidence": 0.551455184709762
+        },
+        {
+          "id": "c5",
+          "bbox": [
+            752.0,
+            812.0,
+            786.0,
+            836.0
+          ],
+          "raw_text": "AH",
+          "normalized_text": "AH",
+          "confidence": 0.661653523790493
+        },
+        {
+          "id": "c6",
+          "bbox": [
+            406.0,
+            834.0,
+            490.0,
+            860.0
+          ],
+          "raw_text": "VÀNG VóI",
+          "normalized_text": "VÀNG VóI",
+          "confidence": 0.3746618937898425
+        },
+        {
+          "id": "c7",
+          "bbox": [
+            608.0,
+            822.0,
+            678.0,
+            854.0
+          ],
+          "raw_text": "Anh CHỈ",
+          "normalized_text": "Anh CHỈ",
+          "confidence": 0.1332415714980577
+        },
+        {
+          "id": "c8",
+          "bbox": [
+            410.0,
+            862.0,
+            488.0,
+            890.0
+          ],
+          "raw_text": "DÁNG VẺ",
+          "normalized_text": "DÁNG VẺ",
+          "confidence": 0.6319227722929396
+        },
+        {
+          "id": "c9",
+          "bbox": [
+            604.0,
+            850.0,
+            682.0,
+            880.0
+          ],
+          "raw_text": "BIÊT NÓl",
+          "normalized_text": "BIÊT NÓl",
+          "confidence": 0.355706589363001
+        },
+        {
+          "id": "c10",
+          "bbox": [
+            396.0,
+            888.0,
+            500.0,
+            920.0
+          ],
+          "raw_text": "TĂNG ĐỘNG",
+          "normalized_text": "TĂNG ĐỘNG",
+          "confidence": 0.8707164304781579
+        },
+        {
+          "id": "c11",
+          "bbox": [
+            596.0,
+            874.0,
+            690.0,
+            906.0
+          ],
+          "raw_text": "\"AH\"\" THÔl",
+          "normalized_text": "\"AH\"\" THÔl",
+          "confidence": 0.450281098398834
+        },
+        {
+          "id": "c12",
+          "bbox": [
+            614.0,
+            904.0,
+            672.0,
+            932.0
+          ],
+          "raw_text": "SAO!?",
+          "normalized_text": "SAO!?",
+          "confidence": 0.3030183359395205
+        },
+        {
+          "id": "c13",
+          "bbox": [
+            398.0,
+            918.0,
+            498.0,
+            946.0
+          ],
+          "raw_text": "NÀY TÊN LÀ",
+          "normalized_text": "NÀY TÊN LÀ",
+          "confidence": 0.7719140344884656
+        },
+        {
+          "id": "c14",
+          "bbox": [
+            424.0,
+            948.0,
+            472.0,
+            972.0
+          ],
+          "raw_text": "\"RIN\"",
+          "normalized_text": "\"RIN\"",
+          "confidence": 0.5523874336511828
+        }
+      ],
+      "matching": {
+        "metric": "intersection_over_smaller_region",
+        "threshold": 0.5,
+        "edges": [
+          {
+            "trusted_id": "p1_b1",
+            "candidate_id": "c1",
+            "intersection_over_trusted": 0.3344198174706649,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.3344198174706649
+          },
+          {
+            "trusted_id": "p1_b1",
+            "candidate_id": "c2",
+            "intersection_over_trusted": 0.3076923076923077,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.3076923076923077
+          },
+          {
+            "trusted_id": "p1_b1",
+            "candidate_id": "c3",
+            "intersection_over_trusted": 0.3344198174706649,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.3344198174706649
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c4",
+            "intersection_over_trusted": 0.17513736263736263,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.17513736263736263
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c6",
+            "intersection_over_trusted": 0.125,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.125
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c8",
+            "intersection_over_trusted": 0.125,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.125
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c10",
+            "intersection_over_trusted": 0.19047619047619047,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.19047619047619047
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c13",
+            "intersection_over_trusted": 0.16025641025641027,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16025641025641027
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_id": "c14",
+            "intersection_over_trusted": 0.06593406593406594,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.06593406593406594
+          },
+          {
+            "trusted_id": "p1_b2",
+            "candidate_id": "c5",
+            "intersection_over_trusted": 1.0,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 1.0
+          },
+          {
+            "trusted_id": "p1_b3",
+            "candidate_id": "c7",
+            "intersection_over_trusted": 0.21663442940038685,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.21663442940038685
+          },
+          {
+            "trusted_id": "p1_b3",
+            "candidate_id": "c9",
+            "intersection_over_trusted": 0.2263056092843327,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2263056092843327
+          },
+          {
+            "trusted_id": "p1_b3",
+            "candidate_id": "c11",
+            "intersection_over_trusted": 0.2909090909090909,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2909090909090909
+          },
+          {
+            "trusted_id": "p1_b3",
+            "candidate_id": "c12",
+            "intersection_over_trusted": 0.15705996131528047,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.15705996131528047
+          }
+        ],
+        "one_to_one_matches": [
+          {
+            "trusted_id": "p1_b2",
+            "candidate_id": "c5",
+            "intersection_over_trusted": 1.0,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "merged_region_errors": [],
+        "over_split_errors": [
+          {
+            "trusted_id": "p1_b1",
+            "candidate_ids": [
+              "c1",
+              "c2",
+              "c3"
+            ]
+          },
+          {
+            "trusted_id": "p1_n1",
+            "candidate_ids": [
+              "c4",
+              "c6",
+              "c8",
+              "c10",
+              "c13",
+              "c14"
+            ]
+          },
+          {
+            "trusted_id": "p1_b3",
+            "candidate_ids": [
+              "c7",
+              "c9",
+              "c11",
+              "c12"
+            ]
+          }
+        ],
+        "missed_trusted_region_ids": [],
+        "orphan_candidate_region_ids": [],
+        "matched_trusted_regions": 4
+      },
+      "transcription_on_human_gt": [
+        {
+          "audit_id": "p1_b3",
+          "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+          "reference_normalized": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+          "hypothesis_raw": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "hypothesis_normalized": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "exact_normalized_match": false,
+          "cer": 0.1875,
+          "wer": 0.7142857142857143,
+          "confidence": 0.1332415714980577,
+          "confidence_bucket": "low"
+        }
+      ]
+    },
+    {
+      "asset_id_hash": "7a4c0d61cc716c04611c70fc044963a90e5c71bc95bcb115e3d432c392304479",
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "latency_seconds": 1.718141,
+      "detected_regions": 35,
+      "outputs": [
+        {
+          "id": "c1",
+          "bbox": [
+            672.0,
+            172.0,
+            762.0,
+            202.0
+          ],
+          "raw_text": "LẨN GẶP Gõ",
+          "normalized_text": "LẨN GẶP Gõ",
+          "confidence": 0.3102033058932957
+        },
+        {
+          "id": "c2",
+          "bbox": [
+            668.0,
+            198.0,
+            766.0,
+            224.0
+          ],
+          "raw_text": "ĐÂU TIÊN CỦA",
+          "normalized_text": "ĐÂU TIÊN CỦA",
+          "confidence": 0.48531774066770644
+        },
+        {
+          "id": "c3",
+          "bbox": [
+            667.0,
+            220.0,
+            766.0,
+            248.0
+          ],
+          "raw_text": "CHÚNG TÔ1 LÀ",
+          "normalized_text": "CHÚNG TÔ1 LÀ",
+          "confidence": 0.7259009806978235
+        },
+        {
+          "id": "c4",
+          "bbox": [
+            676.0,
+            246.0,
+            760.0,
+            270.0
+          ],
+          "raw_text": "VÀo 4 NĂM",
+          "normalized_text": "VÀo 4 NĂM",
+          "confidence": 0.7184454419602746
+        },
+        {
+          "id": "c5",
+          "bbox": [
+            683.0,
+            266.0,
+            742.0,
+            296.0
+          ],
+          "raw_text": "TRUớc _",
+          "normalized_text": "TRUớc _",
+          "confidence": 0.3322845464747812
+        },
+        {
+          "id": "c6",
+          "bbox": [
+            159.0,
+            389.0,
+            227.0,
+            409.0
+          ],
+          "raw_text": "Mìnb là",
+          "normalized_text": "Mìnb là",
+          "confidence": 0.6750209733760852
+        },
+        {
+          "id": "c7",
+          "bbox": [
+            138.0,
+            410.0,
+            246.0,
+            434.0
+          ],
+          "raw_text": "ncười chơi",
+          "normalized_text": "ncười chơi",
+          "confidence": 0.4435618953402722
+        },
+        {
+          "id": "c8",
+          "bbox": [
+            648.0,
+            412.0,
+            698.0,
+            436.0
+          ],
+          "raw_text": "Mìnb",
+          "normalized_text": "Mìnb",
+          "confidence": 0.6015996932983398
+        },
+        {
+          "id": "c9",
+          "bbox": [
+            150.0,
+            432.0,
+            234.0,
+            456.0
+          ],
+          "raw_text": "mới nên",
+          "normalized_text": "mới nên",
+          "confidence": 0.8619739088830595
+        },
+        {
+          "id": "c10",
+          "bbox": [
+            639.0,
+            437.0,
+            701.0,
+            457.0
+          ],
+          "raw_text": "là Rin",
+          "normalized_text": "là Rin",
+          "confidence": 0.8438392104546062
+        },
+        {
+          "id": "c11",
+          "bbox": [
+            147.0,
+            461.0,
+            203.0,
+            477.0
+          ],
+          "raw_text": "mone",
+          "normalized_text": "mone",
+          "confidence": 0.7624489068984985
+        },
+        {
+          "id": "c12",
+          "bbox": [
+            209.0,
+            459.0,
+            241.0,
+            477.0
+          ],
+          "raw_text": "Câu",
+          "normalized_text": "Câu",
+          "confidence": 0.7945577263471311
+        },
+        {
+          "id": "c13",
+          "bbox": [
+            152.0,
+            476.0,
+            236.0,
+            500.0
+          ],
+          "raw_text": "Giúp đỡ!",
+          "normalized_text": "Giúp đỡ!",
+          "confidence": 0.5036487418820002
+        },
+        {
+          "id": "c14",
+          "bbox": [
+            302.0,
+            672.0,
+            394.0,
+            696.0
+          ],
+          "raw_text": "vÀ TÔl ĐẴ CHỈ",
+          "normalized_text": "vÀ TÔl ĐẴ CHỈ",
+          "confidence": 0.22018137739776927
+        },
+        {
+          "id": "c15",
+          "bbox": [
+            291.0,
+            697.0,
+            401.0,
+            715.0
+          ],
+          "raw_text": "BAO Cho Newbie",
+          "normalized_text": "BAO Cho Newbie",
+          "confidence": 0.5061018373762424
+        },
+        {
+          "id": "c16",
+          "bbox": [
+            298.0,
+            714.0,
+            396.0,
+            738.0
+          ],
+          "raw_text": "RIN CÁCH CHỔI",
+          "normalized_text": "RIN CÁCH CHỔI",
+          "confidence": 0.8276372443780862
+        },
+        {
+          "id": "c17",
+          "bbox": [
+            652.0,
+            702.0,
+            778.0,
+            732.0
+          ],
+          "raw_text": "RIN ĐUBC GHÉP",
+          "normalized_text": "RIN ĐUBC GHÉP",
+          "confidence": 0.5252646179803605
+        },
+        {
+          "id": "c18",
+          "bbox": [
+            294.0,
+            736.0,
+            398.0,
+            760.0
+          ],
+          "raw_text": "GAME VÀ TÙ ĐÓ",
+          "normalized_text": "GAME VÀ TÙ ĐÓ",
+          "confidence": 0.5102941992921499
+        },
+        {
+          "id": "c19",
+          "bbox": [
+            644.0,
+            730.0,
+            786.0,
+            762.0
+          ],
+          "raw_text": "THÀNH CẶP NGẨU",
+          "normalized_text": "THÀNH CẶP NGẨU",
+          "confidence": 0.7400522133732705
+        },
+        {
+          "id": "c20",
+          "bbox": [
+            127.0,
+            765.0,
+            227.0,
+            785.0
+          ],
+          "raw_text": "THÔNG QUA VIÊC",
+          "normalized_text": "THÔNG QUA VIÊC",
+          "confidence": 0.8970223562764305
+        },
+        {
+          "id": "c21",
+          "bbox": [
+            288.0,
+            758.0,
+            402.0,
+            782.0
+          ],
+          "raw_text": "MỐl QUAN HỆ CỦA",
+          "normalized_text": "MỐl QUAN HỆ CỦA",
+          "confidence": 0.8875729174887346
+        },
+        {
+          "id": "c22",
+          "bbox": [
+            658.0,
+            756.0,
+            772.0,
+            786.0
+          ],
+          "raw_text": "NHIÊN VÓI TôI",
+          "normalized_text": "NHIÊN VÓI TôI",
+          "confidence": 0.3869514262042788
+        },
+        {
+          "id": "c23",
+          "bbox": [
+            123.0,
+            785.0,
+            233.0,
+            805.0
+          ],
+          "raw_text": "GẶP NHAU THUỜNG",
+          "normalized_text": "GẶP NHAU THUỜNG",
+          "confidence": 0.45749367570197214
+        },
+        {
+          "id": "c24",
+          "bbox": [
+            296.0,
+            778.0,
+            396.0,
+            802.0
+          ],
+          "raw_text": "CHÚNG TÔl BẮT",
+          "normalized_text": "CHÚNG TÔl BẮT",
+          "confidence": 0.6953485203129122
+        },
+        {
+          "id": "c25",
+          "bbox": [
+            642.0,
+            784.0,
+            788.0,
+            816.0
+          ],
+          "raw_text": "TRONG MỘT TRẬN",
+          "normalized_text": "TRONG MỘT TRẬN",
+          "confidence": 0.9524960553345386
+        },
+        {
+          "id": "c26",
+          "bbox": [
+            122.0,
+            802.0,
+            232.0,
+            826.0
+          ],
+          "raw_text": "XUYÊN THÌ SU GẤN",
+          "normalized_text": "XUYÊN THÌ SU GẤN",
+          "confidence": 0.49665525149432416
+        },
+        {
+          "id": "c27",
+          "bbox": [
+            326.0,
+            798.0,
+            362.0,
+            822.0
+          ],
+          "raw_text": "ĐẨU .",
+          "normalized_text": "ĐẨU .",
+          "confidence": 0.38217525581299683
+        },
+        {
+          "id": "c28",
+          "bbox": [
+            131.0,
+            823.0,
+            225.0,
+            843.0
+          ],
+          "raw_text": "KẾT CỦA CHÚNG",
+          "normalized_text": "KẾT CỦA CHÚNG",
+          "confidence": 0.8576679481524025
+        },
+        {
+          "id": "c29",
+          "bbox": [
+            646.0,
+            812.0,
+            780.0,
+            840.0
+          ],
+          "raw_text": "ĐẤU Ỏ DUNGEON",
+          "normalized_text": "ĐẤU Ỏ DUNGEON",
+          "confidence": 0.42314835258091943
+        },
+        {
+          "id": "c30",
+          "bbox": [
+            127.0,
+            843.0,
+            229.0,
+            863.0
+          ],
+          "raw_text": "TÔl ĐÃ TĂNG LÊN",
+          "normalized_text": "TÔl ĐÃ TĂNG LÊN",
+          "confidence": 0.5283023258364414
+        },
+        {
+          "id": "c31",
+          "bbox": [
+            125.0,
+            863.0,
+            229.0,
+            883.0
+          ],
+          "raw_text": "TUNG CHÚT, TÙNG",
+          "normalized_text": "TUNG CHÚT, TÙNG",
+          "confidence": 0.5434383837214904
+        },
+        {
+          "id": "c32",
+          "bbox": [
+            149.0,
+            883.0,
+            209.0,
+            903.0
+          ],
+          "raw_text": "CHÚT MỘT",
+          "normalized_text": "CHÚT MỘT",
+          "confidence": 0.897333615623816
+        },
+        {
+          "id": "c33",
+          "bbox": [
+            368.0,
+            924.0,
+            420.0,
+            948.0
+          ],
+          "raw_text": "H #êp",
+          "normalized_text": "H #êp",
+          "confidence": 0.18033726386911952
+        },
+        {
+          "id": "c34",
+          "bbox": [
+            366.0,
+            944.0,
+            428.0,
+            968.0
+          ],
+          "raw_text": "thên chút",
+          "normalized_text": "thên chút",
+          "confidence": 0.25641516844706824
+        },
+        {
+          "id": "c35",
+          "bbox": [
+            383.0,
+            965.0,
+            415.0,
+            985.0
+          ],
+          "raw_text": "Ũel !",
+          "normalized_text": "Ũel !",
+          "confidence": 0.03617175036608329
+        }
+      ],
+      "matching": {
+        "metric": "intersection_over_smaller_region",
+        "threshold": 0.5,
+        "edges": [
+          {
+            "trusted_id": "p2_n1",
+            "candidate_id": "c1",
+            "intersection_over_trusted": 0.21994134897360704,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.21994134897360704
+          },
+          {
+            "trusted_id": "p2_n1",
+            "candidate_id": "c2",
+            "intersection_over_trusted": 0.20755946562398175,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.20755946562398175
+          },
+          {
+            "trusted_id": "p2_n1",
+            "candidate_id": "c3",
+            "intersection_over_trusted": 0.22580645161290322,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.22580645161290322
+          },
+          {
+            "trusted_id": "p2_n1",
+            "candidate_id": "c4",
+            "intersection_over_trusted": 0.16422287390029325,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16422287390029325
+          },
+          {
+            "trusted_id": "p2_n1",
+            "candidate_id": "c5",
+            "intersection_over_trusted": 0.1441837732160313,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1441837732160313
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c6",
+            "intersection_over_trusted": 0.11344678011344678,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.11344678011344678
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c7",
+            "intersection_over_trusted": 0.21621621621621623,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.21621621621621623
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c9",
+            "intersection_over_trusted": 0.16816816816816818,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16816816816816818
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c11",
+            "intersection_over_trusted": 0.0747414080747414,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.0747414080747414
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c12",
+            "intersection_over_trusted": 0.04804804804804805,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.04804804804804805
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_id": "c13",
+            "intersection_over_trusted": 0.16816816816816818,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16816816816816818
+          },
+          {
+            "trusted_id": "p2_b2",
+            "candidate_id": "c8",
+            "intersection_over_trusted": 0.43010752688172044,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.43010752688172044
+          },
+          {
+            "trusted_id": "p2_b2",
+            "candidate_id": "c10",
+            "intersection_over_trusted": 0.4444444444444444,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.4444444444444444
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c14",
+            "intersection_over_trusted": 0.12912280701754386,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.12912280701754386
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c15",
+            "intersection_over_trusted": 0.11578947368421053,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.11578947368421053
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c16",
+            "intersection_over_trusted": 0.1375438596491228,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1375438596491228
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c18",
+            "intersection_over_trusted": 0.14596491228070174,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.14596491228070174
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c21",
+            "intersection_over_trusted": 0.16,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c24",
+            "intersection_over_trusted": 0.14035087719298245,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.14035087719298245
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_id": "c27",
+            "intersection_over_trusted": 0.05052631578947368,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.05052631578947368
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c20",
+            "intersection_over_trusted": 0.1305653479566523,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1305653479566523
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c23",
+            "intersection_over_trusted": 0.14362188275231755,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.14362188275231755
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c26",
+            "intersection_over_trusted": 0.17234625930278105,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.17234625930278105
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c28",
+            "intersection_over_trusted": 0.12273142707925316,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.12273142707925316
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c30",
+            "intersection_over_trusted": 0.13317665491578534,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.13317665491578534
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c31",
+            "intersection_over_trusted": 0.1357879618749184,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1357879618749184
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_id": "c32",
+            "intersection_over_trusted": 0.07833920877399138,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.07833920877399138
+          },
+          {
+            "trusted_id": "p2_b4",
+            "candidate_id": "c33",
+            "intersection_over_trusted": 0.32998413537810684,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.32998413537810684
+          },
+          {
+            "trusted_id": "p2_b4",
+            "candidate_id": "c34",
+            "intersection_over_trusted": 0.39344262295081966,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.39344262295081966
+          },
+          {
+            "trusted_id": "p2_b4",
+            "candidate_id": "c35",
+            "intersection_over_trusted": 0.16922263352723427,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16922263352723427
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_id": "c17",
+            "intersection_over_trusted": 0.18761167361524717,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.18761167361524717
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_id": "c19",
+            "intersection_over_trusted": 0.22553107008139767,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.22553107008139767
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_id": "c22",
+            "intersection_over_trusted": 0.16974389517569982,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.16974389517569982
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_id": "c25",
+            "intersection_over_trusted": 0.2318840579710145,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2318840579710145
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_id": "c29",
+            "intersection_over_trusted": 0.1862219575143935,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1862219575143935
+          }
+        ],
+        "one_to_one_matches": [],
+        "merged_region_errors": [],
+        "over_split_errors": [
+          {
+            "trusted_id": "p2_n1",
+            "candidate_ids": [
+              "c1",
+              "c2",
+              "c3",
+              "c4",
+              "c5"
+            ]
+          },
+          {
+            "trusted_id": "p2_b1",
+            "candidate_ids": [
+              "c6",
+              "c7",
+              "c9",
+              "c11",
+              "c12",
+              "c13"
+            ]
+          },
+          {
+            "trusted_id": "p2_b2",
+            "candidate_ids": [
+              "c8",
+              "c10"
+            ]
+          },
+          {
+            "trusted_id": "p2_n2",
+            "candidate_ids": [
+              "c14",
+              "c15",
+              "c16",
+              "c18",
+              "c21",
+              "c24",
+              "c27"
+            ]
+          },
+          {
+            "trusted_id": "p2_n3",
+            "candidate_ids": [
+              "c20",
+              "c23",
+              "c26",
+              "c28",
+              "c30",
+              "c31",
+              "c32"
+            ]
+          },
+          {
+            "trusted_id": "p2_b4",
+            "candidate_ids": [
+              "c33",
+              "c34",
+              "c35"
+            ]
+          },
+          {
+            "trusted_id": "p2_n4",
+            "candidate_ids": [
+              "c17",
+              "c19",
+              "c22",
+              "c25",
+              "c29"
+            ]
+          }
+        ],
+        "missed_trusted_region_ids": [],
+        "orphan_candidate_region_ids": [],
+        "matched_trusted_regions": 7
+      },
+      "transcription_on_human_gt": [
+        {
+          "audit_id": "p2_b3",
+          "reference_raw": "Hây",
+          "reference_normalized": "Hây",
+          "hypothesis_raw": "",
+          "hypothesis_normalized": "",
+          "exact_normalized_match": false,
+          "cer": 1.0,
+          "wer": 1.0,
+          "confidence": null,
+          "confidence_bucket": "unavailable"
+        }
+      ]
+    },
+    {
+      "asset_id_hash": "16c6ee1df410e166cdc2b8ce24e0ebe92f13735d21995031c7d677e94d4a07d1",
+      "filename": "vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg",
+      "latency_seconds": 1.45936,
+      "detected_regions": 29,
+      "outputs": [
+        {
+          "id": "c1",
+          "bbox": [
+            700.0,
+            120.0,
+            750.0,
+            148.0
+          ],
+          "raw_text": "NĂM",
+          "normalized_text": "NĂM",
+          "confidence": 0.7193979521342135
+        },
+        {
+          "id": "c2",
+          "bbox": [
+            157.0,
+            157.0,
+            233.0,
+            177.0
+          ],
+          "raw_text": "HÔM NAY",
+          "normalized_text": "HÔM NAY",
+          "confidence": 0.9930466197372851
+        },
+        {
+          "id": "c3",
+          "bbox": [
+            674.0,
+            142.0,
+            774.0,
+            174.0
+          ],
+          "raw_text": "THỨ NHẤT",
+          "normalized_text": "THỨ NHẤT",
+          "confidence": 0.8899613502808743
+        },
+        {
+          "id": "c4",
+          "bbox": [
+            140.0,
+            178.0,
+            246.0,
+            202.0
+          ],
+          "raw_text": "CHÚNG TA SỄ",
+          "normalized_text": "CHÚNG TA SỄ",
+          "confidence": 0.500525494905897
+        },
+        {
+          "id": "c5",
+          "bbox": [
+            147.0,
+            205.0,
+            241.0,
+            225.0
+          ],
+          "raw_text": "CÙNG NHAV",
+          "normalized_text": "CÙNG NHAV",
+          "confidence": 0.5652501236773706
+        },
+        {
+          "id": "c6",
+          "bbox": [
+            150.0,
+            226.0,
+            238.0,
+            250.0
+          ],
+          "raw_text": "THÁM HIỂM",
+          "normalized_text": "THÁM HIỂM",
+          "confidence": 0.9004025985140841
+        },
+        {
+          "id": "c7",
+          "bbox": [
+            153.0,
+            253.0,
+            235.0,
+            271.0
+          ],
+          "raw_text": "DLNGEON",
+          "normalized_text": "DLNGEON",
+          "confidence": 0.5529397652676925
+        },
+        {
+          "id": "c8",
+          "bbox": [
+            647.0,
+            247.0,
+            707.0,
+            267.0
+          ],
+          "raw_text": "KAZLI-",
+          "normalized_text": "KAZLI-",
+          "confidence": 0.507356569874866
+        },
+        {
+          "id": "c9",
+          "bbox": [
+            170.0,
+            272.0,
+            218.0,
+            296.0
+          ],
+          "raw_text": "CHÚ?",
+          "normalized_text": "CHÚ?",
+          "confidence": 0.7299180030822754
+        },
+        {
+          "id": "c10",
+          "bbox": [
+            657.0,
+            275.0,
+            699.0,
+            293.0
+          ],
+          "raw_text": "SAN",
+          "normalized_text": "SAN",
+          "confidence": 0.9965022820107915
+        },
+        {
+          "id": "c11",
+          "bbox": [
+            700.0,
+            400.0,
+            750.0,
+            428.0
+          ],
+          "raw_text": "NĂM",
+          "normalized_text": "NĂM",
+          "confidence": 0.9364476748407807
+        },
+        {
+          "id": "c12",
+          "bbox": [
+            686.0,
+            426.0,
+            764.0,
+            452.0
+          ],
+          "raw_text": "THỨ HAI",
+          "normalized_text": "THỨ HAI",
+          "confidence": 0.7343923855843945
+        },
+        {
+          "id": "c13",
+          "bbox": [
+            124.0,
+            474.0,
+            228.0,
+            502.0
+          ],
+          "raw_text": "Hôm nay",
+          "normalized_text": "Hôm nay",
+          "confidence": 0.8466578523562925
+        },
+        {
+          "id": "c14",
+          "bbox": [
+            122.0,
+            496.0,
+            228.0,
+            526.0
+          ],
+          "raw_text": "cậu muốn",
+          "normalized_text": "cậu muốn",
+          "confidence": 0.2420134907634832
+        },
+        {
+          "id": "c15",
+          "bbox": [
+            122.0,
+            526.0,
+            230.0,
+            552.0
+          ],
+          "raw_text": "đi chƠi <ì",
+          "normalized_text": "đi chƠi <ì",
+          "confidence": 0.3395942708684106
+        },
+        {
+          "id": "c16",
+          "bbox": [
+            132.0,
+            550.0,
+            220.0,
+            576.0
+          ],
+          "raw_text": "khônG?",
+          "normalized_text": "khônG?",
+          "confidence": 0.44730322448659454
+        },
+        {
+          "id": "c17",
+          "bbox": [
+            668.0,
+            550.0,
+            738.0,
+            578.0
+          ],
+          "raw_text": "Kazul",
+          "normalized_text": "Kazul",
+          "confidence": 0.7126173784822984
+        },
+        {
+          "id": "c18",
+          "bbox": [
+            698.0,
+            734.0,
+            746.0,
+            762.0
+          ],
+          "raw_text": "NĂM",
+          "normalized_text": "NĂM",
+          "confidence": 0.9606635956973071
+        },
+        {
+          "id": "c19",
+          "bbox": [
+            196.0,
+            766.0,
+            272.0,
+            790.0
+          ],
+          "raw_text": "HÔM NAY",
+          "normalized_text": "HÔM NAY",
+          "confidence": 0.9970117502864382
+        },
+        {
+          "id": "c20",
+          "bbox": [
+            684.0,
+            760.0,
+            758.0,
+            788.0
+          ],
+          "raw_text": "THỨ BA",
+          "normalized_text": "THỨ BA",
+          "confidence": 0.7084822410496471
+        },
+        {
+          "id": "c21",
+          "bbox": [
+            195.0,
+            791.0,
+            271.0,
+            811.0
+          ],
+          "raw_text": "CHÚNG TA",
+          "normalized_text": "CHÚNG TA",
+          "confidence": 0.9871523699811167
+        },
+        {
+          "id": "c22",
+          "bbox": [
+            205.0,
+            815.0,
+            265.0,
+            835.0
+          ],
+          "raw_text": "PHẢl Đ1",
+          "normalized_text": "PHẢl Đ1",
+          "confidence": 0.3926985344134595
+        },
+        {
+          "id": "c23",
+          "bbox": [
+            201.0,
+            837.0,
+            265.0,
+            857.0
+          ],
+          "raw_text": "ĐÀO M -",
+          "normalized_text": "ĐÀO M -",
+          "confidence": 0.7629485007873734
+        },
+        {
+          "id": "c24",
+          "bbox": [
+            692.0,
+            892.0,
+            724.0,
+            922.0
+          ],
+          "raw_text": "ĐI",
+          "normalized_text": "ĐI",
+          "confidence": 0.33816217957506545
+        },
+        {
+          "id": "c25",
+          "bbox": [
+            126.0,
+            930.0,
+            232.0,
+            978.0
+          ],
+          "raw_text": "ĐI CÂU",
+          "normalized_text": "ĐI CÂU",
+          "confidence": 0.931300918021403
+        },
+        {
+          "id": "c26",
+          "bbox": [
+            659.0,
+            921.0,
+            755.0,
+            963.0
+          ],
+          "raw_text": "CÂU CÁ",
+          "normalized_text": "CÂU CÁ",
+          "confidence": 0.694083169595734
+        },
+        {
+          "id": "c27",
+          "bbox": [
+            671.0,
+            965.0,
+            747.0,
+            1003.0
+          ],
+          "raw_text": "NÀOụ",
+          "normalized_text": "NÀOụ",
+          "confidence": 0.4580724239349365
+        },
+        {
+          "id": "c28",
+          "bbox": [
+            117.0,
+            979.0,
+            239.0,
+            1023.0
+          ],
+          "raw_text": "CÁ THÔI",
+          "normalized_text": "CÁ THÔI",
+          "confidence": 0.9819338997386466
+        },
+        {
+          "id": "c29",
+          "bbox": [
+            129.0,
+            1023.0,
+            227.0,
+            1071.0
+          ],
+          "raw_text": "NÀOỵ!",
+          "normalized_text": "NÀOỵ!",
+          "confidence": 0.12246318077133053
+        }
+      ],
+      "matching": {
+        "metric": "intersection_over_smaller_region",
+        "threshold": 0.5,
+        "edges": [
+          {
+            "trusted_id": "p3_n1",
+            "candidate_id": "c1",
+            "intersection_over_trusted": 0.25925925925925924,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.25925925925925924
+          },
+          {
+            "trusted_id": "p3_n1",
+            "candidate_id": "c3",
+            "intersection_over_trusted": 0.5925925925925926,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.5925925925925926
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c2",
+            "intersection_over_trusted": 0.10316275281661463,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.10316275281661463
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c4",
+            "intersection_over_trusted": 0.17266187050359713,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.17266187050359713
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c5",
+            "intersection_over_trusted": 0.1275960363784444,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1275960363784444
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c6",
+            "intersection_over_trusted": 0.1433419302294014,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1433419302294014
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c7",
+            "intersection_over_trusted": 0.1001764626035021,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1001764626035021
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_id": "c9",
+            "intersection_over_trusted": 0.0781865073978553,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.0781865073978553
+          },
+          {
+            "trusted_id": "p3_b2",
+            "candidate_id": "c8",
+            "intersection_over_trusted": 0.43478260869565216,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.43478260869565216
+          },
+          {
+            "trusted_id": "p3_b2",
+            "candidate_id": "c10",
+            "intersection_over_trusted": 0.27391304347826084,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.27391304347826084
+          },
+          {
+            "trusted_id": "p3_n2",
+            "candidate_id": "c11",
+            "intersection_over_trusted": 0.34516765285996054,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.34516765285996054
+          },
+          {
+            "trusted_id": "p3_n2",
+            "candidate_id": "c12",
+            "intersection_over_trusted": 0.5,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.5
+          },
+          {
+            "trusted_id": "p3_b3",
+            "candidate_id": "c13",
+            "intersection_over_trusted": 0.2643427741466957,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2643427741466957
+          },
+          {
+            "trusted_id": "p3_b3",
+            "candidate_id": "c14",
+            "intersection_over_trusted": 0.2886710239651416,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2886710239651416
+          },
+          {
+            "trusted_id": "p3_b3",
+            "candidate_id": "c15",
+            "intersection_over_trusted": 0.2549019607843137,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2549019607843137
+          },
+          {
+            "trusted_id": "p3_b3",
+            "candidate_id": "c16",
+            "intersection_over_trusted": 0.20769789397240376,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.20769789397240376
+          },
+          {
+            "trusted_id": "p3_b4",
+            "candidate_id": "c17",
+            "intersection_over_trusted": 1.0,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 1.0
+          },
+          {
+            "trusted_id": "p3_n3",
+            "candidate_id": "c18",
+            "intersection_over_trusted": 0.33633633633633636,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.33633633633633636
+          },
+          {
+            "trusted_id": "p3_n3",
+            "candidate_id": "c20",
+            "intersection_over_trusted": 0.5185185185185185,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.5185185185185185
+          },
+          {
+            "trusted_id": "p3_b5",
+            "candidate_id": "c19",
+            "intersection_over_trusted": 0.2603111174539746,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2603111174539746
+          },
+          {
+            "trusted_id": "p3_b5",
+            "candidate_id": "c21",
+            "intersection_over_trusted": 0.2169259312116455,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.2169259312116455
+          },
+          {
+            "trusted_id": "p3_b5",
+            "candidate_id": "c22",
+            "intersection_over_trusted": 0.17125731411445697,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.17125731411445697
+          },
+          {
+            "trusted_id": "p3_b5",
+            "candidate_id": "c23",
+            "intersection_over_trusted": 0.1826744683887541,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.1826744683887541
+          },
+          {
+            "trusted_id": "p3_b6",
+            "candidate_id": "c24",
+            "intersection_over_trusted": 0.09009009009009009,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.09009009009009009
+          },
+          {
+            "trusted_id": "p3_b6",
+            "candidate_id": "c26",
+            "intersection_over_trusted": 0.3783783783783784,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.3783783783783784
+          },
+          {
+            "trusted_id": "p3_b6",
+            "candidate_id": "c27",
+            "intersection_over_trusted": 0.27102102102102105,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.27102102102102105
+          },
+          {
+            "trusted_id": "p3_b7",
+            "candidate_id": "c25",
+            "intersection_over_trusted": 0.29577956051621906,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.29577956051621906
+          },
+          {
+            "trusted_id": "p3_b7",
+            "candidate_id": "c28",
+            "intersection_over_trusted": 0.3120567375886525,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.3120567375886525
+          },
+          {
+            "trusted_id": "p3_b7",
+            "candidate_id": "c29",
+            "intersection_over_trusted": 0.27345657481688174,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 0.27345657481688174
+          }
+        ],
+        "one_to_one_matches": [
+          {
+            "trusted_id": "p3_b4",
+            "candidate_id": "c17",
+            "intersection_over_trusted": 1.0,
+            "intersection_over_smaller_region": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "merged_region_errors": [],
+        "over_split_errors": [
+          {
+            "trusted_id": "p3_n1",
+            "candidate_ids": [
+              "c1",
+              "c3"
+            ]
+          },
+          {
+            "trusted_id": "p3_b1",
+            "candidate_ids": [
+              "c2",
+              "c4",
+              "c5",
+              "c6",
+              "c7",
+              "c9"
+            ]
+          },
+          {
+            "trusted_id": "p3_b2",
+            "candidate_ids": [
+              "c8",
+              "c10"
+            ]
+          },
+          {
+            "trusted_id": "p3_n2",
+            "candidate_ids": [
+              "c11",
+              "c12"
+            ]
+          },
+          {
+            "trusted_id": "p3_b3",
+            "candidate_ids": [
+              "c13",
+              "c14",
+              "c15",
+              "c16"
+            ]
+          },
+          {
+            "trusted_id": "p3_n3",
+            "candidate_ids": [
+              "c18",
+              "c20"
+            ]
+          },
+          {
+            "trusted_id": "p3_b5",
+            "candidate_ids": [
+              "c19",
+              "c21",
+              "c22",
+              "c23"
+            ]
+          },
+          {
+            "trusted_id": "p3_b6",
+            "candidate_ids": [
+              "c24",
+              "c26",
+              "c27"
+            ]
+          },
+          {
+            "trusted_id": "p3_b7",
+            "candidate_ids": [
+              "c25",
+              "c28",
+              "c29"
+            ]
+          }
+        ],
+        "missed_trusted_region_ids": [],
+        "orphan_candidate_region_ids": [],
+        "matched_trusted_regions": 10
+      },
+      "transcription_on_human_gt": []
+    }
+  ],
+  "metrics": {
+    "detection": {
+      "expected_geometry_evaluable": 21,
+      "matched": 21,
+      "missed": 0,
+      "recall": 1.0,
+      "precision": null,
+      "precision_status": "N/A: non-exhaustive text/SFX oracle"
+    },
+    "transcription": {
+      "human_gt_regions": 2,
+      "exact_normalized_matches": 0,
+      "mean_cer": 0.59375,
+      "mean_wer": 0.8571428571428572,
+      "empty_transcription_rate": 0.5,
+      "unreadable_rate": null,
+      "unreadable_status": "N/A: no human unreadable labels"
+    },
+    "structure": {
+      "merged_region_errors": 0,
+      "over_split_errors": 19,
+      "one_to_one_matches": 2
+    },
+    "confidence": {
+      "buckets": {
+        "high": ">=0.85",
+        "medium": "0.50..<0.85",
+        "low": "<0.50"
+      },
+      "counts": {
+        "high": 18,
+        "medium": 35,
+        "low": 25,
+        "unavailable": 0
+      },
+      "potential_easy_regions": 18,
+      "potential_hard_regions": 60,
+      "production_vlm_savings_claim": "N/A"
+    }
+  },
+  "timing": {
+    "initialization_seconds": 2.426584,
+    "page_total_seconds": 5.01857,
+    "wall_clock_seconds": 7.524517
+  },
+  "resources": {
+    "before": {
+      "timestamp": "2026-08-22T13:23:12.599952+00:00",
+      "process_rss_bytes": 68222976,
+      "process_peak_rss_bytes": 68206592,
+      "system_available_memory_bytes": 7786004480,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1724781690,
+      "process_cpu_seconds": 0.183682,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after_initialization": {
+      "timestamp": "2026-08-22T13:23:15.034950+00:00",
+      "process_rss_bytes": 1037762560,
+      "process_peak_rss_bytes": 1037762560,
+      "system_available_memory_bytes": 7151648768,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1724781690,
+      "process_cpu_seconds": 2.596777,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T13:23:20.076837+00:00",
+      "process_rss_bytes": 6707101696,
+      "process_peak_rss_bytes": 6830784512,
+      "system_available_memory_bytes": 6381551616,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1724781690,
+      "process_cpu_seconds": 13.131451,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "peak_process_rss_bytes": 6830784512,
+    "swap_delta_bytes": 0,
+    "safety_state": "NORMAL"
+  },
+  "data_integrity": {
+    "before_hash": "e39368753e7624ed034dcf00b27341096de143c30b132e6b19879ef823bb5ea3",
+    "after_hash": "e39368753e7624ed034dcf00b27341096de143c30b132e6b19879ef823bb5ea3",
+    "unchanged": true
+  },
+  "vlm_calls": 0,
+  "limitations": [
+    "Three pages cannot establish general manga accuracy.",
+    "Geometry is inherited from persisted Reader evidence and is not a separately annotated polygon corpus.",
+    "Only human-verified Ground Truth contributes to CER/WER."
+  ],
+  "metrics_refreshed_from_saved_outputs_at": "2026-08-22T13:26:54.836153+00:00"
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "reader-router-summary.v1",
+  "checkpoint": "11.12",
+  "decision": "B. ROUTER PROMISING BUT MORE GT REQUIRED",
+  "decision_basis": "R2 combines confidence with structural agreement and has 1/50 SAFE with 0 observed false-safe, but its 2% coverage and single-page dependence are not production evidence.",
+  "selected_candidate": "R2",
+  "selected_metrics": {
+    "candidate": "R2",
+    "safe_count": 1,
+    "safe_coverage": 0.02,
+    "safe_correct": 1,
+    "false_safe": 0,
+    "false_safe_rate": 0.0,
+    "safe_precision": 1.0,
+    "hard_count": 17,
+    "hard_rate": 0.34,
+    "structural_review_count": 32,
+    "structural_review_rate": 0.64,
+    "correct_ocr_routed_hard": 9,
+    "routing_nanoseconds": 4834,
+    "nanoseconds_per_region": 96.68
+  },
+  "merged_split_analysis": {
+    "cases": 32,
+    "caught_structural": 32,
+    "missed_non_structural": 0,
+    "false_safe_merged_split": 0
+  },
+  "short_text_analysis": {
+    "1-3": {
+      "count": 5,
+      "wrong": 1
+    },
+    "4-8": {
+      "count": 6,
+      "wrong": 4
+    },
+    "9+": {
+      "count": 39,
+      "wrong": 35
+    }
+  },
+  "high_confidence_wrong": {
+    "count": 0,
+    "threshold": "min fragment confidence >= 0.95",
+    "additional_signals_that_catch": "No wrong sample crosses the descriptive high-confidence threshold; merge/split structural warning still catches multi-fragment cases below it."
+  },
+  "regression_11_8": {
+    "historical_accepts": 19,
+    "historical_false_accepts": 16,
+    "R1_would_safe": 0,
+    "R2_single_line_would_safe": 0,
+    "note": "11.8 lacks the new logical aggregation features; comparison is limited to confidence and OCR-line structure."
+  },
+  "regression_11_11": {
+    "baseline_false_accepts": 36,
+    "selected_false_safe": 0,
+    "selected_safe_count": 1
+  },
+  "runtime": {
+    "routing_nanoseconds": 4834,
+    "nanoseconds_per_region": 96.68
+  },
+  "resource_safety": {
+    "before": {
+      "timestamp": "2026-08-22T19:07:32.032493+00:00",
+      "process_rss_bytes": 26738688,
+      "process_peak_rss_bytes": 26705920,
+      "system_available_memory_bytes": 6659211264,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.037774,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T19:07:32.046048+00:00",
+      "process_rss_bytes": 27869184,
+      "process_peak_rss_bytes": 27869184,
+      "system_available_memory_bytes": 6658064384,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.046448,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "swap_delta_bytes": 0,
+    "ocr_inference_calls": 0,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "reading_order_deferred": "shared tier/row grouping geometry; intentionally unchanged",
+  "production_changes": false,
+  "single_next_action": "Validate the benchmark-fitted R2 contract on a new page-grouped Human GT set; do not deploy or relax it."
+}

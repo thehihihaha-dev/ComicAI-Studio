@@ -8,7 +8,7 @@ from app.services.ollama_text import call_text_model
 from app.services.story_analyzer import analyze_story, validate_story_result_structure
 from app.services.story_grounding import ground_story_result
 from app.services.performance import measure_stage, model_call_context, timed_stage
-from app.services.model_runtime import generation_option_overrides
+from app.services.model_runtime import generation_option_overrides, resolve_story_model
 
 
 PRIMARY_ROLES = {"dialogue", "narration", "thought"}
@@ -139,7 +139,9 @@ def recover_story_coverage(
     prompt = _fixed_slot_recovery_prompt(slots, grounded_result)
     with generation_option_overrides({"num_predict": COVERAGE_RECOVERY_NUM_PREDICT}):
         with model_call_context("coverage_recovery", attempt=1):
-            raw = call_text_model(prompt=prompt, json_mode=True)
+            raw = call_text_model(
+                prompt=prompt, model=resolve_story_model(), json_mode=True
+            )
     result = validate_fixed_slot_recovery(
         raw,
         slots,
@@ -424,7 +426,9 @@ Return JSON only: {{"decisions": [...]}}
 """
     with generation_option_overrides({"num_predict": COVERAGE_RECOVERY_NUM_PREDICT}):
         with model_call_context("coverage_recovery_repair", attempt=1):
-            return call_text_model(prompt=prompt, json_mode=True)
+            return call_text_model(
+                prompt=prompt, model=resolve_story_model(), json_mode=True
+            )
 
 
 def validate_recovery_result(

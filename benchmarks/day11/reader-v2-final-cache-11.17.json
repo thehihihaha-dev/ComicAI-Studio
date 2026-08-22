@@ -1,0 +1,408 @@
+{
+  "schema_version": "reader-v2-final-cache.v1",
+  "checkpoint": "11.17",
+  "pages": 40,
+  "cache_hits": 40,
+  "cache_misses": 0,
+  "ocr_inference_calls": 0,
+  "wall_seconds": 6.849999772384763e-05,
+  "same_fingerprint": true,
+  "output_hash_equality": true,
+  "pages_detail": [
+    {
+      "page_id": "7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "page_order": 1,
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "fingerprint": "2c8e27294f9e4d7bb2de1ea866b0e8ea3140cfbf3d1dd22ea229ffe8e741aabf",
+      "output_hash": "cc5d3743e44769579a8c2fa5382cc9db4fcb7d362406df6b76ba9d2d39e8eade",
+      "region_count": 14,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "6ee61fc2-c530-45e4-9266-887612ac789f",
+      "page_order": 2,
+      "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "fingerprint": "c0c0c521842bc1694a94dc5f0ecb1c5d07648d45bf06e2d7e295fcf1b1db688d",
+      "output_hash": "942b5ae6e6923b60cf7a5183af84bf428bd133cbb1027a16f4619d7376ad721c",
+      "region_count": 5,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "fingerprint": "678c6cbdb59a7df65803e5d726eefd97f3ae04640f55687da07a46d8ffd83680",
+      "output_hash": "ff58e528a0f2864d1c43d38a30cfcb25bd448569a1b86e29afbc17a3baf71fa3",
+      "region_count": 26,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "fingerprint": "edd147039f835b6a83b5fb68fa6bb1b4a79c60d45b8cbb746270193225d63695",
+      "output_hash": "9899451d81ae82130611c18a714114fb7d79b2446ba5290a2b742642e5146a41",
+      "region_count": 4,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "fingerprint": "4c270d10d7564a8f9c7c3ea7090a078ea3946ae087f0041d1014ef4b6fab28c5",
+      "output_hash": "bb10b6e564ea5f02e524d8ff79e6b4eaf0ca90f682acb5ec138eb3eef2ddb0be",
+      "region_count": 8,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 6,
+      "source_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "fingerprint": "ed90825c1885e828d65279c7e79b6a0c8f609df2ca6809062da2b8aeb221c43f",
+      "output_hash": "ce8660c8c03808bfd21f12b790507e93c6214af2ba6bece29695932ab2e43eec",
+      "region_count": 10,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "page_order": 7,
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "fingerprint": "b8cf76fc01d4cff408bdf1deff09a54fe956bdd0e4ef2d7387ff09c4d43a0cce",
+      "output_hash": "44e9cb3b403946c0ceefc581f90f2c9272587fae917636647659067815dbb602",
+      "region_count": 5,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "8a1d898d-147b-44e8-8965-7e5aff42371b",
+      "page_order": 8,
+      "source_hash": "428525d3315701049ab604f867e7feafc9007d1ea164f552a9b0003b10c41648",
+      "fingerprint": "f4c32c769abc7238a9a6d00986f9cf47671aa512bcb3486f3f37c298686fbf63",
+      "output_hash": "aff94ae313a48f6a44c48ad97020171f412a7fac3b99f416740abde300c69411",
+      "region_count": 11,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "8a012bf3-d17d-47fc-9e5e-da617d341246",
+      "page_order": 9,
+      "source_hash": "0de4a0a538dae30dcf41137a2d7c52aab4ba2893b0808dfa255b2b7b326ded5c",
+      "fingerprint": "bb50972ef73e6d1c699df867d9c6bca6347f5774ceeade92f7450f588ee7d43f",
+      "output_hash": "bd242b990f66eed76eb93a253cac607c177354df0b77bef6208aa52bd91b18b3",
+      "region_count": 31,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "f04be431-5ae7-4a99-8cc8-cea0aa7b51b0",
+      "page_order": 10,
+      "source_hash": "9030de175619673b7cd386dfdae0cf3512f02b55e6c173540186932cf9b37c29",
+      "fingerprint": "e584584b97c843c9202bc6b1782a00aec0350e8066fcb434f6e839960063f9f6",
+      "output_hash": "5d5e9093dc163186905428ae008a8e006894cb04c40bf11102715ff43b3f6cab",
+      "region_count": 24,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "bc8edc4d-dc0f-46a4-bb3a-6253c469f01e",
+      "page_order": 11,
+      "source_hash": "38f7fb80004e85187f7aa19b9005fa7495602d099f5e20942c4cabaf35b25747",
+      "fingerprint": "52438edafae1009beda5855d5e813994e232663290e7015736ba936e69147da6",
+      "output_hash": "9d90c52da36e90666069be6d01840c33b1300a45e103833d06268bd36657d464",
+      "region_count": 18,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "74068cf6-f1be-452f-a651-f1538cf2132f",
+      "page_order": 12,
+      "source_hash": "61211806efbf9f5e8f1864f4b9983601971f77fd50295213b1b7100bd5419985",
+      "fingerprint": "55ce6b79da9207a618ca2c5738f766300298c0abf9d392934c1ce1336a912087",
+      "output_hash": "7f3649f596d8fb0a1cdce68a3d437d0f69429bb6d057204aaa3657ac3bb4e0b0",
+      "region_count": 13,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "cd477304-2381-454b-93ad-86f9927a48d0",
+      "page_order": 13,
+      "source_hash": "725a6a01324b5589add95b8bb3edebceda3da304092d94615fde167a08b899ee",
+      "fingerprint": "0cc10fea5625598cb6da3d28b3d810ce8a0df1fa07cf188fa4d94bc4a1e37861",
+      "output_hash": "79b21f2388a8cc9f864a7e71240e0fb0980a39c8d0388c1f566f217a482c1d4a",
+      "region_count": 28,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "4f88aaac-de33-49af-adf2-e372551e2f68",
+      "page_order": 14,
+      "source_hash": "61135e9ab37dc9571ad0a6bdfd5db36bffc8f86aa4c58ffa2bb32a6558fb051b",
+      "fingerprint": "5dfc1499da6a6b6e9adf500563da146ca0a6d01059144c18c99e4b5d38c6ae12",
+      "output_hash": "1600a8884ec8fc3e59a6ca95d5c11171a99fbb4f6f8d83afecddae4a1f7f0b4c",
+      "region_count": 22,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "page_order": 15,
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "fingerprint": "6d5c6cb9fea517e11baf2127d8f141b953d85c88d9a78b39045ee3f2bc960115",
+      "output_hash": "bcfd0eb111fb09657a890c8fd4da2c5549cd435be50da80f3365fd14d9fa207f",
+      "region_count": 52,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "4234adf6-3203-4795-8cb1-cc6dae92422c",
+      "page_order": 16,
+      "source_hash": "51d0b54eaa79ce08fd15ded2cc6158ecfad81034821ebe6eea49f748fc94537c",
+      "fingerprint": "11a9c22a42a04571ec2a8e8cec09923e85b0c94ae38a1fb558710b577b335b31",
+      "output_hash": "1dcbb911358cf29a67af591f726c6321095cc8a2531c9b3969be6a3fa5975bdc",
+      "region_count": 34,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "page_order": 17,
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "fingerprint": "c914bdfdb0037c9cfff60074bf87a22210088493207a8b9565caf508ada247bb",
+      "output_hash": "991aea2493e26f4879961c191b9baec38eff1832e7f23bc4134899bfe442c9ef",
+      "region_count": 34,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "fingerprint": "53058c8e36703551102a82971efaee7c978a0c3575f3220ad818aa39c21c068e",
+      "output_hash": "c80f569a534b088773a953bf5b2aab72c3dbe3055b41a6e42ea0b7d9d0b140d8",
+      "region_count": 6,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "3fdbafe1-9cad-4b01-840d-96c43ae71cd6",
+      "page_order": 19,
+      "source_hash": "7656d39c720f1b6b5fedc00453bf0a3e95ccc6b14caf5cb9954861367e34fadf",
+      "fingerprint": "16d2fdb8fb0d6a84afb55096e1c568069504a311831ee6de5ad246b185df177d",
+      "output_hash": "8422ba2b7341b5eb38212283379b511dddd0eda81b3a6d49fd092f4e3e9e615c",
+      "region_count": 0,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "f99daf67-d53e-4520-8449-187b0917893f",
+      "page_order": 20,
+      "source_hash": "059eceb2b82b72d22001442824fe7005cb84e07fb56b783fff4cd5fbfcaf9792",
+      "fingerprint": "bf0c80ae1477a7b84549923532b438932385b9fb6d977cc6b58f73fe32371990",
+      "output_hash": "8515675ca0aa9930cdaea7fa39d7806411cda9352c82dd725e33da37bcae4eea",
+      "region_count": 23,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "ea5d0958-051e-4abb-a1be-5cb91efbb59e",
+      "page_order": 21,
+      "source_hash": "10bb362efeb4e5b5ea3391f29f6fc784f6701e56b5b938407bc0e66df8c2d2c7",
+      "fingerprint": "13cbe9bfe1385eefb0021cf41c05e01e14f85f6004b93760811a9efc4f1374ac",
+      "output_hash": "91c4e3b1fe11d3b7ebb51eef21e6663f3c54e7a18a2e80222692457f39d20436",
+      "region_count": 14,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "ea998f26-7908-4074-97f9-551c55c736c6",
+      "page_order": 22,
+      "source_hash": "2b3bdd33405f30cd6cfb4f197bb0e9321ba7983692971d794d6e463b14360eac",
+      "fingerprint": "abd8fdb24d43762ae85532718bcd3636bf38c54466994c8d9a45d77d4980f9ba",
+      "output_hash": "2d1b5926fb911bac4576f3b0f4cdb77560cdcd4ee656cb6a3b176454b3810e90",
+      "region_count": 14,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "a3933ed1-8970-4ba6-98fb-5edb03ca189a",
+      "page_order": 23,
+      "source_hash": "4d4c01bb4fa40a11362feb948beeb7ad5e60fc8af7df12e8f39f2ac90b7d89b9",
+      "fingerprint": "aedaacac8e737236d1466bb402c3969a8e75c81c9f8f807f9e2939782451346c",
+      "output_hash": "9a3501acd41b6c15b4ef7721c8362c70a33d7941c46c1603a058e8eb4d4123ce",
+      "region_count": 41,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "9242622e-3df1-4ab5-a180-4519d69917be",
+      "page_order": 24,
+      "source_hash": "3673dd141b2682202307335f19da1a7696d90e10b9e85ddfb0d0df5760831171",
+      "fingerprint": "7cdc00cb73dee7316f835bd9905980d80f7ccd513df80890aa735f8269f89a32",
+      "output_hash": "d5812bcbb187513e89a301f96903d9116fa837d259e2941f772e0a502bf0a607",
+      "region_count": 37,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "3168d35d-28ae-4c71-b83c-8ff99811b544",
+      "page_order": 25,
+      "source_hash": "08586d8965898c3dc55071cb83916f4c7ed8c54d095803e7ec6bddb747519c87",
+      "fingerprint": "e6439c7029e5c364284c19cba76eb3df42807152968c43c1fdf26899d6d490ac",
+      "output_hash": "26c000285d145d52c5483628ef15f13b0e28afadc7f2af6fd6cc7d1798ace61d",
+      "region_count": 22,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "61069974-b2d7-421b-a683-4496e2c90c53",
+      "page_order": 26,
+      "source_hash": "774a019f7f2701e97733063beba28ce442fed9f867dafe28a3b4afe000b208fd",
+      "fingerprint": "0d92015be2077af80276342b4de3c1b5a52cccf29f4dcc2475b3a9e2a21de475",
+      "output_hash": "c2154a3e7b3f184857f437ba1f8dd76ea16f63868e49a0b456df0536a8f20cfb",
+      "region_count": 20,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "069a8cda-4763-4165-b59b-8eac893e7eb6",
+      "page_order": 27,
+      "source_hash": "4a891047d36cc3e3b8d42f1f2eda15b79b670d2f97074574637531934b9d9aa9",
+      "fingerprint": "236f658c5cb5de7dba0c6674bd6b031a0681855fdaaccd3b8b240c7555189585",
+      "output_hash": "ac011990dc39c3ba23b6200ac563e1885b1b4af268689ae4d4673c8d4c031989",
+      "region_count": 5,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "17569c63-1a39-4246-9826-97ab910fbe59",
+      "page_order": 28,
+      "source_hash": "bf6e2da2647b44e241d5a5a1167d945e954d17f76c1ac82ff15f72f45d855958",
+      "fingerprint": "dad1d28d498c756abb4cae3448b2d4eee884e5419bc57577380122babee4d3fe",
+      "output_hash": "0f5f65607dad404e6bd78d736de7de89c8d76fd428a4647dc80aff77bf3b8913",
+      "region_count": 38,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "cc8accc4-69c5-4990-8443-510cefa87c75",
+      "page_order": 29,
+      "source_hash": "7057c3235f23670f9ff6de459dfd348f37fd8e4b537b84d2b146bf3a282c07a3",
+      "fingerprint": "8cd0282c26a880ee3df5fd87b216fd855dd855e51c812429c17b397bc4bd354e",
+      "output_hash": "93c35ee89aa9bd5a87c820b11d9fb5006c3fea424058ddf36da5d7776fdd6ce2",
+      "region_count": 22,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "b215c30e-2af0-40f1-b16d-e7c9bdca9ca4",
+      "page_order": 30,
+      "source_hash": "7370cfef3bb452c745501bd55fe6b9c84658f3e9f7bb427cf918860c6be3f674",
+      "fingerprint": "8b6b10aef0ac861ab1e7eaa1812ce97b5da355c538d353c82100f10108870293",
+      "output_hash": "ff5884ab04a03a08345e100c657ec7783881a5760d0a6b3d93a66bccba7592fb",
+      "region_count": 20,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "32e89f56-86d2-43ec-bb9c-c36ddd50df05",
+      "page_order": 31,
+      "source_hash": "f4eb800525d4810f725079e7dd0496287518e3d82c73dbd101c5118666b71afd",
+      "fingerprint": "daa23317da1b8f070d1bf1890030dbc04e537bb81232dcae1eeb39cafdc9e0bd",
+      "output_hash": "0c1acb5b2ed2eb6bddc849752bfc33b8b0bb2f156760a42b85fd3a105ee961d0",
+      "region_count": 21,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "13b83895-0142-446a-b47e-a428f746566a",
+      "page_order": 32,
+      "source_hash": "8e91c22279ab055d7a387b8c1b10e7081d0bffc4c5575157e958d11c8614648a",
+      "fingerprint": "c0d3d9c091a874098fd600879e4bd7c4c41267ed805cc3343d18454ecb63e859",
+      "output_hash": "3f88398de19e234a33973ee4fe01aa1cd307ac2e6650409968dac80906d5ecd7",
+      "region_count": 25,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "9f9b92eb-13c9-4f42-807b-3e5e94a812ee",
+      "page_order": 33,
+      "source_hash": "ccd98a93a34f29e5492a3e11daae5a3f68c5d441b61fd8cc86a2c5fbf39f8cc2",
+      "fingerprint": "6292166269852ee3b29d752d8598b66fd63f54be2b71d4897ff1427e6fe27d1f",
+      "output_hash": "72d788401a2860fbc77350fcd7d8c3fa7f20dc1ff8ef3ca29dd1406de1c6698e",
+      "region_count": 31,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "ce014787-2a03-474f-96e4-02b9b2fe8371",
+      "page_order": 34,
+      "source_hash": "3ca4a372c2234cbbd3c045c6cadc397d52945100173ba6547fbd634389d2c3cc",
+      "fingerprint": "4d87070bd32ac7bce60db9b600ce8ea0513d085a5f74bd58e4207c9302cfa942",
+      "output_hash": "15d21a07b5c8b0a14257db6764494b4663df82ca71dbefcf3bb3d9d22ab5e764",
+      "region_count": 18,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "73d812aa-2b33-4bb7-a4fd-e76a3e7e31e8",
+      "page_order": 35,
+      "source_hash": "d17e77f0b9ef30941d2ea8a32bd3d9d5d97ee3e2369e4ca6f584137f210b718c",
+      "fingerprint": "079655090b10679b8de290f1bdfda67656763627b195779d5baab3e77134eeaf",
+      "output_hash": "b36b702ab6f47573bedfabb62e599527c0968bf04dfe5dddb86cb1d951e170de",
+      "region_count": 30,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "23794560-2c85-4971-8283-e572af6cd767",
+      "page_order": 36,
+      "source_hash": "b7bde3dd3ffa39d27e8ccb810d8de0e56c510c7d32383fa0533c3376332dd8b5",
+      "fingerprint": "706540c21cfa1bfaaa800408dd8f18a1edf713360b13668e74f5212a1ef7d0fd",
+      "output_hash": "2973a3175b684c3a9863b19d1cb0f1224d1fcbb3675da000877989f1581ea2bc",
+      "region_count": 32,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "3064f5aa-1ff4-4e56-a601-226257331cbf",
+      "page_order": 37,
+      "source_hash": "329efc95a819e0af78d72f480a7c947678dd5ced61dcf5c4c8da9c34c3d6eac4",
+      "fingerprint": "3ee6560d06265b05e21cdbe4321f97972ddd759cec52722f3d83c7f9d4e1c5da",
+      "output_hash": "610255b8c82e8480821cfc4f721fa03e7d2e6692ebf5e7e556da3fd80ae6c24c",
+      "region_count": 25,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "fingerprint": "fe31e0be2ed36cf6125365bb7ead664076f8279cc172bb027285edfbf14a70dc",
+      "output_hash": "ea4f756a8c8e493f53d837b22e24ceb878ac4fa4e87d2da07a9ab3930fb34075",
+      "region_count": 35,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "26bcd569-ebf6-4a87-a6db-cdffd575991a",
+      "page_order": 39,
+      "source_hash": "8064367d7d5ca5d506dada3366e4a612ca616fc4a283a3af9e7a4e5043caabed",
+      "fingerprint": "5151eb82b0454d0d45d0fe1f74171ac8c987e2f96823a340dfdeaef2c8ca06d9",
+      "output_hash": "a67d3b9fee93df1a9ad0197a0a747414573b0eb50a9ae355d5fb098bebeeb3f7",
+      "region_count": 18,
+      "cache_status": "HIT"
+    },
+    {
+      "page_id": "10ea1273-c797-4c4f-84a6-833abb87cb8f",
+      "page_order": 40,
+      "source_hash": "863869cd95839e8cad7bd3a5787e2889996b3ba915330b6df38f70d4b953e0bd",
+      "fingerprint": "c9289c5f82473e38e02219c22a434ba2af41353ac0e5dd879353976e8aa571cb",
+      "output_hash": "983bc39f513fcd0bfe71c3ff9fbffd23b7636280f93dcda2857642916a5ca0d3",
+      "region_count": 22,
+      "cache_status": "HIT"
+    }
+  ],
+  "fingerprint_inputs": [
+    "source_hash",
+    "geometry_version",
+    "region_geometry",
+    "ocr_engine_config",
+    "reading_order_algorithm_config",
+    "source_type"
+  ],
+  "gt_in_fingerprint": false,
+  "resources": {
+    "before": {
+      "timestamp": "2026-08-22T20:50:21.344271+00:00",
+      "process_rss_bytes": 1211645952,
+      "process_peak_rss_bytes": 1211645952,
+      "system_available_memory_bytes": 6549094400,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1204488765,
+      "process_cpu_seconds": 21.081994,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T20:50:21.370291+00:00",
+      "process_rss_bytes": 1211645952,
+      "process_peak_rss_bytes": 1211645952,
+      "system_available_memory_bytes": 6545899520,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1204488765,
+      "process_cpu_seconds": 21.09587,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "reader-routing-signals.v1",
+  "checkpoint": "11.6",
+  "artifact_kind": "comparison",
+  "status": "completed",
+  "N": 20,
+  "accuracy": {
+    "easyocr": {
+      "sample_count": 20,
+      "raw_exact_rate": 0.05,
+      "normalized_exact_rate": 0.05,
+      "micro_raw_cer": 0.9749262536873157,
+      "mean_normalized_cer": 0.8207196969696969,
+      "mean_wer": 0.9333333333333333,
+      "missing_text_rate": 0.0,
+      "edit_counts": {
+        "insertions": 0,
+        "deletions": 622,
+        "substitutions": 39
+      },
+      "edit_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9174041297935103,
+        "substitutions": 0.05752212389380531
+      }
+    },
+    "paddleocr": {
+      "sample_count": 20,
+      "raw_exact_rate": 0.05,
+      "normalized_exact_rate": 0.1,
+      "micro_raw_cer": 0.9572271386430679,
+      "mean_normalized_cer": 0.7982784365393061,
+      "mean_wer": 0.9,
+      "missing_text_rate": 0.15,
+      "edit_counts": {
+        "insertions": 0,
+        "deletions": 623,
+        "substitutions": 26
+      },
+      "edit_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9188790560471977,
+        "substitutions": 0.038348082595870206
+      }
+    }
+  },
+  "performance": {
+    "easyocr": {
+      "cold_initialization_seconds": 2.333946,
+      "warm_region_total_seconds": 0.109478,
+      "mean_region_seconds": 0.005474,
+      "total_benchmark_seconds": 2.443424,
+      "per_page_latency": "N/A: trusted-crop recognition benchmark"
+    },
+    "paddleocr": {
+      "cold_initialization_seconds": 1.664299,
+      "warm_region_total_seconds": 0.360581,
+      "mean_region_seconds": 0.018029,
+      "total_benchmark_seconds": 2.02488,
+      "per_page_latency": "N/A: trusted-crop recognition benchmark"
+    },
+    "dual_sequential_warm_seconds": 0.470059,
+    "dual_vs_easy_multiplier": 4.2936389046201064,
+    "projections_ocr_only_seconds": {
+      "5": {
+        "easyocr": 0.18246333333333334,
+        "dual_sequential": 0.7834316666666667
+      },
+      "10": {
+        "easyocr": 0.3649266666666667,
+        "dual_sequential": 1.5668633333333335
+      },
+      "20": {
+        "easyocr": 0.7298533333333334,
+        "dual_sequential": 3.133726666666667
+      },
+      "50": {
+        "easyocr": 1.8246333333333333,
+        "dual_sequential": 7.834316666666667
+      }
+    }
+  },
+  "resources": {
+    "easyocr": {
+      "before": {
+        "timestamp": "2026-08-22T14:08:39.258695+00:00",
+        "process_rss_bytes": 99565568,
+        "process_peak_rss_bytes": 99565568,
+        "system_available_memory_bytes": 7981334528,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1540232314,
+        "process_cpu_seconds": 0.325931,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "after": {
+        "timestamp": "2026-08-22T14:08:41.747022+00:00",
+        "process_rss_bytes": 1077821440,
+        "process_peak_rss_bytes": 1077805056,
+        "system_available_memory_bytes": 7083016192,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1540232314,
+        "process_cpu_seconds": 2.845751,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "peak_rss_bytes": 1077805056,
+      "swap_delta_bytes": 0,
+      "safety_state": "NORMAL"
+    },
+    "paddleocr": {
+      "before": {
+        "timestamp": "2026-08-22T14:08:41.784099+00:00",
+        "process_rss_bytes": 1078116352,
+        "process_peak_rss_bytes": 1078116352,
+        "system_available_memory_bytes": 7077478400,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1540232314,
+        "process_cpu_seconds": 2.861924,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "after": {
+        "timestamp": "2026-08-22T14:08:43.863662+00:00",
+        "process_rss_bytes": 1854504960,
+        "process_peak_rss_bytes": 1854504960,
+        "system_available_memory_bytes": 7165362176,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1540232314,
+        "process_cpu_seconds": 4.58114,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "peak_rss_bytes": 1854504960,
+      "swap_delta_bytes": 0,
+      "safety_state": "NORMAL"
+    }
+  },
+  "architecture_decision": "D. NO SAFE ROUTER YET",
+  "decision_reason": "Line-recognizer quality on logical-region crops is too low; benchmark-fitted routing cannot justify production safety.",
+  "structural_limitation": "Routing cannot recover undetected or incorrectly merged/split bubbles; 11.6 does not evaluate panel/bubble structure.",
+  "vlm_calls": 0
+}

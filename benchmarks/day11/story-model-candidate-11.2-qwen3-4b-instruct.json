@@ -1,0 +1,1452 @@
+{
+  "schema_version": 1,
+  "checkpoint": "11.2",
+  "status": "completed",
+  "candidate_model": "qwen3:4b-instruct",
+  "started_at": "2026-08-22T13:04:08.259720+00:00",
+  "completed_at": "2026-08-22T13:06:09.507706+00:00",
+  "input": {
+    "source_revision": "c38b7a515ccc6d7dd607f6d62b44de340e1948a3531031c6439ae999f52ee338",
+    "page_count": 3,
+    "project_id_hash": "b9dff15b2208a2fc9eb7dfc2e371981fa3c2357ea6d95c5992c57da266ce12f1",
+    "persisted_state_unchanged": true
+  },
+  "experiment_control": {
+    "generation_options_equal": true,
+    "analyzer_prompt_hash_equal": true,
+    "analyzer_control_prompt_hash": "01081a941bbae94afc1b0a8754b1d6713e987e216973515887694975d8981195",
+    "analyzer_candidate_prompt_hash": "01081a941bbae94afc1b0a8754b1d6713e987e216973515887694975d8981195",
+    "coverage_prompt_template_changed": false,
+    "coverage_payload_hash_equal": false,
+    "coverage_payload_note": "payload can differ because uncovered regions depend on candidate output"
+  },
+  "performance": {
+    "total_assets": 0,
+    "completed_assets": 0,
+    "failed_assets": 0,
+    "wall_clock_seconds": 121.202181,
+    "started_at": "2026-08-22T13:04:08.259740+00:00",
+    "ended_at": "2026-08-22T13:06:09.462911+00:00",
+    "stage_work_seconds": {
+      "story_analyzer": 89.934783,
+      "story_grounding": 0.263727,
+      "coverage_calculation": 0.073356,
+      "coverage_recovery": 30.808617
+    },
+    "average_page_seconds": 0.0,
+    "median_page_seconds": 0.0,
+    "p95_page_seconds": 0.0,
+    "slowest_stage": "story_analyzer",
+    "slowest_page": null,
+    "page_timings": [],
+    "project_timings": {
+      "story_analyzer": 89.934783,
+      "story_grounding": 0.263727,
+      "coverage_calculation": 0.073356,
+      "coverage_recovery": 30.808617,
+      "reliability_total": 121.146705
+    },
+    "total_model_calls": 2,
+    "total_model_inference_seconds": 120.168782,
+    "retry_count": 0,
+    "call_budget": {
+      "pages": {},
+      "project": {
+        "story_analyzer_full_calls": 1,
+        "story_analyzer_repair_calls": 0,
+        "story_analyzer_full_retry_calls": 0,
+        "coverage_recovery_calls": 1,
+        "coverage_recovery_repair_calls": 0,
+        "coverage_recovery_continuation_calls": 0
+      }
+    },
+    "stages": [
+      {
+        "stage": "story_analyzer",
+        "duration_seconds": 89.934783,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.044827,
+        "success": true
+      },
+      {
+        "stage": "coverage_calculation",
+        "duration_seconds": 0.03757,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.053722,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.048288,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.039696,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.037859,
+        "success": true
+      },
+      {
+        "stage": "coverage_recovery",
+        "duration_seconds": 30.808617,
+        "success": true
+      },
+      {
+        "stage": "story_grounding",
+        "duration_seconds": 0.039335,
+        "success": true
+      },
+      {
+        "stage": "coverage_calculation",
+        "duration_seconds": 0.035786,
+        "success": true
+      },
+      {
+        "stage": "reliability_total",
+        "duration_seconds": 121.146705,
+        "success": true
+      }
+    ],
+    "model_calls": [
+      {
+        "stage": "story_analyzer",
+        "attempt": 1,
+        "model": "qwen3:4b-instruct",
+        "prompt_chars": 11462,
+        "prompt_hash": "01081a941bbae94afc1b0a8754b1d6713e987e216973515887694975d8981195",
+        "generation_options": {
+          "num_ctx": 8192,
+          "temperature": 0,
+          "seed": 424242,
+          "top_k": 1,
+          "top_p": 1.0,
+          "repeat_penalty": 1.0
+        },
+        "prelaunch_safety_state": "NORMAL",
+        "total_duration": 89808206208,
+        "load_duration": 1142129958,
+        "prompt_eval_count": 3325,
+        "prompt_eval_duration": 11180949000,
+        "eval_count": 1914,
+        "eval_duration": 77473115000,
+        "output_chars": 6355,
+        "raw_response_hash": "6fd91db53db82b1cde8b72cdc68ca4aae1076b84346ef0999e7eb128e170c3a9",
+        "duration_seconds": 89.853922,
+        "success": true
+      },
+      {
+        "stage": "coverage_recovery",
+        "attempt": 1,
+        "model": "qwen3:4b-instruct",
+        "prompt_chars": 4404,
+        "prompt_hash": "edbc9e6bb51b55110c9ed7724c4d0563a15c77ee7357f3ffdc9e5d7a256e894a",
+        "generation_options": {
+          "num_ctx": 8192,
+          "temperature": 0,
+          "seed": 424242,
+          "top_k": 1,
+          "top_p": 1.0,
+          "repeat_penalty": 1.0,
+          "num_predict": 2048
+        },
+        "prelaunch_safety_state": "NORMAL",
+        "total_duration": 30271990209,
+        "load_duration": 236188959,
+        "prompt_eval_count": 1192,
+        "prompt_eval_duration": 9477289000,
+        "eval_count": 303,
+        "eval_duration": 20371336000,
+        "output_chars": 1229,
+        "raw_response_hash": "17823bedb4c3a76fb2b92c3c276b15a5a611ca3dd5b44a65e0a2c3dc2fa84e86",
+        "duration_seconds": 30.31486,
+        "success": true
+      }
+    ],
+    "resources": {
+      "safety_state": "NORMAL",
+      "process_rss_start_bytes": 394264576,
+      "process_rss_end_bytes": 397836288,
+      "peak_observed_rss_bytes": 397836288,
+      "system_available_memory_start_bytes": 8002060288,
+      "system_available_memory_end_bytes": 4791730176,
+      "swap_before_bytes": 1749947514,
+      "swap_after_bytes": 1741558906,
+      "swap_delta_bytes": -8388608,
+      "process_cpu_utilization_percent": 0.374,
+      "samples": [
+        {
+          "point": "collector_start",
+          "timestamp": "2026-08-22T13:04:08.259764+00:00",
+          "process_rss_bytes": 394264576,
+          "process_peak_rss_bytes": 394264576,
+          "system_available_memory_bytes": 8002060288,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.362461,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:04:08.279041+00:00",
+          "process_rss_bytes": 394313728,
+          "process_peak_rss_bytes": 394313728,
+          "system_available_memory_bytes": 8003862528,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.370142,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "reliability_total"
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:04:08.296625+00:00",
+          "process_rss_bytes": 394313728,
+          "process_peak_rss_bytes": 394313728,
+          "system_available_memory_bytes": 8005681152,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.377174,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_analyzer"
+        },
+        {
+          "point": "model_call_start",
+          "timestamp": "2026-08-22T13:04:08.333675+00:00",
+          "process_rss_bytes": 394379264,
+          "process_peak_rss_bytes": 394379264,
+          "system_available_memory_bytes": 8004911104,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.392125,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "stage": "story_analyzer",
+          "attempt": 1
+        },
+        {
+          "point": "model_call_end",
+          "timestamp": "2026-08-22T13:05:38.188458+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397737984,
+          "system_available_memory_bytes": 4853268480,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.412349,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "success": true,
+          "stage": "story_analyzer",
+          "attempt": 1
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.232168+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397754368,
+          "system_available_memory_bytes": 4851957760,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.430694,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_analyzer",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.268097+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397754368,
+          "system_available_memory_bytes": 4858904576,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.445139,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.312917+00:00",
+          "process_rss_bytes": 397819904,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4868653056,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.465727,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.350742+00:00",
+          "process_rss_bytes": 397819904,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4866572288,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.481077,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.388350+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4874354688,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.495946,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.434119+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4878188544,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.513463,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_recovery"
+        },
+        {
+          "point": "model_call_start",
+          "timestamp": "2026-08-22T13:05:38.511850+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4879171584,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.544915,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "stage": "coverage_recovery",
+          "attempt": 1
+        },
+        {
+          "point": "model_call_end",
+          "timestamp": "2026-08-22T13:06:08.827041+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4798480384,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.560013,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "success": true,
+          "stage": "coverage_recovery",
+          "attempt": 1
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:08.893634+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790190080,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.587381,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:08.947358+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4781522944,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.610488,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:08.996629+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789059584,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.630782,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.044919+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4791795712,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.650467,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.089645+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789256192,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.668167,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.129350+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790779904,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.683961,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.168178+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4788371456,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.699089,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.206034+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790419456,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.715215,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.242982+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792975360,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.730292,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_recovery",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.279318+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4795711488,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.744107,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.318663+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789796864,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.760749,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.355228+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792385536,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.774706,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.391030+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4788305920,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.788587,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation",
+          "success": true
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.426761+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792057856,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.802236,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "reliability_total",
+          "success": true
+        },
+        {
+          "point": "collector_end",
+          "timestamp": "2026-08-22T13:06:09.462982+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4791730176,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.816224,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        }
+      ]
+    }
+  },
+  "model_call_breakdown": {
+    "story_analyzer": 1,
+    "coverage_recovery": 1
+  },
+  "model_runtime": {
+    "residency": {
+      "name": "qwen3:4b-instruct",
+      "resident_size_bytes": 3856589127,
+      "vram_size_bytes": 3856589127,
+      "parameter_size": "4.0B",
+      "quantization": "Q4_K_M",
+      "context_length": 8192
+    },
+    "first_call_load_seconds": 1.14213,
+    "first_call_total_ollama_seconds": 89.808206
+  },
+  "correctness": {
+    "output_structurally_valid": true,
+    "event_count": 8,
+    "main_story_event_count": 5,
+    "grounded_claim_count": 10,
+    "accepted_unsupported_claims": 0,
+    "unsupported_event_count": 1,
+    "unsupported_event_ids": [
+      "event_2"
+    ],
+    "script_ready_event_count": 7,
+    "source_reference_valid": true,
+    "invalid_source_references": [],
+    "grounding_issues": [
+      {
+        "code": "unsupported_named_attribution",
+        "entity_type": "claim",
+        "entity_id": "event_2_claim_1",
+        "event_id": "event_2"
+      },
+      {
+        "code": "claim_deattributed",
+        "entity_type": "claim",
+        "entity_id": "coverage_recovery_p3_r7_16c6ee1d_claim_1",
+        "event_id": "coverage_recovery_p3_r7_16c6ee1d",
+        "removed_attribution": "Rin"
+      },
+      {
+        "code": "unsupported_progression_event",
+        "event_id": "event_2"
+      }
+    ],
+    "coverage": {
+      "eligible_regions": 22,
+      "important_regions": 22,
+      "covered_regions": 11,
+      "non_story_relevant_regions": 3,
+      "unresolved_regions": 8,
+      "coverage_score": 0.6364
+    },
+    "analysis_attempts": 1,
+    "recovery_attempts": 1,
+    "language": "mixed language",
+    "events": [
+      {
+        "id": "event_1",
+        "summary": "The characters meet for the first time in a dungeon during a random pairing event.",
+        "importance": 1.0,
+        "emotion": "neutral",
+        "story_role": "main_story",
+        "claims": [
+          {
+            "id": "event_1_claim_1",
+            "text": "A character named Rin is paired randomly with another character in a dungeon.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "id": "event_1_claim_2",
+            "text": "The pairing occurs during a dungeon battle.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  6
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+            "page_order": 2,
+            "region_ids": [
+              6
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "event_2",
+        "summary": "The characters begin a relationship through repeated interactions in the game.",
+        "importance": 0.9,
+        "emotion": "positive",
+        "story_role": "main_story",
+        "claims": [],
+        "unsupported_claims": [
+          {
+            "id": "event_2_claim_1",
+            "text": "The relationship between Rin and Kazu grows gradually through repeated interactions.",
+            "reason": "Named entity attribution is not present in the sources."
+          }
+        ],
+        "sources": [],
+        "script_ready": false
+      },
+      {
+        "id": "event_3",
+        "summary": "The characters have a recurring pattern of interaction over multiple years, including planning activities together.",
+        "importance": 0.8,
+        "emotion": "neutral",
+        "story_role": "main_story",
+        "claims": [
+          {
+            "id": "event_3_claim_1",
+            "text": "In the first year, the characters meet and begin a relationship through gameplay guidance.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  1
+                ]
+              },
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  2
+                ]
+              },
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "event_3_claim_2",
+            "text": "In the second year, the characters plan to go out together.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+                "page_order": 3,
+                "region_ids": [
+                  3
+                ]
+              },
+              {
+                "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+                "page_order": 3,
+                "region_ids": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "id": "event_3_claim_3",
+            "text": "In the third year, the characters plan to go fishing together.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+                "page_order": 3,
+                "region_ids": [
+                  10
+                ]
+              },
+              {
+                "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+                "page_order": 3,
+                "region_ids": [
+                  11
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+            "page_order": 2,
+            "region_ids": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+            "page_order": 3,
+            "region_ids": [
+              3,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "event_4",
+        "summary": "A character says 'AH' in response to a greeting, indicating a moment of recognition or surprise.",
+        "importance": 0.3,
+        "emotion": "neutral",
+        "story_role": "supporting_context",
+        "claims": [
+          {
+            "id": "event_4_claim_1",
+            "text": "A character says 'AH' in response to a greeting.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+                "page_order": 1,
+                "region_ids": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+            "page_order": 1,
+            "region_ids": [
+              3
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "event_5",
+        "summary": "A character says 'Hây' in response to a request to continue a ritual or action.",
+        "importance": 0.3,
+        "emotion": "neutral",
+        "story_role": "supporting_context",
+        "claims": [
+          {
+            "id": "event_5_claim_1",
+            "text": "A character says 'Hây' in response to a request to continue an action.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  8
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+            "page_order": 2,
+            "region_ids": [
+              8
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "event_6",
+        "summary": "A character says 'Hãy thắp thêm chút nữa!' to continue a ritual or action.",
+        "importance": 0.3,
+        "emotion": "neutral",
+        "story_role": "supporting_context",
+        "claims": [
+          {
+            "id": "event_6_claim_1",
+            "text": "A character says 'Hãy thắp thêm chút nữa!' to continue an action.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+                "page_order": 2,
+                "region_ids": [
+                  4
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+            "page_order": 2,
+            "region_ids": [
+              4
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "coverage_recovery_p1_r4_1535a3b4",
+        "summary": "A character says 'AH' in response to a greeting.",
+        "importance": 0.5,
+        "emotion": "neutral",
+        "story_role": "main_story",
+        "claims": [
+          {
+            "id": "coverage_recovery_p1_r4_1535a3b4_claim_1",
+            "text": "A character says 'AH' in response to a greeting.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+                "page_order": 1,
+                "region_ids": [
+                  4
+                ]
+              }
+            ]
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+            "page_order": 1,
+            "region_ids": [
+              4
+            ]
+          }
+        ],
+        "script_ready": true
+      },
+      {
+        "id": "coverage_recovery_p3_r7_16c6ee1d",
+        "summary": "A character named Rin is paired with another character in a dungeon for a dungeon exploration.",
+        "importance": 0.5,
+        "emotion": "neutral",
+        "story_role": "main_story",
+        "claims": [
+          {
+            "id": "coverage_recovery_p3_r7_16c6ee1d_claim_1",
+            "text": "A character named a character is paired with another character in a dungeon for a dungeon exploration.",
+            "claim_type": "fact",
+            "sources": [
+              {
+                "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+                "page_order": 3,
+                "region_ids": [
+                  7
+                ]
+              }
+            ],
+            "repair_type": "remove_unsupported_attribution",
+            "original_text": "A character named Rin is paired with another character in a dungeon for a dungeon exploration.",
+            "removed_attribution": "Rin"
+          }
+        ],
+        "unsupported_claims": [],
+        "sources": [
+          {
+            "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+            "page_order": 3,
+            "region_ids": [
+              7
+            ]
+          }
+        ],
+        "script_ready": true
+      }
+    ],
+    "detected_rejected_unsupported_claims": 1
+  },
+  "safety": {
+    "prelaunch": {
+      "timestamp": "2026-08-22T13:04:08.209434+00:00",
+      "process_rss_bytes": 390332416,
+      "process_peak_rss_bytes": 391266304,
+      "system_available_memory_bytes": 8007794688,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1749947514,
+      "process_cpu_seconds": 1.33868,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "observed_state": "NORMAL",
+    "resources": {
+      "safety_state": "NORMAL",
+      "process_rss_start_bytes": 394264576,
+      "process_rss_end_bytes": 397836288,
+      "peak_observed_rss_bytes": 397836288,
+      "system_available_memory_start_bytes": 8002060288,
+      "system_available_memory_end_bytes": 4791730176,
+      "swap_before_bytes": 1749947514,
+      "swap_after_bytes": 1741558906,
+      "swap_delta_bytes": -8388608,
+      "process_cpu_utilization_percent": 0.374,
+      "samples": [
+        {
+          "point": "collector_start",
+          "timestamp": "2026-08-22T13:04:08.259764+00:00",
+          "process_rss_bytes": 394264576,
+          "process_peak_rss_bytes": 394264576,
+          "system_available_memory_bytes": 8002060288,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.362461,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:04:08.279041+00:00",
+          "process_rss_bytes": 394313728,
+          "process_peak_rss_bytes": 394313728,
+          "system_available_memory_bytes": 8003862528,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.370142,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "reliability_total"
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:04:08.296625+00:00",
+          "process_rss_bytes": 394313728,
+          "process_peak_rss_bytes": 394313728,
+          "system_available_memory_bytes": 8005681152,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.377174,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_analyzer"
+        },
+        {
+          "point": "model_call_start",
+          "timestamp": "2026-08-22T13:04:08.333675+00:00",
+          "process_rss_bytes": 394379264,
+          "process_peak_rss_bytes": 394379264,
+          "system_available_memory_bytes": 8004911104,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1749947514,
+          "process_cpu_seconds": 1.392125,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "stage": "story_analyzer",
+          "attempt": 1
+        },
+        {
+          "point": "model_call_end",
+          "timestamp": "2026-08-22T13:05:38.188458+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397737984,
+          "system_available_memory_bytes": 4853268480,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.412349,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "success": true,
+          "stage": "story_analyzer",
+          "attempt": 1
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.232168+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397754368,
+          "system_available_memory_bytes": 4851957760,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.430694,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_analyzer",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.268097+00:00",
+          "process_rss_bytes": 397754368,
+          "process_peak_rss_bytes": 397754368,
+          "system_available_memory_bytes": 4858904576,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.445139,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.312917+00:00",
+          "process_rss_bytes": 397819904,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4868653056,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.465727,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.350742+00:00",
+          "process_rss_bytes": 397819904,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4866572288,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.481077,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:05:38.388350+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397819904,
+          "system_available_memory_bytes": 4874354688,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.495946,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:05:38.434119+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4878188544,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.513463,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_recovery"
+        },
+        {
+          "point": "model_call_start",
+          "timestamp": "2026-08-22T13:05:38.511850+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4879171584,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.544915,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "stage": "coverage_recovery",
+          "attempt": 1
+        },
+        {
+          "point": "model_call_end",
+          "timestamp": "2026-08-22T13:06:08.827041+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4798480384,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.560013,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "model": "qwen3:4b-instruct",
+          "success": true,
+          "stage": "coverage_recovery",
+          "attempt": 1
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:08.893634+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790190080,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.587381,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:08.947358+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4781522944,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.610488,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:08.996629+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789059584,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.630782,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.044919+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4791795712,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.650467,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.089645+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789256192,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.668167,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.129350+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790779904,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.683961,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.168178+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4788371456,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.699089,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.206034+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4790419456,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.715215,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.242982+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792975360,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.730292,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_recovery",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.279318+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4795711488,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.744107,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.318663+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4789796864,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.760749,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "story_grounding",
+          "success": true
+        },
+        {
+          "point": "stage_start",
+          "timestamp": "2026-08-22T13:06:09.355228+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792385536,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.774706,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation"
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.391030+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4788305920,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.788587,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "coverage_calculation",
+          "success": true
+        },
+        {
+          "point": "stage_end",
+          "timestamp": "2026-08-22T13:06:09.426761+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4792057856,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.802236,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL",
+          "stage": "reliability_total",
+          "success": true
+        },
+        {
+          "point": "collector_end",
+          "timestamp": "2026-08-22T13:06:09.462982+00:00",
+          "process_rss_bytes": 397836288,
+          "process_peak_rss_bytes": 397836288,
+          "system_available_memory_bytes": 4791730176,
+          "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+          "swap_used_bytes": 1741558906,
+          "process_cpu_seconds": 1.816224,
+          "temperature_celsius": null,
+          "temperature_note": "not measured: no reliable supported macOS standard-library API",
+          "safety_state": "NORMAL"
+        }
+      ]
+    }
+  },
+  "cooldown": {
+    "ollama_stopped_after_active_requests_completed": true,
+    "system_memory_free_percent": 80,
+    "system_available_memory_bytes": 7780384768,
+    "swap_used_bytes": 1741558906,
+    "safety_state": "NORMAL",
+    "second_inference_run": false
+  }
+}

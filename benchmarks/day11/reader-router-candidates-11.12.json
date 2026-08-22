@@ -1,0 +1,84 @@
+{
+  "schema_version": "reader-router-candidates.v1",
+  "checkpoint": "11.12",
+  "benchmark_fitted": true,
+  "contracts": {
+    "SAFE_CANDIDATE": "multiple cheap signals agree; benchmark evidence only",
+    "HARD": "weak evidence defaults to escalation",
+    "STRUCTURAL_REVIEW": "merge/split, crop boundary, or geometry structure is questionable"
+  },
+  "definitions": {
+    "R1": "min confidence >= 0.98",
+    "R2": "R1 + single fragment + no boundary warning",
+    "R3": "R2 + >=4 chars + sane symbols/repeats/whitespace",
+    "R4": "R3 at confidence >=0.995 + <=0.01 confidence spread + stable geometry + conservative density"
+  },
+  "results": [
+    {
+      "candidate": "R1",
+      "safe_count": 2,
+      "safe_coverage": 0.04,
+      "safe_correct": 2,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_precision": 1.0,
+      "hard_count": 48,
+      "hard_rate": 0.96,
+      "structural_review_count": 0,
+      "structural_review_rate": 0.0,
+      "correct_ocr_routed_hard": 8,
+      "routing_nanoseconds": 5458,
+      "nanoseconds_per_region": 109.16
+    },
+    {
+      "candidate": "R2",
+      "safe_count": 1,
+      "safe_coverage": 0.02,
+      "safe_correct": 1,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_precision": 1.0,
+      "hard_count": 17,
+      "hard_rate": 0.34,
+      "structural_review_count": 32,
+      "structural_review_rate": 0.64,
+      "correct_ocr_routed_hard": 9,
+      "routing_nanoseconds": 4834,
+      "nanoseconds_per_region": 96.68
+    },
+    {
+      "candidate": "R3",
+      "safe_count": 0,
+      "safe_coverage": 0.0,
+      "safe_correct": 0,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_precision": null,
+      "hard_count": 18,
+      "hard_rate": 0.36,
+      "structural_review_count": 32,
+      "structural_review_rate": 0.64,
+      "correct_ocr_routed_hard": 10,
+      "routing_nanoseconds": 9583,
+      "nanoseconds_per_region": 191.66
+    },
+    {
+      "candidate": "R4",
+      "safe_count": 0,
+      "safe_coverage": 0.0,
+      "safe_correct": 0,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_precision": null,
+      "hard_count": 18,
+      "hard_rate": 0.36,
+      "structural_review_count": 32,
+      "structural_review_rate": 0.64,
+      "correct_ocr_routed_hard": 10,
+      "routing_nanoseconds": 9209,
+      "nanoseconds_per_region": 184.18
+    }
+  ],
+  "selected_for_analysis": "R2",
+  "deployment": "NONE"
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "reader-order-errors.v1",
+  "checkpoint": "11.11",
+  "aggregate_causes": {
+    "H. region should have been excluded": 13,
+    "C. top-to-bottom ordering error": 2,
+    "A. row grouping error": 4,
+    "B. right-to-left ordering error": 2
+  },
+  "dominant_rule_cluster": "tiered_order row/tier geometry",
+  "pages": [
+    {
+      "page_order": 1,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 0,
+      "causes": {},
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 2,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 0,
+      "causes": {},
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 3,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 2,
+      "causes": {
+        "H. region should have been excluded": 2
+      },
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 4,
+      "exact": false,
+      "inversions": 2,
+      "moved_regions": 3,
+      "excluded_predicted": 0,
+      "causes": {
+        "C. top-to-bottom ordering error": 2
+      },
+      "same_rule_cluster": "tiered_order geometry"
+    },
+    {
+      "page_order": 5,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 0,
+      "causes": {},
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 7,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 0,
+      "causes": {},
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 15,
+      "exact": false,
+      "inversions": 2,
+      "moved_regions": 3,
+      "excluded_predicted": 4,
+      "causes": {
+        "A. row grouping error": 2,
+        "H. region should have been excluded": 4
+      },
+      "same_rule_cluster": "tiered_order geometry"
+    },
+    {
+      "page_order": 17,
+      "exact": false,
+      "inversions": 2,
+      "moved_regions": 4,
+      "excluded_predicted": 3,
+      "causes": {
+        "A. row grouping error": 1,
+        "B. right-to-left ordering error": 1,
+        "H. region should have been excluded": 3
+      },
+      "same_rule_cluster": "tiered_order geometry"
+    },
+    {
+      "page_order": 18,
+      "exact": true,
+      "inversions": 0,
+      "moved_regions": 0,
+      "excluded_predicted": 0,
+      "causes": {},
+      "same_rule_cluster": null
+    },
+    {
+      "page_order": 38,
+      "exact": false,
+      "inversions": 2,
+      "moved_regions": 3,
+      "excluded_predicted": 4,
+      "causes": {
+        "B. right-to-left ordering error": 1,
+        "A. row grouping error": 1,
+        "H. region should have been excluded": 4
+      },
+      "same_rule_cluster": "tiered_order geometry"
+    }
+  ]
+}

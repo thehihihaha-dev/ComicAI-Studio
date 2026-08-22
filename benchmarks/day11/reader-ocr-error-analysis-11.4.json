@@ -1,0 +1,220 @@
+{
+  "schema_version": "reader-ocr-expanded.v1",
+  "checkpoint": "11.4",
+  "artifact_kind": "error_analysis",
+  "status": "completed",
+  "created_at": "2026-08-22T13:40:20.436669+00:00",
+  "pairs": [
+    {
+      "sample_id": "7937513a822d5b1937ac",
+      "agreement": false,
+      "outcome": "disagreement_both_wrong",
+      "easyocr": {
+        "sample_id": "7937513a822d5b1937ac",
+        "language": "vi",
+        "text_role": "speech_bubble",
+        "difficulty_tags": [
+          "multiline",
+          "punctuation_heavy"
+        ],
+        "cache_key": "fd0f6016ecaabbc05ec3d7c80e85e7748b5ba7777eb7904d612303f4d5b0da2a",
+        "cache_status": "measured_this_run",
+        "latency_seconds": 0.018207,
+        "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "hypothesis_raw": "9",
+        "reference_normalized": "anh chỉ biết nói \"ah\" thôi sao!?",
+        "hypothesis_normalized": "9",
+        "raw_exact_match": false,
+        "normalized_exact_match": false,
+        "raw_cer": 1.0,
+        "normalized_cer": 1.0,
+        "wer": 1.0,
+        "edit_operations": {
+          "insertions": 0,
+          "deletions": 31,
+          "substitutions": 1
+        },
+        "operation_rates": {
+          "insertions": 0.0,
+          "deletions": 0.96875,
+          "substitutions": 0.03125
+        },
+        "missing_text": false,
+        "confidence": 0.34931885835612775,
+        "confidence_bucket": "<0.60",
+        "error_types": [
+          "SUBSTITUTION",
+          "DELETION"
+        ]
+      },
+      "paddleocr": {
+        "sample_id": "7937513a822d5b1937ac",
+        "language": "vi",
+        "text_role": "speech_bubble",
+        "difficulty_tags": [
+          "multiline",
+          "punctuation_heavy"
+        ],
+        "cache_key": "dcf3a54c12782f710435de5b91691120688090711b2219b7e712483437b7c506",
+        "cache_status": "measured_this_run",
+        "latency_seconds": 0.028622,
+        "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "hypothesis_raw": "新 ",
+        "reference_normalized": "anh chỉ biết nói \"ah\" thôi sao!?",
+        "hypothesis_normalized": "新",
+        "raw_exact_match": false,
+        "normalized_exact_match": false,
+        "raw_cer": 0.96875,
+        "normalized_cer": 1.0,
+        "wer": 1.0,
+        "edit_operations": {
+          "insertions": 0,
+          "deletions": 30,
+          "substitutions": 1
+        },
+        "operation_rates": {
+          "insertions": 0.0,
+          "deletions": 0.9375,
+          "substitutions": 0.03125
+        },
+        "missing_text": false,
+        "confidence": 0.269295871257782,
+        "confidence_bucket": "<0.60",
+        "error_types": [
+          "LANGUAGE_CONFUSION",
+          "SUBSTITUTION",
+          "DELETION"
+        ]
+      },
+      "both_confidently_wrong": false
+    },
+    {
+      "sample_id": "813cdd84342ca90fd7c6",
+      "agreement": false,
+      "outcome": "disagreement_both_wrong",
+      "easyocr": {
+        "sample_id": "813cdd84342ca90fd7c6",
+        "language": "vi",
+        "text_role": "speech_bubble",
+        "difficulty_tags": [
+          "small_text"
+        ],
+        "cache_key": "1740d2089fd2589f3e282f03c8e162368029b53db27f0150326474f9f8bdf7bb",
+        "cache_status": "measured_this_run",
+        "latency_seconds": 0.003761,
+        "reference_raw": "Hây",
+        "hypothesis_raw": "~Hôy",
+        "reference_normalized": "hây",
+        "hypothesis_normalized": "~hôy",
+        "raw_exact_match": false,
+        "normalized_exact_match": false,
+        "raw_cer": 0.6666666666666666,
+        "normalized_cer": 0.6666666666666666,
+        "wer": 1.0,
+        "edit_operations": {
+          "insertions": 1,
+          "deletions": 0,
+          "substitutions": 1
+        },
+        "operation_rates": {
+          "insertions": 0.3333333333333333,
+          "deletions": 0.0,
+          "substitutions": 0.3333333333333333
+        },
+        "missing_text": false,
+        "confidence": 0.1521681696176529,
+        "confidence_bucket": "<0.60",
+        "error_types": [
+          "SUBSTITUTION",
+          "INSERTION"
+        ]
+      },
+      "paddleocr": {
+        "sample_id": "813cdd84342ca90fd7c6",
+        "language": "vi",
+        "text_role": "speech_bubble",
+        "difficulty_tags": [
+          "small_text"
+        ],
+        "cache_key": "d21b574b2a9c091f21d3d02cfb6a5a2d362772225cf085c0188d2540ccfe0adb",
+        "cache_status": "measured_this_run",
+        "latency_seconds": 0.018019,
+        "reference_raw": "Hây",
+        "hypothesis_raw": "Háy",
+        "reference_normalized": "hây",
+        "hypothesis_normalized": "háy",
+        "raw_exact_match": false,
+        "normalized_exact_match": false,
+        "raw_cer": 0.3333333333333333,
+        "normalized_cer": 0.3333333333333333,
+        "wer": 1.0,
+        "edit_operations": {
+          "insertions": 0,
+          "deletions": 0,
+          "substitutions": 1
+        },
+        "operation_rates": {
+          "insertions": 0.0,
+          "deletions": 0.0,
+          "substitutions": 0.3333333333333333
+        },
+        "missing_text": false,
+        "confidence": 0.8596861362457275,
+        "confidence_bucket": "0.80-0.90",
+        "error_types": [
+          "DIACRITIC_ERROR",
+          "SUBSTITUTION"
+        ]
+      },
+      "both_confidently_wrong": false
+    }
+  ],
+  "error_type_counts": {
+    "easyocr": {
+      "SUBSTITUTION": 2,
+      "DELETION": 1,
+      "INSERTION": 1
+    },
+    "paddleocr": {
+      "LANGUAGE_CONFUSION": 1,
+      "SUBSTITUTION": 2,
+      "DELETION": 1,
+      "DIACRITIC_ERROR": 1
+    }
+  },
+  "confidence_buckets": {
+    "easyocr": {
+      "<0.60": {
+        "sample_count": 2,
+        "exact_count": 0,
+        "mean_cer": 0.8333333333333333
+      }
+    },
+    "paddleocr": {
+      "0.80-0.90": {
+        "sample_count": 1,
+        "exact_count": 0,
+        "mean_cer": 0.3333333333333333
+      },
+      "<0.60": {
+        "sample_count": 1,
+        "exact_count": 0,
+        "mean_cer": 1.0
+      }
+    }
+  },
+  "high_confidence_errors": {
+    "easyocr": [],
+    "paddleocr": []
+  },
+  "agreement_matrix": {
+    "agreement_correct": 0,
+    "agreement_incorrect": 0,
+    "disagreement_easy_correct": 0,
+    "disagreement_paddle_correct": 0,
+    "disagreement_both_wrong": 2,
+    "agreement_rate": 0.0,
+    "both_confidently_wrong": 0
+  },
+  "conclusion": "Confidence alone is not safe; sample count is too small to establish agreement calibration."
+}

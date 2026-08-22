@@ -1,0 +1,208 @@
+{
+  "schema_version": "reader-residual-recognition-summary.v1",
+  "checkpoint": "11.15",
+  "decision": "C. CANDIDATE DOES NOT JUSTIFY COST",
+  "candidate": "PP-OCRv6_medium_rec",
+  "selected_mode": "D",
+  "dataset": {
+    "verified": 71,
+    "unreadable": 10,
+    "residual_wrong": 63
+  },
+  "metrics": {
+    "A": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14845663890249877,
+      "wer": 0.3887733887733888
+    },
+    "B": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14551690347868693,
+      "wer": 0.3991683991683992
+    },
+    "C": {
+      "n": 71,
+      "exact": 6,
+      "exact_rate": 0.08450704225352113,
+      "normalized_cer": 0.9279764821166095,
+      "wer": 0.9833679833679834,
+      "improved": 5,
+      "unchanged": 7,
+      "regressed": 59,
+      "wrong_to_correct": 3,
+      "correct_to_wrong": 5
+    },
+    "D": {
+      "n": 71,
+      "exact": 6,
+      "exact_rate": 0.08450704225352113,
+      "normalized_cer": 0.9265066144047036,
+      "wer": 0.9833679833679834,
+      "improved": 6,
+      "unchanged": 7,
+      "regressed": 58,
+      "wrong_to_correct": 3,
+      "correct_to_wrong": 5
+    }
+  },
+  "residual": {
+    "n": 63,
+    "repaired_exact": 3,
+    "repair_rate": 0.047619047619047616,
+    "improved": 6,
+    "unchanged": 4,
+    "regressed": 53,
+    "control_cer": 0.15388522092432708,
+    "candidate_cer": 0.9436262061960387,
+    "cer_reduction": -0.7897409852717115
+  },
+  "breakdown": {
+    "HARD": {
+      "control": {
+        "n": 21,
+        "exact": 6,
+        "exact_rate": 0.2857142857142857,
+        "normalized_cer": 0.11494252873563218,
+        "wer": 0.3492063492063492
+      },
+      "candidate": {
+        "n": 21,
+        "exact": 6,
+        "exact_rate": 0.2857142857142857,
+        "normalized_cer": 0.6896551724137931,
+        "wer": 0.873015873015873
+      },
+      "improved": 5,
+      "unchanged": 6,
+      "regressed": 10,
+      "repairs": 3
+    },
+    "STRUCTURAL_REVIEW": {
+      "control": {
+        "n": 49,
+        "exact": 2,
+        "exact_rate": 0.04081632653061224,
+        "normalized_cer": 0.15315315315315314,
+        "wer": 0.3932853717026379
+      },
+      "candidate": {
+        "n": 49,
+        "exact": 0,
+        "exact_rate": 0.0,
+        "normalized_cer": 0.9628378378378378,
+        "wer": 1.0
+      },
+      "improved": 1,
+      "unchanged": 0,
+      "regressed": 48,
+      "repairs": 0
+    }
+  },
+  "false_safe_replay": {
+    "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+    "easyocr": "\"STAR",
+    "candidate": "\"STAR",
+    "human_gt": "STAR",
+    "repaired": false
+  },
+  "disagreement": {
+    "different": 65,
+    "easy_correct_candidate_wrong": 5,
+    "both_wrong": 57,
+    "easy_wrong_candidate_correct": 3,
+    "equal": 6
+  },
+  "oracle_upper_bound_not_production_achievable": {
+    "exact": 11,
+    "n": 71,
+    "accuracy": 0.15492957746478872
+  },
+  "performance": {
+    "schema_version": "reader-residual-recognition-performance.v1",
+    "checkpoint": "11.15",
+    "cold_initialization_seconds": 1.1040425000246614,
+    "warm_total_seconds_all_162_calls": 7.709631083009299,
+    "selected_mode_total_seconds_81_regions": 3.1951037087710574,
+    "selected_mode_verified_total_seconds": 2.7998945848084986,
+    "mean_warm_region_seconds": 0.0394351349973028,
+    "ocr_calls": 162,
+    "estimated_cost_per_100_regions": {
+      "0.1": {
+        "estimated_calls_per_100_regions": 10,
+        "estimated_seconds_per_100_regions": 0.394351349973028
+      },
+      "0.25": {
+        "estimated_calls_per_100_regions": 25,
+        "estimated_seconds_per_100_regions": 0.98587837493257
+      },
+      "0.5": {
+        "estimated_calls_per_100_regions": 50,
+        "estimated_seconds_per_100_regions": 1.97175674986514
+      },
+      "1.0": {
+        "estimated_calls_per_100_regions": 100,
+        "estimated_seconds_per_100_regions": 3.94351349973028
+      }
+    },
+    "estimate_note": "Linear warm-latency estimate; excludes cold initialization and concurrency effects.",
+    "resources": {
+      "before": {
+        "timestamp": "2026-08-22T20:16:02.605924+00:00",
+        "process_rss_bytes": 80871424,
+        "process_peak_rss_bytes": 80871424,
+        "system_available_memory_bytes": 6731235328,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1212877373,
+        "process_cpu_seconds": 0.212685,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "after_init": {
+        "timestamp": "2026-08-22T20:16:05.289490+00:00",
+        "process_rss_bytes": 1095237632,
+        "process_peak_rss_bytes": 1095237632,
+        "system_available_memory_bytes": 6794805248,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1212877373,
+        "process_cpu_seconds": 2.140596,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "after": {
+        "timestamp": "2026-08-22T20:16:13.189390+00:00",
+        "process_rss_bytes": 1119420416,
+        "process_peak_rss_bytes": 1119420416,
+        "system_available_memory_bytes": 6830833664,
+        "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+        "swap_used_bytes": 1212877373,
+        "process_cpu_seconds": 10.119525,
+        "temperature_celsius": null,
+        "temperature_note": "not measured: no reliable supported macOS standard-library API",
+        "safety_state": "NORMAL"
+      },
+      "peak_rss_bytes": 1119420416,
+      "available_memory_after_bytes": 6830833664,
+      "swap_delta_bytes": 0,
+      "resource_guard": "NORMAL"
+    },
+    "concurrency": 1,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "safety": {
+    "human_gt_unchanged": true,
+    "r2_unchanged": true,
+    "reading_order_unchanged": true,
+    "production_ocr_unchanged": true,
+    "authoritative_state_unchanged": true,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "recommended_11_16_action": "Do not add PP-OCRv6 medium to Reader V2; run the isolated shared tier/row Reading Order geometry experiment next."
+}

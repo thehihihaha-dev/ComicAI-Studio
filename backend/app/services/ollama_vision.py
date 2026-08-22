@@ -9,6 +9,7 @@ from PIL import Image
 
 from app.services.performance import measure_model_call, measure_stage
 from app.services.model_runtime import effective_generation_options
+from app.services.resource_safety import heavy_inference_slot
 
 
 OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
@@ -49,7 +50,7 @@ def call_vision_model(
         method="POST",
     )
 
-    with measure_model_call(
+    with heavy_inference_slot("vision") as resource_sample, measure_model_call(
         model,
         prompt_chars=len(prompt),
         prompt_hash=hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
@@ -57,6 +58,7 @@ def call_vision_model(
         image_dimensions=image_dimensions,
         generation_options=payload["options"],
     ) as metrics:
+        metrics["prelaunch_safety_state"] = resource_sample["safety_state"]
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 response_data = response.read().decode("utf-8")

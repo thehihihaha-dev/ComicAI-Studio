@@ -1,0 +1,9 @@
+{
+  "schema_version": "reader-human-gt.v1",
+  "artifact_kind": "verified_manifest",
+  "verified_only": true,
+  "sample_count": 0,
+  "samples": [],
+  "unavailable_human_ground_truth": [],
+  "metric_contract": "reader-ocr-expanded.v1 (11.4 definitions; every metric must include N)"
+}

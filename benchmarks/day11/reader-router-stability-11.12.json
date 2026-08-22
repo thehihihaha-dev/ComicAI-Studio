@@ -1,0 +1,63 @@
+{
+  "schema_version": "reader-router-stability.v1",
+  "checkpoint": "11.12",
+  "small_data_warning": "N=50 across 10 pages; candidates are BENCHMARK-FITTED, not production-calibrated.",
+  "leave_one_out_selected_rule_counts": {
+    "R2": 50
+  },
+  "leave_one_page_out_selected_rule_counts": {
+    "R2": 10
+  },
+  "candidate_ranges": {
+    "R1": {
+      "coverage_min": 0.02040816326530612,
+      "coverage_max": 0.04081632653061224,
+      "false_safe_min": 0,
+      "false_safe_max": 0
+    },
+    "R2": {
+      "coverage_min": 0.0,
+      "coverage_max": 0.02040816326530612,
+      "false_safe_min": 0,
+      "false_safe_max": 0
+    },
+    "R3": {
+      "coverage_min": 0.0,
+      "coverage_max": 0.0,
+      "false_safe_min": 0,
+      "false_safe_max": 0
+    },
+    "R4": {
+      "coverage_min": 0.0,
+      "coverage_max": 0.0,
+      "false_safe_min": 0,
+      "false_safe_max": 0
+    }
+  },
+  "R3_confidence_sensitivity": [
+    {
+      "threshold": 0.97,
+      "safe": 0,
+      "false_safe": 0,
+      "precision": null
+    },
+    {
+      "threshold": 0.98,
+      "safe": 0,
+      "false_safe": 0,
+      "precision": null
+    },
+    {
+      "threshold": 0.99,
+      "safe": 0,
+      "false_safe": 0,
+      "precision": null
+    },
+    {
+      "threshold": 0.995,
+      "safe": 0,
+      "false_safe": 0,
+      "precision": null
+    }
+  ]
+}

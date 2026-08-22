@@ -1,0 +1,1941 @@
+{
+  "schema_version": "reader-residual-recognition-control.v1",
+  "checkpoint": "11.15",
+  "metrics": {
+    "A": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14845663890249877,
+      "wer": 0.3887733887733888
+    },
+    "B": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14551690347868693,
+      "wer": 0.3991683991683992
+    }
+  },
+  "mode_a": [
+    {
+      "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+      "r2_state": "HARD",
+      "output": "NĂM THỨ NHẤT",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 12,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+      "r2_state": "HARD",
+      "output": "HÔM NAY CHÚNG TA SỀ CÙNG NHAV THÁM HIỂM DLNGEON CHú?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 52,
+        "cer": 0.07692307692307693,
+        "word_errors": 4,
+        "human_words": 11,
+        "wer": 0.36363636363636365
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+      "r2_state": "HARD",
+      "output": "KAZL SAN",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 8,
+        "cer": 0.25,
+        "word_errors": 2,
+        "human_words": 1,
+        "wer": 2.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+      "r2_state": "HARD",
+      "output": "NĂM THỨ HAI",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 11,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+      "r2_state": "HARD",
+      "output": "Hôm nay cậu muốn đi chơi Gi khônG?",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 34,
+        "cer": 0.029411764705882353,
+        "word_errors": 1,
+        "human_words": 8,
+        "wer": 0.125
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+      "r2_state": "HARD",
+      "output": "Kazul",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+      "r2_state": "HARD",
+      "output": "NĂM THỨ BA",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 10,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+      "r2_state": "HARD",
+      "output": "HÔM NAY CHÚNG TA PHI Đ1 ĐÀO M-",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 31,
+        "cer": 0.06451612903225806,
+        "word_errors": 2,
+        "human_words": 8,
+        "wer": 0.25
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_76735185b241",
+      "r2_state": "HARD",
+      "output": "ĐI CÂU CÁ NÀO\"",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 15,
+        "cer": 0.13333333333333333,
+        "word_errors": 1,
+        "human_words": 4,
+        "wer": 0.25
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_50519209704f",
+      "r2_state": "HARD",
+      "output": "ĐI CÂU CÁ THÔI NÀOW!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 1,
+        "human_words": 5,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Đã nhận đudc item 'bó hoa",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 19,
+        "cer": 0.42105263157894735,
+        "word_errors": 3,
+        "human_words": 5,
+        "wer": 0.6
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+      "r2_state": "HARD",
+      "output": "Hôy",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 3,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+      "r2_state": "HARD",
+      "output": "Ehehe",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Kazu này",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 8,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 2,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MiNH YÊU CẬU! ~",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 13,
+        "cer": 0.23076923076923078,
+        "word_errors": 2,
+        "human_words": 3,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "TỪ BÂY GlỜ HZY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+      "score": {
+        "exact": false,
+        "char_errors": 6,
+        "human_chars": 64,
+        "cer": 0.09375,
+        "word_errors": 5,
+        "human_words": 14,
+        "wer": 0.35714285714285715
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CAM ƠN CẬL.",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 11,
+        "cer": 0.18181818181818182,
+        "word_errors": 2,
+        "human_words": 3,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MÀ MÌNH SẮP PHẢl THOÁT GAME RỔL.",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 34,
+        "cer": 0.14705882352941177,
+        "word_errors": 2,
+        "human_words": 7,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "GẶp LaI SAU NHÉ KAZU!",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 21,
+        "cer": 0.047619047619047616,
+        "word_errors": 1,
+        "human_words": 5,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CHÚC Ncủ NGON NHÉ RIN!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 23,
+        "cer": 0.08695652173913043,
+        "word_errors": 2,
+        "human_words": 5,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+      "r2_state": "HARD",
+      "output": "Rin đã Offline",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 14,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+      "r2_state": "HARD",
+      "output": "PHù.",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "HÔM NAY CHƠl ĐĂ RỒL,",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 20,
+        "cer": 0.2,
+        "word_errors": 3,
+        "human_words": 5,
+        "wer": 0.6
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "4 mól 'in nhấn 5 Nunen / PÍP!",
+      "score": {
+        "exact": false,
+        "char_errors": 25,
+        "human_chars": 4,
+        "cer": 6.25,
+        "word_errors": 7,
+        "human_words": 1,
+        "wer": 7.0
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Cảm câu vì lễ cưới tuyệt vời bôm nay nbé",
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 44,
+        "cer": 0.1590909090909091,
+        "word_errors": 4,
+        "human_words": 11,
+        "wer": 0.36363636363636365
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "LÀ Từ RIN",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 10,
+        "cer": 0.1,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHỔNG\" NHÉ",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 54,
+        "cer": 0.05555555555555555,
+        "word_errors": 2,
+        "human_words": 13,
+        "wer": 0.15384615384615385
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl Ncủ SÓM THÔI.",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 49,
+        "cer": 0.10204081632653061,
+        "word_errors": 5,
+        "human_words": 11,
+        "wer": 0.45454545454545453
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_92071c223e96",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MONC CẬU GlÚP ĐỠ VẬY",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 21,
+        "cer": 0.19047619047619047,
+        "word_errors": 4,
+        "human_words": 4,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CHẮC TlẾP THEo NÊN ĐI ĐÀO Mò THÔI NHỈ.",
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 35,
+        "cer": 0.2571428571428571,
+        "word_errors": 4,
+        "human_words": 8,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CẬU NÓI CHO CẬU BlẾT VỂ ẤN TLỢNG CùA BẢN THÂN KHI XEM MV ĐI",
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 62,
+        "cer": 0.11290322580645161,
+        "word_errors": 5,
+        "human_words": 16,
+        "wer": 0.3125
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "KHÔNG ĐÂL, TÓ CHIL RỒI\"!",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 24,
+        "cer": 0.20833333333333334,
+        "word_errors": 4,
+        "human_words": 5,
+        "wer": 0.8
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "LÀ MỘT NHÓM NHaC IDOL GỔM 5 THÀNH VIÊN ĐANG NHẬN ĐUỔc SỤ CHú VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 100,
+        "cer": 0.09,
+        "word_errors": 7,
+        "human_words": 25,
+        "wer": 0.28
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "r2_state": "SAFE_CANDIDATE",
+      "output": "\"STAR",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 4,
+        "cer": 0.25,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+      "r2_state": "HARD",
+      "output": "MINES\"",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "LÀ CÔ BẠN IDOL NGẩU LÒI HỌC CÙNG LÓP MIZUKI RINKA",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 50,
+        "cer": 0.06,
+        "word_errors": 2,
+        "human_words": 11,
+        "wer": 0.18181818181818182
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "TRONG 4Ó CÓ MỘT NGUỜI",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 2,
+        "human_words": 5,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CŨNG ĐUỢC THÔL.",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 17,
+        "cer": 0.23529411764705882,
+        "word_errors": 2,
+        "human_words": 3,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Từ RIN À",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 8,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "2OH TỐl NAY, CẬU CÓ MHỐN CHƠI GAme MỘT CHÚT KHÔNG?",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 50,
+        "cer": 0.06,
+        "word_errors": 3,
+        "human_words": 11,
+        "wer": 0.2727272727272727
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "NGỦ CHO ĐÊN Lúc TIẾT HỌc BẮT ĐẦu VẬY.",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 39,
+        "cer": 0.07692307692307693,
+        "word_errors": 2,
+        "human_words": 9,
+        "wer": 0.2222222222222222
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "ĐỐỈ vá MÌNH THÌ NẾU có VIỆC Gi THú HWN VIỆc HÚ VỊ NGẮM IDol Thi",
+      "score": {
+        "exact": false,
+        "char_errors": 15,
+        "human_chars": 61,
+        "cer": 0.2459016393442623,
+        "word_errors": 8,
+        "human_words": 15,
+        "wer": 0.5333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CHẮC SẼ LÀ CÙNG CHaI GAME VÓl RIN NHI?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 38,
+        "cer": 0.10526315789473684,
+        "word_errors": 3,
+        "human_words": 9,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+      "r2_state": "HARD",
+      "output": "Ể",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 2,
+        "cer": 0.5,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MÌNH ĐM NcHĨ LÀ CHO ĐẾN LÚC RIN TỚl THÌ ĐI ĐÀO MỎ CHÚT VẬY MÀ",
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 61,
+        "cer": 0.14754098360655737,
+        "word_errors": 5,
+        "human_words": 15,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "BẢO TeÌ CHO ĐẾN 20 6IỜ SAO?",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 27,
+        "cer": 0.07407407407407407,
+        "word_errors": 2,
+        "human_words": 7,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CHẮc NCHE THử vÀI BÀI KHÁC NZA NHI",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 34,
+        "cer": 0.11764705882352941,
+        "word_errors": 4,
+        "human_words": 8,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIỌNG HÁT HAY VẬY SAo",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 53,
+        "cer": 0.018867924528301886,
+        "word_errors": 1,
+        "human_words": 12,
+        "wer": 0.08333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "uẩỵ MÌVH NGHE HÊT LUÔN RổL.",
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 28,
+        "cer": 0.25,
+        "word_errors": 4,
+        "human_words": 6,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "CHẾT MOE! QUÁ GIỜ HẸN MÁT TIÊU RỖI!",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 35,
+        "cer": 0.08571428571428572,
+        "word_errors": 3,
+        "human_words": 8,
+        "wer": 0.375
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Xin lẫi! Minh sẽ vào ngayl",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 26,
+        "cer": 0.11538461538461539,
+        "word_errors": 3,
+        "human_words": 6,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "[Rin] Cqu đã vào chua vậy- YouTuve",
+      "score": {
+        "exact": false,
+        "char_errors": 11,
+        "human_chars": 26,
+        "cer": 0.4230769230769231,
+        "word_errors": 4,
+        "human_words": 6,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "RIN ĐÂL RỒI?",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 12,
+        "cer": 0.08333333333333333,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "NHÊ ClẬN RỒI SAO. CHẢ",
+      "score": {
+        "exact": false,
+        "char_errors": 16,
+        "human_chars": 29,
+        "cer": 0.5517241379310345,
+        "word_errors": 7,
+        "human_words": 7,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CHA IDOL NÊN MỚl TRỄ HẸN ĐLỢCỊ",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 66,
+        "cer": 0.12121212121212122,
+        "word_errors": 4,
+        "human_words": 16,
+        "wer": 0.25
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+      "r2_state": "HARD",
+      "output": "KAZL!",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "KHÔNG PHẢI NÓI CHUYỆN ĐỜl THựC Ở ĐÂY LÀ KHÔNG ĐưỢC SAO?",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 55,
+        "cer": 0.01818181818181818,
+        "word_errors": 1,
+        "human_words": 12,
+        "wer": 0.08333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "#ể~ tại sa0 lại là Idol co cbú?",
+      "score": {
+        "exact": false,
+        "char_errors": 6,
+        "human_chars": 30,
+        "cer": 0.2,
+        "word_errors": 5,
+        "human_words": 7,
+        "wer": 0.7142857142857143
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "Lần này là ncoai lệ!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 20,
+        "cer": 0.1,
+        "word_errors": 1,
+        "human_words": 5,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "LÚC TRUÓC, KHI MÌNH NÓI CHUYỆN ĐỠI THỰC VÓI RIN",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 47,
+        "cer": 0.0851063829787234,
+        "word_errors": 3,
+        "human_words": 10,
+        "wer": 0.3
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 27,
+        "cer": 0.14814814814814814,
+        "word_errors": 2,
+        "human_words": 7,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "ĐOl THựC CHI THứ . GÂY CẢN TRƠ VẢ LAM HỎNG MỐl QUAN HỆ TRONG SÁNG THÔL MA",
+      "score": {
+        "exact": false,
+        "char_errors": 19,
+        "human_chars": 77,
+        "cer": 0.24675324675324675,
+        "word_errors": 10,
+        "human_words": 18,
+        "wer": 0.5555555555555556
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐÃ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 70,
+        "cer": 0.014285714285714285,
+        "word_errors": 1,
+        "human_words": 16,
+        "wer": 0.0625
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+      "r2_state": "HARD",
+      "output": "Star",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 4,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "MINES ĐÓỊ",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 9,
+        "cer": 0.1111111111111111,
+        "word_errors": 1,
+        "human_words": 2,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+      "r2_state": "HARD",
+      "output": "Phúf",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+      "r2_state": "HARD",
+      "output": "pl6}",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 6,
+        "cer": 0.8333333333333334,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+      "r2_state": "HARD",
+      "output": "Phút",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 2,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "LẼ NÀO MÌNH LẠl BUỘT MIỆNG NÓI GÌ DẠl DỘT Rồl!?",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 47,
+        "cer": 0.06382978723404255,
+        "word_errors": 3,
+        "human_words": 11,
+        "wer": 0.2727272727272727
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 72,
+        "cer": 0.25,
+        "word_errors": 10,
+        "human_words": 17,
+        "wer": 0.5882352941176471
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+      "r2_state": "STRUCTURAL_REVIEW",
+      "output": "NÊN CẬU HĂY QLÊN NHÉ ĐI",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 25,
+        "cer": 0.32,
+        "word_errors": 4,
+        "human_words": 6,
+        "wer": 0.6666666666666666
+      }
+    }
+  ],
+  "mode_b": [
+    {
+      "sample_id": "11.13:11cc81607764:LR_853aa9c8d17b",
+      "output": "NĂM THỨ NHẤT",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 12,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_a630a41625a7",
+      "output": "HÔM NAY CHÚNG TA sỀ CÙNG NHAL THÁM HIỂM DUNGEON CHÚ?",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 52,
+        "cer": 0.057692307692307696,
+        "word_errors": 3,
+        "human_words": 11,
+        "wer": 0.2727272727272727
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_e377d8563134",
+      "output": "KAZLI - SAN",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 8,
+        "cer": 0.5,
+        "word_errors": 3,
+        "human_words": 1,
+        "wer": 3.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_68e8e11d1aa1",
+      "output": "NĂM THU HAI",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 11,
+        "cer": 0.09090909090909091,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_c65e21312340",
+      "output": "Hôm nay câu muốn đi cbƠi Gi kbônG?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 34,
+        "cer": 0.11764705882352941,
+        "word_errors": 4,
+        "human_words": 8,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_92ec21088e61",
+      "output": "Kazul",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_27d429e5df11",
+      "output": "NĂM THỨ BA",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 10,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_34b8675b616e",
+      "output": "HÔM NAY CHÚNG TA PHẢl Đ1 ĐÀO M -",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 31,
+        "cer": 0.0967741935483871,
+        "word_errors": 4,
+        "human_words": 8,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_76735185b241",
+      "output": "ĐI CÂU CÁ NÀO\"",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 15,
+        "cer": 0.13333333333333333,
+        "word_errors": 1,
+        "human_words": 4,
+        "wer": 0.25
+      }
+    },
+    {
+      "sample_id": "11.13:11cc81607764:LR_50519209704f",
+      "output": "ĐI CÂU CÁ THÔI NÀO\"!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 1,
+        "human_words": 5,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0d72f39fc70c",
+      "output": "Đã nhận đudc \"'bú hoa item",
+      "score": {
+        "exact": false,
+        "char_errors": 10,
+        "human_chars": 19,
+        "cer": 0.5263157894736842,
+        "word_errors": 3,
+        "human_words": 5,
+        "wer": 0.6
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_ed6f9c0b234b",
+      "output": "Hôy",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 3,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_0349ac6c8a6b",
+      "output": "Ehehe",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 5,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_613cc72db7b7",
+      "output": "Kazu này",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 8,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 2,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:428525d33157:LR_3fe9541af140",
+      "output": "MÌNH YÊU CẬU!",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 13,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_0f583f894ac8",
+      "output": "TỪ BÂY GIỜ HĂY CÙNG NHAU TẬN HLỞNG KHI CHƠI Game ThaT NHIỂL NHÉ!",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 64,
+        "cer": 0.078125,
+        "word_errors": 4,
+        "human_words": 14,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_fefbc0cb8142",
+      "output": "CẢM ƠN CẬL.",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 11,
+        "cer": 0.09090909090909091,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_d7851d0dd897",
+      "output": "MÀ MÌNH SÁP PHẢl THOÁT GAME RỔL.",
+      "score": {
+        "exact": false,
+        "char_errors": 6,
+        "human_chars": 34,
+        "cer": 0.17647058823529413,
+        "word_errors": 3,
+        "human_words": 7,
+        "wer": 0.42857142857142855
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_55b7c57a3965",
+      "output": "GẶp LaI SAU NHÉ NAZU!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 2,
+        "human_words": 5,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_e743589ca96f",
+      "output": "CHÚC Ncủ NGON NHÉ RIN!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 23,
+        "cer": 0.08695652173913043,
+        "word_errors": 2,
+        "human_words": 5,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b4c749d3d8b4",
+      "output": "Rin đã Offline",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 14,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_b8ff170cbcc9",
+      "output": "PHù.",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_2d79449f990f",
+      "output": "HÔM NAY CHƠl ĐĂ RỒL,",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 20,
+        "cer": 0.2,
+        "word_errors": 3,
+        "human_words": 5,
+        "wer": 0.6
+      }
+    },
+    {
+      "sample_id": "11.13:0de4a0a538da:LR_7a9606ef2dc1",
+      "output": "[ 1 4 1 5 'Mac Bih / 1nhán _ 6 Qo PÍPỊ",
+      "score": {
+        "exact": false,
+        "char_errors": 35,
+        "human_chars": 4,
+        "cer": 8.75,
+        "word_errors": 13,
+        "human_words": 1,
+        "wer": 13.0
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_ccf84be2f918",
+      "output": "Cảm ơn cậu vì lễ cưới tuyệt vời bôm nay nbé!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 44,
+        "cer": 0.045454545454545456,
+        "word_errors": 2,
+        "human_words": 11,
+        "wer": 0.18181818181818182
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_fb9708b007f3",
+      "output": "LÀ Từ RIN_",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 10,
+        "cer": 0.1,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_2e242e02c9b8",
+      "output": "TỪ BÂY GIỜ HÃY giÚp %0 NHAU VỚI VAI TRÒ \"VỢ CHONG\" NHÉ",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 54,
+        "cer": 0.05555555555555555,
+        "word_errors": 2,
+        "human_words": 13,
+        "wer": 0.15384615384615385
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_907157b9c8ad",
+      "output": "NGÀY MAI CÒN PHẢl ĐẾN TRLỜNG NÊN Đl NGủ SÓM THÔL.",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 49,
+        "cer": 0.10204081632653061,
+        "word_errors": 5,
+        "human_words": 11,
+        "wer": 0.45454545454545453
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_92071c223e96",
+      "output": "MONG CẬU GlÚP ĐỠ. VẬY",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 3,
+        "human_words": 4,
+        "wer": 0.75
+      }
+    },
+    {
+      "sample_id": "11.13:9030de175619:LR_6c3873973f83",
+      "output": "CHẮC TlẾP THEo NÊN Đ1 ĐÀO MÒ THÔI NHỈ.",
+      "score": {
+        "exact": false,
+        "char_errors": 10,
+        "human_chars": 35,
+        "cer": 0.2857142857142857,
+        "word_errors": 5,
+        "human_words": 8,
+        "wer": 0.625
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_d12d0d15f3f8",
+      "output": "CẬU NÓI CHO CÂL ẨY BlẾT VỂ ẤN TLỢNC CùA BẢN THÂN KHI XEM MV ĐI",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 62,
+        "cer": 0.12903225806451613,
+        "word_errors": 6,
+        "human_words": 16,
+        "wer": 0.375
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_17854f844c90",
+      "output": "KHÔNG ĐẨL, TÓ CHIL PỒIl!",
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 24,
+        "cer": 0.2916666666666667,
+        "word_errors": 4,
+        "human_words": 5,
+        "wer": 0.8
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e575a1335ce",
+      "output": "LÀ MỘT NHÓM NHẠC IDOL GổM 5 THÀNH VIÊN ĐANG NHẬN ĐUộc SỤ CHÚ Ý VÀ TẤT cẢ HỌ ĐỂU LÀ NŨ SINH CAO TRUNG",
+      "score": {
+        "exact": false,
+        "char_errors": 6,
+        "human_chars": 100,
+        "cer": 0.06,
+        "word_errors": 5,
+        "human_words": 25,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_fc624020f5d6",
+      "output": "\"STAR",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 4,
+        "cer": 0.25,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_1e8596bb4b1b",
+      "output": "MINES\"",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 5,
+        "cer": 0.2,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_9b6482ccaef0",
+      "output": "LÀ Cô BẠN IDOL NGÂU LÒI HỌC CÙNG L6P MIZUKI RINKA",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 50,
+        "cer": 0.06,
+        "word_errors": 2,
+        "human_words": 11,
+        "wer": 0.18181818181818182
+      }
+    },
+    {
+      "sample_id": "11.13:725a6a01324b:LR_45817a78d44e",
+      "output": "(TRONG ĐÓ CÓ MỘT NGUỜI",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 21,
+        "cer": 0.09523809523809523,
+        "word_errors": 2,
+        "human_words": 5,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_810ccd01b471",
+      "output": "CŨNG ĐUỢC THÔL..",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 17,
+        "cer": 0.17647058823529413,
+        "word_errors": 2,
+        "human_words": 3,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_6592bd6601de",
+      "output": "Từ RIN À",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 8,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 3,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_26d229c3d085",
+      "output": "2OH TỐl NAY; CẬU CÓ MHỐN CHƠI Game MỘT CHÚT KHÔNG?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 50,
+        "cer": 0.08,
+        "word_errors": 4,
+        "human_words": 11,
+        "wer": 0.36363636363636365
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed816cd9e69b",
+      "output": "NGủ CHO ĐẾN Lúc TlỂT HOC BẮT ĐẦu VẬY..",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 39,
+        "cer": 0.10256410256410256,
+        "word_errors": 3,
+        "human_words": 9,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_40a961463c09",
+      "output": "DỐl vá MÌNH THÌ NẾU CÓ VIỆC Gi THú ỴỊ HQN VIỆC NGẮM IDoL ThI",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 61,
+        "cer": 0.13114754098360656,
+        "word_errors": 6,
+        "human_words": 15,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_875258e8b894",
+      "output": "CHẮC SẼ LÀ CÙNG CHOI GAME VÓ RIN NHI?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 38,
+        "cer": 0.10526315789473684,
+        "word_errors": 3,
+        "human_words": 9,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_ed2345ea9b7f",
+      "output": "Ể",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 2,
+        "cer": 0.5,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_e7fde1366396",
+      "output": "MÌNH ĐẴ NCHĨ LÀ CHO ĐẾN LÚC RIN TÓl THÌ Đ1 ĐÀO MÒ CHÚT VẬY MÀ",
+      "score": {
+        "exact": false,
+        "char_errors": 11,
+        "human_chars": 61,
+        "cer": 0.18032786885245902,
+        "word_errors": 6,
+        "human_words": 15,
+        "wer": 0.4
+      }
+    },
+    {
+      "sample_id": "11.13:51d0b54eaa79:LR_5ab034641daa",
+      "output": "BẢO TeÌ CHO ĐẾN 20 61ờ SAO?",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 27,
+        "cer": 0.1111111111111111,
+        "word_errors": 2,
+        "human_words": 7,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_30c85699ee5a",
+      "output": "CHẮc Nehe TH4 vÀI BÀI KHÁC NZA NHỈ.",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 34,
+        "cer": 0.14705882352941177,
+        "word_errors": 5,
+        "human_words": 8,
+        "wer": 0.625
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_0e11db07fcfa",
+      "output": "VẬY LÀ MIZUKI-SAN; Cô ẤY CÓ MỘT GIONG HÁT HAY VẬY SAo",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 53,
+        "cer": 0.03773584905660377,
+        "word_errors": 2,
+        "human_words": 12,
+        "wer": 0.16666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_81eb0e36c5e5",
+      "output": "Uẩỵ MÌgH NGHE HÊT LUÔN RỖL.",
+      "score": {
+        "exact": false,
+        "char_errors": 7,
+        "human_chars": 28,
+        "cer": 0.25,
+        "word_errors": 4,
+        "human_words": 6,
+        "wer": 0.6666666666666666
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_8c2478a0ef54",
+      "output": "CHẾT MOẸ! QUÁ GIỜ HEN MẤT TIÊU RỖI!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 35,
+        "cer": 0.05714285714285714,
+        "word_errors": 2,
+        "human_words": 8,
+        "wer": 0.25
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_c58ffe87d31e",
+      "output": "Xin lẫi! Minh sẼ vào ngayl",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 26,
+        "cer": 0.11538461538461539,
+        "word_errors": 3,
+        "human_words": 6,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:059eceb2b82b:LR_a45ba5b6910b",
+      "output": "[Rin] đã vào chua vqy Cau YouTuve",
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 26,
+        "cer": 0.6923076923076923,
+        "word_errors": 5,
+        "human_words": 6,
+        "wer": 0.8333333333333334
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_a750b1da4a8d",
+      "output": "RIN ĐÂU QỒl?",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 12,
+        "cer": 0.16666666666666666,
+        "word_errors": 1,
+        "human_words": 3,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_4a710d7e0606",
+      "output": "CHẢ NHÊ CÔ Ấy ClẬN RỒI SAO.,",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 29,
+        "cer": 0.1724137931034483,
+        "word_errors": 3,
+        "human_words": 7,
+        "wer": 0.42857142857142855
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_d3c556f27c19",
+      "output": "MÌNH KHÔNG THỂ NÓI LÀ DO XEM MV CỦA IDOL NÊN MỚl TeỄ HỆN ĐLỢC!",
+      "score": {
+        "exact": false,
+        "char_errors": 8,
+        "human_chars": 66,
+        "cer": 0.12121212121212122,
+        "word_errors": 5,
+        "human_words": 16,
+        "wer": 0.3125
+      }
+    },
+    {
+      "sample_id": "11.13:10bb362efeb4:LR_f1cd08236fff",
+      "output": "KAZH'",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 5,
+        "cer": 0.4,
+        "word_errors": 1,
+        "human_words": 1,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_7bfe3866ee0e",
+      "output": "KHÔNG PHẢl NÓI CHUYỆN ĐỜl THựC Ờ ĐÂY LÀ KHÔNG ĐưỢC S4O?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 55,
+        "cer": 0.07272727272727272,
+        "word_errors": 4,
+        "human_words": 12,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_70af19766c90",
+      "output": "Hể~ tại 5a0 lại là Idol cơ chú?",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 30,
+        "cer": 0.13333333333333333,
+        "word_errors": 4,
+        "human_words": 7,
+        "wer": 0.5714285714285714
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_2699070faab0",
+      "output": "Lần này là ncOai lệ!",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 20,
+        "cer": 0.1,
+        "word_errors": 1,
+        "human_words": 5,
+        "wer": 0.2
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_1daaf5ddd15d",
+      "output": "LÚC TRƯÓC; KHI MÌNH NÓI CHUYỆN ĐỜI THUC VÓI RIN",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 47,
+        "cer": 0.0851063829787234,
+        "word_errors": 3,
+        "human_words": 10,
+        "wer": 0.3
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_805c947ad63e",
+      "output": "vÀ CẬu ẤY ĐÃ NÓI NHU VẬY",
+      "score": {
+        "exact": false,
+        "char_errors": 4,
+        "human_chars": 27,
+        "cer": 0.14814814814814814,
+        "word_errors": 2,
+        "human_words": 7,
+        "wer": 0.2857142857142857
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_89059809a3d7",
+      "output": "ĐỜl THựC CHI LÀ THÚ GÂY CẢN TPỞ vÀ LÀM HỎNG MỐl QUAN HỆ TRONG SÁNG MÀ THÔL",
+      "score": {
+        "exact": false,
+        "char_errors": 9,
+        "human_chars": 77,
+        "cer": 0.11688311688311688,
+        "word_errors": 6,
+        "human_words": 18,
+        "wer": 0.3333333333333333
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_77a5fc9bb632",
+      "output": "VẬY THÌ MÌNH CŨNG MUỐN BlẾT IDOL NÀO ĐĂ LÀM KAZU CHẾT MÊ CHẾT MỆT VẬY?",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 70,
+        "cer": 0.02857142857142857,
+        "word_errors": 2,
+        "human_words": 16,
+        "wer": 0.125
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_9dd90ac1fadd",
+      "output": "Star",
+      "score": {
+        "exact": true,
+        "char_errors": 0,
+        "human_chars": 4,
+        "cer": 0.0,
+        "word_errors": 0,
+        "human_words": 1,
+        "wer": 0.0
+      }
+    },
+    {
+      "sample_id": "11.13:3673dd141b26:LR_02c28c1ee6b3",
+      "output": "MINES ĐÓ'",
+      "score": {
+        "exact": false,
+        "char_errors": 1,
+        "human_chars": 9,
+        "cer": 0.1111111111111111,
+        "word_errors": 1,
+        "human_words": 2,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_355c191d2a80",
+      "output": "Phat",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 6,
+        "cer": 0.5,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_f4a5a275723b",
+      "output": "pl8}",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 6,
+        "cer": 0.8333333333333334,
+        "word_errors": 2,
+        "human_words": 2,
+        "wer": 1.0
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_055b222a5077",
+      "output": "Phút",
+      "score": {
+        "exact": false,
+        "char_errors": 2,
+        "human_chars": 6,
+        "cer": 0.3333333333333333,
+        "word_errors": 1,
+        "human_words": 2,
+        "wer": 0.5
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_53a906c34898",
+      "output": "LẼ NÀO MÌNH LẠI BUỘT MIỆNG NÓI GÌ DẠl DộT Rồ1ì?",
+      "score": {
+        "exact": false,
+        "char_errors": 3,
+        "human_chars": 47,
+        "cer": 0.06382978723404255,
+        "word_errors": 2,
+        "human_words": 11,
+        "wer": 0.18181818181818182
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_e62090b1dc71",
+      "output": "XIN LỖI CẬu, MinH KHÔng KIỄM CHẾ pược ÊN CHẮC %5 NÓi MẤY ĐlỄU LẠ Gi DÓ Rổl4!",
+      "score": {
+        "exact": false,
+        "char_errors": 18,
+        "human_chars": 72,
+        "cer": 0.25,
+        "word_errors": 10,
+        "human_words": 17,
+        "wer": 0.5882352941176471
+      }
+    },
+    {
+      "sample_id": "11.13:774a019f7f27:LR_99c422559bbe",
+      "output": "NÊN CẬU HĂY QLÊN Đ1 NHÉ,",
+      "score": {
+        "exact": false,
+        "char_errors": 5,
+        "human_chars": 25,
+        "cer": 0.2,
+        "word_errors": 4,
+        "human_words": 6,
+        "wer": 0.6666666666666666
+      }
+    }
+  ]
+}

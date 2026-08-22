@@ -1,0 +1,156 @@
+{
+  "schema_version": "reader-benchmark.v1",
+  "checkpoint": "11.3",
+  "artifact_kind": "comparison",
+  "status": "completed",
+  "created_at": "2026-08-22T13:26:54.838352+00:00",
+  "engines": {
+    "control": {
+      "library": "easyocr",
+      "version": "1.7.2",
+      "languages": [
+        "vi",
+        "en"
+      ],
+      "gpu": false,
+      "role": "combined OCR",
+      "runtime": "CPU/PyTorch",
+      "production_equivalence": "exact Reader construction and readtext(detail=1)"
+    },
+    "candidate": {
+      "library": "paddleocr",
+      "version": "3.7.0",
+      "paddlepaddle_version": "3.2.1",
+      "models": [
+        "PP-OCRv6_small_det",
+        "PP-OCRv6_small_rec"
+      ],
+      "model_assets_preexisting": true,
+      "downloads_or_installations": [],
+      "languages": "multilingual model; Vietnamese/English claimed by cached model metadata",
+      "role": "combined detector + recognizer",
+      "runtime": "CPU/Paddle Inference"
+    }
+  },
+  "mode_comparability": "Mode A combined page OCR and Mode B pure recognition on identical trusted crops are separately comparable.",
+  "comparison": {
+    "detection_recall": {
+      "easyocr": 1.0,
+      "paddleocr": 1.0
+    },
+    "precision": "N/A: non-exhaustive oracle",
+    "human_gt_count": 2,
+    "mean_cer": {
+      "easyocr": 0.59375,
+      "paddleocr": 0.03125
+    },
+    "mean_wer": {
+      "easyocr": 0.8571428571428572,
+      "paddleocr": 0.14285714285714285
+    },
+    "merged_errors": {
+      "easyocr": 0,
+      "paddleocr": 0
+    },
+    "split_errors": {
+      "easyocr": 19,
+      "paddleocr": 19
+    },
+    "page_latency_seconds": {
+      "easyocr": 5.01857,
+      "paddleocr": 4.223113
+    },
+    "initialization_seconds": {
+      "easyocr": 2.426584,
+      "paddleocr": 4.037439
+    },
+    "peak_rss_bytes": {
+      "easyocr": 6830784512,
+      "paddleocr": 1235255296
+    },
+    "swap_delta_bytes": {
+      "easyocr": 0,
+      "paddleocr": 0
+    }
+  },
+  "recognition_only": {
+    "easyocr": {
+      "crop_count": 2,
+      "mean_cer": 0.8333333333333333,
+      "mean_wer": 1.0,
+      "exact_normalized_matches": 0,
+      "crop_total_seconds": 0.024364
+    },
+    "paddleocr": {
+      "crop_count": 2,
+      "mean_cer": 0.6666666666666666,
+      "mean_wer": 1.0,
+      "exact_normalized_matches": 0,
+      "crop_total_seconds": 0.045862
+    }
+  },
+  "confidence_usefulness": {
+    "easyocr_human_gt_observations": [
+      {
+        "audit_id": "p1_b3",
+        "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "reference_normalized": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "hypothesis_raw": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+        "hypothesis_normalized": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+        "exact_normalized_match": false,
+        "cer": 0.1875,
+        "wer": 0.7142857142857143,
+        "confidence": 0.1332415714980577,
+        "confidence_bucket": "low"
+      },
+      {
+        "audit_id": "p2_b3",
+        "reference_raw": "Hây",
+        "reference_normalized": "Hây",
+        "hypothesis_raw": "",
+        "hypothesis_normalized": "",
+        "exact_normalized_match": false,
+        "cer": 1.0,
+        "wer": 1.0,
+        "confidence": null,
+        "confidence_bucket": "unavailable"
+      }
+    ],
+    "paddleocr_human_gt_observations": [
+      {
+        "audit_id": "p1_b3",
+        "reference_raw": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "reference_normalized": "ANH CHỈ BIẾT NÓI \"AH\" THÔI SAO!?",
+        "hypothesis_raw": "ANH CHI BIÊT NÓI \"AH\" THÔI SAO!?",
+        "hypothesis_normalized": "ANH CHI BIÊT NÓI \"AH\" THÔI SAO!?",
+        "exact_normalized_match": false,
+        "cer": 0.0625,
+        "wer": 0.2857142857142857,
+        "confidence": 0.9365741610527039,
+        "confidence_bucket": "high"
+      },
+      {
+        "audit_id": "p2_b3",
+        "reference_raw": "Hây",
+        "reference_normalized": "Hây",
+        "hypothesis_raw": "Hây",
+        "hypothesis_normalized": "Hây",
+        "exact_normalized_match": true,
+        "cer": 0.0,
+        "wer": 0.0,
+        "confidence": 0.7810245156288147,
+        "confidence_bucket": "medium"
+      }
+    ],
+    "conclusion": "N/A for calibration: only two human-GT observations; bucket counts are routing simulation only."
+  },
+  "candidate_verdict": "CONDITIONAL PASS",
+  "verdict_reason": "Candidate is lighter and slightly faster in page inference, but the tiny/non-exhaustive oracle and only two human transcriptions are insufficient for replacement.",
+  "architecture_recommendation": "D. INSUFFICIENT EVIDENCE — EXPAND BENCHMARK",
+  "checkpoint_11_4_recommendation": "Build deterministic reading-order evaluation only after adding manually annotated region polygons and more Vietnamese transcription GT; keep production EasyOCR unchanged.",
+  "vlm_calls": 0,
+  "data_integrity": {
+    "control_unchanged": true,
+    "candidate_unchanged": true
+  }
+}

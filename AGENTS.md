@@ -1,5 +1,80 @@
 # ComicAI Studio — Project Context & Agent Instructions
 
+## Agent Workflow (Checkpoint 11.0)
+
+Repository-native coordination lives in `ai-workflow/` and is intentionally
+independent of Codex, Claude Code, Antigravity, or any other agent vendor.
+
+Before doing checkpoint work, every role must read this file and
+`ai-workflow/STATE.json`. The active role must also read the artifacts named in
+its contract under `ai-workflow/roles/`.
+
+The required handoff is:
+
+`ARCHITECT -> CODER -> REVIEWER -> HUMAN APPROVAL`
+
+Priority order:
+
+1. Correctness
+2. Machine safety
+3. Data integrity
+4. Performance
+5. Maintainability
+
+Global invariants:
+
+- Never silently lower safety thresholds to make a benchmark pass.
+- Never fabricate Ground Truth.
+- Never overwrite persisted user-approved data during benchmarks.
+- Never automatically commit or push.
+- Never start the next checkpoint without explicit human approval.
+- Expensive or model-backed benchmarks may run only when
+  `CURRENT_TASK.md` explicitly permits them.
+- A reviewer `PASS` stops at `AWAITING_HUMAN_APPROVAL`; it never implies
+  approval, commit, push, or permission to begin another task.
+
+### Canonical local commands
+
+- Backend tests: from the repository root, run
+  `backend/.venv/bin/python -m unittest discover -s backend/tests -t backend`
+- Targeted backend test: from `backend/`, run
+  `.venv/bin/python -m unittest tests.<module>`
+- Backend development server: from `backend/`, run
+  `.venv/bin/python -m uvicorn main:app --reload --port 8000`
+- AI development server: from `ai/`, run
+  `.venv/bin/python -m uvicorn main:app --reload --port 8001`
+- Frontend development server: from `frontend/`, run `npm run dev`
+- Frontend lint: from `frontend/`, run `npm run lint`
+- Frontend production build: from `frontend/`, run `npm run build`
+- PostgreSQL: `docker compose -f docker/docker-compose.yml up -d`
+
+The backend suite uses Python's standard `unittest` discovery even though
+some individual test files may resemble pytest tests. Run only the tests
+required by `CURRENT_TASK.md`. Treat scripts whose names contain `benchmark`
+as potentially expensive; they are not part of routine validation.
+
+### Database and benchmark safety
+
+- PostgreSQL normally listens on port `5432`; backend, AI, frontend, and
+  Ollama normally use `8000`, `8001`, `3000`, and `11434` respectively.
+- Inspect `backend/.env`, SQLAlchemy models, migrations, and model import order
+  before any database change. Never print secrets from environment files.
+- Prefer isolated or explicitly identified test data. Never mutate or delete
+  user projects, verified dialogue, approvals, or Ground Truth as a side
+  effect of validation.
+- Preserve benchmark inputs, configuration, model/version metadata, and
+  thresholds so results remain comparable. Report failed or incomparable runs
+  honestly; passing tests alone does not prove benchmark correctness.
+- Do not start Ollama or invoke a paid/local model unless the current task's
+  benchmark permission says `ALLOWED` and names the intended run.
+- Day 11 resource defaults for the 16 GiB development Mac are configurable via
+  `COMICAI_WARNING_AVAILABLE_GIB` (3), `COMICAI_CRITICAL_AVAILABLE_GIB` (1.5),
+  `COMICAI_WARNING_SWAP_GIB` (2), and `COMICAI_CRITICAL_SWAP_GIB` (4).
+- Story-only Ollama routing may be configured with `STORY_MODEL`. An unset
+  value preserves `qwen3-vl:8b-instruct`; Vision remains independently fixed.
+  Treat model changes as benchmark/approval-gated and never silently switch
+  the production environment after an experiment.
+
 ## 1. Project Overview
 
 ComicAI Studio is an AI-assisted platform for creating comic/manga/manhwa review videos.

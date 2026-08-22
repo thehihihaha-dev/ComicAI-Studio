@@ -1,0 +1,935 @@
+{
+  "schema_version": "reader-ocr-correctness.v2",
+  "checkpoint": "11.11",
+  "gt_source": "human logical-region transcription only",
+  "normalization": "Unicode NFC + uppercase + collapsed whitespace",
+  "metrics": {
+    "samples": 50,
+    "exact_match": {
+      "correct": 10,
+      "accuracy": 0.2
+    },
+    "normalized_cer": 0.11281489594742607,
+    "wer": 0.3381294964028777,
+    "false_accept_count": 36,
+    "false_accept_rate": 0.8181818181818182,
+    "true_accepted_count": 8,
+    "accepted_count": 44,
+    "hard_review_count": 6,
+    "unreadable_count": 0
+  },
+  "error_types": {
+    "extra character/text": 6,
+    "merged/split fragment reconstruction": 28,
+    "wrong character": 17,
+    "missing character/text": 16,
+    "punctuation": 1
+  },
+  "regions": [
+    {
+      "page_order": 1,
+      "logical_region_id": "LR_615c8d24c678",
+      "source_fragment_ids": [
+        2
+      ],
+      "prediction": "RIN",
+      "human_gt": "RIN",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 3,
+      "word_errors": 0,
+      "human_words": 1,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 1,
+      "logical_region_id": "LR_086859ae76f4",
+      "source_fragment_ids": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "prediction": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+      "human_gt": "CHO DÙ LÀ LÚC ỐM ĐAU HAY BỆNH TẬT",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 33,
+      "word_errors": 0,
+      "human_words": 9,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 1,
+      "logical_region_id": "LR_28e2fc3b47b8",
+      "source_fragment_ids": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prediction": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+      "human_gt": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ KAZU SUỐT ĐỜI KHÔNG ?",
+      "exact": false,
+      "char_errors": 9,
+      "human_chars": 67,
+      "word_errors": 7,
+      "human_words": 16,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 1,
+      "logical_region_id": "LR_2284efd8ada7",
+      "source_fragment_ids": [
+        12,
+        13,
+        14
+      ],
+      "prediction": "Con XIN THỀ!",
+      "human_gt": "CON XIN THỀ!",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 12,
+      "word_errors": 0,
+      "human_words": 3,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 2,
+      "logical_region_id": "LR_ef4ab22072a8",
+      "source_fragment_ids": [
+        1,
+        2,
+        3
+      ],
+      "prediction": "TÔI ĐÃ KẾT HÔN",
+      "human_gt": "TÔI ĐÃ KẾT HÔN",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 14,
+      "word_errors": 0,
+      "human_words": 4,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 2,
+      "logical_region_id": "LR_a77493ec9ff9",
+      "source_fragment_ids": [
+        4,
+        5
+      ],
+      "prediction": "TRONG GAME",
+      "human_gt": "TRONG GAME",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 10,
+      "word_errors": 0,
+      "human_words": 2,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_708761617ca5",
+      "source_fragment_ids": [
+        1,
+        2,
+        4
+      ],
+      "prediction": "HÁC BINH NGUYÊN",
+      "human_gt": "HẮC BÌNH NGUYÊN",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 15,
+      "word_errors": 2,
+      "human_words": 3,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_6847589abd58",
+      "source_fragment_ids": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "prediction": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+      "human_gt": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 48,
+      "word_errors": 4,
+      "human_words": 12,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_1b80a3ba7eba",
+      "source_fragment_ids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "prediction": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "human_gt": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ TẬN HƯỞNG NHẬP VAI TUỲ THÍCH",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 72,
+      "word_errors": 4,
+      "human_words": 16,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_301b7ed055be",
+      "source_fragment_ids": [
+        17,
+        18,
+        26
+      ],
+      "prediction": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "human_gt": "ĐÃ MỞ ĐƯỢC THÀNH TỰ TRANG PHỤC [VÉT ĐUÔI TÔM]*",
+      "exact": false,
+      "char_errors": 7,
+      "human_chars": 46,
+      "word_errors": 5,
+      "human_words": 10,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_016a11675840",
+      "source_fragment_ids": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "prediction": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+      "human_gt": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 33,
+      "word_errors": 4,
+      "human_words": 8,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 3,
+      "logical_region_id": "LR_38a547aad429",
+      "source_fragment_ids": [
+        23,
+        24
+      ],
+      "prediction": "KAZL NAY",
+      "human_gt": "KAZU NÀY",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 8,
+      "word_errors": 2,
+      "human_words": 2,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 4,
+      "logical_region_id": "LR_a4e0fdad0903",
+      "source_fragment_ids": [
+        1
+      ],
+      "prediction": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "human_gt": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ!",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 28,
+      "word_errors": 1,
+      "human_words": 6,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 4,
+      "logical_region_id": "LR_ec9604a02d80",
+      "source_fragment_ids": [
+        3
+      ],
+      "prediction": "AH",
+      "human_gt": "AH",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 2,
+      "word_errors": 0,
+      "human_words": 1,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 4,
+      "logical_region_id": "LR_d8230ac855ba",
+      "source_fragment_ids": [
+        4
+      ],
+      "prediction": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+      "human_gt": "ANH CHỈ BIẾT NÓI \"AH' THÔI SAO!?",
+      "exact": false,
+      "char_errors": 5,
+      "human_chars": 32,
+      "word_errors": 4,
+      "human_words": 7,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 4,
+      "logical_region_id": "LR_d403d992f246",
+      "source_fragment_ids": [
+        2
+      ],
+      "prediction": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "human_gt": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 54,
+      "word_errors": 2,
+      "human_words": 13,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_f27fb5ffabf9",
+      "source_fragment_ids": [
+        1
+      ],
+      "prediction": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+      "human_gt": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC...",
+      "exact": false,
+      "char_errors": 7,
+      "human_chars": 55,
+      "word_errors": 5,
+      "human_words": 13,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_1dfca31c24d7",
+      "source_fragment_ids": [
+        5
+      ],
+      "prediction": "Mìnb là Rin",
+      "human_gt": "Mình là Rin",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 11,
+      "word_errors": 1,
+      "human_words": 3,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_26795b95ef26",
+      "source_fragment_ids": [
+        2
+      ],
+      "prediction": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+      "human_gt": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 44,
+      "word_errors": 2,
+      "human_words": 10,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_d9caab3d7c4a",
+      "source_fragment_ids": [
+        6
+      ],
+      "prediction": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "human_gt": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "exact": false,
+      "char_errors": 7,
+      "human_chars": 71,
+      "word_errors": 6,
+      "human_words": 15,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_a0587957c904",
+      "source_fragment_ids": [
+        3
+      ],
+      "prediction": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+      "human_gt": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỖI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU..",
+      "exact": false,
+      "char_errors": 8,
+      "human_chars": 92,
+      "word_errors": 5,
+      "human_words": 22,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_b71bcd7a275c",
+      "source_fragment_ids": [
+        7
+      ],
+      "prediction": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "human_gt": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 102,
+      "word_errors": 4,
+      "human_words": 22,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_7ee4baf217d7",
+      "source_fragment_ids": [
+        4
+      ],
+      "prediction": "Ha #êp #ên cút ~al",
+      "human_gt": "Hạ thấp thêm chút nữa!!",
+      "exact": false,
+      "char_errors": 12,
+      "human_chars": 23,
+      "word_errors": 5,
+      "human_words": 5,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 5,
+      "logical_region_id": "LR_bf3e79736d0c",
+      "source_fragment_ids": [
+        8
+      ],
+      "prediction": "Hôy",
+      "human_gt": "Hầy",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 3,
+      "word_errors": 1,
+      "human_words": 1,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 7,
+      "logical_region_id": "LR_5facc1321e92",
+      "source_fragment_ids": [
+        2
+      ],
+      "prediction": "VÂnG!",
+      "human_gt": "VÂNG!",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 5,
+      "word_errors": 0,
+      "human_words": 1,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 7,
+      "logical_region_id": "LR_5787cb8d10ad",
+      "source_fragment_ids": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "prediction": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+      "human_gt": "CỨ NHƯ VẬY CHÚNG TÔI ĐÃ KẾT HÔN VỚI NHAU",
+      "exact": false,
+      "char_errors": 5,
+      "human_chars": 40,
+      "word_errors": 4,
+      "human_words": 10,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_dfef3de3ed48",
+      "source_fragment_ids": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "prediction": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+      "human_gt": "NHƯNG MÀ TỚ LẠI CÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 59,
+      "word_errors": 3,
+      "human_words": 12,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_35d30a3b10e1",
+      "source_fragment_ids": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        12
+      ],
+      "prediction": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+      "human_gt": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG CÓ, BIỂU CẢM CŨNG KHÔNG THAY ĐỔI",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 75,
+      "word_errors": 5,
+      "human_words": 16,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_9636706b4855",
+      "source_fragment_ids": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        49
+      ],
+      "prediction": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+      "human_gt": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 81,
+      "word_errors": 6,
+      "human_words": 19,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_f6dbfc4d4913",
+      "source_fragment_ids": [
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33
+      ],
+      "prediction": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+      "human_gt": "À THÌ ĐÚNG LÀ CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA...",
+      "exact": false,
+      "char_errors": 11,
+      "human_chars": 94,
+      "word_errors": 7,
+      "human_words": 22,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_bf3e65667bd9",
+      "source_fragment_ids": [
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "prediction": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "human_gt": "ỪM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐƯỢC RỒI!",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 66,
+      "word_errors": 6,
+      "human_words": 14,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_0856a888b8df",
+      "source_fragment_ids": [
+        35,
+        36,
+        38,
+        40,
+        42,
+        44
+      ],
+      "prediction": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+      "human_gt": "MÀ TỚ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RỒI!",
+      "exact": false,
+      "char_errors": 5,
+      "human_chars": 69,
+      "word_errors": 4,
+      "human_words": 16,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_5bdd1160b3a0",
+      "source_fragment_ids": [
+        37,
+        39,
+        41,
+        43,
+        48
+      ],
+      "prediction": "NẾU LÀ MĨNH THÌ SẼ NẠP TlỄN VÀO GaME RồI HA",
+      "human_gt": "NẾU LÀ MÌNH THÌ SẼ NẠP TIỀN VÀO GAME RỒI HA...",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 46,
+      "word_errors": 3,
+      "human_words": 11,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 15,
+      "logical_region_id": "LR_f3054b9c1820",
+      "source_fragment_ids": [
+        34
+      ],
+      "prediction": "PÍP!",
+      "human_gt": "PÍP!",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 4,
+      "word_errors": 0,
+      "human_words": 1,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_0523c7b7b258",
+      "source_fragment_ids": [
+        29,
+        30,
+        32
+      ],
+      "prediction": "CũNG CÒN THÒI GIAN",
+      "human_gt": "CŨNG CÒN THỜI GIAN",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 18,
+      "word_errors": 1,
+      "human_words": 4,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_952c7eac9aef",
+      "source_fragment_ids": [
+        27,
+        28,
+        31,
+        33
+      ],
+      "prediction": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+      "human_gt": "CHẮC LÀ NGHE THỬ MỘT LẦN XEM SAO",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 32,
+      "word_errors": 1,
+      "human_words": 8,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_11117a0bc73a",
+      "source_fragment_ids": [
+        34
+      ],
+      "prediction": "À RẾ",
+      "human_gt": "À RẾ",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 4,
+      "word_errors": 0,
+      "human_words": 2,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": false
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_554cd55f1a6a",
+      "source_fragment_ids": [
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "prediction": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+      "human_gt": "VẬY CHẮC TÌM HIỂU THÔNG TIN VỀ SỰ KIỆN MỚI THÔI...",
+      "exact": false,
+      "char_errors": 23,
+      "human_chars": 50,
+      "word_errors": 9,
+      "human_words": 11,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_8a526b453c10",
+      "source_fragment_ids": [
+        1
+      ],
+      "prediction": "HỬ?",
+      "human_gt": "HỬ?",
+      "exact": true,
+      "char_errors": 0,
+      "human_chars": 3,
+      "word_errors": 0,
+      "human_words": 1,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_0c630f218964",
+      "source_fragment_ids": [
+        3,
+        7
+      ],
+      "prediction": "Cậpnhật tin túc Hắc Bình Nguyên",
+      "human_gt": "CẬP NHẬT TIN TỨC HẮC BÌNH NGUYÊN",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 32,
+      "word_errors": 3,
+      "human_words": 7,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 17,
+      "logical_region_id": "LR_de7b43ae45f7",
+      "source_fragment_ids": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "prediction": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+      "human_gt": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY...",
+      "exact": false,
+      "char_errors": 6,
+      "human_chars": 56,
+      "word_errors": 5,
+      "human_words": 13,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 18,
+      "logical_region_id": "LR_aac2ef08be0e",
+      "source_fragment_ids": [
+        1,
+        2
+      ],
+      "prediction": "SAO LẠl",
+      "human_gt": "SAO LẠI",
+      "exact": false,
+      "char_errors": 1,
+      "human_chars": 7,
+      "word_errors": 1,
+      "human_words": 2,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 18,
+      "logical_region_id": "LR_77b6cc0407da",
+      "source_fragment_ids": [
+        3,
+        4,
+        5
+      ],
+      "prediction": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+      "human_gt": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ...",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 29,
+      "word_errors": 3,
+      "human_words": 6,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 18,
+      "logical_region_id": "LR_1c3c89ee5ac1",
+      "source_fragment_ids": [
+        6
+      ],
+      "prediction": "HAY QUÁ.",
+      "human_gt": "HAY QÚA...",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 10,
+      "word_errors": 1,
+      "human_words": 2,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_ac01f1796688",
+      "source_fragment_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "prediction": "XÁC NHÂN BÀ LUÔN Rồl",
+      "human_gt": "XÁC NHẬN BÀ LUÔN RỒI...",
+      "exact": false,
+      "char_errors": 5,
+      "human_chars": 23,
+      "word_errors": 2,
+      "human_words": 5,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_2da60c343d36",
+      "source_fragment_ids": [
+        16,
+        17,
+        18
+      ],
+      "prediction": "THẰNG ẤT Ơ NÀO KIA_",
+      "human_gt": "THẰNG ẤT Ơ NÀO KIA...",
+      "exact": false,
+      "char_errors": 3,
+      "human_chars": 21,
+      "word_errors": 1,
+      "human_words": 5,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_2010e3d36608",
+      "source_fragment_ids": [
+        19,
+        20
+      ],
+      "prediction": "Ghen VL.",
+      "human_gt": "GHEN TỊ VL...",
+      "exact": false,
+      "char_errors": 5,
+      "human_chars": 13,
+      "word_errors": 2,
+      "human_words": 3,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_5cb918f74103",
+      "source_fragment_ids": [
+        24,
+        26,
+        29,
+        32
+      ],
+      "prediction": "KHÔNG THÊ THA TH4 ĐLỢC..",
+      "human_gt": "KHÔNG THỂ THA THỨ ĐƯỢC...",
+      "exact": false,
+      "char_errors": 4,
+      "human_chars": 25,
+      "word_errors": 3,
+      "human_words": 5,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_505a871ebd18",
+      "source_fragment_ids": [
+        28,
+        31,
+        33,
+        34
+      ],
+      "prediction": "MIZUKI-SAN ĂN CÙNG vÓ CON TRAI Sao!?",
+      "human_gt": "MIZUKI-SAN ĂN CÙNG VỚI CON TRAI SAO!?",
+      "exact": false,
+      "char_errors": 2,
+      "human_chars": 37,
+      "word_errors": 1,
+      "human_words": 7,
+      "routing_state": "HARD_REVIEW",
+      "false_accept": false
+    },
+    {
+      "page_order": 38,
+      "logical_region_id": "LR_563eb986d1f9",
+      "source_fragment_ids": [
+        21,
+        22,
+        23,
+        25,
+        27,
+        30
+      ],
+      "prediction": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+      "human_gt": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN CHẰM CHẰM VẬY...",
+      "exact": false,
+      "char_errors": 12,
+      "human_chars": 49,
+      "word_errors": 6,
+      "human_words": 10,
+      "routing_state": "ACCEPT_CANDIDATE",
+      "false_accept": true
+    }
+  ]
+}

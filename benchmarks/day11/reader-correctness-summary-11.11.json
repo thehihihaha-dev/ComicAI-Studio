@@ -1,0 +1,49 @@
+{
+  "schema_version": "reader-correctness-summary.v2",
+  "checkpoint": "11.11",
+  "human_gt_complete": true,
+  "reading_order_verdict": "B. PASS WITH DETERMINISTIC FIXES",
+  "ocr_verdict": "B. ROUTER/CORRECTNESS FIX REQUIRED",
+  "single_next_action": "Redesign the OCR ACCEPT_CANDIDATE rule using observed false-safe logical-region errors before changing the OCR engine.",
+  "preservation": {
+    "human_gt_storage_separate_from_prediction": true,
+    "pages_where_human_order_differs_from_scored_prediction": 4,
+    "prediction_artifact_unchanged": true,
+    "ground_truth_11_9_artifact_unchanged": true,
+    "authoritative_state_unchanged": true
+  },
+  "resource_safety": {
+    "before": {
+      "timestamp": "2026-08-22T18:57:01.385291+00:00",
+      "process_rss_bytes": 74481664,
+      "process_peak_rss_bytes": 74481664,
+      "system_available_memory_bytes": 6548930560,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.183638,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-22T18:57:01.446825+00:00",
+      "process_rss_bytes": 80117760,
+      "process_peak_rss_bytes": 80117760,
+      "system_available_memory_bytes": 6551060480,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1221265981,
+      "process_cpu_seconds": 0.213011,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "swap_delta_bytes": 0,
+    "new_ocr_inference_calls": 0,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "artifact_hashes": {
+    "prediction_manifest": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+    "11_9_gt": "0762f22c6b123abc3857908b7cc02c99c82a9da93e6a95714cffcfef1a6b5592"
+  }
+}

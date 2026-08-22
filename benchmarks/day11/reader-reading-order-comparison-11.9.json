@@ -1,0 +1,109 @@
+{
+  "schema_version": "reader-reading-order-human.v1",
+  "checkpoint": "11.9",
+  "artifact_kind": "comparison",
+  "status": "completed",
+  "N": 3,
+  "metrics": {
+    "N": 3,
+    "exact_page_order": {
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "panel_group_order": {
+      "correct": 3,
+      "accuracy": 1.0,
+      "contract": "ordered group IDs plus region membership sets; within-group order scored separately"
+    },
+    "text_region_order": {
+      "exact_pages": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "pairwise": {
+      "correct": 76,
+      "total": 79,
+      "accuracy": 0.9620253164556962
+    },
+    "inversions": 3,
+    "orphan_assignment": {
+      "applicable": false,
+      "accuracy": null,
+      "note": "N/A: human marked no orphan regions"
+    },
+    "ambiguous_pages": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "human_position_corrections": 6,
+    "pages_with_corrections": 1
+  },
+  "per_page": [
+    {
+      "page_order": 1,
+      "exact": true,
+      "pairwise_total": 6,
+      "inversions": 0,
+      "pairwise_accuracy": 1.0,
+      "corrections": 0,
+      "group_exact": true,
+      "ambiguous": false
+    },
+    {
+      "page_order": 2,
+      "exact": true,
+      "pairwise_total": 28,
+      "inversions": 0,
+      "pairwise_accuracy": 1.0,
+      "corrections": 0,
+      "group_exact": true,
+      "ambiguous": false
+    },
+    {
+      "page_order": 3,
+      "exact": false,
+      "pairwise_total": 45,
+      "inversions": 3,
+      "pairwise_accuracy": 0.9333333333333333,
+      "corrections": 6,
+      "group_exact": true,
+      "ambiguous": false
+    }
+  ],
+  "verdict": "B. PASS WITH MINOR GEOMETRY FIXES",
+  "verdict_basis": "2/3 exact pages and 76/79 pairwise relations; one page has three inversions, so controlled scaling is justified but geometry is not exact.",
+  "ocr_safety": "Reader ordering readiness does not change 11.8 false ACCEPT 16/19; ACCEPT_CANDIDATE remains non-authoritative.",
+  "performance": {
+    "analysis_wall_seconds": 0.053062374994624406,
+    "resources_before": {
+      "timestamp": "2026-08-22T15:07:49.806251+00:00",
+      "process_rss_bytes": 87932928,
+      "process_peak_rss_bytes": 88719360,
+      "system_available_memory_bytes": 7014580224,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1481512058,
+      "process_cpu_seconds": 0.261491,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "resources_after": {
+      "timestamp": "2026-08-22T15:07:49.852435+00:00",
+      "process_rss_bytes": 92241920,
+      "process_peak_rss_bytes": 92241920,
+      "system_available_memory_bytes": 7016710144,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": 1481512058,
+      "process_cpu_seconds": 0.281513,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "swap_delta_bytes": 0,
+    "authoritative_state_unchanged": true,
+    "model_calls": {
+      "vlm": 0,
+      "ollama": 0,
+      "ocr": 0
+    }
+  }
+}

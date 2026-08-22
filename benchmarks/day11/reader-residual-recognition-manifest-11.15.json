@@ -1,0 +1,38 @@
+{
+  "schema_version": "reader-residual-recognition-manifest.v1",
+  "checkpoint": "11.15",
+  "status": "FROZEN_BEFORE_CANDIDATE_INFERENCE",
+  "candidate": {
+    "engine": "PaddleX create_model recognizer API",
+    "model": "PP-OCRv6_medium_rec",
+    "model_cache_bytes": 76863990,
+    "framework_versions": {
+      "paddlex": "3.7.2",
+      "paddleocr": "3.7.0",
+      "paddlepaddle": "3.2.1"
+    },
+    "model_file_sha256": {
+      "inference.json": "0b2e25e990bd072f1bf77d59d67d508bce6c4bd44af6624e0fb27d6da2cd00e8",
+      "inference.pdiparams": "1b01c79a914587933f615569e75de54f2e638ebb5d3f3b3c1b38c24ede8c7319",
+      "inference.yml": "991b700facf5b50a7de193468207d5f4255b538dde0d312ae3b7c7a9b6873129"
+    },
+    "recognizer_only": true,
+    "detector_used": false,
+    "device": "cpu",
+    "downloads": []
+  },
+  "modes": {
+    "A": "persisted EasyOCR 11.13 logical result",
+    "B": "frozen 11.14 adaptive 4%, 3–14px",
+    "C": "PP-OCRv6 medium recognizer on exact logical bbox",
+    "D": "PP-OCRv6 medium recognizer on frozen adaptive bbox"
+  },
+  "dataset": {
+    "verified": 71,
+    "unreadable": 10
+  },
+  "oracle": "Human GT used only after inference for scoring",
+  "frozen_replay_sha256": "1c3cb322581689f588e93a514d39bf1be9ef254a073916d52969f81f51b9751e",
+  "frozen_human_sha256": "6fa30534e7bbb79aebce38eb092bc5a713d9a86ab7c8d62b1374243c2e9ec85e",
+  "protocol_hash": "69325b808e0640d5b482f197a6e2048c78dab45ffca43f4e3737b7ba5cb9ca00"
+}

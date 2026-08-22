@@ -6,6 +6,7 @@ from typing import Any
 
 from app.services.performance import measure_model_call
 from app.services.model_runtime import effective_generation_options
+from app.services.resource_safety import heavy_inference_slot
 
 
 OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
@@ -33,12 +34,13 @@ def call_text_model(
         method="POST",
     )
 
-    with measure_model_call(
+    with heavy_inference_slot("text") as resource_sample, measure_model_call(
         model,
         prompt_chars=len(prompt),
         prompt_hash=hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
         generation_options=payload["options"],
     ) as metrics:
+        metrics["prelaunch_safety_state"] = resource_sample["safety_state"]
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 response_data = response.read().decode("utf-8")
@@ -49,6 +51,17 @@ def call_text_model(
             ) from error
 
         result = json.loads(response_data)
+        for key in (
+            "total_duration",
+            "load_duration",
+            "prompt_eval_count",
+            "prompt_eval_duration",
+            "eval_count",
+            "eval_duration",
+        ):
+            value = result.get(key)
+            if isinstance(value, int) and not isinstance(value, bool):
+                metrics[key] = value
         raw_response = result.get("response", "")
         metrics["output_chars"] = len(raw_response) if isinstance(raw_response, str) else 0
         if isinstance(raw_response, str):

@@ -1,0 +1,175 @@
+{
+  "schema_version": "reader-ocr-expanded.v1",
+  "checkpoint": "11.4",
+  "artifact_kind": "comparison",
+  "status": "completed",
+  "created_at": "2026-08-22T14:08:44.027840+00:00",
+  "trusted_sample_count": 20,
+  "aggregate": {
+    "easyocr": {
+      "sample_count": 20,
+      "raw_exact_rate": 0.05,
+      "normalized_exact_rate": 0.05,
+      "micro_raw_cer": 0.9749262536873157,
+      "mean_normalized_cer": 0.8207196969696969,
+      "mean_wer": 0.9333333333333333,
+      "missing_text_rate": 0.0,
+      "edit_counts": {
+        "insertions": 0,
+        "deletions": 622,
+        "substitutions": 39
+      },
+      "edit_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9174041297935103,
+        "substitutions": 0.05752212389380531
+      }
+    },
+    "paddleocr": {
+      "sample_count": 20,
+      "raw_exact_rate": 0.05,
+      "normalized_exact_rate": 0.1,
+      "micro_raw_cer": 0.9572271386430679,
+      "mean_normalized_cer": 0.7982784365393061,
+      "mean_wer": 0.9,
+      "missing_text_rate": 0.15,
+      "edit_counts": {
+        "insertions": 0,
+        "deletions": 623,
+        "substitutions": 26
+      },
+      "edit_rates": {
+        "insertions": 0.0,
+        "deletions": 0.9188790560471977,
+        "substitutions": 0.038348082595870206
+      }
+    }
+  },
+  "subgroups": {
+    "easyocr": {
+      "language": {
+        "unknown": {
+          "sample_count": 20,
+          "metrics": {
+            "exact_rate": 0.05,
+            "mean_normalized_cer": 0.8207196969696969
+          }
+        }
+      },
+      "text_role": {
+        "dialogue": {
+          "sample_count": 12,
+          "metrics": {
+            "exact_rate": 0.08333333333333333,
+            "mean_normalized_cer": 0.7773358585858586
+          }
+        },
+        "narration": {
+          "sample_count": 8,
+          "metrics": {
+            "exact_rate": 0.0,
+            "mean_normalized_cer": 0.8857954545454545
+          }
+        }
+      },
+      "difficulty": {
+        "human_verified": {
+          "sample_count": 20,
+          "metrics": {
+            "exact_rate": 0.05,
+            "mean_normalized_cer": 0.8207196969696969
+          }
+        }
+      }
+    },
+    "paddleocr": {
+      "language": {
+        "unknown": {
+          "sample_count": 20,
+          "metrics": {
+            "exact_rate": 0.1,
+            "mean_normalized_cer": 0.7982784365393061
+          }
+        }
+      },
+      "text_role": {
+        "dialogue": {
+          "sample_count": 12,
+          "metrics": {
+            "exact_rate": 0.16666666666666666,
+            "mean_normalized_cer": 0.7468782023129849
+          }
+        },
+        "narration": {
+          "sample_count": 8,
+          "metrics": {
+            "exact_rate": 0.0,
+            "mean_normalized_cer": 0.8753787878787879
+          }
+        }
+      },
+      "difficulty": {
+        "human_verified": {
+          "sample_count": 20,
+          "metrics": {
+            "exact_rate": 0.1,
+            "mean_normalized_cer": 0.7982784365393061
+          }
+        }
+      }
+    }
+  },
+  "agreement_matrix": {
+    "agreement_correct": 1,
+    "agreement_incorrect": 0,
+    "disagreement_easy_correct": 0,
+    "disagreement_paddle_correct": 1,
+    "disagreement_both_wrong": 18,
+    "agreement_rate": 0.05,
+    "both_confidently_wrong": 0
+  },
+  "structural_separation": {
+    "crop_transcription_detection_recall": "N/A",
+    "11_3_full_page_known_region_recall": {
+      "easyocr": "21/21",
+      "paddleocr": "21/21"
+    },
+    "11_3_logical_bubble_over_split": {
+      "easyocr": 19,
+      "paddleocr": 19
+    },
+    "merged_logical_bubbles": {
+      "easyocr": 0,
+      "paddleocr": 0
+    }
+  },
+  "answers": {
+    "paddle_clearly_better": "No: Paddle CER is lower, but n=3 is insufficient.",
+    "paddle_faster": "See measured region/init timing; no general claim from n=3.",
+    "vietnamese": "Paddle has lower measured CER on three Vietnamese samples; insufficient for preference.",
+    "english": "N/A: no trusted English sample.",
+    "dominant_errors": {
+      "easyocr": {
+        "SUBSTITUTION": 19,
+        "DELETION": 18
+      },
+      "paddleocr": {
+        "SUBSTITUTION": 15,
+        "DELETION": 16,
+        "MISSING_REGION": 2,
+        "LANGUAGE_CONFUSION": 2,
+        "CASE_ERROR": 1,
+        "PUNCTUATION_ERROR": 1,
+        "DIACRITIC_ERROR": 1
+      }
+    },
+    "confidence_alone": "No.",
+    "agreement_stronger": "N/A: insufficient agreement cases.",
+    "both_confidently_wrong": 0,
+    "transcription_vs_structure": "Both remain problems: crop errors persist and both engines over-split 19 logical regions in 11.3.",
+    "enough_for_reader_v2": "No; more human GT is required."
+  },
+  "decision": "D. INSUFFICIENT EVIDENCE — MORE HUMAN GT REQUIRED",
+  "production_ocr": "EasyOCR unchanged",
+  "vlm_calls": 0
+}

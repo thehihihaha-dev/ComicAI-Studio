@@ -1,0 +1,86 @@
+{
+  "schema_version": "reader-order-inversion-audit.v1",
+  "checkpoint": "11.16",
+  "inversion_count": 8,
+  "taxonomy": {
+    "tall-panel interference": 5,
+    "different-row incorrectly merged": 1,
+    "vertical-overlap ambiguity": 1,
+    "same-row misclassification": 1
+  },
+  "cases": [
+    {
+      "page_order": 4,
+      "human_before": "LR_ec9604a02d80",
+      "human_after": "LR_d403d992f246",
+      "classification": "tall-panel interference",
+      "vertical_overlap": 1.0,
+      "normalized_center_distance": 2.6666666666666665,
+      "height_ratio": 7.0
+    },
+    {
+      "page_order": 4,
+      "human_before": "LR_ec9604a02d80",
+      "human_after": "LR_d8230ac855ba",
+      "classification": "tall-panel interference",
+      "vertical_overlap": 0.5833333333333334,
+      "normalized_center_distance": 2.2083333333333335,
+      "height_ratio": 4.583333333333333
+    },
+    {
+      "page_order": 15,
+      "human_before": "LR_0856a888b8df",
+      "human_after": "LR_f3054b9c1820",
+      "classification": "tall-panel interference",
+      "vertical_overlap": 0.34615384615384615,
+      "normalized_center_distance": 1.4615384615384615,
+      "height_ratio": 2.6153846153846154
+    },
+    {
+      "page_order": 15,
+      "human_before": "LR_5bdd1160b3a0",
+      "human_after": "LR_f3054b9c1820",
+      "classification": "different-row incorrectly merged",
+      "vertical_overlap": 0.0,
+      "normalized_center_distance": 2.1346153846153846,
+      "height_ratio": 2.3461538461538463
+    },
+    {
+      "page_order": 17,
+      "human_before": "LR_0523c7b7b258",
+      "human_after": "LR_952c7eac9aef",
+      "classification": "tall-panel interference",
+      "vertical_overlap": 1.0,
+      "normalized_center_distance": 0.0,
+      "height_ratio": 1.8656716417910448
+    },
+    {
+      "page_order": 17,
+      "human_before": "LR_554cd55f1a6a",
+      "human_after": "LR_8a526b453c10",
+      "classification": "tall-panel interference",
+      "vertical_overlap": 0.39285714285714285,
+      "normalized_center_distance": 1.5357142857142858,
+      "height_ratio": 2.857142857142857
+    },
+    {
+      "page_order": 38,
+      "human_before": "LR_505a871ebd18",
+      "human_after": "LR_563eb986d1f9",
+      "classification": "vertical-overlap ambiguity",
+      "vertical_overlap": 0.3953488372093023,
+      "normalized_center_distance": 0.8895348837209303,
+      "height_ratio": 1.569767441860465
+    },
+    {
+      "page_order": 38,
+      "human_before": "LR_5cb918f74103",
+      "human_after": "LR_563eb986d1f9",
+      "classification": "same-row misclassification",
+      "vertical_overlap": 0.9512195121951219,
+      "normalized_center_distance": 0.3719512195121951,
+      "height_ratio": 1.646341463414634
+    }
+  ],
+  "group_or_panel_error": "N/A: no authoritative Human panel/tier labels"
+}

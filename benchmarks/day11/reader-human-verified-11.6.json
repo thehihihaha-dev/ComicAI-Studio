@@ -1,0 +1,538 @@
+{
+  "schema_version": "reader-human-gt.v1",
+  "artifact_kind": "verified_manifest",
+  "verified_only": true,
+  "sample_count": 20,
+  "samples": [
+    {
+      "sample_id": "future-p1_b1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 1,
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "source_image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "aa8ec935bc3fefb10b902320d0f465a8a66f50aedf5b6b18bbe86efe15031cc9",
+      "ground_truth": "HÃY CÙNG NHAU HẠNH PHÚC NHÉ",
+      "ground_truth_source": "human",
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg"
+    },
+    {
+      "sample_id": "future-p1_n1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 2,
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "source_image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "202b5119a5ab04b2c1b08a261fb3ad0b84f0794c5a639355544973bbd0d8dac5",
+      "ground_truth": "CÔ GÁI TÓC VÀNG VỚI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ RIN\n",
+      "ground_truth_source": "human",
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg"
+    },
+    {
+      "sample_id": "future-p1_b2",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 1,
+      "region_id": 3,
+      "bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "source_image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "crop_hash": "fa1d217d190233b68ee1cb674f6346971b57eb37f3db365165e5284b9a9251c9",
+      "ground_truth": "AH",
+      "ground_truth_source": "human",
+      "image_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg"
+    },
+    {
+      "sample_id": "future-p2_n1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 1,
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "56618ee00d6b2dcc14ba1e984c22256376b898605d66a4763f4a9c7d044bf193",
+      "ground_truth": "LẦN GẶP GỠ ĐẦU TIÊN CỦA CHÚNG TÔI LÀ VÀO 4 NĂM TRƯỚC",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_b1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 2,
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "756ce74d89ca9d58bf82e60f432cbe9bd6c653df6024bffdf8355accc6b80123",
+      "ground_truth": "MÌNH LẦ NGƯỜI CHƠI MỚI NÊN MONG CẬU GIÚP ĐỠ",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_n2",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 3,
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "0816affb388b03af9da9a79eed87ab722d754bbfb97ed71d24144311ba348811",
+      "ground_truth": "VÀ TÔI ĐÃ CHỈ BẢO CHO NEWBIE RIN CÁCH CHƠI GAME VÀ TỪ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẦU...",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_b4",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 4,
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "59328d576c47c6db4aef453d82eef7fbb07da964eb9b4f79a483a0a3bcd9959d",
+      "ground_truth": "HẠ THẤP THÊM CHÚT NỮA!!",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_b2",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 5,
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "c0dcf239243d1f42ae24bfc141ed9bc37062ba953dc6f52c5837dc7e11657867",
+      "ground_truth": "MÌNH LÀ RIN",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_n4",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 6,
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "068431981174f09826fe565baeb947aab56e06b862f46c2cb1fb8b813a428746",
+      "ground_truth": "RIN ĐƯỢC GHÉP THÀNH CẶP NGẪU NHIÊN VỚI TÔI TRONG MỘT TRẬN ĐẤU Ở DUNGEON",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p2_n3",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 2,
+      "region_id": 7,
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "crop_hash": "0af4ff71a1809b54dfb4b3ddafc75e4848048774152009b39566345a8cd66132",
+      "ground_truth": "THÔNG QUA VIỆC GẶP NHAU THƯỜNG XUYÊN THÌ SỰ GẮN KẾT CHỦA CHÚNG TÔI ĐÃ TĂNG LÊN TỪNG CHÚT, TỪNG CHÚT MỘT",
+      "ground_truth_source": "human",
+      "image_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg"
+    },
+    {
+      "sample_id": "future-p3_n1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 1,
+      "bbox": [
+        674.0,
+        120.0,
+        774.0,
+        174.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "8e3f8f157c9eb57ddcffe848a384fff57c25db03b7b722551b69982ddb50f63a",
+      "ground_truth": "NĂM THỨ NHẤT",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_n2",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 2,
+      "bbox": [
+        686.0,
+        400.0,
+        764.0,
+        452.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "8a17c9812a52079debeebc0b8c14ee9bce87992a3a076c50d84eb6ab66c73923",
+      "ground_truth": "NĂM THỨ HAI",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b3",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 3,
+      "bbox": [
+        122.0,
+        474.0,
+        230.0,
+        576.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "9cca1e8ff5455baee757f1b1065f05fa1439076b6ed50a333ad1428efdbc9dd2",
+      "ground_truth": "HÔM NAY CẬU MUỐN ĐI CHƠI GÌ KHÔNG ? ",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_n3",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 4,
+      "bbox": [
+        684.0,
+        734.0,
+        758.0,
+        788.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "9eb045b56e99ff04d283dfa991d6c54643094639d6f66a82627d4c04046d9d4e",
+      "ground_truth": "NĂM THỨ BA",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "narration",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b6",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 5,
+      "bbox": [
+        659.0,
+        892.0,
+        755.0,
+        1003.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "efd946529e52b851026a3dd94e3dd8f7757ed2b3b17e77461f4ac269a0594245",
+      "ground_truth": "ĐI CÂU CÁ NÀO!!",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b1",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 7,
+      "bbox": [
+        140.0,
+        157.0,
+        246.0,
+        296.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "c8126b8cb80480b39c0893881b805a656c5c9d15f95faf5a2af0bd29651c6798",
+      "ground_truth": "HÔM NAY CHÚNG TA SẼ CÙNG NHAU THÁM HIỂM DUNGEON CHỨ ?",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b2",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 8,
+      "bbox": [
+        647.0,
+        247.0,
+        707.0,
+        293.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "5271c390b5ed54b48fe690556ca86f202e88944b5280b2f4673697f5b612e354",
+      "ground_truth": "KAZU-SAN",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b4",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 9,
+      "bbox": [
+        668.0,
+        550.0,
+        738.0,
+        578.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "602be081cc496faae9794b964cb4cbd037ca841f54822f0a0920c0e297cd240f",
+      "ground_truth": "KAZU!",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b5",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 10,
+      "bbox": [
+        195.0,
+        766.0,
+        272.0,
+        857.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "a1ed4e3f36f1cacecd4fad562dfca5508e4d839cf225e8ff224bd46a040f9650",
+      "ground_truth": "HÔM NAY CHÚNG TA SẼ ĐI DÀO M-",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 1,
+      "benchmark_cache_revision": 1,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    },
+    {
+      "sample_id": "future-p3_b7",
+      "project_id": "e1d1b85f-90b8-4d6b-9eb6-6694e1dc5fb2",
+      "asset_id": "7d88f531-5f78-41ce-a7b3-a07bacbfc2ed",
+      "page_order": 3,
+      "region_id": 11,
+      "bbox": [
+        117.0,
+        930.0,
+        239.0,
+        1071.0
+      ],
+      "source_image_hash": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "crop_hash": "33913ce3eced7912334fdf0f2156e456d6bd8a9e4fab00d4807cd93383332ff4",
+      "ground_truth": "ĐI CÂU CÁ THÔI NÀO!!!",
+      "ground_truth_source": "human",
+      "image_sha256": "11cc81607764eb10a11a7532bdd1e2afb86113e6aca3efac3dff041953ebba29",
+      "language": "unknown",
+      "text_role": "dialogue",
+      "difficulty_tags": [
+        "human_verified"
+      ],
+      "revision": 3,
+      "benchmark_cache_revision": 3,
+      "source_path": "/Users/the15062007/Documents/ComicAI-Studio/backend/uploads/7d88f531-5f78-41ce-a7b3-a07bacbfc2ed_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-8.jpg"
+    }
+  ],
+  "persisted_state_counts": {
+    "VERIFIED": 20,
+    "UNREADABLE": 0,
+    "SKIPPED": 0,
+    "SOURCE_UNAVAILABLE": 0,
+    "PENDING": 0
+  },
+  "total_queue": 20,
+  "unavailable_human_ground_truth": [],
+  "metric_contract": "reader-ocr-expanded.v1 (11.4 definitions; every metric must include N)"
+}

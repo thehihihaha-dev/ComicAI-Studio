@@ -1,0 +1,71 @@
+{
+  "schema_version": "reader-structural-candidates.v1",
+  "checkpoint": "11.14",
+  "status": "COMPLETED",
+  "engine": "EasyOCR vi+en CPU, unchanged",
+  "candidate_contracts": {
+    "logical_2pct": {
+      "concept": "logical crop with 2% max-dimension padding",
+      "ocr_mode": "readtext RGB"
+    },
+    "adaptive_bounded": {
+      "concept": "logical crop with 4% max-dimension padding bounded to 3..14 pixels",
+      "ocr_mode": "readtext RGB"
+    },
+    "fragment_line_2pct": {
+      "concept": "2%-padded source-fragment crops, each recognized independently, then geometry ordered top-to-bottom/left-to-right",
+      "ocr_mode": "readtext RGB per fragment"
+    }
+  },
+  "selection_features": "geometry only; Human text excluded from crop/group/order construction",
+  "r2_status": "FROZEN historical replay only; no tuning or deployment",
+  "pre_ocr_contract_hash": "c982130622ddcc8b3932cc319752421b943c0555534caf46a8460d291010aaa1",
+  "engine_version": "1.7.2",
+  "results": {
+    "control": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14845663890249877,
+      "wer": 0.3887733887733888
+    },
+    "logical_2pct": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14600685938265556,
+      "wer": 0.3866943866943867,
+      "improved": 12,
+      "unchanged": 42,
+      "regressed": 17,
+      "correct_to_wrong": 0,
+      "large_cer_regressions": 2
+    },
+    "adaptive_bounded": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.14551690347868693,
+      "wer": 0.3991683991683992,
+      "improved": 14,
+      "unchanged": 35,
+      "regressed": 22,
+      "correct_to_wrong": 1,
+      "large_cer_regressions": 5
+    },
+    "fragment_line_2pct": {
+      "n": 71,
+      "exact": 8,
+      "exact_rate": 0.11267605633802817,
+      "normalized_cer": 0.1474767270945615,
+      "wer": 0.38461538461538464,
+      "improved": 1,
+      "unchanged": 69,
+      "regressed": 1,
+      "correct_to_wrong": 0,
+      "large_cer_regressions": 0
+    }
+  },
+  "selected_best": "adaptive_bounded",
+  "selection_rule": "lowest VERIFIED micro CER, then highest exact, fewer regressions, stable name; GT used for evaluation/selection only, never construction"
+}
