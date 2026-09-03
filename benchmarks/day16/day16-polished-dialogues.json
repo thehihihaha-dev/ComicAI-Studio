@@ -1,0 +1,1021 @@
+{
+  "schema_version": "day16_polished_dialogues.v1",
+  "summary": {
+    "pipeline_stage": "DAY16_PHASE1_POLISHING_AND_DIARIZATION",
+    "total_dialogues_processed": 50,
+    "expected_dialogues": 50,
+    "completion_rate": "100.0%",
+    "speaker_distribution": {
+      "PRIEST": 3,
+      "RIN": 8,
+      "KAZU": 15,
+      "NARRATOR": 11,
+      "UNKNOWN": 13
+    },
+    "reading_order_inversion_count": 0,
+    "source_input": "benchmarks/day15/dialogue_script.json"
+  },
+  "dialogues": [
+    {
+      "dialogue_id": "D_P01_01",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_97b8cfb45347",
+      "reading_order_index": 1,
+      "speaker_label": "PRIEST",
+      "raw_text": "RIN",
+      "cleaned_text": "RIN",
+      "bbox": [
+        638.0,
+        180.0,
+        692.0,
+        212.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Rin!"
+    },
+    {
+      "dialogue_id": "D_P01_02",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "reading_order_index": 2,
+      "speaker_label": "PRIEST",
+      "raw_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+      "cleaned_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+      "bbox": [
+        460.0,
+        173.0,
+        560.0,
+        276.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Cho dù là lúc ốm đau hay bệnh tật,"
+    },
+    {
+      "dialogue_id": "D_P01_03",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "reading_order_index": 3,
+      "speaker_label": "PRIEST",
+      "raw_text": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+      "cleaned_text": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ CỦA KAZU SUỐT ĐỜI KHÔNG?",
+      "bbox": [
+        142.0,
+        374.0,
+        262.0,
+        508.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "thì con có chấp nhận thề nguyện yêu và làm vợ của Kazu suốt đời không?"
+    },
+    {
+      "dialogue_id": "D_P01_04",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_c191e02c101e",
+      "reading_order_index": 4,
+      "speaker_label": "RIN",
+      "raw_text": "Con XIN THỀ!",
+      "cleaned_text": "Con XIN THỀ!",
+      "bbox": [
+        157.0,
+        805.0,
+        237.0,
+        961.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Con xin thề!"
+    },
+    {
+      "dialogue_id": "D_P02_01",
+      "page_id": 2,
+      "panel_id": "PN_c81abc4667cc",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "TÔI ĐÃ KẾT HÔN",
+      "cleaned_text": "TÔI ĐÃ KẾT HÔN",
+      "bbox": [
+        155.0,
+        205.0,
+        241.0,
+        321.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Tôi đã kết hôn,"
+    },
+    {
+      "dialogue_id": "D_P02_02",
+      "page_id": 2,
+      "panel_id": "PN_2fd92daee87b",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "TRONG GAME",
+      "cleaned_text": "TRONG GAME",
+      "bbox": [
+        658.0,
+        744.0,
+        738.0,
+        814.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "trong game."
+    },
+    {
+      "dialogue_id": "D_P03_01",
+      "page_id": 3,
+      "panel_id": "PN_befc93661d98",
+      "reading_order_index": 1,
+      "speaker_label": "NARRATOR",
+      "raw_text": "HÁC BINH NGUYÊN",
+      "cleaned_text": "HẮC BÌNH NGUYÊN",
+      "bbox": [
+        691.0,
+        147.0,
+        789.0,
+        255.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hắc Bình Nguyên,"
+    },
+    {
+      "dialogue_id": "D_P03_02",
+      "page_id": 3,
+      "panel_id": "PN_befc93661d98",
+      "reading_order_index": 2,
+      "speaker_label": "NARRATOR",
+      "raw_text": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+      "cleaned_text": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+      "bbox": [
+        163.0,
+        205.0,
+        295.0,
+        379.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "là một game MMO thế giới mở với đồ họa chân thực."
+    },
+    {
+      "dialogue_id": "D_P03_03",
+      "page_id": 3,
+      "panel_id": "PN_cc6fa8f61cd2",
+      "reading_order_index": 3,
+      "speaker_label": "NARRATOR",
+      "raw_text": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "cleaned_text": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "bbox": [
+        647.0,
+        579.0,
+        779.0,
+        792.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Một con game tuyệt vời nơi mọi người có thể tận hưởng nhập vai tùy thích."
+    },
+    {
+      "dialogue_id": "D_P03_04",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "cleaned_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "bbox": [
+        514.0,
+        906.0,
+        815.853376071303,
+        1061.9302301859036
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Đã mở được thành tựu trang phục Vét Đuôi Tôm."
+    },
+    {
+      "dialogue_id": "D_P03_05",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 5,
+      "speaker_label": "KAZU",
+      "raw_text": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+      "cleaned_text": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+      "bbox": [
+        328.0,
+        962.0,
+        420.0,
+        1058.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Đã đạt được đặc quyền kết hôn rồi."
+    },
+    {
+      "dialogue_id": "D_P03_06",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 6,
+      "speaker_label": "RIN",
+      "raw_text": "KAZL NAY",
+      "cleaned_text": "KAZU NAY",
+      "bbox": [
+        213.0,
+        1091.0,
+        251.0,
+        1123.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Kazu này!"
+    },
+    {
+      "dialogue_id": "D_P04_01",
+      "page_id": 4,
+      "panel_id": "PN_77c431f85a56",
+      "reading_order_index": 1,
+      "speaker_label": "RIN",
+      "raw_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "cleaned_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hãy cùng nhau hạnh phúc nhé!"
+    },
+    {
+      "dialogue_id": "D_P04_02",
+      "page_id": 4,
+      "panel_id": "PN_952651e84374",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "AH",
+      "cleaned_text": "AH",
+      "bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Ah!"
+    },
+    {
+      "dialogue_id": "D_P04_03",
+      "page_id": 4,
+      "panel_id": "PN_952651e84374",
+      "reading_order_index": 3,
+      "speaker_label": "RIN",
+      "raw_text": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+      "cleaned_text": "Anh CHỈ BIÊT NÓI \"AH\"\" THÔI SAO!?",
+      "bbox": [
+        596.0,
+        822.0,
+        690.0,
+        932.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Anh chỉ biết nói Ah thôi sao!?"
+    },
+    {
+      "dialogue_id": "D_P04_04",
+      "page_id": 4,
+      "panel_id": "PN_a8da83358244",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "cleaned_text": "cô GÁI TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Cô gái tóc vàng với dáng vẻ tăng động này tên là Rin."
+    },
+    {
+      "dialogue_id": "D_P05_01",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 1,
+      "speaker_label": "NARRATOR",
+      "raw_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+      "cleaned_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔI LÀ VÀo 4 NĂM TRUớc...",
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Lần gặp gỡ đầu tiên của chúng tôi là vào 4 năm trước..."
+    },
+    {
+      "dialogue_id": "D_P05_02",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 2,
+      "speaker_label": "RIN",
+      "raw_text": "Mìnb là Rin",
+      "cleaned_text": "Mình là Rin",
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Mình là Rin."
+    },
+    {
+      "dialogue_id": "D_P05_03",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 3,
+      "speaker_label": "RIN",
+      "raw_text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+      "cleaned_text": "Mình là nGười chơi mới nên mong cậu Giúp đỡ!",
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Mình là người chơi mới nên mong cậu giúp đỡ!"
+    },
+    {
+      "dialogue_id": "D_P05_04",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_d056dd9767fc",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "cleaned_text": "RIN ĐƯỢC GHÉP THÀNH CặP NGẨU NHIÊN VỚI Tôi TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Rin được ghép thành cặp ngẫu nhiên với tôi trong một trận đấu ở dungeon."
+    },
+    {
+      "dialogue_id": "D_P05_05",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 5,
+      "speaker_label": "NARRATOR",
+      "raw_text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+      "cleaned_text": "VÀ Tôi ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHƠI GAME VÀ TÙ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẤU.",
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Và tôi đã chỉ bảo cho newbie Rin cách chơi game và từ đó mối quan hệ của chúng tôi bắt đầu."
+    },
+    {
+      "dialogue_id": "D_P05_06",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 6,
+      "speaker_label": "NARRATOR",
+      "raw_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "cleaned_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôi ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Thông qua việc gặp nhau thường xuyên thì sự gắn kết của chúng tôi đã tăng lên từng chút, từng chút một."
+    },
+    {
+      "dialogue_id": "D_P05_07",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 7,
+      "speaker_label": "KAZU",
+      "raw_text": "Ha #êp #ên cút ~al",
+      "cleaned_text": "Hạ thấp thêm chút!!",
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hạ thấp thêm chút nữa!!"
+    },
+    {
+      "dialogue_id": "D_P05_08",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 8,
+      "speaker_label": "RIN",
+      "raw_text": "Hôy",
+      "cleaned_text": "Hầy",
+      "bbox": [
+        197.0,
+        922.0,
+        246.0,
+        967.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hầy..."
+    },
+    {
+      "dialogue_id": "D_P07_01",
+      "page_id": 7,
+      "panel_id": "PN_54c078540d26",
+      "reading_order_index": 1,
+      "speaker_label": "RIN",
+      "raw_text": "VÂnG!",
+      "cleaned_text": "VÂnG!",
+      "bbox": [
+        412.0,
+        936.0,
+        518.0,
+        990.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Vâng!"
+    },
+    {
+      "dialogue_id": "D_P07_02",
+      "page_id": 7,
+      "panel_id": "PN_54c078540d26",
+      "reading_order_index": 2,
+      "speaker_label": "NARRATOR",
+      "raw_text": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+      "cleaned_text": "CỨ NHƯ VẬY CHÚNG Tôi ĐÃ KẾT HÔN VỚI NHAU",
+      "bbox": [
+        139.0,
+        953.0,
+        247.0,
+        1072.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Cứ như vậy chúng tôi đã kết hôn với nhau."
+    },
+    {
+      "dialogue_id": "D_P15_01",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 1,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+      "cleaned_text": "NHƯNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM,",
+      "bbox": [
+        626.0,
+        122.0,
+        738.0,
+        266.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Nhưng mà tớ lại có phần thấy không thích Mizuki-san cho lắm,"
+    },
+    {
+      "dialogue_id": "D_P15_02",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 2,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+      "cleaned_text": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG có, BIỂU CẢM CŨNG KHÔNG THAY ĐỔl",
+      "bbox": [
+        453.0,
+        176.0,
+        591.0,
+        312.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Đến một cuộc trò chuyện tất yếu cũng không có, biểu cảm cũng không thay đổi."
+    },
+    {
+      "dialogue_id": "D_P15_03",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 3,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+      "cleaned_text": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+      "bbox": [
+        110.0,
+        359.0,
+        236.0,
+        535.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Các cậu không cảm thấy sự lạnh lùng ấy là hơi quá đến mức lạnh nhạt luôn rồi sao?"
+    },
+    {
+      "dialogue_id": "D_P15_04",
+      "page_id": 15,
+      "panel_id": "PN_cf3c6e8976b9",
+      "reading_order_index": 4,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+      "cleaned_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA",
+      "bbox": [
+        658.0,
+        674.0,
+        786.0,
+        829.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "À thì đúng là cậu ấy không phải là nhân vật mà mình có thể nói chuyện một cách thoải mái ha..."
+    },
+    {
+      "dialogue_id": "D_P15_05",
+      "page_id": 15,
+      "panel_id": "PN_cf3c6e8976b9",
+      "reading_order_index": 5,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "cleaned_text": "ỬM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "bbox": [
+        155.0,
+        689.0,
+        271.0,
+        819.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Ừm, chúng ta chỉ có thể chiêm ngưỡng Mizuki-san từ xa là được rồi!"
+    },
+    {
+      "dialogue_id": "D_P15_06",
+      "page_id": 15,
+      "panel_id": "PN_e342039122d3",
+      "reading_order_index": 6,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+      "cleaned_text": "MÀ TÓ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RồI!",
+      "bbox": [
+        658.0,
+        974.0,
+        794.0,
+        1110.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Mà tớ cũng đã đặt hàng album phiên bản giới hạn ngay tắp lự luôn rồi!"
+    },
+    {
+      "dialogue_id": "D_P15_07",
+      "page_id": 15,
+      "panel_id": "PN_e342039122d3",
+      "reading_order_index": 7,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "NẾU LÀ MĨNH THÌ SẼ NẠP TlỄN VÀO GaME RồI HA",
+      "cleaned_text": "NẾU LÀ MÌNH THÌ SẼ NẠP TIỀN VÀO GAME RồI HA",
+      "bbox": [
+        294.0,
+        1016.0,
+        405.0,
+        1138.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Nếu là mình thì sẽ nạp tiền vào game rồi ha..."
+    },
+    {
+      "dialogue_id": "D_P15_08",
+      "page_id": 15,
+      "panel_id": "PN_40b666b58c82",
+      "reading_order_index": 8,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "PÍP!",
+      "cleaned_text": "PÍP!",
+      "bbox": [
+        120.0,
+        940.0,
+        204.0,
+        992.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Píp!"
+    },
+    {
+      "dialogue_id": "D_P17_01",
+      "page_id": 17,
+      "panel_id": "PN_ca1bf9d09d63",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+      "cleaned_text": "CHẮC TÌM VAY HIỂU THÔNG 'VỀ SỰ KIỆN TIN MỚl THÔI\"",
+      "bbox": [
+        699.0,
+        199.0,
+        798.0,
+        279.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Chắc tìm hiểu thông tin về sự kiện mới thôi..."
+    },
+    {
+      "dialogue_id": "D_P17_02",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "HỬ?",
+      "cleaned_text": "HỬ?",
+      "bbox": [
+        442.0,
+        182.0,
+        488.0,
+        210.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hử?"
+    },
+    {
+      "dialogue_id": "D_P17_03",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 3,
+      "speaker_label": "NARRATOR",
+      "raw_text": "Cậpnhật tin túc Hắc Bình Nguyên",
+      "cleaned_text": "CẬP NHẬT TIN TỨC Hắc Bình Nguyên",
+      "bbox": [
+        257.0,
+        218.0,
+        423.0,
+        280.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Cập nhật tin tức Hắc Bình Nguyên."
+    },
+    {
+      "dialogue_id": "D_P17_04",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 4,
+      "speaker_label": "KAZU",
+      "raw_text": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+      "cleaned_text": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY.",
+      "bbox": [
+        92.0,
+        328.0,
+        242.0,
+        426.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Lúc sáng nay mấy đứa trong lớp cũng đã nói về cái này..."
+    },
+    {
+      "dialogue_id": "D_P17_05",
+      "page_id": 17,
+      "panel_id": "PN_80ad3d363a63",
+      "reading_order_index": 5,
+      "speaker_label": "KAZU",
+      "raw_text": "CũNG CÒN THÒI GIAN",
+      "cleaned_text": "CũNG CÒN THỜI GIAN",
+      "bbox": [
+        716.0,
+        580.0,
+        794.0,
+        647.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Cũng còn thời gian,"
+    },
+    {
+      "dialogue_id": "D_P17_06",
+      "page_id": 17,
+      "panel_id": "PN_80ad3d363a63",
+      "reading_order_index": 6,
+      "speaker_label": "KAZU",
+      "raw_text": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+      "cleaned_text": "CHẮC LÀ NGHE THử MỘT LẦN XEM SAO",
+      "bbox": [
+        99.0,
+        551.0,
+        217.0,
+        676.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "chắc là nghe thử một lần xem sao."
+    },
+    {
+      "dialogue_id": "D_P17_07",
+      "page_id": 17,
+      "panel_id": "PN_e76ac7ecdd65",
+      "reading_order_index": 7,
+      "speaker_label": "KAZU",
+      "raw_text": "À RẾ",
+      "cleaned_text": "À RẾ",
+      "bbox": [
+        90.0,
+        1124.0,
+        138.0,
+        1150.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Ủa kìa?"
+    },
+    {
+      "dialogue_id": "D_P18_01",
+      "page_id": 18,
+      "panel_id": "PN_f2200cb384a8",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "SAO LẠl",
+      "cleaned_text": "SAO LẠI",
+      "bbox": [
+        722.0,
+        178.0,
+        764.0,
+        236.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Sao lại..."
+    },
+    {
+      "dialogue_id": "D_P18_02",
+      "page_id": 18,
+      "panel_id": "PN_f4be483d0ea3",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+      "cleaned_text": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ.",
+      "bbox": [
+        120.0,
+        298.0,
+        216.0,
+        382.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "còn hơn những gì mình nghĩ."
+    },
+    {
+      "dialogue_id": "D_P18_03",
+      "page_id": 18,
+      "panel_id": "PN_e750f2a6a33e",
+      "reading_order_index": 3,
+      "speaker_label": "KAZU",
+      "raw_text": "HAY QUÁ.",
+      "cleaned_text": "HAY QUÁ.",
+      "bbox": [
+        161.0,
+        671.0,
+        265.0,
+        709.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Hay quá..."
+    },
+    {
+      "dialogue_id": "D_P38_01",
+      "page_id": 38,
+      "panel_id": "PN_86914f467fda",
+      "reading_order_index": 1,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "XÁC NHÂN BÀ LUÔN Rồl",
+      "cleaned_text": "XÁC NHẬN BÀ LUÔN RỒI",
+      "bbox": [
+        474.0,
+        180.0,
+        548.0,
+        284.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Xác nhận bà luôn rồi..."
+    },
+    {
+      "dialogue_id": "D_P38_02",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 2,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "THẰNG ẤT Ơ NÀO KIA_",
+      "cleaned_text": "THẰNG ẤT Ơ NÀO KIA...",
+      "bbox": [
+        682.0,
+        800.0,
+        764.0,
+        873.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Thằng ất ơ nào kia!?"
+    },
+    {
+      "dialogue_id": "D_P38_03",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 3,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "Ghen VL.",
+      "cleaned_text": "Ghen VL.",
+      "bbox": [
+        467.0,
+        863.0,
+        521.0,
+        907.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Ghen tị ghê!"
+    },
+    {
+      "dialogue_id": "D_P38_04",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 4,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "KHÔNG THÊ THA TH4 ĐLỢC..",
+      "cleaned_text": "KHÔNG THÊ THA THỨ ĐƯỢC..",
+      "bbox": [
+        710.0,
+        1027.0,
+        774.0,
+        1109.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Không thể tha thứ được..."
+    },
+    {
+      "dialogue_id": "D_P38_05",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 5,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "MIZUKI-SAN ĂN CÙNG vÓ CON TRAI Sao!?",
+      "cleaned_text": "MIZUKI-SAN ĂN CÙNG VỚI CON TRAI Sao!?",
+      "bbox": [
+        390.0,
+        1071.0,
+        492.0,
+        1157.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Mizuki-san ăn cùng với con trai sao!?"
+    },
+    {
+      "dialogue_id": "D_P38_06",
+      "page_id": 38,
+      "panel_id": "PN_24859586c1ec",
+      "reading_order_index": 6,
+      "speaker_label": "KAZU",
+      "raw_text": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+      "cleaned_text": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN MỈNH CHẰM CHẰM VẬY.",
+      "bbox": [
+        234.0,
+        970.0,
+        334.0,
+        1105.0
+      ],
+      "timestamps": {
+        "start_ms": null,
+        "end_ms": null
+      },
+      "tts_ready_text": "Sao mấy người xung quanh cứ nhìn mình chằm chằm vậy..."
+    }
+  ],
+  "artifact_sha256": "840eb5dff533f1dbd309cc1ab858d74c32178348793a7535884282b6b4b58464"
+}

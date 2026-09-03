@@ -1,17 +1,18 @@
-# Day 15 Closed — Awaiting Human Approval
+# Day 16 Closed — Awaiting Human Approval
 
-Day 15 completed all 3 phases:
-- Phase 1: Deterministic Region Cropping & OCR Adapter Integration (`src/pipeline/research/day15_ocr.py`).
-- Phase 2: Text Post-Processing, Dictionary Repair & Structured Script Assembly (`src/pipeline/research/day15_cleaner.py`).
-- Phase 3: Validation Audit & Canonical Artifact Closure (`benchmarks/day15/dialogue_script.json`).
+Day 16 completed all 3 phases:
+- Phase 1: Contextual Dialogue Polishing & Speaker Diarization (`src/pipeline/research/day16_dialogue.py`).
+- Phase 2: Pluggable TTS Synthesis & Monotonic Timeline Alignment (`src/pipeline/research/day16_tts.py`).
+- Phase 3: Validation Audit & Canonical Artifact Closure (`benchmarks/day16/audio_manifest.json`).
 
-Benchmark & Script Result:
+Benchmark & Audio Manifest Result:
 - Total Benchmark Pages: 10 / 10 (100.0%)
 - Total Speech Bubbles: 50 / 50 (100.0%)
-- Active Panels Mapped: 35 / 35 (0 Unassigned)
-- Optical OCR Cleaning Rate: 36 / 50 (72.0%)
+- Total Audio Assets: 50 / 50 (100.0%)
+- Total Cohort Runtime: 203,616 ms (~203.62s / 3.39 mins)
+- Speech Overlaps: 0 (Strict Invariant Preserved)
 - Reading Order Inversions: 0 (Strict Invariant Preserved)
-- Unit Tests: 45 / 45 passed (0 regressions)
+- Unit Tests: 51 / 51 passed (0 regressions)
 
-See `history/DAY_15_CLOSURE.md` (and `ai-workflow/history/DAY_15_CLOSURE.md`) for full retrospective and SHA-256 signatures.
+See `history/DAY_16_CLOSURE.md` (and `ai-workflow/history/DAY_16_CLOSURE.md`) for full retrospective and SHA-256 signatures.
 Workflow state: IDLE (Checkpoint: null). Next role: ARCHITECT (upon Human Approval).

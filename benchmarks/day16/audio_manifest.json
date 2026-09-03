@@ -1,0 +1,4034 @@
+{
+  "schema_version": "day16_audio_manifest.v1",
+  "summary": {
+    "pipeline_stage": "DAY16_PHASE2_TTS_AND_TIMELINE_ALIGNMENT",
+    "total_pages": 10,
+    "total_dialogues": 50,
+    "total_audio_assets": 50,
+    "total_runtime_ms": 203616,
+    "total_runtime_sec": 203.62,
+    "speaking_rate_wpm": 155,
+    "pause_between_bubbles_ms": 350,
+    "pause_between_panels_ms": 700,
+    "zero_speech_overlap_verified": true,
+    "reading_order_inversion_count": 0,
+    "source_input": "benchmarks/day16/day16-polished-dialogues.json"
+  },
+  "voice_profiles": {
+    "KAZU": {
+      "voice_id": "vi-VN-NamMinhNeural",
+      "gender": "male",
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    },
+    "RIN": {
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "gender": "female",
+      "rate": "+5%",
+      "pitch": "+5Hz"
+    },
+    "NARRATOR": {
+      "voice_id": "vi-VN-NamMinhNeural",
+      "gender": "male",
+      "rate": "-5%",
+      "pitch": "-2Hz"
+    },
+    "PRIEST": {
+      "voice_id": "vi-VN-NamMinhNeural",
+      "gender": "male",
+      "rate": "-10%",
+      "pitch": "-5Hz"
+    },
+    "UNKNOWN": {
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "gender": "female",
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "pages": [
+    {
+      "page_id": 1,
+      "page_duration_ms": 14376,
+      "page_duration_sec": 14.38,
+      "dialogue_count": 4,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P01_01",
+          "page_id": 1,
+          "panel_id": "DEESC_PANEL_97b8cfb45347",
+          "reading_order_index": 1,
+          "speaker_label": "PRIEST",
+          "raw_text": "RIN",
+          "cleaned_text": "RIN",
+          "bbox": [
+            638.0,
+            180.0,
+            692.0,
+            212.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 787
+          },
+          "tts_ready_text": "Rin!",
+          "audio_id": "AUD_D_P01_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 787,
+          "start_ms": 0,
+          "end_ms": 787,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P01_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-10%",
+            "pitch": "-5Hz",
+            "duration_ms": 787,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 37776,
+            "audio_payload_sha256": "5d2a62ab237ac3d86cb556a21ce62ff784b02a5d75c473f93f9f31376926ec74"
+          }
+        },
+        {
+          "dialogue_id": "D_P01_02",
+          "page_id": 1,
+          "panel_id": "DEESC_PANEL_8125a5455d88",
+          "reading_order_index": 2,
+          "speaker_label": "PRIEST",
+          "raw_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+          "cleaned_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+          "bbox": [
+            460.0,
+            173.0,
+            560.0,
+            276.0
+          ],
+          "timestamps": {
+            "start_ms": 1487,
+            "end_ms": 5171
+          },
+          "tts_ready_text": "Cho dù là lúc ốm đau hay bệnh tật,",
+          "audio_id": "AUD_D_P01_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 3684,
+          "start_ms": 1487,
+          "end_ms": 5171,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P01_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-10%",
+            "pitch": "-5Hz",
+            "duration_ms": 3684,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 176832,
+            "audio_payload_sha256": "c1a06c45abe463a8b5cadfcc8c28b1e89d1dbd8f3de5be97542477a2cb65c581"
+          }
+        },
+        {
+          "dialogue_id": "D_P01_03",
+          "page_id": 1,
+          "panel_id": "DEESC_PANEL_8125a5455d88",
+          "reading_order_index": 3,
+          "speaker_label": "PRIEST",
+          "raw_text": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+          "cleaned_text": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ CỦA KAZU SUỐT ĐỜI KHÔNG?",
+          "bbox": [
+            142.0,
+            374.0,
+            262.0,
+            508.0
+          ],
+          "timestamps": {
+            "start_ms": 5521,
+            "end_ms": 12115
+          },
+          "tts_ready_text": "thì con có chấp nhận thề nguyện yêu và làm vợ của Kazu suốt đời không?",
+          "audio_id": "AUD_D_P01_03",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 6594,
+          "start_ms": 5521,
+          "end_ms": 12115,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P01_03",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-10%",
+            "pitch": "-5Hz",
+            "duration_ms": 6594,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 316512,
+            "audio_payload_sha256": "8e7ff65acb7a5cc9056e9f6e3f0f52d9be4520328e82dfba61868900e7271bfe"
+          }
+        },
+        {
+          "dialogue_id": "D_P01_04",
+          "page_id": 1,
+          "panel_id": "DEESC_PANEL_c191e02c101e",
+          "reading_order_index": 4,
+          "speaker_label": "RIN",
+          "raw_text": "Con XIN THỀ!",
+          "cleaned_text": "Con XIN THỀ!",
+          "bbox": [
+            157.0,
+            805.0,
+            237.0,
+            961.0
+          ],
+          "timestamps": {
+            "start_ms": 12815,
+            "end_ms": 14376
+          },
+          "tts_ready_text": "Con xin thề!",
+          "audio_id": "AUD_D_P01_04",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 1561,
+          "start_ms": 12815,
+          "end_ms": 14376,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P01_04",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 1561,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 74928,
+            "audio_payload_sha256": "6d5052eac6db04aebcee0f96cab43ba9ee9f538e76b33e4769487994ec0c713d"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 2,
+      "page_duration_ms": 3572,
+      "page_duration_sec": 3.57,
+      "dialogue_count": 2,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P02_01",
+          "page_id": 2,
+          "panel_id": "PN_c81abc4667cc",
+          "reading_order_index": 1,
+          "speaker_label": "KAZU",
+          "raw_text": "TÔI ĐÃ KẾT HÔN",
+          "cleaned_text": "TÔI ĐÃ KẾT HÔN",
+          "bbox": [
+            155.0,
+            205.0,
+            241.0,
+            321.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 1748
+          },
+          "tts_ready_text": "Tôi đã kết hôn,",
+          "audio_id": "AUD_D_P02_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1748,
+          "start_ms": 0,
+          "end_ms": 1748,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P02_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1748,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 83904,
+            "audio_payload_sha256": "fa5317df36b78dddeffb951d96ec6601efa117f19642124ff50b00da4bf62521"
+          }
+        },
+        {
+          "dialogue_id": "D_P02_02",
+          "page_id": 2,
+          "panel_id": "PN_2fd92daee87b",
+          "reading_order_index": 2,
+          "speaker_label": "KAZU",
+          "raw_text": "TRONG GAME",
+          "cleaned_text": "TRONG GAME",
+          "bbox": [
+            658.0,
+            744.0,
+            738.0,
+            814.0
+          ],
+          "timestamps": {
+            "start_ms": 2448,
+            "end_ms": 3572
+          },
+          "tts_ready_text": "trong game.",
+          "audio_id": "AUD_D_P02_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1124,
+          "start_ms": 2448,
+          "end_ms": 3572,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P02_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1124,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 53952,
+            "audio_payload_sha256": "63a2a3baa8ff611be32898e4b9bd18b1fb0025acf5dceb959028de42fa929e88"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 3,
+      "page_duration_ms": 24192,
+      "page_duration_sec": 24.19,
+      "dialogue_count": 6,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P03_01",
+          "page_id": 3,
+          "panel_id": "PN_befc93661d98",
+          "reading_order_index": 1,
+          "speaker_label": "NARRATOR",
+          "raw_text": "HÁC BINH NGUYÊN",
+          "cleaned_text": "HẮC BÌNH NGUYÊN",
+          "bbox": [
+            691.0,
+            147.0,
+            789.0,
+            255.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 1361
+          },
+          "tts_ready_text": "Hắc Bình Nguyên,",
+          "audio_id": "AUD_D_P03_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1361,
+          "start_ms": 0,
+          "end_ms": 1361,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 1361,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 65328,
+            "audio_payload_sha256": "e6496205e27112a3c7f53f1111abda916c683da82b70fa7af65643972793c5a3"
+          }
+        },
+        {
+          "dialogue_id": "D_P03_02",
+          "page_id": 3,
+          "panel_id": "PN_befc93661d98",
+          "reading_order_index": 2,
+          "speaker_label": "NARRATOR",
+          "raw_text": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+          "cleaned_text": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+          "bbox": [
+            163.0,
+            205.0,
+            295.0,
+            379.0
+          ],
+          "timestamps": {
+            "start_ms": 1711,
+            "end_ms": 6706
+          },
+          "tts_ready_text": "là một game MMO thế giới mở với đồ họa chân thực.",
+          "audio_id": "AUD_D_P03_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 4995,
+          "start_ms": 1711,
+          "end_ms": 6706,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 4995,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 239760,
+            "audio_payload_sha256": "6f493f460ad77f623ab0a93b2f870d2bf9a2d9968a369f0ca04dbbe258f01cb2"
+          }
+        },
+        {
+          "dialogue_id": "D_P03_03",
+          "page_id": 3,
+          "panel_id": "PN_cc6fa8f61cd2",
+          "reading_order_index": 3,
+          "speaker_label": "NARRATOR",
+          "raw_text": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "cleaned_text": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "bbox": [
+            647.0,
+            579.0,
+            779.0,
+            792.0
+          ],
+          "timestamps": {
+            "start_ms": 7406,
+            "end_ms": 13950
+          },
+          "tts_ready_text": "Một con game tuyệt vời nơi mọi người có thể tận hưởng nhập vai tùy thích.",
+          "audio_id": "AUD_D_P03_03",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 6544,
+          "start_ms": 7406,
+          "end_ms": 13950,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_03",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 6544,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 314112,
+            "audio_payload_sha256": "65f56b2161f939aa47a05a07cdee8c0504948fdc71fad5198e1d2da3a9cfbe0f"
+          }
+        },
+        {
+          "dialogue_id": "D_P03_04",
+          "page_id": 3,
+          "panel_id": "SYNTH_PANEL_afa30c84898c",
+          "reading_order_index": 4,
+          "speaker_label": "NARRATOR",
+          "raw_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+          "cleaned_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+          "bbox": [
+            514.0,
+            906.0,
+            815.853376071303,
+            1061.9302301859036
+          ],
+          "timestamps": {
+            "start_ms": 14650,
+            "end_ms": 18871
+          },
+          "tts_ready_text": "Đã mở được thành tựu trang phục Vét Đuôi Tôm.",
+          "audio_id": "AUD_D_P03_04",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 4221,
+          "start_ms": 14650,
+          "end_ms": 18871,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_04",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 4221,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 202608,
+            "audio_payload_sha256": "5ce3bd5f84a476101ce8a59ae6f72aa5697638a9d56c82b66ebf354bc19c70de"
+          }
+        },
+        {
+          "dialogue_id": "D_P03_05",
+          "page_id": 3,
+          "panel_id": "SYNTH_PANEL_afa30c84898c",
+          "reading_order_index": 5,
+          "speaker_label": "KAZU",
+          "raw_text": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+          "cleaned_text": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+          "bbox": [
+            328.0,
+            962.0,
+            420.0,
+            1058.0
+          ],
+          "timestamps": {
+            "start_ms": 19221,
+            "end_ms": 22668
+          },
+          "tts_ready_text": "Đã đạt được đặc quyền kết hôn rồi.",
+          "audio_id": "AUD_D_P03_05",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 3447,
+          "start_ms": 19221,
+          "end_ms": 22668,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_05",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 3447,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 165456,
+            "audio_payload_sha256": "4453f29dc163953ba165bfacde84d10ae6663bcdac4c2f5991076747f90eaa25"
+          }
+        },
+        {
+          "dialogue_id": "D_P03_06",
+          "page_id": 3,
+          "panel_id": "SYNTH_PANEL_afa30c84898c",
+          "reading_order_index": 6,
+          "speaker_label": "RIN",
+          "raw_text": "KAZL NAY",
+          "cleaned_text": "KAZU NAY",
+          "bbox": [
+            213.0,
+            1091.0,
+            251.0,
+            1123.0
+          ],
+          "timestamps": {
+            "start_ms": 23018,
+            "end_ms": 24192
+          },
+          "tts_ready_text": "Kazu này!",
+          "audio_id": "AUD_D_P03_06",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 1174,
+          "start_ms": 23018,
+          "end_ms": 24192,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P03_06",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 1174,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 56352,
+            "audio_payload_sha256": "b43dc0568dd667ceb89049379170040ca765ec75a10cfc06e7bf8c88c37ebedb"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 4,
+      "page_duration_ms": 14152,
+      "page_duration_sec": 14.15,
+      "dialogue_count": 4,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P04_01",
+          "page_id": 4,
+          "panel_id": "PN_77c431f85a56",
+          "reading_order_index": 1,
+          "speaker_label": "RIN",
+          "raw_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+          "cleaned_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+          "bbox": [
+            128.0,
+            427.0,
+            246.0,
+            531.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 2723
+          },
+          "tts_ready_text": "Hãy cùng nhau hạnh phúc nhé!",
+          "audio_id": "AUD_D_P04_01",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 2723,
+          "start_ms": 0,
+          "end_ms": 2723,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P04_01",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 2723,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 130704,
+            "audio_payload_sha256": "ee2d932b64404f73deb4d49092305ee84f695ed6abfb4f245b4d60d4974b5439"
+          }
+        },
+        {
+          "dialogue_id": "D_P04_02",
+          "page_id": 4,
+          "panel_id": "PN_952651e84374",
+          "reading_order_index": 2,
+          "speaker_label": "KAZU",
+          "raw_text": "AH",
+          "cleaned_text": "AH",
+          "bbox": [
+            752.0,
+            812.0,
+            786.0,
+            836.0
+          ],
+          "timestamps": {
+            "start_ms": 3423,
+            "end_ms": 4210
+          },
+          "tts_ready_text": "Ah!",
+          "audio_id": "AUD_D_P04_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 787,
+          "start_ms": 3423,
+          "end_ms": 4210,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P04_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 787,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 37776,
+            "audio_payload_sha256": "b75b9f5192299b79f0390e5f6e1e1fddbaf8109e7d9cde10f28329edae839f0b"
+          }
+        },
+        {
+          "dialogue_id": "D_P04_03",
+          "page_id": 4,
+          "panel_id": "PN_952651e84374",
+          "reading_order_index": 3,
+          "speaker_label": "RIN",
+          "raw_text": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "cleaned_text": "Anh CHỈ BIÊT NÓI \"AH\"\" THÔI SAO!?",
+          "bbox": [
+            596.0,
+            822.0,
+            690.0,
+            932.0
+          ],
+          "timestamps": {
+            "start_ms": 4560,
+            "end_ms": 8070
+          },
+          "tts_ready_text": "Anh chỉ biết nói Ah thôi sao!?",
+          "audio_id": "AUD_D_P04_03",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 3510,
+          "start_ms": 4560,
+          "end_ms": 8070,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P04_03",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 3510,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 168480,
+            "audio_payload_sha256": "2ce4ac4e6833563662106d34ec83f228666b0a6b0c9f3253340735144eb782a9"
+          }
+        },
+        {
+          "dialogue_id": "D_P04_04",
+          "page_id": 4,
+          "panel_id": "PN_a8da83358244",
+          "reading_order_index": 4,
+          "speaker_label": "NARRATOR",
+          "raw_text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "cleaned_text": "cô GÁI TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "bbox": [
+            396.0,
+            804.0,
+            500.0,
+            972.0
+          ],
+          "timestamps": {
+            "start_ms": 8770,
+            "end_ms": 14152
+          },
+          "tts_ready_text": "Cô gái tóc vàng với dáng vẻ tăng động này tên là Rin.",
+          "audio_id": "AUD_D_P04_04",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 5382,
+          "start_ms": 8770,
+          "end_ms": 14152,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P04_04",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 5382,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 258336,
+            "audio_payload_sha256": "095ed4142d66b8e153a2a9ba5d5f3e68e330db764113dad6cd2f8c71a0a9aaba"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 5,
+      "page_duration_ms": 42174,
+      "page_duration_sec": 42.17,
+      "dialogue_count": 8,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P05_01",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+          "reading_order_index": 1,
+          "speaker_label": "NARRATOR",
+          "raw_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+          "cleaned_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔI LÀ VÀo 4 NĂM TRUớc...",
+          "bbox": [
+            667.0,
+            172.0,
+            766.0,
+            296.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 5532
+          },
+          "tts_ready_text": "Lần gặp gỡ đầu tiên của chúng tôi là vào 4 năm trước...",
+          "audio_id": "AUD_D_P05_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 5532,
+          "start_ms": 0,
+          "end_ms": 5532,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 5532,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 265536,
+            "audio_payload_sha256": "728f8aded7e13d43c02c3b149b87b11916ec1438dd1088de50b3d0262cfa9d57"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_02",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+          "reading_order_index": 2,
+          "speaker_label": "RIN",
+          "raw_text": "Mìnb là Rin",
+          "cleaned_text": "Mình là Rin",
+          "bbox": [
+            639.0,
+            412.0,
+            701.0,
+            457.0
+          ],
+          "timestamps": {
+            "start_ms": 5882,
+            "end_ms": 7393
+          },
+          "tts_ready_text": "Mình là Rin.",
+          "audio_id": "AUD_D_P05_02",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 1511,
+          "start_ms": 5882,
+          "end_ms": 7393,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_02",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 1511,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 72528,
+            "audio_payload_sha256": "92ab577dcb22680f16bee8bac0de219d1b368c868eba2fd98d3496420956cb56"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_03",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+          "reading_order_index": 3,
+          "speaker_label": "RIN",
+          "raw_text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+          "cleaned_text": "Mình là nGười chơi mới nên mong cậu Giúp đỡ!",
+          "bbox": [
+            138.0,
+            389.0,
+            246.0,
+            500.0
+          ],
+          "timestamps": {
+            "start_ms": 7743,
+            "end_ms": 12014
+          },
+          "tts_ready_text": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+          "audio_id": "AUD_D_P05_03",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 4271,
+          "start_ms": 7743,
+          "end_ms": 12014,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_03",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 4271,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 205008,
+            "audio_payload_sha256": "31a15d46c163cd0fc74a069d85bd2144e4147fb7e81fae771ede6e9c41b4ac0f"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_04",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_d056dd9767fc",
+          "reading_order_index": 4,
+          "speaker_label": "NARRATOR",
+          "raw_text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+          "cleaned_text": "RIN ĐƯỢC GHÉP THÀNH CặP NGẨU NHIÊN VỚI Tôi TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+          "bbox": [
+            642.0,
+            702.0,
+            788.0,
+            840.0
+          ],
+          "timestamps": {
+            "start_ms": 12714,
+            "end_ms": 18870
+          },
+          "tts_ready_text": "Rin được ghép thành cặp ngẫu nhiên với tôi trong một trận đấu ở dungeon.",
+          "audio_id": "AUD_D_P05_04",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 6156,
+          "start_ms": 12714,
+          "end_ms": 18870,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_04",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 6156,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 295488,
+            "audio_payload_sha256": "e42b62a50a8f2203fcbc94105bc492b8b8f0e76fff4d617315a9c241921254c9"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_05",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_ed2da544453a",
+          "reading_order_index": 5,
+          "speaker_label": "NARRATOR",
+          "raw_text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+          "cleaned_text": "VÀ Tôi ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHƠI GAME VÀ TÙ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẤU.",
+          "bbox": [
+            288.0,
+            672.0,
+            402.0,
+            822.0
+          ],
+          "timestamps": {
+            "start_ms": 19570,
+            "end_ms": 28436
+          },
+          "tts_ready_text": "Và tôi đã chỉ bảo cho newbie Rin cách chơi game và từ đó mối quan hệ của chúng tôi bắt đầu.",
+          "audio_id": "AUD_D_P05_05",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 8866,
+          "start_ms": 19570,
+          "end_ms": 28436,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_05",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 8866,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 425568,
+            "audio_payload_sha256": "c598df935f4f42999f8b90843294317c99bcccf040b7da25be0341676fbe6ed7"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_06",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_ed2da544453a",
+          "reading_order_index": 6,
+          "speaker_label": "NARRATOR",
+          "raw_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+          "cleaned_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôi ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+          "bbox": [
+            122.0,
+            765.0,
+            233.0,
+            903.0
+          ],
+          "timestamps": {
+            "start_ms": 28786,
+            "end_ms": 37852
+          },
+          "tts_ready_text": "Thông qua việc gặp nhau thường xuyên thì sự gắn kết của chúng tôi đã tăng lên từng chút, từng chút một.",
+          "audio_id": "AUD_D_P05_06",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 9066,
+          "start_ms": 28786,
+          "end_ms": 37852,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_06",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 9066,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 435168,
+            "audio_payload_sha256": "c1ec98093dd8c8e9c09b621c54888acd7c657503c1bf71e1dab75c12c91b33d2"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_07",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_ed2da544453a",
+          "reading_order_index": 7,
+          "speaker_label": "KAZU",
+          "raw_text": "Ha #êp #ên cút ~al",
+          "cleaned_text": "Hạ thấp thêm chút!!",
+          "bbox": [
+            366.0,
+            924.0,
+            428.0,
+            985.0
+          ],
+          "timestamps": {
+            "start_ms": 38202,
+            "end_ms": 40937
+          },
+          "tts_ready_text": "Hạ thấp thêm chút nữa!!",
+          "audio_id": "AUD_D_P05_07",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 2735,
+          "start_ms": 38202,
+          "end_ms": 40937,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_07",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 2735,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 131280,
+            "audio_payload_sha256": "54b92d5e67a621165d7271e82830ec8373c033381b6ee8b6e74e6ba8959ebae5"
+          }
+        },
+        {
+          "dialogue_id": "D_P05_08",
+          "page_id": 5,
+          "panel_id": "DARK_PANEL_ed2da544453a",
+          "reading_order_index": 8,
+          "speaker_label": "RIN",
+          "raw_text": "Hôy",
+          "cleaned_text": "Hầy",
+          "bbox": [
+            197.0,
+            922.0,
+            246.0,
+            967.0
+          ],
+          "timestamps": {
+            "start_ms": 41287,
+            "end_ms": 42174
+          },
+          "tts_ready_text": "Hầy...",
+          "audio_id": "AUD_D_P05_08",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 887,
+          "start_ms": 41287,
+          "end_ms": 42174,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P05_08",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 887,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 42576,
+            "audio_payload_sha256": "20c914d51fdfdaedda1c1686f2fc7585d4aad673e1b47f2b6605a4f725f188b7"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 7,
+      "page_duration_ms": 5358,
+      "page_duration_sec": 5.36,
+      "dialogue_count": 2,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P07_01",
+          "page_id": 7,
+          "panel_id": "PN_54c078540d26",
+          "reading_order_index": 1,
+          "speaker_label": "RIN",
+          "raw_text": "VÂnG!",
+          "cleaned_text": "VÂnG!",
+          "bbox": [
+            412.0,
+            936.0,
+            518.0,
+            990.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 787
+          },
+          "tts_ready_text": "Vâng!",
+          "audio_id": "AUD_D_P07_01",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 787,
+          "start_ms": 0,
+          "end_ms": 787,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P07_01",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+5%",
+            "pitch": "+5Hz",
+            "duration_ms": 787,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 37776,
+            "audio_payload_sha256": "7b1dfba2dc46073a2336bd3cb4713339b71f881a462c425f1384358ca8585454"
+          }
+        },
+        {
+          "dialogue_id": "D_P07_02",
+          "page_id": 7,
+          "panel_id": "PN_54c078540d26",
+          "reading_order_index": 2,
+          "speaker_label": "NARRATOR",
+          "raw_text": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+          "cleaned_text": "CỨ NHƯ VẬY CHÚNG Tôi ĐÃ KẾT HÔN VỚI NHAU",
+          "bbox": [
+            139.0,
+            953.0,
+            247.0,
+            1072.0
+          ],
+          "timestamps": {
+            "start_ms": 1137,
+            "end_ms": 5358
+          },
+          "tts_ready_text": "Cứ như vậy chúng tôi đã kết hôn với nhau.",
+          "audio_id": "AUD_D_P07_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 4221,
+          "start_ms": 1137,
+          "end_ms": 5358,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P07_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 4221,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 202608,
+            "audio_payload_sha256": "441c240ee0ac412e153ea065252f350cc1ac56d1e990c12006a4d71993f68684"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 15,
+      "page_duration_ms": 50018,
+      "page_duration_sec": 50.02,
+      "dialogue_count": 8,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P15_01",
+          "page_id": 15,
+          "panel_id": "SYNTH_PANEL_c9c1de884a05",
+          "reading_order_index": 1,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+          "cleaned_text": "NHƯNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM,",
+          "bbox": [
+            626.0,
+            122.0,
+            738.0,
+            266.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 4845
+          },
+          "tts_ready_text": "Nhưng mà tớ lại có phần thấy không thích Mizuki-san cho lắm,",
+          "audio_id": "AUD_D_P15_01",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 4845,
+          "start_ms": 0,
+          "end_ms": 4845,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_01",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 4845,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 232560,
+            "audio_payload_sha256": "5c034c7a95a40dd981baad7825f5473a11253bf2490ac54f0eb6d80330f44c02"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_02",
+          "page_id": 15,
+          "panel_id": "SYNTH_PANEL_c9c1de884a05",
+          "reading_order_index": 2,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "cleaned_text": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG có, BIỂU CẢM CŨNG KHÔNG THAY ĐỔl",
+          "bbox": [
+            453.0,
+            176.0,
+            591.0,
+            312.0
+          ],
+          "timestamps": {
+            "start_ms": 5195,
+            "end_ms": 11939
+          },
+          "tts_ready_text": "Đến một cuộc trò chuyện tất yếu cũng không có, biểu cảm cũng không thay đổi.",
+          "audio_id": "AUD_D_P15_02",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 6744,
+          "start_ms": 5195,
+          "end_ms": 11939,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_02",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 6744,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 323712,
+            "audio_payload_sha256": "40e19bcbfdbc42e4be99be3f5dd91db7962e8ead1266fba43f57b386d6bb140c"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_03",
+          "page_id": 15,
+          "panel_id": "SYNTH_PANEL_c9c1de884a05",
+          "reading_order_index": 3,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+          "cleaned_text": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+          "bbox": [
+            110.0,
+            359.0,
+            236.0,
+            535.0
+          ],
+          "timestamps": {
+            "start_ms": 12289,
+            "end_ms": 20044
+          },
+          "tts_ready_text": "Các cậu không cảm thấy sự lạnh lùng ấy là hơi quá đến mức lạnh nhạt luôn rồi sao?",
+          "audio_id": "AUD_D_P15_03",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 7755,
+          "start_ms": 12289,
+          "end_ms": 20044,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_03",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 7755,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 372240,
+            "audio_payload_sha256": "f43ab86416fc3246528aa89be62d864338c7e19f52b52161eaacc7de5fb4af92"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_04",
+          "page_id": 15,
+          "panel_id": "PN_cf3c6e8976b9",
+          "reading_order_index": 4,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+          "cleaned_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA",
+          "bbox": [
+            658.0,
+            674.0,
+            786.0,
+            829.0
+          ],
+          "timestamps": {
+            "start_ms": 20744,
+            "end_ms": 29760
+          },
+          "tts_ready_text": "À thì đúng là cậu ấy không phải là nhân vật mà mình có thể nói chuyện một cách thoải mái ha...",
+          "audio_id": "AUD_D_P15_04",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 9016,
+          "start_ms": 20744,
+          "end_ms": 29760,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_04",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 9016,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 432768,
+            "audio_payload_sha256": "cc38d7dcb81780fb0c44c274e76bdf0ac5f2e19e5afe794e0e2c2ec13de4a50c"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_05",
+          "page_id": 15,
+          "panel_id": "PN_cf3c6e8976b9",
+          "reading_order_index": 5,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+          "cleaned_text": "ỬM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+          "bbox": [
+            155.0,
+            689.0,
+            271.0,
+            819.0
+          ],
+          "timestamps": {
+            "start_ms": 30110,
+            "end_ms": 36129
+          },
+          "tts_ready_text": "Ừm, chúng ta chỉ có thể chiêm ngưỡng Mizuki-san từ xa là được rồi!",
+          "audio_id": "AUD_D_P15_05",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 6019,
+          "start_ms": 30110,
+          "end_ms": 36129,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_05",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 6019,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 288912,
+            "audio_payload_sha256": "9d7fb4bbe66921f7a35390e079ac5b15f1401f51c90abe072675a80d6ee17565"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_06",
+          "page_id": 15,
+          "panel_id": "PN_e342039122d3",
+          "reading_order_index": 6,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "cleaned_text": "MÀ TÓ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RồI!",
+          "bbox": [
+            658.0,
+            974.0,
+            794.0,
+            1110.0
+          ],
+          "timestamps": {
+            "start_ms": 36829,
+            "end_ms": 43423
+          },
+          "tts_ready_text": "Mà tớ cũng đã đặt hàng album phiên bản giới hạn ngay tắp lự luôn rồi!",
+          "audio_id": "AUD_D_P15_06",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 6594,
+          "start_ms": 36829,
+          "end_ms": 43423,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_06",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 6594,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 316512,
+            "audio_payload_sha256": "a482f14fa4c66aa6b465b72ab28340f37847425a41df89c56cb259857cd4f9b7"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_07",
+          "page_id": 15,
+          "panel_id": "PN_e342039122d3",
+          "reading_order_index": 7,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "NẾU LÀ MĨNH THÌ SẼ NẠP TlỄN VÀO GaME RồI HA",
+          "cleaned_text": "NẾU LÀ MÌNH THÌ SẼ NẠP TIỀN VÀO GAME RồI HA",
+          "bbox": [
+            294.0,
+            1016.0,
+            405.0,
+            1138.0
+          ],
+          "timestamps": {
+            "start_ms": 43773,
+            "end_ms": 48531
+          },
+          "tts_ready_text": "Nếu là mình thì sẽ nạp tiền vào game rồi ha...",
+          "audio_id": "AUD_D_P15_07",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 4758,
+          "start_ms": 43773,
+          "end_ms": 48531,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_07",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 4758,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 228384,
+            "audio_payload_sha256": "791170f98d3b9f14251c13c0562af3b2ba4eabeef0fdd4d3e0afd061dfc6d2a9"
+          }
+        },
+        {
+          "dialogue_id": "D_P15_08",
+          "page_id": 15,
+          "panel_id": "PN_40b666b58c82",
+          "reading_order_index": 8,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "PÍP!",
+          "cleaned_text": "PÍP!",
+          "bbox": [
+            120.0,
+            940.0,
+            204.0,
+            992.0
+          ],
+          "timestamps": {
+            "start_ms": 49231,
+            "end_ms": 50018
+          },
+          "tts_ready_text": "Píp!",
+          "audio_id": "AUD_D_P15_08",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 787,
+          "start_ms": 49231,
+          "end_ms": 50018,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P15_08",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 787,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 37776,
+            "audio_payload_sha256": "ae40e7984d671b7ae85925c945955c3f99a0c12f5ee5cb1bda41ecf351819a83"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 17,
+      "page_duration_ms": 23269,
+      "page_duration_sec": 23.27,
+      "dialogue_count": 7,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P17_01",
+          "page_id": 17,
+          "panel_id": "PN_ca1bf9d09d63",
+          "reading_order_index": 1,
+          "speaker_label": "KAZU",
+          "raw_text": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+          "cleaned_text": "CHẮC TÌM VAY HIỂU THÔNG 'VỀ SỰ KIỆN TIN MỚl THÔI\"",
+          "bbox": [
+            699.0,
+            199.0,
+            798.0,
+            279.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 4371
+          },
+          "tts_ready_text": "Chắc tìm hiểu thông tin về sự kiện mới thôi...",
+          "audio_id": "AUD_D_P17_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 4371,
+          "start_ms": 0,
+          "end_ms": 4371,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 4371,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 209808,
+            "audio_payload_sha256": "4e9b4b7690353952866faa7ad35ec84b6e3cfc4ef33ef78bf4185f7f6f2822de"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_02",
+          "page_id": 17,
+          "panel_id": "PN_10b3e15d09b5",
+          "reading_order_index": 2,
+          "speaker_label": "KAZU",
+          "raw_text": "HỬ?",
+          "cleaned_text": "HỬ?",
+          "bbox": [
+            442.0,
+            182.0,
+            488.0,
+            210.0
+          ],
+          "timestamps": {
+            "start_ms": 5071,
+            "end_ms": 5858
+          },
+          "tts_ready_text": "Hử?",
+          "audio_id": "AUD_D_P17_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 787,
+          "start_ms": 5071,
+          "end_ms": 5858,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 787,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 37776,
+            "audio_payload_sha256": "3c881c5c8415602e94e483450c4030b200364159355e60f399045f1e6652b127"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_03",
+          "page_id": 17,
+          "panel_id": "PN_10b3e15d09b5",
+          "reading_order_index": 3,
+          "speaker_label": "NARRATOR",
+          "raw_text": "Cậpnhật tin túc Hắc Bình Nguyên",
+          "cleaned_text": "CẬP NHẬT TIN TỨC Hắc Bình Nguyên",
+          "bbox": [
+            257.0,
+            218.0,
+            423.0,
+            280.0
+          ],
+          "timestamps": {
+            "start_ms": 6208,
+            "end_ms": 9268
+          },
+          "tts_ready_text": "Cập nhật tin tức Hắc Bình Nguyên.",
+          "audio_id": "AUD_D_P17_03",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 3060,
+          "start_ms": 6208,
+          "end_ms": 9268,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_03",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "-5%",
+            "pitch": "-2Hz",
+            "duration_ms": 3060,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 146880,
+            "audio_payload_sha256": "a3f3a24aaf471ba1457ce5070015ebb889a5be3136adb88617e585629c4a93eb"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_04",
+          "page_id": 17,
+          "panel_id": "PN_10b3e15d09b5",
+          "reading_order_index": 4,
+          "speaker_label": "KAZU",
+          "raw_text": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+          "cleaned_text": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY.",
+          "bbox": [
+            92.0,
+            328.0,
+            242.0,
+            426.0
+          ],
+          "timestamps": {
+            "start_ms": 9618,
+            "end_ms": 15150
+          },
+          "tts_ready_text": "Lúc sáng nay mấy đứa trong lớp cũng đã nói về cái này...",
+          "audio_id": "AUD_D_P17_04",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 5532,
+          "start_ms": 9618,
+          "end_ms": 15150,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_04",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 5532,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 265536,
+            "audio_payload_sha256": "dae935b31c42f4e4af530f7cbb8aa6359e8149acbf3f5e04007f7ef6b744468c"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_05",
+          "page_id": 17,
+          "panel_id": "PN_80ad3d363a63",
+          "reading_order_index": 5,
+          "speaker_label": "KAZU",
+          "raw_text": "CũNG CÒN THÒI GIAN",
+          "cleaned_text": "CũNG CÒN THỜI GIAN",
+          "bbox": [
+            716.0,
+            580.0,
+            794.0,
+            647.0
+          ],
+          "timestamps": {
+            "start_ms": 15850,
+            "end_ms": 17598
+          },
+          "tts_ready_text": "Cũng còn thời gian,",
+          "audio_id": "AUD_D_P17_05",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1748,
+          "start_ms": 15850,
+          "end_ms": 17598,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_05",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1748,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 83904,
+            "audio_payload_sha256": "0f7886c8567ca6e291a96da75bb27d23fbe5b49cdaa43043c2ba517eb67e939f"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_06",
+          "page_id": 17,
+          "panel_id": "PN_80ad3d363a63",
+          "reading_order_index": 6,
+          "speaker_label": "KAZU",
+          "raw_text": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+          "cleaned_text": "CHẮC LÀ NGHE THử MỘT LẦN XEM SAO",
+          "bbox": [
+            99.0,
+            551.0,
+            217.0,
+            676.0
+          ],
+          "timestamps": {
+            "start_ms": 17948,
+            "end_ms": 21395
+          },
+          "tts_ready_text": "chắc là nghe thử một lần xem sao.",
+          "audio_id": "AUD_D_P17_06",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 3447,
+          "start_ms": 17948,
+          "end_ms": 21395,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_06",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 3447,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 165456,
+            "audio_payload_sha256": "621696b3fd2d2c31dd06be9a92aa8ee5b9618300200890edf392cd62907991e3"
+          }
+        },
+        {
+          "dialogue_id": "D_P17_07",
+          "page_id": 17,
+          "panel_id": "PN_e76ac7ecdd65",
+          "reading_order_index": 7,
+          "speaker_label": "KAZU",
+          "raw_text": "À RẾ",
+          "cleaned_text": "À RẾ",
+          "bbox": [
+            90.0,
+            1124.0,
+            138.0,
+            1150.0
+          ],
+          "timestamps": {
+            "start_ms": 22095,
+            "end_ms": 23269
+          },
+          "tts_ready_text": "Ủa kìa?",
+          "audio_id": "AUD_D_P17_07",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1174,
+          "start_ms": 22095,
+          "end_ms": 23269,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P17_07",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1174,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 56352,
+            "audio_payload_sha256": "543ae5e9125a76fbb57c3b06950b54ffe6baba4af22a911b7f9ce25eb330e751"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 18,
+      "page_duration_ms": 6621,
+      "page_duration_sec": 6.62,
+      "dialogue_count": 3,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P18_01",
+          "page_id": 18,
+          "panel_id": "PN_f2200cb384a8",
+          "reading_order_index": 1,
+          "speaker_label": "KAZU",
+          "raw_text": "SAO LẠl",
+          "cleaned_text": "SAO LẠI",
+          "bbox": [
+            722.0,
+            178.0,
+            764.0,
+            236.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 1274
+          },
+          "tts_ready_text": "Sao lại...",
+          "audio_id": "AUD_D_P18_01",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1274,
+          "start_ms": 0,
+          "end_ms": 1274,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P18_01",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1274,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 61152,
+            "audio_payload_sha256": "f8d2f47a572b7e8d20d1b686d385442f5e522dd088f296e247b6f9a5480a9b73"
+          }
+        },
+        {
+          "dialogue_id": "D_P18_02",
+          "page_id": 18,
+          "panel_id": "PN_f4be483d0ea3",
+          "reading_order_index": 2,
+          "speaker_label": "KAZU",
+          "raw_text": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+          "cleaned_text": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ.",
+          "bbox": [
+            120.0,
+            298.0,
+            216.0,
+            382.0
+          ],
+          "timestamps": {
+            "start_ms": 1974,
+            "end_ms": 4647
+          },
+          "tts_ready_text": "còn hơn những gì mình nghĩ.",
+          "audio_id": "AUD_D_P18_02",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 2673,
+          "start_ms": 1974,
+          "end_ms": 4647,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P18_02",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 2673,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 128304,
+            "audio_payload_sha256": "ce024bcca6b32ced58c200b277aa7692830f6574249a527b3ea2119d7a235eec"
+          }
+        },
+        {
+          "dialogue_id": "D_P18_03",
+          "page_id": 18,
+          "panel_id": "PN_e750f2a6a33e",
+          "reading_order_index": 3,
+          "speaker_label": "KAZU",
+          "raw_text": "HAY QUÁ.",
+          "cleaned_text": "HAY QUÁ.",
+          "bbox": [
+            161.0,
+            671.0,
+            265.0,
+            709.0
+          ],
+          "timestamps": {
+            "start_ms": 5347,
+            "end_ms": 6621
+          },
+          "tts_ready_text": "Hay quá...",
+          "audio_id": "AUD_D_P18_03",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 1274,
+          "start_ms": 5347,
+          "end_ms": 6621,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P18_03",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1274,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 61152,
+            "audio_payload_sha256": "2a7180d4312265bb024abfe35990416d70a3962c16eb7a5fa01d77aa8c57b1da"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": 38,
+      "page_duration_ms": 19884,
+      "page_duration_sec": 19.88,
+      "dialogue_count": 6,
+      "dialogues": [
+        {
+          "dialogue_id": "D_P38_01",
+          "page_id": 38,
+          "panel_id": "PN_86914f467fda",
+          "reading_order_index": 1,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "XÁC NHÂN BÀ LUÔN Rồl",
+          "cleaned_text": "XÁC NHẬN BÀ LUÔN RỒI",
+          "bbox": [
+            474.0,
+            180.0,
+            548.0,
+            284.0
+          ],
+          "timestamps": {
+            "start_ms": 0,
+            "end_ms": 2435
+          },
+          "tts_ready_text": "Xác nhận bà luôn rồi...",
+          "audio_id": "AUD_D_P38_01",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 2435,
+          "start_ms": 0,
+          "end_ms": 2435,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_01",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 2435,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 116880,
+            "audio_payload_sha256": "bbd814419ec52572af19922837b34cece304550d79f76ffaee961b2898503be8"
+          }
+        },
+        {
+          "dialogue_id": "D_P38_02",
+          "page_id": 38,
+          "panel_id": "PN_268e02ea9e5f",
+          "reading_order_index": 2,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "THẰNG ẤT Ơ NÀO KIA_",
+          "cleaned_text": "THẰNG ẤT Ơ NÀO KIA...",
+          "bbox": [
+            682.0,
+            800.0,
+            764.0,
+            873.0
+          ],
+          "timestamps": {
+            "start_ms": 3135,
+            "end_ms": 5870
+          },
+          "tts_ready_text": "Thằng ất ơ nào kia!?",
+          "audio_id": "AUD_D_P38_02",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 2735,
+          "start_ms": 3135,
+          "end_ms": 5870,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_02",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 2735,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 131280,
+            "audio_payload_sha256": "cce9d434d65ef75249acb36540a1e33f3de60de4dc2762532b79da07675ff4ed"
+          }
+        },
+        {
+          "dialogue_id": "D_P38_03",
+          "page_id": 38,
+          "panel_id": "PN_268e02ea9e5f",
+          "reading_order_index": 3,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "Ghen VL.",
+          "cleaned_text": "Ghen VL.",
+          "bbox": [
+            467.0,
+            863.0,
+            521.0,
+            907.0
+          ],
+          "timestamps": {
+            "start_ms": 6220,
+            "end_ms": 7781
+          },
+          "tts_ready_text": "Ghen tị ghê!",
+          "audio_id": "AUD_D_P38_03",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 1561,
+          "start_ms": 6220,
+          "end_ms": 7781,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_03",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 1561,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 74928,
+            "audio_payload_sha256": "ad9740aa996013b619df8cd4cf9b86c61394f66fc23f2ba6e3432c97db69d5fc"
+          }
+        },
+        {
+          "dialogue_id": "D_P38_04",
+          "page_id": 38,
+          "panel_id": "PN_268e02ea9e5f",
+          "reading_order_index": 4,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "KHÔNG THÊ THA TH4 ĐLỢC..",
+          "cleaned_text": "KHÔNG THÊ THA THỨ ĐƯỢC..",
+          "bbox": [
+            710.0,
+            1027.0,
+            774.0,
+            1109.0
+          ],
+          "timestamps": {
+            "start_ms": 8131,
+            "end_ms": 10566
+          },
+          "tts_ready_text": "Không thể tha thứ được...",
+          "audio_id": "AUD_D_P38_04",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 2435,
+          "start_ms": 8131,
+          "end_ms": 10566,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_04",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 2435,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 116880,
+            "audio_payload_sha256": "6be7eadd44038256a36e06a7167e032c8c3c4f53763cafd23a0c6af4fcc873cd"
+          }
+        },
+        {
+          "dialogue_id": "D_P38_05",
+          "page_id": 38,
+          "panel_id": "PN_268e02ea9e5f",
+          "reading_order_index": 5,
+          "speaker_label": "UNKNOWN",
+          "raw_text": "MIZUKI-SAN ĂN CÙNG vÓ CON TRAI Sao!?",
+          "cleaned_text": "MIZUKI-SAN ĂN CÙNG VỚI CON TRAI Sao!?",
+          "bbox": [
+            390.0,
+            1071.0,
+            492.0,
+            1157.0
+          ],
+          "timestamps": {
+            "start_ms": 10916,
+            "end_ms": 14426
+          },
+          "tts_ready_text": "Mizuki-san ăn cùng với con trai sao!?",
+          "audio_id": "AUD_D_P38_05",
+          "voice_id": "vi-VN-HoaiMyNeural",
+          "duration_ms": 3510,
+          "start_ms": 10916,
+          "end_ms": 14426,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_05",
+            "voice_id": "vi-VN-HoaiMyNeural",
+            "gender": "female",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 3510,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 168480,
+            "audio_payload_sha256": "d8f8b8ade51f03912d3847e8a2b15e43fb94028d73b1b20c9f0da51ded4fa3c4"
+          }
+        },
+        {
+          "dialogue_id": "D_P38_06",
+          "page_id": 38,
+          "panel_id": "PN_24859586c1ec",
+          "reading_order_index": 6,
+          "speaker_label": "KAZU",
+          "raw_text": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+          "cleaned_text": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN MỈNH CHẰM CHẰM VẬY.",
+          "bbox": [
+            234.0,
+            970.0,
+            334.0,
+            1105.0
+          ],
+          "timestamps": {
+            "start_ms": 15126,
+            "end_ms": 19884
+          },
+          "tts_ready_text": "Sao mấy người xung quanh cứ nhìn mình chằm chằm vậy...",
+          "audio_id": "AUD_D_P38_06",
+          "voice_id": "vi-VN-NamMinhNeural",
+          "duration_ms": 4758,
+          "start_ms": 15126,
+          "end_ms": 19884,
+          "audio_metadata": {
+            "audio_id": "AUD_D_P38_06",
+            "voice_id": "vi-VN-NamMinhNeural",
+            "gender": "male",
+            "speaking_rate": "+0%",
+            "pitch": "+0Hz",
+            "duration_ms": 4758,
+            "audio_format": "wav",
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "bit_depth": 16,
+            "pcm_bytes_estimate": 228384,
+            "audio_payload_sha256": "88c994b05faed43417d4b87fb5b6a59ed1f47df01e3ad6ee61e9657fb99a6150"
+          }
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "dialogue_id": "D_P01_01",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_97b8cfb45347",
+      "reading_order_index": 1,
+      "speaker_label": "PRIEST",
+      "raw_text": "RIN",
+      "cleaned_text": "RIN",
+      "bbox": [
+        638.0,
+        180.0,
+        692.0,
+        212.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 787
+      },
+      "tts_ready_text": "Rin!",
+      "audio_id": "AUD_D_P01_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 787,
+      "start_ms": 0,
+      "end_ms": 787,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P01_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-10%",
+        "pitch": "-5Hz",
+        "duration_ms": 787,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 37776,
+        "audio_payload_sha256": "5d2a62ab237ac3d86cb556a21ce62ff784b02a5d75c473f93f9f31376926ec74"
+      }
+    },
+    {
+      "dialogue_id": "D_P01_02",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "reading_order_index": 2,
+      "speaker_label": "PRIEST",
+      "raw_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+      "cleaned_text": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+      "bbox": [
+        460.0,
+        173.0,
+        560.0,
+        276.0
+      ],
+      "timestamps": {
+        "start_ms": 1487,
+        "end_ms": 5171
+      },
+      "tts_ready_text": "Cho dù là lúc ốm đau hay bệnh tật,",
+      "audio_id": "AUD_D_P01_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 3684,
+      "start_ms": 1487,
+      "end_ms": 5171,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P01_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-10%",
+        "pitch": "-5Hz",
+        "duration_ms": 3684,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 176832,
+        "audio_payload_sha256": "c1a06c45abe463a8b5cadfcc8c28b1e89d1dbd8f3de5be97542477a2cb65c581"
+      }
+    },
+    {
+      "dialogue_id": "D_P01_03",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "reading_order_index": 3,
+      "speaker_label": "PRIEST",
+      "raw_text": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+      "cleaned_text": "THÌ CON CÓ CHẤP NHẬN THỀ NGUYỆN YÊU VÀ LÀM VỢ CỦA KAZU SUỐT ĐỜI KHÔNG?",
+      "bbox": [
+        142.0,
+        374.0,
+        262.0,
+        508.0
+      ],
+      "timestamps": {
+        "start_ms": 5521,
+        "end_ms": 12115
+      },
+      "tts_ready_text": "thì con có chấp nhận thề nguyện yêu và làm vợ của Kazu suốt đời không?",
+      "audio_id": "AUD_D_P01_03",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 6594,
+      "start_ms": 5521,
+      "end_ms": 12115,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P01_03",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-10%",
+        "pitch": "-5Hz",
+        "duration_ms": 6594,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 316512,
+        "audio_payload_sha256": "8e7ff65acb7a5cc9056e9f6e3f0f52d9be4520328e82dfba61868900e7271bfe"
+      }
+    },
+    {
+      "dialogue_id": "D_P01_04",
+      "page_id": 1,
+      "panel_id": "DEESC_PANEL_c191e02c101e",
+      "reading_order_index": 4,
+      "speaker_label": "RIN",
+      "raw_text": "Con XIN THỀ!",
+      "cleaned_text": "Con XIN THỀ!",
+      "bbox": [
+        157.0,
+        805.0,
+        237.0,
+        961.0
+      ],
+      "timestamps": {
+        "start_ms": 12815,
+        "end_ms": 14376
+      },
+      "tts_ready_text": "Con xin thề!",
+      "audio_id": "AUD_D_P01_04",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 1561,
+      "start_ms": 12815,
+      "end_ms": 14376,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P01_04",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 1561,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 74928,
+        "audio_payload_sha256": "6d5052eac6db04aebcee0f96cab43ba9ee9f538e76b33e4769487994ec0c713d"
+      }
+    },
+    {
+      "dialogue_id": "D_P02_01",
+      "page_id": 2,
+      "panel_id": "PN_c81abc4667cc",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "TÔI ĐÃ KẾT HÔN",
+      "cleaned_text": "TÔI ĐÃ KẾT HÔN",
+      "bbox": [
+        155.0,
+        205.0,
+        241.0,
+        321.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 1748
+      },
+      "tts_ready_text": "Tôi đã kết hôn,",
+      "audio_id": "AUD_D_P02_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1748,
+      "start_ms": 0,
+      "end_ms": 1748,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P02_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1748,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 83904,
+        "audio_payload_sha256": "fa5317df36b78dddeffb951d96ec6601efa117f19642124ff50b00da4bf62521"
+      }
+    },
+    {
+      "dialogue_id": "D_P02_02",
+      "page_id": 2,
+      "panel_id": "PN_2fd92daee87b",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "TRONG GAME",
+      "cleaned_text": "TRONG GAME",
+      "bbox": [
+        658.0,
+        744.0,
+        738.0,
+        814.0
+      ],
+      "timestamps": {
+        "start_ms": 2448,
+        "end_ms": 3572
+      },
+      "tts_ready_text": "trong game.",
+      "audio_id": "AUD_D_P02_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1124,
+      "start_ms": 2448,
+      "end_ms": 3572,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P02_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1124,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 53952,
+        "audio_payload_sha256": "63a2a3baa8ff611be32898e4b9bd18b1fb0025acf5dceb959028de42fa929e88"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_01",
+      "page_id": 3,
+      "panel_id": "PN_befc93661d98",
+      "reading_order_index": 1,
+      "speaker_label": "NARRATOR",
+      "raw_text": "HÁC BINH NGUYÊN",
+      "cleaned_text": "HẮC BÌNH NGUYÊN",
+      "bbox": [
+        691.0,
+        147.0,
+        789.0,
+        255.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 1361
+      },
+      "tts_ready_text": "Hắc Bình Nguyên,",
+      "audio_id": "AUD_D_P03_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1361,
+      "start_ms": 0,
+      "end_ms": 1361,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 1361,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 65328,
+        "audio_payload_sha256": "e6496205e27112a3c7f53f1111abda916c683da82b70fa7af65643972793c5a3"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_02",
+      "page_id": 3,
+      "panel_id": "PN_befc93661d98",
+      "reading_order_index": 2,
+      "speaker_label": "NARRATOR",
+      "raw_text": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+      "cleaned_text": "LÀ MỘT GAME MMO THẾ GIỚI MỞ VỚI ĐỒ HOẠ CHÂN THỰC",
+      "bbox": [
+        163.0,
+        205.0,
+        295.0,
+        379.0
+      ],
+      "timestamps": {
+        "start_ms": 1711,
+        "end_ms": 6706
+      },
+      "tts_ready_text": "là một game MMO thế giới mở với đồ họa chân thực.",
+      "audio_id": "AUD_D_P03_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 4995,
+      "start_ms": 1711,
+      "end_ms": 6706,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 4995,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 239760,
+        "audio_payload_sha256": "6f493f460ad77f623ab0a93b2f870d2bf9a2d9968a369f0ca04dbbe258f01cb2"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_03",
+      "page_id": 3,
+      "panel_id": "PN_cc6fa8f61cd2",
+      "reading_order_index": 3,
+      "speaker_label": "NARRATOR",
+      "raw_text": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "cleaned_text": "MỘT CON GAME TUYỆT VỜI NƠI MỌI NGƯỜI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+      "bbox": [
+        647.0,
+        579.0,
+        779.0,
+        792.0
+      ],
+      "timestamps": {
+        "start_ms": 7406,
+        "end_ms": 13950
+      },
+      "tts_ready_text": "Một con game tuyệt vời nơi mọi người có thể tận hưởng nhập vai tùy thích.",
+      "audio_id": "AUD_D_P03_03",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 6544,
+      "start_ms": 7406,
+      "end_ms": 13950,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_03",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 6544,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 314112,
+        "audio_payload_sha256": "65f56b2161f939aa47a05a07cdee8c0504948fdc71fad5198e1d2da3a9cfbe0f"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_04",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "cleaned_text": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+      "bbox": [
+        514.0,
+        906.0,
+        815.853376071303,
+        1061.9302301859036
+      ],
+      "timestamps": {
+        "start_ms": 14650,
+        "end_ms": 18871
+      },
+      "tts_ready_text": "Đã mở được thành tựu trang phục Vét Đuôi Tôm.",
+      "audio_id": "AUD_D_P03_04",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 4221,
+      "start_ms": 14650,
+      "end_ms": 18871,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_04",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 4221,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 202608,
+        "audio_payload_sha256": "5ce3bd5f84a476101ce8a59ae6f72aa5697638a9d56c82b66ebf354bc19c70de"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_05",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 5,
+      "speaker_label": "KAZU",
+      "raw_text": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+      "cleaned_text": "ĐÃ ĐẠT ĐƯỢC ĐẶC QUYỀN KẾT HÔN RỒI",
+      "bbox": [
+        328.0,
+        962.0,
+        420.0,
+        1058.0
+      ],
+      "timestamps": {
+        "start_ms": 19221,
+        "end_ms": 22668
+      },
+      "tts_ready_text": "Đã đạt được đặc quyền kết hôn rồi.",
+      "audio_id": "AUD_D_P03_05",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 3447,
+      "start_ms": 19221,
+      "end_ms": 22668,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_05",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 3447,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 165456,
+        "audio_payload_sha256": "4453f29dc163953ba165bfacde84d10ae6663bcdac4c2f5991076747f90eaa25"
+      }
+    },
+    {
+      "dialogue_id": "D_P03_06",
+      "page_id": 3,
+      "panel_id": "SYNTH_PANEL_afa30c84898c",
+      "reading_order_index": 6,
+      "speaker_label": "RIN",
+      "raw_text": "KAZL NAY",
+      "cleaned_text": "KAZU NAY",
+      "bbox": [
+        213.0,
+        1091.0,
+        251.0,
+        1123.0
+      ],
+      "timestamps": {
+        "start_ms": 23018,
+        "end_ms": 24192
+      },
+      "tts_ready_text": "Kazu này!",
+      "audio_id": "AUD_D_P03_06",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 1174,
+      "start_ms": 23018,
+      "end_ms": 24192,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P03_06",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 1174,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 56352,
+        "audio_payload_sha256": "b43dc0568dd667ceb89049379170040ca765ec75a10cfc06e7bf8c88c37ebedb"
+      }
+    },
+    {
+      "dialogue_id": "D_P04_01",
+      "page_id": 4,
+      "panel_id": "PN_77c431f85a56",
+      "reading_order_index": 1,
+      "speaker_label": "RIN",
+      "raw_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "cleaned_text": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+      "bbox": [
+        128.0,
+        427.0,
+        246.0,
+        531.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 2723
+      },
+      "tts_ready_text": "Hãy cùng nhau hạnh phúc nhé!",
+      "audio_id": "AUD_D_P04_01",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 2723,
+      "start_ms": 0,
+      "end_ms": 2723,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P04_01",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 2723,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 130704,
+        "audio_payload_sha256": "ee2d932b64404f73deb4d49092305ee84f695ed6abfb4f245b4d60d4974b5439"
+      }
+    },
+    {
+      "dialogue_id": "D_P04_02",
+      "page_id": 4,
+      "panel_id": "PN_952651e84374",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "AH",
+      "cleaned_text": "AH",
+      "bbox": [
+        752.0,
+        812.0,
+        786.0,
+        836.0
+      ],
+      "timestamps": {
+        "start_ms": 3423,
+        "end_ms": 4210
+      },
+      "tts_ready_text": "Ah!",
+      "audio_id": "AUD_D_P04_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 787,
+      "start_ms": 3423,
+      "end_ms": 4210,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P04_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 787,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 37776,
+        "audio_payload_sha256": "b75b9f5192299b79f0390e5f6e1e1fddbaf8109e7d9cde10f28329edae839f0b"
+      }
+    },
+    {
+      "dialogue_id": "D_P04_03",
+      "page_id": 4,
+      "panel_id": "PN_952651e84374",
+      "reading_order_index": 3,
+      "speaker_label": "RIN",
+      "raw_text": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+      "cleaned_text": "Anh CHỈ BIÊT NÓI \"AH\"\" THÔI SAO!?",
+      "bbox": [
+        596.0,
+        822.0,
+        690.0,
+        932.0
+      ],
+      "timestamps": {
+        "start_ms": 4560,
+        "end_ms": 8070
+      },
+      "tts_ready_text": "Anh chỉ biết nói Ah thôi sao!?",
+      "audio_id": "AUD_D_P04_03",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 3510,
+      "start_ms": 4560,
+      "end_ms": 8070,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P04_03",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 3510,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 168480,
+        "audio_payload_sha256": "2ce4ac4e6833563662106d34ec83f228666b0a6b0c9f3253340735144eb782a9"
+      }
+    },
+    {
+      "dialogue_id": "D_P04_04",
+      "page_id": 4,
+      "panel_id": "PN_a8da83358244",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "cleaned_text": "cô GÁI TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+      "bbox": [
+        396.0,
+        804.0,
+        500.0,
+        972.0
+      ],
+      "timestamps": {
+        "start_ms": 8770,
+        "end_ms": 14152
+      },
+      "tts_ready_text": "Cô gái tóc vàng với dáng vẻ tăng động này tên là Rin.",
+      "audio_id": "AUD_D_P04_04",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 5382,
+      "start_ms": 8770,
+      "end_ms": 14152,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P04_04",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 5382,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 258336,
+        "audio_payload_sha256": "095ed4142d66b8e153a2a9ba5d5f3e68e330db764113dad6cd2f8c71a0a9aaba"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_01",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 1,
+      "speaker_label": "NARRATOR",
+      "raw_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+      "cleaned_text": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔI LÀ VÀo 4 NĂM TRUớc...",
+      "bbox": [
+        667.0,
+        172.0,
+        766.0,
+        296.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 5532
+      },
+      "tts_ready_text": "Lần gặp gỡ đầu tiên của chúng tôi là vào 4 năm trước...",
+      "audio_id": "AUD_D_P05_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 5532,
+      "start_ms": 0,
+      "end_ms": 5532,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 5532,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 265536,
+        "audio_payload_sha256": "728f8aded7e13d43c02c3b149b87b11916ec1438dd1088de50b3d0262cfa9d57"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_02",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 2,
+      "speaker_label": "RIN",
+      "raw_text": "Mìnb là Rin",
+      "cleaned_text": "Mình là Rin",
+      "bbox": [
+        639.0,
+        412.0,
+        701.0,
+        457.0
+      ],
+      "timestamps": {
+        "start_ms": 5882,
+        "end_ms": 7393
+      },
+      "tts_ready_text": "Mình là Rin.",
+      "audio_id": "AUD_D_P05_02",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 1511,
+      "start_ms": 5882,
+      "end_ms": 7393,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_02",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 1511,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 72528,
+        "audio_payload_sha256": "92ab577dcb22680f16bee8bac0de219d1b368c868eba2fd98d3496420956cb56"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_03",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_2f2bf7f44fd8",
+      "reading_order_index": 3,
+      "speaker_label": "RIN",
+      "raw_text": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+      "cleaned_text": "Mình là nGười chơi mới nên mong cậu Giúp đỡ!",
+      "bbox": [
+        138.0,
+        389.0,
+        246.0,
+        500.0
+      ],
+      "timestamps": {
+        "start_ms": 7743,
+        "end_ms": 12014
+      },
+      "tts_ready_text": "Mình là người chơi mới nên mong cậu giúp đỡ!",
+      "audio_id": "AUD_D_P05_03",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 4271,
+      "start_ms": 7743,
+      "end_ms": 12014,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_03",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 4271,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 205008,
+        "audio_payload_sha256": "31a15d46c163cd0fc74a069d85bd2144e4147fb7e81fae771ede6e9c41b4ac0f"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_04",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_d056dd9767fc",
+      "reading_order_index": 4,
+      "speaker_label": "NARRATOR",
+      "raw_text": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "cleaned_text": "RIN ĐƯỢC GHÉP THÀNH CặP NGẨU NHIÊN VỚI Tôi TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+      "bbox": [
+        642.0,
+        702.0,
+        788.0,
+        840.0
+      ],
+      "timestamps": {
+        "start_ms": 12714,
+        "end_ms": 18870
+      },
+      "tts_ready_text": "Rin được ghép thành cặp ngẫu nhiên với tôi trong một trận đấu ở dungeon.",
+      "audio_id": "AUD_D_P05_04",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 6156,
+      "start_ms": 12714,
+      "end_ms": 18870,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_04",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 6156,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 295488,
+        "audio_payload_sha256": "e42b62a50a8f2203fcbc94105bc492b8b8f0e76fff4d617315a9c241921254c9"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_05",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 5,
+      "speaker_label": "NARRATOR",
+      "raw_text": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+      "cleaned_text": "VÀ Tôi ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHƠI GAME VÀ TÙ ĐÓ MỐI QUAN HỆ CỦA CHÚNG TÔI BẮT ĐẤU.",
+      "bbox": [
+        288.0,
+        672.0,
+        402.0,
+        822.0
+      ],
+      "timestamps": {
+        "start_ms": 19570,
+        "end_ms": 28436
+      },
+      "tts_ready_text": "Và tôi đã chỉ bảo cho newbie Rin cách chơi game và từ đó mối quan hệ của chúng tôi bắt đầu.",
+      "audio_id": "AUD_D_P05_05",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 8866,
+      "start_ms": 19570,
+      "end_ms": 28436,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_05",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 8866,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 425568,
+        "audio_payload_sha256": "c598df935f4f42999f8b90843294317c99bcccf040b7da25be0341676fbe6ed7"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_06",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 6,
+      "speaker_label": "NARRATOR",
+      "raw_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "cleaned_text": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôi ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+      "bbox": [
+        122.0,
+        765.0,
+        233.0,
+        903.0
+      ],
+      "timestamps": {
+        "start_ms": 28786,
+        "end_ms": 37852
+      },
+      "tts_ready_text": "Thông qua việc gặp nhau thường xuyên thì sự gắn kết của chúng tôi đã tăng lên từng chút, từng chút một.",
+      "audio_id": "AUD_D_P05_06",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 9066,
+      "start_ms": 28786,
+      "end_ms": 37852,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_06",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 9066,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 435168,
+        "audio_payload_sha256": "c1ec98093dd8c8e9c09b621c54888acd7c657503c1bf71e1dab75c12c91b33d2"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_07",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 7,
+      "speaker_label": "KAZU",
+      "raw_text": "Ha #êp #ên cút ~al",
+      "cleaned_text": "Hạ thấp thêm chút!!",
+      "bbox": [
+        366.0,
+        924.0,
+        428.0,
+        985.0
+      ],
+      "timestamps": {
+        "start_ms": 38202,
+        "end_ms": 40937
+      },
+      "tts_ready_text": "Hạ thấp thêm chút nữa!!",
+      "audio_id": "AUD_D_P05_07",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 2735,
+      "start_ms": 38202,
+      "end_ms": 40937,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_07",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 2735,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 131280,
+        "audio_payload_sha256": "54b92d5e67a621165d7271e82830ec8373c033381b6ee8b6e74e6ba8959ebae5"
+      }
+    },
+    {
+      "dialogue_id": "D_P05_08",
+      "page_id": 5,
+      "panel_id": "DARK_PANEL_ed2da544453a",
+      "reading_order_index": 8,
+      "speaker_label": "RIN",
+      "raw_text": "Hôy",
+      "cleaned_text": "Hầy",
+      "bbox": [
+        197.0,
+        922.0,
+        246.0,
+        967.0
+      ],
+      "timestamps": {
+        "start_ms": 41287,
+        "end_ms": 42174
+      },
+      "tts_ready_text": "Hầy...",
+      "audio_id": "AUD_D_P05_08",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 887,
+      "start_ms": 41287,
+      "end_ms": 42174,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P05_08",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 887,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 42576,
+        "audio_payload_sha256": "20c914d51fdfdaedda1c1686f2fc7585d4aad673e1b47f2b6605a4f725f188b7"
+      }
+    },
+    {
+      "dialogue_id": "D_P07_01",
+      "page_id": 7,
+      "panel_id": "PN_54c078540d26",
+      "reading_order_index": 1,
+      "speaker_label": "RIN",
+      "raw_text": "VÂnG!",
+      "cleaned_text": "VÂnG!",
+      "bbox": [
+        412.0,
+        936.0,
+        518.0,
+        990.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 787
+      },
+      "tts_ready_text": "Vâng!",
+      "audio_id": "AUD_D_P07_01",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 787,
+      "start_ms": 0,
+      "end_ms": 787,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P07_01",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+5%",
+        "pitch": "+5Hz",
+        "duration_ms": 787,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 37776,
+        "audio_payload_sha256": "7b1dfba2dc46073a2336bd3cb4713339b71f881a462c425f1384358ca8585454"
+      }
+    },
+    {
+      "dialogue_id": "D_P07_02",
+      "page_id": 7,
+      "panel_id": "PN_54c078540d26",
+      "reading_order_index": 2,
+      "speaker_label": "NARRATOR",
+      "raw_text": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+      "cleaned_text": "CỨ NHƯ VẬY CHÚNG Tôi ĐÃ KẾT HÔN VỚI NHAU",
+      "bbox": [
+        139.0,
+        953.0,
+        247.0,
+        1072.0
+      ],
+      "timestamps": {
+        "start_ms": 1137,
+        "end_ms": 5358
+      },
+      "tts_ready_text": "Cứ như vậy chúng tôi đã kết hôn với nhau.",
+      "audio_id": "AUD_D_P07_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 4221,
+      "start_ms": 1137,
+      "end_ms": 5358,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P07_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 4221,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 202608,
+        "audio_payload_sha256": "441c240ee0ac412e153ea065252f350cc1ac56d1e990c12006a4d71993f68684"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_01",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 1,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+      "cleaned_text": "NHƯNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNG THÍCH MIZUKI-SAN CHO LẮM,",
+      "bbox": [
+        626.0,
+        122.0,
+        738.0,
+        266.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 4845
+      },
+      "tts_ready_text": "Nhưng mà tớ lại có phần thấy không thích Mizuki-san cho lắm,",
+      "audio_id": "AUD_D_P15_01",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 4845,
+      "start_ms": 0,
+      "end_ms": 4845,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_01",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 4845,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 232560,
+        "audio_payload_sha256": "5c034c7a95a40dd981baad7825f5473a11253bf2490ac54f0eb6d80330f44c02"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_02",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 2,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+      "cleaned_text": "ĐẾN MỘT CUỘC TRÒ CHUYỆN TẤT YẾU CŨNG KHÔNG có, BIỂU CẢM CŨNG KHÔNG THAY ĐỔl",
+      "bbox": [
+        453.0,
+        176.0,
+        591.0,
+        312.0
+      ],
+      "timestamps": {
+        "start_ms": 5195,
+        "end_ms": 11939
+      },
+      "tts_ready_text": "Đến một cuộc trò chuyện tất yếu cũng không có, biểu cảm cũng không thay đổi.",
+      "audio_id": "AUD_D_P15_02",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 6744,
+      "start_ms": 5195,
+      "end_ms": 11939,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_02",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 6744,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 323712,
+        "audio_payload_sha256": "40e19bcbfdbc42e4be99be3f5dd91db7962e8ead1266fba43f57b386d6bb140c"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_03",
+      "page_id": 15,
+      "panel_id": "SYNTH_PANEL_c9c1de884a05",
+      "reading_order_index": 3,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+      "cleaned_text": "CÁC CẬU KHÔNG CẢM THẤY SỰ LẠNH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MỨC LẠNH NHẠT LUÔN RỒI SAO?",
+      "bbox": [
+        110.0,
+        359.0,
+        236.0,
+        535.0
+      ],
+      "timestamps": {
+        "start_ms": 12289,
+        "end_ms": 20044
+      },
+      "tts_ready_text": "Các cậu không cảm thấy sự lạnh lùng ấy là hơi quá đến mức lạnh nhạt luôn rồi sao?",
+      "audio_id": "AUD_D_P15_03",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 7755,
+      "start_ms": 12289,
+      "end_ms": 20044,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_03",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 7755,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 372240,
+        "audio_payload_sha256": "f43ab86416fc3246528aa89be62d864338c7e19f52b52161eaacc7de5fb4af92"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_04",
+      "page_id": 15,
+      "panel_id": "PN_cf3c6e8976b9",
+      "reading_order_index": 4,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+      "cleaned_text": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHẢI LÀ NHÂN VẬT MÀ MÌNH CÓ THỂ NÓI CHUYỆN MỘT CÁCH THOẢI MÁI HA",
+      "bbox": [
+        658.0,
+        674.0,
+        786.0,
+        829.0
+      ],
+      "timestamps": {
+        "start_ms": 20744,
+        "end_ms": 29760
+      },
+      "tts_ready_text": "À thì đúng là cậu ấy không phải là nhân vật mà mình có thể nói chuyện một cách thoải mái ha...",
+      "audio_id": "AUD_D_P15_04",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 9016,
+      "start_ms": 20744,
+      "end_ms": 29760,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_04",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 9016,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 432768,
+        "audio_payload_sha256": "cc38d7dcb81780fb0c44c274e76bdf0ac5f2e19e5afe794e0e2c2ec13de4a50c"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_05",
+      "page_id": 15,
+      "panel_id": "PN_cf3c6e8976b9",
+      "reading_order_index": 5,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "cleaned_text": "ỬM, CHÚNG TA CHỈ CÓ THỂ CHIÊM NGƯỠNG MIZUKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+      "bbox": [
+        155.0,
+        689.0,
+        271.0,
+        819.0
+      ],
+      "timestamps": {
+        "start_ms": 30110,
+        "end_ms": 36129
+      },
+      "tts_ready_text": "Ừm, chúng ta chỉ có thể chiêm ngưỡng Mizuki-san từ xa là được rồi!",
+      "audio_id": "AUD_D_P15_05",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 6019,
+      "start_ms": 30110,
+      "end_ms": 36129,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_05",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 6019,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 288912,
+        "audio_payload_sha256": "9d7fb4bbe66921f7a35390e079ac5b15f1401f51c90abe072675a80d6ee17565"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_06",
+      "page_id": 15,
+      "panel_id": "PN_e342039122d3",
+      "reading_order_index": 6,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+      "cleaned_text": "MÀ TÓ CŨNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GIỚI HẠN NGAY TẮP LỰ LUÔN RồI!",
+      "bbox": [
+        658.0,
+        974.0,
+        794.0,
+        1110.0
+      ],
+      "timestamps": {
+        "start_ms": 36829,
+        "end_ms": 43423
+      },
+      "tts_ready_text": "Mà tớ cũng đã đặt hàng album phiên bản giới hạn ngay tắp lự luôn rồi!",
+      "audio_id": "AUD_D_P15_06",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 6594,
+      "start_ms": 36829,
+      "end_ms": 43423,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_06",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 6594,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 316512,
+        "audio_payload_sha256": "a482f14fa4c66aa6b465b72ab28340f37847425a41df89c56cb259857cd4f9b7"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_07",
+      "page_id": 15,
+      "panel_id": "PN_e342039122d3",
+      "reading_order_index": 7,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "NẾU LÀ MĨNH THÌ SẼ NẠP TlỄN VÀO GaME RồI HA",
+      "cleaned_text": "NẾU LÀ MÌNH THÌ SẼ NẠP TIỀN VÀO GAME RồI HA",
+      "bbox": [
+        294.0,
+        1016.0,
+        405.0,
+        1138.0
+      ],
+      "timestamps": {
+        "start_ms": 43773,
+        "end_ms": 48531
+      },
+      "tts_ready_text": "Nếu là mình thì sẽ nạp tiền vào game rồi ha...",
+      "audio_id": "AUD_D_P15_07",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 4758,
+      "start_ms": 43773,
+      "end_ms": 48531,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_07",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 4758,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 228384,
+        "audio_payload_sha256": "791170f98d3b9f14251c13c0562af3b2ba4eabeef0fdd4d3e0afd061dfc6d2a9"
+      }
+    },
+    {
+      "dialogue_id": "D_P15_08",
+      "page_id": 15,
+      "panel_id": "PN_40b666b58c82",
+      "reading_order_index": 8,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "PÍP!",
+      "cleaned_text": "PÍP!",
+      "bbox": [
+        120.0,
+        940.0,
+        204.0,
+        992.0
+      ],
+      "timestamps": {
+        "start_ms": 49231,
+        "end_ms": 50018
+      },
+      "tts_ready_text": "Píp!",
+      "audio_id": "AUD_D_P15_08",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 787,
+      "start_ms": 49231,
+      "end_ms": 50018,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P15_08",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 787,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 37776,
+        "audio_payload_sha256": "ae40e7984d671b7ae85925c945955c3f99a0c12f5ee5cb1bda41ecf351819a83"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_01",
+      "page_id": 17,
+      "panel_id": "PN_ca1bf9d09d63",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+      "cleaned_text": "CHẮC TÌM VAY HIỂU THÔNG 'VỀ SỰ KIỆN TIN MỚl THÔI\"",
+      "bbox": [
+        699.0,
+        199.0,
+        798.0,
+        279.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 4371
+      },
+      "tts_ready_text": "Chắc tìm hiểu thông tin về sự kiện mới thôi...",
+      "audio_id": "AUD_D_P17_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 4371,
+      "start_ms": 0,
+      "end_ms": 4371,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 4371,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 209808,
+        "audio_payload_sha256": "4e9b4b7690353952866faa7ad35ec84b6e3cfc4ef33ef78bf4185f7f6f2822de"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_02",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "HỬ?",
+      "cleaned_text": "HỬ?",
+      "bbox": [
+        442.0,
+        182.0,
+        488.0,
+        210.0
+      ],
+      "timestamps": {
+        "start_ms": 5071,
+        "end_ms": 5858
+      },
+      "tts_ready_text": "Hử?",
+      "audio_id": "AUD_D_P17_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 787,
+      "start_ms": 5071,
+      "end_ms": 5858,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 787,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 37776,
+        "audio_payload_sha256": "3c881c5c8415602e94e483450c4030b200364159355e60f399045f1e6652b127"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_03",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 3,
+      "speaker_label": "NARRATOR",
+      "raw_text": "Cậpnhật tin túc Hắc Bình Nguyên",
+      "cleaned_text": "CẬP NHẬT TIN TỨC Hắc Bình Nguyên",
+      "bbox": [
+        257.0,
+        218.0,
+        423.0,
+        280.0
+      ],
+      "timestamps": {
+        "start_ms": 6208,
+        "end_ms": 9268
+      },
+      "tts_ready_text": "Cập nhật tin tức Hắc Bình Nguyên.",
+      "audio_id": "AUD_D_P17_03",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 3060,
+      "start_ms": 6208,
+      "end_ms": 9268,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_03",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "-5%",
+        "pitch": "-2Hz",
+        "duration_ms": 3060,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 146880,
+        "audio_payload_sha256": "a3f3a24aaf471ba1457ce5070015ebb889a5be3136adb88617e585629c4a93eb"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_04",
+      "page_id": 17,
+      "panel_id": "PN_10b3e15d09b5",
+      "reading_order_index": 4,
+      "speaker_label": "KAZU",
+      "raw_text": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+      "cleaned_text": "LÚC SÁNG NAY MẤY ĐỨA TRONG LỚP CŨNG ĐÃ NÓI VỀ CÁI NÀY.",
+      "bbox": [
+        92.0,
+        328.0,
+        242.0,
+        426.0
+      ],
+      "timestamps": {
+        "start_ms": 9618,
+        "end_ms": 15150
+      },
+      "tts_ready_text": "Lúc sáng nay mấy đứa trong lớp cũng đã nói về cái này...",
+      "audio_id": "AUD_D_P17_04",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 5532,
+      "start_ms": 9618,
+      "end_ms": 15150,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_04",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 5532,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 265536,
+        "audio_payload_sha256": "dae935b31c42f4e4af530f7cbb8aa6359e8149acbf3f5e04007f7ef6b744468c"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_05",
+      "page_id": 17,
+      "panel_id": "PN_80ad3d363a63",
+      "reading_order_index": 5,
+      "speaker_label": "KAZU",
+      "raw_text": "CũNG CÒN THÒI GIAN",
+      "cleaned_text": "CũNG CÒN THỜI GIAN",
+      "bbox": [
+        716.0,
+        580.0,
+        794.0,
+        647.0
+      ],
+      "timestamps": {
+        "start_ms": 15850,
+        "end_ms": 17598
+      },
+      "tts_ready_text": "Cũng còn thời gian,",
+      "audio_id": "AUD_D_P17_05",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1748,
+      "start_ms": 15850,
+      "end_ms": 17598,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_05",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1748,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 83904,
+        "audio_payload_sha256": "0f7886c8567ca6e291a96da75bb27d23fbe5b49cdaa43043c2ba517eb67e939f"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_06",
+      "page_id": 17,
+      "panel_id": "PN_80ad3d363a63",
+      "reading_order_index": 6,
+      "speaker_label": "KAZU",
+      "raw_text": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+      "cleaned_text": "CHẮC LÀ NGHE THử MỘT LẦN XEM SAO",
+      "bbox": [
+        99.0,
+        551.0,
+        217.0,
+        676.0
+      ],
+      "timestamps": {
+        "start_ms": 17948,
+        "end_ms": 21395
+      },
+      "tts_ready_text": "chắc là nghe thử một lần xem sao.",
+      "audio_id": "AUD_D_P17_06",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 3447,
+      "start_ms": 17948,
+      "end_ms": 21395,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_06",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 3447,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 165456,
+        "audio_payload_sha256": "621696b3fd2d2c31dd06be9a92aa8ee5b9618300200890edf392cd62907991e3"
+      }
+    },
+    {
+      "dialogue_id": "D_P17_07",
+      "page_id": 17,
+      "panel_id": "PN_e76ac7ecdd65",
+      "reading_order_index": 7,
+      "speaker_label": "KAZU",
+      "raw_text": "À RẾ",
+      "cleaned_text": "À RẾ",
+      "bbox": [
+        90.0,
+        1124.0,
+        138.0,
+        1150.0
+      ],
+      "timestamps": {
+        "start_ms": 22095,
+        "end_ms": 23269
+      },
+      "tts_ready_text": "Ủa kìa?",
+      "audio_id": "AUD_D_P17_07",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1174,
+      "start_ms": 22095,
+      "end_ms": 23269,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P17_07",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1174,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 56352,
+        "audio_payload_sha256": "543ae5e9125a76fbb57c3b06950b54ffe6baba4af22a911b7f9ce25eb330e751"
+      }
+    },
+    {
+      "dialogue_id": "D_P18_01",
+      "page_id": 18,
+      "panel_id": "PN_f2200cb384a8",
+      "reading_order_index": 1,
+      "speaker_label": "KAZU",
+      "raw_text": "SAO LẠl",
+      "cleaned_text": "SAO LẠI",
+      "bbox": [
+        722.0,
+        178.0,
+        764.0,
+        236.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 1274
+      },
+      "tts_ready_text": "Sao lại...",
+      "audio_id": "AUD_D_P18_01",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1274,
+      "start_ms": 0,
+      "end_ms": 1274,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P18_01",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1274,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 61152,
+        "audio_payload_sha256": "f8d2f47a572b7e8d20d1b686d385442f5e522dd088f296e247b6f9a5480a9b73"
+      }
+    },
+    {
+      "dialogue_id": "D_P18_02",
+      "page_id": 18,
+      "panel_id": "PN_f4be483d0ea3",
+      "reading_order_index": 2,
+      "speaker_label": "KAZU",
+      "raw_text": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+      "cleaned_text": "CÒN HƠN NHỮNG GÌ MÌNH NGHĨ.",
+      "bbox": [
+        120.0,
+        298.0,
+        216.0,
+        382.0
+      ],
+      "timestamps": {
+        "start_ms": 1974,
+        "end_ms": 4647
+      },
+      "tts_ready_text": "còn hơn những gì mình nghĩ.",
+      "audio_id": "AUD_D_P18_02",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 2673,
+      "start_ms": 1974,
+      "end_ms": 4647,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P18_02",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 2673,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 128304,
+        "audio_payload_sha256": "ce024bcca6b32ced58c200b277aa7692830f6574249a527b3ea2119d7a235eec"
+      }
+    },
+    {
+      "dialogue_id": "D_P18_03",
+      "page_id": 18,
+      "panel_id": "PN_e750f2a6a33e",
+      "reading_order_index": 3,
+      "speaker_label": "KAZU",
+      "raw_text": "HAY QUÁ.",
+      "cleaned_text": "HAY QUÁ.",
+      "bbox": [
+        161.0,
+        671.0,
+        265.0,
+        709.0
+      ],
+      "timestamps": {
+        "start_ms": 5347,
+        "end_ms": 6621
+      },
+      "tts_ready_text": "Hay quá...",
+      "audio_id": "AUD_D_P18_03",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 1274,
+      "start_ms": 5347,
+      "end_ms": 6621,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P18_03",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1274,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 61152,
+        "audio_payload_sha256": "2a7180d4312265bb024abfe35990416d70a3962c16eb7a5fa01d77aa8c57b1da"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_01",
+      "page_id": 38,
+      "panel_id": "PN_86914f467fda",
+      "reading_order_index": 1,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "XÁC NHÂN BÀ LUÔN Rồl",
+      "cleaned_text": "XÁC NHẬN BÀ LUÔN RỒI",
+      "bbox": [
+        474.0,
+        180.0,
+        548.0,
+        284.0
+      ],
+      "timestamps": {
+        "start_ms": 0,
+        "end_ms": 2435
+      },
+      "tts_ready_text": "Xác nhận bà luôn rồi...",
+      "audio_id": "AUD_D_P38_01",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 2435,
+      "start_ms": 0,
+      "end_ms": 2435,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_01",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 2435,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 116880,
+        "audio_payload_sha256": "bbd814419ec52572af19922837b34cece304550d79f76ffaee961b2898503be8"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_02",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 2,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "THẰNG ẤT Ơ NÀO KIA_",
+      "cleaned_text": "THẰNG ẤT Ơ NÀO KIA...",
+      "bbox": [
+        682.0,
+        800.0,
+        764.0,
+        873.0
+      ],
+      "timestamps": {
+        "start_ms": 3135,
+        "end_ms": 5870
+      },
+      "tts_ready_text": "Thằng ất ơ nào kia!?",
+      "audio_id": "AUD_D_P38_02",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 2735,
+      "start_ms": 3135,
+      "end_ms": 5870,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_02",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 2735,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 131280,
+        "audio_payload_sha256": "cce9d434d65ef75249acb36540a1e33f3de60de4dc2762532b79da07675ff4ed"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_03",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 3,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "Ghen VL.",
+      "cleaned_text": "Ghen VL.",
+      "bbox": [
+        467.0,
+        863.0,
+        521.0,
+        907.0
+      ],
+      "timestamps": {
+        "start_ms": 6220,
+        "end_ms": 7781
+      },
+      "tts_ready_text": "Ghen tị ghê!",
+      "audio_id": "AUD_D_P38_03",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 1561,
+      "start_ms": 6220,
+      "end_ms": 7781,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_03",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 1561,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 74928,
+        "audio_payload_sha256": "ad9740aa996013b619df8cd4cf9b86c61394f66fc23f2ba6e3432c97db69d5fc"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_04",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 4,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "KHÔNG THÊ THA TH4 ĐLỢC..",
+      "cleaned_text": "KHÔNG THÊ THA THỨ ĐƯỢC..",
+      "bbox": [
+        710.0,
+        1027.0,
+        774.0,
+        1109.0
+      ],
+      "timestamps": {
+        "start_ms": 8131,
+        "end_ms": 10566
+      },
+      "tts_ready_text": "Không thể tha thứ được...",
+      "audio_id": "AUD_D_P38_04",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 2435,
+      "start_ms": 8131,
+      "end_ms": 10566,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_04",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 2435,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 116880,
+        "audio_payload_sha256": "6be7eadd44038256a36e06a7167e032c8c3c4f53763cafd23a0c6af4fcc873cd"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_05",
+      "page_id": 38,
+      "panel_id": "PN_268e02ea9e5f",
+      "reading_order_index": 5,
+      "speaker_label": "UNKNOWN",
+      "raw_text": "MIZUKI-SAN ĂN CÙNG vÓ CON TRAI Sao!?",
+      "cleaned_text": "MIZUKI-SAN ĂN CÙNG VỚI CON TRAI Sao!?",
+      "bbox": [
+        390.0,
+        1071.0,
+        492.0,
+        1157.0
+      ],
+      "timestamps": {
+        "start_ms": 10916,
+        "end_ms": 14426
+      },
+      "tts_ready_text": "Mizuki-san ăn cùng với con trai sao!?",
+      "audio_id": "AUD_D_P38_05",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "duration_ms": 3510,
+      "start_ms": 10916,
+      "end_ms": 14426,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_05",
+        "voice_id": "vi-VN-HoaiMyNeural",
+        "gender": "female",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 3510,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 168480,
+        "audio_payload_sha256": "d8f8b8ade51f03912d3847e8a2b15e43fb94028d73b1b20c9f0da51ded4fa3c4"
+      }
+    },
+    {
+      "dialogue_id": "D_P38_06",
+      "page_id": 38,
+      "panel_id": "PN_24859586c1ec",
+      "reading_order_index": 6,
+      "speaker_label": "KAZU",
+      "raw_text": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+      "cleaned_text": "SAO MẤY NGƯỜI XUNG QUANH CỨ NHÌN MỈNH CHẰM CHẰM VẬY.",
+      "bbox": [
+        234.0,
+        970.0,
+        334.0,
+        1105.0
+      ],
+      "timestamps": {
+        "start_ms": 15126,
+        "end_ms": 19884
+      },
+      "tts_ready_text": "Sao mấy người xung quanh cứ nhìn mình chằm chằm vậy...",
+      "audio_id": "AUD_D_P38_06",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "duration_ms": 4758,
+      "start_ms": 15126,
+      "end_ms": 19884,
+      "audio_metadata": {
+        "audio_id": "AUD_D_P38_06",
+        "voice_id": "vi-VN-NamMinhNeural",
+        "gender": "male",
+        "speaking_rate": "+0%",
+        "pitch": "+0Hz",
+        "duration_ms": 4758,
+        "audio_format": "wav",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "bit_depth": 16,
+        "pcm_bytes_estimate": 228384,
+        "audio_payload_sha256": "88c994b05faed43417d4b87fb5b6a59ed1f47df01e3ad6ee61e9657fb99a6150"
+      }
+    }
+  ],
+  "manifest_sha256": "fef63d1b08e4d2fba2db265420bfe443d1ac0e5a96e4a6d1d0c4bba6ac4704ab"
+}
