@@ -42,26 +42,26 @@ class VoiceSynthesisEngine:
             SpeakerRole.KAZU: VoiceProfile(
                 voice_id="vi-VN-NamMinhNeural",
                 gender="male",
-                rate="+0%",
+                rate="+15%",
                 pitch="+0Hz",
             ),
             SpeakerRole.RIN: VoiceProfile(
                 voice_id="vi-VN-HoaiMyNeural",
                 gender="female",
-                rate="+5%",
-                pitch="+5Hz",
+                rate="+20%",
+                pitch="+10Hz",
             ),
             SpeakerRole.NARRATOR: VoiceProfile(
                 voice_id="vi-VN-NamMinhNeural",
                 gender="male",
-                rate="-5%",
-                pitch="-2Hz",
+                rate="+15%",
+                pitch="+0Hz",
             ),
             SpeakerRole.PRIEST: VoiceProfile(
                 voice_id="vi-VN-NamMinhNeural",
                 gender="male",
-                rate="-10%",
-                pitch="-5Hz",
+                rate="+5%",
+                pitch="-2Hz",
             ),
             SpeakerRole.UNKNOWN: VoiceProfile(
                 voice_id="vi-VN-HoaiMyNeural",
@@ -146,8 +146,8 @@ class TimelineAligner:
 
     def __init__(
         self,
-        pause_between_bubbles_ms: int = 350,
-        pause_between_panels_ms: int = 700,
+        pause_between_bubbles_ms: int = 150,
+        pause_between_panels_ms: int = 300,
     ) -> None:
         self.pause_between_bubbles_ms = pause_between_bubbles_ms
         self.pause_between_panels_ms = pause_between_panels_ms

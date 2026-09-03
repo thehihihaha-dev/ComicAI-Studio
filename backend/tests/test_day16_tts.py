@@ -28,7 +28,7 @@ class Day16TTSTests(unittest.TestCase):
 
     def setUp(self):
         self.engine = VoiceSynthesisEngine()
-        self.aligner = TimelineAligner(pause_between_bubbles_ms=350, pause_between_panels_ms=700)
+        self.aligner = TimelineAligner(pause_between_bubbles_ms=150, pause_between_panels_ms=300)
 
         polished_path = ROOT / "benchmarks" / "day16" / "day16-polished-dialogues.json"
         self.polished_doc = json.loads(polished_path.read_text(encoding="utf-8"))
@@ -77,14 +77,19 @@ class Day16TTSTests(unittest.TestCase):
 
         self.assertEqual(kazu_prof.voice_id, "vi-VN-NamMinhNeural")
         self.assertEqual(kazu_prof.gender, "male")
+        self.assertEqual(kazu_prof.rate, "+15%")
 
         self.assertEqual(rin_prof.voice_id, "vi-VN-HoaiMyNeural")
         self.assertEqual(rin_prof.gender, "female")
+        self.assertEqual(rin_prof.rate, "+20%")
+        self.assertEqual(rin_prof.pitch, "+10Hz")
 
         self.assertEqual(priest_prof.voice_id, "vi-VN-NamMinhNeural")
-        self.assertEqual(priest_prof.rate, "-10%")
+        self.assertEqual(priest_prof.rate, "+5%")
+        self.assertEqual(priest_prof.pitch, "-2Hz")
 
         self.assertEqual(narrator_prof.voice_id, "vi-VN-NamMinhNeural")
+        self.assertEqual(narrator_prof.rate, "+15%")
 
     def test_determinism_10_runs(self):
         """Repeated alignment across 10 runs must produce identical SHA-256 digests."""

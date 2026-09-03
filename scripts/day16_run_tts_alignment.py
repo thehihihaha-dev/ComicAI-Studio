@@ -48,7 +48,7 @@ def run_tts_alignment() -> int:
 
     # 1. Initialize Engine and Aligner
     engine = VoiceSynthesisEngine()
-    aligner = TimelineAligner(pause_between_bubbles_ms=350, pause_between_panels_ms=700)
+    aligner = TimelineAligner(pause_between_bubbles_ms=150, pause_between_panels_ms=300)
 
     # 2. Group by Page
     pages_map: dict[int, list[dict]] = {}
