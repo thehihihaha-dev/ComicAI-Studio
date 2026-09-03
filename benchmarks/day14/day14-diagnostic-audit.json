@@ -1,0 +1,571 @@
+{
+  "schema_version": "day14_diagnostic_audit.v1",
+  "checkpoint": "14.1",
+  "purpose": "ROOT_CAUSE_ANALYSIS_MISSING_PANEL_COVERAGE",
+  "analyzed_pages": [
+    1,
+    3,
+    5,
+    15
+  ],
+  "total_unassigned_regions": 18,
+  "root_cause_distribution": {
+    "BORDERLESS_BACKGROUND_PANEL": 8,
+    "UNDER_SEGMENTED_PANEL": 10,
+    "OUTSIDE_GUTTER_TEXT": 0
+  },
+  "pages": [
+    {
+      "page_order": 1,
+      "dimensions": [
+        900,
+        1280
+      ],
+      "unassigned_count": 4,
+      "existing_panel_count": 0,
+      "root_cause": "UNDER_SEGMENTED_PANEL",
+      "simulation": {
+        "page_order": 1,
+        "unassigned_region_count": 4,
+        "enclosing_bbox": [
+          142.0,
+          173.0,
+          692.0,
+          961.0
+        ],
+        "normalized_enclosing_bbox": [
+          0.1352,
+          0.1578,
+          0.7508,
+          0.7689
+        ],
+        "existing_panel_count": 0,
+        "overlap_conflicts": [],
+        "has_geometric_conflict": false,
+        "vertical_gap_to_nearest_panel": null,
+        "horizontal_gap_to_nearest_panel": null,
+        "synthesis_feasibility": "ZERO_EXISTING_PANELS_FULL_SYNTHESIS_NEEDED"
+      },
+      "regions": [
+        {
+          "region_id": "LR_086859ae76f4",
+          "page_order": 1,
+          "raw_bbox": [
+            460.0,
+            173.0,
+            560.0,
+            276.0
+          ],
+          "normalized_coords": [
+            0.1352,
+            0.5111,
+            0.2156,
+            0.6222
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_615c8d24c678",
+          "page_order": 1,
+          "raw_bbox": [
+            638.0,
+            180.0,
+            692.0,
+            212.0
+          ],
+          "normalized_coords": [
+            0.1406,
+            0.7089,
+            0.1656,
+            0.7689
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_28e2fc3b47b8",
+          "page_order": 1,
+          "raw_bbox": [
+            142.0,
+            374.0,
+            262.0,
+            508.0
+          ],
+          "normalized_coords": [
+            0.2922,
+            0.1578,
+            0.3969,
+            0.2911
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_2284efd8ada7",
+          "page_order": 1,
+          "raw_bbox": [
+            157.0,
+            805.0,
+            237.0,
+            961.0
+          ],
+          "normalized_coords": [
+            0.6289,
+            0.1744,
+            0.7508,
+            0.2633
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        }
+      ]
+    },
+    {
+      "page_order": 3,
+      "dimensions": [
+        900,
+        1280
+      ],
+      "unassigned_count": 3,
+      "existing_panel_count": 2,
+      "root_cause": "UNDER_SEGMENTED_PANEL",
+      "simulation": {
+        "page_order": 3,
+        "unassigned_region_count": 3,
+        "enclosing_bbox": [
+          213.0,
+          906.0,
+          815.853376071303,
+          1123.0
+        ],
+        "normalized_enclosing_bbox": [
+          0.7078,
+          0.2367,
+          0.8773,
+          0.9065
+        ],
+        "existing_panel_count": 2,
+        "overlap_conflicts": [],
+        "has_geometric_conflict": false,
+        "vertical_gap_to_nearest_panel": 55.0,
+        "horizontal_gap_to_nearest_panel": 0.0,
+        "synthesis_feasibility": "CLEAN_COMPLEMENTARY_SEPARATION"
+      },
+      "regions": [
+        {
+          "region_id": "LR_301b7ed055be",
+          "page_order": 3,
+          "raw_bbox": [
+            514.0,
+            906.0,
+            815.853376071303,
+            1061.9302301859036
+          ],
+          "normalized_coords": [
+            0.7078,
+            0.5711,
+            0.8296,
+            0.9065
+          ],
+          "nearest_panel_id": "PN_cc6fa8f61cd2",
+          "min_euclidean_distance": 55.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 55.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_016a11675840",
+          "page_order": 3,
+          "raw_bbox": [
+            328.0,
+            962.0,
+            420.0,
+            1058.0
+          ],
+          "normalized_coords": [
+            0.7516,
+            0.3644,
+            0.8266,
+            0.4667
+          ],
+          "nearest_panel_id": "PN_cc6fa8f61cd2",
+          "min_euclidean_distance": 111.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 111.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_38a547aad429",
+          "page_order": 3,
+          "raw_bbox": [
+            213.0,
+            1091.0,
+            251.0,
+            1123.0
+          ],
+          "normalized_coords": [
+            0.8523,
+            0.2367,
+            0.8773,
+            0.2789
+          ],
+          "nearest_panel_id": "PN_cc6fa8f61cd2",
+          "min_euclidean_distance": 240.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 240.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        }
+      ]
+    },
+    {
+      "page_order": 5,
+      "dimensions": [
+        900,
+        1280
+      ],
+      "unassigned_count": 8,
+      "existing_panel_count": 0,
+      "root_cause": "BORDERLESS_BACKGROUND_PANEL",
+      "simulation": {
+        "page_order": 5,
+        "unassigned_region_count": 8,
+        "enclosing_bbox": [
+          122.0,
+          172.0,
+          788.0,
+          985.0
+        ],
+        "normalized_enclosing_bbox": [
+          0.1344,
+          0.1356,
+          0.7695,
+          0.8756
+        ],
+        "existing_panel_count": 0,
+        "overlap_conflicts": [],
+        "has_geometric_conflict": false,
+        "vertical_gap_to_nearest_panel": null,
+        "horizontal_gap_to_nearest_panel": null,
+        "synthesis_feasibility": "ZERO_EXISTING_PANELS_FULL_SYNTHESIS_NEEDED"
+      },
+      "regions": [
+        {
+          "region_id": "LR_f27fb5ffabf9",
+          "page_order": 5,
+          "raw_bbox": [
+            667.0,
+            172.0,
+            766.0,
+            296.0
+          ],
+          "normalized_coords": [
+            0.1344,
+            0.7411,
+            0.2313,
+            0.8511
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_26795b95ef26",
+          "page_order": 5,
+          "raw_bbox": [
+            138.0,
+            389.0,
+            246.0,
+            500.0
+          ],
+          "normalized_coords": [
+            0.3039,
+            0.1533,
+            0.3906,
+            0.2733
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_1dfca31c24d7",
+          "page_order": 5,
+          "raw_bbox": [
+            639.0,
+            412.0,
+            701.0,
+            457.0
+          ],
+          "normalized_coords": [
+            0.3219,
+            0.71,
+            0.357,
+            0.7789
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_a0587957c904",
+          "page_order": 5,
+          "raw_bbox": [
+            288.0,
+            672.0,
+            402.0,
+            822.0
+          ],
+          "normalized_coords": [
+            0.525,
+            0.32,
+            0.6422,
+            0.4467
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_d9caab3d7c4a",
+          "page_order": 5,
+          "raw_bbox": [
+            642.0,
+            702.0,
+            788.0,
+            840.0
+          ],
+          "normalized_coords": [
+            0.5484,
+            0.7133,
+            0.6562,
+            0.8756
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_b71bcd7a275c",
+          "page_order": 5,
+          "raw_bbox": [
+            122.0,
+            765.0,
+            233.0,
+            903.0
+          ],
+          "normalized_coords": [
+            0.5977,
+            0.1356,
+            0.7055,
+            0.2589
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_bf3e79736d0c",
+          "page_order": 5,
+          "raw_bbox": [
+            197.0,
+            922.0,
+            246.0,
+            967.0
+          ],
+          "normalized_coords": [
+            0.7203,
+            0.2189,
+            0.7555,
+            0.2733
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        },
+        {
+          "region_id": "LR_7ee4baf217d7",
+          "page_order": 5,
+          "raw_bbox": [
+            366.0,
+            924.0,
+            428.0,
+            985.0
+          ],
+          "normalized_coords": [
+            0.7219,
+            0.4067,
+            0.7695,
+            0.4756
+          ],
+          "nearest_panel_id": null,
+          "min_euclidean_distance": null,
+          "min_axis_gap_x": null,
+          "min_axis_gap_y": null,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "BORDERLESS_BACKGROUND_PANEL",
+          "root_cause_reason": "Dark full-bleed artwork with black gutters causing whitespace partition failure"
+        }
+      ]
+    },
+    {
+      "page_order": 15,
+      "dimensions": [
+        900,
+        1280
+      ],
+      "unassigned_count": 3,
+      "existing_panel_count": 3,
+      "root_cause": "UNDER_SEGMENTED_PANEL",
+      "simulation": {
+        "page_order": 15,
+        "unassigned_region_count": 3,
+        "enclosing_bbox": [
+          110.0,
+          122.0,
+          738.0,
+          535.0
+        ],
+        "normalized_enclosing_bbox": [
+          0.0953,
+          0.1222,
+          0.418,
+          0.82
+        ],
+        "existing_panel_count": 3,
+        "overlap_conflicts": [],
+        "has_geometric_conflict": false,
+        "vertical_gap_to_nearest_panel": 75.0,
+        "horizontal_gap_to_nearest_panel": 0.0,
+        "synthesis_feasibility": "CLEAN_COMPLEMENTARY_SEPARATION"
+      },
+      "regions": [
+        {
+          "region_id": "LR_dfef3de3ed48",
+          "page_order": 15,
+          "raw_bbox": [
+            626.0,
+            122.0,
+            738.0,
+            266.0
+          ],
+          "normalized_coords": [
+            0.0953,
+            0.6956,
+            0.2078,
+            0.82
+          ],
+          "nearest_panel_id": "PN_cf3c6e8976b9",
+          "min_euclidean_distance": 344.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 344.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_35d30a3b10e1",
+          "page_order": 15,
+          "raw_bbox": [
+            453.0,
+            176.0,
+            591.0,
+            312.0
+          ],
+          "normalized_coords": [
+            0.1375,
+            0.5033,
+            0.2437,
+            0.6567
+          ],
+          "nearest_panel_id": "PN_cf3c6e8976b9",
+          "min_euclidean_distance": 298.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 298.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        },
+        {
+          "region_id": "LR_9636706b4855",
+          "page_order": 15,
+          "raw_bbox": [
+            110.0,
+            359.0,
+            236.0,
+            535.0
+          ],
+          "normalized_coords": [
+            0.2805,
+            0.1222,
+            0.418,
+            0.2622
+          ],
+          "nearest_panel_id": "PN_cf3c6e8976b9",
+          "min_euclidean_distance": 75.0,
+          "min_axis_gap_x": 0.0,
+          "min_axis_gap_y": 75.0,
+          "overlap_with_nearest_panel": 0.0,
+          "root_cause_category": "UNDER_SEGMENTED_PANEL",
+          "root_cause_reason": "Panel boundary contour missed or conflicted during upstream extraction"
+        }
+      ]
+    }
+  ],
+  "gt_runtime_features": [],
+  "diagnostic_audit_sha256": "ed58799531b5b70b5963c6c5f43828107755355f568a4f8f0958c8dcd536b36c"
+}
