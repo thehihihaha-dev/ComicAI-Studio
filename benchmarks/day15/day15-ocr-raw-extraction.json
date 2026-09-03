@@ -1,0 +1,1348 @@
+{
+  "schema_version": "day15_ocr_raw_extraction.v1",
+  "summary": {
+    "pipeline_stage": "DAY15_PHASE1_OCR_EXTRACTION",
+    "benchmark_pages_processed": 10,
+    "total_crops_generated": 50,
+    "expected_crops": 50,
+    "crop_completion_rate": "100.0%",
+    "total_characters": 1801,
+    "total_words": 418,
+    "reading_order_frozen_parity": true,
+    "deterministic_padding_px": 4,
+    "ocr_adapter_backend": "surrogate"
+  },
+  "pages": [
+    {
+      "page_order": 1,
+      "source_path": "backend/uploads/92961605-5553-4df1-b74e-9a3bed5e14f5_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-2.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 4,
+      "reading_sequence": [
+        "LR_615c8d24c678",
+        "LR_086859ae76f4",
+        "LR_28e2fc3b47b8",
+        "LR_2284efd8ada7"
+      ],
+      "dialogues": [
+        {
+          "page_order": 1,
+          "reading_order_index": 1,
+          "region_id": "LR_615c8d24c678",
+          "bbox": [
+            638.0,
+            180.0,
+            692.0,
+            212.0
+          ],
+          "crop_coords": {
+            "x1": 634,
+            "y1": 176,
+            "x2": 696,
+            "y2": 216,
+            "width": 62,
+            "height": 40
+          },
+          "crop_sha256": "e11cd70ecd2743cb6905cd10920bda2c6cbdeb8f6e5fbc18bff99459fdfc56b7",
+          "transcription": "RIN",
+          "char_count": 3,
+          "word_count": 1
+        },
+        {
+          "page_order": 1,
+          "reading_order_index": 2,
+          "region_id": "LR_086859ae76f4",
+          "bbox": [
+            460.0,
+            173.0,
+            560.0,
+            276.0
+          ],
+          "crop_coords": {
+            "x1": 456,
+            "y1": 169,
+            "x2": 564,
+            "y2": 280,
+            "width": 108,
+            "height": 111
+          },
+          "crop_sha256": "188819258a16892ca3e42ad38c9f83b8c8a42b049bf5fd15937fcb515b571dc0",
+          "transcription": "CHO Dù LÀ LúC ỐM ĐAU HAY BỆNH TẬT",
+          "char_count": 33,
+          "word_count": 9
+        },
+        {
+          "page_order": 1,
+          "reading_order_index": 3,
+          "region_id": "LR_28e2fc3b47b8",
+          "bbox": [
+            142.0,
+            374.0,
+            262.0,
+            508.0
+          ],
+          "crop_coords": {
+            "x1": 138,
+            "y1": 370,
+            "x2": 266,
+            "y2": 512,
+            "width": 128,
+            "height": 142
+          },
+          "crop_sha256": "832d45cef9d2d25399f336e6ce92b2ffd38c165e606b58cebda61c2f0d32032c",
+          "transcription": "THÌ CON CÓ CHẤP NHẬN THỀ NeuYỆN YÊL vÀ LAM VỢ CUA KAZU SHỐT ĐỜI KHÔNG?",
+          "char_count": 70,
+          "word_count": 16
+        },
+        {
+          "page_order": 1,
+          "reading_order_index": 4,
+          "region_id": "LR_2284efd8ada7",
+          "bbox": [
+            157.0,
+            805.0,
+            237.0,
+            961.0
+          ],
+          "crop_coords": {
+            "x1": 153,
+            "y1": 801,
+            "x2": 241,
+            "y2": 965,
+            "width": 88,
+            "height": 164
+          },
+          "crop_sha256": "7f7f24733bc1cf3fefe82d56349455b84fa5c1695791491ccdc50a280db68208",
+          "transcription": "Con XIN THỀ!",
+          "char_count": 12,
+          "word_count": 3
+        }
+      ]
+    },
+    {
+      "page_order": 2,
+      "source_path": "backend/uploads/33c28b2d-f096-4025-b6b7-7a3c8c7ba1df_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-4.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 2,
+      "reading_sequence": [
+        "LR_ef4ab22072a8",
+        "LR_a77493ec9ff9"
+      ],
+      "dialogues": [
+        {
+          "page_order": 2,
+          "reading_order_index": 1,
+          "region_id": "LR_ef4ab22072a8",
+          "bbox": [
+            155.0,
+            205.0,
+            241.0,
+            321.0
+          ],
+          "crop_coords": {
+            "x1": 151,
+            "y1": 201,
+            "x2": 245,
+            "y2": 325,
+            "width": 94,
+            "height": 124
+          },
+          "crop_sha256": "f2a708cfea109e38d294b7d9b7eadabc5992543ea202502d2c81228b7754d189",
+          "transcription": "TÔI ĐÃ KẾT HÔN",
+          "char_count": 14,
+          "word_count": 4
+        },
+        {
+          "page_order": 2,
+          "reading_order_index": 2,
+          "region_id": "LR_a77493ec9ff9",
+          "bbox": [
+            658.0,
+            744.0,
+            738.0,
+            814.0
+          ],
+          "crop_coords": {
+            "x1": 654,
+            "y1": 740,
+            "x2": 742,
+            "y2": 818,
+            "width": 88,
+            "height": 78
+          },
+          "crop_sha256": "b497c8fe02f940ee81b3e60bd874ca9cd34e0d2cb3f235a7493246a9b89a88cf",
+          "transcription": "TRONG GAME",
+          "char_count": 10,
+          "word_count": 2
+        }
+      ]
+    },
+    {
+      "page_order": 3,
+      "source_path": "backend/uploads/ab627e40-5851-4a6e-9e7a-03d3968087cb_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-5.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 6,
+      "reading_sequence": [
+        "LR_708761617ca5",
+        "LR_6847589abd58",
+        "LR_1b80a3ba7eba",
+        "LR_301b7ed055be",
+        "LR_016a11675840",
+        "LR_38a547aad429"
+      ],
+      "dialogues": [
+        {
+          "page_order": 3,
+          "reading_order_index": 1,
+          "region_id": "LR_708761617ca5",
+          "bbox": [
+            691.0,
+            147.0,
+            789.0,
+            255.0
+          ],
+          "crop_coords": {
+            "x1": 687,
+            "y1": 143,
+            "x2": 793,
+            "y2": 259,
+            "width": 106,
+            "height": 116
+          },
+          "crop_sha256": "392002a95fe622d74a69ee0e2836ea7b01e8de7c1de5bdc1606b395a287dd4bd",
+          "transcription": "HÁC BINH NGUYÊN",
+          "char_count": 15,
+          "word_count": 3
+        },
+        {
+          "page_order": 3,
+          "reading_order_index": 2,
+          "region_id": "LR_6847589abd58",
+          "bbox": [
+            163.0,
+            205.0,
+            295.0,
+            379.0
+          ],
+          "crop_coords": {
+            "x1": 159,
+            "y1": 201,
+            "x2": 299,
+            "y2": 383,
+            "width": 140,
+            "height": 182
+          },
+          "crop_sha256": "33f77cd701788966a8f1df02730e43e1f0093b461b5dcf739b5e335774820f73",
+          "transcription": "LÀ MỘT GAME MMO THẾ GIÓI MỎ VÓI ĐỔ HOẠ CHÂN THỰC",
+          "char_count": 48,
+          "word_count": 12
+        },
+        {
+          "page_order": 3,
+          "reading_order_index": 3,
+          "region_id": "LR_1b80a3ba7eba",
+          "bbox": [
+            647.0,
+            579.0,
+            779.0,
+            792.0
+          ],
+          "crop_coords": {
+            "x1": 643,
+            "y1": 575,
+            "x2": 783,
+            "y2": 796,
+            "width": 140,
+            "height": 221
+          },
+          "crop_sha256": "cc496d1eff2badf89f7d0e6bda89e32b8e010b2949531a7076f8e8aeea521be5",
+          "transcription": "MỘT CON GAME TUYỆT VỜI NỔI MỌI NGUồI CÓ THỂ] TẬN HƯỞNG NHẬP VAI TÙY THÍCH",
+          "char_count": 73,
+          "word_count": 16
+        },
+        {
+          "page_order": 3,
+          "reading_order_index": 4,
+          "region_id": "LR_301b7ed055be",
+          "bbox": [
+            514.0,
+            906.0,
+            815.853376071303,
+            1061.9302301859036
+          ],
+          "crop_coords": {
+            "x1": 510,
+            "y1": 902,
+            "x2": 820,
+            "y2": 1066,
+            "width": 310,
+            "height": 164
+          },
+          "crop_sha256": "0a03a14811dd86df1b7928a156aef843a16c0f7b385502d84eb36999cc2c7557",
+          "transcription": "Đã mỉ được thành tựu trang phục [Vét đuâi tôm] 702",
+          "char_count": 50,
+          "word_count": 11
+        },
+        {
+          "page_order": 3,
+          "reading_order_index": 5,
+          "region_id": "LR_016a11675840",
+          "bbox": [
+            328.0,
+            962.0,
+            420.0,
+            1058.0
+          ],
+          "crop_coords": {
+            "x1": 324,
+            "y1": 958,
+            "x2": 424,
+            "y2": 1062,
+            "width": 100,
+            "height": 104
+          },
+          "crop_sha256": "1665a0656cc730820b7cbc3872ffebd6066c11001d159997f0d316aeed98cf47",
+          "transcription": "ĐÃ ĐẠT ĐUỢC #ẶC QUYỄN KẾT HÔN RỒl",
+          "char_count": 33,
+          "word_count": 8
+        },
+        {
+          "page_order": 3,
+          "reading_order_index": 6,
+          "region_id": "LR_38a547aad429",
+          "bbox": [
+            213.0,
+            1091.0,
+            251.0,
+            1123.0
+          ],
+          "crop_coords": {
+            "x1": 209,
+            "y1": 1087,
+            "x2": 255,
+            "y2": 1127,
+            "width": 46,
+            "height": 40
+          },
+          "crop_sha256": "a72ebdf49db09dbf029e8402bf5a5311824bc7fb4db01e1054e7f3228bed1349",
+          "transcription": "KAZL NAY",
+          "char_count": 8,
+          "word_count": 2
+        }
+      ]
+    },
+    {
+      "page_order": 4,
+      "source_path": "backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 4,
+      "reading_sequence": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "dialogues": [
+        {
+          "page_order": 4,
+          "reading_order_index": 1,
+          "region_id": "LR_a4e0fdad0903",
+          "bbox": [
+            128.0,
+            427.0,
+            246.0,
+            531.0
+          ],
+          "crop_coords": {
+            "x1": 124,
+            "y1": 423,
+            "x2": 250,
+            "y2": 535,
+            "width": 126,
+            "height": 112
+          },
+          "crop_sha256": "799969dbae5033da6a35a48d6c6c8cdca355f73e87018cf97962674e57241cad",
+          "transcription": "HÃY CÙNg NHAU HANH PHÚC NHÉ!",
+          "char_count": 28,
+          "word_count": 6
+        },
+        {
+          "page_order": 4,
+          "reading_order_index": 2,
+          "region_id": "LR_ec9604a02d80",
+          "bbox": [
+            752.0,
+            812.0,
+            786.0,
+            836.0
+          ],
+          "crop_coords": {
+            "x1": 748,
+            "y1": 808,
+            "x2": 790,
+            "y2": 840,
+            "width": 42,
+            "height": 32
+          },
+          "crop_sha256": "d3bcfc27a63ce853dbf7ba9bbbef27a845e65a571cc70540f6f8966f1163e0e4",
+          "transcription": "AH",
+          "char_count": 2,
+          "word_count": 1
+        },
+        {
+          "page_order": 4,
+          "reading_order_index": 3,
+          "region_id": "LR_d8230ac855ba",
+          "bbox": [
+            596.0,
+            822.0,
+            690.0,
+            932.0
+          ],
+          "crop_coords": {
+            "x1": 592,
+            "y1": 818,
+            "x2": 694,
+            "y2": 936,
+            "width": 102,
+            "height": 118
+          },
+          "crop_sha256": "aaeb1551aabc9ce64c09e3ec414adc42741d06f017355a2f143bfd2b377af7f3",
+          "transcription": "Anh CHỈ BIÊT NÓl \"AH\"\" THÔl SAO!?",
+          "char_count": 33,
+          "word_count": 7
+        },
+        {
+          "page_order": 4,
+          "reading_order_index": 4,
+          "region_id": "LR_d403d992f246",
+          "bbox": [
+            396.0,
+            804.0,
+            500.0,
+            972.0
+          ],
+          "crop_coords": {
+            "x1": 392,
+            "y1": 800,
+            "x2": 504,
+            "y2": 976,
+            "width": 112,
+            "height": 176
+          },
+          "crop_sha256": "31758c83c542a415a089a618ba384ac9fca54895fe0b62f59301e45f51fe13b6",
+          "transcription": "cô GÁl TÓC VÀNG VỔI DÁNG VẺ TĂNG ĐỘNG NÀY TÊN LÀ \"RIN\"",
+          "char_count": 54,
+          "word_count": 13
+        }
+      ]
+    },
+    {
+      "page_order": 5,
+      "source_path": "backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 8,
+      "reading_sequence": [
+        "LR_f27fb5ffabf9",
+        "LR_1dfca31c24d7",
+        "LR_26795b95ef26",
+        "LR_d9caab3d7c4a",
+        "LR_a0587957c904",
+        "LR_b71bcd7a275c",
+        "LR_7ee4baf217d7",
+        "LR_bf3e79736d0c"
+      ],
+      "dialogues": [
+        {
+          "page_order": 5,
+          "reading_order_index": 1,
+          "region_id": "LR_f27fb5ffabf9",
+          "bbox": [
+            667.0,
+            172.0,
+            766.0,
+            296.0
+          ],
+          "crop_coords": {
+            "x1": 663,
+            "y1": 168,
+            "x2": 770,
+            "y2": 300,
+            "width": 107,
+            "height": 132
+          },
+          "crop_sha256": "fb889e9d6f39848e57daaf9bf5b0ea1e4a459d1c06dee2390f24592dda032399",
+          "transcription": "LẨN GẶP Gỡ ĐÂU TIÊN CỦA CHÚNG TÔ1 LÀ VÀo 4 NĂM TRUớc _",
+          "char_count": 54,
+          "word_count": 14
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 2,
+          "region_id": "LR_1dfca31c24d7",
+          "bbox": [
+            639.0,
+            412.0,
+            701.0,
+            457.0
+          ],
+          "crop_coords": {
+            "x1": 635,
+            "y1": 408,
+            "x2": 705,
+            "y2": 461,
+            "width": 70,
+            "height": 53
+          },
+          "crop_sha256": "d0f70f85dcb25c103b0e69639d0ca3bcdb704b7823bd0048ad33586dd740b1c0",
+          "transcription": "Mìnb là Rin",
+          "char_count": 11,
+          "word_count": 3
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 3,
+          "region_id": "LR_26795b95ef26",
+          "bbox": [
+            138.0,
+            389.0,
+            246.0,
+            500.0
+          ],
+          "crop_coords": {
+            "x1": 134,
+            "y1": 385,
+            "x2": 250,
+            "y2": 504,
+            "width": 116,
+            "height": 119
+          },
+          "crop_sha256": "39b6877d3c707d49fedd53e3136465e1052de99725b7a536aa7263fe3c4ccba4",
+          "transcription": "Mìnb là nGười chơi mới nên mone cậu Giúp đỡ!",
+          "char_count": 44,
+          "word_count": 10
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 4,
+          "region_id": "LR_d9caab3d7c4a",
+          "bbox": [
+            642.0,
+            702.0,
+            788.0,
+            840.0
+          ],
+          "crop_coords": {
+            "x1": 638,
+            "y1": 698,
+            "x2": 792,
+            "y2": 844,
+            "width": 154,
+            "height": 146
+          },
+          "crop_sha256": "fceb06a29ce4b0d3796bc35552e6e4840c69cbed8ace5eba0a2649a2c7d01c92",
+          "transcription": "RIN ĐUBC GHÉP THÀNH CặP NGẨU NHIÊN VÓI Tôl TRONG MỘT TRẬN ẤU Ỏ DUNGEON",
+          "char_count": 70,
+          "word_count": 15
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 5,
+          "region_id": "LR_a0587957c904",
+          "bbox": [
+            288.0,
+            672.0,
+            402.0,
+            822.0
+          ],
+          "crop_coords": {
+            "x1": 284,
+            "y1": 668,
+            "x2": 406,
+            "y2": 826,
+            "width": 122,
+            "height": 158
+          },
+          "crop_sha256": "44ef93eff886090d42999b0e1c3a6b5990bc6cb9038f860104681544665f4561",
+          "transcription": "VÀ Tôl ĐÃ CHỈ BẢO CHo newbie RIN CÁCH CHỔl GAME VÀ TÙ ĐÓ MỐl QUAN HỆ CỦA CHÚNG TôI BẮT ĐẤU.",
+          "char_count": 91,
+          "word_count": 22
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 6,
+          "region_id": "LR_b71bcd7a275c",
+          "bbox": [
+            122.0,
+            765.0,
+            233.0,
+            903.0
+          ],
+          "crop_coords": {
+            "x1": 118,
+            "y1": 761,
+            "x2": 237,
+            "y2": 907,
+            "width": 119,
+            "height": 146
+          },
+          "crop_sha256": "0eba5ef5a3be5025c246fe1f189bb1ed8be6889f54af5473521ce91b85cfc7ac",
+          "transcription": "THÔNG QUA VIỆC GẶp NHAU THUỜNG XUYÊN THÌ SỰ GẮN KẾT CỦA CHÚNG Tôl ĐÃ TĂNG LÊN TUNG CHÚT, TÙNG CHÚT MỘT",
+          "char_count": 102,
+          "word_count": 22
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 7,
+          "region_id": "LR_7ee4baf217d7",
+          "bbox": [
+            366.0,
+            924.0,
+            428.0,
+            985.0
+          ],
+          "crop_coords": {
+            "x1": 362,
+            "y1": 920,
+            "x2": 432,
+            "y2": 989,
+            "width": 70,
+            "height": 69
+          },
+          "crop_sha256": "d5dc58ce7b733ad0a5cbae69a9a46ef43dc2dff536c854f9e66d5215de9d4d50",
+          "transcription": "Ha #êp #ên cút ~al",
+          "char_count": 18,
+          "word_count": 5
+        },
+        {
+          "page_order": 5,
+          "reading_order_index": 8,
+          "region_id": "LR_bf3e79736d0c",
+          "bbox": [
+            197.0,
+            922.0,
+            246.0,
+            967.0
+          ],
+          "crop_coords": {
+            "x1": 193,
+            "y1": 918,
+            "x2": 250,
+            "y2": 971,
+            "width": 57,
+            "height": 53
+          },
+          "crop_sha256": "4f3434a3fc8326a0ea5cc1a14159d6c7832de42ab3f4e363ec1773c150dad8d3",
+          "transcription": "Hôy",
+          "char_count": 3,
+          "word_count": 1
+        }
+      ]
+    },
+    {
+      "page_order": 7,
+      "source_path": "backend/uploads/a3c72490-a7b2-402a-88c9-8cc874cab45f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-10.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 2,
+      "reading_sequence": [
+        "LR_5facc1321e92",
+        "LR_5787cb8d10ad"
+      ],
+      "dialogues": [
+        {
+          "page_order": 7,
+          "reading_order_index": 1,
+          "region_id": "LR_5facc1321e92",
+          "bbox": [
+            412.0,
+            936.0,
+            518.0,
+            990.0
+          ],
+          "crop_coords": {
+            "x1": 408,
+            "y1": 932,
+            "x2": 522,
+            "y2": 994,
+            "width": 114,
+            "height": 62
+          },
+          "crop_sha256": "4be2fe8895fdfbf045797122702435da9ca00a9772fef53a0bf6ffed15a938df",
+          "transcription": "VÂnG!",
+          "char_count": 5,
+          "word_count": 1
+        },
+        {
+          "page_order": 7,
+          "reading_order_index": 2,
+          "region_id": "LR_5787cb8d10ad",
+          "bbox": [
+            139.0,
+            953.0,
+            247.0,
+            1072.0
+          ],
+          "crop_coords": {
+            "x1": 135,
+            "y1": 949,
+            "x2": 251,
+            "y2": 1076,
+            "width": 116,
+            "height": 127
+          },
+          "crop_sha256": "d45b0773f0fdbcc63f92cf1674365c0be3f6fd6794760fa900f7075d5ac45291",
+          "transcription": "CÚ NHU VẬY CHÚNG Tôl ĐÃ KẾT HÔN VÓl NHAU",
+          "char_count": 40,
+          "word_count": 10
+        }
+      ]
+    },
+    {
+      "page_order": 15,
+      "source_path": "backend/uploads/16c906e1-b4b0-426c-ba4a-3d17e6fa4042_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-18.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 8,
+      "reading_sequence": [
+        "LR_dfef3de3ed48",
+        "LR_35d30a3b10e1",
+        "LR_9636706b4855",
+        "LR_f6dbfc4d4913",
+        "LR_bf3e65667bd9",
+        "LR_0856a888b8df",
+        "LR_5bdd1160b3a0",
+        "LR_f3054b9c1820"
+      ],
+      "dialogues": [
+        {
+          "page_order": 15,
+          "reading_order_index": 1,
+          "region_id": "LR_dfef3de3ed48",
+          "bbox": [
+            626.0,
+            122.0,
+            738.0,
+            266.0
+          ],
+          "crop_coords": {
+            "x1": 622,
+            "y1": 118,
+            "x2": 742,
+            "y2": 270,
+            "width": 120,
+            "height": 152
+          },
+          "crop_sha256": "913b3353770dca06c93c299cf7d11bc36de8f8ca68c3def86d7d2ff959d63bd2",
+          "transcription": "NHLNG MÀ TỚ LẠI cÓ PHẦN THẤY KHÔNC THÍCH MIZUKI-SAN CHO LÉM,",
+          "char_count": 60,
+          "word_count": 12
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 2,
+          "region_id": "LR_35d30a3b10e1",
+          "bbox": [
+            453.0,
+            176.0,
+            591.0,
+            312.0
+          ],
+          "crop_coords": {
+            "x1": 449,
+            "y1": 172,
+            "x2": 595,
+            "y2": 316,
+            "width": 146,
+            "height": 144
+          },
+          "crop_sha256": "5a7a5b659e127286bef1bc21bcee2db88647ac36d25bb57deeadbe87a68a2884",
+          "transcription": "ĐẾN MỘT CHỘC TRÒ CHUYỆN TẤT YẾU CING KHÔNG có, BlỂL CẢM CZNG KHÔNG THAY ĐỔl",
+          "char_count": 75,
+          "word_count": 16
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 3,
+          "region_id": "LR_9636706b4855",
+          "bbox": [
+            110.0,
+            359.0,
+            236.0,
+            535.0
+          ],
+          "crop_coords": {
+            "x1": 106,
+            "y1": 355,
+            "x2": 240,
+            "y2": 539,
+            "width": 134,
+            "height": 184
+          },
+          "crop_sha256": "8cf568f6eb41f3b0fb27362c1e53460a20d5e14effd47d52edbf0fa77470f22a",
+          "transcription": "CÁC CẬL KHÔNG CẢM THẤY Sự LANH LÙNG ẤY LÀ HƠI QUÁ ĐẾN MÚC LẠNH NHAT LHÔN RỔI SAO?",
+          "char_count": 81,
+          "word_count": 19
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 4,
+          "region_id": "LR_f6dbfc4d4913",
+          "bbox": [
+            658.0,
+            674.0,
+            786.0,
+            829.0
+          ],
+          "crop_coords": {
+            "x1": 654,
+            "y1": 670,
+            "x2": 790,
+            "y2": 833,
+            "width": 136,
+            "height": 163
+          },
+          "crop_sha256": "85eda0da8c36ef5e08ce1a5e622762815fc429d7984c0ad55bfed5f0978e0bec",
+          "transcription": "À THÌ ĐÚNG CẬU ẤY KHÔNG PHAI LA NHMN VẬT MÀ MÌNH CÓ THỂ NÓl CHHYỆN MỘT CÁCH THOẢI MÁI HA",
+          "char_count": 88,
+          "word_count": 21
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 5,
+          "region_id": "LR_bf3e65667bd9",
+          "bbox": [
+            155.0,
+            689.0,
+            271.0,
+            819.0
+          ],
+          "crop_coords": {
+            "x1": 151,
+            "y1": 685,
+            "x2": 275,
+            "y2": 823,
+            "width": 124,
+            "height": 138
+          },
+          "crop_sha256": "fe0c195281a966f16ba0bc781a9ac92b85a254283db67d81e1ad16eeb3f329cf",
+          "transcription": "ỬM, CHUNG TA CHỈ CÓ THỂ CHIEM NCƯỠNG MIZLKI-SAN TỪ XA LÀ ĐưỢC RỒI",
+          "char_count": 65,
+          "word_count": 14
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 6,
+          "region_id": "LR_0856a888b8df",
+          "bbox": [
+            658.0,
+            974.0,
+            794.0,
+            1110.0
+          ],
+          "crop_coords": {
+            "x1": 654,
+            "y1": 970,
+            "x2": 798,
+            "y2": 1114,
+            "width": 144,
+            "height": 144
+          },
+          "crop_sha256": "195618c17f6c139843ee9b3b7bc3374ea62fe9e3f2487fdf73f77efc148d24be",
+          "transcription": "MÀ TÓ CặNG ĐÃ ĐẶT HÀNG ALBUM PHIÊN BẢN GlỚI HẠN NGAY TẮP Lự LLỒN RồI!",
+          "char_count": 69,
+          "word_count": 16
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 7,
+          "region_id": "LR_5bdd1160b3a0",
+          "bbox": [
+            294.0,
+            1016.0,
+            405.0,
+            1138.0
+          ],
+          "crop_coords": {
+            "x1": 290,
+            "y1": 1012,
+            "x2": 409,
+            "y2": 1142,
+            "width": 119,
+            "height": 130
+          },
+          "crop_sha256": "b01dd22d4bb56cc3103d728754eb96f4a557c055fa30952e586428a9ca62b33e",
+          "transcription": "NẾU LÀ MĨNH THÌ SẼ NẠP TlỄN VÀO GaME RồI HA",
+          "char_count": 43,
+          "word_count": 11
+        },
+        {
+          "page_order": 15,
+          "reading_order_index": 8,
+          "region_id": "LR_f3054b9c1820",
+          "bbox": [
+            120.0,
+            940.0,
+            204.0,
+            992.0
+          ],
+          "crop_coords": {
+            "x1": 116,
+            "y1": 936,
+            "x2": 208,
+            "y2": 996,
+            "width": 92,
+            "height": 60
+          },
+          "crop_sha256": "8ee6391d131afa1957d6317fc98c1938642b083e55be724395e15ac9621d7e17",
+          "transcription": "PÍP!",
+          "char_count": 4,
+          "word_count": 1
+        }
+      ]
+    },
+    {
+      "page_order": 17,
+      "source_path": "backend/uploads/cba300d5-a276-4bfc-a7bb-ad6476920041_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-20.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 7,
+      "reading_sequence": [
+        "LR_554cd55f1a6a",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "dialogues": [
+        {
+          "page_order": 17,
+          "reading_order_index": 1,
+          "region_id": "LR_554cd55f1a6a",
+          "bbox": [
+            699.0,
+            199.0,
+            798.0,
+            279.0
+          ],
+          "crop_coords": {
+            "x1": 695,
+            "y1": 195,
+            "x2": 802,
+            "y2": 283,
+            "width": 107,
+            "height": 88
+          },
+          "crop_sha256": "c4c9bbd88fe23e35dd288ed34ed6549521144d325a74882f47d9ccc04fa2561c",
+          "transcription": "CHÁC TÌM VAY HIỂL THÔNG 'vỀ Sự KIỆN TIN MỚl THÔL\"",
+          "char_count": 49,
+          "word_count": 11
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 2,
+          "region_id": "LR_8a526b453c10",
+          "bbox": [
+            442.0,
+            182.0,
+            488.0,
+            210.0
+          ],
+          "crop_coords": {
+            "x1": 438,
+            "y1": 178,
+            "x2": 492,
+            "y2": 214,
+            "width": 54,
+            "height": 36
+          },
+          "crop_sha256": "dc3fdc7ef57b18514be6f8e9ef84df1a11a4ca91288eb851f11e88f891d5a757",
+          "transcription": "HỬ?",
+          "char_count": 3,
+          "word_count": 1
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 3,
+          "region_id": "LR_0c630f218964",
+          "bbox": [
+            257.0,
+            218.0,
+            423.0,
+            280.0
+          ],
+          "crop_coords": {
+            "x1": 253,
+            "y1": 214,
+            "x2": 427,
+            "y2": 284,
+            "width": 174,
+            "height": 70
+          },
+          "crop_sha256": "f6224e346e1898ce188bb6635c8b3b0d609ac5050b660da8757334fbb01a5d58",
+          "transcription": "Cậpnhật tin túc Hắc Bình Nguyên",
+          "char_count": 31,
+          "word_count": 6
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 4,
+          "region_id": "LR_de7b43ae45f7",
+          "bbox": [
+            92.0,
+            328.0,
+            242.0,
+            426.0
+          ],
+          "crop_coords": {
+            "x1": 88,
+            "y1": 324,
+            "x2": 246,
+            "y2": 430,
+            "width": 158,
+            "height": 106
+          },
+          "crop_sha256": "8b0602f9c7472ae027310827fb64c45fd4a866b6bb106dd08740b267ffa99dcc",
+          "transcription": "LÚC SÁNG NAY MẤY ĐÚA TRONG LỚP CặNG ĐĂ NÓI VỀ CÁl NÀY.",
+          "char_count": 54,
+          "word_count": 13
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 5,
+          "region_id": "LR_0523c7b7b258",
+          "bbox": [
+            716.0,
+            580.0,
+            794.0,
+            647.0
+          ],
+          "crop_coords": {
+            "x1": 712,
+            "y1": 576,
+            "x2": 798,
+            "y2": 651,
+            "width": 86,
+            "height": 75
+          },
+          "crop_sha256": "da36cf34424140f1c15c5d9f3a230a07d2543f5034698bd795ca5fb5ab6db599",
+          "transcription": "CũNG CÒN THÒI GIAN",
+          "char_count": 18,
+          "word_count": 4
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 6,
+          "region_id": "LR_952c7eac9aef",
+          "bbox": [
+            99.0,
+            551.0,
+            217.0,
+            676.0
+          ],
+          "crop_coords": {
+            "x1": 95,
+            "y1": 547,
+            "x2": 221,
+            "y2": 680,
+            "width": 126,
+            "height": 133
+          },
+          "crop_sha256": "ba01285d28fe19b947a20001cedb997ea67eea09826c65499250d00604495531",
+          "transcription": "CHẮC LÀ NGHE THử MỘT LẪN XEM SAO",
+          "char_count": 32,
+          "word_count": 8
+        },
+        {
+          "page_order": 17,
+          "reading_order_index": 7,
+          "region_id": "LR_11117a0bc73a",
+          "bbox": [
+            90.0,
+            1124.0,
+            138.0,
+            1150.0
+          ],
+          "crop_coords": {
+            "x1": 86,
+            "y1": 1120,
+            "x2": 142,
+            "y2": 1154,
+            "width": 56,
+            "height": 34
+          },
+          "crop_sha256": "736e3b6f0e5006c4f83225f5050f1a095dcff1d66f3d830a3917814c074a7ac3",
+          "transcription": "À RẾ",
+          "char_count": 4,
+          "word_count": 2
+        }
+      ]
+    },
+    {
+      "page_order": 18,
+      "source_path": "backend/uploads/d997ac05-6017-4a9c-b5d6-49e065dd9f2d_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-21.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 3,
+      "reading_sequence": [
+        "LR_aac2ef08be0e",
+        "LR_77b6cc0407da",
+        "LR_1c3c89ee5ac1"
+      ],
+      "dialogues": [
+        {
+          "page_order": 18,
+          "reading_order_index": 1,
+          "region_id": "LR_aac2ef08be0e",
+          "bbox": [
+            722.0,
+            178.0,
+            764.0,
+            236.0
+          ],
+          "crop_coords": {
+            "x1": 718,
+            "y1": 174,
+            "x2": 768,
+            "y2": 240,
+            "width": 50,
+            "height": 66
+          },
+          "crop_sha256": "a4f5a6f29ce0651de5db44dd8fb973170d4e67592a5027f22f5992c84dafe33b",
+          "transcription": "SAO LẠl",
+          "char_count": 7,
+          "word_count": 2
+        },
+        {
+          "page_order": 18,
+          "reading_order_index": 2,
+          "region_id": "LR_77b6cc0407da",
+          "bbox": [
+            120.0,
+            298.0,
+            216.0,
+            382.0
+          ],
+          "crop_coords": {
+            "x1": 116,
+            "y1": 294,
+            "x2": 220,
+            "y2": 386,
+            "width": 104,
+            "height": 92
+          },
+          "crop_sha256": "1ccfe3897970b542328d79d9fd6cb54a121dc18d69a8b7fc9134cc2a56bfbbc7",
+          "transcription": "CÒN HỔN NHŨNG GÌ MÌNH NGHĨ.",
+          "char_count": 27,
+          "word_count": 6
+        },
+        {
+          "page_order": 18,
+          "reading_order_index": 3,
+          "region_id": "LR_1c3c89ee5ac1",
+          "bbox": [
+            161.0,
+            671.0,
+            265.0,
+            709.0
+          ],
+          "crop_coords": {
+            "x1": 157,
+            "y1": 667,
+            "x2": 269,
+            "y2": 713,
+            "width": 112,
+            "height": 46
+          },
+          "crop_sha256": "53cc10ce23dd2b867385b2c3e43efcdcba6719a3e207cdb12156ed4731cedfe4",
+          "transcription": "HAY QUÁ.",
+          "char_count": 8,
+          "word_count": 2
+        }
+      ]
+    },
+    {
+      "page_order": 38,
+      "source_path": "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "dialogue_count": 6,
+      "reading_sequence": [
+        "LR_ac01f1796688",
+        "LR_2da60c343d36",
+        "LR_2010e3d36608",
+        "LR_5cb918f74103",
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "dialogues": [
+        {
+          "page_order": 38,
+          "reading_order_index": 1,
+          "region_id": "LR_ac01f1796688",
+          "bbox": [
+            474.0,
+            180.0,
+            548.0,
+            284.0
+          ],
+          "crop_coords": {
+            "x1": 470,
+            "y1": 176,
+            "x2": 552,
+            "y2": 288,
+            "width": 82,
+            "height": 112
+          },
+          "crop_sha256": "552487b176ca552ef8f69ac9f082a55a5e2aef34aab4e4c5e616ccc00abd6682",
+          "transcription": "XÁC NHÂN BÀ LUÔN Rồl",
+          "char_count": 20,
+          "word_count": 5
+        },
+        {
+          "page_order": 38,
+          "reading_order_index": 2,
+          "region_id": "LR_2da60c343d36",
+          "bbox": [
+            682.0,
+            800.0,
+            764.0,
+            873.0
+          ],
+          "crop_coords": {
+            "x1": 678,
+            "y1": 796,
+            "x2": 768,
+            "y2": 877,
+            "width": 90,
+            "height": 81
+          },
+          "crop_sha256": "907c9c8db9bc3e6eb892abf432876af1d08e3c32852e91caa88a34d0bc3579b5",
+          "transcription": "THẰNG ẤT Ơ NÀO KIA_",
+          "char_count": 19,
+          "word_count": 5
+        },
+        {
+          "page_order": 38,
+          "reading_order_index": 3,
+          "region_id": "LR_2010e3d36608",
+          "bbox": [
+            467.0,
+            863.0,
+            521.0,
+            907.0
+          ],
+          "crop_coords": {
+            "x1": 463,
+            "y1": 859,
+            "x2": 525,
+            "y2": 911,
+            "width": 62,
+            "height": 52
+          },
+          "crop_sha256": "8b6c192c0d797d433429f8766c8455c95382b79b601ac160fc9cb4549e18156d",
+          "transcription": "Ghen VL.",
+          "char_count": 8,
+          "word_count": 2
+        },
+        {
+          "page_order": 38,
+          "reading_order_index": 4,
+          "region_id": "LR_5cb918f74103",
+          "bbox": [
+            710.0,
+            1027.0,
+            774.0,
+            1109.0
+          ],
+          "crop_coords": {
+            "x1": 706,
+            "y1": 1023,
+            "x2": 778,
+            "y2": 1113,
+            "width": 72,
+            "height": 90
+          },
+          "crop_sha256": "bb604f4cfe3133722c0fcad99257358147f4e11e114d593403fec1bc386218d1",
+          "transcription": "KHÔNG THÊ THA TH4 ĐLỢC..",
+          "char_count": 24,
+          "word_count": 5
+        },
+        {
+          "page_order": 38,
+          "reading_order_index": 5,
+          "region_id": "LR_505a871ebd18",
+          "bbox": [
+            390.0,
+            1071.0,
+            492.0,
+            1157.0
+          ],
+          "crop_coords": {
+            "x1": 386,
+            "y1": 1067,
+            "x2": 496,
+            "y2": 1161,
+            "width": 110,
+            "height": 94
+          },
+          "crop_sha256": "9d21667d61d075e465b9b5faebd017d2575b0ee49a554a1d44ddadd5cb90deb6",
+          "transcription": "MIZUKI-SAN ĂN CÙNG vÓ CON TRAI Sao!?",
+          "char_count": 36,
+          "word_count": 7
+        },
+        {
+          "page_order": 38,
+          "reading_order_index": 6,
+          "region_id": "LR_563eb986d1f9",
+          "bbox": [
+            234.0,
+            970.0,
+            334.0,
+            1105.0
+          ],
+          "crop_coords": {
+            "x1": 230,
+            "y1": 966,
+            "x2": 338,
+            "y2": 1109,
+            "width": 108,
+            "height": 143
+          },
+          "crop_sha256": "e6120b95da10d5aed0860e8b7052ba23b5e14d675629d05e72cfaefbefb24f88",
+          "transcription": "SAO MẤY NGLÒ XUNG QLANH cứ NHIN MỈNH CHẰM CHẰM VẬY .",
+          "char_count": 52,
+          "word_count": 12
+        }
+      ]
+    }
+  ],
+  "extraction_sha256": "af590ba9077bc03a16374f177a67bb7206d48621db63bc0f4776e94cfe24de2a"
+}

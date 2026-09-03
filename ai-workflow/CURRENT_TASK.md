@@ -1,21 +1,17 @@
-# Day 14 Closed — Awaiting Human Approval
+# Day 15 Closed — Awaiting Human Approval
 
-Day 14 completed all 3 phases:
-- Phase 1: Diagnostic Audit of Missing Panel Coverage (`src/pipeline/research/day14_diagnostics.py`).
-- Phase 2: Deterministic Complementary Panel Recovery Engine (`src/pipeline/research/day14_recovery.py`).
-- Phase 3: Dual-Solver for Dark-Gutter Bleed & Conflict De-escalation (`src/pipeline/research/day14_dualsolver.py`).
-- Benchmark Runner & Visualizer: Full Realistic Track with flow arrow visualization (`scripts/day14_benchmark_full.py`).
+Day 15 completed all 3 phases:
+- Phase 1: Deterministic Region Cropping & OCR Adapter Integration (`src/pipeline/research/day15_ocr.py`).
+- Phase 2: Text Post-Processing, Dictionary Repair & Structured Script Assembly (`src/pipeline/research/day15_cleaner.py`).
+- Phase 3: Validation Audit & Canonical Artifact Closure (`benchmarks/day15/dialogue_script.json`).
 
-Benchmark Result:
-- Exact Pages: 10/10 (100.0%)
-- Resolved Pages: 10/10 (100.0%)
-- Resolved Regions: 50/50 (100.0%)
-- Resolved Pairwise: 124/124 (100.0%)
-- Population Pair Coverage: 124/124 (100.0%)
-- Confident Inversions: 0 (Strict Invariant Preserved)
+Benchmark & Script Result:
+- Total Benchmark Pages: 10 / 10 (100.0%)
+- Total Speech Bubbles: 50 / 50 (100.0%)
+- Active Panels Mapped: 35 / 35 (0 Unassigned)
+- Optical OCR Cleaning Rate: 36 / 50 (72.0%)
+- Reading Order Inversions: 0 (Strict Invariant Preserved)
+- Unit Tests: 45 / 45 passed (0 regressions)
 
-Visual Artifacts:
-- Annotated images exported to `debug_visuals/day14/`.
-
-See `history/DAY_14_CLOSURE.md` (and `ai-workflow/history/DAY_14_CLOSURE.md`) for full retrospective and SHA-256 signatures.
+See `history/DAY_15_CLOSURE.md` (and `ai-workflow/history/DAY_15_CLOSURE.md`) for full retrospective and SHA-256 signatures.
 Workflow state: IDLE (Checkpoint: null). Next role: ARCHITECT (upon Human Approval).
