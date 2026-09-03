@@ -1,0 +1,72 @@
+{
+  "schema_version": "reading-order-synthetic.v1",
+  "checkpoint": "12.0",
+  "evidence_class": "SYNTHETIC",
+  "counted_as_human_gt": false,
+  "purpose": "Demonstrate non-transitive same-tier relation and unrelated-region bridge effect.",
+  "regions": [
+    {
+      "id": "A",
+      "bbox": [
+        0,
+        0,
+        30,
+        40
+      ]
+    },
+    {
+      "id": "B",
+      "bbox": [
+        40,
+        20,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "C",
+      "bbox": [
+        80,
+        40,
+        120,
+        80
+      ]
+    }
+  ],
+  "relations": {
+    "A_B_overlap": 0.5,
+    "B_C_overlap": 0.5,
+    "A_C_overlap": 0.0
+  },
+  "actual_frozen_with_bridge": {
+    "order": [
+      "C",
+      "B",
+      "A"
+    ],
+    "tiers": [
+      [
+        "C",
+        "B",
+        "A"
+      ]
+    ],
+    "ambiguous": []
+  },
+  "actual_frozen_without_bridge": {
+    "order": [
+      "A",
+      "C"
+    ],
+    "tiers": [
+      [
+        "A"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "ambiguous": []
+  },
+  "finding": "A~B and B~C but A!~C. With B, RTL in one bridged tier puts C before A; without B, separate top-to-bottom tiers put A before C."
+}

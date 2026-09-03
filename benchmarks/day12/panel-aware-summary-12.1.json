@@ -1,0 +1,114 @@
+{
+  "schema_version": "panel-aware-summary.v1",
+  "checkpoint": "12.1",
+  "panel_data_gate": "FAILED",
+  "candidate_implemented": false,
+  "candidate_evaluated": false,
+  "control_reproduction": {
+    "exact_pages": {
+      "correct": 7,
+      "total": 10,
+      "accuracy": 0.7
+    },
+    "exact_positions": {
+      "correct": 43,
+      "total": 50,
+      "accuracy": 0.86
+    },
+    "pairwise": {
+      "correct": 120,
+      "total": 124,
+      "accuracy": 0.967741935483871
+    },
+    "inversions": 4
+  },
+  "panel_geometry_available": "PAGE/PAGE_FALLBACK groups only; zero panel geometries across 10 pages",
+  "gt_leakage_audit": {
+    "gt_runtime_features": [],
+    "human_click_order_used_for_control_scoring_only": true,
+    "human_or_manual_panel_evidence_used_as_prediction_input": false,
+    "prediction_frozen_before_evaluation": true,
+    "pre_score_artifact_hashes": {
+      "panel-data-audit-12.1.json": "7179746e711679bfcdc418fb9676dbdca8a6ed29a4df58f69f491cf1422822b4",
+      "panel-aware-protocol-12.1.json": "4768fffb7bc93f76e019f77dbd2c6bef8f164e5c724dc4f72d86e5c603339765"
+    }
+  },
+  "structural_metrics": {
+    "schema_version": "panel-aware-structural-errors.v1",
+    "checkpoint": "12.1",
+    "status": "NOT_RUN_PANEL_DATA_GATE_FAILED",
+    "assignment_coverage": 0.0,
+    "confident_assignments": 0,
+    "unassigned_regions": 63,
+    "ambiguous_regions": 0,
+    "multi_panel_cases": 0,
+    "cross_panel_ordering_errors": "N/A: no candidate",
+    "intra_panel_ordering_errors": "N/A: no candidate",
+    "panel_order_errors": "N/A: no predicted panels",
+    "failure_pages": [
+      {
+        "page_order": 15,
+        "available_predicted_panels": 0,
+        "assignment": "NOT_RUN",
+        "panel_order": "NOT_RUN",
+        "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+        "reason": "No legitimate non-Human panel geometry."
+      },
+      {
+        "page_order": 17,
+        "available_predicted_panels": 0,
+        "assignment": "NOT_RUN",
+        "panel_order": "NOT_RUN",
+        "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+        "reason": "No legitimate non-Human panel geometry."
+      },
+      {
+        "page_order": 38,
+        "available_predicted_panels": 0,
+        "assignment": "NOT_RUN",
+        "panel_order": "NOT_RUN",
+        "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+        "reason": "No legitimate non-Human panel geometry."
+      }
+    ]
+  },
+  "human_metrics": "N/A: no panel-aware candidate was permitted",
+  "regressed_pages": "N/A",
+  "new_inversions": "N/A",
+  "resource_safety": {
+    "before": {
+      "timestamp": "2026-08-24T18:51:55.729512+00:00",
+      "process_rss_bytes": null,
+      "process_peak_rss_bytes": 25313280,
+      "system_available_memory_bytes": 5927927808,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": null,
+      "process_cpu_seconds": 0.032087,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-24T18:51:55.760539+00:00",
+      "process_rss_bytes": null,
+      "process_peak_rss_bytes": 45481984,
+      "system_available_memory_bytes": 5913755648,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": null,
+      "process_cpu_seconds": 0.059809,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "resource_guard": "NORMAL",
+    "ocr_calls": 0,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "production_integration": false,
+  "human_gt_modified": false,
+  "historical_artifacts_modified": false,
+  "outcome": "B. PANEL DETECTION/ASSIGNMENT IS THE BOTTLENECK",
+  "unseen_human_testing_justified": false,
+  "recommended_next_experiment": "Separately approved offline deterministic panel-structure extraction benchmark: produce non-Human panel bbox/polygon geometry and provenance on the existing ten pages, without using Human click order; then rerun this gate."
+}

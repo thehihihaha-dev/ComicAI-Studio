@@ -1,0 +1,2537 @@
+{
+  "schema_version": "panel-order-input-gt-audit.v3",
+  "checkpoint": "12.5",
+  "chronology": [
+    "A_RUNTIME_INPUT_AUDIT_FROZEN",
+    "D_CANDIDATES_FROZEN",
+    "E_HUMAN_ORDER_OPENED",
+    "F_REFERENCE_DERIVED"
+  ],
+  "runtime_phase": {
+    "status": "PRE_CANDIDATE_RUNTIME_INPUTS_VERIFIED",
+    "cohort_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      15,
+      17,
+      18,
+      38
+    ],
+    "persisted_logical_region_count": 63,
+    "expected_post_freeze_metric_region_count": 50,
+    "oracle_panel_count": 36,
+    "runtime_input_file_sha256": {
+      "logical_geometry": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+      "oracle_unseen_geometry": "fd49ba4fb58b1785a786bae1b3f376f7f176b45ea222e3af364d493fc9c727d5",
+      "realistic_legacy": "7559e7560b0825fd5874306615bbe334465bd31e9c835077700448a4771da6c6",
+      "realistic_unseen": "5b7eca8fed83970465a65de84509daa85d56b57369dc46c79964affccddc4772"
+    },
+    "legacy_panel_snapshot": {
+      "computed": "5ac1383fdbd611bd203fa1e1b35d8fb0eb4e4e082f62e04907adc493c5635fd3",
+      "expected": "5ac1383fdbd611bd203fa1e1b35d8fb0eb4e4e082f62e04907adc493c5635fd3",
+      "verified": true
+    },
+    "unseen_panel_snapshot": {
+      "computed": "f62e38d5ed28531681b9165cca77e0f62ab37b7cf92a5161cab0c9f0cb6216ea",
+      "expected": "f62e38d5ed28531681b9165cca77e0f62ab37b7cf92a5161cab0c9f0cb6216ea",
+      "verified": true
+    },
+    "pages": [
+      {
+        "page_order": 1,
+        "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+        "source_path": "backend/uploads/92961605-5553-4df1-b74e-9a3bed5e14f5_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-2.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_086859ae76f4",
+            "bbox": [
+              460.0,
+              173.0,
+              560.0,
+              276.0
+            ]
+          },
+          {
+            "id": "LR_615c8d24c678",
+            "bbox": [
+              638.0,
+              180.0,
+              692.0,
+              212.0
+            ]
+          },
+          {
+            "id": "LR_28e2fc3b47b8",
+            "bbox": [
+              142.0,
+              374.0,
+              262.0,
+              508.0
+            ]
+          },
+          {
+            "id": "LR_2284efd8ada7",
+            "bbox": [
+              157.0,
+              805.0,
+              237.0,
+              961.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              593.303,
+              77.773,
+              832.711,
+              564.439
+            ],
+            "panel_id": "human-1-8",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              72.773,
+              79.739,
+              594.985,
+              565.361
+            ],
+            "panel_id": "human-1-9",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              79.693,
+              574.916,
+              837.335,
+              1197.473
+            ],
+            "panel_id": "human-1-11",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": []
+      },
+      {
+        "page_order": 2,
+        "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+        "source_path": "backend/uploads/33c28b2d-f096-4025-b6b7-7a3c8c7ba1df_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-4.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_ef4ab22072a8",
+            "bbox": [
+              155.0,
+              205.0,
+              241.0,
+              321.0
+            ]
+          },
+          {
+            "id": "LR_a77493ec9ff9",
+            "bbox": [
+              658.0,
+              744.0,
+              738.0,
+              814.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              60.905,
+              73.402,
+              829.24,
+              580.945
+            ],
+            "panel_id": "human-2-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              65.737,
+              578.833,
+              823.717,
+              1189.985
+            ],
+            "panel_id": "human-2-2",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_c81abc4667cc",
+            "bbox": [
+              72,
+              92,
+              821,
+              570
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_2fd92daee87b",
+            "bbox": [
+              72,
+              585,
+              821,
+              1190
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 3,
+        "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+        "source_path": "backend/uploads/ab627e40-5851-4a6e-9e7a-03d3968087cb_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-5.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_708761617ca5",
+            "bbox": [
+              691.0,
+              147.0,
+              789.0,
+              255.0
+            ]
+          },
+          {
+            "id": "LR_6847589abd58",
+            "bbox": [
+              163.0,
+              205.0,
+              295.0,
+              379.0
+            ]
+          },
+          {
+            "id": "LR_1b80a3ba7eba",
+            "bbox": [
+              647.0,
+              579.0,
+              779.0,
+              792.0
+            ]
+          },
+          {
+            "id": "LR_301b7ed055be",
+            "bbox": [
+              514.0,
+              906.0,
+              815.853376071303,
+              1061.9302301859036
+            ]
+          },
+          {
+            "id": "LR_0f41713aa3ea",
+            "bbox": [
+              404.0,
+              912.0,
+              430.0,
+              946.0
+            ]
+          },
+          {
+            "id": "LR_016a11675840",
+            "bbox": [
+              328.0,
+              962.0,
+              420.0,
+              1058.0
+            ]
+          },
+          {
+            "id": "LR_38a547aad429",
+            "bbox": [
+              213.0,
+              1091.0,
+              251.0,
+              1123.0
+            ]
+          },
+          {
+            "id": "LR_363ecd1531dc",
+            "bbox": [
+              530.0,
+              1188.0,
+              822.0,
+              1216.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              72.512,
+              75.346,
+              843.51,
+              505.753
+            ],
+            "panel_id": "human-3-2",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              66.382,
+              498.226,
+              848.034,
+              858.541
+            ],
+            "panel_id": "human-3-4",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              71.313,
+              864.716,
+              283.356,
+              1183.034
+            ],
+            "panel_id": "human-3-8",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              281.751,
+              866.528,
+              835.3,
+              1195.246
+            ],
+            "panel_id": "human-3-5",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_befc93661d98",
+            "bbox": [
+              80,
+              90,
+              827,
+              496
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "MULTI_SOURCE_ATOMIC",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_cc6fa8f61cd2",
+            "bbox": [
+              80,
+              512,
+              827,
+              851
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 4,
+        "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+        "source_path": "backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_a4e0fdad0903",
+            "bbox": [
+              128.0,
+              427.0,
+              246.0,
+              531.0
+            ]
+          },
+          {
+            "id": "LR_d403d992f246",
+            "bbox": [
+              396.0,
+              804.0,
+              500.0,
+              972.0
+            ]
+          },
+          {
+            "id": "LR_ec9604a02d80",
+            "bbox": [
+              752.0,
+              812.0,
+              786.0,
+              836.0
+            ]
+          },
+          {
+            "id": "LR_d8230ac855ba",
+            "bbox": [
+              596.0,
+              822.0,
+              690.0,
+              932.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              68.955,
+              9.263,
+              830.806,
+              728.425
+            ],
+            "panel_id": "human-4-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              550.492,
+              734.04,
+              828.233,
+              1192.65
+            ],
+            "panel_id": "human-4-2",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              70.061,
+              740.2,
+              549.547,
+              1195.054
+            ],
+            "panel_id": "human-4-3",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_77c431f85a56",
+            "bbox": [
+              72,
+              0,
+              823,
+              728
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "page_edge_completion",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_a8da83358244",
+            "bbox": [
+              75,
+              744,
+              544,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_1b619a0db400"
+            ],
+            "supporting_relation_ids": [
+              "SP_c0e2f172e1df"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_952651e84374",
+            "bbox": [
+              550,
+              744,
+              821,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_1b619a0db400"
+            ],
+            "supporting_relation_ids": [
+              "SP_c0e2f172e1df"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 5,
+        "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+        "source_path": "backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_f27fb5ffabf9",
+            "bbox": [
+              667.0,
+              172.0,
+              766.0,
+              296.0
+            ]
+          },
+          {
+            "id": "LR_26795b95ef26",
+            "bbox": [
+              138.0,
+              389.0,
+              246.0,
+              500.0
+            ]
+          },
+          {
+            "id": "LR_1dfca31c24d7",
+            "bbox": [
+              639.0,
+              412.0,
+              701.0,
+              457.0
+            ]
+          },
+          {
+            "id": "LR_a0587957c904",
+            "bbox": [
+              288.0,
+              672.0,
+              402.0,
+              822.0
+            ]
+          },
+          {
+            "id": "LR_d9caab3d7c4a",
+            "bbox": [
+              642.0,
+              702.0,
+              788.0,
+              840.0
+            ]
+          },
+          {
+            "id": "LR_b71bcd7a275c",
+            "bbox": [
+              122.0,
+              765.0,
+              233.0,
+              903.0
+            ]
+          },
+          {
+            "id": "LR_bf3e79736d0c",
+            "bbox": [
+              197.0,
+              922.0,
+              246.0,
+              967.0
+            ]
+          },
+          {
+            "id": "LR_7ee4baf217d7",
+            "bbox": [
+              366.0,
+              924.0,
+              428.0,
+              985.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              74.608,
+              88.203,
+              836.083,
+              604.339
+            ],
+            "panel_id": "human-5-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              75.392,
+              609.378,
+              446.459,
+              1192.588
+            ],
+            "panel_id": "human-5-5",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              446.275,
+              615.645,
+              832.727,
+              1193.679
+            ],
+            "panel_id": "human-5-4",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": []
+      },
+      {
+        "page_order": 7,
+        "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+        "source_path": "backend/uploads/a3c72490-a7b2-402a-88c9-8cc874cab45f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-10.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_5facc1321e92",
+            "bbox": [
+              412.0,
+              936.0,
+              518.0,
+              990.0
+            ]
+          },
+          {
+            "id": "LR_5787cb8d10ad",
+            "bbox": [
+              139.0,
+              953.0,
+              247.0,
+              1072.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              65.96,
+              80.315,
+              829.585,
+              791.114
+            ],
+            "panel_id": "human-7-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              63.694,
+              789.747,
+              829.286,
+              1188.717
+            ],
+            "panel_id": "human-7-2",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_d7a8a0004def",
+            "bbox": [
+              73,
+              92,
+              824,
+              784
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_54c078540d26",
+            "bbox": [
+              72,
+              798,
+              824,
+              1188
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "MULTI_SOURCE_ATOMIC",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 15,
+        "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+        "source_path": "backend/uploads/16c906e1-b4b0-426c-ba4a-3d17e6fa4042_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-18.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_dfef3de3ed48",
+            "bbox": [
+              626.0,
+              122.0,
+              738.0,
+              266.0
+            ]
+          },
+          {
+            "id": "LR_35d30a3b10e1",
+            "bbox": [
+              453.0,
+              176.0,
+              591.0,
+              312.0
+            ]
+          },
+          {
+            "id": "LR_9636706b4855",
+            "bbox": [
+              110.0,
+              359.0,
+              236.0,
+              535.0
+            ]
+          },
+          {
+            "id": "LR_f6dbfc4d4913",
+            "bbox": [
+              658.0,
+              674.0,
+              786.0,
+              829.0
+            ]
+          },
+          {
+            "id": "LR_bf3e65667bd9",
+            "bbox": [
+              155.0,
+              689.0,
+              271.0,
+              819.0
+            ]
+          },
+          {
+            "id": "LR_f3054b9c1820",
+            "bbox": [
+              120.0,
+              940.0,
+              204.0,
+              992.0
+            ]
+          },
+          {
+            "id": "LR_0856a888b8df",
+            "bbox": [
+              658.0,
+              974.0,
+              794.0,
+              1110.0
+            ]
+          },
+          {
+            "id": "LR_5bdd1160b3a0",
+            "bbox": [
+              294.0,
+              1016.0,
+              405.0,
+              1138.0
+            ]
+          },
+          {
+            "id": "LR_6378f74595c3",
+            "bbox": [
+              119.0,
+              1088.2073760108954,
+              153.0,
+              1127.0
+            ]
+          },
+          {
+            "id": "LR_f3c952a6f77f",
+            "bbox": [
+              151.0,
+              1097.167949705662,
+              203.0,
+              1137.0
+            ]
+          },
+          {
+            "id": "LR_4156c86e9141",
+            "bbox": [
+              439.0,
+              1103.0,
+              459.0,
+              1127.0
+            ]
+          },
+          {
+            "id": "LR_d9afc322c62f",
+            "bbox": [
+              197.0046499864447,
+              1105.167949705662,
+              229.9953500135553,
+              1121.832050294338
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              605.15,
+              80.722,
+              831.298,
+              603.525
+            ],
+            "panel_id": "human-15-2",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              64.462,
+              83.725,
+              611.774,
+              601.874
+            ],
+            "panel_id": "human-15-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              63.917,
+              597.696,
+              826.498,
+              889.585
+            ],
+            "panel_id": "human-15-4",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              242.965,
+              886.536,
+              818.756,
+              1194.355
+            ],
+            "panel_id": "human-15-6",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              68.233,
+              896.091,
+              248.74,
+              1194.654
+            ],
+            "panel_id": "human-15-8",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_cf3c6e8976b9",
+            "bbox": [
+              72,
+              610,
+              822,
+              879
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "MULTI_SOURCE_ATOMIC",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_40b666b58c82",
+            "bbox": [
+              75,
+              895,
+              242,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_7fcdb3cbf7b5"
+            ],
+            "supporting_relation_ids": [
+              "SP_ccc0551f94c8"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_e342039122d3",
+            "bbox": [
+              249,
+              895,
+              821,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_7fcdb3cbf7b5"
+            ],
+            "supporting_relation_ids": [
+              "SP_ccc0551f94c8"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 17,
+        "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+        "source_path": "backend/uploads/cba300d5-a276-4bfc-a7bb-ad6476920041_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-20.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_8a526b453c10",
+            "bbox": [
+              442.0,
+              182.0,
+              488.0,
+              210.0
+            ]
+          },
+          {
+            "id": "LR_554cd55f1a6a",
+            "bbox": [
+              699.0,
+              199.0,
+              798.0,
+              279.0
+            ]
+          },
+          {
+            "id": "LR_0c630f218964",
+            "bbox": [
+              257.0,
+              218.0,
+              423.0,
+              280.0
+            ]
+          },
+          {
+            "id": "LR_ce3c26e9b336",
+            "bbox": [
+              301.0,
+              302.0,
+              513.0,
+              468.0
+            ]
+          },
+          {
+            "id": "LR_bd1a6a09cea9",
+            "bbox": [
+              538.0,
+              312.0,
+              572.0,
+              342.0
+            ]
+          },
+          {
+            "id": "LR_de7b43ae45f7",
+            "bbox": [
+              92.0,
+              328.0,
+              242.0,
+              426.0
+            ]
+          },
+          {
+            "id": "LR_3a2842ab274e",
+            "bbox": [
+              237.0,
+              409.0,
+              301.0,
+              461.0
+            ]
+          },
+          {
+            "id": "LR_952c7eac9aef",
+            "bbox": [
+              99.0,
+              551.0,
+              217.0,
+              676.0
+            ]
+          },
+          {
+            "id": "LR_0523c7b7b258",
+            "bbox": [
+              716.0,
+              580.0,
+              794.0,
+              647.0
+            ]
+          },
+          {
+            "id": "LR_11117a0bc73a",
+            "bbox": [
+              90.0,
+              1124.0,
+              138.0,
+              1150.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              527.711,
+              92.873,
+              825.73,
+              504.985
+            ],
+            "panel_id": "human-17-6",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              73.902,
+              93.817,
+              526.759,
+              502.596
+            ],
+            "panel_id": "human-17-7",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              77.98,
+              520.914,
+              819.724,
+              711.544
+            ],
+            "panel_id": "human-17-8",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              591.644,
+              722.458,
+              832.174,
+              1195.1
+            ],
+            "panel_id": "human-17-13",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              72.657,
+              724.101,
+              588.548,
+              1190.3
+            ],
+            "panel_id": "human-17-14",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_10b3e15d09b5",
+            "bbox": [
+              75,
+              93,
+              522,
+              500
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_fcb8af17f461"
+            ],
+            "supporting_relation_ids": [
+              "SP_fcab8b05f7db"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_ca1bf9d09d63",
+            "bbox": [
+              528,
+              93,
+              821,
+              501
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_fcb8af17f461"
+            ],
+            "supporting_relation_ids": [
+              "SP_fcab8b05f7db"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_80ad3d363a63",
+            "bbox": [
+              71,
+              516,
+              822,
+              713
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "MULTI_SOURCE_ATOMIC",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_e76ac7ecdd65",
+            "bbox": [
+              75,
+              728,
+              588,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_72086ec533d3"
+            ],
+            "supporting_relation_ids": [
+              "SP_b49a99d7019c"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_920ae91c85fa",
+            "bbox": [
+              593,
+              728,
+              821,
+              1187
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_72086ec533d3"
+            ],
+            "supporting_relation_ids": [
+              "SP_b49a99d7019c"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 18,
+        "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+        "source_path": "backend/uploads/d997ac05-6017-4a9c-b5d6-49e065dd9f2d_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-21.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_aac2ef08be0e",
+            "bbox": [
+              722.0,
+              178.0,
+              764.0,
+              236.0
+            ]
+          },
+          {
+            "id": "LR_77b6cc0407da",
+            "bbox": [
+              120.0,
+              298.0,
+              216.0,
+              382.0
+            ]
+          },
+          {
+            "id": "LR_1c3c89ee5ac1",
+            "bbox": [
+              161.0,
+              671.0,
+              265.0,
+              709.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              71.329,
+              80.722,
+              502.842,
+              469.447
+            ],
+            "panel_id": "human-18-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              500.822,
+              84.555,
+              832.289,
+              468.257
+            ],
+            "panel_id": "human-18-2",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              71.69,
+              473.487,
+              833.971,
+              1190.707
+            ],
+            "panel_id": "human-18-3",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_f2200cb384a8",
+            "bbox": [
+              505,
+              89,
+              827,
+              465
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_d92e8767a701"
+            ],
+            "supporting_relation_ids": [
+              "SP_c63749181182"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_f4be483d0ea3",
+            "bbox": [
+              78,
+              90,
+              499,
+              466
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_d92e8767a701"
+            ],
+            "supporting_relation_ids": [
+              "SP_c63749181182"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_e750f2a6a33e",
+            "bbox": [
+              75,
+              481,
+              827,
+              1190
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          }
+        ]
+      },
+      {
+        "page_order": 38,
+        "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+        "source_path": "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg",
+        "image_dimensions": [
+          900,
+          1280
+        ],
+        "persisted_logical_regions": [
+          {
+            "id": "LR_ac01f1796688",
+            "bbox": [
+              474.0,
+              180.0,
+              548.0,
+              284.0
+            ]
+          },
+          {
+            "id": "LR_0d55cb96bbc4",
+            "bbox": [
+              572.0,
+              435.0,
+              704.0,
+              548.0
+            ]
+          },
+          {
+            "id": "LR_4e90149299b7",
+            "bbox": [
+              257.0,
+              437.0,
+              301.0,
+              451.0
+            ]
+          },
+          {
+            "id": "LR_bfb519537dac",
+            "bbox": [
+              570.5857864376269,
+              565.0,
+              625.0,
+              651.7831103281945
+            ]
+          },
+          {
+            "id": "LR_0f895e9b98b6",
+            "bbox": [
+              665.0,
+              571.0,
+              699.0,
+              603.0
+            ]
+          },
+          {
+            "id": "LR_2da60c343d36",
+            "bbox": [
+              682.0,
+              800.0,
+              764.0,
+              873.0
+            ]
+          },
+          {
+            "id": "LR_2010e3d36608",
+            "bbox": [
+              467.0,
+              863.0,
+              521.0,
+              907.0
+            ]
+          },
+          {
+            "id": "LR_563eb986d1f9",
+            "bbox": [
+              234.0,
+              970.0,
+              334.0,
+              1105.0
+            ]
+          },
+          {
+            "id": "LR_5cb918f74103",
+            "bbox": [
+              710.0,
+              1027.0,
+              774.0,
+              1109.0
+            ]
+          },
+          {
+            "id": "LR_505a871ebd18",
+            "bbox": [
+              390.0,
+              1071.0,
+              492.0,
+              1157.0
+            ]
+          }
+        ],
+        "oracle_panels": [
+          {
+            "bbox": [
+              621.912,
+              83.41,
+              827.965,
+              427.957
+            ],
+            "panel_id": "human-38-1",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              62.227,
+              89.386,
+              623.349,
+              426.521
+            ],
+            "panel_id": "human-38-2",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              428.441,
+              421.767,
+              824.962,
+              718.172
+            ],
+            "panel_id": "human-38-3",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              69.416,
+              429.739,
+              436.79,
+              720.0
+            ],
+            "panel_id": "human-38-4",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              371.912,
+              723.848,
+              824.869,
+              1190.246
+            ],
+            "panel_id": "human-38-5",
+            "ambiguous": false
+          },
+          {
+            "bbox": [
+              67.98,
+              727.581,
+              371.928,
+              1199.332
+            ],
+            "panel_id": "human-38-6",
+            "ambiguous": false
+          }
+        ],
+        "realistic_selected_panels": [
+          {
+            "panel_id": "PN_86914f467fda",
+            "bbox": [
+              72,
+              93,
+              619,
+              419
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_d7a50b306189"
+            ],
+            "supporting_relation_ids": [
+              "SP_bb5395f06664"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_c4c0ce67bc22",
+            "bbox": [
+              626,
+              93,
+              818,
+              419
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_d7a50b306189"
+            ],
+            "supporting_relation_ids": [
+              "SP_bb5395f06664"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_1d64a6696cae",
+            "bbox": [
+              72,
+              434,
+              426,
+              715
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_2dc1bfa2af64"
+            ],
+            "supporting_relation_ids": [
+              "SP_952d815fc05a"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_356b259b380a",
+            "bbox": [
+              433,
+              435,
+              818,
+              716
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "GUILLOTINE_TILING_CHILD",
+            "supporting_ids": [
+              "PN_2dc1bfa2af64"
+            ],
+            "supporting_relation_ids": [
+              "SP_952d815fc05a"
+            ],
+            "provenance": [
+              "border_contour"
+            ]
+          },
+          {
+            "panel_id": "PN_24859586c1ec",
+            "bbox": [
+              71,
+              731,
+              368,
+              1192
+            ],
+            "input_state": "AMBIGUOUS",
+            "resolution_status": "SELECTED",
+            "reason": "MULTI_SOURCE_ATOMIC",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          },
+          {
+            "panel_id": "PN_268e02ea9e5f",
+            "bbox": [
+              375,
+              731,
+              819,
+              1189
+            ],
+            "input_state": "DETECTED",
+            "resolution_status": "SELECTED",
+            "reason": "LOCKED_DETECTED",
+            "supporting_ids": [],
+            "supporting_relation_ids": [],
+            "provenance": [
+              "border_contour",
+              "whitespace_partition"
+            ]
+          }
+        ]
+      }
+    ],
+    "human_reading_order_loaded": false,
+    "gt_runtime_features": [],
+    "semantic_sha256": "4579c6fea5e151aa55e5c0d6166c2ac87940dae062d626b91e9568b5a13da67f"
+  },
+  "evaluation_reference": {
+    "pages": [
+      {
+        "page_order": 1,
+        "human_region_ids": [
+          "LR_615c8d24c678",
+          "LR_086859ae76f4",
+          "LR_28e2fc3b47b8",
+          "LR_2284efd8ada7"
+        ],
+        "region_to_oracle_panel": {
+          "LR_086859ae76f4": "PG_8d6e2f935cf6",
+          "LR_615c8d24c678": "PG_3f5ab32f317c",
+          "LR_28e2fc3b47b8": "PG_8d6e2f935cf6",
+          "LR_2284efd8ada7": "PG_b9597e340850"
+        },
+        "text_bearing_panels": [
+          "PG_3f5ab32f317c",
+          "PG_8d6e2f935cf6",
+          "PG_b9597e340850"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_3f5ab32f317c",
+            "after": "PG_8d6e2f935cf6"
+          },
+          {
+            "before": "PG_3f5ab32f317c",
+            "after": "PG_b9597e340850"
+          },
+          {
+            "before": "PG_8d6e2f935cf6",
+            "after": "PG_b9597e340850"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_3f5ab32f317c",
+            "PG_8d6e2f935cf6",
+            "PG_b9597e340850"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_3f5ab32f317c",
+              "after": "PG_8d6e2f935cf6"
+            },
+            {
+              "before": "PG_3f5ab32f317c",
+              "after": "PG_b9597e340850"
+            },
+            {
+              "before": "PG_8d6e2f935cf6",
+              "after": "PG_b9597e340850"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_3f5ab32f317c"
+              ],
+              "emitted": "PG_3f5ab32f317c"
+            },
+            {
+              "ready": [
+                "PG_8d6e2f935cf6"
+              ],
+              "emitted": "PG_8d6e2f935cf6"
+            },
+            {
+              "ready": [
+                "PG_b9597e340850"
+              ],
+              "emitted": "PG_b9597e340850"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 2,
+        "human_region_ids": [
+          "LR_ef4ab22072a8",
+          "LR_a77493ec9ff9"
+        ],
+        "region_to_oracle_panel": {
+          "LR_ef4ab22072a8": "PG_b4f4bff59a91",
+          "LR_a77493ec9ff9": "PG_d3cde875ca11"
+        },
+        "text_bearing_panels": [
+          "PG_b4f4bff59a91",
+          "PG_d3cde875ca11"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_b4f4bff59a91",
+            "after": "PG_d3cde875ca11"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_b4f4bff59a91",
+            "PG_d3cde875ca11"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_b4f4bff59a91",
+              "after": "PG_d3cde875ca11"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_b4f4bff59a91"
+              ],
+              "emitted": "PG_b4f4bff59a91"
+            },
+            {
+              "ready": [
+                "PG_d3cde875ca11"
+              ],
+              "emitted": "PG_d3cde875ca11"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 3,
+        "human_region_ids": [
+          "LR_708761617ca5",
+          "LR_6847589abd58",
+          "LR_1b80a3ba7eba",
+          "LR_301b7ed055be",
+          "LR_016a11675840",
+          "LR_38a547aad429"
+        ],
+        "region_to_oracle_panel": {
+          "LR_708761617ca5": "PG_0fc241066559",
+          "LR_6847589abd58": "PG_0fc241066559",
+          "LR_1b80a3ba7eba": "PG_a5a9341b804a",
+          "LR_301b7ed055be": "PG_1447a7233191",
+          "LR_0f41713aa3ea": "PG_1447a7233191",
+          "LR_016a11675840": "PG_1447a7233191",
+          "LR_38a547aad429": "PG_ed75e1b3a57d"
+        },
+        "text_bearing_panels": [
+          "PG_0fc241066559",
+          "PG_1447a7233191",
+          "PG_a5a9341b804a",
+          "PG_ed75e1b3a57d"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_0fc241066559",
+            "after": "PG_1447a7233191"
+          },
+          {
+            "before": "PG_0fc241066559",
+            "after": "PG_a5a9341b804a"
+          },
+          {
+            "before": "PG_0fc241066559",
+            "after": "PG_ed75e1b3a57d"
+          },
+          {
+            "before": "PG_1447a7233191",
+            "after": "PG_ed75e1b3a57d"
+          },
+          {
+            "before": "PG_a5a9341b804a",
+            "after": "PG_1447a7233191"
+          },
+          {
+            "before": "PG_a5a9341b804a",
+            "after": "PG_ed75e1b3a57d"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_0fc241066559",
+            "PG_a5a9341b804a",
+            "PG_1447a7233191",
+            "PG_ed75e1b3a57d"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_0fc241066559",
+              "after": "PG_1447a7233191"
+            },
+            {
+              "before": "PG_0fc241066559",
+              "after": "PG_a5a9341b804a"
+            },
+            {
+              "before": "PG_0fc241066559",
+              "after": "PG_ed75e1b3a57d"
+            },
+            {
+              "before": "PG_1447a7233191",
+              "after": "PG_ed75e1b3a57d"
+            },
+            {
+              "before": "PG_a5a9341b804a",
+              "after": "PG_1447a7233191"
+            },
+            {
+              "before": "PG_a5a9341b804a",
+              "after": "PG_ed75e1b3a57d"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_0fc241066559"
+              ],
+              "emitted": "PG_0fc241066559"
+            },
+            {
+              "ready": [
+                "PG_a5a9341b804a"
+              ],
+              "emitted": "PG_a5a9341b804a"
+            },
+            {
+              "ready": [
+                "PG_1447a7233191"
+              ],
+              "emitted": "PG_1447a7233191"
+            },
+            {
+              "ready": [
+                "PG_ed75e1b3a57d"
+              ],
+              "emitted": "PG_ed75e1b3a57d"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 4,
+        "human_region_ids": [
+          "LR_a4e0fdad0903",
+          "LR_ec9604a02d80",
+          "LR_d8230ac855ba",
+          "LR_d403d992f246"
+        ],
+        "region_to_oracle_panel": {
+          "LR_a4e0fdad0903": "PG_e74d03a13214",
+          "LR_d403d992f246": "PG_14325527ea20",
+          "LR_ec9604a02d80": "PG_ceaf9a7b1977",
+          "LR_d8230ac855ba": "PG_ceaf9a7b1977"
+        },
+        "text_bearing_panels": [
+          "PG_14325527ea20",
+          "PG_ceaf9a7b1977",
+          "PG_e74d03a13214"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_ceaf9a7b1977",
+            "after": "PG_14325527ea20"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_14325527ea20"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_ceaf9a7b1977"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_e74d03a13214",
+            "PG_ceaf9a7b1977",
+            "PG_14325527ea20"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_ceaf9a7b1977",
+              "after": "PG_14325527ea20"
+            },
+            {
+              "before": "PG_e74d03a13214",
+              "after": "PG_14325527ea20"
+            },
+            {
+              "before": "PG_e74d03a13214",
+              "after": "PG_ceaf9a7b1977"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_e74d03a13214"
+              ],
+              "emitted": "PG_e74d03a13214"
+            },
+            {
+              "ready": [
+                "PG_ceaf9a7b1977"
+              ],
+              "emitted": "PG_ceaf9a7b1977"
+            },
+            {
+              "ready": [
+                "PG_14325527ea20"
+              ],
+              "emitted": "PG_14325527ea20"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 5,
+        "human_region_ids": [
+          "LR_f27fb5ffabf9",
+          "LR_1dfca31c24d7",
+          "LR_26795b95ef26",
+          "LR_d9caab3d7c4a",
+          "LR_a0587957c904",
+          "LR_b71bcd7a275c",
+          "LR_7ee4baf217d7",
+          "LR_bf3e79736d0c"
+        ],
+        "region_to_oracle_panel": {
+          "LR_f27fb5ffabf9": "PG_338cf720afa7",
+          "LR_26795b95ef26": "PG_338cf720afa7",
+          "LR_1dfca31c24d7": "PG_338cf720afa7",
+          "LR_a0587957c904": "PG_4ac3d58ccb68",
+          "LR_d9caab3d7c4a": "PG_345f31446273",
+          "LR_b71bcd7a275c": "PG_4ac3d58ccb68",
+          "LR_bf3e79736d0c": "PG_4ac3d58ccb68",
+          "LR_7ee4baf217d7": "PG_4ac3d58ccb68"
+        },
+        "text_bearing_panels": [
+          "PG_338cf720afa7",
+          "PG_345f31446273",
+          "PG_4ac3d58ccb68"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_345f31446273"
+          },
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_4ac3d58ccb68"
+          },
+          {
+            "before": "PG_345f31446273",
+            "after": "PG_4ac3d58ccb68"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_338cf720afa7",
+            "PG_345f31446273",
+            "PG_4ac3d58ccb68"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_338cf720afa7",
+              "after": "PG_345f31446273"
+            },
+            {
+              "before": "PG_338cf720afa7",
+              "after": "PG_4ac3d58ccb68"
+            },
+            {
+              "before": "PG_345f31446273",
+              "after": "PG_4ac3d58ccb68"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_338cf720afa7"
+              ],
+              "emitted": "PG_338cf720afa7"
+            },
+            {
+              "ready": [
+                "PG_345f31446273"
+              ],
+              "emitted": "PG_345f31446273"
+            },
+            {
+              "ready": [
+                "PG_4ac3d58ccb68"
+              ],
+              "emitted": "PG_4ac3d58ccb68"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 7,
+        "human_region_ids": [
+          "LR_5facc1321e92",
+          "LR_5787cb8d10ad"
+        ],
+        "region_to_oracle_panel": {
+          "LR_5facc1321e92": "PG_6a32cfa4320b",
+          "LR_5787cb8d10ad": "PG_6a32cfa4320b"
+        },
+        "text_bearing_panels": [
+          "PG_6a32cfa4320b"
+        ],
+        "empty_panels": [
+          "PG_4d5da5268342"
+        ],
+        "derived_edges": [],
+        "derived_panel_order": {
+          "order": [
+            "PG_6a32cfa4320b"
+          ],
+          "transitive_closure": [],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_6a32cfa4320b"
+              ],
+              "emitted": "PG_6a32cfa4320b"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 15,
+        "human_region_ids": [
+          "LR_dfef3de3ed48",
+          "LR_35d30a3b10e1",
+          "LR_9636706b4855",
+          "LR_f6dbfc4d4913",
+          "LR_bf3e65667bd9",
+          "LR_0856a888b8df",
+          "LR_5bdd1160b3a0",
+          "LR_f3054b9c1820"
+        ],
+        "region_to_oracle_panel": {
+          "LR_dfef3de3ed48": "PG_26f3e027c970",
+          "LR_35d30a3b10e1": "PG_6996a5124342",
+          "LR_9636706b4855": "PG_6996a5124342",
+          "LR_f6dbfc4d4913": "PG_143cbbc5a29c",
+          "LR_bf3e65667bd9": "PG_143cbbc5a29c",
+          "LR_f3054b9c1820": "PG_ccf925e75c99",
+          "LR_0856a888b8df": "PG_af7bfd04502a",
+          "LR_5bdd1160b3a0": "PG_af7bfd04502a",
+          "LR_6378f74595c3": "PG_ccf925e75c99",
+          "LR_f3c952a6f77f": "PG_ccf925e75c99",
+          "LR_4156c86e9141": "PG_af7bfd04502a",
+          "LR_d9afc322c62f": "PG_ccf925e75c99"
+        },
+        "text_bearing_panels": [
+          "PG_143cbbc5a29c",
+          "PG_26f3e027c970",
+          "PG_6996a5124342",
+          "PG_af7bfd04502a",
+          "PG_ccf925e75c99"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_143cbbc5a29c",
+            "after": "PG_af7bfd04502a"
+          },
+          {
+            "before": "PG_143cbbc5a29c",
+            "after": "PG_ccf925e75c99"
+          },
+          {
+            "before": "PG_26f3e027c970",
+            "after": "PG_143cbbc5a29c"
+          },
+          {
+            "before": "PG_26f3e027c970",
+            "after": "PG_6996a5124342"
+          },
+          {
+            "before": "PG_26f3e027c970",
+            "after": "PG_af7bfd04502a"
+          },
+          {
+            "before": "PG_26f3e027c970",
+            "after": "PG_ccf925e75c99"
+          },
+          {
+            "before": "PG_6996a5124342",
+            "after": "PG_143cbbc5a29c"
+          },
+          {
+            "before": "PG_6996a5124342",
+            "after": "PG_af7bfd04502a"
+          },
+          {
+            "before": "PG_6996a5124342",
+            "after": "PG_ccf925e75c99"
+          },
+          {
+            "before": "PG_af7bfd04502a",
+            "after": "PG_ccf925e75c99"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_26f3e027c970",
+            "PG_6996a5124342",
+            "PG_143cbbc5a29c",
+            "PG_af7bfd04502a",
+            "PG_ccf925e75c99"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_143cbbc5a29c",
+              "after": "PG_af7bfd04502a"
+            },
+            {
+              "before": "PG_143cbbc5a29c",
+              "after": "PG_ccf925e75c99"
+            },
+            {
+              "before": "PG_26f3e027c970",
+              "after": "PG_143cbbc5a29c"
+            },
+            {
+              "before": "PG_26f3e027c970",
+              "after": "PG_6996a5124342"
+            },
+            {
+              "before": "PG_26f3e027c970",
+              "after": "PG_af7bfd04502a"
+            },
+            {
+              "before": "PG_26f3e027c970",
+              "after": "PG_ccf925e75c99"
+            },
+            {
+              "before": "PG_6996a5124342",
+              "after": "PG_143cbbc5a29c"
+            },
+            {
+              "before": "PG_6996a5124342",
+              "after": "PG_af7bfd04502a"
+            },
+            {
+              "before": "PG_6996a5124342",
+              "after": "PG_ccf925e75c99"
+            },
+            {
+              "before": "PG_af7bfd04502a",
+              "after": "PG_ccf925e75c99"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_26f3e027c970"
+              ],
+              "emitted": "PG_26f3e027c970"
+            },
+            {
+              "ready": [
+                "PG_6996a5124342"
+              ],
+              "emitted": "PG_6996a5124342"
+            },
+            {
+              "ready": [
+                "PG_143cbbc5a29c"
+              ],
+              "emitted": "PG_143cbbc5a29c"
+            },
+            {
+              "ready": [
+                "PG_af7bfd04502a"
+              ],
+              "emitted": "PG_af7bfd04502a"
+            },
+            {
+              "ready": [
+                "PG_ccf925e75c99"
+              ],
+              "emitted": "PG_ccf925e75c99"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 17,
+        "human_region_ids": [
+          "LR_554cd55f1a6a",
+          "LR_8a526b453c10",
+          "LR_0c630f218964",
+          "LR_de7b43ae45f7",
+          "LR_0523c7b7b258",
+          "LR_952c7eac9aef",
+          "LR_11117a0bc73a"
+        ],
+        "region_to_oracle_panel": {
+          "LR_8a526b453c10": "PG_8759a23905bf",
+          "LR_554cd55f1a6a": "PG_e66d7a55c626",
+          "LR_0c630f218964": "PG_8759a23905bf",
+          "LR_ce3c26e9b336": "PG_8759a23905bf",
+          "LR_bd1a6a09cea9": "PG_e66d7a55c626",
+          "LR_de7b43ae45f7": "PG_8759a23905bf",
+          "LR_3a2842ab274e": "PG_8759a23905bf",
+          "LR_952c7eac9aef": "PG_4576e6b24ec7",
+          "LR_0523c7b7b258": "PG_4576e6b24ec7",
+          "LR_11117a0bc73a": "PG_83f17d71943a"
+        },
+        "text_bearing_panels": [
+          "PG_4576e6b24ec7",
+          "PG_83f17d71943a",
+          "PG_8759a23905bf",
+          "PG_e66d7a55c626"
+        ],
+        "empty_panels": [
+          "PG_85924e74ff84"
+        ],
+        "derived_edges": [
+          {
+            "before": "PG_4576e6b24ec7",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_4576e6b24ec7"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_4576e6b24ec7"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_8759a23905bf"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_e66d7a55c626",
+            "PG_8759a23905bf",
+            "PG_4576e6b24ec7",
+            "PG_83f17d71943a"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_4576e6b24ec7",
+              "after": "PG_83f17d71943a"
+            },
+            {
+              "before": "PG_8759a23905bf",
+              "after": "PG_4576e6b24ec7"
+            },
+            {
+              "before": "PG_8759a23905bf",
+              "after": "PG_83f17d71943a"
+            },
+            {
+              "before": "PG_e66d7a55c626",
+              "after": "PG_4576e6b24ec7"
+            },
+            {
+              "before": "PG_e66d7a55c626",
+              "after": "PG_83f17d71943a"
+            },
+            {
+              "before": "PG_e66d7a55c626",
+              "after": "PG_8759a23905bf"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_e66d7a55c626"
+              ],
+              "emitted": "PG_e66d7a55c626"
+            },
+            {
+              "ready": [
+                "PG_8759a23905bf"
+              ],
+              "emitted": "PG_8759a23905bf"
+            },
+            {
+              "ready": [
+                "PG_4576e6b24ec7"
+              ],
+              "emitted": "PG_4576e6b24ec7"
+            },
+            {
+              "ready": [
+                "PG_83f17d71943a"
+              ],
+              "emitted": "PG_83f17d71943a"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 18,
+        "human_region_ids": [
+          "LR_aac2ef08be0e",
+          "LR_77b6cc0407da",
+          "LR_1c3c89ee5ac1"
+        ],
+        "region_to_oracle_panel": {
+          "LR_aac2ef08be0e": "PG_dd578d62a86e",
+          "LR_77b6cc0407da": "PG_1ecf785416d4",
+          "LR_1c3c89ee5ac1": "PG_15dce13e7ca8"
+        },
+        "text_bearing_panels": [
+          "PG_15dce13e7ca8",
+          "PG_1ecf785416d4",
+          "PG_dd578d62a86e"
+        ],
+        "empty_panels": [],
+        "derived_edges": [
+          {
+            "before": "PG_1ecf785416d4",
+            "after": "PG_15dce13e7ca8"
+          },
+          {
+            "before": "PG_dd578d62a86e",
+            "after": "PG_15dce13e7ca8"
+          },
+          {
+            "before": "PG_dd578d62a86e",
+            "after": "PG_1ecf785416d4"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_dd578d62a86e",
+            "PG_1ecf785416d4",
+            "PG_15dce13e7ca8"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_1ecf785416d4",
+              "after": "PG_15dce13e7ca8"
+            },
+            {
+              "before": "PG_dd578d62a86e",
+              "after": "PG_15dce13e7ca8"
+            },
+            {
+              "before": "PG_dd578d62a86e",
+              "after": "PG_1ecf785416d4"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_dd578d62a86e"
+              ],
+              "emitted": "PG_dd578d62a86e"
+            },
+            {
+              "ready": [
+                "PG_1ecf785416d4"
+              ],
+              "emitted": "PG_1ecf785416d4"
+            },
+            {
+              "ready": [
+                "PG_15dce13e7ca8"
+              ],
+              "emitted": "PG_15dce13e7ca8"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      },
+      {
+        "page_order": 38,
+        "human_region_ids": [
+          "LR_ac01f1796688",
+          "LR_2da60c343d36",
+          "LR_2010e3d36608",
+          "LR_5cb918f74103",
+          "LR_505a871ebd18",
+          "LR_563eb986d1f9"
+        ],
+        "region_to_oracle_panel": {
+          "LR_ac01f1796688": "PG_c640164b1f08",
+          "LR_0d55cb96bbc4": "PG_57884d51d511",
+          "LR_4e90149299b7": "PG_d92d19248b38",
+          "LR_bfb519537dac": "PG_57884d51d511",
+          "LR_0f895e9b98b6": "PG_57884d51d511",
+          "LR_2da60c343d36": "PG_21eae97b4152",
+          "LR_2010e3d36608": "PG_21eae97b4152",
+          "LR_563eb986d1f9": "PG_ae7376aca15a",
+          "LR_5cb918f74103": "PG_21eae97b4152",
+          "LR_505a871ebd18": "PG_21eae97b4152"
+        },
+        "text_bearing_panels": [
+          "PG_21eae97b4152",
+          "PG_ae7376aca15a",
+          "PG_c640164b1f08"
+        ],
+        "empty_panels": [
+          "PG_4048143d553b",
+          "PG_57884d51d511",
+          "PG_d92d19248b38"
+        ],
+        "derived_edges": [
+          {
+            "before": "PG_21eae97b4152",
+            "after": "PG_ae7376aca15a"
+          },
+          {
+            "before": "PG_c640164b1f08",
+            "after": "PG_21eae97b4152"
+          },
+          {
+            "before": "PG_c640164b1f08",
+            "after": "PG_ae7376aca15a"
+          }
+        ],
+        "derived_panel_order": {
+          "order": [
+            "PG_c640164b1f08",
+            "PG_21eae97b4152",
+            "PG_ae7376aca15a"
+          ],
+          "transitive_closure": [
+            {
+              "before": "PG_21eae97b4152",
+              "after": "PG_ae7376aca15a"
+            },
+            {
+              "before": "PG_c640164b1f08",
+              "after": "PG_21eae97b4152"
+            },
+            {
+              "before": "PG_c640164b1f08",
+              "after": "PG_ae7376aca15a"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "PG_c640164b1f08"
+              ],
+              "emitted": "PG_c640164b1f08"
+            },
+            {
+              "ready": [
+                "PG_21eae97b4152"
+              ],
+              "emitted": "PG_21eae97b4152"
+            },
+            {
+              "ready": [
+                "PG_ae7376aca15a"
+              ],
+              "emitted": "PG_ae7376aca15a"
+            }
+          ],
+          "unresolved": [],
+          "resolved": true
+        }
+      }
+    ],
+    "metric_region_count": 50,
+    "text_bearing_panel_count": 31,
+    "empty_panel_count": 5,
+    "derived_relation_count": 38
+  },
+  "metric_region_count": 50,
+  "excluded_persisted_region_count": 13,
+  "human_order_file_sha256": "a522d0f897fad6f74080bad36157bb5395e417e84322d8eed01a825362abb262",
+  "gt_runtime_features": [],
+  "semantic_sha256": "6c2ddfd5144411b1d6f01236775431d2f944a014467e353ecbbbd1534c5806e1"
+}

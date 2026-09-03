@@ -1,0 +1,228 @@
+{
+  "schema_version": "panel-human-gt-invalid-coordinate-audit.v1",
+  "checkpoint": "12.2",
+  "status": "INVALID_COORDINATE_SYSTEM",
+  "authority": "NOT AUTHORITATIVE GT",
+  "affected_pages": [
+    1,
+    2,
+    15,
+    17
+  ],
+  "original_panel_counts": {
+    "1": 3,
+    "2": 2,
+    "15": 3,
+    "17": 5
+  },
+  "original_annotation_count": 13,
+  "invalidity_reason": "All boxes were captured against the full UI surface instead of the object-contained image.",
+  "coordinate_system_bug": "Horizontal letterbox offset/padding was treated as source-image coordinates, compressing annotations to about 37% of source width.",
+  "pages": [
+    {
+      "page_order": 1,
+      "review_id": "panel-gt-12.2:7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "benchmark_asset_id": "7980cb4d-0cb3-4d23-99bf-df89444e15a2",
+      "source_image_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "original_panel_count": 3,
+      "original_state": "VERIFIED",
+      "original_revision": 1,
+      "original_boxes": [
+        {
+          "bbox": [
+            286.88,
+            98.18,
+            515.857,
+            556.728
+          ],
+          "panel_id": "human-1-3",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            517.429,
+            98.21,
+            619.31,
+            564.831
+          ],
+          "panel_id": "human-1-2",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            287.629,
+            559.677,
+            618.443,
+            1190.783
+          ],
+          "panel_id": "human-1-4",
+          "ambiguous": false
+        }
+      ]
+    },
+    {
+      "page_order": 2,
+      "review_id": "panel-gt-12.2:6ee61fc2-c530-45e4-9266-887612ac789f",
+      "benchmark_asset_id": "6ee61fc2-c530-45e4-9266-887612ac789f",
+      "source_image_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "original_panel_count": 2,
+      "original_state": "VERIFIED",
+      "original_revision": 1,
+      "original_boxes": [
+        {
+          "bbox": [
+            284.684,
+            95.545,
+            615.979,
+            576.49
+          ],
+          "panel_id": "human-2-1",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            283.061,
+            592.819,
+            613.379,
+            1193.326
+          ],
+          "panel_id": "human-2-2",
+          "ambiguous": false
+        }
+      ]
+    },
+    {
+      "page_order": 15,
+      "review_id": "panel-gt-12.2:0664c577-ed1e-4b77-b056-c563790e945b",
+      "benchmark_asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "source_image_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "original_panel_count": 3,
+      "original_state": "VERIFIED",
+      "original_revision": 1,
+      "original_boxes": [
+        {
+          "bbox": [
+            281.448,
+            88.825,
+            521.501,
+            602.88
+          ],
+          "panel_id": "human-15-2",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            523.514,
+            96.029,
+            617.305,
+            596.283
+          ],
+          "panel_id": "human-15-1",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            279.439,
+            602.235,
+            619.42,
+            1186.943
+          ],
+          "panel_id": "human-15-4",
+          "ambiguous": false
+        }
+      ]
+    },
+    {
+      "page_order": 17,
+      "review_id": "panel-gt-12.2:d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "benchmark_asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "source_image_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "original_panel_count": 5,
+      "original_state": "VERIFIED",
+      "original_revision": 1,
+      "original_boxes": [
+        {
+          "bbox": [
+            486.171,
+            94.186,
+            615.385,
+            501.267
+          ],
+          "panel_id": "human-17-1",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            282.777,
+            94.501,
+            483.858,
+            501.997
+          ],
+          "panel_id": "human-17-2",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            283.252,
+            517.78,
+            614.469,
+            714.232
+          ],
+          "panel_id": "human-17-3",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            514.204,
+            729.593,
+            616.591,
+            1192.197
+          ],
+          "panel_id": "human-17-4",
+          "ambiguous": false
+        },
+        {
+          "bbox": [
+            284.168,
+            730.584,
+            513.151,
+            1188.794
+          ],
+          "panel_id": "human-17-5",
+          "ambiguous": false
+        }
+      ]
+    }
+  ],
+  "original_gt_snapshot_sha256": "d49cc0aab140a743317bbb36a3f53a74ecf1c2305f279ccb75d306855e9e3b1c",
+  "reproduced_gt_snapshot_sha256": "d49cc0aab140a743317bbb36a3f53a74ecf1c2305f279ccb75d306855e9e3b1c",
+  "snapshot_verification": "EXACT_MATCH",
+  "recovery_provenance": {
+    "kind": "PERSISTED_PRE_RESET_DIRECT_DATABASE_QUERY_LOG",
+    "session_log": "/Users/the15062007/.codex/sessions/2026/08/24/rollout-2026-08-24T17-50-55-01a03365-0ddd-7ba0-a6af-d8813a095cbd.jsonl",
+    "session_log_sha256": "babbfe8ea34d1d793183098676e26b364840ce258e494885686b1638eb5326cf",
+    "jsonl_line": 1396,
+    "tool_call_id": "call_IEj8hODYlCmDDCIfnblRzba4",
+    "method": "Parsed the literal Human panel arrays from the recorded SQLAlchemy query output; no bbox was inferred or transformed. Source identity came from the frozen 12.2 input audit."
+  },
+  "old_gt_active": false,
+  "new_gt_used_for_recovery": false,
+  "frozen_prediction_file_sha256": "80e46d5c6216e3d18e9686af149a0012911795a246d1323ae4bb74d516b4b735",
+  "frozen_predictions_modified": false
+}

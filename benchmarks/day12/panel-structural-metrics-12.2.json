@@ -1,0 +1,530 @@
+{
+  "adjacency_edges": 114,
+  "ambiguous_adjacency_edges": 113,
+  "ambiguous_panels": 49,
+  "checkpoint": "12.2",
+  "detected_panels": 7,
+  "deterministic_repeat": {
+    "run_1_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d",
+    "run_2_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d",
+    "runs": 2,
+    "semantic_byte_equivalent": true
+  },
+  "duplicates_suppressed": 16,
+  "logical_region_counts": {
+    "SINGLE_PANEL_CONTAINED": 9,
+    "UNASSIGNED": 54
+  },
+  "logical_region_total": 63,
+  "page_fallback_rate": 0.4,
+  "pages": 10,
+  "pages_with_detected_structure": 6,
+  "panel_iou_accuracy": "N/A: no independent panel GT",
+  "panel_precision": "N/A: no independent panel GT",
+  "panel_recall": "N/A: no independent panel GT",
+  "per_page_assignments": [
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_086859ae76f4",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_615c8d24c678",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_28e2fc3b47b8",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_2284efd8ada7",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "UNASSIGNED": 4
+      },
+      "page_order": 1
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [
+            "PN_c81abc4667cc"
+          ],
+          "logical_region_id": "LR_ef4ab22072a8",
+          "owner_panel_ids": [
+            "PN_c81abc4667cc"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_2fd92daee87b"
+          ],
+          "logical_region_id": "LR_a77493ec9ff9",
+          "owner_panel_ids": [
+            "PN_2fd92daee87b"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        }
+      ],
+      "counts": {
+        "SINGLE_PANEL_CONTAINED": 2
+      },
+      "page_order": 2
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_708761617ca5",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_6847589abd58",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_cc6fa8f61cd2"
+          ],
+          "logical_region_id": "LR_1b80a3ba7eba",
+          "owner_panel_ids": [
+            "PN_cc6fa8f61cd2"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_301b7ed055be",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0f41713aa3ea",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_016a11675840",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_38a547aad429",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_363ecd1531dc",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "SINGLE_PANEL_CONTAINED": 1,
+        "UNASSIGNED": 7
+      },
+      "page_order": 3
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [
+            "PN_77c431f85a56"
+          ],
+          "logical_region_id": "LR_a4e0fdad0903",
+          "owner_panel_ids": [
+            "PN_77c431f85a56"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_d403d992f246",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_ec9604a02d80",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_d8230ac855ba",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "SINGLE_PANEL_CONTAINED": 1,
+        "UNASSIGNED": 3
+      },
+      "page_order": 4
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_f27fb5ffabf9",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_26795b95ef26",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_1dfca31c24d7",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_a0587957c904",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_d9caab3d7c4a",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_b71bcd7a275c",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_bf3e79736d0c",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_7ee4baf217d7",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "UNASSIGNED": 8
+      },
+      "page_order": 5
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_5facc1321e92",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_5787cb8d10ad",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "UNASSIGNED": 2
+      },
+      "page_order": 7
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_dfef3de3ed48",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_35d30a3b10e1",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_9636706b4855",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_f6dbfc4d4913",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_bf3e65667bd9",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_f3054b9c1820",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0856a888b8df",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_5bdd1160b3a0",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_6378f74595c3",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_f3c952a6f77f",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_4156c86e9141",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_d9afc322c62f",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "UNASSIGNED": 12
+      },
+      "page_order": 15
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_8a526b453c10",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_554cd55f1a6a",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0c630f218964",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_ce3c26e9b336",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_bd1a6a09cea9",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_de7b43ae45f7",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_3a2842ab274e",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_952c7eac9aef",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0523c7b7b258",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_11117a0bc73a",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        }
+      ],
+      "counts": {
+        "UNASSIGNED": 10
+      },
+      "page_order": 17
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_aac2ef08be0e",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_77b6cc0407da",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_e750f2a6a33e"
+          ],
+          "logical_region_id": "LR_1c3c89ee5ac1",
+          "owner_panel_ids": [
+            "PN_e750f2a6a33e"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        }
+      ],
+      "counts": {
+        "SINGLE_PANEL_CONTAINED": 1,
+        "UNASSIGNED": 2
+      },
+      "page_order": 18
+    },
+    {
+      "assignments": [
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_ac01f1796688",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0d55cb96bbc4",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_4e90149299b7",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_bfb519537dac",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_0f895e9b98b6",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "logical_region_id": "LR_2da60c343d36",
+          "owner_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "logical_region_id": "LR_2010e3d36608",
+          "owner_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [],
+          "logical_region_id": "LR_563eb986d1f9",
+          "owner_panel_ids": [],
+          "state": "UNASSIGNED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "logical_region_id": "LR_5cb918f74103",
+          "owner_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        },
+        {
+          "intersecting_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "logical_region_id": "LR_505a871ebd18",
+          "owner_panel_ids": [
+            "PN_268e02ea9e5f"
+          ],
+          "state": "SINGLE_PANEL_CONTAINED"
+        }
+      ],
+      "counts": {
+        "SINGLE_PANEL_CONTAINED": 4,
+        "UNASSIGNED": 6
+      },
+      "page_order": 38
+    }
+  ],
+  "prediction_file_sha256_before_manual_diagnostics": "80e46d5c6216e3d18e9686af149a0012911795a246d1323ae4bb74d516b4b735",
+  "raw_candidates": 72,
+  "schema_version": "panel-structural-metrics.v1",
+  "unresolved_pages": 4,
+  "usable_adjacency_edges": 1
+}

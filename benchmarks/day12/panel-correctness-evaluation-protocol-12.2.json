@@ -1,0 +1,36 @@
+{
+  "schema_version": "panel-correctness-evaluation-protocol.v1",
+  "checkpoint": "12.2",
+  "mode": "POST_FREEZE_EVALUATION_ONLY",
+  "pages": [
+    1,
+    2,
+    15,
+    17
+  ],
+  "primary_population": "DETECTED_ONLY",
+  "ambiguous_population": "REPORTED_SEPARATELY_NOT_PROMOTED",
+  "matching": {
+    "method": "ONE_TO_ONE_MAX_CARDINALITY_THEN_MAX_TOTAL_BBOX_IOU",
+    "bbox_iou_threshold": 0.5,
+    "threshold_status": "EVALUATION_ONLY_PREDECLARED_CONVENTION_NOT_PRODUCTION_THRESHOLD",
+    "justification": "A fixed 0.50 bbox IoU convention was declared before computing results; it was not selected from these four pages.",
+    "tie_break": "LEXICOGRAPHIC_STABLE_PANEL_IDS"
+  },
+  "structural_relations": {
+    "coverage_threshold": 0.5,
+    "threshold_status": "EVALUATION_ONLY_PREDECLARED_DESCRIPTIVE_CONVENTION",
+    "under_split": "one prediction covers at least 50% of each of two or more Human panels",
+    "over_split": "one Human panel covers at least 50% of each of two or more predictions"
+  },
+  "metrics": "Precision/recall/F1 use DETECTED only; AMBIGUOUS candidates never count as detections.",
+  "gt_runtime_features": [],
+  "detector_rerun": false,
+  "detector_tuned": false,
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "schema_version": "reading-order-decision-traces.v1",
+  "checkpoint": "12.0",
+  "actual_paths": {
+    "offline_final_contract": "reader_v2_final_contract -> tier_order(A_VERTICAL_OVERLAP, MANGA)",
+    "production_fast_pass": "prepare_reading_order -> optional panel assignment -> tiered_order(center-distance heuristic)",
+    "legacy_vision": "separate model-backed vision_analyzer path; not executed in this checkpoint"
+  },
+  "frozen_candidate_flow": [
+    "Filter Human-excluded regions for scoring only",
+    "Sort by y1, x1, stable id",
+    "Join first tier having ANY peer with normalized vertical overlap >= 0.50",
+    "Sort tiers by minimum y1 then stable id",
+    "For MANGA sort peers right-to-left by x1",
+    "Flatten tiers"
+  ],
+  "metadata_use": "Frozen ten-page replay receives PAGE_FALLBACK only and does not use panel/group metadata.",
+  "tall_regions": "No explicit protection in frozen rule; tall regions can link distant y bands.",
+  "ties": "Explicit deterministic coordinate/id keys; reverse=False logic is encoded directly by negative x for MANGA.",
+  "ambiguity": "Only multiple tier matches append the joining region ID; the algorithm still forces the first matching tier and a deterministic order.",
+  "policy_split": {
+    "GENERIC_GEOMETRY": "bbox normalization, overlap predicate, tier construction and stable sorting",
+    "MANGA_POLICY": "right-to-left ordering within a constructed tier; tiers remain top-to-bottom"
+  },
+  "global_consistency": {
+    "cycles": "Impossible in emitted output because the algorithm constructs and flattens an ordered list; it does not expose an independent pairwise comparator.",
+    "transitivity": "The final list is transitive, but the same-tier predicate is non-transitive: A may overlap B and B overlap C while A does not overlap C.",
+    "stable_ties": "Stable under identical inputs due explicit coordinate/id sort keys.",
+    "ordering_changes_from_unrelated_regions": "Demonstrated synthetically: single-link tier membership lets a bridge region merge otherwise separate tiers, changing whether manga x-order or tier y-order controls existing regions.",
+    "tall_region_bridge_effects": "Possible because any matching peer admits a region to the first matching tier; no complete-link invariant is enforced.",
+    "synthetic_fixture": "reading-order-synthetic-bridge-12.0.json"
+  },
+  "page_traces": {
+    "1": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 118.5,
+      "steps": [
+        {
+          "region": "LR_086859ae76f4",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_615c8d24c678",
+          "candidate_tiers": [
+            {
+              "tier": 0,
+              "matching_peers": [
+                "LR_086859ae76f4"
+              ]
+            }
+          ],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_28e2fc3b47b8",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_2284efd8ada7",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_615c8d24c678",
+          "LR_086859ae76f4",
+          "LR_28e2fc3b47b8",
+          "LR_2284efd8ada7"
+        ],
+        "tiers": [
+          [
+            "LR_615c8d24c678",
+            "LR_086859ae76f4"
+          ],
+          [
+            "LR_28e2fc3b47b8"
+          ],
+          [
+            "LR_2284efd8ada7"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "2": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 93.0,
+      "steps": [
+        {
+          "region": "LR_ef4ab22072a8",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_a77493ec9ff9",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_ef4ab22072a8",
+          "LR_a77493ec9ff9"
+        ],
+        "tiers": [
+          [
+            "LR_ef4ab22072a8"
+          ],
+          [
+            "LR_a77493ec9ff9"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "3": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 131.9651150929518,
+      "steps": [
+        {
+          "region": "LR_708761617ca5",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_6847589abd58",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_1b80a3ba7eba",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_301b7ed055be",
+          "candidate_tiers": [],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_016a11675840",
+          "candidate_tiers": [
+            {
+              "tier": 3,
+              "matching_peers": [
+                "LR_301b7ed055be"
+              ]
+            }
+          ],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_38a547aad429",
+          "candidate_tiers": [],
+          "chosen_tier": 4
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_708761617ca5",
+          "LR_6847589abd58",
+          "LR_1b80a3ba7eba",
+          "LR_301b7ed055be",
+          "LR_016a11675840",
+          "LR_38a547aad429"
+        ],
+        "tiers": [
+          [
+            "LR_708761617ca5"
+          ],
+          [
+            "LR_6847589abd58"
+          ],
+          [
+            "LR_1b80a3ba7eba"
+          ],
+          [
+            "LR_301b7ed055be",
+            "LR_016a11675840"
+          ],
+          [
+            "LR_38a547aad429"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "4": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 107.0,
+      "steps": [
+        {
+          "region": "LR_a4e0fdad0903",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_d403d992f246",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_ec9604a02d80",
+          "candidate_tiers": [
+            {
+              "tier": 1,
+              "matching_peers": [
+                "LR_d403d992f246"
+              ]
+            }
+          ],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_d8230ac855ba",
+          "candidate_tiers": [
+            {
+              "tier": 1,
+              "matching_peers": [
+                "LR_d403d992f246",
+                "LR_ec9604a02d80"
+              ]
+            }
+          ],
+          "chosen_tier": 1
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_a4e0fdad0903",
+          "LR_ec9604a02d80",
+          "LR_d8230ac855ba",
+          "LR_d403d992f246"
+        ],
+        "tiers": [
+          [
+            "LR_a4e0fdad0903"
+          ],
+          [
+            "LR_ec9604a02d80",
+            "LR_d8230ac855ba",
+            "LR_d403d992f246"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "5": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 117.5,
+      "steps": [
+        {
+          "region": "LR_f27fb5ffabf9",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_26795b95ef26",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_1dfca31c24d7",
+          "candidate_tiers": [
+            {
+              "tier": 1,
+              "matching_peers": [
+                "LR_26795b95ef26"
+              ]
+            }
+          ],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_a0587957c904",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_d9caab3d7c4a",
+          "candidate_tiers": [
+            {
+              "tier": 2,
+              "matching_peers": [
+                "LR_a0587957c904"
+              ]
+            }
+          ],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_b71bcd7a275c",
+          "candidate_tiers": [
+            {
+              "tier": 2,
+              "matching_peers": [
+                "LR_d9caab3d7c4a"
+              ]
+            }
+          ],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_bf3e79736d0c",
+          "candidate_tiers": [],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_7ee4baf217d7",
+          "candidate_tiers": [
+            {
+              "tier": 3,
+              "matching_peers": [
+                "LR_bf3e79736d0c"
+              ]
+            }
+          ],
+          "chosen_tier": 3
+        }
+      ],
+      "bridge_events": [
+        {
+          "joining_region": "LR_b71bcd7a275c",
+          "tier": 2,
+          "matching_peers": [
+            "LR_d9caab3d7c4a"
+          ],
+          "nonmatching_peers": [
+            "LR_a0587957c904"
+          ]
+        }
+      ],
+      "result": {
+        "order": [
+          "LR_f27fb5ffabf9",
+          "LR_1dfca31c24d7",
+          "LR_26795b95ef26",
+          "LR_d9caab3d7c4a",
+          "LR_a0587957c904",
+          "LR_b71bcd7a275c",
+          "LR_7ee4baf217d7",
+          "LR_bf3e79736d0c"
+        ],
+        "tiers": [
+          [
+            "LR_f27fb5ffabf9"
+          ],
+          [
+            "LR_1dfca31c24d7",
+            "LR_26795b95ef26"
+          ],
+          [
+            "LR_d9caab3d7c4a",
+            "LR_a0587957c904",
+            "LR_b71bcd7a275c"
+          ],
+          [
+            "LR_7ee4baf217d7",
+            "LR_bf3e79736d0c"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "7": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 86.5,
+      "steps": [
+        {
+          "region": "LR_5facc1321e92",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_5787cb8d10ad",
+          "candidate_tiers": [
+            {
+              "tier": 0,
+              "matching_peers": [
+                "LR_5facc1321e92"
+              ]
+            }
+          ],
+          "chosen_tier": 0
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_5facc1321e92",
+          "LR_5787cb8d10ad"
+        ],
+        "tiers": [
+          [
+            "LR_5facc1321e92",
+            "LR_5787cb8d10ad"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "15": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 136.0,
+      "steps": [
+        {
+          "region": "LR_dfef3de3ed48",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_35d30a3b10e1",
+          "candidate_tiers": [
+            {
+              "tier": 0,
+              "matching_peers": [
+                "LR_dfef3de3ed48"
+              ]
+            }
+          ],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_9636706b4855",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_f6dbfc4d4913",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_bf3e65667bd9",
+          "candidate_tiers": [
+            {
+              "tier": 2,
+              "matching_peers": [
+                "LR_f6dbfc4d4913"
+              ]
+            }
+          ],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_f3054b9c1820",
+          "candidate_tiers": [],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_0856a888b8df",
+          "candidate_tiers": [],
+          "chosen_tier": 4
+        },
+        {
+          "region": "LR_5bdd1160b3a0",
+          "candidate_tiers": [
+            {
+              "tier": 4,
+              "matching_peers": [
+                "LR_0856a888b8df"
+              ]
+            }
+          ],
+          "chosen_tier": 4
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_dfef3de3ed48",
+          "LR_35d30a3b10e1",
+          "LR_9636706b4855",
+          "LR_f6dbfc4d4913",
+          "LR_bf3e65667bd9",
+          "LR_f3054b9c1820",
+          "LR_0856a888b8df",
+          "LR_5bdd1160b3a0"
+        ],
+        "tiers": [
+          [
+            "LR_dfef3de3ed48",
+            "LR_35d30a3b10e1"
+          ],
+          [
+            "LR_9636706b4855"
+          ],
+          [
+            "LR_f6dbfc4d4913",
+            "LR_bf3e65667bd9"
+          ],
+          [
+            "LR_f3054b9c1820"
+          ],
+          [
+            "LR_0856a888b8df",
+            "LR_5bdd1160b3a0"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "17": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 67.0,
+      "steps": [
+        {
+          "region": "LR_8a526b453c10",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_554cd55f1a6a",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_0c630f218964",
+          "candidate_tiers": [
+            {
+              "tier": 1,
+              "matching_peers": [
+                "LR_554cd55f1a6a"
+              ]
+            }
+          ],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_de7b43ae45f7",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_952c7eac9aef",
+          "candidate_tiers": [],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_0523c7b7b258",
+          "candidate_tiers": [
+            {
+              "tier": 3,
+              "matching_peers": [
+                "LR_952c7eac9aef"
+              ]
+            }
+          ],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_11117a0bc73a",
+          "candidate_tiers": [],
+          "chosen_tier": 4
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_8a526b453c10",
+          "LR_554cd55f1a6a",
+          "LR_0c630f218964",
+          "LR_de7b43ae45f7",
+          "LR_0523c7b7b258",
+          "LR_952c7eac9aef",
+          "LR_11117a0bc73a"
+        ],
+        "tiers": [
+          [
+            "LR_8a526b453c10"
+          ],
+          [
+            "LR_554cd55f1a6a",
+            "LR_0c630f218964"
+          ],
+          [
+            "LR_de7b43ae45f7"
+          ],
+          [
+            "LR_0523c7b7b258",
+            "LR_952c7eac9aef"
+          ],
+          [
+            "LR_11117a0bc73a"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "18": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 58.0,
+      "steps": [
+        {
+          "region": "LR_aac2ef08be0e",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_77b6cc0407da",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_1c3c89ee5ac1",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_aac2ef08be0e",
+          "LR_77b6cc0407da",
+          "LR_1c3c89ee5ac1"
+        ],
+        "tiers": [
+          [
+            "LR_aac2ef08be0e"
+          ],
+          [
+            "LR_77b6cc0407da"
+          ],
+          [
+            "LR_1c3c89ee5ac1"
+          ]
+        ],
+        "ambiguous": []
+      }
+    },
+    "38": {
+      "input_sort": "(bbox.y1, bbox.x1, stable string id)",
+      "same_tier_predicate": "any existing tier peer has normalized vertical overlap >= 0.50",
+      "tier_output_sort": "(minimum tier y1, minimum stable id)",
+      "manga_peer_sort": "x1 descending, then y1, then stable id",
+      "median_height_unused_by_frozen_rule": 84.0,
+      "steps": [
+        {
+          "region": "LR_ac01f1796688",
+          "candidate_tiers": [],
+          "chosen_tier": 0
+        },
+        {
+          "region": "LR_2da60c343d36",
+          "candidate_tiers": [],
+          "chosen_tier": 1
+        },
+        {
+          "region": "LR_2010e3d36608",
+          "candidate_tiers": [],
+          "chosen_tier": 2
+        },
+        {
+          "region": "LR_563eb986d1f9",
+          "candidate_tiers": [],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_5cb918f74103",
+          "candidate_tiers": [
+            {
+              "tier": 3,
+              "matching_peers": [
+                "LR_563eb986d1f9"
+              ]
+            }
+          ],
+          "chosen_tier": 3
+        },
+        {
+          "region": "LR_505a871ebd18",
+          "candidate_tiers": [],
+          "chosen_tier": 4
+        }
+      ],
+      "bridge_events": [],
+      "result": {
+        "order": [
+          "LR_ac01f1796688",
+          "LR_2da60c343d36",
+          "LR_2010e3d36608",
+          "LR_5cb918f74103",
+          "LR_563eb986d1f9",
+          "LR_505a871ebd18"
+        ],
+        "tiers": [
+          [
+            "LR_ac01f1796688"
+          ],
+          [
+            "LR_2da60c343d36"
+          ],
+          [
+            "LR_2010e3d36608"
+          ],
+          [
+            "LR_5cb918f74103",
+            "LR_563eb986d1f9"
+          ],
+          [
+            "LR_505a871ebd18"
+          ]
+        ],
+        "ambiguous": []
+      }
+    }
+  }
+}

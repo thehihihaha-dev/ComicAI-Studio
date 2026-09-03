@@ -1,0 +1,65 @@
+{
+  "schema_version": "panel-unseen-evaluation-protocol.v1",
+  "checkpoint": "12.4",
+  "mode": "POST_HUMAN_EVALUATION_OF_EXISTING_FROZEN_OUTPUT_ONLY",
+  "cohort_pages": [
+    3,
+    4,
+    5,
+    7,
+    18,
+    38
+  ],
+  "frozen_inputs": {
+    "prediction_fingerprint_sha256": "a0f7d0559922376be3bb665bce814d003425c59fdfbafb77c0a6bda78457e26a",
+    "human_gt_fingerprint_sha256": "f62e38d5ed28531681b9165cca77e0f62ab37b7cf92a5161cab0c9f0cb6216ea",
+    "resolution_output_file_sha256": "5b7eca8fed83970465a65de84509daa85d56b57369dc46c79964affccddc4772"
+  },
+  "matching": {
+    "method": "ONE_TO_ONE_MAX_CARDINALITY_THEN_MAX_TOTAL_BBOX_IOU",
+    "bbox_iou_threshold": 0.5,
+    "threshold_status": "EVALUATION_ONLY_PREDECLARED_CONVENTION_NOT_PRODUCTION_THRESHOLD",
+    "tie_break": "LEXICOGRAPHIC_STABLE_PANEL_IDS",
+    "threshold_sweep": false
+  },
+  "outcome_gates_source": "ai-workflow/CURRENT_TASK.md frozen before Human GT",
+  "outcome_gates": {
+    "A": {
+      "false_promoted": 0,
+      "precision": 1.0,
+      "min_recall": 0.6,
+      "min_f1": 0.75,
+      "max_unresolved_pages": 2,
+      "require_no_selected_structural_error": true,
+      "require_resolver_matches_not_below_raw_detected_control": true
+    },
+    "B": {
+      "min_precision": 0.9,
+      "max_false_promoted": 1,
+      "min_recall": 0.35,
+      "require_resolver_matches_not_below_raw_detected_control": true
+    }
+  },
+  "failure_taxonomy": [
+    "MISSING_CANDIDATE_GENERATION",
+    "CONFLICT_RESOLUTION",
+    "UNDER_SPLITTING",
+    "OVER_SPLITTING",
+    "CONTOUR_NOISE",
+    "BORDERLESS_PANEL",
+    "PAGE_EDGE_STRUCTURE",
+    "IRREGULAR_GEOMETRY",
+    "AMBIGUITY_POLICY",
+    "OTHER_EVIDENCE_SUPPORTED"
+  ],
+  "detector_rerun": false,
+  "resolver_rerun": false,
+  "tuning": false,
+  "gt_runtime_features": [],
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  }
+}

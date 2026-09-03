@@ -1,0 +1,32 @@
+{
+  "schema_version": "panel-relation-tolerance-protocol.v1",
+  "checkpoint": "12.6",
+  "status": "FROZEN_BEFORE_HUMAN_READING_ORDER_ACCESS",
+  "label": "EXPERIMENT_PREDECLARED_SOURCE_PIXEL_QUANTIZATION_V1",
+  "candidate_count": 1,
+  "formula": {
+    "normalized_bbox": [
+      "x1/W",
+      "y1/H",
+      "x2/W",
+      "y2/H"
+    ],
+    "tau_x": "1/W",
+    "tau_y": "1/H",
+    "source_pixel_intrusion": 1,
+    "comparison": "intrusion_axis <= tau_axis",
+    "boundary_equality": "ACCEPTED",
+    "numeric_representation": "EXACT_DECIMAL_FROM_SERIALIZED_COORDINATES"
+  },
+  "scope": "RECURSIVE_GUILLOTINE_CLEAN_SEPARATION_ONLY",
+  "bbox_expansion": false,
+  "assignment": [
+    "UNIQUE_CONTAINMENT",
+    "UNIQUE_CENTER_AND_STRICT_AREA_MAJORITY_GT_0.50",
+    "AMBIGUOUS",
+    "UNASSIGNED"
+  ],
+  "intra_panel_rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+  "gt_runtime_features": [],
+  "protocol_sha256": "d1ecf62cc8e8183fae975d3feed3765d1ed0bba9f0822a49f6373888516fd4c7"
+}

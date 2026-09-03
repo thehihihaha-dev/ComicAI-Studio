@@ -1,0 +1,2315 @@
+{
+  "checkpoint": "12.2",
+  "pages": [
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            78,
+            91,
+            827,
+            1187
+          ],
+          "bbox_normalized": [
+            0.086667,
+            0.071094,
+            0.918889,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_5453f86ee713"
+          ],
+          "panel_id": "PN_f3c6178a2421",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            598,
+            93,
+            826,
+            560
+          ],
+          "bbox_normalized": [
+            0.664444,
+            0.072656,
+            0.917778,
+            0.4375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993482,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_f3c6178a2421"
+          ],
+          "panel_id": "PN_5453f86ee713",
+          "polygon": [
+            [
+              598,
+              93
+            ],
+            [
+              598,
+              559
+            ],
+            [
+              825,
+              559
+            ],
+            [
+              825,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            129,
+            321,
+            270,
+            546
+          ],
+          "bbox_normalized": [
+            0.143333,
+            0.250781,
+            0.3,
+            0.426563
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.789961,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [],
+          "panel_id": "PN_7095c1213477",
+          "polygon": [
+            [
+              184,
+              321
+            ],
+            [
+              239,
+              340
+            ],
+            [
+              267,
+              405
+            ],
+            [
+              261,
+              496
+            ],
+            [
+              207,
+              545
+            ],
+            [
+              156,
+              525
+            ],
+            [
+              129,
+              450
+            ],
+            [
+              137,
+              374
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 1,
+      "unresolved": true
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            635,
+            660,
+            762,
+            897
+          ],
+          "bbox_normalized": [
+            0.705556,
+            0.515625,
+            0.846667,
+            0.700781
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.987873,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [],
+          "panel_id": "PN_1bc7a0e7aaaa",
+          "polygon": [
+            [
+              636,
+              660
+            ],
+            [
+              761,
+              661
+            ],
+            [
+              760,
+              896
+            ],
+            [
+              635,
+              895
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 2,
+      "unresolved": false
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            80,
+            90,
+            827,
+            496
+          ],
+          "bbox_normalized": [
+            0.088889,
+            0.070312,
+            0.918889,
+            0.3875
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.996173,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_3434a2701d8c"
+          ],
+          "panel_id": "PN_befc93661d98",
+          "polygon": [
+            [
+              81,
+              93
+            ],
+            [
+              81,
+              494
+            ],
+            [
+              825,
+              494
+            ],
+            [
+              825,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            149,
+            151,
+            307,
+            431
+          ],
+          "bbox_normalized": [
+            0.165556,
+            0.117969,
+            0.341111,
+            0.336719
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.990077,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_befc93661d98"
+          ],
+          "panel_id": "PN_3434a2701d8c",
+          "polygon": [
+            [
+              150,
+              151
+            ],
+            [
+              306,
+              152
+            ],
+            [
+              305,
+              430
+            ],
+            [
+              149,
+              429
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            80,
+            867,
+            827,
+            1216
+          ],
+          "bbox_normalized": [
+            0.088889,
+            0.677344,
+            0.918889,
+            0.95
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_f213d1da9efd",
+            "PN_6792c0bfba14"
+          ],
+          "panel_id": "PN_da66c62e69c6",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            81,
+            868,
+            278,
+            1187
+          ],
+          "bbox_normalized": [
+            0.09,
+            0.678125,
+            0.308889,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.991805,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_da66c62e69c6"
+          ],
+          "panel_id": "PN_f213d1da9efd",
+          "polygon": [
+            [
+              81,
+              868
+            ],
+            [
+              81,
+              1186
+            ],
+            [
+              277,
+              1186
+            ],
+            [
+              277,
+              868
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            285,
+            868,
+            826,
+            1187
+          ],
+          "bbox_normalized": [
+            0.316667,
+            0.678125,
+            0.917778,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.995023,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_da66c62e69c6"
+          ],
+          "panel_id": "PN_6792c0bfba14",
+          "polygon": [
+            [
+              285,
+              868
+            ],
+            [
+              285,
+              1186
+            ],
+            [
+              825,
+              1186
+            ],
+            [
+              825,
+              868
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 3,
+      "unresolved": false
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            101,
+            372,
+            266,
+            584
+          ],
+          "bbox_normalized": [
+            0.112222,
+            0.290625,
+            0.295556,
+            0.45625
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.747799,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [],
+          "panel_id": "PN_b6d7cc69b0e5",
+          "polygon": [
+            [
+              210,
+              373
+            ],
+            [
+              265,
+              455
+            ],
+            [
+              262,
+              511
+            ],
+            [
+              223,
+              569
+            ],
+            [
+              158,
+              583
+            ],
+            [
+              109,
+              537
+            ],
+            [
+              102,
+              451
+            ],
+            [
+              150,
+              383
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            743,
+            823,
+            1190
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.580469,
+            0.914444,
+            0.929688
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_a8da83358244",
+            "PN_952651e84374"
+          ],
+          "panel_id": "PN_1b619a0db400",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            75,
+            744,
+            544,
+            1187
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.58125,
+            0.604444,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993526,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_1b619a0db400"
+          ],
+          "panel_id": "PN_a8da83358244",
+          "polygon": [
+            [
+              75,
+              744
+            ],
+            [
+              75,
+              1186
+            ],
+            [
+              543,
+              1186
+            ],
+            [
+              543,
+              744
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            550,
+            744,
+            821,
+            1187
+          ],
+          "bbox_normalized": [
+            0.611111,
+            0.58125,
+            0.912222,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.990454,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_1b619a0db400"
+          ],
+          "panel_id": "PN_952651e84374",
+          "polygon": [
+            [
+              550,
+              744
+            ],
+            [
+              550,
+              1186
+            ],
+            [
+              819,
+              1186
+            ],
+            [
+              819,
+              744
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 4,
+      "unresolved": false
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            450,
+            621,
+            824,
+            1184
+          ],
+          "bbox_normalized": [
+            0.5,
+            0.485156,
+            0.915556,
+            0.925
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.938921,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_72219006ff20"
+          ],
+          "panel_id": "PN_6bc262100136",
+          "polygon": [
+            [
+              451,
+              622
+            ],
+            [
+              823,
+              626
+            ],
+            [
+              821,
+              1183
+            ],
+            [
+              536,
+              921
+            ],
+            [
+              713,
+              1139
+            ],
+            [
+              452,
+              1181
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            633,
+            641,
+            797,
+            898
+          ],
+          "bbox_normalized": [
+            0.703333,
+            0.500781,
+            0.885556,
+            0.701562
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.98931,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_6bc262100136"
+          ],
+          "panel_id": "PN_72219006ff20",
+          "polygon": [
+            [
+              637,
+              641
+            ],
+            [
+              633,
+              890
+            ],
+            [
+              792,
+              897
+            ],
+            [
+              796,
+              642
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 5,
+      "unresolved": true
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            72,
+            798,
+            824,
+            1188
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.623437,
+            0.915556,
+            0.928125
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.99609,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_6af47394f6b8",
+            "PN_5a5fe7915c09"
+          ],
+          "panel_id": "PN_54c078540d26",
+          "polygon": [
+            [
+              76,
+              798
+            ],
+            [
+              76,
+              1186
+            ],
+            [
+              820,
+              1186
+            ],
+            [
+              820,
+              798
+            ]
+          ],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            393,
+            855,
+            534,
+            1080
+          ],
+          "bbox_normalized": [
+            0.436667,
+            0.667969,
+            0.593333,
+            0.84375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.778881,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_54c078540d26"
+          ],
+          "panel_id": "PN_6af47394f6b8",
+          "polygon": [
+            [
+              452,
+              855
+            ],
+            [
+              408,
+              890
+            ],
+            [
+              393,
+              970
+            ],
+            [
+              420,
+              1063
+            ],
+            [
+              479,
+              1079
+            ],
+            [
+              512,
+              1044
+            ],
+            [
+              533,
+              948
+            ],
+            [
+              508,
+              878
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            124,
+            883,
+            257,
+            1136
+          ],
+          "bbox_normalized": [
+            0.137778,
+            0.689844,
+            0.285556,
+            0.8875
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.988076,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_54c078540d26"
+          ],
+          "panel_id": "PN_5a5fe7915c09",
+          "polygon": [
+            [
+              126,
+              883
+            ],
+            [
+              125,
+              1134
+            ],
+            [
+              254,
+              1135
+            ],
+            [
+              256,
+              884
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 7,
+      "unresolved": false
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            72,
+            62,
+            822,
+            597
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.048438,
+            0.913333,
+            0.466406
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_cd3c591dd373"
+          ],
+          "panel_id": "PN_fb251433909a",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            613,
+            93,
+            821,
+            594
+          ],
+          "bbox_normalized": [
+            0.681111,
+            0.072656,
+            0.912222,
+            0.464062
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993187,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_fb251433909a"
+          ],
+          "panel_id": "PN_cd3c591dd373",
+          "polygon": [
+            [
+              613,
+              93
+            ],
+            [
+              613,
+              592
+            ],
+            [
+              818,
+              593
+            ],
+            [
+              820,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            440,
+            108,
+            597,
+            358
+          ],
+          "bbox_normalized": [
+            0.488889,
+            0.084375,
+            0.663333,
+            0.279687
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.79586,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [],
+          "panel_id": "PN_976b6ecbd264",
+          "polygon": [
+            [
+              530,
+              108
+            ],
+            [
+              582,
+              149
+            ],
+            [
+              596,
+              262
+            ],
+            [
+              576,
+              326
+            ],
+            [
+              510,
+              357
+            ],
+            [
+              457,
+              310
+            ],
+            [
+              440,
+              205
+            ],
+            [
+              462,
+              144
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            92,
+            314,
+            246,
+            571
+          ],
+          "bbox_normalized": [
+            0.102222,
+            0.245312,
+            0.273333,
+            0.446094
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.79001,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [],
+          "panel_id": "PN_89ccfb5a4f48",
+          "polygon": [
+            [
+              184,
+              314
+            ],
+            [
+              229,
+              352
+            ],
+            [
+              245,
+              452
+            ],
+            [
+              220,
+              543
+            ],
+            [
+              160,
+              570
+            ],
+            [
+              100,
+              499
+            ],
+            [
+              94,
+              407
+            ],
+            [
+              120,
+              339
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            610,
+            822,
+            879
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.476562,
+            0.913333,
+            0.686719
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.994917,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_52ed3d35c7c6"
+          ],
+          "panel_id": "PN_cf3c6e8976b9",
+          "polygon": [
+            [
+              75,
+              611
+            ],
+            [
+              75,
+              877
+            ],
+            [
+              820,
+              877
+            ],
+            [
+              819,
+              611
+            ]
+          ],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            143,
+            625,
+            288,
+            862
+          ],
+          "bbox_normalized": [
+            0.158889,
+            0.488281,
+            0.32,
+            0.673438
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.784184,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_cf3c6e8976b9"
+          ],
+          "panel_id": "PN_52ed3d35c7c6",
+          "polygon": [
+            [
+              182,
+              625
+            ],
+            [
+              245,
+              635
+            ],
+            [
+              287,
+              702
+            ],
+            [
+              274,
+              816
+            ],
+            [
+              226,
+              861
+            ],
+            [
+              174,
+              842
+            ],
+            [
+              148,
+              793
+            ],
+            [
+              144,
+              683
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            894,
+            822,
+            1190
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.698438,
+            0.913333,
+            0.929688
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_40b666b58c82",
+            "PN_e342039122d3",
+            "PN_158fab2f3726",
+            "PN_385d6c12981e"
+          ],
+          "panel_id": "PN_7fcdb3cbf7b5",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            75,
+            895,
+            242,
+            1187
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.699219,
+            0.268889,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.990608,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_7fcdb3cbf7b5"
+          ],
+          "panel_id": "PN_40b666b58c82",
+          "polygon": [
+            [
+              75,
+              895
+            ],
+            [
+              75,
+              1186
+            ],
+            [
+              241,
+              1186
+            ],
+            [
+              241,
+              895
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            249,
+            895,
+            821,
+            1187
+          ],
+          "bbox_normalized": [
+            0.276667,
+            0.699219,
+            0.912222,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.994827,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_7fcdb3cbf7b5",
+            "PN_158fab2f3726",
+            "PN_385d6c12981e"
+          ],
+          "panel_id": "PN_e342039122d3",
+          "polygon": [
+            [
+              249,
+              895
+            ],
+            [
+              250,
+              1186
+            ],
+            [
+              820,
+              1185
+            ],
+            [
+              820,
+              895
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            476,
+            898,
+            818,
+            1184
+          ],
+          "bbox_normalized": [
+            0.528889,
+            0.701562,
+            0.908889,
+            0.925
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.760643,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_7fcdb3cbf7b5",
+            "PN_e342039122d3",
+            "PN_385d6c12981e"
+          ],
+          "panel_id": "PN_158fab2f3726",
+          "polygon": [
+            [
+              482,
+              900
+            ],
+            [
+              816,
+              898
+            ],
+            [
+              817,
+              1182
+            ],
+            [
+              661,
+              1183
+            ],
+            [
+              626,
+              1039
+            ],
+            [
+              577,
+              1018
+            ],
+            [
+              514,
+              1183
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            636,
+            917,
+            812,
+            1164
+          ],
+          "bbox_normalized": [
+            0.706667,
+            0.716406,
+            0.902222,
+            0.909375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.782205,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_7fcdb3cbf7b5",
+            "PN_e342039122d3",
+            "PN_158fab2f3726"
+          ],
+          "panel_id": "PN_385d6c12981e",
+          "polygon": [
+            [
+              727,
+              917
+            ],
+            [
+              772,
+              930
+            ],
+            [
+              811,
+              1006
+            ],
+            [
+              800,
+              1099
+            ],
+            [
+              738,
+              1163
+            ],
+            [
+              658,
+              1135
+            ],
+            [
+              637,
+              974
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 15,
+      "unresolved": true
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            72,
+            90,
+            822,
+            501
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.070312,
+            0.913333,
+            0.391406
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_10b3e15d09b5",
+            "PN_ca1bf9d09d63",
+            "PN_765e9f872db8"
+          ],
+          "panel_id": "PN_fcb8af17f461",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            75,
+            93,
+            522,
+            500
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.072656,
+            0.58,
+            0.390625
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.995311,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_fcb8af17f461",
+            "PN_765e9f872db8"
+          ],
+          "panel_id": "PN_10b3e15d09b5",
+          "polygon": [
+            [
+              75,
+              93
+            ],
+            [
+              75,
+              499
+            ],
+            [
+              521,
+              499
+            ],
+            [
+              521,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            528,
+            93,
+            821,
+            501
+          ],
+          "bbox_normalized": [
+            0.586667,
+            0.072656,
+            0.912222,
+            0.391406
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.988326,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_fcb8af17f461"
+          ],
+          "panel_id": "PN_ca1bf9d09d63",
+          "polygon": [
+            [
+              528,
+              93
+            ],
+            [
+              529,
+              499
+            ],
+            [
+              820,
+              499
+            ],
+            [
+              820,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            84,
+            255,
+            247,
+            492
+          ],
+          "bbox_normalized": [
+            0.093333,
+            0.199219,
+            0.274444,
+            0.384375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.783645,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_fcb8af17f461",
+            "PN_10b3e15d09b5"
+          ],
+          "panel_id": "PN_765e9f872db8",
+          "polygon": [
+            [
+              177,
+              255
+            ],
+            [
+              224,
+              294
+            ],
+            [
+              246,
+              370
+            ],
+            [
+              226,
+              455
+            ],
+            [
+              154,
+              491
+            ],
+            [
+              97,
+              437
+            ],
+            [
+              84,
+              346
+            ],
+            [
+              120,
+              273
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            71,
+            516,
+            822,
+            713
+          ],
+          "bbox_normalized": [
+            0.078889,
+            0.403125,
+            0.913333,
+            0.557031
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.988431,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_a948b7bf5d5f"
+          ],
+          "panel_id": "PN_80ad3d363a63",
+          "polygon": [
+            [
+              75,
+              517
+            ],
+            [
+              75,
+              710
+            ],
+            [
+              820,
+              710
+            ],
+            [
+              820,
+              517
+            ]
+          ],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            77,
+            520,
+            241,
+            708
+          ],
+          "bbox_normalized": [
+            0.085556,
+            0.40625,
+            0.267778,
+            0.553125
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.930008,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_80ad3d363a63"
+          ],
+          "panel_id": "PN_a948b7bf5d5f",
+          "polygon": [
+            [
+              78,
+              520
+            ],
+            [
+              228,
+              522
+            ],
+            [
+              226,
+              681
+            ],
+            [
+              190,
+              707
+            ],
+            [
+              77,
+              706
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            727,
+            822,
+            1190
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.567969,
+            0.913333,
+            0.929688
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_e76ac7ecdd65",
+            "PN_920ae91c85fa"
+          ],
+          "panel_id": "PN_72086ec533d3",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            75,
+            728,
+            588,
+            1187
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.56875,
+            0.653333,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993935,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_72086ec533d3"
+          ],
+          "panel_id": "PN_e76ac7ecdd65",
+          "polygon": [
+            [
+              75,
+              728
+            ],
+            [
+              75,
+              1186
+            ],
+            [
+              586,
+              1185
+            ],
+            [
+              585,
+              728
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            593,
+            728,
+            821,
+            1187
+          ],
+          "bbox_normalized": [
+            0.658889,
+            0.56875,
+            0.912222,
+            0.927344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.99344,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_72086ec533d3"
+          ],
+          "panel_id": "PN_920ae91c85fa",
+          "polygon": [
+            [
+              593,
+              728
+            ],
+            [
+              593,
+              1186
+            ],
+            [
+              819,
+              1186
+            ],
+            [
+              820,
+              728
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 17,
+      "unresolved": true
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            75,
+            86,
+            827,
+            467
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.067187,
+            0.918889,
+            0.364844
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_f2200cb384a8",
+            "PN_f4be483d0ea3"
+          ],
+          "panel_id": "PN_d92e8767a701",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            505,
+            89,
+            827,
+            465
+          ],
+          "bbox_normalized": [
+            0.561111,
+            0.069531,
+            0.918889,
+            0.363281
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.988532,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_d92e8767a701"
+          ],
+          "panel_id": "PN_f2200cb384a8",
+          "polygon": [
+            [
+              825,
+              90
+            ],
+            [
+              505,
+              90
+            ],
+            [
+              506,
+              464
+            ],
+            [
+              825,
+              464
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            78,
+            90,
+            499,
+            466
+          ],
+          "bbox_normalized": [
+            0.086667,
+            0.070312,
+            0.554444,
+            0.364063
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.992315,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_d92e8767a701"
+          ],
+          "panel_id": "PN_f4be483d0ea3",
+          "polygon": [
+            [
+              78,
+              91
+            ],
+            [
+              79,
+              464
+            ],
+            [
+              498,
+              463
+            ],
+            [
+              498,
+              90
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 18,
+      "unresolved": false
+    },
+    {
+      "ambiguous_panels": [
+        {
+          "bbox": [
+            71,
+            91,
+            819,
+            420
+          ],
+          "bbox_normalized": [
+            0.078889,
+            0.071094,
+            0.91,
+            0.328125
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_86914f467fda",
+            "PN_c4c0ce67bc22"
+          ],
+          "panel_id": "PN_d7a50b306189",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            93,
+            619,
+            419
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.072656,
+            0.687778,
+            0.327344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.99511,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_d7a50b306189"
+          ],
+          "panel_id": "PN_86914f467fda",
+          "polygon": [
+            [
+              72,
+              93
+            ],
+            [
+              72,
+              418
+            ],
+            [
+              618,
+              418
+            ],
+            [
+              618,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            626,
+            93,
+            818,
+            419
+          ],
+          "bbox_normalized": [
+            0.695556,
+            0.072656,
+            0.908889,
+            0.327344
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.99174,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_d7a50b306189"
+          ],
+          "panel_id": "PN_c4c0ce67bc22",
+          "polygon": [
+            [
+              626,
+              93
+            ],
+            [
+              626,
+              418
+            ],
+            [
+              817,
+              418
+            ],
+            [
+              817,
+              93
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            70,
+            433,
+            819,
+            716
+          ],
+          "bbox_normalized": [
+            0.077778,
+            0.338281,
+            0.91,
+            0.559375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": null,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_1d64a6696cae",
+            "PN_356b259b380a"
+          ],
+          "panel_id": "PN_2dc1bfa2af64",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            72,
+            434,
+            426,
+            715
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.339062,
+            0.473333,
+            0.558594
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993621,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_2dc1bfa2af64"
+          ],
+          "panel_id": "PN_1d64a6696cae",
+          "polygon": [
+            [
+              72,
+              435
+            ],
+            [
+              72,
+              714
+            ],
+            [
+              425,
+              714
+            ],
+            [
+              425,
+              434
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            433,
+            435,
+            818,
+            716
+          ],
+          "bbox_normalized": [
+            0.481111,
+            0.339844,
+            0.908889,
+            0.559375
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.993659,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_2dc1bfa2af64"
+          ],
+          "panel_id": "PN_356b259b380a",
+          "polygon": [
+            [
+              433,
+              435
+            ],
+            [
+              433,
+              714
+            ],
+            [
+              817,
+              714
+            ],
+            [
+              817,
+              435
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            71,
+            731,
+            368,
+            1192
+          ],
+          "bbox_normalized": [
+            0.078889,
+            0.571094,
+            0.408889,
+            0.93125
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.994429,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_3579e028221d"
+          ],
+          "panel_id": "PN_24859586c1ec",
+          "polygon": [
+            [
+              72,
+              732
+            ],
+            [
+              72,
+              1188
+            ],
+            [
+              366,
+              1188
+            ],
+            [
+              366,
+              732
+            ]
+          ],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        },
+        {
+          "bbox": [
+            214,
+            912,
+            354,
+            1150
+          ],
+          "bbox_normalized": [
+            0.237778,
+            0.7125,
+            0.393333,
+            0.898438
+          ],
+          "heuristic_evidence": {
+            "rectangularity": 0.771339,
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1
+          },
+          "overlap_conflict_panel_ids": [
+            "PN_24859586c1ec"
+          ],
+          "panel_id": "PN_3579e028221d",
+          "polygon": [
+            [
+              291,
+              912
+            ],
+            [
+              342,
+              961
+            ],
+            [
+              352,
+              1043
+            ],
+            [
+              320,
+              1131
+            ],
+            [
+              254,
+              1149
+            ],
+            [
+              214,
+              1005
+            ],
+            [
+              240,
+              943
+            ]
+          ],
+          "provenance": [
+            "border_contour"
+          ],
+          "state": "AMBIGUOUS",
+          "touches_page_edge": []
+        }
+      ],
+      "page_order": 38,
+      "unresolved": false
+    }
+  ],
+  "schema_version": "panel-ambiguities.v1"
+}

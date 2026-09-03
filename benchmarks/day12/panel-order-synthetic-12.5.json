@@ -1,0 +1,1774 @@
+{
+  "schema_version": "panel-order-synthetic.v2",
+  "checkpoint": "12.5",
+  "results": [
+    {
+      "fixture": "2x2_rtl",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "horizontal_pair",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p1",
+          "p0"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "vertical_pair",
+      "path": "order_panels",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p1"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p1"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "tall_right_stacked_left",
+      "path": "order_panels",
+      "expected": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "observed": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p1",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p1",
+              "p2"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p1",
+              "p2"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "tall_left_stacked_right",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p2",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p2",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p1",
+          "p2",
+          "p0"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p2",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p0"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "spanning_top",
+      "path": "order_panels",
+      "expected": [
+        "p0",
+        "p2",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p2",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p0",
+          "p2",
+          "p1"
+        ],
+        "edges": [
+          {
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p1"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 30.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p2",
+              "p1"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p1"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 30.0,
+            "before_panel_ids": [
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p2",
+              "p1"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p1"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "spanning_bottom",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p0",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p2"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "offset_panels",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 58.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 55.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 58.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 55.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "bridge_non_transitivity",
+      "path": "order_panels",
+      "expected": [
+        "p2",
+        "p1",
+        "p0"
+      ],
+      "observed": [
+        "p2",
+        "p1",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p2",
+          "p1",
+          "p0"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p2",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p2",
+            "after": "p0"
+          },
+          {
+            "before": "p2",
+            "after": "p1"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 80.0,
+            "before_panel_ids": [
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p1",
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "RIGHT_OF",
+            "cut": 80.0,
+            "before_panel_ids": [
+              "p2"
+            ],
+            "after_panel_ids": [
+              "p1",
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    },
+    {
+      "fixture": "ambiguous_overlap",
+      "path": "order_panels",
+      "expected": "UNRESOLVED",
+      "observed": "UNRESOLVED",
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      }
+    },
+    {
+      "fixture": "explicit_cycle",
+      "path": "topological_order",
+      "expected": "UNRESOLVED",
+      "observed": "UNRESOLVED",
+      "pass": true,
+      "trace": {
+        "order": [],
+        "transitive_closure": [
+          {
+            "before": "a",
+            "after": "a"
+          },
+          {
+            "before": "a",
+            "after": "b"
+          },
+          {
+            "before": "b",
+            "after": "a"
+          },
+          {
+            "before": "b",
+            "after": "b"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [],
+            "emitted": null
+          }
+        ],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "a",
+              "b"
+            ],
+            "reason": "CYCLE"
+          }
+        ],
+        "resolved": false
+      }
+    },
+    {
+      "fixture": "empty_panel",
+      "path": "panel_aware_order",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "trace": {
+        "status": "RESOLVED",
+        "sequence": [],
+        "panel_order": {
+          "nodes": [
+            "p0"
+          ],
+          "order": [
+            "p0"
+          ],
+          "edges": [],
+          "transitive_closure": [],
+          "topological_trace": [
+            {
+              "ready": [
+                "p0"
+              ],
+              "emitted": "p0"
+            }
+          ],
+          "partitions": [],
+          "components": [],
+          "cycles": [],
+          "unresolved": [],
+          "resolved": true
+        },
+        "assignment": {
+          "assignments": [],
+          "ambiguous": [],
+          "unassigned": []
+        },
+        "intra_panel": {
+          "p0": {
+            "order": [],
+            "tiers": [],
+            "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+            "parameter_status": "BENCHMARK_FITTED"
+          }
+        },
+        "unresolved_reasons": [],
+        "gt_runtime_features": []
+      }
+    },
+    {
+      "fixture": "clean_containment",
+      "path": "assign_regions",
+      "expected": "UNIQUE_CONTAINMENT",
+      "observed": "UNIQUE_CONTAINMENT",
+      "pass": true,
+      "trace": {
+        "assignments": [
+          {
+            "region_id": "r",
+            "competing_panels": [
+              {
+                "panel_id": "p",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "p",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      }
+    },
+    {
+      "fixture": "majority_intersection",
+      "path": "assign_regions",
+      "expected": "UNIQUE_CENTER_STRICT_MAJORITY",
+      "observed": "UNIQUE_CENTER_STRICT_MAJORITY",
+      "pass": true,
+      "trace": {
+        "assignments": [
+          {
+            "region_id": "r",
+            "competing_panels": [
+              {
+                "panel_id": "p",
+                "coverage": 0.75,
+                "contains": false,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "p",
+            "method": "UNIQUE_CENTER_STRICT_MAJORITY",
+            "state": "ASSIGNED_INTERSECTION"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      }
+    },
+    {
+      "fixture": "cross_border_ambiguity",
+      "path": "assign_regions",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS",
+      "pass": true,
+      "trace": {
+        "assignments": [],
+        "ambiguous": [
+          {
+            "region_id": "r",
+            "competing_panels": [
+              {
+                "panel_id": "a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "reason": "MULTIPLE_ELIGIBLE_PANELS"
+          }
+        ],
+        "unassigned": []
+      }
+    },
+    {
+      "fixture": "unassigned_region",
+      "path": "assign_regions",
+      "expected": "UNASSIGNED",
+      "observed": "UNASSIGNED",
+      "pass": true,
+      "trace": {
+        "assignments": [],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "r",
+            "competing_panels": [
+              {
+                "panel_id": "p",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "full_hierarchy",
+      "path": "panel_aware_order",
+      "expected": [
+        "right_top",
+        "right_bottom",
+        "left"
+      ],
+      "observed": [
+        "right_top",
+        "right_bottom",
+        "left"
+      ],
+      "pass": true,
+      "trace": {
+        "status": "RESOLVED",
+        "sequence": [
+          "right_top",
+          "right_bottom",
+          "left"
+        ],
+        "panel_order": {
+          "nodes": [
+            "left_panel",
+            "right_panel"
+          ],
+          "order": [
+            "right_panel",
+            "left_panel"
+          ],
+          "edges": [
+            {
+              "before": "right_panel",
+              "after": "left_panel",
+              "relation": "RIGHT_OF"
+            }
+          ],
+          "transitive_closure": [
+            {
+              "before": "right_panel",
+              "after": "left_panel"
+            }
+          ],
+          "topological_trace": [
+            {
+              "ready": [
+                "right_panel"
+              ],
+              "emitted": "right_panel"
+            },
+            {
+              "ready": [
+                "left_panel"
+              ],
+              "emitted": "left_panel"
+            }
+          ],
+          "partitions": [
+            {
+              "relation": "RIGHT_OF",
+              "cut": 60.0,
+              "before_panel_ids": [
+                "right_panel"
+              ],
+              "after_panel_ids": [
+                "left_panel"
+              ]
+            }
+          ],
+          "components": [
+            {
+              "relation": "RIGHT_OF",
+              "cut": 60.0,
+              "before_panel_ids": [
+                "right_panel"
+              ],
+              "after_panel_ids": [
+                "left_panel"
+              ]
+            }
+          ],
+          "cycles": [],
+          "unresolved": [],
+          "resolved": true
+        },
+        "assignment": {
+          "assignments": [
+            {
+              "region_id": "right_top",
+              "competing_panels": [
+                {
+                  "panel_id": "left_panel",
+                  "coverage": 0.0,
+                  "contains": false,
+                  "center_inside": false
+                },
+                {
+                  "panel_id": "right_panel",
+                  "coverage": 1.0,
+                  "contains": true,
+                  "center_inside": true
+                }
+              ],
+              "panel_id": "right_panel",
+              "method": "UNIQUE_CONTAINMENT",
+              "state": "ASSIGNED_CONTAINED"
+            },
+            {
+              "region_id": "right_bottom",
+              "competing_panels": [
+                {
+                  "panel_id": "left_panel",
+                  "coverage": 0.0,
+                  "contains": false,
+                  "center_inside": false
+                },
+                {
+                  "panel_id": "right_panel",
+                  "coverage": 1.0,
+                  "contains": true,
+                  "center_inside": true
+                }
+              ],
+              "panel_id": "right_panel",
+              "method": "UNIQUE_CONTAINMENT",
+              "state": "ASSIGNED_CONTAINED"
+            },
+            {
+              "region_id": "left",
+              "competing_panels": [
+                {
+                  "panel_id": "left_panel",
+                  "coverage": 1.0,
+                  "contains": true,
+                  "center_inside": true
+                },
+                {
+                  "panel_id": "right_panel",
+                  "coverage": 0.0,
+                  "contains": false,
+                  "center_inside": false
+                }
+              ],
+              "panel_id": "left_panel",
+              "method": "UNIQUE_CONTAINMENT",
+              "state": "ASSIGNED_CONTAINED"
+            }
+          ],
+          "ambiguous": [],
+          "unassigned": []
+        },
+        "intra_panel": {
+          "left_panel": {
+            "order": [
+              "left"
+            ],
+            "tiers": [
+              [
+                "left"
+              ]
+            ],
+            "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+            "parameter_status": "BENCHMARK_FITTED"
+          },
+          "right_panel": {
+            "order": [
+              "right_top",
+              "right_bottom"
+            ],
+            "tiers": [
+              [
+                "right_top"
+              ],
+              [
+                "right_bottom"
+              ]
+            ],
+            "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+            "parameter_status": "BENCHMARK_FITTED"
+          }
+        },
+        "unresolved_reasons": [],
+        "gt_runtime_features": []
+      }
+    },
+    {
+      "fixture": "permutation_stable_ids",
+      "path": "order_panels",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 40.0,
+            "before_panel_ids": [
+              "p1",
+              "p0"
+            ],
+            "after_panel_ids": [
+              "p3",
+              "p2"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p1"
+            ],
+            "after_panel_ids": [
+              "p0"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 60.0,
+            "before_panel_ids": [
+              "p3"
+            ],
+            "after_panel_ids": [
+              "p2"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      }
+    }
+  ],
+  "human_metrics_included": false,
+  "all_pass": true,
+  "semantic_sha256": "4fb13908a1cb2f41a10e19febdee324ddb7b6064de2f35a29023b6ca34e7570e"
+}

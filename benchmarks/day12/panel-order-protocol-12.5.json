@@ -1,0 +1,19 @@
+{
+  "schema_version": "panel-order-protocol.v2",
+  "checkpoint": "12.5",
+  "status": "FROZEN_BEFORE_HUMAN_READING_ORDER_ACCESS",
+  "policy": "ZERO_TOLERANCE_STRICT_RECURSIVE_GUILLOTINE_MANGA_RTL",
+  "separation_tolerance": 0,
+  "horizontal_partition_precedes_vertical": true,
+  "unsupported_layout": "UNRESOLVED",
+  "assignment": [
+    "UNIQUE_CONTAINMENT",
+    "UNIQUE_CENTER_AND_STRICT_AREA_MAJORITY_GT_0.50",
+    "AMBIGUOUS",
+    "UNASSIGNED"
+  ],
+  "intra_panel_rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+  "intra_panel_parameter_status": "BENCHMARK_FITTED",
+  "gt_runtime_features": [],
+  "protocol_sha256": "9dcfe2eab0ba3e08212d6ef3dbbe23b7fe62093ae4cfed49549d1fbf1719ffe8"
+}

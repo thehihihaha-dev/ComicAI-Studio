@@ -1,0 +1,136 @@
+{
+  "schema_version": "panel-conflict-resolution-summary.v1",
+  "checkpoint": "12.3",
+  "outcome": "A. CONFLICT RESOLUTION PASS — SAFE STRUCTURAL RECOVERY",
+  "question_answer": "YES",
+  "frozen_inputs": {
+    "prediction_file_sha256": "80e46d5c6216e3d18e9686af149a0012911795a246d1323ae4bb74d516b4b735",
+    "prediction_semantic_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d"
+  },
+  "freeze": {
+    "protocol_file_sha256": "e540d3e342b9460c0086324c63a2971bd19f70774ec15d7ea407f6ce21aa50c2",
+    "graph_file_sha256": "3fc50d776c0aa87a50afafba5ccdd120086cbfea11033b35ff2d23dcf1521c35",
+    "graph_semantic_sha256": "c7d58b4b58765f4947b304e2f6e7ef00c7a5700355ebd0688d32b81b36e0381d",
+    "output_file_sha256": "7559e7560b0825fd5874306615bbe334465bd31e9c835077700448a4771da6c6",
+    "output_semantic_sha256": "2a7cb3ce091cc60eb126949a4ba64e98d1519305e0b107f2ad8d913b999045b3",
+    "output_frozen_before_gt": true,
+    "two_run_semantic_byte_equivalent": true
+  },
+  "aggregate": {
+    "human_panels": 15,
+    "selected_panels": 10,
+    "matched": 10,
+    "missed": 5,
+    "false_promoted": 0,
+    "precision": 1.0,
+    "recall": 0.666667,
+    "f1": 0.8,
+    "unresolved_pages": 1,
+    "under_split_selected": 0,
+    "over_split_selected": 0
+  },
+  "success_gates": {
+    "matched_at_least_10": true,
+    "zero_false": true,
+    "precision_one": true,
+    "recall_at_least_0666667": true,
+    "f1_at_least_080": true,
+    "unresolved_at_most_one": true,
+    "page_2_preserved": true,
+    "page_15_at_least_3": true,
+    "page_17_five": true,
+    "no_under_or_over_split_selected": true,
+    "geometry_mutated": false,
+    "gt_runtime_features": [],
+    "resource_guard": "NORMAL"
+  },
+  "resolution_reason_counts": {
+    "CONFLICT_NOT_RESOLVED": 12,
+    "GUILLOTINE_TILING_CHILD": 14,
+    "LOCKED_DETECTED": 7,
+    "MULTI_SOURCE_ATOMIC": 5,
+    "NESTED_INTERNAL_FRAGMENT": 11,
+    "UNDER_SPLIT_SPANNER": 7
+  },
+  "synthetic_results": [
+    {
+      "fixture": "under_split_parent",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "fixture": "nested_internal_fragment",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "outer"
+      ]
+    },
+    {
+      "fixture": "duplicate",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "outer"
+      ]
+    },
+    {
+      "fixture": "adjacent_panels",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "adjacent-left",
+        "adjacent-right"
+      ]
+    },
+    {
+      "fixture": "legitimate_large_single",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "large"
+      ]
+    },
+    {
+      "fixture": "tall_beside_stacked",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "bottom",
+        "tall",
+        "top"
+      ]
+    },
+    {
+      "fixture": "ambiguous_overlap_unresolved",
+      "result": "PASS",
+      "selected_panel_ids": []
+    },
+    {
+      "fixture": "locked_control",
+      "result": "PASS",
+      "selected_panel_ids": [
+        "locked-left",
+        "locked-right"
+      ]
+    }
+  ],
+  "behavioral_evidence": {
+    "frozen_input_fail_closed_executed_test": "test_validate_frozen_fails_closed_on_wrong_hash_or_mutation",
+    "gt_isolation_executed_test": "test_behavioral_gt_change_cannot_affect_real_resolver_path",
+    "gt_isolation_result": "PASS"
+  },
+  "recommended_next_step": "Unseen-page Human validation in a separately approved checkpoint before any Reader integration.",
+  "safety": {
+    "gt_runtime_features": [],
+    "human_gt_modified": false,
+    "frozen_predictions_modified": false,
+    "geometry_mutated": false,
+    "extractor_rerun": false,
+    "reading_order_run": false,
+    "model_calls": {
+      "ocr": 0,
+      "vlm": 0,
+      "ollama": 0
+    },
+    "resource_guard": "NORMAL"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "panel-unseen-human-gt-validation.v1",
+  "checkpoint": "12.4",
+  "status": "HUMAN_GT_REQUIRES_CORRECTION",
+  "human_confirmation_recorded": true,
+  "cohort_pages": [3, 4, 5, 7, 18, 38],
+  "verified": 6,
+  "pending": 0,
+  "panel_counts": {
+    "3": 3,
+    "4": 3,
+    "5": 3,
+    "7": 2,
+    "18": 3,
+    "38": 6
+  },
+  "total_human_panels": 20,
+  "ambiguous_panels": 0,
+  "non_ambiguous_panels": 20,
+  "human_gt_snapshot_sha256": "beea07d8e442cff0b2a573b4c148518b7e9eaf69d822199f44070079ef092ce7",
+  "prediction_fingerprint_sha256": "a0f7d0559922376be3bb665bce814d003425c59fdfbafb77c0a6bda78457e26a",
+  "prediction_fingerprint_unchanged": true,
+  "prediction_freeze_precedes_queue": true,
+  "prediction_freeze_precedes_human_saves": true,
+  "annotation_conditions": {
+    "predictions_hidden": true,
+    "prediction_fields_exposed": [],
+    "gt_runtime_features": []
+  },
+  "source_identity": "PASS_ALL_SIX",
+  "coordinate_validation": {
+    "positive_in_bounds": true,
+    "letterbox_compression_signature_present": false,
+    "common_display_padding_offset_present": false,
+    "page_horizontal_union_fractions": {
+      "3": 0.868502,
+      "4": 0.846501,
+      "5": 0.846083,
+      "7": 0.850990,
+      "18": 0.847380,
+      "38": 0.850820
+    },
+    "mapping_roundtrip_tests": "PASS",
+    "resize_and_outside_image_tests": "PASS"
+  },
+  "persistence": {
+    "independent_reads": 2,
+    "snapshot_identical": true,
+    "states_ids_bboxes_ambiguity_and_hashes_identical": true
+  },
+  "duplicates": {
+    "duplicate_panel_ids": 0,
+    "exact_duplicate_bboxes": 0,
+    "accidental_near_duplicates": 0,
+    "obviously_impossible_overlaps": 0
+  },
+  "semantic_sanity": {
+    "result": "FAIL_ONE_ANNOTATION",
+    "issues": [
+      {
+        "page_order": 3,
+        "panel_id": "human-3-5",
+        "issue": "UNDER_SPLIT_HUMAN_ANNOTATION",
+        "evidence": "The bbox [67.942, 861.743, 835.3, 1195.246] spans two clearly separate bottom manga panels divided by a visible vertical border."
+      }
+    ],
+    "other_pages": "PASS"
+  },
+  "prediction_correctness_evaluated": false,
+  "human_vs_prediction_iou_calculated": false,
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "resource_guard": "NORMAL",
+  "required_human_action": "On Page 3 only, replace human-3-5 with two separate full-panel boxes for the bottom-left and bottom-right panels, then save the page. Do not alter the other five pages."
+}

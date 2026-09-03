@@ -1,0 +1,68 @@
+{
+  "schema_version": "panel-relation-tolerance-control-reference.v1",
+  "checkpoint": "12.6",
+  "status": "FROZEN_12_5_ZERO_TOLERANCE_CONTROL_VERIFIED",
+  "artifacts": [
+    {
+      "artifact": "candidate-freeze",
+      "path": "benchmarks/day12/panel-order-candidate-freeze-12.5.json",
+      "file_sha256": "25b9a26db8f03a7afd07e6136c3b57fbacc65d84aae9c1406cda618f9a251db4",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "evaluation",
+      "path": "benchmarks/day12/panel-order-evaluation-12.5.json",
+      "file_sha256": "4c804595981b89bfc7661d8a87f307b76fa19f756edd64e1e951c15b769ac376",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "input-gt-audit",
+      "path": "benchmarks/day12/panel-order-input-gt-audit-12.5.json",
+      "file_sha256": "591dbe0654689f673f98e6959b5e414c529e5daab382017c434cc49f19c496f5",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "oracle-candidates",
+      "path": "benchmarks/day12/panel-order-oracle-candidates-12.5.json",
+      "file_sha256": "a7ed2e1747ff13f7cde57dbd149cd4b9d5ab12203c0ce48525336833bd4cf2fd",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "protocol",
+      "path": "benchmarks/day12/panel-order-protocol-12.5.json",
+      "file_sha256": "0f72c9ecad51a779bf22059b586527b2ab71abd7341304782880331f186450c7",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "realistic-candidates",
+      "path": "benchmarks/day12/panel-order-realistic-candidates-12.5.json",
+      "file_sha256": "dc9d60f0007ecd19154c57509b917c3c28675a0ff69709f07518870e4c4e0e58",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "summary",
+      "path": "benchmarks/day12/panel-order-summary-12.5.json",
+      "file_sha256": "41e559d621445f7c8c44a1a282e364784d27bd283b3de9de32ebfbfa8b695db1",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    },
+    {
+      "artifact": "synthetic",
+      "path": "benchmarks/day12/panel-order-synthetic-12.5.json",
+      "file_sha256": "b50ae7ec226a34455a0bcc6964a5a2705a384c3201c4b8f83237d2ea5aa01f40",
+      "pre_freeze_verification": "RAW_BYTES_SHA256_ONLY",
+      "internal_hash_verified": "DEFERRED_UNTIL_GLOBAL_FREEZE"
+    }
+  ],
+  "human_reading_order_parsed": false,
+  "human_derived_json_deserialized": false,
+  "human_order_derived_provenance_dependencies": [],
+  "gt_runtime_features": [],
+  "semantic_sha256": "ace5f6c1cf6655f74cb498ecb310c1e505332644b105308c5f2d282cd306d06d"
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": "day13_realistic_evaluation.v1",
+  "summary": {
+    "track": "DAY13_REALISTIC_TRACK",
+    "exact_pages": [
+      6,
+      10
+    ],
+    "resolved_pages": 6,
+    "unresolved_pages": 4,
+    "resolved_regions": [
+      24,
+      50
+    ],
+    "resolved_comparable_pairwise": [
+      47,
+      47
+    ],
+    "population_pair_coverage": [
+      47,
+      124
+    ],
+    "confident_inversions": 0,
+    "assignment_distribution": {
+      "assigned": 32,
+      "ambiguous": 0,
+      "unassigned": 18,
+      "total": 50
+    },
+    "blocker_summary": {
+      "resolved": 6,
+      "missing_panel_coverage": 4,
+      "assignment_ambiguity": 0,
+      "panel_order_ambiguous": 0
+    },
+    "gt_runtime_features": []
+  },
+  "pages": [
+    {
+      "page_order": 1,
+      "resolved": false,
+      "exact": false,
+      "prediction": [],
+      "human": [
+        "LR_615c8d24c678",
+        "LR_086859ae76f4",
+        "LR_28e2fc3b47b8",
+        "LR_2284efd8ada7"
+      ],
+      "eval_eligible_regions": 4,
+      "assigned_regions": 0,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 4,
+      "population_pairs": 6,
+      "resolved_pairs": 0,
+      "correct_pairs": 0,
+      "confident_inversions": 0,
+      "blocker": "MISSING_PANEL_COVERAGE",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": [
+        "LR_086859ae76f4",
+        "LR_2284efd8ada7",
+        "LR_28e2fc3b47b8",
+        "LR_615c8d24c678"
+      ]
+    },
+    {
+      "page_order": 2,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_ef4ab22072a8",
+        "LR_a77493ec9ff9"
+      ],
+      "human": [
+        "LR_ef4ab22072a8",
+        "LR_a77493ec9ff9"
+      ],
+      "eval_eligible_regions": 2,
+      "assigned_regions": 2,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 1,
+      "resolved_pairs": 1,
+      "correct_pairs": 1,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    },
+    {
+      "page_order": 3,
+      "resolved": false,
+      "exact": false,
+      "prediction": [],
+      "human": [
+        "LR_708761617ca5",
+        "LR_6847589abd58",
+        "LR_1b80a3ba7eba",
+        "LR_301b7ed055be",
+        "LR_016a11675840",
+        "LR_38a547aad429"
+      ],
+      "eval_eligible_regions": 6,
+      "assigned_regions": 3,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 3,
+      "population_pairs": 15,
+      "resolved_pairs": 0,
+      "correct_pairs": 0,
+      "confident_inversions": 0,
+      "blocker": "MISSING_PANEL_COVERAGE",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": [
+        "LR_016a11675840",
+        "LR_301b7ed055be",
+        "LR_38a547aad429"
+      ]
+    },
+    {
+      "page_order": 4,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "human": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "eval_eligible_regions": 4,
+      "assigned_regions": 4,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 6,
+      "resolved_pairs": 6,
+      "correct_pairs": 6,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    },
+    {
+      "page_order": 5,
+      "resolved": false,
+      "exact": false,
+      "prediction": [],
+      "human": [
+        "LR_f27fb5ffabf9",
+        "LR_1dfca31c24d7",
+        "LR_26795b95ef26",
+        "LR_d9caab3d7c4a",
+        "LR_a0587957c904",
+        "LR_b71bcd7a275c",
+        "LR_7ee4baf217d7",
+        "LR_bf3e79736d0c"
+      ],
+      "eval_eligible_regions": 8,
+      "assigned_regions": 0,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 8,
+      "population_pairs": 28,
+      "resolved_pairs": 0,
+      "correct_pairs": 0,
+      "confident_inversions": 0,
+      "blocker": "MISSING_PANEL_COVERAGE",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": [
+        "LR_1dfca31c24d7",
+        "LR_26795b95ef26",
+        "LR_7ee4baf217d7",
+        "LR_a0587957c904",
+        "LR_b71bcd7a275c",
+        "LR_bf3e79736d0c",
+        "LR_d9caab3d7c4a",
+        "LR_f27fb5ffabf9"
+      ]
+    },
+    {
+      "page_order": 7,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_5facc1321e92",
+        "LR_5787cb8d10ad"
+      ],
+      "human": [
+        "LR_5facc1321e92",
+        "LR_5787cb8d10ad"
+      ],
+      "eval_eligible_regions": 2,
+      "assigned_regions": 2,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 1,
+      "resolved_pairs": 1,
+      "correct_pairs": 1,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    },
+    {
+      "page_order": 15,
+      "resolved": false,
+      "exact": false,
+      "prediction": [],
+      "human": [
+        "LR_dfef3de3ed48",
+        "LR_35d30a3b10e1",
+        "LR_9636706b4855",
+        "LR_f6dbfc4d4913",
+        "LR_bf3e65667bd9",
+        "LR_0856a888b8df",
+        "LR_5bdd1160b3a0",
+        "LR_f3054b9c1820"
+      ],
+      "eval_eligible_regions": 8,
+      "assigned_regions": 5,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 3,
+      "population_pairs": 28,
+      "resolved_pairs": 0,
+      "correct_pairs": 0,
+      "confident_inversions": 0,
+      "blocker": "MISSING_PANEL_COVERAGE",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": [
+        "LR_35d30a3b10e1",
+        "LR_9636706b4855",
+        "LR_dfef3de3ed48"
+      ]
+    },
+    {
+      "page_order": 17,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_554cd55f1a6a",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "human": [
+        "LR_554cd55f1a6a",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "eval_eligible_regions": 7,
+      "assigned_regions": 7,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 21,
+      "resolved_pairs": 21,
+      "correct_pairs": 21,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    },
+    {
+      "page_order": 18,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_aac2ef08be0e",
+        "LR_77b6cc0407da",
+        "LR_1c3c89ee5ac1"
+      ],
+      "human": [
+        "LR_aac2ef08be0e",
+        "LR_77b6cc0407da",
+        "LR_1c3c89ee5ac1"
+      ],
+      "eval_eligible_regions": 3,
+      "assigned_regions": 3,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 3,
+      "resolved_pairs": 3,
+      "correct_pairs": 3,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    },
+    {
+      "page_order": 38,
+      "resolved": true,
+      "exact": true,
+      "prediction": [
+        "LR_ac01f1796688",
+        "LR_2da60c343d36",
+        "LR_2010e3d36608",
+        "LR_5cb918f74103",
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "human": [
+        "LR_ac01f1796688",
+        "LR_2da60c343d36",
+        "LR_2010e3d36608",
+        "LR_5cb918f74103",
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "eval_eligible_regions": 6,
+      "assigned_regions": 6,
+      "ambiguous_regions": 0,
+      "unassigned_regions": 0,
+      "population_pairs": 15,
+      "resolved_pairs": 15,
+      "correct_pairs": 15,
+      "confident_inversions": 0,
+      "blocker": "RESOLVED",
+      "ambiguous_region_ids": [],
+      "unassigned_region_ids": []
+    }
+  ],
+  "gt_runtime_features": [],
+  "evaluation_sha256": "44a9d8dd7037f4c04c2695fc921db2c9e34ad6ffe7e98a3d2548855f272f581e"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "panel-unseen-selection.v1",
+  "checkpoint": "12.4",
+  "selection_rule": "EXHAUSTIVE_ASCENDING_COMPLEMENT_OF_FROZEN_TEN_PAGE_SET",
+  "correctness_blind": true,
+  "selected_pages": [
+    3,
+    4,
+    5,
+    7,
+    18,
+    38
+  ],
+  "excluded_pages": [
+    1,
+    2,
+    15,
+    17
+  ],
+  "source_audit_file_sha256": "ec456284c30b6aea909fc75957147d839ca293e9fb0ac5389228ffaba338a75c",
+  "structural_coverage": [
+    "ORDINARY_ADJACENT_PANELS",
+    "HORIZONTAL_VERTICAL_DIVISIONS",
+    "SPANNING_ROW_OPPORTUNITIES",
+    "TALL_BESIDE_STACKED",
+    "NESTED_INTERNAL_CONTOUR_OPPORTUNITIES",
+    "PAGE_EDGE_STRUCTURE",
+    "DIFFICULT_IRREGULAR_OR_UNRESOLVED"
+  ],
+  "pages": [
+    {
+      "page_order": 3,
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "source_path": "backend/uploads/ab627e40-5851-4a6e-9e7a-03d3968087cb_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-5.jpg",
+      "source_sha256": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    },
+    {
+      "page_order": 4,
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "source_path": "backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "source_sha256": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    },
+    {
+      "page_order": 5,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "source_path": "backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "source_sha256": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    },
+    {
+      "page_order": 7,
+      "asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "source_path": "backend/uploads/a3c72490-a7b2-402a-88c9-8cc874cab45f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-10.jpg",
+      "source_sha256": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    },
+    {
+      "page_order": 18,
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "source_path": "backend/uploads/d997ac05-6017-4a9c-b5d6-49e065dd9f2d_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-21.jpg",
+      "source_sha256": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    },
+    {
+      "page_order": 38,
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "source_path": "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg",
+      "source_sha256": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "image_dimensions": [
+        900,
+        1280
+      ]
+    }
+  ],
+  "gt_runtime_features": [],
+  "semantic_sha256": "de2c9ab50eda83c1c0ee35c65d8137d9b4a2bfc804b05e64b9ffd288b2bc1499"
+}

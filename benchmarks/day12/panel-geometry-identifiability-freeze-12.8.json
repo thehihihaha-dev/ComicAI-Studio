@@ -1,0 +1,14 @@
+{
+  "schema_version": "panel-geometry-identifiability-freeze.v1",
+  "checkpoint": "12.8",
+  "phase_a_semantic_hashes": {
+    "input-audit": "de11f763a62533e15a80a70d3c3b7db1db341d886d04cf8571fa67f7122dc924",
+    "protocol": "4181522dbed25600a81e5063bb863be74c43ebbf97764726419ae0ae05354970",
+    "synthetic": "687adf2cbe9e1f19c78770ce6096dd9aab41d7267180c38e2502a1982669a1dc",
+    "phase-a-audit": "f76150fd866fd0d01e60cb5bb2d0a494f2f724ad8fee1067ba7a57e669b74b36"
+  },
+  "both_runs_generated_before_freeze": true,
+  "human_access_before_freeze": [],
+  "gt_runtime_features": [],
+  "freeze_sha256": "67e58c999da861c332a4bfa721a90f9b3ab66102435e022a8feadf0debbccb05"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "panel-geometry-identifiability-invalid-status.v1",
+  "checkpoint": "12.8",
+  "status": "AUDIT_INVALID",
+  "outcome": "D. AUDIT INVALID / SAFETY FAILURE",
+  "authoritative_phase_a": {
+    "status": "ORIGINAL_PHASE_A_BYTES_UNAVAILABLE",
+    "known_original_raw_sha256": "91cfbe30539c4fd6090e98607d4de30c5d7c6cbb623b19c58e3e19b27e682912",
+    "exact_original_bytes_reconstructed": false
+  },
+  "vocabulary_fingerprint": {
+    "known_original_six_rule_protocol_raw_sha256": "e29b2797c4c8f9d1a808b838c306e9585bce657f0454b27235a7a2b9f8d416d6",
+    "post_exposure_protocol_raw_sha256": "79f609d8354903d0a1b39ec9ecc19ec172172b5d6491f648f3de9bb620ececb7",
+    "post_exposure_protocol_authoritative": false
+  },
+  "invalidated_evidence": {
+    "current_phase_a_raw_sha256": "f96ebcb4bc7bc661c564a69ffabbe4c76eac3076dddde6c0dcf632ff89a360a8",
+    "reason": "PHASE_A_RULE_FAMILY_CHANGED_AFTER_HUMAN_ORDER_EXPOSURE",
+    "non_authoritative_rules": [
+      "ROW_RIGHTMOST",
+      "COLUMN_TOPMOST",
+      "TOP_X_SPANNING",
+      "RIGHT_Y_SPANNING"
+    ],
+    "non_authoritative_claims": [
+      "B. PARTIAL GEOMETRY IDENTIFIABILITY",
+      "15/20 IDENTIFIABLE",
+      "ROW_OR_SPANNING_FUTURE_EXPERIMENT_JUSTIFIED"
+    ],
+    "historical_artifacts_retained_only_for_failure_provenance": true
+  },
+  "authoritative_results": {
+    "ready_set_count": 20,
+    "per_page_ready_sets": {"1": 1, "2": 1, "3": 3, "15": 12, "18": 1, "38": 2},
+    "identifiable": null,
+    "control_contradicted": null,
+    "insufficient": null,
+    "non_identifiable": null,
+    "target_specific_control_contradictions": 0,
+    "conclusion": "NO_VALID_IDENTIFIABILITY_CONCLUSION"
+  },
+  "blindness": {
+    "restored": false,
+    "clean_rerun_performed": false,
+    "future_rerun_forbidden_by_fix_contract": true
+  },
+  "synthetic_contract": {
+    "authoritative_pass_count": null,
+    "status": "INVALIDATED_WITH_PHASE_A"
+  },
+  "gt_runtime_features": [],
+  "model_calls": {"ocr": 0, "vlm": 0, "ollama": 0},
+  "production_changed": false
+}

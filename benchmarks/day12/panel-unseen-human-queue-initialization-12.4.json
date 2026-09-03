@@ -1,0 +1,68 @@
+{
+  "schema_version": "panel-unseen-human-queue-initialization.v1",
+  "checkpoint": "12.4",
+  "prediction_freeze_file_sha256": "d4a78fe375ff15f7b49798cdf7c0ee389140ea2f7d00f329b3c2cf02aa475dae",
+  "prediction_fingerprint": "a0f7d0559922376be3bb665bce814d003425c59fdfbafb77c0a6bda78457e26a",
+  "prediction_frozen_before_queue": true,
+  "pages": [
+    {
+      "page_order": 3,
+      "review_id": "panel-gt-12.4:58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    },
+    {
+      "page_order": 4,
+      "review_id": "panel-gt-12.4:dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    },
+    {
+      "page_order": 5,
+      "review_id": "panel-gt-12.4:69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    },
+    {
+      "page_order": 7,
+      "review_id": "panel-gt-12.4:b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    },
+    {
+      "page_order": 18,
+      "review_id": "panel-gt-12.4:23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    },
+    {
+      "page_order": 38,
+      "review_id": "panel-gt-12.4:522c50f5-5934-40be-9cc2-f452deeeff35",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "state": "PENDING",
+      "revision": 0,
+      "human_panel_count": 0
+    }
+  ],
+  "verified": 0,
+  "pending": 6,
+  "legacy_gt_snapshot_sha256": "5ac1383fdbd611bd203fa1e1b35d8fb0eb4e4e082f62e04907adc493c5635fd3",
+  "predictions_hidden": true,
+  "gt_runtime_features": [],
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "semantic_sha256": "2e7dacb61c57d70284f8f6995c04f0d01098e7d041653a2091fa77b3861cfbe1"
+}

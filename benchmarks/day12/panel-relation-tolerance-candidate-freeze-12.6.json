@@ -1,0 +1,23 @@
+{
+  "schema_version": "panel-relation-tolerance-candidate-freeze.v1",
+  "checkpoint": "12.6",
+  "chronology": [
+    "NON_ORDER_INPUTS_VERIFIED",
+    "ZERO_TOLERANCE_CONTROL_VERIFIED",
+    "ONE_TOLERANCE_CONFIG_FROZEN",
+    "ORACLE_REALISTIC_CANDIDATES_BUILT",
+    "CANDIDATES_FROZEN_BEFORE_HUMAN_ORDER"
+  ],
+  "artifact_semantic_sha256": {
+    "input-audit": "ab989bb64fda24e3b87acfe62499299fb0170ba4646d78b1223e361418c265c1",
+    "control-reference": "ace5f6c1cf6655f74cb498ecb310c1e505332644b105308c5f2d282cd306d06d",
+    "protocol": "d1ecf62cc8e8183fae975d3feed3765d1ed0bba9f0822a49f6373888516fd4c7",
+    "synthetic": "02567042450212859ec80e1bbf848c3d3cdfce067809b9cc46e7d480e5cd718a",
+    "oracle-candidates": "9c34435336c5c3d41ddcba2edee613dbce187ab07d41cfe362e5b96249bb7f0c",
+    "realistic-candidates": "b32b6ad93ef3c6f5fe669512f779bf8daab08d0d538e1b5d94d0c3f9449b4f6b"
+  },
+  "human_reading_order_artifacts_opened_before_freeze": [],
+  "candidate_count": 1,
+  "gt_runtime_features": [],
+  "freeze_sha256": "e030085c87e4db1267ccdcc823c29b58429deffadf38f7932afafe0000278a3b"
+}

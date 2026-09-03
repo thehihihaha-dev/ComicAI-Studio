@@ -1,0 +1,39 @@
+{
+  "schema_version": "panel-aware-structural-errors.v1",
+  "checkpoint": "12.1",
+  "status": "NOT_RUN_PANEL_DATA_GATE_FAILED",
+  "assignment_coverage": 0.0,
+  "confident_assignments": 0,
+  "unassigned_regions": 63,
+  "ambiguous_regions": 0,
+  "multi_panel_cases": 0,
+  "cross_panel_ordering_errors": "N/A: no candidate",
+  "intra_panel_ordering_errors": "N/A: no candidate",
+  "panel_order_errors": "N/A: no predicted panels",
+  "failure_pages": [
+    {
+      "page_order": 15,
+      "available_predicted_panels": 0,
+      "assignment": "NOT_RUN",
+      "panel_order": "NOT_RUN",
+      "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+      "reason": "No legitimate non-Human panel geometry."
+    },
+    {
+      "page_order": 17,
+      "available_predicted_panels": 0,
+      "assignment": "NOT_RUN",
+      "panel_order": "NOT_RUN",
+      "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+      "reason": "No legitimate non-Human panel geometry."
+    },
+    {
+      "page_order": 38,
+      "available_predicted_panels": 0,
+      "assignment": "NOT_RUN",
+      "panel_order": "NOT_RUN",
+      "known_inversion_result": "UNCHANGED_NOT_EVALUATED",
+      "reason": "No legitimate non-Human panel geometry."
+    }
+  ]
+}

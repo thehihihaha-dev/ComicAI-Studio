@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "11.17-reader-v2-final-integration",
+  "checkpoint": null,
   "state": "IDLE",
   "next_role": "ARCHITECT",
   "allowed_states": [
@@ -13,5 +13,5 @@
     "AWAITING_HUMAN_APPROVAL",
     "APPROVED"
   ],
-  "note": "Advanced from APPROVED to IDLE; no git action performed."
+  "note": "Day 13 completed with 3 phases (Harness, Assignment Engine, Realistic Benchmark); 0 inversions invariant preserved; awaiting Human Approval."
 }

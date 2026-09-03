@@ -1,0 +1,38 @@
+{
+  "schema_version": "panel-unseen-prediction-freeze.v1",
+  "checkpoint": "12.4",
+  "status": "FROZEN_BEFORE_HUMAN_GT",
+  "selected_pages": [
+    3,
+    4,
+    5,
+    7,
+    18,
+    38
+  ],
+  "selection_file_sha256": "60c0a57ae6731d47da944b524308a7a3f17f84a49f4fd10f87329b413ddb731a",
+  "selection_semantic_sha256": "de2c9ab50eda83c1c0ee35c65d8137d9b4a2bfc804b05e64b9ffd288b2bc1499",
+  "protocol_file_sha256": "013b9988c4dfbcb553dbbb9bd5007ba8a7992f48328c0d36000e0d5ae1e08793",
+  "protocol_semantic_sha256": "c8a3e92c165f5024e20f7d1ef3858c7f16e4bc15c784a06359bab849ecf6aebc",
+  "raw_file_sha256": "6116b7e16d64f36f2ac8b8cc6f92af632875b448ac68f0b86cee28d19ec06988",
+  "raw_semantic_sha256": "94742f62a5991a8e8ad51e29227328027462b1e40c138858c008a1e583d86749",
+  "graph_file_sha256": "e0e4bf99a3d19573dd7798deba3f0b7b7bbb5a3320695d73adc81b36758462a2",
+  "graph_semantic_sha256": "db4d8768d5d51cb6c70caea84bf15f1d04989058a60df73979a3a22235c0ec18",
+  "output_file_sha256": "5b7eca8fed83970465a65de84509daa85d56b57369dc46c79964affccddc4772",
+  "output_semantic_sha256": "6b2c011eb89a74a9dd2e67a0d89c1486f2b3a7a0ddb046c84e43f376ee195e45",
+  "extractor_two_run_identical": true,
+  "resolver_two_run_identical": true,
+  "frozen_12_2_subset_identical": true,
+  "bbox_subset_and_identity": true,
+  "human_gt_imported_or_queried": false,
+  "human_queue_created": false,
+  "gt_runtime_features": [],
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "resource_guard": "NORMAL",
+  "semantic_sha256": "a0f7d0559922376be3bb665bce814d003425c59fdfbafb77c0a6bda78457e26a"
+}

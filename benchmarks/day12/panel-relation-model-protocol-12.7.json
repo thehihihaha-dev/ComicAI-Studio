@@ -1,0 +1,40 @@
+{
+  "schema_version": "panel-relation-model-protocol.v1",
+  "checkpoint": "12.7",
+  "status": "FROZEN_BEFORE_HUMAN_ORDER",
+  "label": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1",
+  "candidate_count": 1,
+  "track": "ORACLE_ONLY",
+  "realistic": "DIAGNOSTICS_ONLY_NO_CANDIDATE",
+  "formula": {
+    "tau_x": "1/W",
+    "tau_y": "1/H",
+    "source_pixel_intrusion": 1,
+    "comparison": "<=",
+    "vertical_precedence": true
+  },
+  "relations": [
+    "ABOVE",
+    "RIGHT_OF"
+  ],
+  "ambiguity": "UNIQUE_ACTIVE_TOPOLOGICAL_ORDER_REQUIRED",
+  "transitivity": "ACTIVE_NODES_ONLY",
+  "assignment": [
+    "UNIQUE_CONTAINMENT",
+    "UNIQUE_CENTER_AND_STRICT_AREA_MAJORITY_GT_0.50",
+    "AMBIGUOUS",
+    "UNASSIGNED"
+  ],
+  "intra_panel": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+  "taxonomy_precedence": [
+    "INVALID_OR_CONFLICTING_GEOMETRY",
+    "CYCLE_CONFLICT",
+    "INCOMPARABLE_ACTIVE_PAIR",
+    "MULTIPLE_TOPOLOGICAL_ORDERS",
+    "GUILLOTINE_DESCENDANT_PARTITION_FAILURE",
+    "NO_GUILLOTINE_ROOT",
+    "OTHER_EVIDENCED_STRUCTURE"
+  ],
+  "gt_runtime_features": [],
+  "protocol_sha256": "8c591f67acc86ea46751c7c55dd6933b2d169e4557d8b1f75db54fab790eec7a"
+}

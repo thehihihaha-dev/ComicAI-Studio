@@ -1,0 +1,21 @@
+{
+  "schema_version": "panel-relation-model-candidate-freeze.v1",
+  "checkpoint": "12.7",
+  "chronology": [
+    "INPUT_VERIFIED",
+    "STRUCTURAL_RUNTIME_READY",
+    "ORACLE_CANDIDATE_GENERATED",
+    "CANDIDATE_FROZEN_BEFORE_HUMAN_ORDER"
+  ],
+  "artifacts": {
+    "input-audit": "1478ba75dec8b83bb5758f0894f8688b357e222163ebe9701f64374c4046d2e5",
+    "control-reference": "d72a9e26135931f0e29f7f2d850e019f18d2f8fce48b0bce9b2a92b97ae6ae22",
+    "protocol": "8c591f67acc86ea46751c7c55dd6933b2d169e4557d8b1f75db54fab790eec7a",
+    "synthetic": "e40d2c2caa2134b79773ea9e25068bc4bd0704174b09c8d179f2c7f400ef9e03",
+    "oracle-candidates": "13f440477e23fcd23a495c1219c1f8c28952b8ac138d47f5978cd57d7afd9456"
+  },
+  "candidate_count": 1,
+  "human_reading_order_artifacts_opened_before_freeze": [],
+  "gt_runtime_features": [],
+  "freeze_sha256": "606c165fe6676d30d8f302f79bc44e30459c25a13681e4ffec39c6f265fa4b5e"
+}

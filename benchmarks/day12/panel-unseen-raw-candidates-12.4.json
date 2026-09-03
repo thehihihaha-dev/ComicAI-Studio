@@ -1,0 +1,1881 @@
+{
+  "schema_version": "panel-unseen-raw-candidates.v1",
+  "checkpoint": "12.4",
+  "pages": [
+    {
+      "page_order": 3,
+      "asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_befc93661d98",
+          "bbox": [
+            80,
+            90,
+            827,
+            496
+          ],
+          "bbox_normalized": [
+            0.088889,
+            0.070312,
+            0.918889,
+            0.3875
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.996173
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              81,
+              93
+            ],
+            [
+              81,
+              494
+            ],
+            [
+              825,
+              494
+            ],
+            [
+              825,
+              93
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_3434a2701d8c"
+          ]
+        },
+        {
+          "panel_id": "PN_3434a2701d8c",
+          "bbox": [
+            149,
+            151,
+            307,
+            431
+          ],
+          "bbox_normalized": [
+            0.165556,
+            0.117969,
+            0.341111,
+            0.336719
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.990077
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              150,
+              151
+            ],
+            [
+              306,
+              152
+            ],
+            [
+              305,
+              430
+            ],
+            [
+              149,
+              429
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_befc93661d98"
+          ]
+        },
+        {
+          "panel_id": "PN_cc6fa8f61cd2",
+          "bbox": [
+            80,
+            512,
+            827,
+            851
+          ],
+          "bbox_normalized": [
+            0.088889,
+            0.4,
+            0.918889,
+            0.664844
+          ],
+          "state": "DETECTED",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.992774
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              81,
+              512
+            ],
+            [
+              83,
+              850
+            ],
+            [
+              825,
+              849
+            ],
+            [
+              825,
+              512
+            ]
+          ],
+          "overlap_conflict_panel_ids": []
+        },
+        {
+          "panel_id": "PN_da66c62e69c6",
+          "bbox": [
+            80,
+            867,
+            827,
+            1216
+          ],
+          "bbox_normalized": [
+            0.088889,
+            0.677344,
+            0.918889,
+            0.95
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": null
+          },
+          "touches_page_edge": [],
+          "overlap_conflict_panel_ids": [
+            "PN_f213d1da9efd",
+            "PN_6792c0bfba14"
+          ]
+        },
+        {
+          "panel_id": "PN_f213d1da9efd",
+          "bbox": [
+            81,
+            868,
+            278,
+            1187
+          ],
+          "bbox_normalized": [
+            0.09,
+            0.678125,
+            0.308889,
+            0.927344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.991805
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              81,
+              868
+            ],
+            [
+              81,
+              1186
+            ],
+            [
+              277,
+              1186
+            ],
+            [
+              277,
+              868
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_da66c62e69c6"
+          ]
+        },
+        {
+          "panel_id": "PN_6792c0bfba14",
+          "bbox": [
+            285,
+            868,
+            826,
+            1187
+          ],
+          "bbox_normalized": [
+            0.316667,
+            0.678125,
+            0.917778,
+            0.927344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.995023
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              285,
+              868
+            ],
+            [
+              285,
+              1186
+            ],
+            [
+              825,
+              1186
+            ],
+            [
+              825,
+              868
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_da66c62e69c6"
+          ]
+        }
+      ],
+      "detected_panel_count": 1,
+      "ambiguous_panel_count": 5,
+      "unresolved": false,
+      "page_fallback": false,
+      "adjacency": [
+        {
+          "from": "PN_befc93661d98",
+          "to": "PN_cc6fa8f61cd2",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_befc93661d98",
+          "to": "PN_da66c62e69c6",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_befc93661d98",
+          "to": "PN_f213d1da9efd",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_befc93661d98",
+          "to": "PN_6792c0bfba14",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_3434a2701d8c",
+          "to": "PN_cc6fa8f61cd2",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_3434a2701d8c",
+          "to": "PN_da66c62e69c6",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_3434a2701d8c",
+          "to": "PN_f213d1da9efd",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_3434a2701d8c",
+          "to": "PN_6792c0bfba14",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_cc6fa8f61cd2",
+          "to": "PN_da66c62e69c6",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_cc6fa8f61cd2",
+          "to": "PN_f213d1da9efd",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_cc6fa8f61cd2",
+          "to": "PN_6792c0bfba14",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_f213d1da9efd",
+          "to": "PN_6792c0bfba14",
+          "relation": "LEFT_OF",
+          "state": "AMBIGUOUS"
+        }
+      ],
+      "raw_candidate_count": 8,
+      "duplicate_candidates_suppressed": 2,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 4,
+      "asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_77c431f85a56",
+          "bbox": [
+            72,
+            0,
+            823,
+            728
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.0,
+            0.914444,
+            0.56875
+          ],
+          "state": "DETECTED",
+          "provenance": [
+            "page_edge_completion",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0
+          },
+          "touches_page_edge": [
+            "TOP"
+          ],
+          "page_edge_completion": {
+            "completed_edge": "TOP",
+            "condition": "three agreeing straight borders terminate at page edge",
+            "supporting_border_segments": [
+              [
+                75,
+                0,
+                79,
+                728
+              ],
+              [
+                76,
+                723,
+                821,
+                727
+              ],
+              [
+                816,
+                0,
+                820,
+                728
+              ]
+            ]
+          },
+          "overlap_conflict_panel_ids": []
+        },
+        {
+          "panel_id": "PN_b6d7cc69b0e5",
+          "bbox": [
+            101,
+            372,
+            266,
+            584
+          ],
+          "bbox_normalized": [
+            0.112222,
+            0.290625,
+            0.295556,
+            0.45625
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.747799
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              210,
+              373
+            ],
+            [
+              265,
+              455
+            ],
+            [
+              262,
+              511
+            ],
+            [
+              223,
+              569
+            ],
+            [
+              158,
+              583
+            ],
+            [
+              109,
+              537
+            ],
+            [
+              102,
+              451
+            ],
+            [
+              150,
+              383
+            ]
+          ],
+          "overlap_conflict_panel_ids": []
+        },
+        {
+          "panel_id": "PN_1b619a0db400",
+          "bbox": [
+            72,
+            743,
+            823,
+            1190
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.580469,
+            0.914444,
+            0.929688
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": null
+          },
+          "touches_page_edge": [],
+          "overlap_conflict_panel_ids": [
+            "PN_a8da83358244",
+            "PN_952651e84374"
+          ]
+        },
+        {
+          "panel_id": "PN_a8da83358244",
+          "bbox": [
+            75,
+            744,
+            544,
+            1187
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.58125,
+            0.604444,
+            0.927344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.993526
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              75,
+              744
+            ],
+            [
+              75,
+              1186
+            ],
+            [
+              543,
+              1186
+            ],
+            [
+              543,
+              744
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_1b619a0db400"
+          ]
+        },
+        {
+          "panel_id": "PN_952651e84374",
+          "bbox": [
+            550,
+            744,
+            821,
+            1187
+          ],
+          "bbox_normalized": [
+            0.611111,
+            0.58125,
+            0.912222,
+            0.927344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.990454
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              550,
+              744
+            ],
+            [
+              550,
+              1186
+            ],
+            [
+              819,
+              1186
+            ],
+            [
+              819,
+              744
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_1b619a0db400"
+          ]
+        }
+      ],
+      "detected_panel_count": 1,
+      "ambiguous_panel_count": 4,
+      "unresolved": false,
+      "page_fallback": false,
+      "adjacency": [
+        {
+          "from": "PN_77c431f85a56",
+          "to": "PN_1b619a0db400",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_77c431f85a56",
+          "to": "PN_a8da83358244",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_77c431f85a56",
+          "to": "PN_952651e84374",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_b6d7cc69b0e5",
+          "to": "PN_1b619a0db400",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_b6d7cc69b0e5",
+          "to": "PN_a8da83358244",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_a8da83358244",
+          "to": "PN_952651e84374",
+          "relation": "LEFT_OF",
+          "state": "AMBIGUOUS"
+        }
+      ],
+      "raw_candidate_count": 6,
+      "duplicate_candidates_suppressed": 1,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 5,
+      "asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_6bc262100136",
+          "bbox": [
+            450,
+            621,
+            824,
+            1184
+          ],
+          "bbox_normalized": [
+            0.5,
+            0.485156,
+            0.915556,
+            0.925
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.938921
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              451,
+              622
+            ],
+            [
+              823,
+              626
+            ],
+            [
+              821,
+              1183
+            ],
+            [
+              536,
+              921
+            ],
+            [
+              713,
+              1139
+            ],
+            [
+              452,
+              1181
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_72219006ff20"
+          ]
+        },
+        {
+          "panel_id": "PN_72219006ff20",
+          "bbox": [
+            633,
+            641,
+            797,
+            898
+          ],
+          "bbox_normalized": [
+            0.703333,
+            0.500781,
+            0.885556,
+            0.701562
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.98931
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              637,
+              641
+            ],
+            [
+              633,
+              890
+            ],
+            [
+              792,
+              897
+            ],
+            [
+              796,
+              642
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_6bc262100136"
+          ]
+        }
+      ],
+      "detected_panel_count": 0,
+      "ambiguous_panel_count": 2,
+      "unresolved": true,
+      "page_fallback": true,
+      "adjacency": [],
+      "raw_candidate_count": 3,
+      "duplicate_candidates_suppressed": 1,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 7,
+      "asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_d7a8a0004def",
+          "bbox": [
+            73,
+            92,
+            824,
+            784
+          ],
+          "bbox_normalized": [
+            0.081111,
+            0.071875,
+            0.915556,
+            0.6125
+          ],
+          "state": "DETECTED",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.994531
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              76,
+              94
+            ],
+            [
+              76,
+              780
+            ],
+            [
+              820,
+              780
+            ],
+            [
+              819,
+              93
+            ]
+          ],
+          "overlap_conflict_panel_ids": []
+        },
+        {
+          "panel_id": "PN_54c078540d26",
+          "bbox": [
+            72,
+            798,
+            824,
+            1188
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.623437,
+            0.915556,
+            0.928125
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.99609
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              76,
+              798
+            ],
+            [
+              76,
+              1186
+            ],
+            [
+              820,
+              1186
+            ],
+            [
+              820,
+              798
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_6af47394f6b8",
+            "PN_5a5fe7915c09"
+          ]
+        },
+        {
+          "panel_id": "PN_6af47394f6b8",
+          "bbox": [
+            393,
+            855,
+            534,
+            1080
+          ],
+          "bbox_normalized": [
+            0.436667,
+            0.667969,
+            0.593333,
+            0.84375
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.778881
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              452,
+              855
+            ],
+            [
+              408,
+              890
+            ],
+            [
+              393,
+              970
+            ],
+            [
+              420,
+              1063
+            ],
+            [
+              479,
+              1079
+            ],
+            [
+              512,
+              1044
+            ],
+            [
+              533,
+              948
+            ],
+            [
+              508,
+              878
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_54c078540d26"
+          ]
+        },
+        {
+          "panel_id": "PN_5a5fe7915c09",
+          "bbox": [
+            124,
+            883,
+            257,
+            1136
+          ],
+          "bbox_normalized": [
+            0.137778,
+            0.689844,
+            0.285556,
+            0.8875
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.988076
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              126,
+              883
+            ],
+            [
+              125,
+              1134
+            ],
+            [
+              254,
+              1135
+            ],
+            [
+              256,
+              884
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_54c078540d26"
+          ]
+        }
+      ],
+      "detected_panel_count": 1,
+      "ambiguous_panel_count": 3,
+      "unresolved": false,
+      "page_fallback": false,
+      "adjacency": [
+        {
+          "from": "PN_d7a8a0004def",
+          "to": "PN_54c078540d26",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a8a0004def",
+          "to": "PN_6af47394f6b8",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a8a0004def",
+          "to": "PN_5a5fe7915c09",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_6af47394f6b8",
+          "to": "PN_5a5fe7915c09",
+          "relation": "RIGHT_OF",
+          "state": "AMBIGUOUS"
+        }
+      ],
+      "raw_candidate_count": 9,
+      "duplicate_candidates_suppressed": 5,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 18,
+      "asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_d92e8767a701",
+          "bbox": [
+            75,
+            86,
+            827,
+            467
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.067187,
+            0.918889,
+            0.364844
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": null
+          },
+          "touches_page_edge": [],
+          "overlap_conflict_panel_ids": [
+            "PN_f2200cb384a8",
+            "PN_f4be483d0ea3"
+          ]
+        },
+        {
+          "panel_id": "PN_f2200cb384a8",
+          "bbox": [
+            505,
+            89,
+            827,
+            465
+          ],
+          "bbox_normalized": [
+            0.561111,
+            0.069531,
+            0.918889,
+            0.363281
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.988532
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              825,
+              90
+            ],
+            [
+              505,
+              90
+            ],
+            [
+              506,
+              464
+            ],
+            [
+              825,
+              464
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_d92e8767a701"
+          ]
+        },
+        {
+          "panel_id": "PN_f4be483d0ea3",
+          "bbox": [
+            78,
+            90,
+            499,
+            466
+          ],
+          "bbox_normalized": [
+            0.086667,
+            0.070312,
+            0.554444,
+            0.364063
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.992315
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              78,
+              91
+            ],
+            [
+              79,
+              464
+            ],
+            [
+              498,
+              463
+            ],
+            [
+              498,
+              90
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_d92e8767a701"
+          ]
+        },
+        {
+          "panel_id": "PN_e750f2a6a33e",
+          "bbox": [
+            75,
+            481,
+            827,
+            1190
+          ],
+          "bbox_normalized": [
+            0.083333,
+            0.375781,
+            0.918889,
+            0.929688
+          ],
+          "state": "DETECTED",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.991793
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              78,
+              482
+            ],
+            [
+              79,
+              1186
+            ],
+            [
+              825,
+              1186
+            ],
+            [
+              825,
+              482
+            ]
+          ],
+          "overlap_conflict_panel_ids": []
+        }
+      ],
+      "detected_panel_count": 1,
+      "ambiguous_panel_count": 3,
+      "unresolved": false,
+      "page_fallback": false,
+      "adjacency": [
+        {
+          "from": "PN_d92e8767a701",
+          "to": "PN_e750f2a6a33e",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_f2200cb384a8",
+          "to": "PN_f4be483d0ea3",
+          "relation": "RIGHT_OF",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_f2200cb384a8",
+          "to": "PN_e750f2a6a33e",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_f4be483d0ea3",
+          "to": "PN_e750f2a6a33e",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        }
+      ],
+      "raw_candidate_count": 5,
+      "duplicate_candidates_suppressed": 1,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 38,
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "revision": "deterministic-panel-hybrid.v1",
+      "image_dimensions": [
+        900,
+        1280
+      ],
+      "panels": [
+        {
+          "panel_id": "PN_d7a50b306189",
+          "bbox": [
+            71,
+            91,
+            819,
+            420
+          ],
+          "bbox_normalized": [
+            0.078889,
+            0.071094,
+            0.91,
+            0.328125
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": null
+          },
+          "touches_page_edge": [],
+          "overlap_conflict_panel_ids": [
+            "PN_86914f467fda",
+            "PN_c4c0ce67bc22"
+          ]
+        },
+        {
+          "panel_id": "PN_86914f467fda",
+          "bbox": [
+            72,
+            93,
+            619,
+            419
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.072656,
+            0.687778,
+            0.327344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.99511
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              72,
+              93
+            ],
+            [
+              72,
+              418
+            ],
+            [
+              618,
+              418
+            ],
+            [
+              618,
+              93
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_d7a50b306189"
+          ]
+        },
+        {
+          "panel_id": "PN_c4c0ce67bc22",
+          "bbox": [
+            626,
+            93,
+            818,
+            419
+          ],
+          "bbox_normalized": [
+            0.695556,
+            0.072656,
+            0.908889,
+            0.327344
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.99174
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              626,
+              93
+            ],
+            [
+              626,
+              418
+            ],
+            [
+              817,
+              418
+            ],
+            [
+              817,
+              93
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_d7a50b306189"
+          ]
+        },
+        {
+          "panel_id": "PN_2dc1bfa2af64",
+          "bbox": [
+            70,
+            433,
+            819,
+            716
+          ],
+          "bbox_normalized": [
+            0.077778,
+            0.338281,
+            0.91,
+            0.559375
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": null
+          },
+          "touches_page_edge": [],
+          "overlap_conflict_panel_ids": [
+            "PN_1d64a6696cae",
+            "PN_356b259b380a"
+          ]
+        },
+        {
+          "panel_id": "PN_1d64a6696cae",
+          "bbox": [
+            72,
+            434,
+            426,
+            715
+          ],
+          "bbox_normalized": [
+            0.08,
+            0.339062,
+            0.473333,
+            0.558594
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.993621
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              72,
+              435
+            ],
+            [
+              72,
+              714
+            ],
+            [
+              425,
+              714
+            ],
+            [
+              425,
+              434
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_2dc1bfa2af64"
+          ]
+        },
+        {
+          "panel_id": "PN_356b259b380a",
+          "bbox": [
+            433,
+            435,
+            818,
+            716
+          ],
+          "bbox_normalized": [
+            0.481111,
+            0.339844,
+            0.908889,
+            0.559375
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.993659
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              433,
+              435
+            ],
+            [
+              433,
+              714
+            ],
+            [
+              817,
+              714
+            ],
+            [
+              817,
+              435
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_2dc1bfa2af64"
+          ]
+        },
+        {
+          "panel_id": "PN_24859586c1ec",
+          "bbox": [
+            71,
+            731,
+            368,
+            1192
+          ],
+          "bbox_normalized": [
+            0.078889,
+            0.571094,
+            0.408889,
+            0.93125
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.994429
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              72,
+              732
+            ],
+            [
+              72,
+              1188
+            ],
+            [
+              366,
+              1188
+            ],
+            [
+              366,
+              732
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_3579e028221d"
+          ]
+        },
+        {
+          "panel_id": "PN_268e02ea9e5f",
+          "bbox": [
+            375,
+            731,
+            819,
+            1189
+          ],
+          "bbox_normalized": [
+            0.416667,
+            0.571094,
+            0.91,
+            0.928906
+          ],
+          "state": "DETECTED",
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 2,
+            "rectangularity": 0.995545
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              376,
+              732
+            ],
+            [
+              376,
+              1186
+            ],
+            [
+              817,
+              1186
+            ],
+            [
+              817,
+              732
+            ]
+          ],
+          "overlap_conflict_panel_ids": []
+        },
+        {
+          "panel_id": "PN_3579e028221d",
+          "bbox": [
+            214,
+            912,
+            354,
+            1150
+          ],
+          "bbox_normalized": [
+            0.237778,
+            0.7125,
+            0.393333,
+            0.898438
+          ],
+          "state": "AMBIGUOUS",
+          "provenance": [
+            "border_contour"
+          ],
+          "heuristic_evidence": {
+            "score_kind": "UNCALIBRATED_STRUCTURAL_HEURISTIC",
+            "source_count": 1,
+            "rectangularity": 0.771339
+          },
+          "touches_page_edge": [],
+          "polygon": [
+            [
+              291,
+              912
+            ],
+            [
+              342,
+              961
+            ],
+            [
+              352,
+              1043
+            ],
+            [
+              320,
+              1131
+            ],
+            [
+              254,
+              1149
+            ],
+            [
+              214,
+              1005
+            ],
+            [
+              240,
+              943
+            ]
+          ],
+          "overlap_conflict_panel_ids": [
+            "PN_24859586c1ec"
+          ]
+        }
+      ],
+      "detected_panel_count": 1,
+      "ambiguous_panel_count": 8,
+      "unresolved": false,
+      "page_fallback": false,
+      "adjacency": [
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_2dc1bfa2af64",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_1d64a6696cae",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_356b259b380a",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_24859586c1ec",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_d7a50b306189",
+          "to": "PN_3579e028221d",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_c4c0ce67bc22",
+          "relation": "LEFT_OF",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_2dc1bfa2af64",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_1d64a6696cae",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_356b259b380a",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_24859586c1ec",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_86914f467fda",
+          "to": "PN_3579e028221d",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_c4c0ce67bc22",
+          "to": "PN_2dc1bfa2af64",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_c4c0ce67bc22",
+          "to": "PN_356b259b380a",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_c4c0ce67bc22",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_2dc1bfa2af64",
+          "to": "PN_24859586c1ec",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_2dc1bfa2af64",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_2dc1bfa2af64",
+          "to": "PN_3579e028221d",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_1d64a6696cae",
+          "to": "PN_356b259b380a",
+          "relation": "LEFT_OF",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_1d64a6696cae",
+          "to": "PN_24859586c1ec",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_1d64a6696cae",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_1d64a6696cae",
+          "to": "PN_3579e028221d",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_356b259b380a",
+          "to": "PN_268e02ea9e5f",
+          "relation": "ABOVE",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_24859586c1ec",
+          "to": "PN_268e02ea9e5f",
+          "relation": "LEFT_OF",
+          "state": "AMBIGUOUS"
+        },
+        {
+          "from": "PN_268e02ea9e5f",
+          "to": "PN_3579e028221d",
+          "relation": "RIGHT_OF",
+          "state": "AMBIGUOUS"
+        }
+      ],
+      "raw_candidate_count": 11,
+      "duplicate_candidates_suppressed": 2,
+      "config": {
+        "white_level": 245,
+        "gutter_white_fraction": 0.985,
+        "min_gutter_fraction": 0.008,
+        "min_panel_area_fraction": 0.025,
+        "max_panel_area_fraction": 0.94,
+        "min_side_fraction": 0.08,
+        "contour_rectangularity": 0.72,
+        "duplicate_iou": 0.82,
+        "conflict_iou": 0.1,
+        "edge_terminal_fraction": 0.015,
+        "edge_join_fraction": 0.02,
+        "max_partition_depth": 4
+      },
+      "gt_runtime_features": []
+    }
+  ],
+  "gt_runtime_features": [],
+  "semantic_sha256": "94742f62a5991a8e8ad51e29227328027462b1e40c138858c008a1e583d86749"
+}

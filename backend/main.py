@@ -8,6 +8,7 @@ from app.routers.reading_order_benchmark_reviews import router as reading_order_
 from app.routers.reader_correctness_reviews import router as reader_correctness_reviews_router
 from app.routers.reader_logical_reviews import router as reader_logical_reviews_router
 from app.routers.reader_router_validation_reviews import router as reader_router_validation_reviews_router
+from app.routers.panel_ground_truth_reviews import router as panel_ground_truth_reviews_router
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
@@ -21,6 +22,7 @@ app.include_router(reading_order_benchmark_reviews_router)
 app.include_router(reader_correctness_reviews_router)
 app.include_router(reader_logical_reviews_router)
 app.include_router(reader_router_validation_reviews_router)
+app.include_router(panel_ground_truth_reviews_router)
 
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 

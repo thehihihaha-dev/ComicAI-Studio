@@ -1,0 +1,34 @@
+{
+  "checkpoint": "12.2",
+  "configuration": {
+    "conflict_iou": 0.1,
+    "contour_rectangularity": 0.72,
+    "duplicate_iou": 0.82,
+    "edge_join_fraction": 0.02,
+    "edge_terminal_fraction": 0.015,
+    "gutter_white_fraction": 0.985,
+    "max_panel_area_fraction": 0.94,
+    "max_partition_depth": 4,
+    "min_gutter_fraction": 0.008,
+    "min_panel_area_fraction": 0.025,
+    "min_side_fraction": 0.08,
+    "white_level": 245
+  },
+  "extractor_sha256": "681968c45afd1db8947ff66d436c84db9e72425256d68b407dc55197553ff311",
+  "gt_runtime_features": [],
+  "ocr_calls": 0,
+  "ollama_calls": 0,
+  "parameter_status": "PREDECLARED_SCALE_NORMALIZED_NOT_BENCHMARK_FITTED",
+  "pipeline": [
+    "whitespace_gutter_recursive_partition",
+    "border_contour_evidence",
+    "page_edge_completion",
+    "candidate_fusion",
+    "duplicate_suppression"
+  ],
+  "protocol_sha256": "37965ede7980f4ea9f0a96a5e2c3a8ee6f881ca33280e6281d157a418531dd24",
+  "revision": "deterministic-panel-hybrid.v1",
+  "schema_version": "panel-extraction-protocol.v1",
+  "script_sha256": "09394e5fe12352ca93607b500b16e97cf15e363a632f1376b7f904be70ea443f",
+  "vlm_calls": 0
+}

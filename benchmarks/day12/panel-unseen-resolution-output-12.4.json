@@ -1,0 +1,675 @@
+{
+  "schema_version": "panel-unseen-resolution-output.v1",
+  "checkpoint": "12.4",
+  "pages": [
+    {
+      "page_order": 3,
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_befc93661d98",
+          "bbox": [
+            80,
+            90,
+            827,
+            496
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "MULTI_SOURCE_ATOMIC",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_3434a2701d8c",
+          "bbox": [
+            149,
+            151,
+            307,
+            431
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "NESTED_INTERNAL_FRAGMENT",
+          "supporting_ids": [
+            "PN_befc93661d98"
+          ],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_cc6fa8f61cd2",
+          "bbox": [
+            80,
+            512,
+            827,
+            851
+          ],
+          "input_state": "DETECTED",
+          "resolution_status": "SELECTED",
+          "reason": "LOCKED_DETECTED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_da66c62e69c6",
+          "bbox": [
+            80,
+            867,
+            827,
+            1216
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "reason": "CONFLICT_NOT_RESOLVED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_f213d1da9efd",
+          "bbox": [
+            81,
+            868,
+            278,
+            1187
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "reason": "CONFLICT_NOT_RESOLVED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_6792c0bfba14",
+          "bbox": [
+            285,
+            868,
+            826,
+            1187
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "reason": "CONFLICT_NOT_RESOLVED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "selected_panel_ids": [
+        "PN_befc93661d98",
+        "PN_cc6fa8f61cd2"
+      ],
+      "unresolved": false,
+      "geometry_mutated": false
+    },
+    {
+      "page_order": 4,
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_77c431f85a56",
+          "bbox": [
+            72,
+            0,
+            823,
+            728
+          ],
+          "input_state": "DETECTED",
+          "resolution_status": "SELECTED",
+          "reason": "LOCKED_DETECTED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "page_edge_completion",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_b6d7cc69b0e5",
+          "bbox": [
+            101,
+            372,
+            266,
+            584
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "NESTED_INTERNAL_FRAGMENT",
+          "supporting_ids": [
+            "PN_77c431f85a56"
+          ],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_1b619a0db400",
+          "bbox": [
+            72,
+            743,
+            823,
+            1190
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "UNDER_SPLIT_SPANNER",
+          "supporting_ids": [
+            "PN_952651e84374",
+            "PN_a8da83358244"
+          ],
+          "supporting_relation_ids": [
+            "SP_c0e2f172e1df"
+          ],
+          "provenance": [
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_a8da83358244",
+          "bbox": [
+            75,
+            744,
+            544,
+            1187
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_1b619a0db400"
+          ],
+          "supporting_relation_ids": [
+            "SP_c0e2f172e1df"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_952651e84374",
+          "bbox": [
+            550,
+            744,
+            821,
+            1187
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_1b619a0db400"
+          ],
+          "supporting_relation_ids": [
+            "SP_c0e2f172e1df"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "selected_panel_ids": [
+        "PN_77c431f85a56",
+        "PN_952651e84374",
+        "PN_a8da83358244"
+      ],
+      "unresolved": false,
+      "geometry_mutated": false
+    },
+    {
+      "page_order": 5,
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_6bc262100136",
+          "bbox": [
+            450,
+            621,
+            824,
+            1184
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "reason": "CONFLICT_NOT_RESOLVED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_72219006ff20",
+          "bbox": [
+            633,
+            641,
+            797,
+            898
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "reason": "CONFLICT_NOT_RESOLVED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "selected_panel_ids": [],
+      "unresolved": true,
+      "geometry_mutated": false
+    },
+    {
+      "page_order": 7,
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_d7a8a0004def",
+          "bbox": [
+            73,
+            92,
+            824,
+            784
+          ],
+          "input_state": "DETECTED",
+          "resolution_status": "SELECTED",
+          "reason": "LOCKED_DETECTED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_54c078540d26",
+          "bbox": [
+            72,
+            798,
+            824,
+            1188
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "MULTI_SOURCE_ATOMIC",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_6af47394f6b8",
+          "bbox": [
+            393,
+            855,
+            534,
+            1080
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "NESTED_INTERNAL_FRAGMENT",
+          "supporting_ids": [
+            "PN_54c078540d26"
+          ],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_5a5fe7915c09",
+          "bbox": [
+            124,
+            883,
+            257,
+            1136
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "NESTED_INTERNAL_FRAGMENT",
+          "supporting_ids": [
+            "PN_54c078540d26"
+          ],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "selected_panel_ids": [
+        "PN_54c078540d26",
+        "PN_d7a8a0004def"
+      ],
+      "unresolved": false,
+      "geometry_mutated": false
+    },
+    {
+      "page_order": 18,
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_d92e8767a701",
+          "bbox": [
+            75,
+            86,
+            827,
+            467
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "UNDER_SPLIT_SPANNER",
+          "supporting_ids": [
+            "PN_f2200cb384a8",
+            "PN_f4be483d0ea3"
+          ],
+          "supporting_relation_ids": [
+            "SP_c63749181182"
+          ],
+          "provenance": [
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_f2200cb384a8",
+          "bbox": [
+            505,
+            89,
+            827,
+            465
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_d92e8767a701"
+          ],
+          "supporting_relation_ids": [
+            "SP_c63749181182"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_f4be483d0ea3",
+          "bbox": [
+            78,
+            90,
+            499,
+            466
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_d92e8767a701"
+          ],
+          "supporting_relation_ids": [
+            "SP_c63749181182"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_e750f2a6a33e",
+          "bbox": [
+            75,
+            481,
+            827,
+            1190
+          ],
+          "input_state": "DETECTED",
+          "resolution_status": "SELECTED",
+          "reason": "LOCKED_DETECTED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        }
+      ],
+      "selected_panel_ids": [
+        "PN_e750f2a6a33e",
+        "PN_f2200cb384a8",
+        "PN_f4be483d0ea3"
+      ],
+      "unresolved": false,
+      "geometry_mutated": false
+    },
+    {
+      "page_order": 38,
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "resolver_version": "containment-guillotine-resolver.v1",
+      "gt_runtime_features": [],
+      "candidates": [
+        {
+          "panel_id": "PN_d7a50b306189",
+          "bbox": [
+            71,
+            91,
+            819,
+            420
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "UNDER_SPLIT_SPANNER",
+          "supporting_ids": [
+            "PN_86914f467fda",
+            "PN_c4c0ce67bc22"
+          ],
+          "supporting_relation_ids": [
+            "SP_bb5395f06664"
+          ],
+          "provenance": [
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_86914f467fda",
+          "bbox": [
+            72,
+            93,
+            619,
+            419
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_d7a50b306189"
+          ],
+          "supporting_relation_ids": [
+            "SP_bb5395f06664"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_c4c0ce67bc22",
+          "bbox": [
+            626,
+            93,
+            818,
+            419
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_d7a50b306189"
+          ],
+          "supporting_relation_ids": [
+            "SP_bb5395f06664"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_2dc1bfa2af64",
+          "bbox": [
+            70,
+            433,
+            819,
+            716
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "UNDER_SPLIT_SPANNER",
+          "supporting_ids": [
+            "PN_1d64a6696cae",
+            "PN_356b259b380a"
+          ],
+          "supporting_relation_ids": [
+            "SP_952d815fc05a"
+          ],
+          "provenance": [
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_1d64a6696cae",
+          "bbox": [
+            72,
+            434,
+            426,
+            715
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_2dc1bfa2af64"
+          ],
+          "supporting_relation_ids": [
+            "SP_952d815fc05a"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_356b259b380a",
+          "bbox": [
+            433,
+            435,
+            818,
+            716
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "GUILLOTINE_TILING_CHILD",
+          "supporting_ids": [
+            "PN_2dc1bfa2af64"
+          ],
+          "supporting_relation_ids": [
+            "SP_952d815fc05a"
+          ],
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "panel_id": "PN_24859586c1ec",
+          "bbox": [
+            71,
+            731,
+            368,
+            1192
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "SELECTED",
+          "reason": "MULTI_SOURCE_ATOMIC",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_268e02ea9e5f",
+          "bbox": [
+            375,
+            731,
+            819,
+            1189
+          ],
+          "input_state": "DETECTED",
+          "resolution_status": "SELECTED",
+          "reason": "LOCKED_DETECTED",
+          "supporting_ids": [],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour",
+            "whitespace_partition"
+          ]
+        },
+        {
+          "panel_id": "PN_3579e028221d",
+          "bbox": [
+            214,
+            912,
+            354,
+            1150
+          ],
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "REJECTED",
+          "reason": "NESTED_INTERNAL_FRAGMENT",
+          "supporting_ids": [
+            "PN_24859586c1ec"
+          ],
+          "supporting_relation_ids": [],
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "selected_panel_ids": [
+        "PN_1d64a6696cae",
+        "PN_24859586c1ec",
+        "PN_268e02ea9e5f",
+        "PN_356b259b380a",
+        "PN_86914f467fda",
+        "PN_c4c0ce67bc22"
+      ],
+      "unresolved": false,
+      "geometry_mutated": false
+    }
+  ],
+  "gt_runtime_features": [],
+  "semantic_sha256": "6b2c011eb89a74a9dd2e67a0d89c1486f2b3a7a0ddb046c84e43f376ee195e45"
+}

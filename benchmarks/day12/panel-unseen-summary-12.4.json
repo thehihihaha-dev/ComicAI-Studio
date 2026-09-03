@@ -1,0 +1,275 @@
+{
+  "schema_version": "panel-unseen-summary.v1",
+  "checkpoint": "12.4",
+  "outcome": "A. UNSEEN GENERALIZATION PASS — READY FOR PANEL ORDERING VALIDATION",
+  "aggregate": {
+    "human_panels": 21,
+    "selected_predictions": 16,
+    "matched": 16,
+    "missed": 5,
+    "false_promoted": 0,
+    "precision": 1.0,
+    "recall": 0.761905,
+    "f1": 0.864865,
+    "unresolved_pages": 1,
+    "unresolved_page_rate": 0.166667,
+    "matched_iou": {
+      "values": [
+        0.88164,
+        0.899134,
+        0.913932,
+        0.920482,
+        0.932851,
+        0.939199,
+        0.942635,
+        0.943699,
+        0.95194,
+        0.95264,
+        0.954872,
+        0.957457,
+        0.960163,
+        0.962575,
+        0.972823,
+        0.975207
+      ],
+      "minimum": 0.88164,
+      "mean": 0.941328,
+      "median": 0.94782,
+      "maximum": 0.975207
+    },
+    "selected_under_split_count": 0,
+    "selected_over_split_count": 0
+  },
+  "per_page": [
+    {
+      "page_order": 3,
+      "human_panel_count": 4,
+      "selected_prediction_count": 2,
+      "matched": 2,
+      "missed": 2,
+      "false_promoted": 0,
+      "unresolved": false,
+      "dominant_structural_failure": "CONFLICT_RESOLUTION"
+    },
+    {
+      "page_order": 4,
+      "human_panel_count": 3,
+      "selected_prediction_count": 3,
+      "matched": 3,
+      "missed": 0,
+      "false_promoted": 0,
+      "unresolved": false,
+      "dominant_structural_failure": "NONE"
+    },
+    {
+      "page_order": 5,
+      "human_panel_count": 3,
+      "selected_prediction_count": 0,
+      "matched": 0,
+      "missed": 3,
+      "false_promoted": 0,
+      "unresolved": true,
+      "dominant_structural_failure": "MISSING_CANDIDATE_GENERATION_AND_CONFLICT_RESOLUTION"
+    },
+    {
+      "page_order": 7,
+      "human_panel_count": 2,
+      "selected_prediction_count": 2,
+      "matched": 2,
+      "missed": 0,
+      "false_promoted": 0,
+      "unresolved": false,
+      "dominant_structural_failure": "NONE"
+    },
+    {
+      "page_order": 18,
+      "human_panel_count": 3,
+      "selected_prediction_count": 3,
+      "matched": 3,
+      "missed": 0,
+      "false_promoted": 0,
+      "unresolved": false,
+      "dominant_structural_failure": "NONE"
+    },
+    {
+      "page_order": 38,
+      "human_panel_count": 6,
+      "selected_prediction_count": 6,
+      "matched": 6,
+      "missed": 0,
+      "false_promoted": 0,
+      "unresolved": false,
+      "dominant_structural_failure": "NONE"
+    }
+  ],
+  "false_promotion_count": 0,
+  "missed_panel_taxonomy": [
+    {
+      "page_order": 3,
+      "human_panel_id": "human-3-8",
+      "bbox": [
+        71.313,
+        864.716,
+        283.356,
+        1183.034
+      ],
+      "primary_failure_class": "CONFLICT_RESOLUTION",
+      "origin": "RESOLVER",
+      "eligible_frozen_candidates": [
+        {
+          "prediction_id": "PN_f213d1da9efd",
+          "iou": 0.908951,
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "resolution_reason": "CONFLICT_NOT_RESOLVED",
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "evidence": "Accurate frozen candidate(s) existed but remained unresolved/suppressed."
+    },
+    {
+      "page_order": 3,
+      "human_panel_id": "human-3-5",
+      "bbox": [
+        281.751,
+        866.528,
+        835.3,
+        1195.246
+      ],
+      "primary_failure_class": "CONFLICT_RESOLUTION",
+      "origin": "RESOLVER",
+      "eligible_frozen_candidates": [
+        {
+          "prediction_id": "PN_6792c0bfba14",
+          "iou": 0.948437,
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "resolution_reason": "CONFLICT_NOT_RESOLVED",
+          "provenance": [
+            "border_contour"
+          ]
+        },
+        {
+          "prediction_id": "PN_da66c62e69c6",
+          "iou": 0.678739,
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "resolution_reason": "CONFLICT_NOT_RESOLVED",
+          "provenance": [
+            "whitespace_partition"
+          ]
+        }
+      ],
+      "evidence": "Accurate frozen candidate(s) existed but remained unresolved/suppressed."
+    },
+    {
+      "page_order": 5,
+      "human_panel_id": "human-5-1",
+      "bbox": [
+        74.608,
+        88.203,
+        836.083,
+        604.339
+      ],
+      "primary_failure_class": "MISSING_CANDIDATE_GENERATION",
+      "origin": "EXTRACTOR",
+      "eligible_frozen_candidates": [],
+      "evidence": "No frozen raw candidate reached the predeclared IoU convention."
+    },
+    {
+      "page_order": 5,
+      "human_panel_id": "human-5-5",
+      "bbox": [
+        75.392,
+        609.378,
+        446.459,
+        1192.588
+      ],
+      "primary_failure_class": "MISSING_CANDIDATE_GENERATION",
+      "origin": "EXTRACTOR",
+      "eligible_frozen_candidates": [],
+      "evidence": "No frozen raw candidate reached the predeclared IoU convention."
+    },
+    {
+      "page_order": 5,
+      "human_panel_id": "human-5-4",
+      "bbox": [
+        446.275,
+        615.645,
+        832.727,
+        1193.679
+      ],
+      "primary_failure_class": "CONFLICT_RESOLUTION",
+      "origin": "RESOLVER",
+      "eligible_frozen_candidates": [
+        {
+          "prediction_id": "PN_6bc262100136",
+          "iou": 0.942608,
+          "input_state": "AMBIGUOUS",
+          "resolution_status": "UNRESOLVED",
+          "resolution_reason": "CONFLICT_NOT_RESOLVED",
+          "provenance": [
+            "border_contour"
+          ]
+        }
+      ],
+      "evidence": "Accurate frozen candidate(s) existed but remained unresolved/suppressed."
+    }
+  ],
+  "failure_origin_split": {
+    "extractor": 2,
+    "resolver": 3
+  },
+  "comparison_12_3": {
+    "reference": {
+      "matched": 10,
+      "human_panels": 15,
+      "false_promoted": 0,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1": 0.8,
+      "unresolved_pages": 1,
+      "page_count": 4
+    },
+    "precision_preserved": true,
+    "recall_delta": 0.095238,
+    "f1_delta": 0.064865,
+    "unresolved_rate_delta": -0.083333
+  },
+  "layout_findings": {
+    "generalizes": [
+      "ADJACENT_PANELS",
+      "HORIZONTAL_VERTICAL_DIVISIONS",
+      "SPANNING_ROWS",
+      "TALL_BESIDE_STACKED",
+      "PAGE_EDGE_PANELS",
+      "NESTED_INTERNAL_CONTOUR_REJECTION"
+    ],
+    "remaining_weaknesses": [
+      "PAGE_3_UNRESOLVED_BOTTOM_CONFLICT",
+      "PAGE_5_MISSING_CANDIDATES_AND_UNRESOLVED_CONTOUR"
+    ]
+  },
+  "panel_order_readiness": "YES_PANEL_STRUCTURE_JUSTIFIES_SEPARATELY_REVIEWED_PANEL_ORDER_VALIDATION",
+  "protocol_sha256": "a6cb6acdd680fed82c8ad02e37eacfe4bd4a1868e7aca809f932f97267e9280b",
+  "evaluation_file_sha256": "1363ee8a7822207ffd216c6bc00168a347cdb0ed0bb079ccc590bb4bc3898275",
+  "determinism": {
+    "two_generation_bytes_identical": true,
+    "evaluation_semantic_sha256": "3733d42b022490f7cfd18e966aedff001b8fc9d5b2ca9b7ddf54175865f1792c"
+  },
+  "safety": {
+    "resource_guard": "NORMAL",
+    "gt_runtime_features": [],
+    "prediction_rerun": false,
+    "tuning": false,
+    "human_gt_modified": false,
+    "reading_order_run": false,
+    "model_calls": {
+      "ocr": 0,
+      "vlm": 0,
+      "ollama": 0
+    }
+  }
+}

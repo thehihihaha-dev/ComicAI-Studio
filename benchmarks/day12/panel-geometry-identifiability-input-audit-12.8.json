@@ -1,0 +1,91 @@
+{
+  "schema_version": "panel-geometry-identifiability-input-audit.v1",
+  "checkpoint": "12.8",
+  "status": "FROZEN_GEOMETRY_IDENTITIES_VERIFIED",
+  "pages": [
+    {
+      "page_order": 1,
+      "source_path": "backend/uploads/92961605-5553-4df1-b74e-9a3bed5e14f5_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-2.jpg",
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "9949756e1a8148f2c412370b9f195c2814fcb1bd6a2084ff6212b4aef467e75a",
+      "logical_geometry_semantic_sha256": "2afbdd4712bf9de87d50a9353dc24ae89488c6f79fc09d5da040ba710bb55bf7"
+    },
+    {
+      "page_order": 2,
+      "source_path": "backend/uploads/33c28b2d-f096-4025-b6b7-7a3c8c7ba1df_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-4.jpg",
+      "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "8ea22a5011c7b26c36b8e81209d5d082d330763702d3dbe83b3a3a0b17b98484",
+      "logical_geometry_semantic_sha256": "bd185143e0484208140891ac7147a248f69fb08e553d4408dd9322e238151350"
+    },
+    {
+      "page_order": 3,
+      "source_path": "backend/uploads/ab627e40-5851-4a6e-9e7a-03d3968087cb_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-5.jpg",
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "4b6623559f12e09f09a9718fef76435577746d5777df24cf45fa7a65a819a006",
+      "logical_geometry_semantic_sha256": "57783dd06ab2957f1668de6a0cdcbf6706bce0bc5275dbeace9de1426ae42b3f"
+    },
+    {
+      "page_order": 15,
+      "source_path": "backend/uploads/16c906e1-b4b0-426c-ba4a-3d17e6fa4042_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-18.jpg",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "02b59293b41d691c4e1a0917125611ab3400bcf43a0c0cb93e5b1530a41a9eb8",
+      "logical_geometry_semantic_sha256": "955ad99d37c4e0aa94b16f7ba4c127ada73d480c3b703780ab3887f9708d85b4"
+    },
+    {
+      "page_order": 18,
+      "source_path": "backend/uploads/d997ac05-6017-4a9c-b5d6-49e065dd9f2d_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-21.jpg",
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "23af8ec007e196d6f9f9313a9aa1065889e83796b9fc2c6af790c564960a11f5",
+      "logical_geometry_semantic_sha256": "1f45cbf0b0d364d3d719780ce57c41f58367394f639c0a6166f5ef31a96b20f2"
+    },
+    {
+      "page_order": 38,
+      "source_path": "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_geometry_semantic_sha256": "1d6a66ddc4a8aa878cb14b07898524ac7e90b192c217bcac1597373326bb91d8",
+      "logical_geometry_semantic_sha256": "d02c1ded3d3ba08d5f89ea6180c41f9050bea1eea9cb8489c6222b3ee7611beb"
+    }
+  ],
+  "accepted_phase_a_artifacts": [
+    "candidate-freeze",
+    "input-audit",
+    "oracle-candidates",
+    "protocol",
+    "structural-audit"
+  ],
+  "accepted_phase_a_raw_hashes": {
+    "input-audit": "29a68c8dbe7d51d3b473aa60336c7b948bbb35329083e24e52885f319f469848",
+    "protocol": "a1577fc62dd1aa6b7e21b29e191ae9f34b1ac799d5a46e79fba4fd1557460ab8",
+    "oracle-candidates": "66337371b13ec4c145c4b5b8a6bbfe22e86c89e514d69d93ead8993b072d4093",
+    "candidate-freeze": "d97889b2cd41dbf3c138433781afb175892fc5259442e9de874209e258d6e6b9",
+    "structural-audit": "44ff0af4fe04f4ea6443bb6606d4052efcc12dc12fcc4f9c7e00c17b9ff164d7"
+  },
+  "human_derived_artifact_hashes": [],
+  "human_order_derived_provenance_dependencies": [],
+  "gt_runtime_features": [],
+  "semantic_sha256": "de11f763a62533e15a80a70d3c3b7db1db341d886d04cf8571fa67f7122dc924"
+}

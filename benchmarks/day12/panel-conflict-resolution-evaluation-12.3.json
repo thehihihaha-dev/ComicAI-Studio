@@ -1,0 +1,233 @@
+{
+  "schema_version": "panel-conflict-resolution-evaluation.v1",
+  "checkpoint": "12.3",
+  "human_gt_snapshot_sha256": "5ac1383fdbd611bd203fa1e1b35d8fb0eb4e4e082f62e04907adc493c5635fd3",
+  "resolution_output_file_sha256_before_gt": "7559e7560b0825fd5874306615bbe334465bd31e9c835077700448a4771da6c6",
+  "resolution_output_semantic_sha256": "2a7cb3ce091cc60eb126949a4ba64e98d1519305e0b107f2ad8d913b999045b3",
+  "matching_protocol": "UNCHANGED_12.2_ONE_TO_ONE_IOU_0.50_EVALUATION_ONLY",
+  "control": {
+    "matched": 2,
+    "missed": 13,
+    "false_detected": 0,
+    "precision": 1.0,
+    "recall": 0.133333,
+    "f1": 0.235294,
+    "unresolved_pages": 3
+  },
+  "per_page": [
+    {
+      "page_order": 1,
+      "human_panel_count": 3,
+      "predicted_detected_count": 0,
+      "predicted_ambiguous_count": 0,
+      "detected_matches": [],
+      "ambiguous_matches": [],
+      "matched_true_panels_detected": 0,
+      "human_panels_recoverable_in_ambiguous": 0,
+      "human_panels_with_structurally_clean_ambiguous_candidate": 0,
+      "missed_by_all_candidates": [
+        "human-1-11",
+        "human-1-8",
+        "human-1-9"
+      ],
+      "missed_by_detected_and_structurally_clean_ambiguous": [
+        "human-1-11",
+        "human-1-8",
+        "human-1-9"
+      ],
+      "false_detected_panel_ids": [],
+      "unmatched_ambiguous_panel_ids": [],
+      "partial_detected": [],
+      "partial_ambiguous": [],
+      "under_splitting": [],
+      "over_splitting": [],
+      "unresolved": true,
+      "selected_panel_ids": [],
+      "rejection_reasons": {
+        "CONFLICT_NOT_RESOLVED": 3
+      }
+    },
+    {
+      "page_order": 2,
+      "human_panel_count": 2,
+      "predicted_detected_count": 2,
+      "predicted_ambiguous_count": 0,
+      "detected_matches": [
+        {
+          "prediction_id": "PN_2fd92daee87b",
+          "human_panel_id": "human-2-2",
+          "iou": 0.978158
+        },
+        {
+          "prediction_id": "PN_c81abc4667cc",
+          "human_panel_id": "human-2-1",
+          "iou": 0.918092
+        }
+      ],
+      "ambiguous_matches": [],
+      "matched_true_panels_detected": 2,
+      "human_panels_recoverable_in_ambiguous": 0,
+      "human_panels_with_structurally_clean_ambiguous_candidate": 0,
+      "missed_by_all_candidates": [],
+      "missed_by_detected_and_structurally_clean_ambiguous": [],
+      "false_detected_panel_ids": [],
+      "unmatched_ambiguous_panel_ids": [],
+      "partial_detected": [],
+      "partial_ambiguous": [],
+      "under_splitting": [],
+      "over_splitting": [],
+      "unresolved": false,
+      "selected_panel_ids": [
+        "PN_2fd92daee87b",
+        "PN_c81abc4667cc"
+      ],
+      "rejection_reasons": {
+        "NESTED_INTERNAL_FRAGMENT": 1
+      }
+    },
+    {
+      "page_order": 15,
+      "human_panel_count": 5,
+      "predicted_detected_count": 3,
+      "predicted_ambiguous_count": 0,
+      "detected_matches": [
+        {
+          "prediction_id": "PN_40b666b58c82",
+          "human_panel_id": "human-15-8",
+          "iou": 0.898417
+        },
+        {
+          "prediction_id": "PN_cf3c6e8976b9",
+          "human_panel_id": "human-15-4",
+          "iou": 0.906379
+        },
+        {
+          "prediction_id": "PN_e342039122d3",
+          "human_panel_id": "human-15-6",
+          "iou": 0.935209
+        }
+      ],
+      "ambiguous_matches": [],
+      "matched_true_panels_detected": 3,
+      "human_panels_recoverable_in_ambiguous": 0,
+      "human_panels_with_structurally_clean_ambiguous_candidate": 0,
+      "missed_by_all_candidates": [
+        "human-15-1",
+        "human-15-2"
+      ],
+      "missed_by_detected_and_structurally_clean_ambiguous": [
+        "human-15-1",
+        "human-15-2"
+      ],
+      "false_detected_panel_ids": [],
+      "unmatched_ambiguous_panel_ids": [],
+      "partial_detected": [],
+      "partial_ambiguous": [],
+      "under_splitting": [],
+      "over_splitting": [],
+      "unresolved": false,
+      "selected_panel_ids": [
+        "PN_40b666b58c82",
+        "PN_cf3c6e8976b9",
+        "PN_e342039122d3"
+      ],
+      "rejection_reasons": {
+        "CONFLICT_NOT_RESOLVED": 4,
+        "NESTED_INTERNAL_FRAGMENT": 3,
+        "UNDER_SPLIT_SPANNER": 1
+      }
+    },
+    {
+      "page_order": 17,
+      "human_panel_count": 5,
+      "predicted_detected_count": 5,
+      "predicted_ambiguous_count": 0,
+      "detected_matches": [
+        {
+          "prediction_id": "PN_10b3e15d09b5",
+          "human_panel_id": "human-17-7",
+          "iou": 0.978867
+        },
+        {
+          "prediction_id": "PN_80ad3d363a63",
+          "human_panel_id": "human-17-8",
+          "iou": 0.955739
+        },
+        {
+          "prediction_id": "PN_920ae91c85fa",
+          "human_panel_id": "human-17-13",
+          "iou": 0.920547
+        },
+        {
+          "prediction_id": "PN_ca1bf9d09d63",
+          "human_panel_id": "human-17-6",
+          "iou": 0.973349
+        },
+        {
+          "prediction_id": "PN_e76ac7ecdd65",
+          "human_panel_id": "human-17-14",
+          "iou": 0.979041
+        }
+      ],
+      "ambiguous_matches": [],
+      "matched_true_panels_detected": 5,
+      "human_panels_recoverable_in_ambiguous": 0,
+      "human_panels_with_structurally_clean_ambiguous_candidate": 0,
+      "missed_by_all_candidates": [],
+      "missed_by_detected_and_structurally_clean_ambiguous": [],
+      "false_detected_panel_ids": [],
+      "unmatched_ambiguous_panel_ids": [],
+      "partial_detected": [],
+      "partial_ambiguous": [],
+      "under_splitting": [],
+      "over_splitting": [],
+      "unresolved": false,
+      "selected_panel_ids": [
+        "PN_10b3e15d09b5",
+        "PN_80ad3d363a63",
+        "PN_920ae91c85fa",
+        "PN_ca1bf9d09d63",
+        "PN_e76ac7ecdd65"
+      ],
+      "rejection_reasons": {
+        "UNDER_SPLIT_SPANNER": 2,
+        "NESTED_INTERNAL_FRAGMENT": 2
+      }
+    }
+  ],
+  "aggregate": {
+    "human_panels": 15,
+    "selected_panels": 10,
+    "matched": 10,
+    "missed": 5,
+    "false_promoted": 0,
+    "precision": 1.0,
+    "recall": 0.666667,
+    "f1": 0.8,
+    "unresolved_pages": 1,
+    "under_split_selected": 0,
+    "over_split_selected": 0
+  },
+  "success_gates": {
+    "matched_at_least_10": true,
+    "zero_false": true,
+    "precision_one": true,
+    "recall_at_least_0666667": true,
+    "f1_at_least_080": true,
+    "unresolved_at_most_one": true,
+    "page_2_preserved": true,
+    "page_15_at_least_3": true,
+    "page_17_five": true,
+    "no_under_or_over_split_selected": true,
+    "geometry_mutated": false,
+    "gt_runtime_features": [],
+    "resource_guard": "NORMAL"
+  },
+  "page_1_generation_limitation": "human-1-9 has no valid frozen full-panel candidate; resolver did not synthesize geometry.",
+  "gt_runtime_features": [],
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  }
+}

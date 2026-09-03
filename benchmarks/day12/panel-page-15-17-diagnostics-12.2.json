@@ -1,0 +1,46 @@
+{
+  "checkpoint": "12.2",
+  "pages": [
+    {
+      "cases": [
+        {
+          "failure_id": "P15-LR_0856a888b8df-LR_f3054b9c1820",
+          "predicted_owner_panel_ids": {
+            "LR_0856a888b8df": [],
+            "LR_f3054b9c1820": []
+          },
+          "status": "UNRESOLVED"
+        },
+        {
+          "failure_id": "P15-LR_5bdd1160b3a0-LR_f3054b9c1820",
+          "predicted_owner_panel_ids": {
+            "LR_5bdd1160b3a0": [],
+            "LR_f3054b9c1820": []
+          },
+          "status": "UNRESOLVED"
+        }
+      ],
+      "manual_evidence_use": "POST_PREDICTION_QUALITATIVE_DIAGNOSTIC_ONLY",
+      "page_order": 15,
+      "status": "UNRESOLVED"
+    },
+    {
+      "cases": [
+        {
+          "failure_id": "P17-LR_554cd55f1a6a-LR_8a526b453c10",
+          "predicted_owner_panel_ids": {
+            "LR_554cd55f1a6a": [],
+            "LR_8a526b453c10": []
+          },
+          "status": "UNRESOLVED"
+        }
+      ],
+      "manual_evidence_use": "POST_PREDICTION_QUALITATIVE_DIAGNOSTIC_ONLY",
+      "page_order": 17,
+      "status": "UNRESOLVED"
+    }
+  ],
+  "prediction_file_sha256_before_manual_read": "80e46d5c6216e3d18e9686af149a0012911795a246d1323ae4bb74d516b4b735",
+  "reading_order_scored": false,
+  "schema_version": "panel-page-diagnostics.v1"
+}

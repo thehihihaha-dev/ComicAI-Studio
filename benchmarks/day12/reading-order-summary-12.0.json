@@ -1,0 +1,105 @@
+{
+  "schema_version": "reading-order-summary.v1",
+  "checkpoint": "12.0",
+  "baseline_reproduction": {
+    "status": "PASS",
+    "metrics": {
+      "exact_pages": {
+        "correct": 7,
+        "total": 10,
+        "accuracy": 0.7
+      },
+      "exact_positions": {
+        "correct": 43,
+        "total": 50,
+        "accuracy": 0.86
+      },
+      "pairwise": {
+        "correct": 120,
+        "total": 124,
+        "accuracy": 0.967741935483871
+      },
+      "inversions": 4
+    },
+    "page_deltas_vs_day11_control": {
+      "improved": 3,
+      "unchanged": 7,
+      "regressed": 0
+    },
+    "page_3_exact": true
+  },
+  "failure_count": 4,
+  "taxonomy": {
+    "cross-panel order / missing text-to-panel assignment": 4
+  },
+  "root_classes": {
+    "C. panel/group construction": 4
+  },
+  "global_consistency": {
+    "cycles": "Impossible in emitted output because the algorithm constructs and flattens an ordered list; it does not expose an independent pairwise comparator.",
+    "transitivity": "The final list is transitive, but the same-tier predicate is non-transitive: A may overlap B and B overlap C while A does not overlap C.",
+    "stable_ties": "Stable under identical inputs due explicit coordinate/id sort keys.",
+    "ordering_changes_from_unrelated_regions": "Demonstrated synthetically: single-link tier membership lets a bridge region merge otherwise separate tiers, changing whether manga x-order or tier y-order controls existing regions.",
+    "tall_region_bridge_effects": "Possible because any matching peer admits a region to the first matching tier; no complete-link invariant is enforced.",
+    "synthetic_fixture": "reading-order-synthetic-bridge-12.0.json"
+  },
+  "human_gt_integrity": "PASS_WITH_STRUCTURAL_LABEL_LIMITATION",
+  "best_recommended_candidate": "PANEL_AWARE_AMBIGUITY controlled experiment; no production integration",
+  "generalization_risk": [
+    "N=10 pages / 50 regions",
+    "shared manga and layout style",
+    "repeated geometry patterns",
+    "threshold and candidates observed on the benchmark",
+    "limited difficult-layout and no authoritative panel/tier coverage"
+  ],
+  "human_testing_required_for_next_experiment": false,
+  "smallest_next_experiment": {
+    "pages": 10,
+    "dataset": "existing immutable Day 11 Human click-order GT",
+    "additional_evidence": "Separate benchmark-only manual panel containment/adjacency fixture for affected Pages 15, 17 and 38; not authoritative Human GT.",
+    "hypothesis": "Explicit panel containment/order plus text-to-panel assignment resolves cross-panel inversions without regressing existing exact pages.",
+    "metrics": [
+      "exact pages",
+      "exact positions",
+      "pairwise accuracy",
+      "inversions",
+      "improved/unchanged/regressed pages",
+      "new inversions"
+    ],
+    "regression_gate": "No existing exact page regression and no new inversion.",
+    "human_testing_policy": "Defer unseen Human pages until the existing-GT structural prototype demonstrates value."
+  },
+  "resource_safety": {
+    "before": {
+      "timestamp": "2026-08-24T18:51:56.604164+00:00",
+      "process_rss_bytes": null,
+      "process_peak_rss_bytes": 27230208,
+      "system_available_memory_bytes": 5914820608,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": null,
+      "process_cpu_seconds": 0.036429,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "after": {
+      "timestamp": "2026-08-24T18:51:56.632621+00:00",
+      "process_rss_bytes": null,
+      "process_peak_rss_bytes": 29278208,
+      "system_available_memory_bytes": 5908561920,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "swap_used_bytes": null,
+      "process_cpu_seconds": 0.061758,
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "safety_state": "NORMAL"
+    },
+    "resource_guard": "NORMAL",
+    "ocr_calls": 0,
+    "vlm_calls": 0,
+    "ollama_calls": 0
+  },
+  "production_integration": false,
+  "verdict": "C. CURRENT GEOMETRY INSUFFICIENT",
+  "recommended_checkpoint_12_1": "Controlled panel/group-aware plus AMBIGUOUS_ORDER experiment on the existing frozen ten-page GT first; defer unseen Human pages; no OCR inference."
+}

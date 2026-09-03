@@ -1,0 +1,282 @@
+{
+  "schema_version": "panel-geometry-identifiability-synthetic.v1",
+  "checkpoint": "12.8",
+  "fixture_count": 31,
+  "passed": 31,
+  "results": [
+    {
+      "fixture": "unique",
+      "source_fixture": "horizontal",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "equivalent",
+      "source_fixture": "ambiguous",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 1,
+      "expected_ambiguous_ready_set": true,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "symmetric",
+      "source_fixture": "ambiguous",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 1,
+      "expected_ambiguous_ready_set": true,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "2x2_rtl",
+      "source_fixture": "2x2",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "horizontal",
+      "source_fixture": "horizontal",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "vertical",
+      "source_fixture": "vertical",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "spanning_row",
+      "source_fixture": "span_top",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "tall_beside_stacked",
+      "source_fixture": "tall_right",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "reversed_tall_beside_stacked",
+      "source_fixture": "tall_left",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "offset",
+      "source_fixture": "offset",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "ambiguous_ready_set",
+      "source_fixture": "ambiguous",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 1,
+      "expected_ambiguous_ready_set": true,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "bridge_non_transitivity",
+      "source_fixture": "bridge",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "cycle",
+      "source_fixture": "explicit_cycle",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "contradiction_control",
+      "source_fixture": "diagonal_opposed",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "exact_1px",
+      "source_fixture": "equal_1px",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "beyond_1px",
+      "source_fixture": "beyond_1px",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 1,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "empty",
+      "source_fixture": "empty",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "single",
+      "source_fixture": "single",
+      "actual_pcpdag_path": "projection_constraint_order",
+      "actual_audit_path": "ready_sets+complete_signature",
+      "audit_ready_set_count": 0,
+      "expected_ambiguous_ready_set": false,
+      "signature_assertions_pass": true,
+      "pass": true
+    },
+    {
+      "fixture": "containment_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "intersection_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "gap_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "overlap_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "shared_boundary_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "row_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "column_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "spanning_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "adjacency_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "relative_alignment_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "edge_contact_signature",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "target_mismatch_semantics",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "fixture": "separate_control_contradiction_semantics",
+      "actual_audit_path": "complete_signature/classification",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "gt_runtime_features": [],
+  "semantic_sha256": "687adf2cbe9e1f19c78770ce6096dd9aab41d7267180c38e2502a1982669a1dc"
+}

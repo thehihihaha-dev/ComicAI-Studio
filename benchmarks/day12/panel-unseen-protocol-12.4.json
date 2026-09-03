@@ -1,0 +1,72 @@
+{
+  "schema_version": "panel-unseen-protocol.v1",
+  "checkpoint": "12.4",
+  "mode": "PRE_HUMAN_GENERALIZATION_FREEZE_NO_CALIBRATION",
+  "phase_order": [
+    "FREEZE_SELECTION",
+    "FREEZE_PROTOCOL",
+    "EXTRACT_TWICE",
+    "RESOLVE_TWICE",
+    "FREEZE_RAW_GRAPH_OUTPUT",
+    "FREEZE_MANIFEST",
+    "CREATE_HUMAN_QUEUE"
+  ],
+  "extractor_revision": "deterministic-panel-hybrid.v1",
+  "extractor_sha256": "681968c45afd1db8947ff66d436c84db9e72425256d68b407dc55197553ff311",
+  "extractor_configuration": {
+    "white_level": 245,
+    "gutter_white_fraction": 0.985,
+    "min_gutter_fraction": 0.008,
+    "min_panel_area_fraction": 0.025,
+    "max_panel_area_fraction": 0.94,
+    "min_side_fraction": 0.08,
+    "contour_rectangularity": 0.72,
+    "duplicate_iou": 0.82,
+    "conflict_iou": 0.1,
+    "edge_terminal_fraction": 0.015,
+    "edge_join_fraction": 0.02,
+    "max_partition_depth": 4
+  },
+  "resolver_version": "containment-guillotine-resolver.v1",
+  "resolver_sha256": "88a0de382bc5241153b0899bb2b023c9761a9cd3426801ad376ee6367b7477b3",
+  "resolver_configuration": {
+    "duplicate_iou": 0.82,
+    "edge_join_fraction": 0.02
+  },
+  "matching_protocol_post_human_only": "UNCHANGED_ONE_TO_ONE_IOU_0.50",
+  "outcome_gates": {
+    "A": {
+      "false_promoted": 0,
+      "precision": 1.0,
+      "min_recall": 0.6,
+      "min_f1": 0.75,
+      "max_unresolved_pages": 2
+    },
+    "B": {
+      "min_precision": 0.9,
+      "max_false_promoted": 1,
+      "min_recall": 0.35
+    }
+  },
+  "failure_taxonomy": [
+    "MISSING_CANDIDATE_GENERATION",
+    "CONFLICT_RESOLUTION",
+    "UNDER_SPLITTING",
+    "OVER_SPLITTING",
+    "CONTOUR_NOISE",
+    "BORDERLESS_PANEL",
+    "PAGE_EDGE_STRUCTURE",
+    "IRREGULAR_GEOMETRY",
+    "AMBIGUITY_POLICY",
+    "OTHER_EVIDENCE_SUPPORTED"
+  ],
+  "gt_runtime_features": [],
+  "human_gt_access": false,
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "semantic_sha256": "c8a3e92c165f5024e20f7d1ef3858c7f16e4bc15c784a06359bab849ecf6aebc"
+}

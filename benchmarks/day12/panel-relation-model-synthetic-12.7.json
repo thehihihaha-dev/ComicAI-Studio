@@ -1,0 +1,5325 @@
+{
+  "schema_version": "panel-relation-model-synthetic.v1",
+  "checkpoint": "12.7",
+  "fixture_group_count": 26,
+  "results": [
+    {
+      "fixture": "empty",
+      "path": "projection_constraint_order",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "trace": {
+        "nodes": [],
+        "active_nodes": [],
+        "order": [],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "single",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0"
+      ],
+      "observed": [
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0"
+        ],
+        "active_nodes": [
+          "p0"
+        ],
+        "order": [
+          "p0"
+        ],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "horizontal",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p1",
+          "p0"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "100"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "5/6"
+              ],
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "vertical",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "100",
+                "40"
+              ],
+              "p1": [
+                "0",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p1": [
+                "0/1",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "2x2",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p3",
+            "panel_ids": [
+              "p0",
+              "p3"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE",
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p3",
+            "panel_ids": [
+              "p1",
+              "p3"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p2:p3",
+            "panel_ids": [
+              "p2",
+              "p3"
+            ],
+            "source_bbox": {
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p3",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "tall_right",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "observed": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ],
+              "p1": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "5/6"
+              ],
+              "p1": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "5/6"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "tall_left",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p2",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p2",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p1",
+          "p2",
+          "p0"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p2:p0",
+            "before": "p2",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p2:p0",
+            "before": "p2",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "100"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "5/6"
+              ],
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "100"
+              ],
+              "p2": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "5/6"
+              ],
+              "p2": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p2",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p2": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p2": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p0"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "span_top",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p2",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p2",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p0",
+          "p2",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "100",
+                "30"
+              ],
+              "p1": [
+                "0",
+                "40",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "5/6",
+                "1/4"
+              ],
+              "p1": [
+                "0/1",
+                "1/3",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "100",
+                "30"
+              ],
+              "p2": [
+                "60",
+                "40",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "5/6",
+                "1/4"
+              ],
+              "p2": [
+                "1/2",
+                "1/3",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "0",
+                "40",
+                "40",
+                "100"
+              ],
+              "p2": [
+                "60",
+                "40",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "0/1",
+                "1/3",
+                "1/3",
+                "5/6"
+              ],
+              "p2": [
+                "1/2",
+                "1/3",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p2",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "span_bottom",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "60"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "60"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/2"
+              ],
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/2"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "60"
+              ],
+              "p2": [
+                "0",
+                "70",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/2"
+              ],
+              "p2": [
+                "0/1",
+                "7/12",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "60"
+              ],
+              "p2": [
+                "0",
+                "70",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/2"
+              ],
+              "p2": [
+                "0/1",
+                "7/12",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "offset",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "42",
+                "35"
+              ],
+              "p1": [
+                "58",
+                "5",
+                "100",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "7/20",
+                "7/24"
+              ],
+              "p1": [
+                "29/60",
+                "1/24",
+                "5/6",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "42",
+                "35"
+              ],
+              "p2": [
+                "5",
+                "60",
+                "45",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "7/20",
+                "7/24"
+              ],
+              "p2": [
+                "1/24",
+                "1/2",
+                "3/8",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p3",
+            "panel_ids": [
+              "p0",
+              "p3"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "42",
+                "35"
+              ],
+              "p3": [
+                "55",
+                "55",
+                "95",
+                "95"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "7/20",
+                "7/24"
+              ],
+              "p3": [
+                "11/24",
+                "11/24",
+                "19/24",
+                "19/24"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "58",
+                "5",
+                "100",
+                "40"
+              ],
+              "p2": [
+                "5",
+                "60",
+                "45",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "29/60",
+                "1/24",
+                "5/6",
+                "1/3"
+              ],
+              "p2": [
+                "1/24",
+                "1/2",
+                "3/8",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE",
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p3",
+            "panel_ids": [
+              "p1",
+              "p3"
+            ],
+            "source_bbox": {
+              "p1": [
+                "58",
+                "5",
+                "100",
+                "40"
+              ],
+              "p3": [
+                "55",
+                "55",
+                "95",
+                "95"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "29/60",
+                "1/24",
+                "5/6",
+                "1/3"
+              ],
+              "p3": [
+                "11/24",
+                "11/24",
+                "19/24",
+                "19/24"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p2:p3",
+            "panel_ids": [
+              "p2",
+              "p3"
+            ],
+            "source_bbox": {
+              "p2": [
+                "5",
+                "60",
+                "45",
+                "100"
+              ],
+              "p3": [
+                "55",
+                "55",
+                "95",
+                "95"
+              ]
+            },
+            "normalized_bbox": {
+              "p2": [
+                "1/24",
+                "1/2",
+                "3/8",
+                "5/6"
+              ],
+              "p3": [
+                "11/24",
+                "11/24",
+                "19/24",
+                "19/24"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p3",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "partial_row",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p1",
+          "p0"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "45"
+              ],
+              "p1": [
+                "60",
+                "5",
+                "100",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "3/8"
+              ],
+              "p1": [
+                "1/2",
+                "1/24",
+                "5/6",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "partial_column",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "5",
+                "0",
+                "45",
+                "40"
+              ],
+              "p1": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/24",
+                "0/1",
+                "3/8",
+                "1/3"
+              ],
+              "p1": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "non_guillotine",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "observed": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ],
+              "p1": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "5/6"
+              ],
+              "p1": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "5/6"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "multiple_trees",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "observed": [
+        "p1",
+        "p0",
+        "p3",
+        "p2"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "order": [
+          "p1",
+          "p0",
+          "p3",
+          "p2"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p0:p3",
+            "before": "p0",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p3"
+          },
+          {
+            "edge_id": "direct:p1:p2",
+            "before": "p1",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          },
+          {
+            "edge_id": "direct:p1:p3",
+            "before": "p1",
+            "after": "p3",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p3"
+          },
+          {
+            "edge_id": "direct:p3:p2",
+            "before": "p3",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p2:p3"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p3",
+            "panel_ids": [
+              "p0",
+              "p3"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE",
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p3",
+            "panel_ids": [
+              "p1",
+              "p3"
+            ],
+            "source_bbox": {
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p1",
+            "after": "p3",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p2:p3",
+            "panel_ids": [
+              "p2",
+              "p3"
+            ],
+            "source_bbox": {
+              "p2": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ],
+              "p3": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p2": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ],
+              "p3": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p3",
+            "after": "p2",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p0",
+            "after": "p3"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p3"
+          },
+          {
+            "before": "p3",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p3"
+            ],
+            "emitted": "p3"
+          },
+          {
+            "ready": [
+              "p2"
+            ],
+            "emitted": "p2"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "ambiguous",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "70",
+                "70"
+              ],
+              "p1": [
+                "30",
+                "30",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "7/12",
+                "7/12"
+              ],
+              "p1": [
+                "1/4",
+                "1/4",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": null,
+            "evidence_labels": [],
+            "before": null,
+            "after": null,
+            "unresolved_reason": "INCOMPARABLE"
+          }
+        ],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0",
+              "p1"
+            ],
+            "emitted": null
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "overlap",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "80",
+                "60"
+              ],
+              "p1": [
+                "20",
+                "40",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "2/3",
+                "1/2"
+              ],
+              "p1": [
+                "1/6",
+                "1/3",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": null,
+            "evidence_labels": [],
+            "before": null,
+            "after": null,
+            "unresolved_reason": "INCOMPARABLE"
+          }
+        ],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0",
+              "p1"
+            ],
+            "emitted": null
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "bridge",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "30",
+                "30"
+              ],
+              "p1": [
+                "40",
+                "0",
+                "70",
+                "70"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/4",
+                "1/4"
+              ],
+              "p1": [
+                "1/3",
+                "0/1",
+                "7/12",
+                "7/12"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "30",
+                "30"
+              ],
+              "p2": [
+                "80",
+                "40",
+                "110",
+                "70"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/4",
+                "1/4"
+              ],
+              "p2": [
+                "2/3",
+                "1/3",
+                "11/12",
+                "7/12"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "40",
+                "0",
+                "70",
+                "70"
+              ],
+              "p2": [
+                "80",
+                "40",
+                "110",
+                "70"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "1/3",
+                "0/1",
+                "7/12",
+                "7/12"
+              ],
+              "p2": [
+                "2/3",
+                "1/3",
+                "11/12",
+                "7/12"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p2",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p0"
+          },
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p1"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p0"
+          },
+          {
+            "before": "p2",
+            "after": "p1"
+          },
+          {
+            "before": "p2",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [
+          {
+            "before": "p0",
+            "after": "p0",
+            "relation_id": "transitive:p0:p0",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p0",
+            "after": "p1",
+            "relation_id": "transitive:p0:p1",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p1",
+            "after": "p1",
+            "relation_id": "transitive:p1:p1",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation_id": "transitive:p1:p2",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p2",
+            "after": "p0",
+            "relation_id": "transitive:p2:p0",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p2",
+            "after": "p2",
+            "relation_id": "transitive:p2:p2",
+            "provenance": "TRANSITIVE"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [],
+            "emitted": null
+          }
+        ],
+        "cycles": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1",
+              "p2"
+            ],
+            "reason": "CYCLE"
+          }
+        ],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1",
+              "p2"
+            ],
+            "reason": "CYCLE"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "equal_1px",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "100",
+                "51"
+              ],
+              "p1": [
+                "0",
+                "50",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "5/6",
+                "17/40"
+              ],
+              "p1": [
+                "0/1",
+                "5/12",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "beyond_1px",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "100",
+                "51.1"
+              ],
+              "p1": [
+                "0",
+                "50",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "5/6",
+                "511/1200"
+              ],
+              "p1": [
+                "0/1",
+                "5/12",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": null,
+            "evidence_labels": [],
+            "before": null,
+            "after": null,
+            "unresolved_reason": "INCOMPARABLE"
+          }
+        ],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0",
+              "p1"
+            ],
+            "emitted": null
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "diagonal_same",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "60",
+                "0",
+                "100",
+                "40"
+              ],
+              "p1": [
+                "0",
+                "60",
+                "40",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "1/2",
+                "0/1",
+                "5/6",
+                "1/3"
+              ],
+              "p1": [
+                "0/1",
+                "1/2",
+                "1/3",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE",
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "diagonal_opposed",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p0",
+        "p1"
+      ],
+      "observed": [
+        "p0",
+        "p1"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p0",
+          "p1"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p0:p1",
+            "before": "p0",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "40"
+              ],
+              "p1": [
+                "60",
+                "60",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "1/3",
+                "1/3"
+              ],
+              "p1": [
+                "1/2",
+                "1/2",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": true,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p0",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p1"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          },
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "incomparable",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [],
+        "edges": [],
+        "active_edges": [],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "70",
+                "70"
+              ],
+              "p1": [
+                "30",
+                "30",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "7/12",
+                "7/12"
+              ],
+              "p1": [
+                "1/4",
+                "1/4",
+                "5/6",
+                "5/6"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": null,
+            "evidence_labels": [],
+            "before": null,
+            "after": null,
+            "unresolved_reason": "INCOMPARABLE"
+          }
+        ],
+        "transitive_closure": [],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p0",
+              "p1"
+            ],
+            "emitted": null
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "explicit_cycle",
+      "path": "projection_constraint_order",
+      "expected": null,
+      "observed": null,
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1",
+          "p2"
+        ],
+        "order": [],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          },
+          {
+            "edge_id": "direct:p0:p2",
+            "before": "p0",
+            "after": "p2",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p2"
+          },
+          {
+            "edge_id": "direct:p2:p1",
+            "before": "p2",
+            "after": "p1",
+            "relation": "ABOVE",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p1:p2"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "61",
+                "3",
+                "75",
+                "65"
+              ],
+              "p1": [
+                "78",
+                "56",
+                "97",
+                "90"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "61/100",
+                "3/100",
+                "3/4",
+                "13/20"
+              ],
+              "p1": [
+                "39/50",
+                "14/25",
+                "97/100",
+                "9/10"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p0:p2",
+            "panel_ids": [
+              "p0",
+              "p2"
+            ],
+            "source_bbox": {
+              "p0": [
+                "61",
+                "3",
+                "75",
+                "65"
+              ],
+              "p2": [
+                "23",
+                "52",
+                "56",
+                "54"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "61/100",
+                "3/100",
+                "3/4",
+                "13/20"
+              ],
+              "p2": [
+                "23/100",
+                "13/25",
+                "14/25",
+                "27/50"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p0",
+            "after": "p2",
+            "unresolved_reason": null
+          },
+          {
+            "pair_id": "pair:p1:p2",
+            "panel_ids": [
+              "p1",
+              "p2"
+            ],
+            "source_bbox": {
+              "p1": [
+                "78",
+                "56",
+                "97",
+                "90"
+              ],
+              "p2": [
+                "23",
+                "52",
+                "56",
+                "54"
+              ]
+            },
+            "normalized_bbox": {
+              "p1": [
+                "39/50",
+                "14/25",
+                "97/100",
+                "9/10"
+              ],
+              "p2": [
+                "23/100",
+                "13/25",
+                "14/25",
+                "27/50"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": true,
+              "left_right_of_right": true,
+              "right_right_of_left": false
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "ABOVE",
+            "evidence_labels": [
+              "ABOVE"
+            ],
+            "before": "p2",
+            "after": "p1",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p0",
+            "after": "p0"
+          },
+          {
+            "before": "p0",
+            "after": "p1"
+          },
+          {
+            "before": "p0",
+            "after": "p2"
+          },
+          {
+            "before": "p1",
+            "after": "p0"
+          },
+          {
+            "before": "p1",
+            "after": "p1"
+          },
+          {
+            "before": "p1",
+            "after": "p2"
+          },
+          {
+            "before": "p2",
+            "after": "p0"
+          },
+          {
+            "before": "p2",
+            "after": "p1"
+          },
+          {
+            "before": "p2",
+            "after": "p2"
+          }
+        ],
+        "transitive_relations": [
+          {
+            "before": "p0",
+            "after": "p0",
+            "relation_id": "transitive:p0:p0",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p0",
+            "after": "p1",
+            "relation_id": "transitive:p0:p1",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p1",
+            "after": "p1",
+            "relation_id": "transitive:p1:p1",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p1",
+            "after": "p2",
+            "relation_id": "transitive:p1:p2",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p2",
+            "after": "p0",
+            "relation_id": "transitive:p2:p0",
+            "provenance": "TRANSITIVE"
+          },
+          {
+            "before": "p2",
+            "after": "p2",
+            "relation_id": "transitive:p2:p2",
+            "provenance": "TRANSITIVE"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [],
+            "emitted": null
+          }
+        ],
+        "cycles": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1",
+              "p2"
+            ],
+            "reason": "CYCLE"
+          }
+        ],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "p0",
+              "p1",
+              "p2"
+            ],
+            "reason": "CYCLE"
+          }
+        ],
+        "resolved": false,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "permutation",
+      "path": "projection_constraint_order",
+      "expected": [
+        "p1",
+        "p0"
+      ],
+      "observed": [
+        "p1",
+        "p0"
+      ],
+      "pass": true,
+      "trace": {
+        "nodes": [
+          "p0",
+          "p1"
+        ],
+        "active_nodes": [
+          "p0",
+          "p1"
+        ],
+        "order": [
+          "p1",
+          "p0"
+        ],
+        "edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "active_edges": [
+          {
+            "edge_id": "direct:p1:p0",
+            "before": "p1",
+            "after": "p0",
+            "relation": "RIGHT_OF",
+            "provenance": "DIRECT",
+            "pair_id": "pair:p0:p1"
+          }
+        ],
+        "pair_evidence": [
+          {
+            "pair_id": "pair:p0:p1",
+            "panel_ids": [
+              "p0",
+              "p1"
+            ],
+            "source_bbox": {
+              "p0": [
+                "0",
+                "0",
+                "40",
+                "100"
+              ],
+              "p1": [
+                "60",
+                "0",
+                "100",
+                "100"
+              ]
+            },
+            "normalized_bbox": {
+              "p0": [
+                "0/1",
+                "0/1",
+                "2/5",
+                "1/1"
+              ],
+              "p1": [
+                "3/5",
+                "0/1",
+                "1/1",
+                "1/1"
+              ]
+            },
+            "predicates": {
+              "left_above_right": false,
+              "right_above_left": false,
+              "left_right_of_right": false,
+              "right_right_of_left": true
+            },
+            "tolerance": {
+              "tau_x": "1/W",
+              "tau_y": "1/H",
+              "source_pixels": 1
+            },
+            "active_pair": true,
+            "relation": "RIGHT_OF",
+            "evidence_labels": [
+              "RIGHT_OF"
+            ],
+            "before": "p1",
+            "after": "p0",
+            "unresolved_reason": null
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "p1",
+            "after": "p0"
+          }
+        ],
+        "transitive_relations": [],
+        "topological_trace": [
+          {
+            "ready": [
+              "p1"
+            ],
+            "emitted": "p1"
+          },
+          {
+            "ready": [
+              "p0"
+            ],
+            "emitted": "p0"
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true,
+        "representation": "EXPERIMENT_PREDECLARED_PROJECTION_CONSTRAINT_DAG_V1"
+      }
+    },
+    {
+      "fixture": "assignment",
+      "path": "assign_regions",
+      "expected": "FROZEN",
+      "observed": {
+        "assignments": [
+          {
+            "region_id": "contained",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "p0",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "majority",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 0.7142857142857143,
+                "contains": false,
+                "center_inside": true
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "p0",
+            "method": "UNIQUE_CENTER_STRICT_MAJORITY",
+            "state": "ASSIGNED_INTERSECTION"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "outside",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "pass": true,
+      "trace": {
+        "assignments": [
+          {
+            "region_id": "contained",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "p0",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "majority",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 0.7142857142857143,
+                "contains": false,
+                "center_inside": true
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "p0",
+            "method": "UNIQUE_CENTER_STRICT_MAJORITY",
+            "state": "ASSIGNED_INTERSECTION"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "outside",
+            "competing_panels": [
+              {
+                "panel_id": "p0",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "p1",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "intra_panel",
+      "path": "order_regions_in_panel",
+      "expected": [
+        "right",
+        "left"
+      ],
+      "observed": [
+        "right",
+        "left"
+      ],
+      "pass": true,
+      "trace": {
+        "order": [
+          "right",
+          "left"
+        ],
+        "tiers": [
+          [
+            "right",
+            "left"
+          ]
+        ],
+        "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+        "parameter_status": "BENCHMARK_FITTED"
+      }
+    }
+  ],
+  "all_pass": true,
+  "gt_runtime_features": [],
+  "semantic_sha256": "e40d2c2caa2134b79773ea9e25068bc4bd0704174b09c8d179f2c7f400ef9e03"
+}

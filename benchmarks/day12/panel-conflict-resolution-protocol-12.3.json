@@ -1,0 +1,39 @@
+{
+  "schema_version": "panel-conflict-resolution-protocol.v1",
+  "checkpoint": "12.3",
+  "question": "Can containment-aware conflict resolution recover panels from frozen candidates without extraction?",
+  "mode": "OFFLINE_FROZEN_CANDIDATE_SELECTION_ONLY",
+  "resolver_version": "containment-guillotine-resolver.v1",
+  "resolver_sha256": "88a0de382bc5241153b0899bb2b023c9761a9cd3426801ad376ee6367b7477b3",
+  "frozen_prediction_file_sha256": "80e46d5c6216e3d18e9686af149a0012911795a246d1323ae4bb74d516b4b735",
+  "frozen_prediction_semantic_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d",
+  "candidate_source": "pages[].panels",
+  "strategy": "RECURSIVE_GUILLOTINE_COMPATIBLE_OUTER_CONTOUR_TILING_WITH_LOCKED_SAFE_CONTROLS",
+  "configuration": {
+    "duplicate_iou": 0.82,
+    "edge_join_fraction": 0.02
+  },
+  "configuration_origin": "REUSED_FROZEN_12.2_TOLERANCES",
+  "phase_order": [
+    "WRITE_PROTOCOL",
+    "BUILD_GRAPH",
+    "RESOLVE_TWICE",
+    "FREEZE_GRAPH_AND_OUTPUT",
+    "LOAD_HUMAN_GT",
+    "EVALUATE"
+  ],
+  "gt_runtime_features": [],
+  "page_id_rules": [],
+  "geometry_mutation": false,
+  "extractor_rerun": false,
+  "reading_order_run": false,
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "frozen_input_validation": {
+    "file_hash_fail_closed": true,
+    "semantic_material_fail_closed": true
+  }
+}

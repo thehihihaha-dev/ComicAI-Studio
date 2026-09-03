@@ -1,0 +1,142 @@
+{
+  "schema_version": "panel-unseen-human-gt-post-correction-validation.v1",
+  "checkpoint": "12.4",
+  "status": "POST_CORRECTION_AUTHORITATIVE_UNSEEN_HUMAN_PANEL_GT",
+  "cohort_pages": [3, 4, 5, 7, 18, 38],
+  "verified": 6,
+  "pending": 0,
+  "panel_counts": {"3": 4, "4": 3, "5": 3, "7": 2, "18": 3, "38": 6},
+  "total_human_panels": 21,
+  "ambiguous_panels": 0,
+  "non_ambiguous_panels": 21,
+  "old_snapshot": {
+    "sha256": "beea07d8e442cff0b2a573b4c148518b7e9eaf69d822199f44070079ef092ce7",
+    "status": "PRE_CORRECTION_NOT_AUTHORITATIVE",
+    "preserved_in": "benchmarks/day12/panel-unseen-human-gt-validation-12.4.json"
+  },
+  "new_snapshot": {
+    "sha256": "f62e38d5ed28531681b9165cca77e0f62ab37b7cf92a5161cab0c9f0cb6216ea",
+    "status": "POST_CORRECTION_AUTHORITATIVE_UNSEEN_HUMAN_PANEL_GT",
+    "canonicalization": "UTF-8 JSON of records, ensure_ascii=false, sort_keys=true, separators comma/colon"
+  },
+  "prediction_fingerprint_sha256": "a0f7d0559922376be3bb665bce814d003425c59fdfbafb77c0a6bda78457e26a",
+  "prediction_rerun": false,
+  "prediction_correctness_inspected": false,
+  "human_vs_prediction_iou_calculated": false,
+  "gt_runtime_features": [],
+  "records": [
+    {
+      "review_id": "panel-gt-12.4:58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "page_order": 3,
+      "benchmark_asset_id": "58ac011e-7a3a-44ba-a8c5-ba7977a78b95",
+      "source_image_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "source_path": "backend/uploads/ab627e40-5851-4a6e-9e7a-03d3968087cb_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-5.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 2,
+      "human_panels": [
+        {"bbox": [72.512, 75.346, 843.51, 505.753], "panel_id": "human-3-2", "ambiguous": false},
+        {"bbox": [66.382, 498.226, 848.034, 858.541], "panel_id": "human-3-4", "ambiguous": false},
+        {"bbox": [71.313, 864.716, 283.356, 1183.034], "panel_id": "human-3-8", "ambiguous": false},
+        {"bbox": [281.751, 866.528, 835.3, 1195.246], "panel_id": "human-3-5", "ambiguous": false}
+      ]
+    },
+    {
+      "review_id": "panel-gt-12.4:dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "page_order": 4,
+      "benchmark_asset_id": "dab0676a-07e3-4195-b20c-511f57e3ddc6",
+      "source_image_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "source_path": "backend/uploads/dab0676a-07e3-4195-b20c-511f57e3ddc6_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-6.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 1,
+      "human_panels": [
+        {"bbox": [68.955, 9.263, 830.806, 728.425], "panel_id": "human-4-1", "ambiguous": false},
+        {"bbox": [550.492, 734.04, 828.233, 1192.65], "panel_id": "human-4-2", "ambiguous": false},
+        {"bbox": [70.061, 740.2, 549.547, 1195.054], "panel_id": "human-4-3", "ambiguous": false}
+      ]
+    },
+    {
+      "review_id": "panel-gt-12.4:69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "page_order": 5,
+      "benchmark_asset_id": "69f9acdd-e51f-4be2-90dd-cbc7e5882aa7",
+      "source_image_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "source_path": "backend/uploads/69f9acdd-e51f-4be2-90dd-cbc7e5882aa7_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-7.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 1,
+      "human_panels": [
+        {"bbox": [74.608, 88.203, 836.083, 604.339], "panel_id": "human-5-1", "ambiguous": false},
+        {"bbox": [75.392, 609.378, 446.459, 1192.588], "panel_id": "human-5-5", "ambiguous": false},
+        {"bbox": [446.275, 615.645, 832.727, 1193.679], "panel_id": "human-5-4", "ambiguous": false}
+      ]
+    },
+    {
+      "review_id": "panel-gt-12.4:b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "page_order": 7,
+      "benchmark_asset_id": "b2b89e05-fb47-4b90-877c-6ced851bc7de",
+      "source_image_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "source_path": "backend/uploads/a3c72490-a7b2-402a-88c9-8cc874cab45f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-10.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 1,
+      "human_panels": [
+        {"bbox": [65.96, 80.315, 829.585, 791.114], "panel_id": "human-7-1", "ambiguous": false},
+        {"bbox": [63.694, 789.747, 829.286, 1188.717], "panel_id": "human-7-2", "ambiguous": false}
+      ]
+    },
+    {
+      "review_id": "panel-gt-12.4:23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "page_order": 18,
+      "benchmark_asset_id": "23ab72f6-0910-49d0-a167-3bd170ea3b23",
+      "source_image_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "source_path": "backend/uploads/d997ac05-6017-4a9c-b5d6-49e065dd9f2d_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-21.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 1,
+      "human_panels": [
+        {"bbox": [71.329, 80.722, 502.842, 469.447], "panel_id": "human-18-1", "ambiguous": false},
+        {"bbox": [500.822, 84.555, 832.289, 468.257], "panel_id": "human-18-2", "ambiguous": false},
+        {"bbox": [71.69, 473.487, 833.971, 1190.707], "panel_id": "human-18-3", "ambiguous": false}
+      ]
+    },
+    {
+      "review_id": "panel-gt-12.4:522c50f5-5934-40be-9cc2-f452deeeff35",
+      "page_order": 38,
+      "benchmark_asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "source_image_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "source_path": "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg",
+      "image_dimensions": [900, 1280],
+      "state": "VERIFIED",
+      "revision": 1,
+      "human_panels": [
+        {"bbox": [621.912, 83.41, 827.965, 427.957], "panel_id": "human-38-1", "ambiguous": false},
+        {"bbox": [62.227, 89.386, 623.349, 426.521], "panel_id": "human-38-2", "ambiguous": false},
+        {"bbox": [428.441, 421.767, 824.962, 718.172], "panel_id": "human-38-3", "ambiguous": false},
+        {"bbox": [69.416, 429.739, 436.79, 720.0], "panel_id": "human-38-4", "ambiguous": false},
+        {"bbox": [371.912, 723.848, 824.869, 1190.246], "panel_id": "human-38-5", "ambiguous": false},
+        {"bbox": [67.98, 727.581, 371.928, 1199.332], "panel_id": "human-38-6", "ambiguous": false}
+      ]
+    }
+  ],
+  "validation": {
+    "page_3_old_combined_bbox_active": false,
+    "page_3_four_full_panels": true,
+    "control_pages_unchanged": true,
+    "source_identity": "PASS_ALL_SIX",
+    "positive_in_bounds_source_coordinates": true,
+    "letterbox_compression_signature_present": false,
+    "common_padding_offset_signature_present": false,
+    "source_display_roundtrip": "PASS",
+    "resize_stability": "PASS",
+    "reload_persistence": "PASS_TWO_IDENTICAL_READS",
+    "semantic_full_panel_sanity": "PASS_ALL_21",
+    "duplicate_panel_ids": 0,
+    "exact_duplicate_bboxes": 0,
+    "accidental_near_duplicates": 0,
+    "impossible_overlaps": 0
+  },
+  "resource_guard": "NORMAL",
+  "model_calls": {"ocr": 0, "vlm": 0, "ollama": 0},
+  "reading_order_calls": 0
+}

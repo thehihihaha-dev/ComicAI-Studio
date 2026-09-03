@@ -1,0 +1,65 @@
+{
+  "checkpoint": "12.2",
+  "determinism": {
+    "run_1_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d",
+    "run_2_sha256": "b52a3a7371b9e92542ae243db239f58d12bcefa284f90b538873102864fb051d",
+    "runs": 2,
+    "semantic_byte_equivalent": true
+  },
+  "human_gt_changed": false,
+  "human_panel_gt_needed_next": true,
+  "human_validation_if_approved": {
+    "decision_unlocked": "panel precision/recall/IoU and whether extraction merits Reader integration",
+    "marks": "panel polygons/bboxes and ambiguity only; no OCR or Reading Order labels",
+    "minimum_pages": 4,
+    "selection": "Pages 15 and 17 plus one detected control and one unresolved/ambiguous control"
+  },
+  "model_calls": {
+    "ocr": 0,
+    "ollama": 0,
+    "vlm": 0
+  },
+  "outcome": "D. PANEL CORRECTNESS CANNOT BE EVALUATED YET",
+  "page_15_status": "UNRESOLVED",
+  "page_17_status": "UNRESOLVED",
+  "production_changed": false,
+  "recommended_next_experiment": "Small independently annotated four-page panel validation gate; no Reader integration yet.",
+  "resources": {
+    "after": {
+      "process_cpu_seconds": 0.427601,
+      "process_peak_rss_bytes": 123502592,
+      "process_rss_bytes": null,
+      "safety_state": "NORMAL",
+      "swap_used_bytes": null,
+      "system_available_memory_bytes": 6222184448,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "timestamp": "2026-08-24T12:58:24.817270+00:00"
+    },
+    "before": {
+      "process_cpu_seconds": 0.114542,
+      "process_peak_rss_bytes": 66191360,
+      "process_rss_bytes": null,
+      "safety_state": "NORMAL",
+      "swap_used_bytes": null,
+      "system_available_memory_bytes": 6379569152,
+      "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
+      "temperature_celsius": null,
+      "temperature_note": "not measured: no reliable supported macOS standard-library API",
+      "timestamp": "2026-08-24T12:58:24.570427+00:00"
+    },
+    "elapsed_two_runs_seconds": 0.19675958302104846,
+    "resource_guard": "NORMAL"
+  },
+  "schema_version": "panel-extraction-summary.v1",
+  "structural_result": {
+    "ambiguous_adjacency_edges": 113,
+    "ambiguous_panels": 49,
+    "detected_panels": 7,
+    "pages_with_detected_structure": 6,
+    "single_panel_contained_regions": 9,
+    "unresolved_pages": 4,
+    "usable_adjacency_edges": 1
+  }
+}

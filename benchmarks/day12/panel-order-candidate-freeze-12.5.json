@@ -1,0 +1,19 @@
+{
+  "schema_version": "panel-order-candidate-freeze.v3",
+  "checkpoint": "12.5",
+  "chronology": [
+    "A_RUNTIME_INPUT_AUDIT_FROZEN",
+    "B_PROTOCOL_FROZEN",
+    "C_CANDIDATES_GENERATED_TWICE",
+    "D_CANDIDATES_FROZEN"
+  ],
+  "runtime_audit_semantic_sha256": "4579c6fea5e151aa55e5c0d6166c2ac87940dae062d626b91e9568b5a13da67f",
+  "protocol_file_sha256": "0f72c9ecad51a779bf22059b586527b2ab71abd7341304782880331f186450c7",
+  "oracle_candidate_file_sha256": "a7ed2e1747ff13f7cde57dbd149cd4b9d5ab12203c0ce48525336833bd4cf2fd",
+  "realistic_candidate_file_sha256": "dc9d60f0007ecd19154c57509b917c3c28675a0ff69709f07518870e4c4e0e58",
+  "human_reading_order_artifacts_opened_before_freeze": [],
+  "determinism_runs": 2,
+  "deterministic": true,
+  "gt_runtime_features": [],
+  "freeze_sha256": "63b6d24779a09ed3edc77483b3bcf70ee617bdf6d2897f90c51713c7d8293c38"
+}

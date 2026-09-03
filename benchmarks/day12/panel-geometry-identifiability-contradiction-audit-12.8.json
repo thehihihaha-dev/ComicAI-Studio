@@ -1,0 +1,709 @@
+{
+  "schema_version": "panel-geometry-identifiability-contradiction.v1",
+  "checkpoint": "12.8",
+  "rules": [
+    {
+      "rule": "MIN_TOP",
+      "contradiction_count": 1,
+      "contradictions": [
+        {
+          "control_id": "CTRL_5_PGN_1a79bb0aa491_000_PGN_6d6c97cba2b2_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "distinction_id": "MIN_TOP",
+          "geometry_evidence": {
+            "values": {
+              "PGN_1a79bb0aa491_000": "304689/640000",
+              "PGN_6d6c97cba2b2_000": "123129/256000"
+            },
+            "unique_winner": "PGN_1a79bb0aa491_000",
+            "tied_winners": [
+              "PGN_1a79bb0aa491_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "human_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_1a79bb0aa491_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "MAX_RIGHT",
+      "contradiction_count": 2,
+      "contradictions": [
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_RIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_7f46b67efa33_000": "147137/225000",
+              "PGN_ee240fc30a01_000": "526759/900000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_b57b48dae3ed_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_RIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_b57b48dae3ed_000": "204931/225000",
+              "PGN_ee240fc30a01_000": "526759/900000"
+            },
+            "unique_winner": "PGN_b57b48dae3ed_000",
+            "tied_winners": [
+              "PGN_b57b48dae3ed_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "MIN_CENTER_Y",
+      "contradiction_count": 2,
+      "contradictions": [
+        {
+          "control_id": "CTRL_5_PGN_1a79bb0aa491_000_PGN_6d6c97cba2b2_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "distinction_id": "MIN_CENTER_Y",
+          "geometry_evidence": {
+            "values": {
+              "PGN_1a79bb0aa491_000": "900983/1280000",
+              "PGN_6d6c97cba2b2_000": "452331/640000"
+            },
+            "unique_winner": "PGN_1a79bb0aa491_000",
+            "tied_winners": [
+              "PGN_1a79bb0aa491_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "human_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_1a79bb0aa491_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_721371b3539f_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_721371b3539f_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MIN_CENTER_Y",
+          "geometry_evidence": {
+            "values": {
+              "PGN_721371b3539f_000": "298929/1280000",
+              "PGN_ee240fc30a01_000": "596413/2560000"
+            },
+            "unique_winner": "PGN_ee240fc30a01_000",
+            "tied_winners": [
+              "PGN_ee240fc30a01_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_721371b3539f_000"
+          ],
+          "human_precedence": [
+            "PGN_721371b3539f_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "MAX_CENTER_X",
+      "contradiction_count": 4,
+      "contradictions": [
+        {
+          "control_id": "CTRL_4_PGN_bf8990a2f047_000_PGN_d687aaae5097_000",
+          "page_order": 4,
+          "panels": [
+            "PGN_bf8990a2f047_000",
+            "PGN_d687aaae5097_000"
+          ],
+          "distinction_id": "MAX_CENTER_X",
+          "geometry_evidence": {
+            "values": {
+              "PGN_bf8990a2f047_000": "18383/24000",
+              "PGN_d687aaae5097_000": "899761/1800000"
+            },
+            "unique_winner": "PGN_bf8990a2f047_000",
+            "tied_winners": [
+              "PGN_bf8990a2f047_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_bf8990a2f047_000",
+            "PGN_d687aaae5097_000"
+          ],
+          "human_precedence": [
+            "PGN_d687aaae5097_000",
+            "PGN_bf8990a2f047_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_5_PGN_6d6c97cba2b2_000_PGN_8e290cfe99e6_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "distinction_id": "MAX_CENTER_X",
+          "geometry_evidence": {
+            "values": {
+              "PGN_6d6c97cba2b2_000": "213167/300000",
+              "PGN_8e290cfe99e6_000": "910691/1800000"
+            },
+            "unique_winner": "PGN_6d6c97cba2b2_000",
+            "tied_winners": [
+              "PGN_6d6c97cba2b2_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "human_precedence": [
+            "PGN_8e290cfe99e6_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_CENTER_X",
+          "geometry_evidence": {
+            "values": {
+              "PGN_7f46b67efa33_000": "132241/360000",
+              "PGN_ee240fc30a01_000": "600661/1800000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_b57b48dae3ed_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_CENTER_X",
+          "geometry_evidence": {
+            "values": {
+              "PGN_b57b48dae3ed_000": "112213/225000",
+              "PGN_ee240fc30a01_000": "600661/1800000"
+            },
+            "unique_winner": "PGN_b57b48dae3ed_000",
+            "tied_winners": [
+              "PGN_b57b48dae3ed_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "MAX_WIDTH",
+      "contradiction_count": 6,
+      "contradictions": [
+        {
+          "control_id": "CTRL_4_PGN_84cb5762b42f_000_PGN_bf8990a2f047_000",
+          "page_order": 4,
+          "panels": [
+            "PGN_84cb5762b42f_000",
+            "PGN_bf8990a2f047_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_84cb5762b42f_000": "239743/450000",
+              "PGN_bf8990a2f047_000": "277741/900000"
+            },
+            "unique_winner": "PGN_84cb5762b42f_000",
+            "tied_winners": [
+              "PGN_84cb5762b42f_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_84cb5762b42f_000",
+            "PGN_bf8990a2f047_000"
+          ],
+          "human_precedence": [
+            "PGN_bf8990a2f047_000",
+            "PGN_84cb5762b42f_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_721371b3539f_000_PGN_7f46b67efa33_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_721371b3539f_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_721371b3539f_000": "298019/900000",
+              "PGN_7f46b67efa33_000": "515891/900000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_721371b3539f_000"
+          ],
+          "human_precedence": [
+            "PGN_721371b3539f_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_721371b3539f_000_PGN_b57b48dae3ed_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_721371b3539f_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_721371b3539f_000": "298019/900000",
+              "PGN_b57b48dae3ed_000": "5151/6250"
+            },
+            "unique_winner": "PGN_b57b48dae3ed_000",
+            "tied_winners": [
+              "PGN_b57b48dae3ed_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_721371b3539f_000"
+          ],
+          "human_precedence": [
+            "PGN_721371b3539f_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_721371b3539f_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_721371b3539f_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_721371b3539f_000": "298019/900000",
+              "PGN_ee240fc30a01_000": "452857/900000"
+            },
+            "unique_winner": "PGN_ee240fc30a01_000",
+            "tied_winners": [
+              "PGN_ee240fc30a01_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_721371b3539f_000"
+          ],
+          "human_precedence": [
+            "PGN_721371b3539f_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_7f46b67efa33_000": "515891/900000",
+              "PGN_ee240fc30a01_000": "452857/900000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_b57b48dae3ed_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_WIDTH",
+          "geometry_evidence": {
+            "values": {
+              "PGN_b57b48dae3ed_000": "5151/6250",
+              "PGN_ee240fc30a01_000": "452857/900000"
+            },
+            "unique_winner": "PGN_b57b48dae3ed_000",
+            "tied_winners": [
+              "PGN_b57b48dae3ed_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "MAX_HEIGHT",
+      "contradiction_count": 6,
+      "contradictions": [
+        {
+          "control_id": "CTRL_5_PGN_1a79bb0aa491_000_PGN_6d6c97cba2b2_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_1a79bb0aa491_000": "58321/128000",
+              "PGN_6d6c97cba2b2_000": "289017/640000"
+            },
+            "unique_winner": "PGN_1a79bb0aa491_000",
+            "tied_winners": [
+              "PGN_1a79bb0aa491_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "human_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_1a79bb0aa491_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_5_PGN_1a79bb0aa491_000_PGN_8e290cfe99e6_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_1a79bb0aa491_000": "58321/128000",
+              "PGN_8e290cfe99e6_000": "64517/160000"
+            },
+            "unique_winner": "PGN_1a79bb0aa491_000",
+            "tied_winners": [
+              "PGN_1a79bb0aa491_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "human_precedence": [
+            "PGN_8e290cfe99e6_000",
+            "PGN_1a79bb0aa491_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_5_PGN_6d6c97cba2b2_000_PGN_8e290cfe99e6_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_6d6c97cba2b2_000": "289017/640000",
+              "PGN_8e290cfe99e6_000": "64517/160000"
+            },
+            "unique_winner": "PGN_6d6c97cba2b2_000",
+            "tied_winners": [
+              "PGN_6d6c97cba2b2_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_8e290cfe99e6_000"
+          ],
+          "human_precedence": [
+            "PGN_8e290cfe99e6_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_721371b3539f_000_PGN_7f46b67efa33_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_721371b3539f_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_721371b3539f_000": "25757/80000",
+              "PGN_7f46b67efa33_000": "466199/1280000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_721371b3539f_000"
+          ],
+          "human_precedence": [
+            "PGN_721371b3539f_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_b57b48dae3ed_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_7f46b67efa33_000": "466199/1280000",
+              "PGN_b57b48dae3ed_000": "19063/128000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_b57b48dae3ed_000"
+          ],
+          "human_precedence": [
+            "PGN_b57b48dae3ed_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        },
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "MAX_HEIGHT",
+          "geometry_evidence": {
+            "values": {
+              "PGN_7f46b67efa33_000": "466199/1280000",
+              "PGN_ee240fc30a01_000": "408779/1280000"
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "ROW_RIGHTMOST",
+      "contradiction_count": 0,
+      "contradictions": []
+    },
+    {
+      "rule": "COLUMN_TOPMOST",
+      "contradiction_count": 1,
+      "contradictions": [
+        {
+          "control_id": "CTRL_5_PGN_1a79bb0aa491_000_PGN_6d6c97cba2b2_000",
+          "page_order": 5,
+          "panels": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "distinction_id": "COLUMN_TOPMOST",
+          "geometry_evidence": {
+            "values": {
+              "applicable": true
+            },
+            "unique_winner": "PGN_1a79bb0aa491_000",
+            "tied_winners": [
+              "PGN_1a79bb0aa491_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_1a79bb0aa491_000",
+            "PGN_6d6c97cba2b2_000"
+          ],
+          "human_precedence": [
+            "PGN_6d6c97cba2b2_000",
+            "PGN_1a79bb0aa491_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "TOP_X_SPANNING",
+      "contradiction_count": 1,
+      "contradictions": [
+        {
+          "control_id": "CTRL_17_PGN_7f46b67efa33_000_PGN_ee240fc30a01_000",
+          "page_order": 17,
+          "panels": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "distinction_id": "TOP_X_SPANNING",
+          "geometry_evidence": {
+            "values": {
+              "applicable": true
+            },
+            "unique_winner": "PGN_7f46b67efa33_000",
+            "tied_winners": [
+              "PGN_7f46b67efa33_000"
+            ]
+          },
+          "predicted_precedence": [
+            "PGN_7f46b67efa33_000",
+            "PGN_ee240fc30a01_000"
+          ],
+          "human_precedence": [
+            "PGN_ee240fc30a01_000",
+            "PGN_7f46b67efa33_000"
+          ],
+          "contradiction_reason": "SAME_DETERMINISTIC_DISTINCTION_REVERSES_FROZEN_CONTROL_PRECEDENCE"
+        }
+      ]
+    },
+    {
+      "rule": "RIGHT_Y_SPANNING",
+      "contradiction_count": 0,
+      "contradictions": []
+    }
+  ],
+  "controls_are_rejection_only": true,
+  "gt_runtime_features": [],
+  "semantic_sha256": "f491e99f246d19ff74fd800a9815098b54e508ff7348d4ea6b07d7133fdb087a"
+}

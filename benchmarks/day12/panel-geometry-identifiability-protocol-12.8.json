@@ -1,0 +1,73 @@
+{
+  "schema_version": "panel-geometry-identifiability-protocol.v1",
+  "checkpoint": "12.8",
+  "cohort": [
+    1,
+    2,
+    3,
+    15,
+    18,
+    38
+  ],
+  "control_pages": [
+    4,
+    5,
+    7,
+    17
+  ],
+  "rules": [
+    "MIN_TOP",
+    "MAX_RIGHT",
+    "MIN_CENTER_Y",
+    "MAX_CENTER_X",
+    "MAX_WIDTH",
+    "MAX_HEIGHT",
+    "ROW_RIGHTMOST",
+    "COLUMN_TOPMOST",
+    "TOP_X_SPANNING",
+    "RIGHT_Y_SPANNING"
+  ],
+  "signature_fields": [
+    "normalized_bbox",
+    "normalized_width",
+    "normalized_height",
+    "normalized_center",
+    "projection_intervals",
+    "containment",
+    "intersection",
+    "horizontal_vertical_gaps",
+    "horizontal_vertical_overlaps",
+    "shared_boundaries",
+    "row_column_membership",
+    "spanning",
+    "adjacency",
+    "relative_alignment",
+    "source_edge_contact",
+    "ancestors",
+    "descendants",
+    "incoming_relations",
+    "outgoing_relations",
+    "pair_predicates"
+  ],
+  "classifications": [
+    "IDENTIFIABLE_BY_EXISTING_GEOMETRY",
+    "GEOMETRY_NOT_IDENTIFIABLE",
+    "INSUFFICIENT_EVIDENCE",
+    "CONTRADICTED_BY_CONTROL"
+  ],
+  "outcomes": [
+    "A. GEOMETRY IDENTIFIABILITY FOUND",
+    "B. PARTIAL GEOMETRY IDENTIFIABILITY",
+    "C. GEOMETRY REPRESENTATION LIMIT CONFIRMED",
+    "D. AUDIT INVALID / SAFETY FAILURE"
+  ],
+  "tolerance": {
+    "tau_x": "1/W",
+    "tau_y": "1/H",
+    "inclusive_source_pixels": 1
+  },
+  "no_ordering_output": true,
+  "human_order_derived_provenance_dependencies": [],
+  "gt_runtime_features": [],
+  "protocol_sha256": "4181522dbed25600a81e5063bb863be74c43ebbf97764726419ae0ae05354970"
+}

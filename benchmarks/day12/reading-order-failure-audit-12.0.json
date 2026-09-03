@@ -1,0 +1,774 @@
+{
+  "schema_version": "reading-order-failure-audit.v1",
+  "checkpoint": "12.0",
+  "frozen_rule": {
+    "name": "A_VERTICAL_OVERLAP",
+    "normalized_vertical_overlap_min": 0.5,
+    "status": "BENCHMARK_FITTED"
+  },
+  "inversion_count": 4,
+  "cases": [
+    {
+      "failure_id": "P15-LR_0856a888b8df-LR_f3054b9c1820",
+      "page_order": 15,
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "regions": {
+        "LR_0856a888b8df": {
+          "bbox": [
+            658.0,
+            974.0,
+            794.0,
+            1110.0
+          ],
+          "dimensions": {
+            "width": 136.0,
+            "height": 136.0,
+            "aspect_ratio_width_over_height": 1.0
+          },
+          "panel_id": "PAGE_FALLBACK"
+        },
+        "LR_f3054b9c1820": {
+          "bbox": [
+            120.0,
+            940.0,
+            204.0,
+            992.0
+          ],
+          "dimensions": {
+            "width": 84.0,
+            "height": 52.0,
+            "aspect_ratio_width_over_height": 1.6153846153846154
+          },
+          "panel_id": "PAGE_FALLBACK"
+        }
+      },
+      "human_relative_order": [
+        "LR_0856a888b8df",
+        "LR_f3054b9c1820"
+      ],
+      "predicted_relative_order": [
+        "LR_f3054b9c1820",
+        "LR_0856a888b8df"
+      ],
+      "geometry": {
+        "normalized_vertical_overlap": 0.34615384615384615,
+        "normalized_center_distance": 1.4615384615384615,
+        "horizontal_relationship": "A_RIGHT_OF_B",
+        "vertical_relationship": "Y_OVERLAP",
+        "intersection": {
+          "x_pixels": 0.0,
+          "y_pixels": 18.0,
+          "area": 0.0
+        },
+        "containment": {
+          "a_contains_b": false,
+          "b_contains_a": false
+        }
+      },
+      "same_predicted_tier": false,
+      "panel_group_information": "PAGE_FALLBACK only; no authoritative Human panel/tier labels",
+      "manual_visual_panel_evidence": {
+        "evidence_class": "BENCHMARK_ONLY_MANUAL_AUDIT",
+        "LR_0856a888b8df": "BOTTOM_RIGHT_PANEL",
+        "LR_f3054b9c1820": "BOTTOM_LEFT_PHONE_PANEL",
+        "human_panel_order": [
+          "BOTTOM_RIGHT_PANEL",
+          "BOTTOM_LEFT_PHONE_PANEL"
+        ],
+        "evidence": "Visible panel borders place the Human-before dialogue in the bottom-right panel and PÍP in the separate bottom-left phone panel."
+      },
+      "direct_source_byte_verification": {
+        "expected_sha256": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+        "matching_current_uploads": [
+          "backend/uploads/16c906e1-b4b0-426c-ba4a-3d17e6fa4042_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-18.jpg"
+        ],
+        "match_count": 1,
+        "direct_source_byte_match": true
+      },
+      "neighbors": {
+        "human": {
+          "LR_0856a888b8df": {
+            "previous": "LR_bf3e65667bd9",
+            "next": "LR_5bdd1160b3a0"
+          },
+          "LR_f3054b9c1820": {
+            "previous": "LR_5bdd1160b3a0",
+            "next": null
+          }
+        },
+        "prediction": {
+          "LR_0856a888b8df": {
+            "previous": "LR_f3054b9c1820",
+            "next": "LR_5bdd1160b3a0"
+          },
+          "LR_f3054b9c1820": {
+            "previous": "LR_bf3e65667bd9",
+            "next": "LR_0856a888b8df"
+          }
+        }
+      },
+      "algorithm_decision_path": {
+        "input_steps": [
+          {
+            "region": "LR_f3054b9c1820",
+            "candidate_tiers": [],
+            "chosen_tier": 3
+          },
+          {
+            "region": "LR_0856a888b8df",
+            "candidate_tiers": [],
+            "chosen_tier": 4
+          }
+        ],
+        "tier_result": [
+          [
+            "LR_dfef3de3ed48",
+            "LR_35d30a3b10e1"
+          ],
+          [
+            "LR_9636706b4855"
+          ],
+          [
+            "LR_f6dbfc4d4913",
+            "LR_bf3e65667bd9"
+          ],
+          [
+            "LR_f3054b9c1820"
+          ],
+          [
+            "LR_0856a888b8df",
+            "LR_5bdd1160b3a0"
+          ]
+        ],
+        "decision": "different tiers -> top-to-bottom tier order"
+      },
+      "failure_taxonomy": [
+        "cross-panel order / missing text-to-panel assignment",
+        "missing panel containment",
+        "missing panel adjacency/order"
+      ],
+      "primary_root_class": "C. panel/group construction",
+      "contributing_geometric_symptom": "The pair fails the frozen >=0.50 overlap predicate and is split into y-sorted text tiers.",
+      "exact_reason": "Manga panel order reads the bottom-right panel before the separate bottom-left phone panel. PAGE_FALLBACK loses containment/adjacency, so the frozen text-only tier sorter emits the higher PÍP bbox first.",
+      "evidence_limit": "Human click-order establishes relative order but not why; no Human panel/tier annotation exists."
+    },
+    {
+      "failure_id": "P15-LR_5bdd1160b3a0-LR_f3054b9c1820",
+      "page_order": 15,
+      "asset_id": "0664c577-ed1e-4b77-b056-c563790e945b",
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "regions": {
+        "LR_5bdd1160b3a0": {
+          "bbox": [
+            294.0,
+            1016.0,
+            405.0,
+            1138.0
+          ],
+          "dimensions": {
+            "width": 111.0,
+            "height": 122.0,
+            "aspect_ratio_width_over_height": 0.9098360655737705
+          },
+          "panel_id": "PAGE_FALLBACK"
+        },
+        "LR_f3054b9c1820": {
+          "bbox": [
+            120.0,
+            940.0,
+            204.0,
+            992.0
+          ],
+          "dimensions": {
+            "width": 84.0,
+            "height": 52.0,
+            "aspect_ratio_width_over_height": 1.6153846153846154
+          },
+          "panel_id": "PAGE_FALLBACK"
+        }
+      },
+      "human_relative_order": [
+        "LR_5bdd1160b3a0",
+        "LR_f3054b9c1820"
+      ],
+      "predicted_relative_order": [
+        "LR_f3054b9c1820",
+        "LR_5bdd1160b3a0"
+      ],
+      "geometry": {
+        "normalized_vertical_overlap": 0.0,
+        "normalized_center_distance": 2.1346153846153846,
+        "horizontal_relationship": "A_RIGHT_OF_B",
+        "vertical_relationship": "A_BELOW_B",
+        "intersection": {
+          "x_pixels": 0.0,
+          "y_pixels": 0.0,
+          "area": 0.0
+        },
+        "containment": {
+          "a_contains_b": false,
+          "b_contains_a": false
+        }
+      },
+      "same_predicted_tier": false,
+      "panel_group_information": "PAGE_FALLBACK only; no authoritative Human panel/tier labels",
+      "manual_visual_panel_evidence": {
+        "evidence_class": "BENCHMARK_ONLY_MANUAL_AUDIT",
+        "LR_5bdd1160b3a0": "BOTTOM_RIGHT_PANEL",
+        "LR_f3054b9c1820": "BOTTOM_LEFT_PHONE_PANEL",
+        "human_panel_order": [
+          "BOTTOM_RIGHT_PANEL",
+          "BOTTOM_LEFT_PHONE_PANEL"
+        ],
+        "evidence": "Visible panel borders place the Human-before dialogue in the bottom-right panel and PÍP in the separate bottom-left phone panel."
+      },
+      "direct_source_byte_verification": {
+        "expected_sha256": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+        "matching_current_uploads": [
+          "backend/uploads/16c906e1-b4b0-426c-ba4a-3d17e6fa4042_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-18.jpg"
+        ],
+        "match_count": 1,
+        "direct_source_byte_match": true
+      },
+      "neighbors": {
+        "human": {
+          "LR_5bdd1160b3a0": {
+            "previous": "LR_0856a888b8df",
+            "next": "LR_f3054b9c1820"
+          },
+          "LR_f3054b9c1820": {
+            "previous": "LR_5bdd1160b3a0",
+            "next": null
+          }
+        },
+        "prediction": {
+          "LR_5bdd1160b3a0": {
+            "previous": "LR_0856a888b8df",
+            "next": null
+          },
+          "LR_f3054b9c1820": {
+            "previous": "LR_bf3e65667bd9",
+            "next": "LR_0856a888b8df"
+          }
+        }
+      },
+      "algorithm_decision_path": {
+        "input_steps": [
+          {
+            "region": "LR_f3054b9c1820",
+            "candidate_tiers": [],
+            "chosen_tier": 3
+          },
+          {
+            "region": "LR_5bdd1160b3a0",
+            "candidate_tiers": [
+              {
+                "tier": 4,
+                "matching_peers": [
+                  "LR_0856a888b8df"
+                ]
+              }
+            ],
+            "chosen_tier": 4
+          }
+        ],
+        "tier_result": [
+          [
+            "LR_dfef3de3ed48",
+            "LR_35d30a3b10e1"
+          ],
+          [
+            "LR_9636706b4855"
+          ],
+          [
+            "LR_f6dbfc4d4913",
+            "LR_bf3e65667bd9"
+          ],
+          [
+            "LR_f3054b9c1820"
+          ],
+          [
+            "LR_0856a888b8df",
+            "LR_5bdd1160b3a0"
+          ]
+        ],
+        "decision": "different tiers -> top-to-bottom tier order"
+      },
+      "failure_taxonomy": [
+        "cross-panel order / missing text-to-panel assignment",
+        "missing panel containment",
+        "missing panel adjacency/order"
+      ],
+      "primary_root_class": "C. panel/group construction",
+      "contributing_geometric_symptom": "The pair fails the frozen >=0.50 overlap predicate and is split into y-sorted text tiers.",
+      "exact_reason": "Manga panel order reads the bottom-right panel before the separate bottom-left phone panel. PAGE_FALLBACK loses containment/adjacency, so the frozen text-only tier sorter emits the higher PÍP bbox first.",
+      "evidence_limit": "Human click-order establishes relative order but not why; no Human panel/tier annotation exists."
+    },
+    {
+      "failure_id": "P17-LR_554cd55f1a6a-LR_8a526b453c10",
+      "page_order": 17,
+      "asset_id": "d0383361-3b5b-4c58-9e8a-8683b4f7cc29",
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "regions": {
+        "LR_554cd55f1a6a": {
+          "bbox": [
+            699.0,
+            199.0,
+            798.0,
+            279.0
+          ],
+          "dimensions": {
+            "width": 99.0,
+            "height": 80.0,
+            "aspect_ratio_width_over_height": 1.2375
+          },
+          "panel_id": "PAGE_FALLBACK"
+        },
+        "LR_8a526b453c10": {
+          "bbox": [
+            442.0,
+            182.0,
+            488.0,
+            210.0
+          ],
+          "dimensions": {
+            "width": 46.0,
+            "height": 28.0,
+            "aspect_ratio_width_over_height": 1.6428571428571428
+          },
+          "panel_id": "PAGE_FALLBACK"
+        }
+      },
+      "human_relative_order": [
+        "LR_554cd55f1a6a",
+        "LR_8a526b453c10"
+      ],
+      "predicted_relative_order": [
+        "LR_8a526b453c10",
+        "LR_554cd55f1a6a"
+      ],
+      "geometry": {
+        "normalized_vertical_overlap": 0.39285714285714285,
+        "normalized_center_distance": 1.5357142857142858,
+        "horizontal_relationship": "A_RIGHT_OF_B",
+        "vertical_relationship": "Y_OVERLAP",
+        "intersection": {
+          "x_pixels": 0.0,
+          "y_pixels": 11.0,
+          "area": 0.0
+        },
+        "containment": {
+          "a_contains_b": false,
+          "b_contains_a": false
+        }
+      },
+      "same_predicted_tier": false,
+      "panel_group_information": "PAGE_FALLBACK only; no authoritative Human panel/tier labels",
+      "manual_visual_panel_evidence": {
+        "evidence_class": "BENCHMARK_ONLY_MANUAL_AUDIT",
+        "LR_554cd55f1a6a": "TOP_RIGHT_PANEL",
+        "LR_8a526b453c10": "TOP_LEFT_PANEL",
+        "human_panel_order": [
+          "TOP_RIGHT_PANEL",
+          "TOP_LEFT_PANEL"
+        ],
+        "evidence": "Visible panel borders place the Human-before region in the top-right panel and HỬ? in the separate top-left panel."
+      },
+      "direct_source_byte_verification": {
+        "expected_sha256": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+        "matching_current_uploads": [
+          "backend/uploads/cba300d5-a276-4bfc-a7bb-ad6476920041_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-20.jpg"
+        ],
+        "match_count": 1,
+        "direct_source_byte_match": true
+      },
+      "neighbors": {
+        "human": {
+          "LR_554cd55f1a6a": {
+            "previous": null,
+            "next": "LR_8a526b453c10"
+          },
+          "LR_8a526b453c10": {
+            "previous": "LR_554cd55f1a6a",
+            "next": "LR_0c630f218964"
+          }
+        },
+        "prediction": {
+          "LR_554cd55f1a6a": {
+            "previous": "LR_8a526b453c10",
+            "next": "LR_0c630f218964"
+          },
+          "LR_8a526b453c10": {
+            "previous": null,
+            "next": "LR_554cd55f1a6a"
+          }
+        }
+      },
+      "algorithm_decision_path": {
+        "input_steps": [
+          {
+            "region": "LR_8a526b453c10",
+            "candidate_tiers": [],
+            "chosen_tier": 0
+          },
+          {
+            "region": "LR_554cd55f1a6a",
+            "candidate_tiers": [],
+            "chosen_tier": 1
+          }
+        ],
+        "tier_result": [
+          [
+            "LR_8a526b453c10"
+          ],
+          [
+            "LR_554cd55f1a6a",
+            "LR_0c630f218964"
+          ],
+          [
+            "LR_de7b43ae45f7"
+          ],
+          [
+            "LR_0523c7b7b258",
+            "LR_952c7eac9aef"
+          ],
+          [
+            "LR_11117a0bc73a"
+          ]
+        ],
+        "decision": "different tiers -> top-to-bottom tier order"
+      },
+      "failure_taxonomy": [
+        "cross-panel order / missing text-to-panel assignment",
+        "missing panel containment",
+        "missing panel adjacency/order"
+      ],
+      "primary_root_class": "C. panel/group construction",
+      "contributing_geometric_symptom": "The pair fails the frozen >=0.50 overlap predicate and is split into y-sorted text tiers.",
+      "exact_reason": "Manga panel order reads the top-right panel before the top-left panel. PAGE_FALLBACK omits panel containment/order, so small y differences split the regions and incorrectly let text-tier y order dominate.",
+      "evidence_limit": "Human click-order establishes relative order but not why; no Human panel/tier annotation exists."
+    },
+    {
+      "failure_id": "P38-LR_505a871ebd18-LR_563eb986d1f9",
+      "page_order": 38,
+      "asset_id": "522c50f5-5934-40be-9cc2-f452deeeff35",
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "regions": {
+        "LR_505a871ebd18": {
+          "bbox": [
+            390.0,
+            1071.0,
+            492.0,
+            1157.0
+          ],
+          "dimensions": {
+            "width": 102.0,
+            "height": 86.0,
+            "aspect_ratio_width_over_height": 1.186046511627907
+          },
+          "panel_id": "PAGE_FALLBACK"
+        },
+        "LR_563eb986d1f9": {
+          "bbox": [
+            234.0,
+            970.0,
+            334.0,
+            1105.0
+          ],
+          "dimensions": {
+            "width": 100.0,
+            "height": 135.0,
+            "aspect_ratio_width_over_height": 0.7407407407407407
+          },
+          "panel_id": "PAGE_FALLBACK"
+        }
+      },
+      "human_relative_order": [
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "predicted_relative_order": [
+        "LR_563eb986d1f9",
+        "LR_505a871ebd18"
+      ],
+      "geometry": {
+        "normalized_vertical_overlap": 0.3953488372093023,
+        "normalized_center_distance": 0.8895348837209303,
+        "horizontal_relationship": "A_RIGHT_OF_B",
+        "vertical_relationship": "Y_OVERLAP",
+        "intersection": {
+          "x_pixels": 0.0,
+          "y_pixels": 34.0,
+          "area": 0.0
+        },
+        "containment": {
+          "a_contains_b": false,
+          "b_contains_a": false
+        }
+      },
+      "same_predicted_tier": false,
+      "panel_group_information": "PAGE_FALLBACK only; no authoritative Human panel/tier labels",
+      "manual_visual_panel_evidence": {
+        "evidence_class": "BENCHMARK_ONLY_MANUAL_AUDIT",
+        "LR_505a871ebd18": "BOTTOM_RIGHT_PANEL",
+        "LR_563eb986d1f9": "BOTTOM_LEFT_PANEL",
+        "human_panel_order": [
+          "BOTTOM_RIGHT_PANEL",
+          "BOTTOM_LEFT_PANEL"
+        ],
+        "evidence": "Visible panel borders place the Human-before thought bubble in the bottom-right panel and the Human-after dialogue in the separate bottom-left panel."
+      },
+      "direct_source_byte_verification": {
+        "expected_sha256": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+        "matching_current_uploads": [
+          "backend/uploads/86c8fe00-ff05-4e08-8eff-c85ce4d8c93f_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-41.jpg"
+        ],
+        "match_count": 1,
+        "direct_source_byte_match": true
+      },
+      "neighbors": {
+        "human": {
+          "LR_505a871ebd18": {
+            "previous": "LR_5cb918f74103",
+            "next": "LR_563eb986d1f9"
+          },
+          "LR_563eb986d1f9": {
+            "previous": "LR_505a871ebd18",
+            "next": null
+          }
+        },
+        "prediction": {
+          "LR_505a871ebd18": {
+            "previous": "LR_563eb986d1f9",
+            "next": null
+          },
+          "LR_563eb986d1f9": {
+            "previous": "LR_5cb918f74103",
+            "next": "LR_505a871ebd18"
+          }
+        }
+      },
+      "algorithm_decision_path": {
+        "input_steps": [
+          {
+            "region": "LR_563eb986d1f9",
+            "candidate_tiers": [],
+            "chosen_tier": 3
+          },
+          {
+            "region": "LR_505a871ebd18",
+            "candidate_tiers": [],
+            "chosen_tier": 4
+          }
+        ],
+        "tier_result": [
+          [
+            "LR_ac01f1796688"
+          ],
+          [
+            "LR_2da60c343d36"
+          ],
+          [
+            "LR_2010e3d36608"
+          ],
+          [
+            "LR_5cb918f74103",
+            "LR_563eb986d1f9"
+          ],
+          [
+            "LR_505a871ebd18"
+          ]
+        ],
+        "decision": "different tiers -> top-to-bottom tier order"
+      },
+      "failure_taxonomy": [
+        "cross-panel order / missing text-to-panel assignment",
+        "missing panel containment",
+        "missing panel adjacency/order"
+      ],
+      "primary_root_class": "C. panel/group construction",
+      "contributing_geometric_symptom": "The pair fails the frozen >=0.50 overlap predicate and is split into y-sorted text tiers.",
+      "exact_reason": "Manga panel order reads the bottom-right panel before the bottom-left panel. PAGE_FALLBACK provides no containment/adjacency, so top-to-bottom text tiers reverse the cross-panel pair.",
+      "evidence_limit": "Human click-order establishes relative order but not why; no Human panel/tier annotation exists."
+    }
+  ],
+  "taxonomy": {
+    "cross-panel order / missing text-to-panel assignment": 4
+  },
+  "root_classes": {
+    "C. panel/group construction": 4
+  },
+  "human_gt_integrity": {
+    "status": "PASS_WITH_STRUCTURAL_LABEL_LIMITATION",
+    "pages": [
+      {
+        "page_order": 1,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 2,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 3,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 4,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 5,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 7,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 15,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 17,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 18,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      },
+      {
+        "page_order": 38,
+        "source_hash_matches_logical": true,
+        "representation_hash_matches_logical": true,
+        "duplicate_order_positions": false,
+        "missing_ordered_regions": [],
+        "excluded_in_order": [],
+        "unclassified_regions": [],
+        "ambiguous_orphan_state": "N/A: click-order GT has no ambiguity/orphan field",
+        "panel_group_consistency": "N/A: all logical regions use PAGE_FALLBACK; no Human panel/tier GT"
+      }
+    ],
+    "input_artifact_hash_checks": {
+      "reader-v2-scale-40p-11.10.json": {
+        "expected": "1d48b158bad280cd4fa450c4bba63c9f95586bf12ce30c556023b3297773ddb1",
+        "actual": "1d48b158bad280cd4fa450c4bba63c9f95586bf12ce30c556023b3297773ddb1",
+        "matches": true
+      },
+      "reader-logical-region-sample-11.11.json": {
+        "expected": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+        "actual": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+        "matches": true
+      },
+      "reader-correctness-human-verified-11.11.json": {
+        "expected": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235",
+        "actual": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235",
+        "matches": true
+      },
+      "reader-router-validation-results-11.13.json": {
+        "expected": "2eead1414da06aa45e5d47adbcfc5cffe8a317774e17e0fe91a0d96522836aca",
+        "actual": "2eead1414da06aa45e5d47adbcfc5cffe8a317774e17e0fe91a0d96522836aca",
+        "matches": true
+      },
+      "reader-router-validation-human-gt-11.13.json": {
+        "expected": "6fa30534e7bbb79aebce38eb092bc5a713d9a86ab7c8d62b1374243c2e9ec85e",
+        "actual": "6fa30534e7bbb79aebce38eb092bc5a713d9a86ab7c8d62b1374243c2e9ec85e",
+        "matches": true
+      }
+    },
+    "human_gt_sha256_before_after": {
+      "before": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235",
+      "after": "7436285e83f2dc55815b9f5add9f33617b24c608b9e94c6911990c60bbd8f235"
+    }
+  },
+  "structural_requirements": {
+    "panel_containment": {
+      "required_by_pages": [
+        15,
+        17,
+        38
+      ],
+      "reason": "Distinguishes which visible panel owns each reversed text region."
+    },
+    "panel_adjacency_order": {
+      "required_by_pages": [
+        15,
+        17,
+        38
+      ],
+      "reason": "Orders right panel before left panel under current manga policy."
+    },
+    "text_to_panel_assignment": {
+      "required_by_pages": [
+        15,
+        17,
+        38
+      ],
+      "reason": "Connects each logical text bbox to the panel sequence rather than page-wide text tiers."
+    }
+  }
+}

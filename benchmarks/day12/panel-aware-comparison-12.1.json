@@ -1,0 +1,45 @@
+{
+  "schema_version": "panel-aware-comparison.v1",
+  "checkpoint": "12.1",
+  "status": "NOT_RUN_PANEL_DATA_GATE_FAILED",
+  "prediction_frozen_before_evaluation": true,
+  "pre_score_artifact_hashes": {
+    "panel-data-audit-12.1.json": "7179746e711679bfcdc418fb9676dbdca8a6ed29a4df58f69f491cf1422822b4",
+    "panel-aware-protocol-12.1.json": "4768fffb7bc93f76e019f77dbd2c6bef8f164e5c724dc4f72d86e5c603339765"
+  },
+  "control": {
+    "metrics": {
+      "exact_pages": {
+        "correct": 7,
+        "total": 10,
+        "accuracy": 0.7
+      },
+      "exact_positions": {
+        "correct": 43,
+        "total": 50,
+        "accuracy": 0.86
+      },
+      "pairwise": {
+        "correct": 120,
+        "total": 124,
+        "accuracy": 0.967741935483871
+      },
+      "inversions": 4
+    },
+    "page_deltas_vs_previous_control": {
+      "improved": 3,
+      "unchanged": 7,
+      "regressed": 0
+    },
+    "page_3_exact": true,
+    "rule": "normalized vertical overlap >= 0.50",
+    "parameter_status": "BENCHMARK_FITTED"
+  },
+  "candidate": null,
+  "candidate_metrics": "N/A: hard gate failed before implementation",
+  "known_inversions": {
+    "repaired": "N/A",
+    "unchanged": "N/A",
+    "new": "N/A"
+  }
+}

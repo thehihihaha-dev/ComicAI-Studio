@@ -1,0 +1,33 @@
+{
+  "schema_version": "panel-relation-model-historical-audit.v1",
+  "checkpoint": "12.7",
+  "day11": [
+    {
+      "page_order": 15,
+      "human_before": "LR_0856a888b8df",
+      "human_after": "LR_f3054b9c1820",
+      "status": "UNRESOLVED"
+    },
+    {
+      "page_order": 15,
+      "human_before": "LR_5bdd1160b3a0",
+      "human_after": "LR_f3054b9c1820",
+      "status": "UNRESOLVED"
+    },
+    {
+      "page_order": 17,
+      "human_before": "LR_554cd55f1a6a",
+      "human_after": "LR_8a526b453c10",
+      "status": "REPAIRED"
+    },
+    {
+      "page_order": 38,
+      "human_before": "LR_505a871ebd18",
+      "human_after": "LR_563eb986d1f9",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "previously_exact_regressions": [],
+  "gt_runtime_features": [],
+  "semantic_sha256": "046fa2b504713a73239f9f9003b1d5b49f12a58031049ff46bc3f52765a26b66"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "panel-relation-model-control-reference.v2",
+  "checkpoint": "12.7",
+  "status": "12.6_FULL_CONTROL_VERIFICATION_DEFERRED_UNTIL_GLOBAL_FREEZE",
+  "control_identity": "CHECKPOINT_12.6_ACCEPTED_ORACLE_ONE_PIXEL",
+  "artifacts": [],
+  "artifact_hashes": [],
+  "human_derived_pre_freeze_dependencies": [],
+  "human_order_derived_provenance_dependencies": [],
+  "gt_runtime_features": [],
+  "semantic_sha256": "d72a9e26135931f0e29f7f2d850e019f18d2f8fce48b0bce9b2a92b97ae6ae22"
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "panel-geometry-identifiability-summary.v1",
+  "checkpoint": "12.8",
+  "outcome": "B. PARTIAL GEOMETRY IDENTIFIABILITY",
+  "cohort": [
+    1,
+    2,
+    3,
+    15,
+    18,
+    38
+  ],
+  "ready_set_count": 20,
+  "classification_counts": {
+    "IDENTIFIABLE_BY_EXISTING_GEOMETRY": 15,
+    "GEOMETRY_NOT_IDENTIFIABLE": 0,
+    "INSUFFICIENT_EVIDENCE": 1,
+    "CONTRADICTED_BY_CONTROL": 4
+  },
+  "chronology": [
+    "INPUTS_VERIFIED",
+    "RUN_A_AUDIT_GENERATED",
+    "RUN_B_AUDIT_GENERATED",
+    "RUN_A_FROZEN",
+    "RUN_B_FROZEN",
+    "GLOBAL_FREEZE_BARRIER_ACTIVE",
+    "HUMAN_ORDER_ACCESS_ALLOWED",
+    "PHASE_B_EVALUATION"
+  ],
+  "resource_guard": "NORMAL",
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "production_changed": false,
+  "gt_runtime_features": [],
+  "two_independent_runs": {
+    "input-audit": {
+      "artifact": "input-audit",
+      "path": "benchmarks/day12/panel-geometry-identifiability-input-audit-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "4a49e23166d8d1e0770b295c606924d53981b829a54a42be9a2f106693351ae9",
+      "raw_byte_sha256_b": "4a49e23166d8d1e0770b295c606924d53981b829a54a42be9a2f106693351ae9",
+      "canonical_semantic_sha256_a": "9299cce3bff5fe45ebfc0a7fab008a34073db9275276483f5797529b0cf5d149",
+      "canonical_semantic_sha256_b": "9299cce3bff5fe45ebfc0a7fab008a34073db9275276483f5797529b0cf5d149",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "protocol": {
+      "artifact": "protocol",
+      "path": "benchmarks/day12/panel-geometry-identifiability-protocol-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "79f609d8354903d0a1b39ec9ecc19ec172172b5d6491f648f3de9bb620ececb7",
+      "raw_byte_sha256_b": "79f609d8354903d0a1b39ec9ecc19ec172172b5d6491f648f3de9bb620ececb7",
+      "canonical_semantic_sha256_a": "a029b6078d87a7ecbbf877c47dedcaf7d540c734612cc687db207628b56355ee",
+      "canonical_semantic_sha256_b": "a029b6078d87a7ecbbf877c47dedcaf7d540c734612cc687db207628b56355ee",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "synthetic": {
+      "artifact": "synthetic",
+      "path": "benchmarks/day12/panel-geometry-identifiability-synthetic-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "ccf77000dd588b0e1f0904562dd0c38410684799bce663bbcc0f282a7b605e30",
+      "raw_byte_sha256_b": "ccf77000dd588b0e1f0904562dd0c38410684799bce663bbcc0f282a7b605e30",
+      "canonical_semantic_sha256_a": "235ab4c399935b55962d19c55948769e34e553dcba72bcac70e730fecada30cc",
+      "canonical_semantic_sha256_b": "235ab4c399935b55962d19c55948769e34e553dcba72bcac70e730fecada30cc",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "phase-a-audit": {
+      "artifact": "phase-a-audit",
+      "path": "benchmarks/day12/panel-geometry-identifiability-phase-a-audit-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "f96ebcb4bc7bc661c564a69ffabbe4c76eac3076dddde6c0dcf632ff89a360a8",
+      "raw_byte_sha256_b": "f96ebcb4bc7bc661c564a69ffabbe4c76eac3076dddde6c0dcf632ff89a360a8",
+      "canonical_semantic_sha256_a": "d42b02e2ad211332867fd0c159f7736750c1fedb9fb5ce84a1cc5921ff66d1bd",
+      "canonical_semantic_sha256_b": "d42b02e2ad211332867fd0c159f7736750c1fedb9fb5ce84a1cc5921ff66d1bd",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "freeze": {
+      "artifact": "freeze",
+      "path": "benchmarks/day12/panel-geometry-identifiability-freeze-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "27e333b9d9ef58023d42613489d2c3033ee661b2bb916ead1125878b3990b79d",
+      "raw_byte_sha256_b": "27e333b9d9ef58023d42613489d2c3033ee661b2bb916ead1125878b3990b79d",
+      "canonical_semantic_sha256_a": "33b53087dd8d987b105249bdd47bd9e6a63e2b78d4abbea09b7fa637e9431dfe",
+      "canonical_semantic_sha256_b": "33b53087dd8d987b105249bdd47bd9e6a63e2b78d4abbea09b7fa637e9431dfe",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "contradiction-audit": {
+      "artifact": "contradiction-audit",
+      "path": "benchmarks/day12/panel-geometry-identifiability-contradiction-audit-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "337f89892928768b9ec024f00f03fdba94adc4b7513d3955d40eb33883b70d25",
+      "raw_byte_sha256_b": "337f89892928768b9ec024f00f03fdba94adc4b7513d3955d40eb33883b70d25",
+      "canonical_semantic_sha256_a": "b0eecae75ed325103295522ad57e33c3c09aa45799c5e1e997c2c13c01149a60",
+      "canonical_semantic_sha256_b": "b0eecae75ed325103295522ad57e33c3c09aa45799c5e1e997c2c13c01149a60",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "evaluation": {
+      "artifact": "evaluation",
+      "path": "benchmarks/day12/panel-geometry-identifiability-evaluation-12.8.json",
+      "raw_hash_convention": "FINAL_PERSISTED_ARTIFACT",
+      "raw_byte_sha256_a": "7d8ddc56b5202a7ff3d55683841fe84083ffb5521964f77450072077670157ef",
+      "raw_byte_sha256_b": "7d8ddc56b5202a7ff3d55683841fe84083ffb5521964f77450072077670157ef",
+      "canonical_semantic_sha256_a": "430d07b98dc8a72f730b106aa204b94f932e8a62b69395802cb55a7562ddbf1e",
+      "canonical_semantic_sha256_b": "430d07b98dc8a72f730b106aa204b94f932e8a62b69395802cb55a7562ddbf1e",
+      "raw_equal": true,
+      "semantic_equal": true
+    },
+    "summary": {
+      "artifact": "summary",
+      "path": "benchmarks/day12/panel-geometry-identifiability-summary-12.8.json",
+      "raw_hash_convention": "SUMMARY_EXCLUDED_ENVELOPE",
+      "raw_byte_sha256_a": "5f0085049ffc9c44c0b9fa89d4dc907529a29a0d5824974d81833d56fda5e7e6",
+      "raw_byte_sha256_b": "5f0085049ffc9c44c0b9fa89d4dc907529a29a0d5824974d81833d56fda5e7e6",
+      "canonical_semantic_sha256_a": "4aba59e89ad4752d88dfae5019281e380241ea5c68a85beaf3c78db6a90e4c3b",
+      "canonical_semantic_sha256_b": "4aba59e89ad4752d88dfae5019281e380241ea5c68a85beaf3c78db6a90e4c3b",
+      "raw_equal": true,
+      "semantic_equal": true
+    }
+  },
+  "semantic_sha256": "e1bc55ad8e6fa79d654a85d12b7253be5a5e518a413cf206c7c1d02da1debde2"
+}

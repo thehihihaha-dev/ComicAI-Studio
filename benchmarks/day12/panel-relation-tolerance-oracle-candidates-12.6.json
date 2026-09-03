@@ -1,0 +1,4100 @@
+{
+  "schema_version": "panel-relation-tolerance-candidates.v1",
+  "checkpoint": "12.6",
+  "track": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+  "tolerance_label": "EXPERIMENT_PREDECLARED_SOURCE_PIXEL_QUANTIZATION_V1",
+  "provenance": {
+    "input_audit_semantic_sha256": "ab989bb64fda24e3b87acfe62499299fb0170ba4646d78b1223e361418c265c1",
+    "control_reference_semantic_sha256": "ace5f6c1cf6655f74cb498ecb310c1e505332644b105308c5f2d282cd306d06d",
+    "protocol_sha256": "d1ecf62cc8e8183fae975d3feed3765d1ed0bba9f0822a49f6373888516fd4c7",
+    "dependency_closure": [
+      {
+        "name": "pre_freeze_input_audit",
+        "semantic_sha256": "ab989bb64fda24e3b87acfe62499299fb0170ba4646d78b1223e361418c265c1",
+        "human_order_derived": false
+      },
+      {
+        "name": "opaque_approved_raw_byte_control_integrity",
+        "semantic_sha256": "ace5f6c1cf6655f74cb498ecb310c1e505332644b105308c5f2d282cd306d06d",
+        "human_order_derived": false
+      },
+      {
+        "name": "frozen_tolerance_protocol",
+        "semantic_sha256": "d1ecf62cc8e8183fae975d3feed3765d1ed0bba9f0822a49f6373888516fd4c7",
+        "human_order_derived": false
+      }
+    ],
+    "human_order_derived_provenance_dependencies": [],
+    "gt_runtime_features": [],
+    "service_code_sha256": "700199661f88ca3d590f142934f6a49c783a1ff6f729a5aeeb9ce4f1c5493ef9",
+    "runner_code_sha256": "9733942e74b7dbe21a869bc9f9b82436056626351910ab2ee5845b58164eca1d"
+  },
+  "pages": [
+    {
+      "page_order": 1,
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_3f5ab32f317c",
+          "bbox": [
+            593.303,
+            77.773,
+            832.711,
+            564.439
+          ]
+        },
+        {
+          "panel_id": "PG_8d6e2f935cf6",
+          "bbox": [
+            72.773,
+            79.739,
+            594.985,
+            565.361
+          ]
+        },
+        {
+          "panel_id": "PG_b9597e340850",
+          "bbox": [
+            79.693,
+            574.916,
+            837.335,
+            1197.473
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_3f5ab32f317c",
+          "PG_8d6e2f935cf6",
+          "PG_b9597e340850"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 570.1385,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_b9597e340850"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 570.1385,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_b9597e340850"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_3f5ab32f317c",
+              "PG_8d6e2f935cf6"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_086859ae76f4",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3f5ab32f317c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8d6e2f935cf6",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_b9597e340850",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8d6e2f935cf6",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_615c8d24c678",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3f5ab32f317c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_8d6e2f935cf6",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_b9597e340850",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_3f5ab32f317c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_28e2fc3b47b8",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3f5ab32f317c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8d6e2f935cf6",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_b9597e340850",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8d6e2f935cf6",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_2284efd8ada7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3f5ab32f317c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8d6e2f935cf6",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_b9597e340850",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_b9597e340850",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_3f5ab32f317c": {
+          "order": [
+            "LR_615c8d24c678"
+          ],
+          "tiers": [
+            [
+              "LR_615c8d24c678"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_8d6e2f935cf6": {
+          "order": [
+            "LR_086859ae76f4",
+            "LR_28e2fc3b47b8"
+          ],
+          "tiers": [
+            [
+              "LR_086859ae76f4"
+            ],
+            [
+              "LR_28e2fc3b47b8"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_b9597e340850": {
+          "order": [
+            "LR_2284efd8ada7"
+          ],
+          "tiers": [
+            [
+              "LR_2284efd8ada7"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_3f5ab32f317c",
+            "PG_8d6e2f935cf6"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 2,
+      "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_b4f4bff59a91",
+          "bbox": [
+            60.905,
+            73.402,
+            829.24,
+            580.945
+          ]
+        },
+        {
+          "panel_id": "PG_d3cde875ca11",
+          "bbox": [
+            65.737,
+            578.833,
+            823.717,
+            1189.985
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_b4f4bff59a91",
+          "PG_d3cde875ca11"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_b4f4bff59a91",
+              "PG_d3cde875ca11"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_ef4ab22072a8",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b4f4bff59a91",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_d3cde875ca11",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_b4f4bff59a91",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_a77493ec9ff9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b4f4bff59a91",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d3cde875ca11",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_d3cde875ca11",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_b4f4bff59a91": {
+          "order": [
+            "LR_ef4ab22072a8"
+          ],
+          "tiers": [
+            [
+              "LR_ef4ab22072a8"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_d3cde875ca11": {
+          "order": [
+            "LR_a77493ec9ff9"
+          ],
+          "tiers": [
+            [
+              "LR_a77493ec9ff9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_b4f4bff59a91",
+            "PG_d3cde875ca11"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 3,
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_0fc241066559",
+          "bbox": [
+            72.512,
+            75.346,
+            843.51,
+            505.753
+          ]
+        },
+        {
+          "panel_id": "PG_a5a9341b804a",
+          "bbox": [
+            66.382,
+            498.226,
+            848.034,
+            858.541
+          ]
+        },
+        {
+          "panel_id": "PG_ed75e1b3a57d",
+          "bbox": [
+            71.313,
+            864.716,
+            283.356,
+            1183.034
+          ]
+        },
+        {
+          "panel_id": "PG_1447a7233191",
+          "bbox": [
+            281.751,
+            866.528,
+            835.3,
+            1195.246
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_0fc241066559",
+          "PG_1447a7233191",
+          "PG_a5a9341b804a",
+          "PG_ed75e1b3a57d"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 861.6285,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": []
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 861.6285,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": []
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_0fc241066559",
+              "PG_a5a9341b804a"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          },
+          {
+            "panel_ids": [
+              "PG_1447a7233191",
+              "PG_ed75e1b3a57d"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_708761617ca5",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_0fc241066559",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_6847589abd58",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_0fc241066559",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_1b80a3ba7eba",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_a5a9341b804a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_301b7ed055be",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_1447a7233191",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0f41713aa3ea",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_1447a7233191",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_016a11675840",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_1447a7233191",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_38a547aad429",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_ed75e1b3a57d",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "LR_363ecd1531dc",
+            "competing_panels": [
+              {
+                "panel_id": "PG_0fc241066559",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_a5a9341b804a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ed75e1b3a57d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1447a7233191",
+                "coverage": 0.25878571428571767,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "intra_panel": {
+        "PG_0fc241066559": {
+          "order": [
+            "LR_708761617ca5",
+            "LR_6847589abd58"
+          ],
+          "tiers": [
+            [
+              "LR_708761617ca5"
+            ],
+            [
+              "LR_6847589abd58"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_a5a9341b804a": {
+          "order": [
+            "LR_1b80a3ba7eba"
+          ],
+          "tiers": [
+            [
+              "LR_1b80a3ba7eba"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_ed75e1b3a57d": {
+          "order": [
+            "LR_38a547aad429"
+          ],
+          "tiers": [
+            [
+              "LR_38a547aad429"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_1447a7233191": {
+          "order": [
+            "LR_301b7ed055be",
+            "LR_0f41713aa3ea",
+            "LR_016a11675840"
+          ],
+          "tiers": [
+            [
+              "LR_301b7ed055be",
+              "LR_0f41713aa3ea",
+              "LR_016a11675840"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_0fc241066559",
+            "PG_a5a9341b804a"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        },
+        {
+          "panel_ids": [
+            "PG_1447a7233191",
+            "PG_ed75e1b3a57d"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        },
+        {
+          "region_id": "LR_363ecd1531dc",
+          "competing_panels": [
+            {
+              "panel_id": "PG_0fc241066559",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_a5a9341b804a",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_ed75e1b3a57d",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_1447a7233191",
+              "coverage": 0.25878571428571767,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 4,
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_e74d03a13214",
+          "bbox": [
+            68.955,
+            9.263,
+            830.806,
+            728.425
+          ]
+        },
+        {
+          "panel_id": "PG_ceaf9a7b1977",
+          "bbox": [
+            550.492,
+            734.04,
+            828.233,
+            1192.65
+          ]
+        },
+        {
+          "panel_id": "PG_14325527ea20",
+          "bbox": [
+            70.061,
+            740.2,
+            549.547,
+            1195.054
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_14325527ea20",
+          "PG_ceaf9a7b1977",
+          "PG_e74d03a13214"
+        ],
+        "order": [
+          "PG_e74d03a13214",
+          "PG_ceaf9a7b1977",
+          "PG_14325527ea20"
+        ],
+        "edges": [
+          {
+            "before": "PG_ceaf9a7b1977",
+            "after": "PG_14325527ea20",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_ceaf9a7b1977",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_14325527ea20",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_ceaf9a7b1977",
+            "after": "PG_14325527ea20"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_14325527ea20"
+          },
+          {
+            "before": "PG_e74d03a13214",
+            "after": "PG_ceaf9a7b1977"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_e74d03a13214"
+            ],
+            "emitted": "PG_e74d03a13214"
+          },
+          {
+            "ready": [
+              "PG_ceaf9a7b1977"
+            ],
+            "emitted": "PG_ceaf9a7b1977"
+          },
+          {
+            "ready": [
+              "PG_14325527ea20"
+            ],
+            "emitted": "PG_14325527ea20"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 731.2325,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e74d03a13214"
+            ],
+            "after_panel_ids": [
+              "PG_ceaf9a7b1977",
+              "PG_14325527ea20"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 550.0195,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_ceaf9a7b1977"
+            ],
+            "after_panel_ids": [
+              "PG_14325527ea20"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 731.2325,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e74d03a13214"
+            ],
+            "after_panel_ids": [
+              "PG_ceaf9a7b1977",
+              "PG_14325527ea20"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 550.0195,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_ceaf9a7b1977"
+            ],
+            "after_panel_ids": [
+              "PG_14325527ea20"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_a4e0fdad0903",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e74d03a13214",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ceaf9a7b1977",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_14325527ea20",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_e74d03a13214",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d403d992f246",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e74d03a13214",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ceaf9a7b1977",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_14325527ea20",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_14325527ea20",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_ec9604a02d80",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e74d03a13214",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ceaf9a7b1977",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_14325527ea20",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_ceaf9a7b1977",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d8230ac855ba",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e74d03a13214",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ceaf9a7b1977",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_14325527ea20",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_ceaf9a7b1977",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_e74d03a13214": {
+          "order": [
+            "LR_a4e0fdad0903"
+          ],
+          "tiers": [
+            [
+              "LR_a4e0fdad0903"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_ceaf9a7b1977": {
+          "order": [
+            "LR_ec9604a02d80",
+            "LR_d8230ac855ba"
+          ],
+          "tiers": [
+            [
+              "LR_ec9604a02d80",
+              "LR_d8230ac855ba"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_14325527ea20": {
+          "order": [
+            "LR_d403d992f246"
+          ],
+          "tiers": [
+            [
+              "LR_d403d992f246"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 5,
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_338cf720afa7",
+          "bbox": [
+            74.608,
+            88.203,
+            836.083,
+            604.339
+          ]
+        },
+        {
+          "panel_id": "PG_4ac3d58ccb68",
+          "bbox": [
+            75.392,
+            609.378,
+            446.459,
+            1192.588
+          ]
+        },
+        {
+          "panel_id": "PG_345f31446273",
+          "bbox": [
+            446.275,
+            615.645,
+            832.727,
+            1193.679
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_f27fb5ffabf9",
+        "LR_1dfca31c24d7",
+        "LR_26795b95ef26",
+        "LR_d9caab3d7c4a",
+        "LR_a0587957c904",
+        "LR_b71bcd7a275c",
+        "LR_7ee4baf217d7",
+        "LR_bf3e79736d0c"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_338cf720afa7",
+          "PG_345f31446273",
+          "PG_4ac3d58ccb68"
+        ],
+        "order": [
+          "PG_338cf720afa7",
+          "PG_345f31446273",
+          "PG_4ac3d58ccb68"
+        ],
+        "edges": [
+          {
+            "before": "PG_345f31446273",
+            "after": "PG_4ac3d58ccb68",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_345f31446273",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_4ac3d58ccb68",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_345f31446273"
+          },
+          {
+            "before": "PG_338cf720afa7",
+            "after": "PG_4ac3d58ccb68"
+          },
+          {
+            "before": "PG_345f31446273",
+            "after": "PG_4ac3d58ccb68"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_338cf720afa7"
+            ],
+            "emitted": "PG_338cf720afa7"
+          },
+          {
+            "ready": [
+              "PG_345f31446273"
+            ],
+            "emitted": "PG_345f31446273"
+          },
+          {
+            "ready": [
+              "PG_4ac3d58ccb68"
+            ],
+            "emitted": "PG_4ac3d58ccb68"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 606.8585,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_338cf720afa7"
+            ],
+            "after_panel_ids": [
+              "PG_345f31446273",
+              "PG_4ac3d58ccb68"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 446.367,
+            "source_intrusion": 0.184,
+            "before_panel_ids": [
+              "PG_345f31446273"
+            ],
+            "after_panel_ids": [
+              "PG_4ac3d58ccb68"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 606.8585,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_338cf720afa7"
+            ],
+            "after_panel_ids": [
+              "PG_345f31446273",
+              "PG_4ac3d58ccb68"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 446.367,
+            "source_intrusion": 0.184,
+            "before_panel_ids": [
+              "PG_345f31446273"
+            ],
+            "after_panel_ids": [
+              "PG_4ac3d58ccb68"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_f27fb5ffabf9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_338cf720afa7",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_26795b95ef26",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_338cf720afa7",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_1dfca31c24d7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_338cf720afa7",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_a0587957c904",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4ac3d58ccb68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d9caab3d7c4a",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_345f31446273",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_b71bcd7a275c",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4ac3d58ccb68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bf3e79736d0c",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4ac3d58ccb68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_7ee4baf217d7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_338cf720afa7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4ac3d58ccb68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_345f31446273",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4ac3d58ccb68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_338cf720afa7": {
+          "order": [
+            "LR_f27fb5ffabf9",
+            "LR_1dfca31c24d7",
+            "LR_26795b95ef26"
+          ],
+          "tiers": [
+            [
+              "LR_f27fb5ffabf9"
+            ],
+            [
+              "LR_1dfca31c24d7",
+              "LR_26795b95ef26"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_4ac3d58ccb68": {
+          "order": [
+            "LR_a0587957c904",
+            "LR_b71bcd7a275c",
+            "LR_7ee4baf217d7",
+            "LR_bf3e79736d0c"
+          ],
+          "tiers": [
+            [
+              "LR_a0587957c904"
+            ],
+            [
+              "LR_b71bcd7a275c"
+            ],
+            [
+              "LR_7ee4baf217d7",
+              "LR_bf3e79736d0c"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_345f31446273": {
+          "order": [
+            "LR_d9caab3d7c4a"
+          ],
+          "tiers": [
+            [
+              "LR_d9caab3d7c4a"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 7,
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_4d5da5268342",
+          "bbox": [
+            65.96,
+            80.315,
+            829.585,
+            791.114
+          ]
+        },
+        {
+          "panel_id": "PG_6a32cfa4320b",
+          "bbox": [
+            63.694,
+            789.747,
+            829.286,
+            1188.717
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_4d5da5268342",
+          "PG_6a32cfa4320b"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_4d5da5268342",
+              "PG_6a32cfa4320b"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_5facc1321e92",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4d5da5268342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6a32cfa4320b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_6a32cfa4320b",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5787cb8d10ad",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4d5da5268342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6a32cfa4320b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_6a32cfa4320b",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_4d5da5268342": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_6a32cfa4320b": {
+          "order": [
+            "LR_5facc1321e92",
+            "LR_5787cb8d10ad"
+          ],
+          "tiers": [
+            [
+              "LR_5facc1321e92",
+              "LR_5787cb8d10ad"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_4d5da5268342",
+            "PG_6a32cfa4320b"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 15,
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_26f3e027c970",
+          "bbox": [
+            605.15,
+            80.722,
+            831.298,
+            603.525
+          ]
+        },
+        {
+          "panel_id": "PG_6996a5124342",
+          "bbox": [
+            64.462,
+            83.725,
+            611.774,
+            601.874
+          ]
+        },
+        {
+          "panel_id": "PG_143cbbc5a29c",
+          "bbox": [
+            63.917,
+            597.696,
+            826.498,
+            889.585
+          ]
+        },
+        {
+          "panel_id": "PG_af7bfd04502a",
+          "bbox": [
+            242.965,
+            886.536,
+            818.756,
+            1194.355
+          ]
+        },
+        {
+          "panel_id": "PG_ccf925e75c99",
+          "bbox": [
+            68.233,
+            896.091,
+            248.74,
+            1194.654
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_143cbbc5a29c",
+          "PG_26f3e027c970",
+          "PG_6996a5124342",
+          "PG_af7bfd04502a",
+          "PG_ccf925e75c99"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_143cbbc5a29c",
+              "PG_26f3e027c970",
+              "PG_6996a5124342",
+              "PG_af7bfd04502a",
+              "PG_ccf925e75c99"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_dfef3de3ed48",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_26f3e027c970",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_35d30a3b10e1",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_6996a5124342",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_9636706b4855",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_6996a5124342",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_f6dbfc4d4913",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_143cbbc5a29c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bf3e65667bd9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_143cbbc5a29c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_f3054b9c1820",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_ccf925e75c99",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0856a888b8df",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_af7bfd04502a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5bdd1160b3a0",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_af7bfd04502a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_6378f74595c3",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_ccf925e75c99",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_f3c952a6f77f",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_ccf925e75c99",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_4156c86e9141",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_af7bfd04502a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d9afc322c62f",
+            "competing_panels": [
+              {
+                "panel_id": "PG_26f3e027c970",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_6996a5124342",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_143cbbc5a29c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_af7bfd04502a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ccf925e75c99",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_ccf925e75c99",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_26f3e027c970": {
+          "order": [
+            "LR_dfef3de3ed48"
+          ],
+          "tiers": [
+            [
+              "LR_dfef3de3ed48"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_6996a5124342": {
+          "order": [
+            "LR_35d30a3b10e1",
+            "LR_9636706b4855"
+          ],
+          "tiers": [
+            [
+              "LR_35d30a3b10e1"
+            ],
+            [
+              "LR_9636706b4855"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_143cbbc5a29c": {
+          "order": [
+            "LR_f6dbfc4d4913",
+            "LR_bf3e65667bd9"
+          ],
+          "tiers": [
+            [
+              "LR_f6dbfc4d4913",
+              "LR_bf3e65667bd9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_af7bfd04502a": {
+          "order": [
+            "LR_0856a888b8df",
+            "LR_4156c86e9141",
+            "LR_5bdd1160b3a0"
+          ],
+          "tiers": [
+            [
+              "LR_0856a888b8df",
+              "LR_4156c86e9141",
+              "LR_5bdd1160b3a0"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_ccf925e75c99": {
+          "order": [
+            "LR_f3054b9c1820",
+            "LR_d9afc322c62f",
+            "LR_f3c952a6f77f",
+            "LR_6378f74595c3"
+          ],
+          "tiers": [
+            [
+              "LR_f3054b9c1820"
+            ],
+            [
+              "LR_d9afc322c62f",
+              "LR_f3c952a6f77f",
+              "LR_6378f74595c3"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_143cbbc5a29c",
+            "PG_26f3e027c970",
+            "PG_6996a5124342",
+            "PG_af7bfd04502a",
+            "PG_ccf925e75c99"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 17,
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_e66d7a55c626",
+          "bbox": [
+            527.711,
+            92.873,
+            825.73,
+            504.985
+          ]
+        },
+        {
+          "panel_id": "PG_8759a23905bf",
+          "bbox": [
+            73.902,
+            93.817,
+            526.759,
+            502.596
+          ]
+        },
+        {
+          "panel_id": "PG_4576e6b24ec7",
+          "bbox": [
+            77.98,
+            520.914,
+            819.724,
+            711.544
+          ]
+        },
+        {
+          "panel_id": "PG_85924e74ff84",
+          "bbox": [
+            591.644,
+            722.458,
+            832.174,
+            1195.1
+          ]
+        },
+        {
+          "panel_id": "PG_83f17d71943a",
+          "bbox": [
+            72.657,
+            724.101,
+            588.548,
+            1190.3
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_554cd55f1a6a",
+        "LR_bd1a6a09cea9",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_ce3c26e9b336",
+        "LR_3a2842ab274e",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_4576e6b24ec7",
+          "PG_83f17d71943a",
+          "PG_85924e74ff84",
+          "PG_8759a23905bf",
+          "PG_e66d7a55c626"
+        ],
+        "order": [
+          "PG_e66d7a55c626",
+          "PG_8759a23905bf",
+          "PG_4576e6b24ec7",
+          "PG_85924e74ff84",
+          "PG_83f17d71943a"
+        ],
+        "edges": [
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_8759a23905bf",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_85924e74ff84",
+            "after": "PG_83f17d71943a",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_4576e6b24ec7",
+            "after": "PG_85924e74ff84",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_4576e6b24ec7",
+            "after": "PG_83f17d71943a",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_4576e6b24ec7",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_85924e74ff84",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_83f17d71943a",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_4576e6b24ec7",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_85924e74ff84",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_83f17d71943a",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_4576e6b24ec7",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_4576e6b24ec7",
+            "after": "PG_85924e74ff84"
+          },
+          {
+            "before": "PG_85924e74ff84",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_4576e6b24ec7"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_8759a23905bf",
+            "after": "PG_85924e74ff84"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_4576e6b24ec7"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_83f17d71943a"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_85924e74ff84"
+          },
+          {
+            "before": "PG_e66d7a55c626",
+            "after": "PG_8759a23905bf"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_e66d7a55c626"
+            ],
+            "emitted": "PG_e66d7a55c626"
+          },
+          {
+            "ready": [
+              "PG_8759a23905bf"
+            ],
+            "emitted": "PG_8759a23905bf"
+          },
+          {
+            "ready": [
+              "PG_4576e6b24ec7"
+            ],
+            "emitted": "PG_4576e6b24ec7"
+          },
+          {
+            "ready": [
+              "PG_85924e74ff84"
+            ],
+            "emitted": "PG_85924e74ff84"
+          },
+          {
+            "ready": [
+              "PG_83f17d71943a"
+            ],
+            "emitted": "PG_83f17d71943a"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 512.9495,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e66d7a55c626",
+              "PG_8759a23905bf"
+            ],
+            "after_panel_ids": [
+              "PG_4576e6b24ec7",
+              "PG_85924e74ff84",
+              "PG_83f17d71943a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 527.235,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e66d7a55c626"
+            ],
+            "after_panel_ids": [
+              "PG_8759a23905bf"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 717.001,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_4576e6b24ec7"
+            ],
+            "after_panel_ids": [
+              "PG_85924e74ff84",
+              "PG_83f17d71943a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 590.096,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_85924e74ff84"
+            ],
+            "after_panel_ids": [
+              "PG_83f17d71943a"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 512.9495,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e66d7a55c626",
+              "PG_8759a23905bf"
+            ],
+            "after_panel_ids": [
+              "PG_4576e6b24ec7",
+              "PG_85924e74ff84",
+              "PG_83f17d71943a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 527.235,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_e66d7a55c626"
+            ],
+            "after_panel_ids": [
+              "PG_8759a23905bf"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 717.001,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_4576e6b24ec7"
+            ],
+            "after_panel_ids": [
+              "PG_85924e74ff84",
+              "PG_83f17d71943a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 590.096,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [
+              "PG_85924e74ff84"
+            ],
+            "after_panel_ids": [
+              "PG_83f17d71943a"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_8a526b453c10",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8759a23905bf",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_554cd55f1a6a",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_e66d7a55c626",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0c630f218964",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8759a23905bf",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_ce3c26e9b336",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8759a23905bf",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bd1a6a09cea9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_e66d7a55c626",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_de7b43ae45f7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8759a23905bf",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_3a2842ab274e",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_8759a23905bf",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_952c7eac9aef",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4576e6b24ec7",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0523c7b7b258",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_4576e6b24ec7",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_11117a0bc73a",
+            "competing_panels": [
+              {
+                "panel_id": "PG_e66d7a55c626",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8759a23905bf",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4576e6b24ec7",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_85924e74ff84",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_83f17d71943a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_83f17d71943a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_e66d7a55c626": {
+          "order": [
+            "LR_554cd55f1a6a",
+            "LR_bd1a6a09cea9"
+          ],
+          "tiers": [
+            [
+              "LR_554cd55f1a6a"
+            ],
+            [
+              "LR_bd1a6a09cea9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_8759a23905bf": {
+          "order": [
+            "LR_8a526b453c10",
+            "LR_0c630f218964",
+            "LR_ce3c26e9b336",
+            "LR_3a2842ab274e",
+            "LR_de7b43ae45f7"
+          ],
+          "tiers": [
+            [
+              "LR_8a526b453c10"
+            ],
+            [
+              "LR_0c630f218964"
+            ],
+            [
+              "LR_ce3c26e9b336",
+              "LR_3a2842ab274e",
+              "LR_de7b43ae45f7"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_4576e6b24ec7": {
+          "order": [
+            "LR_0523c7b7b258",
+            "LR_952c7eac9aef"
+          ],
+          "tiers": [
+            [
+              "LR_0523c7b7b258",
+              "LR_952c7eac9aef"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_85924e74ff84": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_83f17d71943a": {
+          "order": [
+            "LR_11117a0bc73a"
+          ],
+          "tiers": [
+            [
+              "LR_11117a0bc73a"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 18,
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_1ecf785416d4",
+          "bbox": [
+            71.329,
+            80.722,
+            502.842,
+            469.447
+          ]
+        },
+        {
+          "panel_id": "PG_dd578d62a86e",
+          "bbox": [
+            500.822,
+            84.555,
+            832.289,
+            468.257
+          ]
+        },
+        {
+          "panel_id": "PG_15dce13e7ca8",
+          "bbox": [
+            71.69,
+            473.487,
+            833.971,
+            1190.707
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_15dce13e7ca8",
+          "PG_1ecf785416d4",
+          "PG_dd578d62a86e"
+        ],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 471.467,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_15dce13e7ca8"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 471.467,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_15dce13e7ca8"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_1ecf785416d4",
+              "PG_dd578d62a86e"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_aac2ef08be0e",
+            "competing_panels": [
+              {
+                "panel_id": "PG_1ecf785416d4",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_dd578d62a86e",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_15dce13e7ca8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_dd578d62a86e",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_77b6cc0407da",
+            "competing_panels": [
+              {
+                "panel_id": "PG_1ecf785416d4",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_dd578d62a86e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_15dce13e7ca8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_1ecf785416d4",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_1c3c89ee5ac1",
+            "competing_panels": [
+              {
+                "panel_id": "PG_1ecf785416d4",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_dd578d62a86e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_15dce13e7ca8",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_15dce13e7ca8",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_1ecf785416d4": {
+          "order": [
+            "LR_77b6cc0407da"
+          ],
+          "tiers": [
+            [
+              "LR_77b6cc0407da"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_dd578d62a86e": {
+          "order": [
+            "LR_aac2ef08be0e"
+          ],
+          "tiers": [
+            [
+              "LR_aac2ef08be0e"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_15dce13e7ca8": {
+          "order": [
+            "LR_1c3c89ee5ac1"
+          ],
+          "tiers": [
+            [
+              "LR_1c3c89ee5ac1"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_1ecf785416d4",
+            "PG_dd578d62a86e"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 38,
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "source_dimensions": [
+        900,
+        1280
+      ],
+      "panel_source": "ORACLE_HUMAN_PANEL_GEOMETRY_IDS_STRIPPED",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_4048143d553b",
+          "bbox": [
+            621.912,
+            83.41,
+            827.965,
+            427.957
+          ]
+        },
+        {
+          "panel_id": "PG_c640164b1f08",
+          "bbox": [
+            62.227,
+            89.386,
+            623.349,
+            426.521
+          ]
+        },
+        {
+          "panel_id": "PG_57884d51d511",
+          "bbox": [
+            428.441,
+            421.767,
+            824.962,
+            718.172
+          ]
+        },
+        {
+          "panel_id": "PG_d92d19248b38",
+          "bbox": [
+            69.416,
+            429.739,
+            436.79,
+            720.0
+          ]
+        },
+        {
+          "panel_id": "PG_21eae97b4152",
+          "bbox": [
+            371.912,
+            723.848,
+            824.869,
+            1190.246
+          ]
+        },
+        {
+          "panel_id": "PG_ae7376aca15a",
+          "bbox": [
+            67.98,
+            727.581,
+            371.928,
+            1199.332
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_21eae97b4152",
+          "PG_4048143d553b",
+          "PG_57884d51d511",
+          "PG_ae7376aca15a",
+          "PG_c640164b1f08",
+          "PG_d92d19248b38"
+        ],
+        "order": [],
+        "edges": [
+          {
+            "before": "PG_21eae97b4152",
+            "after": "PG_ae7376aca15a",
+            "relation": "RIGHT_OF"
+          }
+        ],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 721.924,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_21eae97b4152",
+              "PG_ae7376aca15a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 371.92,
+            "source_intrusion": 0.016,
+            "before_panel_ids": [
+              "PG_21eae97b4152"
+            ],
+            "after_panel_ids": [
+              "PG_ae7376aca15a"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 721.924,
+            "source_intrusion": 0.0,
+            "before_panel_ids": [],
+            "after_panel_ids": [
+              "PG_21eae97b4152",
+              "PG_ae7376aca15a"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 371.92,
+            "source_intrusion": 0.016,
+            "before_panel_ids": [
+              "PG_21eae97b4152"
+            ],
+            "after_panel_ids": [
+              "PG_ae7376aca15a"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [
+          {
+            "panel_ids": [
+              "PG_4048143d553b",
+              "PG_57884d51d511",
+              "PG_c640164b1f08",
+              "PG_d92d19248b38"
+            ],
+            "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+          }
+        ],
+        "resolved": false
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_ac01f1796688",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_c640164b1f08",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0d55cb96bbc4",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_57884d51d511",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_4e90149299b7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_d92d19248b38",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bfb519537dac",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_57884d51d511",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0f895e9b98b6",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_57884d51d511",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_2da60c343d36",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_21eae97b4152",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_2010e3d36608",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_21eae97b4152",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_563eb986d1f9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_ae7376aca15a",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5cb918f74103",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_21eae97b4152",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_505a871ebd18",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4048143d553b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c640164b1f08",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_57884d51d511",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d92d19248b38",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_21eae97b4152",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_ae7376aca15a",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_21eae97b4152",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_4048143d553b": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_c640164b1f08": {
+          "order": [
+            "LR_ac01f1796688"
+          ],
+          "tiers": [
+            [
+              "LR_ac01f1796688"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_57884d51d511": {
+          "order": [
+            "LR_0d55cb96bbc4",
+            "LR_0f895e9b98b6",
+            "LR_bfb519537dac"
+          ],
+          "tiers": [
+            [
+              "LR_0d55cb96bbc4"
+            ],
+            [
+              "LR_0f895e9b98b6",
+              "LR_bfb519537dac"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_d92d19248b38": {
+          "order": [
+            "LR_4e90149299b7"
+          ],
+          "tiers": [
+            [
+              "LR_4e90149299b7"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_21eae97b4152": {
+          "order": [
+            "LR_2da60c343d36",
+            "LR_2010e3d36608",
+            "LR_5cb918f74103",
+            "LR_505a871ebd18"
+          ],
+          "tiers": [
+            [
+              "LR_2da60c343d36"
+            ],
+            [
+              "LR_2010e3d36608"
+            ],
+            [
+              "LR_5cb918f74103"
+            ],
+            [
+              "LR_505a871ebd18"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_ae7376aca15a": {
+          "order": [
+            "LR_563eb986d1f9"
+          ],
+          "tiers": [
+            [
+              "LR_563eb986d1f9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "panel_ids": [
+            "PG_4048143d553b",
+            "PG_57884d51d511",
+            "PG_c640164b1f08",
+            "PG_d92d19248b38"
+          ],
+          "reason": "NO_STRICT_GUILLOTINE_PARTITION"
+        }
+      ],
+      "gt_runtime_features": []
+    }
+  ],
+  "gt_runtime_features": [],
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "semantic_sha256": "9c34435336c5c3d41ddcba2edee613dbce187ab07d41cfe362e5b96249bb7f0c"
+}

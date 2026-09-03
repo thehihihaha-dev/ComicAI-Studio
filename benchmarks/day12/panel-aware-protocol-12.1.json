@@ -1,0 +1,25 @@
+{
+  "schema_version": "panel-aware-protocol.v1",
+  "checkpoint": "12.1",
+  "status": "NOT_RUN_PANEL_DATA_GATE_FAILED",
+  "phase_1_audit_hash": "c8f908aebaf7331b331cc7cabfc10559de74bea06f9f5603f82b0111f1440941",
+  "candidate_runtime_inputs_hash": "b87bdec251c119383ce353423316d789063cfee409272bbcbdac6baafbc7fb52",
+  "candidate_runtime_inputs": [
+    "reader-logical-region-sample-11.11.json",
+    "reader-v2-correctness-review-sample-11.11.json",
+    "reader-v2-final-scale-11.17.json",
+    "reader-v2-scale-40p-11.10.json",
+    "reader-v2-scale-cache-11.10.json"
+  ],
+  "gt_runtime_features": [],
+  "human_or_manual_panel_input": false,
+  "source_policy": "MANGA_RTL_POLICY",
+  "frozen_intra_panel_rule": {
+    "rule": "A_VERTICAL_OVERLAP",
+    "normalized_vertical_overlap_min": 0.5,
+    "status": "BENCHMARK_FITTED"
+  },
+  "candidate_implemented": false,
+  "hard_stop": "No predicted panel geometry; panel detection/structural extraction requires a separately approved experiment.",
+  "code_sha256": "0b539d94ac51610d8c0ec534da9fb57207d9e7d32fbf83a2e37c132a59af0e2a"
+}

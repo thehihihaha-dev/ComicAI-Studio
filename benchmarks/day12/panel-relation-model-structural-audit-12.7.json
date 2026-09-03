@@ -1,0 +1,132 @@
+{
+  "schema_version": "panel-relation-model-structural-audit.v1",
+  "checkpoint": "12.7",
+  "chronology": "POST_GLOBAL_FREEZE_PRE_HUMAN_ORDER",
+  "population_derivation": "FROZEN_12.6_ORACLE_RELATION_UNRESOLVED",
+  "blocker_count": 7,
+  "pages": [
+    {
+      "page_order": 1,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_411099f52fac_000",
+            "PGN_d1b81d184184_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    },
+    {
+      "page_order": 2,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_47214cd98488_000",
+            "PGN_b424702c0063_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    },
+    {
+      "page_order": 3,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION",
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_372e4e1753e7_000",
+            "PGN_c3caf7d70403_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    },
+    {
+      "page_order": 7,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "RESOLVED",
+      "primary_reason": "NO_GUILLOTINE_ROOT",
+      "candidate_unresolved": [],
+      "geometry_only": true
+    },
+    {
+      "page_order": 15,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_064457663500_000",
+            "PGN_1c11adb96b07_000",
+            "PGN_5f8cde900211_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    },
+    {
+      "page_order": 18,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_5726da0bd021_000",
+            "PGN_6ba5054d5963_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    },
+    {
+      "page_order": 38,
+      "control_reason": [
+        "NO_STRICT_GUILLOTINE_PARTITION"
+      ],
+      "candidate_status": "UNRESOLVED",
+      "primary_reason": "MULTIPLE_TOPOLOGICAL_ORDERS",
+      "candidate_unresolved": [
+        {
+          "panel_ids": [
+            "PGN_415e0022f869_000",
+            "PGN_df7e516a8ca6_000"
+          ],
+          "reason": "MULTIPLE_TOPOLOGICAL_ORDERS"
+        }
+      ],
+      "geometry_only": true
+    }
+  ],
+  "human_order_loaded": false,
+  "gt_runtime_features": [],
+  "semantic_sha256": "546d089e0f20d1d84807b43ee4aeae722bbe94b27550132fa09c84fefdf24a18"
+}

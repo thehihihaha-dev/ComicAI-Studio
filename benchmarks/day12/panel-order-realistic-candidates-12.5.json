@@ -1,0 +1,3775 @@
+{
+  "schema_version": "panel-order-candidates.v2",
+  "checkpoint": "12.5",
+  "track": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+  "runtime_region_population": "ALL_63_PERSISTED_GEOMETRIES_METRIC_FILTER_POST_FREEZE",
+  "provenance": {
+    "runtime_audit_semantic_sha256": "4579c6fea5e151aa55e5c0d6166c2ac87940dae062d626b91e9568b5a13da67f",
+    "protocol_semantic_sha256": "9dcfe2eab0ba3e08212d6ef3dbbe23b7fe62093ae4cfed49549d1fbf1719ffe8",
+    "service_code_sha256": "44eabcc5f0ec7021e6eb62009391335bcc764a07b8ca7d65354dc72e4731a122",
+    "runner_code_sha256": "16181855df0f1230e37c50814799d92e1903634ae056783a394c87e69216ee1e",
+    "runtime_input_file_sha256": {
+      "logical_geometry": "04f0973d79e6562cca97d21e2fdb1e15152b0ceb30f8c37e223c0ba9d98bb5fa",
+      "oracle_unseen_geometry": "fd49ba4fb58b1785a786bae1b3f376f7f176b45ea222e3af364d493fc9c727d5",
+      "realistic_legacy": "7559e7560b0825fd5874306615bbe334465bd31e9c835077700448a4771da6c6",
+      "realistic_unseen": "5b7eca8fed83970465a65de84509daa85d56b57369dc46c79964affccddc4772"
+    }
+  },
+  "pages": [
+    {
+      "page_order": 1,
+      "source_hash": "aeb476d3e8090e6aca294d73715679afd5aa4fe4c7026822e38a9dac9f112832",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [],
+      "upstream_structure_status": "UNRESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "LR_086859ae76f4",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_615c8d24c678",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_28e2fc3b47b8",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_2284efd8ada7",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "intra_panel": {},
+      "unresolved_reasons": [
+        {
+          "region_id": "LR_086859ae76f4",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_615c8d24c678",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_28e2fc3b47b8",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_2284efd8ada7",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 2,
+      "source_hash": "a9eb1276ba2c87c7334d5ad9258f08f2f5dc40d90fca06ccb913c6ff46312086",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_367fce98c230",
+          "bbox": [
+            72,
+            92,
+            821,
+            570
+          ]
+        },
+        {
+          "panel_id": "PG_4b03ef558a8c",
+          "bbox": [
+            72,
+            585,
+            821,
+            1190
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_ef4ab22072a8",
+        "LR_a77493ec9ff9"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_367fce98c230",
+          "PG_4b03ef558a8c"
+        ],
+        "order": [
+          "PG_367fce98c230",
+          "PG_4b03ef558a8c"
+        ],
+        "edges": [
+          {
+            "before": "PG_367fce98c230",
+            "after": "PG_4b03ef558a8c",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_367fce98c230",
+            "after": "PG_4b03ef558a8c"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_367fce98c230"
+            ],
+            "emitted": "PG_367fce98c230"
+          },
+          {
+            "ready": [
+              "PG_4b03ef558a8c"
+            ],
+            "emitted": "PG_4b03ef558a8c"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 570.0,
+            "before_panel_ids": [
+              "PG_367fce98c230"
+            ],
+            "after_panel_ids": [
+              "PG_4b03ef558a8c"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 570.0,
+            "before_panel_ids": [
+              "PG_367fce98c230"
+            ],
+            "after_panel_ids": [
+              "PG_4b03ef558a8c"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_ef4ab22072a8",
+            "competing_panels": [
+              {
+                "panel_id": "PG_367fce98c230",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_4b03ef558a8c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_367fce98c230",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_a77493ec9ff9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_367fce98c230",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_4b03ef558a8c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_4b03ef558a8c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_367fce98c230": {
+          "order": [
+            "LR_ef4ab22072a8"
+          ],
+          "tiers": [
+            [
+              "LR_ef4ab22072a8"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_4b03ef558a8c": {
+          "order": [
+            "LR_a77493ec9ff9"
+          ],
+          "tiers": [
+            [
+              "LR_a77493ec9ff9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 3,
+      "source_hash": "ecc4798a1fd62c36af8e401b80a0ef67e36dfafbb69ac809f1f41e88f6b9676d",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_9e0877e1aff9",
+          "bbox": [
+            80,
+            90,
+            827,
+            496
+          ]
+        },
+        {
+          "panel_id": "PG_e98621df0dd8",
+          "bbox": [
+            80,
+            512,
+            827,
+            851
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_9e0877e1aff9",
+          "PG_e98621df0dd8"
+        ],
+        "order": [
+          "PG_9e0877e1aff9",
+          "PG_e98621df0dd8"
+        ],
+        "edges": [
+          {
+            "before": "PG_9e0877e1aff9",
+            "after": "PG_e98621df0dd8",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_9e0877e1aff9",
+            "after": "PG_e98621df0dd8"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_9e0877e1aff9"
+            ],
+            "emitted": "PG_9e0877e1aff9"
+          },
+          {
+            "ready": [
+              "PG_e98621df0dd8"
+            ],
+            "emitted": "PG_e98621df0dd8"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 496.0,
+            "before_panel_ids": [
+              "PG_9e0877e1aff9"
+            ],
+            "after_panel_ids": [
+              "PG_e98621df0dd8"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 496.0,
+            "before_panel_ids": [
+              "PG_9e0877e1aff9"
+            ],
+            "after_panel_ids": [
+              "PG_e98621df0dd8"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_708761617ca5",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_9e0877e1aff9",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_6847589abd58",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_9e0877e1aff9",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_1b80a3ba7eba",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_e98621df0dd8",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "LR_301b7ed055be",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_0f41713aa3ea",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_016a11675840",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_38a547aad429",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_363ecd1531dc",
+            "competing_panels": [
+              {
+                "panel_id": "PG_9e0877e1aff9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_e98621df0dd8",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "intra_panel": {
+        "PG_9e0877e1aff9": {
+          "order": [
+            "LR_708761617ca5",
+            "LR_6847589abd58"
+          ],
+          "tiers": [
+            [
+              "LR_708761617ca5"
+            ],
+            [
+              "LR_6847589abd58"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_e98621df0dd8": {
+          "order": [
+            "LR_1b80a3ba7eba"
+          ],
+          "tiers": [
+            [
+              "LR_1b80a3ba7eba"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "region_id": "LR_301b7ed055be",
+          "competing_panels": [
+            {
+              "panel_id": "PG_9e0877e1aff9",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_e98621df0dd8",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_0f41713aa3ea",
+          "competing_panels": [
+            {
+              "panel_id": "PG_9e0877e1aff9",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_e98621df0dd8",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_016a11675840",
+          "competing_panels": [
+            {
+              "panel_id": "PG_9e0877e1aff9",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_e98621df0dd8",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_38a547aad429",
+          "competing_panels": [
+            {
+              "panel_id": "PG_9e0877e1aff9",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_e98621df0dd8",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_363ecd1531dc",
+          "competing_panels": [
+            {
+              "panel_id": "PG_9e0877e1aff9",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_e98621df0dd8",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 4,
+      "source_hash": "95cb90cb0c70a19b2f40401799a0ae5648e177fdde66690a580c80a831a824b4",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_912c1ad1707f",
+          "bbox": [
+            72,
+            0,
+            823,
+            728
+          ]
+        },
+        {
+          "panel_id": "PG_c2e7e844b9fc",
+          "bbox": [
+            75,
+            744,
+            544,
+            1187
+          ]
+        },
+        {
+          "panel_id": "PG_004802851340",
+          "bbox": [
+            550,
+            744,
+            821,
+            1187
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_a4e0fdad0903",
+        "LR_ec9604a02d80",
+        "LR_d8230ac855ba",
+        "LR_d403d992f246"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_004802851340",
+          "PG_912c1ad1707f",
+          "PG_c2e7e844b9fc"
+        ],
+        "order": [
+          "PG_912c1ad1707f",
+          "PG_004802851340",
+          "PG_c2e7e844b9fc"
+        ],
+        "edges": [
+          {
+            "before": "PG_004802851340",
+            "after": "PG_c2e7e844b9fc",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_912c1ad1707f",
+            "after": "PG_004802851340",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_912c1ad1707f",
+            "after": "PG_c2e7e844b9fc",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_004802851340",
+            "after": "PG_c2e7e844b9fc"
+          },
+          {
+            "before": "PG_912c1ad1707f",
+            "after": "PG_004802851340"
+          },
+          {
+            "before": "PG_912c1ad1707f",
+            "after": "PG_c2e7e844b9fc"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_912c1ad1707f"
+            ],
+            "emitted": "PG_912c1ad1707f"
+          },
+          {
+            "ready": [
+              "PG_004802851340"
+            ],
+            "emitted": "PG_004802851340"
+          },
+          {
+            "ready": [
+              "PG_c2e7e844b9fc"
+            ],
+            "emitted": "PG_c2e7e844b9fc"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 728.0,
+            "before_panel_ids": [
+              "PG_912c1ad1707f"
+            ],
+            "after_panel_ids": [
+              "PG_004802851340",
+              "PG_c2e7e844b9fc"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 550.0,
+            "before_panel_ids": [
+              "PG_004802851340"
+            ],
+            "after_panel_ids": [
+              "PG_c2e7e844b9fc"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 728.0,
+            "before_panel_ids": [
+              "PG_912c1ad1707f"
+            ],
+            "after_panel_ids": [
+              "PG_004802851340",
+              "PG_c2e7e844b9fc"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 550.0,
+            "before_panel_ids": [
+              "PG_004802851340"
+            ],
+            "after_panel_ids": [
+              "PG_c2e7e844b9fc"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_a4e0fdad0903",
+            "competing_panels": [
+              {
+                "panel_id": "PG_912c1ad1707f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_c2e7e844b9fc",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_004802851340",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_912c1ad1707f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d403d992f246",
+            "competing_panels": [
+              {
+                "panel_id": "PG_912c1ad1707f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c2e7e844b9fc",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_004802851340",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_c2e7e844b9fc",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_ec9604a02d80",
+            "competing_panels": [
+              {
+                "panel_id": "PG_912c1ad1707f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c2e7e844b9fc",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_004802851340",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_004802851340",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d8230ac855ba",
+            "competing_panels": [
+              {
+                "panel_id": "PG_912c1ad1707f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_c2e7e844b9fc",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_004802851340",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_004802851340",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_912c1ad1707f": {
+          "order": [
+            "LR_a4e0fdad0903"
+          ],
+          "tiers": [
+            [
+              "LR_a4e0fdad0903"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_c2e7e844b9fc": {
+          "order": [
+            "LR_d403d992f246"
+          ],
+          "tiers": [
+            [
+              "LR_d403d992f246"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_004802851340": {
+          "order": [
+            "LR_ec9604a02d80",
+            "LR_d8230ac855ba"
+          ],
+          "tiers": [
+            [
+              "LR_ec9604a02d80",
+              "LR_d8230ac855ba"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 5,
+      "source_hash": "8a44656d3dc2eef04c0bb3c9daf758373a2b0d12cc1669c63937ebdb4c333067",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [],
+      "upstream_structure_status": "UNRESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [],
+        "order": [],
+        "edges": [],
+        "transitive_closure": [],
+        "topological_trace": [],
+        "partitions": [],
+        "components": [],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "LR_f27fb5ffabf9",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_26795b95ef26",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_1dfca31c24d7",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_a0587957c904",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_d9caab3d7c4a",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_b71bcd7a275c",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_bf3e79736d0c",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_7ee4baf217d7",
+            "competing_panels": [],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "intra_panel": {},
+      "unresolved_reasons": [
+        {
+          "region_id": "LR_f27fb5ffabf9",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_26795b95ef26",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_1dfca31c24d7",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_a0587957c904",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_d9caab3d7c4a",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_b71bcd7a275c",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_bf3e79736d0c",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_7ee4baf217d7",
+          "competing_panels": [],
+          "reason": "NO_ELIGIBLE_PANEL"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 7,
+      "source_hash": "05f78f1eba0068e0c787185864a7764a3c8d20c265c94344ee897e26a7dc8309",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_4b942966b3ec",
+          "bbox": [
+            73,
+            92,
+            824,
+            784
+          ]
+        },
+        {
+          "panel_id": "PG_8cfc70c8c32f",
+          "bbox": [
+            72,
+            798,
+            824,
+            1188
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_5facc1321e92",
+        "LR_5787cb8d10ad"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_4b942966b3ec",
+          "PG_8cfc70c8c32f"
+        ],
+        "order": [
+          "PG_4b942966b3ec",
+          "PG_8cfc70c8c32f"
+        ],
+        "edges": [
+          {
+            "before": "PG_4b942966b3ec",
+            "after": "PG_8cfc70c8c32f",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_4b942966b3ec",
+            "after": "PG_8cfc70c8c32f"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_4b942966b3ec"
+            ],
+            "emitted": "PG_4b942966b3ec"
+          },
+          {
+            "ready": [
+              "PG_8cfc70c8c32f"
+            ],
+            "emitted": "PG_8cfc70c8c32f"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 784.0,
+            "before_panel_ids": [
+              "PG_4b942966b3ec"
+            ],
+            "after_panel_ids": [
+              "PG_8cfc70c8c32f"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 784.0,
+            "before_panel_ids": [
+              "PG_4b942966b3ec"
+            ],
+            "after_panel_ids": [
+              "PG_8cfc70c8c32f"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_5facc1321e92",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4b942966b3ec",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8cfc70c8c32f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_8cfc70c8c32f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5787cb8d10ad",
+            "competing_panels": [
+              {
+                "panel_id": "PG_4b942966b3ec",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_8cfc70c8c32f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_8cfc70c8c32f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_4b942966b3ec": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_8cfc70c8c32f": {
+          "order": [
+            "LR_5facc1321e92",
+            "LR_5787cb8d10ad"
+          ],
+          "tiers": [
+            [
+              "LR_5facc1321e92",
+              "LR_5787cb8d10ad"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 15,
+      "source_hash": "a54e8eb31bc06c224d2c6d9713e24dd4d762c7fc235d86899039edae5ba98b19",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_b8e67c8d46ce",
+          "bbox": [
+            72,
+            610,
+            822,
+            879
+          ]
+        },
+        {
+          "panel_id": "PG_fec2740ea159",
+          "bbox": [
+            75,
+            895,
+            242,
+            1187
+          ]
+        },
+        {
+          "panel_id": "PG_0ae2b512888e",
+          "bbox": [
+            249,
+            895,
+            821,
+            1187
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "UNRESOLVED",
+      "sequence": [],
+      "panel_order": {
+        "nodes": [
+          "PG_0ae2b512888e",
+          "PG_b8e67c8d46ce",
+          "PG_fec2740ea159"
+        ],
+        "order": [
+          "PG_b8e67c8d46ce",
+          "PG_0ae2b512888e",
+          "PG_fec2740ea159"
+        ],
+        "edges": [
+          {
+            "before": "PG_0ae2b512888e",
+            "after": "PG_fec2740ea159",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_b8e67c8d46ce",
+            "after": "PG_0ae2b512888e",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_b8e67c8d46ce",
+            "after": "PG_fec2740ea159",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_0ae2b512888e",
+            "after": "PG_fec2740ea159"
+          },
+          {
+            "before": "PG_b8e67c8d46ce",
+            "after": "PG_0ae2b512888e"
+          },
+          {
+            "before": "PG_b8e67c8d46ce",
+            "after": "PG_fec2740ea159"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_b8e67c8d46ce"
+            ],
+            "emitted": "PG_b8e67c8d46ce"
+          },
+          {
+            "ready": [
+              "PG_0ae2b512888e"
+            ],
+            "emitted": "PG_0ae2b512888e"
+          },
+          {
+            "ready": [
+              "PG_fec2740ea159"
+            ],
+            "emitted": "PG_fec2740ea159"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 879.0,
+            "before_panel_ids": [
+              "PG_b8e67c8d46ce"
+            ],
+            "after_panel_ids": [
+              "PG_0ae2b512888e",
+              "PG_fec2740ea159"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 249.0,
+            "before_panel_ids": [
+              "PG_0ae2b512888e"
+            ],
+            "after_panel_ids": [
+              "PG_fec2740ea159"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 879.0,
+            "before_panel_ids": [
+              "PG_b8e67c8d46ce"
+            ],
+            "after_panel_ids": [
+              "PG_0ae2b512888e",
+              "PG_fec2740ea159"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 249.0,
+            "before_panel_ids": [
+              "PG_0ae2b512888e"
+            ],
+            "after_panel_ids": [
+              "PG_fec2740ea159"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_f6dbfc4d4913",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_b8e67c8d46ce",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bf3e65667bd9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_b8e67c8d46ce",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_f3054b9c1820",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_fec2740ea159",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0856a888b8df",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_0ae2b512888e",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5bdd1160b3a0",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_0ae2b512888e",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_6378f74595c3",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_fec2740ea159",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_f3c952a6f77f",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_fec2740ea159",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_4156c86e9141",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_0ae2b512888e",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_d9afc322c62f",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_fec2740ea159",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": [
+          {
+            "region_id": "LR_dfef3de3ed48",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_35d30a3b10e1",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          },
+          {
+            "region_id": "LR_9636706b4855",
+            "competing_panels": [
+              {
+                "panel_id": "PG_b8e67c8d46ce",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_fec2740ea159",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_0ae2b512888e",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "reason": "NO_ELIGIBLE_PANEL"
+          }
+        ]
+      },
+      "intra_panel": {
+        "PG_b8e67c8d46ce": {
+          "order": [
+            "LR_f6dbfc4d4913",
+            "LR_bf3e65667bd9"
+          ],
+          "tiers": [
+            [
+              "LR_f6dbfc4d4913",
+              "LR_bf3e65667bd9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_fec2740ea159": {
+          "order": [
+            "LR_f3054b9c1820",
+            "LR_d9afc322c62f",
+            "LR_f3c952a6f77f",
+            "LR_6378f74595c3"
+          ],
+          "tiers": [
+            [
+              "LR_f3054b9c1820"
+            ],
+            [
+              "LR_d9afc322c62f",
+              "LR_f3c952a6f77f",
+              "LR_6378f74595c3"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_0ae2b512888e": {
+          "order": [
+            "LR_0856a888b8df",
+            "LR_4156c86e9141",
+            "LR_5bdd1160b3a0"
+          ],
+          "tiers": [
+            [
+              "LR_0856a888b8df",
+              "LR_4156c86e9141",
+              "LR_5bdd1160b3a0"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [
+        {
+          "region_id": "LR_dfef3de3ed48",
+          "competing_panels": [
+            {
+              "panel_id": "PG_b8e67c8d46ce",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_fec2740ea159",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_0ae2b512888e",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_35d30a3b10e1",
+          "competing_panels": [
+            {
+              "panel_id": "PG_b8e67c8d46ce",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_fec2740ea159",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_0ae2b512888e",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        },
+        {
+          "region_id": "LR_9636706b4855",
+          "competing_panels": [
+            {
+              "panel_id": "PG_b8e67c8d46ce",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_fec2740ea159",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            },
+            {
+              "panel_id": "PG_0ae2b512888e",
+              "coverage": 0.0,
+              "contains": false,
+              "center_inside": false
+            }
+          ],
+          "reason": "NO_ELIGIBLE_PANEL"
+        }
+      ],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 17,
+      "source_hash": "45e957b33572d3741af01f3e83a11d00faaad0a4cfb03e27f4515374ac8ced39",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_7656ed41bc68",
+          "bbox": [
+            75,
+            93,
+            522,
+            500
+          ]
+        },
+        {
+          "panel_id": "PG_84a02129462c",
+          "bbox": [
+            528,
+            93,
+            821,
+            501
+          ]
+        },
+        {
+          "panel_id": "PG_f35c0859bc66",
+          "bbox": [
+            71,
+            516,
+            822,
+            713
+          ]
+        },
+        {
+          "panel_id": "PG_2cacccaa061d",
+          "bbox": [
+            75,
+            728,
+            588,
+            1187
+          ]
+        },
+        {
+          "panel_id": "PG_f0f79aa763ed",
+          "bbox": [
+            593,
+            728,
+            821,
+            1187
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_554cd55f1a6a",
+        "LR_bd1a6a09cea9",
+        "LR_8a526b453c10",
+        "LR_0c630f218964",
+        "LR_ce3c26e9b336",
+        "LR_3a2842ab274e",
+        "LR_de7b43ae45f7",
+        "LR_0523c7b7b258",
+        "LR_952c7eac9aef",
+        "LR_11117a0bc73a"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_2cacccaa061d",
+          "PG_7656ed41bc68",
+          "PG_84a02129462c",
+          "PG_f0f79aa763ed",
+          "PG_f35c0859bc66"
+        ],
+        "order": [
+          "PG_84a02129462c",
+          "PG_7656ed41bc68",
+          "PG_f35c0859bc66",
+          "PG_f0f79aa763ed",
+          "PG_2cacccaa061d"
+        ],
+        "edges": [
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_7656ed41bc68",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_f0f79aa763ed",
+            "after": "PG_2cacccaa061d",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_f35c0859bc66",
+            "after": "PG_f0f79aa763ed",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_f35c0859bc66",
+            "after": "PG_2cacccaa061d",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_f35c0859bc66",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_f0f79aa763ed",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_2cacccaa061d",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_f35c0859bc66",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_f0f79aa763ed",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_2cacccaa061d",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_2cacccaa061d"
+          },
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_f0f79aa763ed"
+          },
+          {
+            "before": "PG_7656ed41bc68",
+            "after": "PG_f35c0859bc66"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_2cacccaa061d"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_7656ed41bc68"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_f0f79aa763ed"
+          },
+          {
+            "before": "PG_84a02129462c",
+            "after": "PG_f35c0859bc66"
+          },
+          {
+            "before": "PG_f0f79aa763ed",
+            "after": "PG_2cacccaa061d"
+          },
+          {
+            "before": "PG_f35c0859bc66",
+            "after": "PG_2cacccaa061d"
+          },
+          {
+            "before": "PG_f35c0859bc66",
+            "after": "PG_f0f79aa763ed"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_84a02129462c"
+            ],
+            "emitted": "PG_84a02129462c"
+          },
+          {
+            "ready": [
+              "PG_7656ed41bc68"
+            ],
+            "emitted": "PG_7656ed41bc68"
+          },
+          {
+            "ready": [
+              "PG_f35c0859bc66"
+            ],
+            "emitted": "PG_f35c0859bc66"
+          },
+          {
+            "ready": [
+              "PG_f0f79aa763ed"
+            ],
+            "emitted": "PG_f0f79aa763ed"
+          },
+          {
+            "ready": [
+              "PG_2cacccaa061d"
+            ],
+            "emitted": "PG_2cacccaa061d"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 501.0,
+            "before_panel_ids": [
+              "PG_84a02129462c",
+              "PG_7656ed41bc68"
+            ],
+            "after_panel_ids": [
+              "PG_f35c0859bc66",
+              "PG_f0f79aa763ed",
+              "PG_2cacccaa061d"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 528.0,
+            "before_panel_ids": [
+              "PG_84a02129462c"
+            ],
+            "after_panel_ids": [
+              "PG_7656ed41bc68"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 713.0,
+            "before_panel_ids": [
+              "PG_f35c0859bc66"
+            ],
+            "after_panel_ids": [
+              "PG_f0f79aa763ed",
+              "PG_2cacccaa061d"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 593.0,
+            "before_panel_ids": [
+              "PG_f0f79aa763ed"
+            ],
+            "after_panel_ids": [
+              "PG_2cacccaa061d"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 501.0,
+            "before_panel_ids": [
+              "PG_84a02129462c",
+              "PG_7656ed41bc68"
+            ],
+            "after_panel_ids": [
+              "PG_f35c0859bc66",
+              "PG_f0f79aa763ed",
+              "PG_2cacccaa061d"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 528.0,
+            "before_panel_ids": [
+              "PG_84a02129462c"
+            ],
+            "after_panel_ids": [
+              "PG_7656ed41bc68"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 713.0,
+            "before_panel_ids": [
+              "PG_f35c0859bc66"
+            ],
+            "after_panel_ids": [
+              "PG_f0f79aa763ed",
+              "PG_2cacccaa061d"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 593.0,
+            "before_panel_ids": [
+              "PG_f0f79aa763ed"
+            ],
+            "after_panel_ids": [
+              "PG_2cacccaa061d"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_8a526b453c10",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_7656ed41bc68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_554cd55f1a6a",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_84a02129462c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0c630f218964",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_7656ed41bc68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_ce3c26e9b336",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_7656ed41bc68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bd1a6a09cea9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_84a02129462c",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_de7b43ae45f7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_7656ed41bc68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_3a2842ab274e",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_7656ed41bc68",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_952c7eac9aef",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_f35c0859bc66",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0523c7b7b258",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_f35c0859bc66",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_11117a0bc73a",
+            "competing_panels": [
+              {
+                "panel_id": "PG_7656ed41bc68",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_84a02129462c",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f35c0859bc66",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_2cacccaa061d",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f0f79aa763ed",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_2cacccaa061d",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_7656ed41bc68": {
+          "order": [
+            "LR_8a526b453c10",
+            "LR_0c630f218964",
+            "LR_ce3c26e9b336",
+            "LR_3a2842ab274e",
+            "LR_de7b43ae45f7"
+          ],
+          "tiers": [
+            [
+              "LR_8a526b453c10"
+            ],
+            [
+              "LR_0c630f218964"
+            ],
+            [
+              "LR_ce3c26e9b336",
+              "LR_3a2842ab274e",
+              "LR_de7b43ae45f7"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_84a02129462c": {
+          "order": [
+            "LR_554cd55f1a6a",
+            "LR_bd1a6a09cea9"
+          ],
+          "tiers": [
+            [
+              "LR_554cd55f1a6a"
+            ],
+            [
+              "LR_bd1a6a09cea9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_f35c0859bc66": {
+          "order": [
+            "LR_0523c7b7b258",
+            "LR_952c7eac9aef"
+          ],
+          "tiers": [
+            [
+              "LR_0523c7b7b258",
+              "LR_952c7eac9aef"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_2cacccaa061d": {
+          "order": [
+            "LR_11117a0bc73a"
+          ],
+          "tiers": [
+            [
+              "LR_11117a0bc73a"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_f0f79aa763ed": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 18,
+      "source_hash": "8cac650842de985ede0be45715eed9ebb48f842e7a5def7bc5203b8ceff2c240",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_3d6abd7b1f22",
+          "bbox": [
+            505,
+            89,
+            827,
+            465
+          ]
+        },
+        {
+          "panel_id": "PG_1df8ad3e1eb0",
+          "bbox": [
+            78,
+            90,
+            499,
+            466
+          ]
+        },
+        {
+          "panel_id": "PG_cfb44632e088",
+          "bbox": [
+            75,
+            481,
+            827,
+            1190
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_aac2ef08be0e",
+        "LR_77b6cc0407da",
+        "LR_1c3c89ee5ac1"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_1df8ad3e1eb0",
+          "PG_3d6abd7b1f22",
+          "PG_cfb44632e088"
+        ],
+        "order": [
+          "PG_3d6abd7b1f22",
+          "PG_1df8ad3e1eb0",
+          "PG_cfb44632e088"
+        ],
+        "edges": [
+          {
+            "before": "PG_3d6abd7b1f22",
+            "after": "PG_1df8ad3e1eb0",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_3d6abd7b1f22",
+            "after": "PG_cfb44632e088",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_1df8ad3e1eb0",
+            "after": "PG_cfb44632e088",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_1df8ad3e1eb0",
+            "after": "PG_cfb44632e088"
+          },
+          {
+            "before": "PG_3d6abd7b1f22",
+            "after": "PG_1df8ad3e1eb0"
+          },
+          {
+            "before": "PG_3d6abd7b1f22",
+            "after": "PG_cfb44632e088"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_3d6abd7b1f22"
+            ],
+            "emitted": "PG_3d6abd7b1f22"
+          },
+          {
+            "ready": [
+              "PG_1df8ad3e1eb0"
+            ],
+            "emitted": "PG_1df8ad3e1eb0"
+          },
+          {
+            "ready": [
+              "PG_cfb44632e088"
+            ],
+            "emitted": "PG_cfb44632e088"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 466.0,
+            "before_panel_ids": [
+              "PG_3d6abd7b1f22",
+              "PG_1df8ad3e1eb0"
+            ],
+            "after_panel_ids": [
+              "PG_cfb44632e088"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 505.0,
+            "before_panel_ids": [
+              "PG_3d6abd7b1f22"
+            ],
+            "after_panel_ids": [
+              "PG_1df8ad3e1eb0"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 466.0,
+            "before_panel_ids": [
+              "PG_3d6abd7b1f22",
+              "PG_1df8ad3e1eb0"
+            ],
+            "after_panel_ids": [
+              "PG_cfb44632e088"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 505.0,
+            "before_panel_ids": [
+              "PG_3d6abd7b1f22"
+            ],
+            "after_panel_ids": [
+              "PG_1df8ad3e1eb0"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_aac2ef08be0e",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3d6abd7b1f22",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_1df8ad3e1eb0",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_cfb44632e088",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_3d6abd7b1f22",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_77b6cc0407da",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3d6abd7b1f22",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1df8ad3e1eb0",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_cfb44632e088",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_1df8ad3e1eb0",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_1c3c89ee5ac1",
+            "competing_panels": [
+              {
+                "panel_id": "PG_3d6abd7b1f22",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_1df8ad3e1eb0",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_cfb44632e088",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_cfb44632e088",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_3d6abd7b1f22": {
+          "order": [
+            "LR_aac2ef08be0e"
+          ],
+          "tiers": [
+            [
+              "LR_aac2ef08be0e"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_1df8ad3e1eb0": {
+          "order": [
+            "LR_77b6cc0407da"
+          ],
+          "tiers": [
+            [
+              "LR_77b6cc0407da"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_cfb44632e088": {
+          "order": [
+            "LR_1c3c89ee5ac1"
+          ],
+          "tiers": [
+            [
+              "LR_1c3c89ee5ac1"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    },
+    {
+      "page_order": 38,
+      "source_hash": "969152a0288a5680d74205f90226a0164523fc82fb66cdc145eba0f25ab07e30",
+      "panel_source": "FROZEN_SELECTED_RESOLVER_PANELS_NO_ORACLE_FALLBACK",
+      "panel_nodes": [
+        {
+          "panel_id": "PG_55437200b646",
+          "bbox": [
+            72,
+            93,
+            619,
+            419
+          ]
+        },
+        {
+          "panel_id": "PG_978354a23a40",
+          "bbox": [
+            626,
+            93,
+            818,
+            419
+          ]
+        },
+        {
+          "panel_id": "PG_896bc4b6b8d5",
+          "bbox": [
+            72,
+            434,
+            426,
+            715
+          ]
+        },
+        {
+          "panel_id": "PG_d8d532de853b",
+          "bbox": [
+            433,
+            435,
+            818,
+            716
+          ]
+        },
+        {
+          "panel_id": "PG_f561dcb416b9",
+          "bbox": [
+            71,
+            731,
+            368,
+            1192
+          ]
+        },
+        {
+          "panel_id": "PG_446d647c053f",
+          "bbox": [
+            375,
+            731,
+            819,
+            1189
+          ]
+        }
+      ],
+      "upstream_structure_status": "RESOLVED",
+      "status": "RESOLVED",
+      "sequence": [
+        "LR_ac01f1796688",
+        "LR_0d55cb96bbc4",
+        "LR_0f895e9b98b6",
+        "LR_bfb519537dac",
+        "LR_4e90149299b7",
+        "LR_2da60c343d36",
+        "LR_2010e3d36608",
+        "LR_5cb918f74103",
+        "LR_505a871ebd18",
+        "LR_563eb986d1f9"
+      ],
+      "panel_order": {
+        "nodes": [
+          "PG_446d647c053f",
+          "PG_55437200b646",
+          "PG_896bc4b6b8d5",
+          "PG_978354a23a40",
+          "PG_d8d532de853b",
+          "PG_f561dcb416b9"
+        ],
+        "order": [
+          "PG_978354a23a40",
+          "PG_55437200b646",
+          "PG_d8d532de853b",
+          "PG_896bc4b6b8d5",
+          "PG_446d647c053f",
+          "PG_f561dcb416b9"
+        ],
+        "edges": [
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_55437200b646",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_896bc4b6b8d5",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_446d647c053f",
+            "after": "PG_f561dcb416b9",
+            "relation": "RIGHT_OF"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_446d647c053f",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_f561dcb416b9",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_896bc4b6b8d5",
+            "after": "PG_446d647c053f",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_896bc4b6b8d5",
+            "after": "PG_f561dcb416b9",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_d8d532de853b",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_896bc4b6b8d5",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_446d647c053f",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_f561dcb416b9",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_d8d532de853b",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_896bc4b6b8d5",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_446d647c053f",
+            "relation": "ABOVE"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_f561dcb416b9",
+            "relation": "ABOVE"
+          }
+        ],
+        "transitive_closure": [
+          {
+            "before": "PG_446d647c053f",
+            "after": "PG_f561dcb416b9"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_446d647c053f"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_896bc4b6b8d5"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_d8d532de853b"
+          },
+          {
+            "before": "PG_55437200b646",
+            "after": "PG_f561dcb416b9"
+          },
+          {
+            "before": "PG_896bc4b6b8d5",
+            "after": "PG_446d647c053f"
+          },
+          {
+            "before": "PG_896bc4b6b8d5",
+            "after": "PG_f561dcb416b9"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_446d647c053f"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_55437200b646"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_896bc4b6b8d5"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_d8d532de853b"
+          },
+          {
+            "before": "PG_978354a23a40",
+            "after": "PG_f561dcb416b9"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_446d647c053f"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_896bc4b6b8d5"
+          },
+          {
+            "before": "PG_d8d532de853b",
+            "after": "PG_f561dcb416b9"
+          }
+        ],
+        "topological_trace": [
+          {
+            "ready": [
+              "PG_978354a23a40"
+            ],
+            "emitted": "PG_978354a23a40"
+          },
+          {
+            "ready": [
+              "PG_55437200b646"
+            ],
+            "emitted": "PG_55437200b646"
+          },
+          {
+            "ready": [
+              "PG_d8d532de853b"
+            ],
+            "emitted": "PG_d8d532de853b"
+          },
+          {
+            "ready": [
+              "PG_896bc4b6b8d5"
+            ],
+            "emitted": "PG_896bc4b6b8d5"
+          },
+          {
+            "ready": [
+              "PG_446d647c053f"
+            ],
+            "emitted": "PG_446d647c053f"
+          },
+          {
+            "ready": [
+              "PG_f561dcb416b9"
+            ],
+            "emitted": "PG_f561dcb416b9"
+          }
+        ],
+        "partitions": [
+          {
+            "relation": "ABOVE",
+            "cut": 419.0,
+            "before_panel_ids": [
+              "PG_978354a23a40",
+              "PG_55437200b646"
+            ],
+            "after_panel_ids": [
+              "PG_d8d532de853b",
+              "PG_896bc4b6b8d5",
+              "PG_446d647c053f",
+              "PG_f561dcb416b9"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 626.0,
+            "before_panel_ids": [
+              "PG_978354a23a40"
+            ],
+            "after_panel_ids": [
+              "PG_55437200b646"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 716.0,
+            "before_panel_ids": [
+              "PG_d8d532de853b",
+              "PG_896bc4b6b8d5"
+            ],
+            "after_panel_ids": [
+              "PG_446d647c053f",
+              "PG_f561dcb416b9"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 433.0,
+            "before_panel_ids": [
+              "PG_d8d532de853b"
+            ],
+            "after_panel_ids": [
+              "PG_896bc4b6b8d5"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 375.0,
+            "before_panel_ids": [
+              "PG_446d647c053f"
+            ],
+            "after_panel_ids": [
+              "PG_f561dcb416b9"
+            ]
+          }
+        ],
+        "components": [
+          {
+            "relation": "ABOVE",
+            "cut": 419.0,
+            "before_panel_ids": [
+              "PG_978354a23a40",
+              "PG_55437200b646"
+            ],
+            "after_panel_ids": [
+              "PG_d8d532de853b",
+              "PG_896bc4b6b8d5",
+              "PG_446d647c053f",
+              "PG_f561dcb416b9"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 626.0,
+            "before_panel_ids": [
+              "PG_978354a23a40"
+            ],
+            "after_panel_ids": [
+              "PG_55437200b646"
+            ]
+          },
+          {
+            "relation": "ABOVE",
+            "cut": 716.0,
+            "before_panel_ids": [
+              "PG_d8d532de853b",
+              "PG_896bc4b6b8d5"
+            ],
+            "after_panel_ids": [
+              "PG_446d647c053f",
+              "PG_f561dcb416b9"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 433.0,
+            "before_panel_ids": [
+              "PG_d8d532de853b"
+            ],
+            "after_panel_ids": [
+              "PG_896bc4b6b8d5"
+            ]
+          },
+          {
+            "relation": "RIGHT_OF",
+            "cut": 375.0,
+            "before_panel_ids": [
+              "PG_446d647c053f"
+            ],
+            "after_panel_ids": [
+              "PG_f561dcb416b9"
+            ]
+          }
+        ],
+        "cycles": [],
+        "unresolved": [],
+        "resolved": true
+      },
+      "assignment": {
+        "assignments": [
+          {
+            "region_id": "LR_ac01f1796688",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_55437200b646",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0d55cb96bbc4",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_d8d532de853b",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_4e90149299b7",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_896bc4b6b8d5",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_bfb519537dac",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_d8d532de853b",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_0f895e9b98b6",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_d8d532de853b",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_2da60c343d36",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_446d647c053f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_2010e3d36608",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_446d647c053f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_563eb986d1f9",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              }
+            ],
+            "panel_id": "PG_f561dcb416b9",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_5cb918f74103",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_446d647c053f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          },
+          {
+            "region_id": "LR_505a871ebd18",
+            "competing_panels": [
+              {
+                "panel_id": "PG_55437200b646",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_978354a23a40",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_896bc4b6b8d5",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_d8d532de853b",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_f561dcb416b9",
+                "coverage": 0.0,
+                "contains": false,
+                "center_inside": false
+              },
+              {
+                "panel_id": "PG_446d647c053f",
+                "coverage": 1.0,
+                "contains": true,
+                "center_inside": true
+              }
+            ],
+            "panel_id": "PG_446d647c053f",
+            "method": "UNIQUE_CONTAINMENT",
+            "state": "ASSIGNED_CONTAINED"
+          }
+        ],
+        "ambiguous": [],
+        "unassigned": []
+      },
+      "intra_panel": {
+        "PG_55437200b646": {
+          "order": [
+            "LR_ac01f1796688"
+          ],
+          "tiers": [
+            [
+              "LR_ac01f1796688"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_978354a23a40": {
+          "order": [],
+          "tiers": [],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_896bc4b6b8d5": {
+          "order": [
+            "LR_4e90149299b7"
+          ],
+          "tiers": [
+            [
+              "LR_4e90149299b7"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_d8d532de853b": {
+          "order": [
+            "LR_0d55cb96bbc4",
+            "LR_0f895e9b98b6",
+            "LR_bfb519537dac"
+          ],
+          "tiers": [
+            [
+              "LR_0d55cb96bbc4"
+            ],
+            [
+              "LR_0f895e9b98b6",
+              "LR_bfb519537dac"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_f561dcb416b9": {
+          "order": [
+            "LR_563eb986d1f9"
+          ],
+          "tiers": [
+            [
+              "LR_563eb986d1f9"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        },
+        "PG_446d647c053f": {
+          "order": [
+            "LR_2da60c343d36",
+            "LR_2010e3d36608",
+            "LR_5cb918f74103",
+            "LR_505a871ebd18"
+          ],
+          "tiers": [
+            [
+              "LR_2da60c343d36"
+            ],
+            [
+              "LR_2010e3d36608"
+            ],
+            [
+              "LR_5cb918f74103"
+            ],
+            [
+              "LR_505a871ebd18"
+            ]
+          ],
+          "rule": "ANY_PEER_NORMALIZED_VERTICAL_OVERLAP_GTE_0.50",
+          "parameter_status": "BENCHMARK_FITTED"
+        }
+      },
+      "unresolved_reasons": [],
+      "gt_runtime_features": []
+    }
+  ],
+  "gt_runtime_features": [],
+  "model_calls": {
+    "ocr": 0,
+    "vlm": 0,
+    "ollama": 0
+  },
+  "semantic_sha256": "3e7888b06c33575f255f13a71f941e18909db7b382f87954186bb8fe3748d310"
+}
