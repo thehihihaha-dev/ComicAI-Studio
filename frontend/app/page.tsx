@@ -15,6 +15,17 @@ type Project = {
 
 type BackendStatus = "checking" | "online" | "offline";
 
+const FALLBACK_PROJECTS: Project[] = [
+  {
+    id: "92961605-5553-4df1-b74e-9a3bed5e14f5",
+    name: "Vợ trong game của tôi là Idol nổi tiếng ngoài đời",
+    content_type: "short",
+    status: "ready",
+    created_at: "2026-08-22T23:00:00Z",
+    thumbnail_url: "/page_01.jpg",
+  },
+];
+
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [projectsLoading, setProjectsLoading] = useState(true);
@@ -26,14 +37,26 @@ export default function Home() {
   useEffect(() => {
     async function loadProjects() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/projects/");
+        const response = await fetch("http://127.0.0.1:8000/projects/", {
+          cache: "no-store",
+        });
 
-        if (!response.ok) throw new Error("Failed to load projects");
+        if (!response.ok) {
+          throw new Error(`Failed to load projects: status ${response.status}`);
+        }
 
         const data = await response.json();
-        setProjects(data.projects ?? []);
+        if (data && Array.isArray(data.projects) && data.projects.length > 0) {
+          setProjects(data.projects);
+        } else {
+          setProjects(FALLBACK_PROJECTS);
+        }
       } catch (error) {
-        console.error("Projects error:", error);
+        console.warn(
+          "Could not load projects from backend, using fallback mock data:",
+          error,
+        );
+        setProjects(FALLBACK_PROJECTS);
       } finally {
         setProjectsLoading(false);
       }
@@ -95,10 +118,10 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between border-b border-white/10 pb-6">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">
+            <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.35)]">
               ComicAI Studio
             </h1>
-            <p className="mt-1 text-sm text-white/45">AI Creator Platform</p>
+            <p className="mt-1 text-sm text-white/50">AI Creator Platform</p>
           </div>
 
           <div className="flex items-center gap-3 text-xs text-white/45">
@@ -109,16 +132,16 @@ export default function Home() {
 
         <Link
           href="/new-project"
-          className="group mt-10 flex min-h-52 items-center justify-center rounded-3xl border border-violet-300/20 bg-gradient-to-br from-indigo-600/45 via-violet-600/30 to-fuchsia-500/15 p-8 text-center shadow-[0_20px_80px_-40px_rgba(124,58,237,0.8)] transition hover:border-violet-200/40 hover:from-indigo-500/55 hover:via-violet-500/40 hover:to-fuchsia-400/20"
+          className="group mt-8 flex min-h-36 items-center justify-center rounded-2xl border border-purple-500/20 bg-zinc-900/70 py-6 px-8 text-center transition hover:border-purple-500/60 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] cursor-pointer backdrop-blur-sm"
         >
-          <div>
-            <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/25 bg-white/15 text-2xl shadow-lg transition group-hover:scale-105 group-hover:bg-white group-hover:text-violet-700">
+          <div className="flex flex-col items-center">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-500/10 text-xl font-bold text-purple-300 shadow-sm transition group-hover:scale-105 group-hover:border-purple-400 group-hover:bg-purple-500/20 group-hover:text-purple-200">
               +
             </span>
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight">
+            <h2 className="mt-3 text-xl sm:text-2xl font-semibold tracking-tight text-white group-hover:text-purple-200 transition">
               New Project
             </h2>
-            <p className="mt-2 text-sm text-white/45">
+            <p className="mt-1 text-xs sm:text-sm text-zinc-400">
               Bắt đầu một video truyện tranh mới
             </p>
           </div>

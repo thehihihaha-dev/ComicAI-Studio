@@ -1,7 +1,14 @@
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
-from app.routers.projects import router as projects_router
+from app.routers import projects
 from app.routers.assets import router as assets_router
 from app.routers.ocr_benchmark_reviews import router as ocr_benchmark_reviews_router
 from app.routers.reading_order_benchmark_reviews import router as reading_order_benchmark_reviews_router
@@ -9,22 +16,16 @@ from app.routers.reader_correctness_reviews import router as reader_correctness_
 from app.routers.reader_logical_reviews import router as reader_logical_reviews_router
 from app.routers.reader_router_validation_reviews import router as reader_router_validation_reviews_router
 from app.routers.panel_ground_truth_reviews import router as panel_ground_truth_reviews_router
+try:
+    from src.api.routes.editor import router as editor_router
+except ModuleNotFoundError:
+    from backend.src.api.routes.editor import router as editor_router
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
     title="ComicAI Studio API",
     version="0.0.1",
 )
-app.include_router(projects_router)
-app.include_router(assets_router)
-app.include_router(ocr_benchmark_reviews_router)
-app.include_router(reading_order_benchmark_reviews_router)
-app.include_router(reader_correctness_reviews_router)
-app.include_router(reader_logical_reviews_router)
-app.include_router(reader_router_validation_reviews_router)
-app.include_router(panel_ground_truth_reviews_router)
-
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 app.add_middleware(
     CORSMiddleware,
@@ -36,6 +37,27 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(projects.router, prefix="/projects", tags=["projects"])
+app.include_router(assets_router)
+app.include_router(ocr_benchmark_reviews_router)
+app.include_router(reading_order_benchmark_reviews_router)
+app.include_router(reader_correctness_reviews_router)
+app.include_router(reader_logical_reviews_router)
+app.include_router(reader_router_validation_reviews_router)
+app.include_router(panel_ground_truth_reviews_router)
+app.include_router(editor_router)
+
+from pathlib import Path
+uploads_dir = Path(__file__).resolve().parent / "uploads"
+if not uploads_dir.exists():
+    uploads_dir = Path("uploads")
+uploads_dir.mkdir(parents=True, exist_ok=True)
+app.mount("/uploads", StaticFiles(directory=str(uploads_dir)), name="uploads")
+
+artifacts_dir = Path(__file__).resolve().parent.parent / "artifacts"
+artifacts_dir.mkdir(parents=True, exist_ok=True)
+app.mount("/artifacts", StaticFiles(directory=str(artifacts_dir)), name="artifacts")
 
 AI_ENGINE_URL = "http://127.0.0.1:8001"
 
@@ -70,3 +92,4 @@ async def health():
         "status": "healthy",
         "ai_engine": ai_status,
     }
+

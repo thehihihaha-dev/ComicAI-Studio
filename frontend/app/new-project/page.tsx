@@ -42,17 +42,22 @@ export default function NewProjectPage() {
     }
   }
   async function loadProjects() {
-    const response = await fetch("http://127.0.0.1:8000/projects/");
-    const data = await response.json();
-
-    setProjects(data.projects);
+    try {
+      const response = await fetch("http://127.0.0.1:8000/projects/", {
+        cache: "no-store",
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data && Array.isArray(data.projects)) {
+          setProjects(data.projects);
+        }
+      }
+    } catch {
+      // Safe fallback
+    }
   }
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/projects/")
-      .then((response) => response.json())
-      .then((data) => {
-        setProjects(data.projects);
-      });
+    void loadProjects();
   }, []);
 
   return (

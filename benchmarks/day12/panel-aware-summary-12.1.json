@@ -77,25 +77,25 @@
   "new_inversions": "N/A",
   "resource_safety": {
     "before": {
-      "timestamp": "2026-09-03T17:14:23.415558+00:00",
+      "timestamp": "2026-09-04T22:23:46.523329+00:00",
       "process_rss_bytes": null,
-      "process_peak_rss_bytes": 25165824,
-      "system_available_memory_bytes": 6406340608,
+      "process_peak_rss_bytes": 25247744,
+      "system_available_memory_bytes": 6415433728,
       "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
       "swap_used_bytes": 0,
-      "process_cpu_seconds": 0.030555,
+      "process_cpu_seconds": 0.042686,
       "temperature_celsius": null,
       "temperature_note": "not measured: no reliable supported macOS standard-library API",
       "safety_state": "NORMAL"
     },
     "after": {
-      "timestamp": "2026-09-03T17:14:23.444675+00:00",
+      "timestamp": "2026-09-04T22:23:46.563599+00:00",
       "process_rss_bytes": null,
-      "process_peak_rss_bytes": 45350912,
-      "system_available_memory_bytes": 6393348096,
+      "process_peak_rss_bytes": 45334528,
+      "system_available_memory_bytes": 6396526592,
       "system_available_memory_note": "free + inactive + speculative vm_stat pages; reclaimable approximation",
       "swap_used_bytes": 0,
-      "process_cpu_seconds": 0.056544,
+      "process_cpu_seconds": 0.07881,
       "temperature_celsius": null,
       "temperature_note": "not measured: no reliable supported macOS standard-library API",
       "safety_state": "NORMAL"

@@ -234,6 +234,18 @@ def build_story_input(project_id: str) -> dict[str, Any]:
             .all()
         )
         return build_story_input_from_assets(project_id, assets)
+    except Exception:
+        return _empty_story_input(
+            project_id=project_id,
+            status="blocked",
+            issues=[
+                {
+                    "code": "db_offline",
+                    "message": "Database is currently offline or unreachable.",
+                }
+            ],
+            total_assets=0,
+        )
     finally:
         db.close()
 

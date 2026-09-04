@@ -1,0 +1,218 @@
+{
+  "version": "1.0.0",
+  "project_id": "project_wedding_vows",
+  "page_id": 1,
+  "source_image_path": "backend/uploads/92961605-5553-4df1-b74e-9a3bed5e14f5_vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-2.jpg",
+  "image_dimensions": [
+    900,
+    1280
+  ],
+  "canvas_size": [
+    1080,
+    1920
+  ],
+  "fps": 30.0,
+  "total_duration": 10.662,
+  "visual_clips": [
+    {
+      "clip_id": "VIS_SEG_01_DEESC_PANEL_97b8cfb45347",
+      "panel_id": "DEESC_PANEL_97b8cfb45347",
+      "bbox": [
+        598.0,
+        91.0,
+        827.0,
+        560.0
+      ],
+      "start_time": 0.0,
+      "end_time": 1.62,
+      "duration": 1.62,
+      "shot_type": "ESTABLISHING_WINDOW",
+      "motion": {
+        "zoom_start": 1.0,
+        "zoom_end": 1.05,
+        "pan_start": [
+          0,
+          0
+        ],
+        "pan_end": [
+          0,
+          0
+        ],
+        "easing": "smoothstep"
+      },
+      "background": {
+        "blur_radius": 51,
+        "darkness": 0.35,
+        "border_width": 4,
+        "border_color": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "clip_id": "VIS_SEG_02_DEESC_PANEL_8125a5455d88",
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "bbox": [
+        78.0,
+        91.0,
+        591.0,
+        560.0
+      ],
+      "start_time": 1.62,
+      "end_time": 4.506,
+      "duration": 2.886,
+      "shot_type": "MEDIUM_HANDS",
+      "motion": {
+        "zoom_start": 1.0,
+        "zoom_end": 1.04,
+        "pan_start": [
+          0,
+          5
+        ],
+        "pan_end": [
+          0,
+          0
+        ],
+        "easing": "smoothstep"
+      },
+      "background": {
+        "blur_radius": 51,
+        "darkness": 0.35,
+        "border_width": 4,
+        "border_color": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "clip_id": "VIS_SEG_03_DEESC_PANEL_8125a5455d88",
+      "panel_id": "DEESC_PANEL_8125a5455d88",
+      "bbox": [
+        78.0,
+        91.0,
+        591.0,
+        560.0
+      ],
+      "start_time": 4.506,
+      "end_time": 9.126,
+      "duration": 4.62,
+      "shot_type": "CLOSEUP_RING",
+      "motion": {
+        "zoom_start": 1.05,
+        "zoom_end": 1.12,
+        "pan_start": [
+          0,
+          0
+        ],
+        "pan_end": [
+          0,
+          -15
+        ],
+        "easing": "smoothstep"
+      },
+      "background": {
+        "blur_radius": 51,
+        "darkness": 0.35,
+        "border_width": 4,
+        "border_color": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "clip_id": "VIS_SEG_04_DEESC_PANEL_c191e02c101e",
+      "panel_id": "DEESC_PANEL_c191e02c101e",
+      "bbox": [
+        122.0,
+        718.0,
+        812.0,
+        1187.0
+      ],
+      "start_time": 9.126,
+      "end_time": 10.662,
+      "duration": 1.536,
+      "shot_type": "EMOTIONAL_PUNCH_RIN",
+      "motion": {
+        "zoom_start": 1.0,
+        "zoom_end": 1.08,
+        "pan_start": [
+          0,
+          0
+        ],
+        "pan_end": [
+          0,
+          -10
+        ],
+        "easing": "smoothstep"
+      },
+      "background": {
+        "blur_radius": 51,
+        "darkness": 0.35,
+        "border_width": 4,
+        "border_color": [
+          255,
+          255,
+          255
+        ]
+      }
+    }
+  ],
+  "audio_clips": [
+    {
+      "clip_id": "AUD_D_P01_01",
+      "dialogue_id": "D_P01_01",
+      "speaker_label": "PRIEST",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "text": "Rin!",
+      "file_path": "artifacts/audio/day17/raw/D_P01_01.mp3",
+      "start_time": 0.0,
+      "end_time": 1.32,
+      "duration": 1.32
+    },
+    {
+      "clip_id": "AUD_D_P01_02",
+      "dialogue_id": "D_P01_02",
+      "speaker_label": "PRIEST",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "text": "Cho dù là lúc ốm đau hay bệnh tật,",
+      "file_path": "artifacts/audio/day17/raw/D_P01_02.mp3",
+      "start_time": 1.62,
+      "end_time": 4.356,
+      "duration": 2.736
+    },
+    {
+      "clip_id": "AUD_D_P01_03",
+      "dialogue_id": "D_P01_03",
+      "speaker_label": "PRIEST",
+      "voice_id": "vi-VN-NamMinhNeural",
+      "text": "thì con có chấp nhận thề nguyện yêu và làm vợ của Kazu suốt đời không?",
+      "file_path": "artifacts/audio/day17/raw/D_P01_03.mp3",
+      "start_time": 4.506,
+      "end_time": 8.826,
+      "duration": 4.32
+    },
+    {
+      "clip_id": "AUD_D_P01_04",
+      "dialogue_id": "D_P01_04",
+      "speaker_label": "RIN",
+      "voice_id": "vi-VN-HoaiMyNeural",
+      "text": "Con xin thề!",
+      "file_path": "artifacts/audio/day17/raw/D_P01_04.mp3",
+      "start_time": 9.126,
+      "end_time": 10.662,
+      "duration": 1.536
+    }
+  ],
+  "metadata": {
+    "is_benchmark_page": true,
+    "panel_count": 4,
+    "bubble_count": 4,
+    "generated_at": "2026-09-04T21:39:36Z"
+  }
+}
