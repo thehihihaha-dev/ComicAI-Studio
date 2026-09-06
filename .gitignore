@@ -44,3 +44,11 @@ backend/.env
 backend/uploads/
 # Temporary backend files
 backend/tmp/
+# =========================
+# Build Artifacts & Large Media
+# =========================
+artifacts/
+benchmarks/
+*.mp4
+*.mp3
+*.wav

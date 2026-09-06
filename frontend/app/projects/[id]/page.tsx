@@ -734,6 +734,7 @@ export default function ProjectWorkspacePage({
                 timeline={timeline}
                 selectedClipId={selectedClipId}
                 currentTime={currentTime}
+                projectId={projectId}
                 onUpdateTimeline={(updated) => setTimeline(updated)}
                 onSeek={(t) => setCurrentTime(t)}
                 onSelectClip={(id) => setSelectedClipId(id)}

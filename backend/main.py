@@ -39,6 +39,7 @@ app.add_middleware(
 )
 
 app.include_router(projects.router, prefix="/projects", tags=["projects"])
+app.include_router(projects.router, prefix="/api/projects", tags=["projects"])
 app.include_router(assets_router)
 app.include_router(ocr_benchmark_reviews_router)
 app.include_router(reading_order_benchmark_reviews_router)

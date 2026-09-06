@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 class ProjectCreate(BaseModel):
     name: str
     content_type: Literal["short", "long"]
+    story_style: Literal["dramatic", "humorous", "romantic"] | None = "dramatic"
 
 
 class ShortScriptCreate(BaseModel):
@@ -27,3 +28,8 @@ class StoryEvidenceResolution(BaseModel):
 
 class StoryEvidenceAdd(StoryEvidenceResolution):
     text: str = Field(min_length=1, max_length=2000)
+
+
+class GenerateScriptRequest(BaseModel):
+    story_style: Literal["humorous", "dramatic", "romantic"] = "dramatic"
+    target_duration: int = Field(default=45, ge=10, le=300)

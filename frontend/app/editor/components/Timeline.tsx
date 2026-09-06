@@ -55,27 +55,59 @@ export default function Timeline({
   // Speaker Color Scheme (Matte Finish)
   const getSpeakerTheme = (speaker: string) => {
     const s = speaker.toUpperCase();
+    if (s.includes("HOOK")) {
+      return {
+        bg: "bg-[#21162b] border-purple-500/35 hover:border-purple-500/55 text-zinc-100",
+        accent: "text-purple-300",
+        badge: "🎣 HOOK",
+      };
+    }
+    if (s.includes("CTA") || s.includes("CALL_TO_ACTION") || s.includes("ENDING")) {
+      return {
+        bg: "bg-[#221b12] border-amber-500/35 hover:border-amber-500/55 text-zinc-100",
+        accent: "text-amber-300",
+        badge: "⚡ CTA",
+      };
+    }
+    if (s.includes("BODY")) {
+      return {
+        bg: "bg-[#121c2a] border-sky-500/35 hover:border-sky-500/55 text-zinc-100",
+        accent: "text-sky-300",
+        badge: "🎬 BODY",
+      };
+    }
+    if (s.includes("NAMMINH") || s.includes("AI")) {
+      return {
+        bg: "bg-[#181628] border-violet-500/35 hover:border-violet-500/55 text-zinc-100",
+        accent: "text-violet-300",
+        badge: "🎙️ AI REVIEW",
+      };
+    }
     if (s.includes("RIN")) {
       return {
         bg: "bg-[#1c1620] border-pink-500/25 hover:border-pink-500/45 text-zinc-100",
         accent: "text-pink-300",
+        badge: "RIN",
       };
     }
     if (s.includes("KAZU")) {
       return {
         bg: "bg-[#141a22] border-sky-500/25 hover:border-sky-500/45 text-zinc-100",
         accent: "text-sky-300",
+        badge: "KAZU",
       };
     }
     if (s.includes("PRIEST") || s.includes("LINH MỤC")) {
       return {
         bg: "bg-[#1b1915] border-amber-500/25 hover:border-amber-500/45 text-zinc-100",
         accent: "text-amber-300",
+        badge: "PRIEST",
       };
     }
     return {
       bg: "bg-[#181622] border-violet-500/25 hover:border-violet-500/45 text-zinc-100",
       accent: "text-violet-300",
+      badge: speaker,
     };
   };
 
@@ -237,6 +269,7 @@ export default function Timeline({
                       className={`truncate font-mono uppercase tracking-wide text-xs font-bold ${theme.accent}`}
                     >
                       {clip.speaker_label}
+                      {theme.badge || clip.speaker_label}
                     </span>
                     <span className="text-[10px] font-mono opacity-60 shrink-0 ml-1.5">
                       {clip.duration.toFixed(1)}s
@@ -251,12 +284,15 @@ export default function Timeline({
           </div>
 
           {/* 3. Track 2: BGM (Nhạc nền Manga) */}
+          {/* 3. Track 2: BGM (Nhạc nền Manga & Audio Ducking) */}
           <div className="flex-1 min-h-0 relative border-b border-white/[0.06] px-1 py-1.5">
+            {/* Base BGM Container */}
             <div
               className="absolute inset-y-1.5 rounded-lg border border-emerald-500/25 bg-[#111815] text-zinc-200 px-3 py-2 flex items-center justify-between overflow-hidden cursor-pointer shadow-sm hover:border-emerald-500/40 transition"
               style={{ left: "0%", right: "0%" }}
             >
               <div className="flex flex-col justify-center h-full min-w-0 mr-4">
+              <div className="flex flex-col justify-center h-full min-w-0 mr-4 z-0">
                 <div className="flex items-center gap-2">
                   <span className="text-sm">🎵</span>
                   <span className="text-xs font-semibold truncate text-emerald-300/90">
@@ -265,14 +301,30 @@ export default function Timeline({
                   <span className="text-[9px] font-mono text-emerald-400/70 bg-emerald-950/50 px-1.5 py-0.5 rounded border border-emerald-800/30 shrink-0">
                     100% Vol
                   </span>
+                  {timeline.audio_clips.some(
+                    (c) =>
+                      currentTime >= c.start_time && currentTime < c.end_time,
+                  ) ? (
+                    <span className="text-[9px] font-mono text-amber-300 bg-amber-950/70 px-1.5 py-0.5 rounded border border-amber-600/40 shrink-0 flex items-center gap-1 animate-pulse">
+                      <span>🔉</span>
+                      <span>25% Vol (Ducking)</span>
+                    </span>
+                  ) : (
+                    <span className="text-[9px] font-mono text-emerald-400/70 bg-emerald-950/50 px-1.5 py-0.5 rounded border border-emerald-800/30 shrink-0 flex items-center gap-1">
+                      <span>🔊</span>
+                      <span>100% Vol</span>
+                    </span>
+                  )}
                 </div>
                 <span className="text-[10px] text-zinc-400 font-mono mt-0.5 truncate">
                   Bản phối lofi cảm xúc tự động lặp lại theo độ dài trang truyện
+                  Tự động hạ xuống 25% khi có giọng nói NamMinh và hồi phục 100% khi nghỉ
                 </span>
               </div>
 
               {/* Decorative Audio Waveform */}
               <div className="flex items-center gap-1 opacity-50 pointer-events-none shrink-0 pr-2">
+              <div className="flex items-center gap-1 opacity-50 pointer-events-none shrink-0 pr-2 z-0">
                 <span className="w-[2px] h-3 bg-emerald-400/80 rounded-full animate-pulse" />
                 <span className="w-[2px] h-6 bg-emerald-400/80 rounded-full" />
                 <span className="w-[2px] h-4 bg-emerald-400/80 rounded-full" />
@@ -285,6 +337,46 @@ export default function Timeline({
                 <span className="w-[2px] h-3 bg-emerald-400/80 rounded-full" />
               </div>
             </div>
+
+            {/* Audio Ducking Regions Visualization Overlaid on BGM Track */}
+            {timeline.audio_clips.map((clip) => {
+              const leftPct = (clip.start_time / totalDur) * 100;
+              const widthPct = Math.max(3, (clip.duration / totalDur) * 100);
+              const isCurrent =
+                currentTime >= clip.start_time && currentTime < clip.end_time;
+
+              return (
+                <div
+                  key={`duck_${clip.clip_id}`}
+                  className={`absolute inset-y-1.5 rounded-md border border-dashed transition flex items-center justify-between px-2 overflow-hidden pointer-events-none z-10 ${
+                    isCurrent
+                      ? "bg-amber-950/65 border-amber-400/80 shadow-md ring-1 ring-amber-400/50"
+                      : "bg-emerald-950/50 border-emerald-500/40"
+                  }`}
+                  style={{
+                    left: `${leftPct}%`,
+                    width: `calc(${widthPct}% - 2px)`,
+                  }}
+                >
+                  <span
+                    className={`text-[9px] font-mono truncate select-none ${
+                      isCurrent
+                        ? "text-amber-200 font-bold"
+                        : "text-emerald-300/80"
+                    }`}
+                  >
+                    🔉 25% (Ducking)
+                  </span>
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                      isCurrent
+                        ? "bg-amber-400 animate-ping"
+                        : "bg-emerald-400/60"
+                    }`}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* 4. Track 3: SFX (Hiệu ứng âm thanh) */}

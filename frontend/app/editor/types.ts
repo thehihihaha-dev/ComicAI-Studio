@@ -74,3 +74,18 @@ export interface RenderResponse {
   file_sha256: string;
 }
 
+export interface ScriptSegment {
+  id: string;
+  section_type: "hook" | "body" | "call_to_action" | string;
+  text: string;
+  estimated_duration: number;
+  suggested_effect: string;
+}
+
+export interface GeneratedScriptResponse {
+  project_id: string;
+  story_style: "dramatic" | "humorous" | "romantic" | string;
+  total_duration: number;
+  segments: ScriptSegment[];
+}
+

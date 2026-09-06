@@ -2,11 +2,18 @@
 
 import React, { useState } from "react";
 import { TimelineContract, VisualClip } from "../types";
+import {
+  GeneratedScriptResponse,
+  ScriptSegment,
+  TimelineContract,
+  VisualClip,
+} from "../types";
 
 interface InspectorProps {
   timeline: TimelineContract;
   selectedClipId: string | null;
   currentTime?: number;
+  projectId?: string;
   onUpdateTimeline: (updatedTimeline: TimelineContract) => void;
   onSeek?: (time: number) => void;
   onSelectClip?: (clipId: string) => void;
@@ -21,12 +28,18 @@ interface AIScriptSection {
 }
 
 const DEFAULT_AI_SCRIPT_SECTIONS: AIScriptSection[] = [
+const INITIAL_SCRIPT_SEGMENTS: ScriptSegment[] = [
   {
     id: "hook",
     tag: "🎣 HOOK",
     title: "Mở đầu cuốn hút (3s đầu)",
     timeRange: "00:00 - 00:03",
     text: "Ai mà ngờ được người vợ ảo kết hôn trong game suốt 2 năm lại chính là nữ thần Idol vạn người mê ngoài đời thực?!",
+    id: "SEG_01",
+    section_type: "hook",
+    text: "Cứ ngỡ là hôn lễ trong mơ, ai ngờ lại là cái bẫy trí mạng!",
+    estimated_duration: 3.0,
+    suggested_effect: "punch_zoom",
   },
   {
     id: "setup",
@@ -34,6 +47,11 @@ const DEFAULT_AI_SCRIPT_SECTIONS: AIScriptSection[] = [
     title: "Thiết lập bối cảnh",
     timeRange: "00:03 - 00:06",
     text: "Hôn lễ thánh đường lung linh trong game diễn ra trước sự chứng giám của linh mục. Lời thề ước thủy chung tưởng như chỉ là trò chơi ảo.",
+    id: "SEG_02",
+    section_type: "body",
+    text: "Ngay tại thánh đường trang nghiêm, sự thật kinh hoàng đã chính thức bị vạch trần.",
+    estimated_duration: 4.2,
+    suggested_effect: "zoom_in",
   },
   {
     id: "dev",
@@ -41,6 +59,11 @@ const DEFAULT_AI_SCRIPT_SECTIONS: AIScriptSection[] = [
     title: "Phát triển cao trào",
     timeRange: "00:06 - 00:15",
     text: "Cuộc gặp gỡ ngoài đời thực bất ngờ bùng nổ khi thân phận thực sự của cô dâu được hé lộ, đảo lộn hoàn toàn cuộc sống của chàng game thủ.",
+    id: "SEG_03",
+    section_type: "body",
+    text: "Ánh mắt lạnh lùng đối diện sự tuyệt vọng cùng cực, không ai có thể quay đầu lại được nữa.",
+    estimated_duration: 4.0,
+    suggested_effect: "pan_down",
   },
   {
     id: "payoff",
@@ -48,6 +71,11 @@ const DEFAULT_AI_SCRIPT_SECTIONS: AIScriptSection[] = [
     title: "Nút thắt cảm xúc",
     timeRange: "00:15 - 00:22",
     text: 'Khoảnh khắc Rin nghẹn ngào thốt lên "Con xin thề!" đã biến lời hẹn ước ảo thành định mệnh chân thực ngoài đời.',
+    id: "SEG_04",
+    section_type: "call_to_action",
+    text: "Bấm follow ngay để không bỏ lỡ diễn biến nghẹt thở ở chap tiếp theo!",
+    estimated_duration: 3.5,
+    suggested_effect: "zoom_out",
   },
   {
     id: "ending",
@@ -189,6 +217,7 @@ export default function Inspector({
   timeline,
   selectedClipId,
   currentTime = 0,
+  projectId,
   onUpdateTimeline,
   onSeek,
   onSelectClip,
@@ -198,7 +227,15 @@ export default function Inspector({
   >("dialogue");
   const [aiScript, setAiScript] = useState<AIScriptSection[]>(
     DEFAULT_AI_SCRIPT_SECTIONS,
+  const [storyStyle, setStoryStyle] = useState<
+    "dramatic" | "humorous" | "romantic"
+  >("dramatic");
+  const [segments, setSegments] = useState<ScriptSegment[]>(
+    INITIAL_SCRIPT_SEGMENTS,
   );
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generateError, setGenerateError] = useState("");
+  const [appliedNotice, setAppliedNotice] = useState(false);
   const [copied, setCopied] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
@@ -250,9 +287,195 @@ export default function Inspector({
     });
   };
 
+  const handleGenerateScript = async () => {
+    setIsGenerating(true);
+    setGenerateError("");
+    const targetPid = projectId || timeline.project_id || "default_project";
+
+    try {
+      const res = await fetch(
+        `http://127.0.0.1:8000/api/projects/${targetPid}/generate-script`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            story_style: storyStyle,
+            target_duration: 45,
+          }),
+        },
+      );
+
+      if (!res.ok) {
+        throw new Error(`API error: ${res.status}`);
+      }
+
+      const data: GeneratedScriptResponse = await res.json();
+      if (data && Array.isArray(data.segments) && data.segments.length > 0) {
+        setSegments(data.segments);
+      }
+    } catch (err) {
+      console.warn("API call failed, generating localized fallback script:", err);
+      // Fallback generator based on selected style
+      const fallbackTexts: Record<string, ScriptSegment[]> = {
+        dramatic: [
+          {
+            id: "SEG_D_01",
+            section_type: "hook",
+            text: "Cứ ngỡ là hôn lễ trong mơ, ai ngờ lại là cái bẫy trí mạng!",
+            estimated_duration: 3.0,
+            suggested_effect: "punch_zoom",
+          },
+          {
+            id: "SEG_D_02",
+            section_type: "body",
+            text: "Ngay tại thánh đường trang nghiêm, sự thật kinh hoàng đã chính thức bị vạch trần.",
+            estimated_duration: 4.2,
+            suggested_effect: "zoom_in",
+          },
+          {
+            id: "SEG_D_03",
+            section_type: "body",
+            text: "Ánh mắt lạnh lùng đối diện sự tuyệt vọng cùng cực, không ai có thể quay đầu lại được nữa.",
+            estimated_duration: 4.0,
+            suggested_effect: "pan_down",
+          },
+          {
+            id: "SEG_D_04",
+            section_type: "call_to_action",
+            text: "Bấm follow ngay để không bỏ lỡ diễn biến nghẹt thở ở chap tiếp theo!",
+            estimated_duration: 3.5,
+            suggested_effect: "zoom_out",
+          },
+        ],
+        humorous: [
+          {
+            id: "SEG_H_01",
+            section_type: "hook",
+            text: "Tưởng được lấy vợ hiền thục, ai dè rước ngay 'nóc nhà' chiến thần!",
+            estimated_duration: 3.0,
+            suggested_effect: "punch_zoom",
+          },
+          {
+            id: "SEG_H_02",
+            section_type: "body",
+            text: "Thầy tu vừa đọc kinh xong thì cô dâu đã kịp lườm chú rể cháy cả mắt rồi.",
+            estimated_duration: 3.8,
+            suggested_effect: "zoom_in",
+          },
+          {
+            id: "SEG_H_03",
+            section_type: "body",
+            text: "Đúng là hảo bằng hữu trong game nhưng ngoài đời thì ai là gà ai là thóc còn chưa biết đâu nhé.",
+            estimated_duration: 4.5,
+            suggested_effect: "pan_down",
+          },
+          {
+            id: "SEG_H_04",
+            section_type: "call_to_action",
+            text: "Thả ngay một tim và follow kênh để hóng tiếp màn combat nảy lửa này nào!",
+            estimated_duration: 3.5,
+            suggested_effect: "zoom_out",
+          },
+        ],
+        romantic: [
+          {
+            id: "SEG_R_01",
+            section_type: "hook",
+            text: "Khoảnh khắc hai ánh mắt chạm nhau, mọi định kiến dường như tan biến.",
+            estimated_duration: 3.0,
+            suggested_effect: "punch_zoom",
+          },
+          {
+            id: "SEG_R_02",
+            section_type: "body",
+            text: "Trước thánh đường thiêng liêng, lời thề nguyện như khắc sâu vào từng nhịp đập con tim.",
+            estimated_duration: 4.0,
+            suggested_effect: "zoom_in",
+          },
+          {
+            id: "SEG_R_03",
+            section_type: "body",
+            text: "Dù phía trước là giông bão, chỉ cần một cái nắm tay ấm áp cũng đủ để vượt qua tất cả.",
+            estimated_duration: 4.2,
+            suggested_effect: "zoom_in",
+          },
+          {
+            id: "SEG_R_04",
+            section_type: "call_to_action",
+            text: "Đăng ký kênh để cùng theo dõi câu chuyện tình ngọt ngào này nhé!",
+            estimated_duration: 3.2,
+            suggested_effect: "zoom_out",
+          },
+        ],
+      };
+      setSegments(fallbackTexts[storyStyle] || fallbackTexts.dramatic);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handleApplyToTimeline = () => {
+    let currStart = 0.0;
+    const pauseSec = 0.3; // Natural pause between segments
+
+    const newAudioClips = segments.map((seg, idx) => {
+      const dur = Math.max(1.0, seg.estimated_duration);
+      const startT = Number(currStart.toFixed(3));
+      const endT = Number((currStart + dur).toFixed(3));
+      currStart = endT + pauseSec;
+
+      const typeUpper = seg.section_type.toUpperCase();
+      const speakerTag = `NAMMINH [${typeUpper}]`;
+
+      return {
+        clip_id: `AUD_AI_${seg.id}_${idx + 1}`,
+        dialogue_id: seg.id,
+        speaker_label: speakerTag,
+        voice_id: "vi-VN-NamMinhNeural",
+        text: seg.text,
+        file_path: `artifacts/audio/day19/${seg.id}.mp3`,
+        start_time: startT,
+        end_time: endT,
+        duration: dur,
+      };
+    });
+
+    const newTotalDuration = Math.max(
+      Number(currStart.toFixed(2)),
+      timeline.total_duration,
+    );
+
+    // Proportionally adjust visual clips if new audio duration extends beyond old duration
+    let updatedVisuals = [...timeline.visual_clips];
+    if (newTotalDuration > timeline.total_duration && updatedVisuals.length > 0) {
+      const scale = newTotalDuration / timeline.total_duration;
+      updatedVisuals = updatedVisuals.map((v) => ({
+        ...v,
+        start_time: Number((v.start_time * scale).toFixed(3)),
+        end_time: Number((v.end_time * scale).toFixed(3)),
+        duration: Number((v.duration * scale).toFixed(3)),
+      }));
+    }
+
+    onUpdateTimeline({
+      ...timeline,
+      total_duration: newTotalDuration,
+      audio_clips: newAudioClips,
+      visual_clips: updatedVisuals,
+    });
+
+    setAppliedNotice(true);
+    setTimeout(() => setAppliedNotice(false), 3000);
+  };
+
   const handleCopyScript = () => {
     const fullText = aiScript
       .map((s) => `[${s.tag} - ${s.title}]\n${s.text}`)
+    const fullText = segments
+      .map(
+        (s) =>
+          `[${s.section_type.toUpperCase()} - ${s.suggested_effect}]\n${s.text}`,
+      )
       .join("\n\n");
     if (typeof navigator !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText(fullText).then(() => {
@@ -403,23 +626,123 @@ export default function Inspector({
       {activeTab === "ai_script" && (
         <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 [scrollbar-color:rgba(255,255,255,0.14)_transparent] [scrollbar-width:thin]">
           <div className="flex items-center justify-between pb-1 border-b border-white/[0.08]">
+        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3.5 [scrollbar-color:rgba(255,255,255,0.14)_transparent] [scrollbar-width:thin]">
+          {/* Header & Copy */}
+          <div className="flex items-center justify-between pb-2 border-b border-white/[0.08]">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/40">
                 Kịch bản AI Review & Tóm Tắt
               </p>
               <p className="text-[10px] text-violet-300/80 mt-0.5">
                 Chuẩn cấu trúc video ngắn Short 9:16
+              <p className="text-[10px] text-violet-300/80 mt-0.5 flex items-center gap-1.5">
+                <span>🎙️</span>
+                <span>Giọng đọc: vi-VN-NamMinhNeural (+12% rate)</span>
               </p>
             </div>
             <button
               type="button"
               onClick={handleCopyScript}
               className="px-2 py-1 rounded bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30 text-[10px] font-medium text-violet-300 transition flex items-center gap-1"
+              className="px-2 py-1 rounded bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30 text-[10px] font-medium text-violet-300 transition flex items-center gap-1 cursor-pointer"
             >
               <span>{copied ? "✓ Đã sao chép" : "📋 Sao chép"}</span>
             </button>
           </div>
 
+          {/* Thanh điều khiển: Bộ chọn Phong cách & Nút Tạo Kịch Bản */}
+          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3 flex flex-col gap-2.5">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-semibold text-white/70 uppercase tracking-wider">
+                Phong cách kể chuyện
+              </span>
+              <span className="text-[10px] text-white/40 font-mono">
+                {segments.length} phân đoạn
+              </span>
+            </div>
+
+            {/* Pill Selector for 3 Styles */}
+            <div className="grid grid-cols-3 gap-1.5">
+              <button
+                type="button"
+                onClick={() => setStoryStyle("dramatic")}
+                className={`py-1.5 px-2 rounded-lg border text-center transition cursor-pointer text-[11px] font-medium ${
+                  storyStyle === "dramatic"
+                    ? "border-purple-500 bg-purple-500/20 text-white font-semibold ring-1 ring-purple-500/40"
+                    : "border-white/[0.08] bg-white/[0.02] text-white/60 hover:text-white hover:border-white/20"
+                }`}
+              >
+                ⚡ Kịch tính
+              </button>
+              <button
+                type="button"
+                onClick={() => setStoryStyle("humorous")}
+                className={`py-1.5 px-2 rounded-lg border text-center transition cursor-pointer text-[11px] font-medium ${
+                  storyStyle === "humorous"
+                    ? "border-amber-500 bg-amber-500/20 text-white font-semibold ring-1 ring-amber-500/40"
+                    : "border-white/[0.08] bg-white/[0.02] text-white/60 hover:text-white hover:border-white/20"
+                }`}
+              >
+                🎭 Cà khịa
+              </button>
+              <button
+                type="button"
+                onClick={() => setStoryStyle("romantic")}
+                className={`py-1.5 px-2 rounded-lg border text-center transition cursor-pointer text-[11px] font-medium ${
+                  storyStyle === "romantic"
+                    ? "border-pink-500 bg-pink-500/20 text-white font-semibold ring-1 ring-pink-500/40"
+                    : "border-white/[0.08] bg-white/[0.02] text-white/60 hover:text-white hover:border-white/20"
+                }`}
+              >
+                💖 Lãng mạn
+              </button>
+            </div>
+
+            {/* Actions: Generate & Apply */}
+            <div className="grid grid-cols-2 gap-2 pt-1">
+              <button
+                type="button"
+                onClick={handleGenerateScript}
+                disabled={isGenerating}
+                className="py-2 px-3 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-[11px] transition shadow-md shadow-purple-950/40 flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
+              >
+                {isGenerating ? (
+                  <>
+                    <div className="h-3 w-3 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                    <span>Đang viết...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>✨</span>
+                    <span>AI Viết Kịch Bản</span>
+                  </>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={handleApplyToTimeline}
+                className="py-2 px-3 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/40 text-emerald-200 font-semibold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+              >
+                <span>🪄</span>
+                <span>Áp Dụng Timeline</span>
+              </button>
+            </div>
+
+            {appliedNotice && (
+              <div className="text-[11px] text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 animate-fadeIn">
+                <span>✓</span>
+                <span>Đã cập nhật rãnh Thoại & Audio Ducking trên Timeline!</span>
+              </div>
+            )}
+            {generateError && (
+              <p className="text-[10px] text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-1 rounded">
+                {generateError}
+              </p>
+            )}
+          </div>
+
+          {/* Danh sách các phân đoạn ScriptSegment */}
           <div className="space-y-3">
             {aiScript.map((sec, idx) => (
               <div
@@ -430,6 +753,42 @@ export default function Inspector({
                   <div className="flex items-center gap-1.5">
                     <span className="text-xs font-semibold text-violet-300">
                       {sec.tag}
+            {segments.map((seg, idx) => {
+              const isHook = seg.section_type === "hook";
+              const isCTA =
+                seg.section_type === "call_to_action" ||
+                seg.section_type === "ending";
+              const badgeStyle = isHook
+                ? "text-purple-300 bg-purple-500/15 border-purple-500/30"
+                : isCTA
+                  ? "text-amber-300 bg-amber-500/15 border-amber-500/30"
+                  : "text-sky-300 bg-sky-500/15 border-sky-500/30";
+
+              const badgeLabel = isHook
+                ? "🎣 HOOK (0-3s)"
+                : isCTA
+                  ? "⚡ CALL TO ACTION"
+                  : `🎬 BODY 0${idx}`;
+
+              return (
+                <div
+                  key={seg.id || idx}
+                  className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-3 transition hover:border-white/20 flex flex-col gap-2"
+                >
+                  <div className="flex items-center justify-between gap-1.5 flex-wrap">
+                    <div className="flex items-center gap-1.5">
+                      <span
+                        className={`text-[10px] font-semibold px-2 py-0.5 rounded border ${badgeStyle}`}
+                      >
+                        {badgeLabel}
+                      </span>
+                      <span className="text-[10px] font-mono text-zinc-400 bg-zinc-800/60 border border-zinc-700/40 px-1.5 py-0.5 rounded">
+                        {seg.suggested_effect}
+                      </span>
+                    </div>
+
+                    <span className="text-[10px] font-mono text-white/50">
+                      ⏱️ {seg.estimated_duration.toFixed(1)}s
                     </span>
                     <span className="text-[11px] text-white/60 font-medium">
                       · {sec.title}
@@ -438,6 +797,18 @@ export default function Inspector({
                   <span className="text-[10px] font-mono text-white/40">
                     {sec.timeRange}
                   </span>
+
+                  <textarea
+                    rows={3}
+                    value={seg.text}
+                    onChange={(e) => {
+                      const next = [...segments];
+                      next[idx] = { ...next[idx], text: e.target.value };
+                      setSegments(next);
+                    }}
+                    placeholder="Lời bình của người dẫn chuyện..."
+                    className="w-full bg-black/20 rounded-md p-2 border border-white/5 focus:border-violet-500 text-xs text-white/90 focus:text-white outline-none resize-none leading-relaxed transition"
+                  />
                 </div>
                 <textarea
                   rows={3}
@@ -451,6 +822,8 @@ export default function Inspector({
                 />
               </div>
             ))}
+              );
+            })}
           </div>
         </div>
       )}

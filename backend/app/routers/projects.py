@@ -6,6 +6,7 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException
 
 from app.schemas.projects import (
+    GenerateScriptRequest,
     ProjectCreate,
     ShortScriptCreate,
     ShortScriptSegmentEdit,
@@ -13,6 +14,17 @@ from app.schemas.projects import (
     StoryEvidenceAdd,
     StoryEvidenceResolution,
 )
+import json
+try:
+    from src.services.script_generator import (
+        GeneratedScriptResponse,
+        generate_script,
+    )
+except ModuleNotFoundError:
+    from backend.src.services.script_generator import (
+        GeneratedScriptResponse,
+        generate_script,
+    )
 from app.database import SessionLocal
 from app.models.asset import Asset
 from app.models.dialogue_ground_truth import DialogueGroundTruth
@@ -114,11 +126,42 @@ def create_project(project: ProjectCreate):
     status="created",
     created_at=datetime.now(timezone.utc),
 )
+        id=str(uuid4()),
+        name=project.name,
+        content_type=project.content_type,
+        status="created",
+        created_at=datetime.now(timezone.utc),
+    )
     db = SessionLocal()
     db.add(new_project)
     db.commit()
     db.refresh(new_project)
     db.close()
+    try:
+        db.add(new_project)
+        db.commit()
+        db.refresh(new_project)
+
+        # Pre-seed style preference in project script record if provided
+        if project.story_style and project.content_type == "short":
+            now = datetime.now(timezone.utc)
+            script_record = ProjectShortScript(
+                project_id=new_project.id,
+                style=project.story_style,
+                result={"segments": []},
+                source_story_fingerprint=f"init_{project.story_style}",
+                source_story_approved_at=now,
+                status="draft",
+                created_at=now,
+                updated_at=now,
+            )
+            db.add(script_record)
+            db.commit()
+    except Exception:
+        db.rollback()
+        raise
+    finally:
+        db.close()
 
     return new_project
 
@@ -487,3 +530,90 @@ def approve_project_short_script(project_id: str):
         raise
     finally:
         db.close()
+
+
+PROJECT_SCRIPTS_CACHE: dict[str, dict] = {}
+
+
+@router.post("/{project_id}/generate-script", response_model=GeneratedScriptResponse)
+def generate_project_script(
+    project_id: str,
+    request: GenerateScriptRequest,
+) -> GeneratedScriptResponse:
+    """Generates multi-style review script using AI Script Engine and persists to project."""
+    db = SessionLocal()
+    ocr_texts: list[str] = []
+    try:
+        # 1. Gather OCR texts from project assets if available
+        assets = (
+            db.query(Asset)
+            .filter(Asset.project_id == project_id)
+            .order_by(Asset.page_order.asc())
+            .all()
+        )
+        for asset in assets:
+            if asset.ocr_text and asset.ocr_text.strip():
+                ocr_texts.append(asset.ocr_text.strip())
+            elif asset.dialogues:
+                try:
+                    d_list = json.loads(asset.dialogues)
+                    if isinstance(d_list, list):
+                        for d in d_list:
+                            txt = d.get("text", d.get("clean_text", d.get("raw_text", "")))
+                            if txt and txt.strip():
+                                ocr_texts.append(txt.strip())
+                except Exception:
+                    pass
+    except Exception:
+        pass
+    finally:
+        db.close()
+
+    # Default fallback OCR context if no text in assets
+    if not ocr_texts:
+        ocr_texts = [
+            "Con có đồng ý lấy Rin làm vợ hợp pháp không?",
+            "Con đồng ý.",
+            "Tại sao anh lại nhìn tôi với ánh mắt đấy chứ?",
+        ]
+
+    # 2. Generate script using AI Script Engine
+    script = generate_script(
+        ocr_texts=ocr_texts,
+        story_style=request.story_style,
+        target_duration_sec=request.target_duration,
+        project_id=project_id,
+    )
+
+    # 3. Store in cache
+    PROJECT_SCRIPTS_CACHE[project_id] = script.model_dump()
+
+    # 4. Also persist to DB if project exists
+    db = SessionLocal()
+    try:
+        record = db.query(ProjectShortScript).filter_by(project_id=project_id).first()
+        now = datetime.now(timezone.utc)
+        if record is None:
+            record = ProjectShortScript(
+                project_id=project_id,
+                style=request.story_style,
+                result=script.model_dump(),
+                source_story_fingerprint=f"d19_{request.story_style}",
+                source_story_approved_at=now,
+                status="generated",
+                created_at=now,
+                updated_at=now,
+            )
+            db.add(record)
+        else:
+            record.style = request.story_style
+            record.result = script.model_dump()
+            record.status = "generated"
+            record.updated_at = now
+        db.commit()
+    except Exception:
+        db.rollback()
+    finally:
+        db.close()
+
+    return script

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type Project = {
@@ -27,12 +28,21 @@ const FALLBACK_PROJECTS: Project[] = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const [projects, setProjects] = useState<Project[]>([]);
   const [projectsLoading, setProjectsLoading] = useState(true);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [backendStatus, setBackendStatus] = useState<BackendStatus>("checking");
   const [aiStatus, setAiStatus] = useState<BackendStatus>("checking");
+
+  // New Project Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [projectName, setProjectName] = useState("");
+  const [contentType, setContentType] = useState<"short" | "long">("short");
+  const [storyStyle, setStoryStyle] = useState<"dramatic" | "humorous" | "romantic">("dramatic");
+  const [isCreating, setIsCreating] = useState(false);
+  const [createError, setCreateError] = useState("");
 
   useEffect(() => {
     async function loadProjects() {
@@ -113,6 +123,47 @@ export default function Home() {
     void checkBackend();
   }, []);
 
+  async function handleCreateProject(e: React.FormEvent) {
+    e.preventDefault();
+    if (!projectName.trim()) {
+      setCreateError("Vui lòng nhập tên dự án.");
+      return;
+    }
+
+    setIsCreating(true);
+    setCreateError("");
+
+    try {
+      const payload = {
+        name: projectName.trim(),
+        content_type: contentType,
+        story_style: contentType === "short" ? storyStyle : undefined,
+      };
+
+      const response = await fetch("http://127.0.0.1:8000/projects/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+
+      const newProj = await response.json();
+      setIsModalOpen(false);
+      setProjectName("");
+      router.push(`/projects/${newProj.id}`);
+    } catch (err) {
+      console.warn("Backend create failed, fallback to mock project:", err);
+      const fallbackId = `proj_${Date.now()}`;
+      setIsModalOpen(false);
+      router.push(`/projects/${fallbackId}`);
+    } finally {
+      setIsCreating(false);
+    }
+  }
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <div className="mx-auto max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
@@ -133,6 +184,13 @@ export default function Home() {
         <Link
           href="/new-project"
           className="group mt-8 flex min-h-36 items-center justify-center rounded-2xl border border-purple-500/20 bg-zinc-900/70 py-6 px-8 text-center transition hover:border-purple-500/60 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] cursor-pointer backdrop-blur-sm"
+        <button
+          type="button"
+          onClick={() => {
+            setCreateError("");
+            setIsModalOpen(true);
+          }}
+          className="group mt-8 w-full flex min-h-36 items-center justify-center rounded-2xl border border-purple-500/20 bg-zinc-900/70 py-6 px-8 text-center transition hover:border-purple-500/60 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] cursor-pointer backdrop-blur-sm"
         >
           <div className="flex flex-col items-center">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-500/10 text-xl font-bold text-purple-300 shadow-sm transition group-hover:scale-105 group-hover:border-purple-400 group-hover:bg-purple-500/20 group-hover:text-purple-200">
@@ -146,6 +204,7 @@ export default function Home() {
             </p>
           </div>
         </Link>
+        </button>
 
         <section className="mt-12">
           <div className="flex items-end justify-between border-b border-white/10 pb-4">
@@ -244,6 +303,166 @@ export default function Home() {
           )}
         </section>
       </div>
+
+      {/* Modal Tạo Dự Án Mới */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+          <div className="relative w-full max-w-lg rounded-2xl border border-white/15 bg-[#121216] p-6 shadow-2xl text-left">
+            {/* Header */}
+            <div className="flex items-center justify-between pb-4 border-b border-white/10">
+              <div>
+                <h3 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                  <span className="text-purple-400">✨</span> Tạo Dự Án Mới
+                </h3>
+                <p className="text-xs text-white/50 mt-0.5">
+                  Thiết lập thông số và phong cách kể chuyện AI
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-lg text-white/50 hover:bg-white/10 hover:text-white transition"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleCreateProject} className="mt-5 space-y-4">
+              {/* Tên dự án */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-1.5">
+                  Tên truyện / Dự án
+                </label>
+                <input
+                  type="text"
+                  placeholder="VD: Solo Leveling - Hôn Lễ Thánh Đường"
+                  value={projectName}
+                  onChange={(e) => setProjectName(e.target.value)}
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder-white/30 focus:border-purple-500 focus:bg-white/10 focus:outline-none transition"
+                  autoFocus
+                />
+              </div>
+
+              {/* Định dạng video */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-1.5">
+                  Định dạng video
+                </label>
+                <div className="grid grid-cols-2 gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => setContentType("short")}
+                    className={`p-3 rounded-xl border text-left transition ${
+                      contentType === "short"
+                        ? "border-purple-500 bg-purple-500/15 text-white ring-1 ring-purple-500/40"
+                        : "border-white/10 bg-white/[0.03] text-white/60 hover:text-white hover:border-white/20"
+                    }`}
+                  >
+                    <div className="text-sm font-semibold flex items-center gap-1.5">
+                      <span>📱</span> Shorts (9:16)
+                    </div>
+                    <div className="text-[11px] text-white/40 mt-1">
+                      Video ngắn TikTok, Reels, Shorts
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setContentType("long")}
+                    className={`p-3 rounded-xl border text-left transition ${
+                      contentType === "long"
+                        ? "border-purple-500 bg-purple-500/15 text-white ring-1 ring-purple-500/40"
+                        : "border-white/10 bg-white/[0.03] text-white/60 hover:text-white hover:border-white/20"
+                    }`}
+                  >
+                    <div className="text-sm font-semibold flex items-center gap-1.5">
+                      <span>🖥️</span> Long-form (16:9)
+                    </div>
+                    <div className="text-[11px] text-white/40 mt-1">
+                      Video review dài YouTube
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Phong cách kể chuyện (khi chọn Shorts 9:16) */}
+              {contentType === "short" && (
+                <div className="rounded-xl border border-purple-500/20 bg-purple-950/20 p-3.5 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <label className="text-xs font-semibold uppercase tracking-wider text-purple-200">
+                      Phong cách kể chuyện (AI Script Style)
+                    </label>
+                    <span className="text-[10px] font-mono text-purple-300/70 bg-purple-500/20 px-1.5 py-0.5 rounded">
+                      NamMinhNeural
+                    </span>
+                  </div>
+
+                  <select
+                    value={storyStyle}
+                    onChange={(e) =>
+                      setStoryStyle(
+                        e.target.value as "dramatic" | "humorous" | "romantic",
+                      )
+                    }
+                    className="w-full rounded-lg border border-purple-500/30 bg-[#161320] px-3 py-2 text-xs font-medium text-white focus:border-purple-400 focus:outline-none cursor-pointer"
+                  >
+                    <option value="dramatic">
+                      ⚡ dramatic — Kịch tính / Gay cấn (Mặc định)
+                    </option>
+                    <option value="humorous">
+                      🎭 humorous — Hài hước / Cà khịa
+                    </option>
+                    <option value="romantic">
+                      💖 romantic — Lãng mạn / Ngọt ngào
+                    </option>
+                  </select>
+
+                  <p className="text-[11px] text-purple-200/60 leading-relaxed">
+                    {storyStyle === "dramatic" &&
+                      "Nhịp câu ngắn, dồn dập, đẩy mạnh mâu thuẫn cao trào và tình thế ngặt nghèo."}
+                    {storyStyle === "humorous" &&
+                      "Từ lóng dí dỏm, châm biếm sâu cay biểu cảm và tình huống khó đỡ của nhân vật."}
+                    {storyStyle === "romantic" &&
+                      "Giọng văn nhẹ nhàng, sâu lắng, tập trung vào rung động cảm xúc ngọt ngào."}
+                  </p>
+                </div>
+              )}
+
+              {createError && (
+                <p className="text-xs text-rose-400 bg-rose-500/10 border border-rose-500/20 px-3 py-1.5 rounded-lg">
+                  {createError}
+                </p>
+              )}
+
+              {/* Buttons */}
+              <div className="flex items-center justify-end gap-2.5 pt-3 border-t border-white/10">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)}
+                  className="px-4 py-2 rounded-xl text-xs font-medium text-white/60 hover:text-white hover:bg-white/10 transition"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  disabled={isCreating}
+                  className="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-xs transition shadow-lg shadow-purple-950/50 disabled:opacity-50 flex items-center gap-2 cursor-pointer"
+                >
+                  {isCreating ? (
+                    <>
+                      <div className="h-3 w-3 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                      <span>Đang tạo...</span>
+                    </>
+                  ) : (
+                    <span>🚀 Tạo Dự Án Ngay</span>
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

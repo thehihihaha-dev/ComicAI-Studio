@@ -12,6 +12,7 @@ type Project = {
 export default function NewProjectPage() {
   const [name, setName] = useState("");
   const [contentType, setContentType] = useState("short");
+  const [storyStyle, setStoryStyle] = useState<"dramatic" | "humorous" | "romantic">("dramatic");
   const [message, setMessage] = useState("");
   const [projects, setProjects] = useState<Project[]>([]);
 
@@ -30,6 +31,7 @@ export default function NewProjectPage() {
         body: JSON.stringify({
           name: name,
           content_type: contentType,
+          story_style: contentType === "short" ? storyStyle : undefined,
         }),
       });
       const data = await response.json();
@@ -95,8 +97,35 @@ export default function NewProjectPage() {
           >
             <option value="short">Short</option>
             <option value="long">Long</option>
+            <option value="short">Short (9:16 Shorts/TikTok)</option>
+            <option value="long">Long (16:9 YouTube)</option>
           </select>
         </div>
+
+        {contentType === "short" && (
+          <div className="mt-6 rounded-lg border border-purple-500/20 bg-purple-950/20 p-4">
+            <label className="mb-2 block text-sm font-medium text-purple-200">
+              Phong cách kể chuyện (AI Script Style)
+            </label>
+            <select
+              value={storyStyle}
+              onChange={(e) =>
+                setStoryStyle(
+                  e.target.value as "dramatic" | "humorous" | "romantic",
+                )
+              }
+              className="w-full rounded-lg border border-purple-500/30 bg-[#161320] px-4 py-3 text-white outline-none cursor-pointer"
+            >
+              <option value="dramatic">⚡ dramatic — Kịch tính / Gay cấn (Mặc định)</option>
+              <option value="humorous">🎭 humorous — Hài hước / Cà khịa</option>
+              <option value="romantic">💖 romantic — Lãng mạn / Ngọt ngào</option>
+            </select>
+            <p className="mt-2 text-xs text-purple-300/60">
+              Giọng đọc trí tuệ nhân tạo: vi-VN-NamMinhNeural (+12% rate)
+            </p>
+          </div>
+        )}
+
         <button
           onClick={createProject}
           className="mt-8 rounded-lg bg-white px-5 py-3 font-medium text-black transition hover:bg-white/90"
