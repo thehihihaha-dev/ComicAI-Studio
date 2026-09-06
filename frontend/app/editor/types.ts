@@ -26,6 +26,7 @@ export interface VisualClip {
   end_time: number;
   duration: number;
   shot_type: string;
+  image_path?: string;
   motion: MotionConfig;
   background: BackgroundConfig;
 }
@@ -88,4 +89,3 @@ export interface GeneratedScriptResponse {
   total_duration: number;
   segments: ScriptSegment[];
 }
-

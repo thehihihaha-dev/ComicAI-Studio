@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -33,3 +33,24 @@ class StoryEvidenceAdd(StoryEvidenceResolution):
 class GenerateScriptRequest(BaseModel):
     story_style: Literal["humorous", "dramatic", "romantic"] = "dramatic"
     target_duration: int = Field(default=45, ge=10, le=300)
+
+
+class IngestChapterRequest(BaseModel):
+    chapter_dir: str | None = None
+    image_paths: list[str] | None = None
+
+
+class AutoAlignChapterRequest(BaseModel):
+    story_style: Literal["dramatic", "humorous", "romantic"] = "dramatic"
+    target_duration: int = Field(default=45, ge=10, le=300)
+    target_panel_count: int = Field(default=8, ge=6, le=10)
+    custom_script: dict[str, Any] | None = None
+
+
+class ProjectRenderRequest(BaseModel):
+    timeline: dict[str, Any] | None = None
+    output_filename: str | None = None
+    bgm_path: str | None = None
+    story_style: Literal["dramatic", "humorous", "romantic"] = "dramatic"
+
+

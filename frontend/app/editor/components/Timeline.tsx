@@ -62,7 +62,11 @@ export default function Timeline({
         badge: "🎣 HOOK",
       };
     }
-    if (s.includes("CTA") || s.includes("CALL_TO_ACTION") || s.includes("ENDING")) {
+    if (
+      s.includes("CTA") ||
+      s.includes("CALL_TO_ACTION") ||
+      s.includes("ENDING")
+    ) {
       return {
         bg: "bg-[#221b12] border-amber-500/35 hover:border-amber-500/55 text-zinc-100",
         accent: "text-amber-300",
@@ -268,7 +272,6 @@ export default function Timeline({
                     <span
                       className={`truncate font-mono uppercase tracking-wide text-xs font-bold ${theme.accent}`}
                     >
-                      {clip.speaker_label}
                       {theme.badge || clip.speaker_label}
                     </span>
                     <span className="text-[10px] font-mono opacity-60 shrink-0 ml-1.5">
@@ -283,7 +286,6 @@ export default function Timeline({
             })}
           </div>
 
-          {/* 3. Track 2: BGM (Nhạc nền Manga) */}
           {/* 3. Track 2: BGM (Nhạc nền Manga & Audio Ducking) */}
           <div className="flex-1 min-h-0 relative border-b border-white/[0.06] px-1 py-1.5">
             {/* Base BGM Container */}
@@ -291,7 +293,6 @@ export default function Timeline({
               className="absolute inset-y-1.5 rounded-lg border border-emerald-500/25 bg-[#111815] text-zinc-200 px-3 py-2 flex items-center justify-between overflow-hidden cursor-pointer shadow-sm hover:border-emerald-500/40 transition"
               style={{ left: "0%", right: "0%" }}
             >
-              <div className="flex flex-col justify-center h-full min-w-0 mr-4">
               <div className="flex flex-col justify-center h-full min-w-0 mr-4 z-0">
                 <div className="flex items-center gap-2">
                   <span className="text-sm">🎵</span>
@@ -318,12 +319,12 @@ export default function Timeline({
                 </div>
                 <span className="text-[10px] text-zinc-400 font-mono mt-0.5 truncate">
                   Bản phối lofi cảm xúc tự động lặp lại theo độ dài trang truyện
-                  Tự động hạ xuống 25% khi có giọng nói NamMinh và hồi phục 100% khi nghỉ
+                  Tự động hạ xuống 25% khi có giọng nói NamMinh và hồi phục 100%
+                  khi nghỉ
                 </span>
               </div>
 
               {/* Decorative Audio Waveform */}
-              <div className="flex items-center gap-1 opacity-50 pointer-events-none shrink-0 pr-2">
               <div className="flex items-center gap-1 opacity-50 pointer-events-none shrink-0 pr-2 z-0">
                 <span className="w-[2px] h-3 bg-emerald-400/80 rounded-full animate-pulse" />
                 <span className="w-[2px] h-6 bg-emerald-400/80 rounded-full" />

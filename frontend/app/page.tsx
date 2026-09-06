@@ -40,7 +40,9 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [projectName, setProjectName] = useState("");
   const [contentType, setContentType] = useState<"short" | "long">("short");
-  const [storyStyle, setStoryStyle] = useState<"dramatic" | "humorous" | "romantic">("dramatic");
+  const [storyStyle, setStoryStyle] = useState<
+    "dramatic" | "humorous" | "romantic"
+  >("dramatic");
   const [isCreating, setIsCreating] = useState(false);
   const [createError, setCreateError] = useState("");
 
@@ -181,9 +183,6 @@ export default function Home() {
           </div>
         </header>
 
-        <Link
-          href="/new-project"
-          className="group mt-8 flex min-h-36 items-center justify-center rounded-2xl border border-purple-500/20 bg-zinc-900/70 py-6 px-8 text-center transition hover:border-purple-500/60 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] cursor-pointer backdrop-blur-sm"
         <button
           type="button"
           onClick={() => {
@@ -203,7 +202,6 @@ export default function Home() {
               Bắt đầu một video truyện tranh mới
             </p>
           </div>
-        </Link>
         </button>
 
         <section className="mt-12">

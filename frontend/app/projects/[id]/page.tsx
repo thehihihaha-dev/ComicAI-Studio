@@ -243,6 +243,8 @@ export default function ProjectWorkspacePage({
   const [isExportOpen, setIsExportOpen] = useState<boolean>(false);
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [pageLoading, setPageLoading] = useState<boolean>(false);
+  const [isGeneratingShort, setIsGeneratingShort] = useState<boolean>(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const cachedContractsRef = useRef<Record<number, TimelineContract>>({});
@@ -520,6 +522,63 @@ export default function ProjectWorkspacePage({
     }
   };
 
+  const showToastNotification = (msg: string) => {
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToastMessage((prev) => (prev === msg ? null : prev));
+    }, 4500);
+  };
+
+  const handleAutoGenerateShort = async (styleOverride?: string) => {
+    if (isGeneratingShort) return;
+    setIsGeneratingShort(true);
+
+    try {
+      const res = await fetch(
+        `http://127.0.0.1:8000/api/projects/${projectId}/auto-align-chapter`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            story_style: styleOverride || "dramatic",
+            target_duration: 45,
+            target_panel_count: 8,
+          }),
+        },
+      );
+
+      if (!res.ok) {
+        throw new Error(`Auto-align API responded with status ${res.status}`);
+      }
+
+      const newTimeline: TimelineContract = await res.json();
+      setTimeline(newTimeline);
+      setCurrentTime(0);
+      setIsPlaying(false);
+
+      if (newTimeline.visual_clips.length > 0) {
+        setSelectedClipId(newTimeline.visual_clips[0].clip_id);
+      }
+
+      const totalPanels = newTimeline.visual_clips.length;
+      const totalPages =
+        (newTimeline.metadata as Record<string, unknown>)
+          ?.total_chapter_pages || pages.length;
+      const durationSec = newTimeline.total_duration.toFixed(1);
+
+      showToastNotification(
+        `⚡ Đã chọn ${totalPanels} panel đắt giá nhất từ ${totalPages} trang truyện (Thời lượng: ${durationSec}s)!`,
+      );
+    } catch (err) {
+      console.error("Failed to auto-generate short from chapter:", err);
+      showToastNotification(
+        "⚠️ Không thể tự động tạo video ngắn từ chapter. Vui lòng thử lại!",
+      );
+    } finally {
+      setIsGeneratingShort(false);
+    }
+  };
+
   // Helper: Format seconds to MM:SS
   const formatTimecode = (sec: number) => {
     const m = Math.floor(sec / 60);
@@ -589,8 +648,8 @@ export default function ProjectWorkspacePage({
           </span>
         </div>
 
-        {/* Action Controls: Ẩn input file, giữ DUY NHẤT nút tím Xuất Video */}
-        <div className="flex items-center gap-3">
+        {/* Action Controls: Nút Tạo Video Ngắn Tự Động & Nút Xuất Video */}
+        <div className="flex items-center gap-2.5">
           <input
             ref={fileInputRef}
             type="file"
@@ -598,6 +657,26 @@ export default function ProjectWorkspacePage({
             onChange={handleFileUpload}
             className="hidden"
           />
+
+          <button
+            type="button"
+            onClick={() => handleAutoGenerateShort()}
+            disabled={isGeneratingShort}
+            className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 via-violet-600 to-fuchsia-600 hover:from-amber-400 hover:via-violet-500 hover:to-fuchsia-500 text-xs font-bold text-white shadow-lg shadow-amber-500/20 transition flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+            title="Tự động bóc tách panel cả chapter, chọn 6-10 panel đắt giá và khớp kịch bản AI giọng NamMinh"
+          >
+            {isGeneratingShort ? (
+              <>
+                <div className="h-3.5 w-3.5 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                <span>Đang xử lý Chapter...</span>
+              </>
+            ) : (
+              <>
+                <span>⚡</span>
+                <span>Tạo Video Ngắn Tự Động (Full Chapter)</span>
+              </>
+            )}
+          </button>
 
           <button
             type="button"
@@ -609,6 +688,22 @@ export default function ProjectWorkspacePage({
           </button>
         </div>
       </header>
+
+      {/* Toast Notification Banner */}
+      {toastMessage && (
+        <div className="fixed top-16 right-6 z-50 animate-bounce-in max-w-md bg-zinc-900/95 border border-amber-500/50 text-amber-200 px-4 py-3 rounded-xl shadow-2xl shadow-black/80 backdrop-blur-md flex items-center gap-3">
+          <span className="text-xl">⚡</span>
+          <p className="text-xs font-medium leading-relaxed text-white">
+            {toastMessage}
+          </p>
+          <button
+            onClick={() => setToastMessage(null)}
+            className="text-white/40 hover:text-white text-xs ml-auto cursor-pointer"
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {/* 2. Cấu trúc Layout 2 khối chính (Cột trái độc lập h-full, Cột phải chia 2 tầng) */}
       <div className="flex-1 min-h-0 flex flex-row overflow-hidden">
@@ -738,6 +833,8 @@ export default function ProjectWorkspacePage({
                 onUpdateTimeline={(updated) => setTimeline(updated)}
                 onSeek={(t) => setCurrentTime(t)}
                 onSelectClip={(id) => setSelectedClipId(id)}
+                onAutoGenerateShort={handleAutoGenerateShort}
+                isGeneratingShort={isGeneratingShort}
               />
             </aside>
           </div>

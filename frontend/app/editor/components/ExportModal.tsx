@@ -25,16 +25,33 @@ export default function ExportModal({
     setErrorMsg(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/v1/editor/render", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      let res = await fetch(
+        `http://127.0.0.1:8000/api/projects/${timeline.project_id}/render`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            timeline: timeline,
+            output_filename: `render_${timeline.project_id}_p${timeline.page_id}.mp4`,
+          }),
         },
-        body: JSON.stringify({
-          timeline: timeline,
-          output_filename: `render_${timeline.project_id}_p${timeline.page_id}.mp4`,
-        }),
-      });
+      );
+
+      if (!res.ok) {
+        // Fallback to legacy editor route if project render returns error
+        res = await fetch("http://127.0.0.1:8000/api/v1/editor/render", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            timeline: timeline,
+            output_filename: `render_${timeline.project_id}_p${timeline.page_id}.mp4`,
+          }),
+        });
+      }
 
       if (!res.ok) {
         const errText = await res.text();
@@ -63,7 +80,9 @@ export default function ExportModal({
         <div className="flex items-center justify-between border-b border-white/10 pb-4">
           <div className="flex items-center gap-2">
             <span className="text-xl">🎬</span>
-            <h2 className="text-base font-bold">Xuất Video Hoạt Họa 9:16 (Export MP4)</h2>
+            <h2 className="text-base font-bold">
+              Xuất Video Hoạt Họa 9:16 (Export MP4)
+            </h2>
           </div>
           <button
             onClick={onClose}
@@ -77,25 +96,35 @@ export default function ExportModal({
         {!renderResult ? (
           <div className="flex flex-col gap-4 text-xs">
             <p className="text-white/70 leading-relaxed">
-              Hệ thống sẽ tổng hợp toàn bộ các phân cảnh camera Ken Burns, phông nền mờ Gaussian và track giọng đọc Microsoft Neural thành tệp video MP4 dọc chuẩn phát sóng TikTok / Reels / Shorts.
+              Hệ thống sẽ tổng hợp toàn bộ các phân cảnh camera Ken Burns, phông
+              nền mờ Gaussian và track giọng đọc Microsoft Neural thành tệp
+              video MP4 dọc chuẩn phát sóng TikTok / Reels / Shorts.
             </p>
 
             <div className="bg-white/5 rounded-lg p-3 border border-white/10 grid grid-cols-2 gap-2 text-[11px] font-mono">
               <div>
                 <span className="text-white/40 block">Độ phân giải:</span>
-                <span className="text-white font-semibold">1080 x 1920 (9:16 Dọc)</span>
+                <span className="text-white font-semibold">
+                  1080 x 1920 (9:16 Dọc)
+                </span>
               </div>
               <div>
                 <span className="text-white/40 block">Tốc độ khung hình:</span>
-                <span className="text-white font-semibold">{timeline.fps} FPS</span>
+                <span className="text-white font-semibold">
+                  {timeline.fps} FPS
+                </span>
               </div>
               <div>
                 <span className="text-white/40 block">Thời lượng:</span>
-                <span className="text-white font-semibold">{timeline.total_duration.toFixed(2)}s</span>
+                <span className="text-white font-semibold">
+                  {timeline.total_duration.toFixed(2)}s
+                </span>
               </div>
               <div>
                 <span className="text-white/40 block">Bộ mã hóa:</span>
-                <span className="text-white font-semibold">H.264 / AAC 128k</span>
+                <span className="text-white font-semibold">
+                  H.264 / AAC 128k
+                </span>
               </div>
             </div>
 
@@ -179,4 +208,3 @@ export default function ExportModal({
     </div>
   );
 }
-

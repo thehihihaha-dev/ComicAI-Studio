@@ -3,11 +3,14 @@ from datetime import datetime, timezone
 
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, File, UploadFile
 
 from app.schemas.projects import (
+    AutoAlignChapterRequest,
     GenerateScriptRequest,
+    IngestChapterRequest,
     ProjectCreate,
+    ProjectRenderRequest,
     ShortScriptCreate,
     ShortScriptSegmentEdit,
     StoryEventEdit,
@@ -20,10 +23,64 @@ try:
         GeneratedScriptResponse,
         generate_script,
     )
+    from src.services.chapter_service import (
+        ChapterMetadata,
+        CHAPTER_METADATA_CACHE,
+        ingest_chapter,
+    )
+    from src.services.smart_selector import (
+        SelectedPanel,
+        select_keyframe_panels,
+        convert_to_visual_clips,
+    )
+    from src.services.unified_tts import (
+        UnifiedTTSManager,
+        UNIFIED_VOICE_ID,
+    )
+    from src.services.audio_ducking import (
+        generate_ducking_keyframes,
+        build_ffmpeg_ducking_filter,
+    )
+    from src.services.video_renderer import (
+        VideoRenderer,
+    )
+    from src.api.timeline_schema import (
+        AudioClip,
+        RenderResponse,
+        TimelineContract,
+        VisualClip,
+    )
 except ModuleNotFoundError:
     from backend.src.services.script_generator import (
         GeneratedScriptResponse,
         generate_script,
+    )
+    from backend.src.services.chapter_service import (
+        ChapterMetadata,
+        CHAPTER_METADATA_CACHE,
+        ingest_chapter,
+    )
+    from backend.src.services.smart_selector import (
+        SelectedPanel,
+        select_keyframe_panels,
+        convert_to_visual_clips,
+    )
+    from backend.src.services.unified_tts import (
+        UnifiedTTSManager,
+        UNIFIED_VOICE_ID,
+    )
+    from backend.src.services.audio_ducking import (
+        generate_ducking_keyframes,
+        build_ffmpeg_ducking_filter,
+    )
+    from backend.src.services.video_renderer import (
+        VideoRenderer,
+    )
+    from backend.src.api.timeline_schema import (
+        AudioClip,
+        RenderResponse,
+        TimelineContract,
+        VisualClip,
     )
 from app.database import SessionLocal
 from app.models.asset import Asset
@@ -120,12 +177,6 @@ def get_projects():
 @router.post("/")
 def create_project(project: ProjectCreate):
     new_project = Project(
-    id=str(uuid4()),
-    name=project.name,
-    content_type=project.content_type,
-    status="created",
-    created_at=datetime.now(timezone.utc),
-)
         id=str(uuid4()),
         name=project.name,
         content_type=project.content_type,
@@ -133,10 +184,6 @@ def create_project(project: ProjectCreate):
         created_at=datetime.now(timezone.utc),
     )
     db = SessionLocal()
-    db.add(new_project)
-    db.commit()
-    db.refresh(new_project)
-    db.close()
     try:
         db.add(new_project)
         db.commit()
@@ -617,3 +664,248 @@ def generate_project_script(
         db.close()
 
     return script
+
+
+@router.post("/{project_id}/ingest-chapter")
+async def ingest_chapter_endpoint(
+    project_id: str,
+    request: IngestChapterRequest | None = None,
+):
+    try:
+        db = SessionLocal()
+    except Exception:
+        db = None
+
+    try:
+        saved_paths: list[Path] = []
+
+        if request:
+            if request.image_paths:
+                saved_paths = [Path(p) for p in request.image_paths if Path(p).is_file()]
+            elif request.chapter_dir:
+                d = Path(request.chapter_dir)
+                if d.is_dir():
+                    supported = {".jpg", ".jpeg", ".png", ".webp"}
+                    saved_paths = sorted([p for p in d.iterdir() if p.suffix.lower() in supported])
+
+        # Fallback: check existing assets for project
+        if not saved_paths and db is not None:
+            try:
+                assets = db.query(Asset).filter(Asset.project_id == project_id).order_by(Asset.page_order.asc()).all()
+                for asset in assets:
+                    p = Path(asset.file_path)
+                    if not p.is_absolute():
+                        p = Path(__file__).resolve().parents[2] / asset.file_path
+                    if p.is_file():
+                        saved_paths.append(p)
+            except Exception:
+                pass
+
+        # Fallback 2: check uploads dir
+        if not saved_paths:
+            uploads_dir = Path(__file__).resolve().parents[2] / "uploads"
+            sample_files = sorted(list(uploads_dir.glob(f"{DEFAULT_PROJECT_ID}*.jpg")))
+            if sample_files:
+                saved_paths = sample_files[:10]
+
+        if not saved_paths:
+            raise HTTPException(status_code=400, detail="No chapter image files found for ingestion")
+
+        metadata = ingest_chapter(
+            project_id=project_id,
+            chapter_folder_or_files=saved_paths,
+            db=db,
+        )
+        return metadata
+    finally:
+        if db is not None:
+            try:
+                db.close()
+            except Exception:
+                pass
+
+
+@router.post("/{project_id}/auto-align-chapter")
+async def auto_align_chapter_endpoint(
+    project_id: str,
+    request: AutoAlignChapterRequest | None = None,
+):
+    if request is None:
+        request = AutoAlignChapterRequest()
+
+    try:
+        db = SessionLocal()
+    except Exception:
+        db = None
+
+    try:
+        chapter_dict = CHAPTER_METADATA_CACHE.get(project_id)
+        if chapter_dict:
+            chapter_meta = ChapterMetadata(**chapter_dict)
+        else:
+            asset_paths: list[Path] = []
+            if db is not None:
+                try:
+                    assets = db.query(Asset).filter(Asset.project_id == project_id).order_by(Asset.page_order.asc()).all()
+                    for a in assets:
+                        p = Path(a.file_path)
+                        if not p.is_absolute():
+                            p = Path(__file__).resolve().parents[2] / a.file_path
+                        if p.is_file():
+                            asset_paths.append(p)
+                except Exception:
+                    pass
+
+            if not asset_paths:
+                uploads_dir = Path(__file__).resolve().parents[2] / "uploads"
+                asset_paths = sorted(list(uploads_dir.glob(f"{DEFAULT_PROJECT_ID}*.jpg")))[:10]
+
+            if not asset_paths:
+                raise HTTPException(status_code=404, detail="Chapter metadata not found. Please ingest chapter first.")
+            chapter_meta = ingest_chapter(project_id, asset_paths, db=db)
+
+        # 2. Get or generate script
+        if request.custom_script:
+            script = GeneratedScriptResponse(**request.custom_script)
+        else:
+            script = generate_script(
+                ocr_texts=chapter_meta.all_ocr_texts,
+                story_style=request.story_style,
+                target_duration_sec=request.target_duration,
+                project_id=project_id,
+            )
+
+        # 3. Select keyframe panels
+        selected_panels = select_keyframe_panels(
+            chapter_data=chapter_meta,
+            script=script,
+            target_count=request.target_panel_count,
+        )
+
+        # 4. Synthesize voice audio track
+        tts_manager = UnifiedTTSManager(offline_fallback=True)
+        out_dir = Path(__file__).resolve().parents[2] / "uploads" / "audio" / project_id
+        out_dir.mkdir(parents=True, exist_ok=True)
+        synthesized_segments = await tts_manager.synthesize_script(script, out_dir)
+
+        # 5. Build audio clips and track intervals
+        audio_clips: list[AudioClip] = []
+        voice_intervals: list[tuple[float, float]] = []
+
+        for seg in synthesized_segments:
+            clip = AudioClip(
+                clip_id=f"AUD_{seg['segment_id']}",
+                dialogue_id=seg["segment_id"],
+                speaker_label="NAMMINH",
+                voice_id=UNIFIED_VOICE_ID,
+                text=seg["text"],
+                file_path=seg["file_path"],
+                start_time=seg["start_time"],
+                end_time=seg["end_time"],
+                duration=seg["duration"],
+            )
+            audio_clips.append(clip)
+            voice_intervals.append((seg["start_time"], seg["end_time"]))
+
+        # 6. Audio Ducking
+        total_audio_duration = audio_clips[-1].end_time if audio_clips else script.total_duration
+        ducking_keyframes = generate_ducking_keyframes(
+            voice_intervals=voice_intervals,
+            total_duration=total_audio_duration,
+        )
+        ducking_filter = build_ffmpeg_ducking_filter(voice_intervals=voice_intervals)
+
+        # 7. Visual Clips
+        visual_clips = convert_to_visual_clips(selected_panels)
+        if visual_clips and visual_clips[-1].end_time < total_audio_duration:
+            visual_clips[-1].end_time = total_audio_duration
+            visual_clips[-1].duration = round(total_audio_duration - visual_clips[-1].start_time, 3)
+
+        source_img = chapter_meta.pages[0].image_path if chapter_meta.pages else "chapter_01.jpg"
+
+        timeline = TimelineContract(
+            version="1.0.0",
+            project_id=project_id,
+            page_id=1,
+            source_image_path=source_img,
+            image_dimensions=(900, 1280),
+            canvas_size=(1080, 1920),
+            fps=30.0,
+            total_duration=round(max(total_audio_duration, visual_clips[-1].end_time if visual_clips else 0.0), 3),
+            visual_clips=visual_clips,
+            audio_clips=audio_clips,
+            metadata={
+                "chapter_id": chapter_meta.chapter_id,
+                "total_chapter_pages": chapter_meta.total_pages,
+                "total_chapter_panels": chapter_meta.total_panels,
+                "selected_panel_count": len(selected_panels),
+                "story_style": request.story_style,
+                "ducking": {
+                    "keyframes": ducking_keyframes,
+                    "ffmpeg_filter": ducking_filter,
+                    "voice_intervals": voice_intervals,
+                },
+            },
+        )
+
+        return timeline
+    finally:
+        db.close()
+
+
+@router.post(
+    "/{project_id}/render",
+    response_model=RenderResponse,
+    summary="Render Final Broadcast 9:16 Video",
+    description="Synthesizes final broadcast-ready 9:16 vertical MP4 video strictly adhering to TimelineContract.",
+)
+async def render_project_video(
+    project_id: str,
+    payload: ProjectRenderRequest | None = None,
+) -> RenderResponse:
+    """Render 9:16 MP4 video from project timeline or auto-align chapter."""
+    req = payload or ProjectRenderRequest()
+    timeline: TimelineContract
+
+    if req.timeline:
+        timeline = TimelineContract(**req.timeline)
+    else:
+        # Auto-align chapter to generate canonical timeline contract
+        align_req = AutoAlignChapterRequest(
+            story_style=req.story_style,
+        )
+        timeline = await auto_align_chapter_endpoint(project_id, align_req)
+
+    root_dir = Path(__file__).resolve().parents[3]
+    out_dir = root_dir / "artifacts" / "video" / "day20"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    if req.output_filename:
+        safe_fname = Path(req.output_filename).name
+        if not safe_fname.endswith(".mp4"):
+            safe_fname += ".mp4"
+    else:
+        safe_fname = f"render_{project_id}_{uuid4().hex[:8]}.mp4"
+
+    output_path = out_dir / safe_fname
+    renderer = VideoRenderer(
+        canvas_size=timeline.canvas_size,
+        fps=timeline.fps,
+    )
+
+    bgm_p = Path(req.bgm_path) if req.bgm_path else None
+
+    try:
+        render_summary = renderer.render_chapter_video(
+            timeline=timeline,
+            output_path=output_path,
+            bgm_path=bgm_p,
+        )
+        return RenderResponse(**render_summary)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Video rendering failed: {exc}",
+        )
+
+

@@ -41,6 +41,7 @@ class VisualClip(BaseModel):
     end_time: float = Field(..., ge=0.0, description="Timeline end time in seconds")
     duration: float = Field(..., ge=0.0, description="Clip duration in seconds")
     shot_type: str = Field(default="PANEL_SHOT", description="Cinematic shot category (ESTABLISHING, MEDIUM, CLOSEUP, PUNCH)")
+    image_path: str | None = Field(default=None, description="Optional path to source page image for multi-page chapters")
     motion: MotionConfig = Field(default_factory=MotionConfig, description="Camera pan/zoom animation config")
     background: BackgroundConfig = Field(default_factory=BackgroundConfig, description="Backdrop styling config")
 

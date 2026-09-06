@@ -19,6 +19,24 @@ from src.services.audio_ducking import (
     build_ffmpeg_ducking_filter,
 )
 
+from src.services.chapter_service import (
+    ChapterMetadata,
+    PageMetadata,
+    PanelMetadata,
+    ingest_chapter,
+    calculate_panel_visual_score,
+)
+from src.services.smart_selector import (
+    SelectedPanel,
+    select_keyframe_panels,
+    convert_to_visual_clips,
+    MOTION_PRESETS,
+)
+from src.services.video_renderer import (
+    VerticalFrameBuilder,
+    VideoRenderer,
+)
+
 __all__ = [
     "GeneratedScriptResponse",
     "ScriptSegment",
@@ -33,4 +51,16 @@ __all__ = [
     "generate_ducking_volume_timeline",
     "generate_ducking_keyframes",
     "build_ffmpeg_ducking_filter",
+    "ChapterMetadata",
+    "PageMetadata",
+    "PanelMetadata",
+    "ingest_chapter",
+    "calculate_panel_visual_score",
+    "SelectedPanel",
+    "select_keyframe_panels",
+    "convert_to_visual_clips",
+    "MOTION_PRESETS",
+    "VerticalFrameBuilder",
+    "VideoRenderer",
 ]
+

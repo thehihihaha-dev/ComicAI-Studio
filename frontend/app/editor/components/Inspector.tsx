@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { TimelineContract, VisualClip } from "../types";
 import {
   GeneratedScriptResponse,
   ScriptSegment,
@@ -17,24 +16,14 @@ interface InspectorProps {
   onUpdateTimeline: (updatedTimeline: TimelineContract) => void;
   onSeek?: (time: number) => void;
   onSelectClip?: (clipId: string) => void;
+  onAutoGenerateShort?: (
+    style: "dramatic" | "humorous" | "romantic",
+  ) => Promise<void>;
+  isGeneratingShort?: boolean;
 }
 
-interface AIScriptSection {
-  id: string;
-  tag: string;
-  title: string;
-  timeRange: string;
-  text: string;
-}
-
-const DEFAULT_AI_SCRIPT_SECTIONS: AIScriptSection[] = [
 const INITIAL_SCRIPT_SEGMENTS: ScriptSegment[] = [
   {
-    id: "hook",
-    tag: "🎣 HOOK",
-    title: "Mở đầu cuốn hút (3s đầu)",
-    timeRange: "00:00 - 00:03",
-    text: "Ai mà ngờ được người vợ ảo kết hôn trong game suốt 2 năm lại chính là nữ thần Idol vạn người mê ngoài đời thực?!",
     id: "SEG_01",
     section_type: "hook",
     text: "Cứ ngỡ là hôn lễ trong mơ, ai ngờ lại là cái bẫy trí mạng!",
@@ -42,11 +31,6 @@ const INITIAL_SCRIPT_SEGMENTS: ScriptSegment[] = [
     suggested_effect: "punch_zoom",
   },
   {
-    id: "setup",
-    tag: "🎬 SETUP",
-    title: "Thiết lập bối cảnh",
-    timeRange: "00:03 - 00:06",
-    text: "Hôn lễ thánh đường lung linh trong game diễn ra trước sự chứng giám của linh mục. Lời thề ước thủy chung tưởng như chỉ là trò chơi ảo.",
     id: "SEG_02",
     section_type: "body",
     text: "Ngay tại thánh đường trang nghiêm, sự thật kinh hoàng đã chính thức bị vạch trần.",
@@ -54,11 +38,6 @@ const INITIAL_SCRIPT_SEGMENTS: ScriptSegment[] = [
     suggested_effect: "zoom_in",
   },
   {
-    id: "dev",
-    tag: "⚡ DEVELOPMENT",
-    title: "Phát triển cao trào",
-    timeRange: "00:06 - 00:15",
-    text: "Cuộc gặp gỡ ngoài đời thực bất ngờ bùng nổ khi thân phận thực sự của cô dâu được hé lộ, đảo lộn hoàn toàn cuộc sống của chàng game thủ.",
     id: "SEG_03",
     section_type: "body",
     text: "Ánh mắt lạnh lùng đối diện sự tuyệt vọng cùng cực, không ai có thể quay đầu lại được nữa.",
@@ -66,23 +45,11 @@ const INITIAL_SCRIPT_SEGMENTS: ScriptSegment[] = [
     suggested_effect: "pan_down",
   },
   {
-    id: "payoff",
-    tag: "💥 PAYOFF",
-    title: "Nút thắt cảm xúc",
-    timeRange: "00:15 - 00:22",
-    text: 'Khoảnh khắc Rin nghẹn ngào thốt lên "Con xin thề!" đã biến lời hẹn ước ảo thành định mệnh chân thực ngoài đời.',
     id: "SEG_04",
     section_type: "call_to_action",
     text: "Bấm follow ngay để không bỏ lỡ diễn biến nghẹt thở ở chap tiếp theo!",
     estimated_duration: 3.5,
     suggested_effect: "zoom_out",
-  },
-  {
-    id: "ending",
-    tag: "🏁 ENDING",
-    title: "Kết thúc & Kêu gọi",
-    timeRange: "00:22 - 00:26",
-    text: "Liệu tình yêu giữa chàng game thủ bình thường và nữ thần Idol sẽ đi về đâu? Đăng ký kênh để đón xem tập tiếp theo!",
   },
 ];
 
@@ -221,12 +188,12 @@ export default function Inspector({
   onUpdateTimeline,
   onSeek,
   onSelectClip,
+  onAutoGenerateShort,
+  isGeneratingShort = false,
 }: InspectorProps) {
   const [activeTab, setActiveTab] = useState<
     "dialogue" | "ai_script" | "effects"
   >("dialogue");
-  const [aiScript, setAiScript] = useState<AIScriptSection[]>(
-    DEFAULT_AI_SCRIPT_SECTIONS,
   const [storyStyle, setStoryStyle] = useState<
     "dramatic" | "humorous" | "romantic"
   >("dramatic");
@@ -314,7 +281,10 @@ export default function Inspector({
         setSegments(data.segments);
       }
     } catch (err) {
-      console.warn("API call failed, generating localized fallback script:", err);
+      console.warn(
+        "API call failed, generating localized fallback script:",
+        err,
+      );
       // Fallback generator based on selected style
       const fallbackTexts: Record<string, ScriptSegment[]> = {
         dramatic: [
@@ -447,7 +417,10 @@ export default function Inspector({
 
     // Proportionally adjust visual clips if new audio duration extends beyond old duration
     let updatedVisuals = [...timeline.visual_clips];
-    if (newTotalDuration > timeline.total_duration && updatedVisuals.length > 0) {
+    if (
+      newTotalDuration > timeline.total_duration &&
+      updatedVisuals.length > 0
+    ) {
       const scale = newTotalDuration / timeline.total_duration;
       updatedVisuals = updatedVisuals.map((v) => ({
         ...v,
@@ -469,8 +442,6 @@ export default function Inspector({
   };
 
   const handleCopyScript = () => {
-    const fullText = aiScript
-      .map((s) => `[${s.tag} - ${s.title}]\n${s.text}`)
     const fullText = segments
       .map(
         (s) =>
@@ -624,8 +595,6 @@ export default function Inspector({
 
       {/* Tab 2: Kịch bản AI (Review & Tóm tắt cốt truyện kèm Hook) */}
       {activeTab === "ai_script" && (
-        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 [scrollbar-color:rgba(255,255,255,0.14)_transparent] [scrollbar-width:thin]">
-          <div className="flex items-center justify-between pb-1 border-b border-white/[0.08]">
         <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3.5 [scrollbar-color:rgba(255,255,255,0.14)_transparent] [scrollbar-width:thin]">
           {/* Header & Copy */}
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.08]">
@@ -633,8 +602,6 @@ export default function Inspector({
               <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/40">
                 Kịch bản AI Review & Tóm Tắt
               </p>
-              <p className="text-[10px] text-violet-300/80 mt-0.5">
-                Chuẩn cấu trúc video ngắn Short 9:16
               <p className="text-[10px] text-violet-300/80 mt-0.5 flex items-center gap-1.5">
                 <span>🎙️</span>
                 <span>Giọng đọc: vi-VN-NamMinhNeural (+12% rate)</span>
@@ -643,7 +610,6 @@ export default function Inspector({
             <button
               type="button"
               onClick={handleCopyScript}
-              className="px-2 py-1 rounded bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30 text-[10px] font-medium text-violet-300 transition flex items-center gap-1"
               className="px-2 py-1 rounded bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30 text-[10px] font-medium text-violet-300 transition flex items-center gap-1 cursor-pointer"
             >
               <span>{copied ? "✓ Đã sao chép" : "📋 Sao chép"}</span>
@@ -652,6 +618,29 @@ export default function Inspector({
 
           {/* Thanh điều khiển: Bộ chọn Phong cách & Nút Tạo Kịch Bản */}
           <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3 flex flex-col gap-2.5">
+            {/* One-Click Auto-Generate Short (Full Chapter) */}
+            {onAutoGenerateShort && (
+              <button
+                type="button"
+                onClick={() => onAutoGenerateShort(storyStyle)}
+                disabled={isGeneratingShort}
+                className="w-full py-2.5 px-3 rounded-lg bg-gradient-to-r from-amber-500 via-violet-600 to-fuchsia-600 hover:from-amber-400 hover:via-violet-500 hover:to-fuchsia-500 text-white font-bold text-xs transition shadow-md shadow-purple-950/40 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                title="Tự động bóc tách panel cả chapter, chọn 6-10 panel đắt giá và khớp kịch bản AI giọng NamMinh"
+              >
+                {isGeneratingShort ? (
+                  <>
+                    <div className="h-3.5 w-3.5 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                    <span>Đang xử lý Chapter...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>⚡</span>
+                    <span>Tạo Video Ngắn Tự Động (Full Chapter)</span>
+                  </>
+                )}
+              </button>
+            )}
+
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-semibold text-white/70 uppercase tracking-wider">
                 Phong cách kể chuyện
@@ -732,7 +721,9 @@ export default function Inspector({
             {appliedNotice && (
               <div className="text-[11px] text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 animate-fadeIn">
                 <span>✓</span>
-                <span>Đã cập nhật rãnh Thoại & Audio Ducking trên Timeline!</span>
+                <span>
+                  Đã cập nhật rãnh Thoại & Audio Ducking trên Timeline!
+                </span>
               </div>
             )}
             {generateError && (
@@ -744,15 +735,6 @@ export default function Inspector({
 
           {/* Danh sách các phân đoạn ScriptSegment */}
           <div className="space-y-3">
-            {aiScript.map((sec, idx) => (
-              <div
-                key={sec.id}
-                className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-3 transition hover:border-white/20"
-              >
-                <div className="flex items-center justify-between gap-2 mb-1.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-semibold text-violet-300">
-                      {sec.tag}
             {segments.map((seg, idx) => {
               const isHook = seg.section_type === "hook";
               const isCTA =
@@ -790,13 +772,7 @@ export default function Inspector({
                     <span className="text-[10px] font-mono text-white/50">
                       ⏱️ {seg.estimated_duration.toFixed(1)}s
                     </span>
-                    <span className="text-[11px] text-white/60 font-medium">
-                      · {sec.title}
-                    </span>
                   </div>
-                  <span className="text-[10px] font-mono text-white/40">
-                    {sec.timeRange}
-                  </span>
 
                   <textarea
                     rows={3}
@@ -810,18 +786,6 @@ export default function Inspector({
                     className="w-full bg-black/20 rounded-md p-2 border border-white/5 focus:border-violet-500 text-xs text-white/90 focus:text-white outline-none resize-none leading-relaxed transition"
                   />
                 </div>
-                <textarea
-                  rows={3}
-                  value={sec.text}
-                  onChange={(e) => {
-                    const next = [...aiScript];
-                    next[idx] = { ...next[idx], text: e.target.value };
-                    setAiScript(next);
-                  }}
-                  className="w-full bg-transparent border-0 border-b border-transparent focus:border-violet-500 text-xs text-white/80 focus:text-white p-0 outline-none resize-none leading-relaxed transition"
-                />
-              </div>
-            ))}
               );
             })}
           </div>
