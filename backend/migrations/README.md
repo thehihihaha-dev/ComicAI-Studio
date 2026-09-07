@@ -30,8 +30,4 @@ Migration `006` adds project-scoped OCR benchmark review state and immutable cro
 provenance. Authoritative text remains in the existing Ground Truth table.
 
 Migration `007` adds source-revision-bound human reading-order benchmark reviews.
-Human sequences remain separate from immutable Reader V2 predictions.
-8. `008_reader_correctness_reviews.sql` — combined 11.11 Reading Order and blinded OCR Human GT queue.
-9. `009_reader_logical_reviews.sql` — versioned logical-region Reading Order GT, isolated from incompatible fragment-level GT.
-10. `010_reader_click_order_gt.sql` — click-to-order logical Human GT and independent logical transcription fields.
-11. `011_reader_router_validation_reviews.sql` — blinded, out-of-sample 11.13 OCR validation annotations isolated from production and prior Human GT.
+Human sequences remain separate from immutable Reader V2 predictions. 8. `008_reader_correctness_reviews.sql` — combined 11.11 Reading Order and blinded OCR Human GT queue. 9. `009_reader_logical_reviews.sql` — versioned logical-region Reading Order GT, isolated from incompatible fragment-level GT. 10. `010_reader_click_order_gt.sql` — click-to-order logical Human GT and independent logical transcription fields. 11. `011_reader_router_validation_reviews.sql` — blinded, out-of-sample 11.13 OCR validation annotations isolated from production and prior Human GT. 12. `012_panel_ground_truth_reviews.sql` — panel segmentation ground truth reviews. 13. `013_project_timeline_persistence.sql` — adds timeline_data and script_content JSONB fields to projects.

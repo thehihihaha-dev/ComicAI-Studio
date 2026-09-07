@@ -13,6 +13,13 @@ from pathlib import Path
 import re
 import uuid
 from typing import Any, Sequence
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+if str(ROOT / "backend") not in sys.path:
+    sys.path.insert(0, str(ROOT / "backend"))
 
 import cv2
 import numpy as np
@@ -24,11 +31,13 @@ logger = logging.getLogger(__name__)
 CHAPTER_METADATA_CACHE: dict[str, dict[str, Any]] = {}
 
 
+
 class PanelMetadata(BaseModel):
     """Metadata for an individual comic panel inside a page."""
     panel_id: str = Field(..., description="Deterministic panel identifier")
     page_order: int = Field(..., description="1-indexed page sequence number")
     image_path: str = Field(..., description="Absolute or relative file path to page image")
+    page_image_path: str = Field(default="", description="Alias to source page image path")
     bbox: list[int] = Field(..., description="[x1, y1, x2, y2] in original image pixel coordinates")
     bbox_normalized: list[float] = Field(..., description="[x1/w, y1/h, x2/w, y2/h] (0.0 to 1.0)")
     area: int = Field(..., description="Bounding box pixel area")
@@ -37,6 +46,12 @@ class PanelMetadata(BaseModel):
     dialogues: list[str] = Field(default_factory=list, description="Extracted dialogue texts in this panel")
     visual_score: float = Field(default=0.5, description="Visual prominence/saliency score (0.0 to 1.0)")
     has_speech: bool = Field(default=False, description="True if panel contains dialogue bubbles")
+
+    def model_post_init(self, __context: Any) -> None:
+        if not self.page_image_path and self.image_path:
+            self.page_image_path = self.image_path
+        elif not self.image_path and self.page_image_path:
+            self.image_path = self.page_image_path
 
 
 class PageMetadata(BaseModel):
@@ -178,6 +193,17 @@ def ingest_chapter(
                 "state": "DETECTED",
             }]
 
+        # Format image path as web-accessible relative path (e.g. uploads/filename.jpg)
+        try:
+            rel_fpath = str(fpath.relative_to(ROOT / "backend"))
+        except ValueError:
+            try:
+                rel_fpath = str(fpath.relative_to(ROOT))
+            except ValueError:
+                rel_fpath = fpath.name
+                if "uploads" in str(fpath):
+                    rel_fpath = f"uploads/{fpath.name}"
+
         for p_idx, p_data in enumerate(raw_panels, start=1):
             bbox = p_data.get("bbox", [0, 0, width, height])
             state = p_data.get("state", "DETECTED")
@@ -207,7 +233,8 @@ def ingest_chapter(
             panel_meta = PanelMetadata(
                 panel_id=pid,
                 page_order=idx,
-                image_path=str(fpath),
+                image_path=rel_fpath,
+                page_image_path=rel_fpath,
                 bbox=bbox,
                 bbox_normalized=norm_bbox,
                 area=area,
@@ -224,7 +251,7 @@ def ingest_chapter(
 
         page_meta = PageMetadata(
             page_order=idx,
-            image_path=str(fpath),
+            image_path=rel_fpath,
             width=width,
             height=height,
             panels=page_panels,
@@ -236,25 +263,40 @@ def ingest_chapter(
     if db is not None:
         try:
             from app.models.asset import Asset
+            import json
 
             for p_meta in pages:
                 rel_path = p_meta.image_path
                 existing = (
                     db.query(Asset)
-                    .filter(Asset.project_id == project_id, Asset.page_order == p_meta.page_order)
+                    .filter(
+                        Asset.project_id == project_id,
+                        (Asset.page_order == p_meta.page_order) | (Asset.filename == Path(p_meta.image_path).name),
+                    )
                     .first()
                 )
                 if existing:
-                    if existing.ocr_text:
+                    if existing.ocr_text and existing.ocr_text not in all_ocr_texts:
                         p_meta.ocr_texts.append(existing.ocr_text)
                         all_ocr_texts.append(existing.ocr_text)
+                    if existing.dialogues:
+                        try:
+                            d_list = json.loads(existing.dialogues)
+                            if isinstance(d_list, list):
+                                for d in d_list:
+                                    t = d.get("clean_text") or d.get("raw_text") or d.get("text")
+                                    if t and t not in all_ocr_texts:
+                                        p_meta.ocr_texts.append(t)
+                                        all_ocr_texts.append(t)
+                        except Exception:
+                            pass
                 else:
                     new_asset = Asset(
                         id=str(uuid.uuid4()),
                         project_id=project_id,
                         filename=Path(p_meta.image_path).name,
                         file_type="image/jpeg",
-                        file_path=rel_path,
+                        file_path=p_meta.image_path,
                         page_order=p_meta.page_order,
                         status="ready",
                         created_at=datetime.now(timezone.utc),

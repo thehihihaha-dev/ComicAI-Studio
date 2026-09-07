@@ -49,16 +49,28 @@ app.include_router(reader_router_validation_reviews_router)
 app.include_router(panel_ground_truth_reviews_router)
 app.include_router(editor_router)
 
+from starlette.responses import Response
+from typing import Any
+
+class CORSStaticFiles(StaticFiles):
+    """StaticFiles wrapper adding CORS headers for cross-origin asset loading."""
+    async def get_response(self, path: str, scope: Any) -> Response:
+        response = await super().get_response(path, scope)
+        response.headers["Access-Control-Allow-Origin"] = "*"
+        response.headers["Access-Control-Allow-Methods"] = "GET, HEAD, OPTIONS"
+        response.headers["Access-Control-Allow-Headers"] = "*"
+        return response
+
 from pathlib import Path
 uploads_dir = Path(__file__).resolve().parent / "uploads"
 if not uploads_dir.exists():
     uploads_dir = Path("uploads")
 uploads_dir.mkdir(parents=True, exist_ok=True)
-app.mount("/uploads", StaticFiles(directory=str(uploads_dir)), name="uploads")
+app.mount("/uploads", CORSStaticFiles(directory=str(uploads_dir)), name="uploads")
 
 artifacts_dir = Path(__file__).resolve().parent.parent / "artifacts"
 artifacts_dir.mkdir(parents=True, exist_ok=True)
-app.mount("/artifacts", StaticFiles(directory=str(artifacts_dir)), name="artifacts")
+app.mount("/artifacts", CORSStaticFiles(directory=str(artifacts_dir)), name="artifacts")
 
 AI_ENGINE_URL = "http://127.0.0.1:8001"
 

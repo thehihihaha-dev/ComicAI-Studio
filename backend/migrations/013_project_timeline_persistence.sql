@@ -1,0 +1,7 @@
+BEGIN;
+
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS timeline_data JSONB;
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS script_content JSONB;
+
+COMMIT;
+

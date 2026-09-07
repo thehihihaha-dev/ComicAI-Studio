@@ -1,9 +1,14 @@
 from uuid import uuid4
 from datetime import datetime, timezone
+from typing import Any
 
 from pathlib import Path
+import re
+import logging
 
 from fastapi import APIRouter, HTTPException, File, UploadFile
+
+logger = logging.getLogger(__name__)
 
 from app.schemas.projects import (
     AutoAlignChapterRequest,
@@ -22,6 +27,7 @@ try:
     from src.services.script_generator import (
         GeneratedScriptResponse,
         generate_script,
+        normalize_style,
     )
     from src.services.chapter_service import (
         ChapterMetadata,
@@ -54,6 +60,7 @@ except ModuleNotFoundError:
     from backend.src.services.script_generator import (
         GeneratedScriptResponse,
         generate_script,
+        normalize_style,
     )
     from backend.src.services.chapter_service import (
         ChapterMetadata,
@@ -88,7 +95,7 @@ from app.models.dialogue_ground_truth import DialogueGroundTruth
 from app.models.project import Project
 from app.models.project_story_analysis import ProjectStoryAnalysis
 from app.models.project_short_script import ProjectShortScript
-from sqlalchemy import select
+from sqlalchemy import func, select
 from app.services.short_script_engine import generate_short_script
 from app.services.short_script_persistence import (
     approve_short_script,
@@ -132,59 +139,73 @@ def get_projects():
     try:
         thumbnail_path = (
             select(Asset.file_path)
-            .where(Asset.project_id == Project.id)
-            .order_by(Asset.page_order.asc(), Asset.created_at.asc())
+            .filter(Asset.project_id == Project.id)
+            .order_by(Asset.page_order.asc())
             .limit(1)
             .scalar_subquery()
         )
 
-        rows = (
-            db.query(Project, thumbnail_path.label("thumbnail_path"))
+        projects = (
+            db.query(
+                Project.id,
+                Project.name,
+                Project.content_type,
+                Project.status,
+                Project.created_at,
+                thumbnail_path.label("thumbnail_path"),
+            )
             .order_by(Project.created_at.desc())
             .all()
         )
 
-        projects_list = [
-            {
-                "id": project.id,
-                "name": project.name,
-                "content_type": project.content_type,
-                "status": project.status,
-                "created_at": project.created_at,
-                "thumbnail_url": (
-                    f"http://127.0.0.1:8000/{path}"
-                    if path
-                    else None
-                ),
-            }
-            for project, path in rows
-        ]
-
-        if not projects_list:
-            projects_list = [DEFAULT_PROJECT_RECORD]
+        result = []
+        for p in projects:
+            thumb = p.thumbnail_path
+            if thumb and not thumb.startswith("http"):
+                clean = thumb.replace("\\", "/").replace("backend/", "").lstrip("/")
+                thumb = f"http://127.0.0.1:8000/{clean}"
+            result.append({
+                "id": p.id,
+                "name": p.name,
+                "content_type": p.content_type,
+                "status": p.status,
+                "created_at": p.created_at,
+                "thumbnail_url": thumb,
+            })
 
         return {
-            "message": "ComicAI Studio Project API",
-            "projects": projects_list,
+            "projects": result,
+            "total": len(result),
         }
     except Exception:
         return {
-            "message": "ComicAI Studio Project API (Offline Fallback)",
             "projects": [DEFAULT_PROJECT_RECORD],
+            "total": 1,
         }
     finally:
         db.close()
 @router.post("/")
 def create_project(project: ProjectCreate):
-    new_project = Project(
-        id=str(uuid4()),
-        name=project.name,
-        content_type=project.content_type,
-        status="created",
-        created_at=datetime.now(timezone.utc),
-    )
+    proj_id = project.id or str(uuid4())
     db = SessionLocal()
     try:
+        existing = db.query(Project).filter(Project.id == proj_id).first()
+        if existing is not None:
+            return {
+                "id": existing.id,
+                "name": existing.name,
+                "content_type": existing.content_type,
+                "status": existing.status,
+                "created_at": existing.created_at.isoformat() if existing.created_at else None,
+            }
+
+        new_project = Project(
+            id=proj_id,
+            name=project.name,
+            content_type=project.content_type,
+            status="created",
+            created_at=datetime.now(timezone.utc),
+        )
         db.add(new_project)
         db.commit()
         db.refresh(new_project)
@@ -204,13 +225,19 @@ def create_project(project: ProjectCreate):
             )
             db.add(script_record)
             db.commit()
+
+        return {
+            "id": new_project.id,
+            "name": new_project.name,
+            "content_type": new_project.content_type,
+            "status": new_project.status,
+            "created_at": new_project.created_at.isoformat() if new_project.created_at else None,
+        }
     except Exception:
         db.rollback()
         raise
     finally:
         db.close()
-
-    return new_project
 
 
 @router.delete("/{project_id}")
@@ -277,19 +304,45 @@ def get_project(project_id: str):
     try:
         project = db.query(Project).filter(Project.id == project_id).first()
         if project is not None:
-            return project
+            timeline_data = getattr(project, "timeline_data", None) or PROJECT_TIMELINES_CACHE.get(project_id)
+            script_content = getattr(project, "script_content", None) or PROJECT_SCRIPTS_CACHE.get(project_id)
+            return {
+                "id": project.id,
+                "name": project.name,
+                "content_type": project.content_type,
+                "status": project.status,
+                "created_at": project.created_at.isoformat() if project.created_at else None,
+                "timeline_data": timeline_data,
+                "script_content": script_content,
+            }
     except Exception:
         pass
     finally:
         db.close()
 
-    return {
-        "id": project_id,
-        "name": "Vợ trong game của tôi là Idol nổi tiếng ngoài đời",
-        "content_type": "short",
-        "status": "ready",
-        "created_at": "2026-08-22T23:00:00Z",
-    }
+    if project_id in (DEFAULT_PROJECT_ID, "project_wedding_vows"):
+        return {
+            "id": project_id,
+            "name": "Vợ trong game của tôi là Idol nổi tiếng ngoài đời",
+            "content_type": "short",
+            "status": "ready",
+            "created_at": "2026-08-22T23:00:00Z",
+            "timeline_data": PROJECT_TIMELINES_CACHE.get(project_id),
+            "script_content": PROJECT_SCRIPTS_CACHE.get(project_id),
+        }
+
+    if project_id in PROJECT_TIMELINES_CACHE or project_id in PROJECT_SCRIPTS_CACHE:
+        return {
+            "id": project_id,
+            "name": "Chapter Review",
+            "content_type": "short",
+            "status": "ready",
+            "created_at": "2026-08-22T23:00:00Z",
+            "timeline_data": PROJECT_TIMELINES_CACHE.get(project_id),
+            "script_content": PROJECT_SCRIPTS_CACHE.get(project_id),
+        }
+
+    raise HTTPException(status_code=404, detail="Project not found")
 
 
 @router.get("/{project_id}/story-input")
@@ -580,10 +633,38 @@ def approve_project_short_script(project_id: str):
 
 
 PROJECT_SCRIPTS_CACHE: dict[str, dict] = {}
+PROJECT_TIMELINES_CACHE: dict[str, dict] = {}
+
+
+def ensure_project_columns():
+    """Ensure timeline_data and script_content columns exist on projects table."""
+    try:
+        from app.database import engine
+        from sqlalchemy import text
+        with engine.connect() as conn:
+            if engine.dialect.name == "postgresql":
+                conn.execute(text("ALTER TABLE projects ADD COLUMN IF NOT EXISTS timeline_data JSONB;"))
+                conn.execute(text("ALTER TABLE projects ADD COLUMN IF NOT EXISTS script_content JSONB;"))
+                conn.commit()
+            elif engine.dialect.name == "sqlite":
+                cursor = conn.connection.cursor()
+                cursor.execute("PRAGMA table_info(projects)")
+                cols = [row[1] for row in cursor.fetchall()]
+                if "timeline_data" not in cols:
+                    conn.execute(text("ALTER TABLE projects ADD COLUMN timeline_data JSON;"))
+                if "script_content" not in cols:
+                    conn.execute(text("ALTER TABLE projects ADD COLUMN script_content JSON;"))
+                conn.commit()
+    except Exception as e:
+        logger.debug(f"ensure_project_columns notice: {e}")
+
+
+ensure_project_columns()
+
 
 
 @router.post("/{project_id}/generate-script", response_model=GeneratedScriptResponse)
-def generate_project_script(
+async def generate_project_script(
     project_id: str,
     request: GenerateScriptRequest,
 ) -> GeneratedScriptResponse:
@@ -625,14 +706,41 @@ def generate_project_script(
         ]
 
     # 2. Generate script using AI Script Engine
+    norm_style = normalize_style(request.story_style)
     script = generate_script(
         ocr_texts=ocr_texts,
-        story_style=request.story_style,
+        story_style=norm_style,
         target_duration_sec=request.target_duration,
         project_id=project_id,
     )
 
-    # 3. Store in cache
+    # 3. Synthesize voice audio with Edge-TTS and stitch preview speech track
+    try:
+        tts_manager = UnifiedTTSManager(offline_fallback=True)
+        out_dir = Path(__file__).resolve().parents[2] / "uploads" / "audio" / project_id
+        out_dir.mkdir(parents=True, exist_ok=True)
+        synthesized_segments = await tts_manager.synthesize_script(script, out_dir)
+
+        # Stitch continuous preview audio for instant web playback
+        preview_audio_path = out_dir / "preview_full.mp3"
+        try:
+            tts_manager.stitch_speech_track(synthesized_segments, preview_audio_path)
+            script.preview_audio_url = f"/uploads/audio/{project_id}/preview_full.mp3"
+        except Exception as stitch_err:
+            logger.warning(f"stitch_speech_track warning: {stitch_err}")
+
+        # Attach audio_url to each segment
+        seg_map = {
+            seg["segment_id"]: f"/uploads/audio/{project_id}/{Path(seg['file_path']).name}"
+            for seg in synthesized_segments
+        }
+        for s in script.segments:
+            if s.id in seg_map:
+                s.audio_url = seg_map[s.id]
+    except Exception as tts_err:
+        logger.warning(f"TTS synthesis warning in generate-script: {tts_err}")
+
+    # 4. Store in cache
     PROJECT_SCRIPTS_CACHE[project_id] = script.model_dump()
 
     # 4. Also persist to DB if project exists
@@ -643,9 +751,9 @@ def generate_project_script(
         if record is None:
             record = ProjectShortScript(
                 project_id=project_id,
-                style=request.story_style,
+                style=norm_style,
                 result=script.model_dump(),
-                source_story_fingerprint=f"d19_{request.story_style}",
+                source_story_fingerprint=f"d19_{norm_style}",
                 source_story_approved_at=now,
                 status="generated",
                 created_at=now,
@@ -653,10 +761,13 @@ def generate_project_script(
             )
             db.add(record)
         else:
-            record.style = request.story_style
+            record.style = norm_style
             record.result = script.model_dump()
             record.status = "generated"
             record.updated_at = now
+        proj = db.query(Project).filter_by(id=project_id).first()
+        if proj is not None:
+            proj.script_content = script.model_dump()
         db.commit()
     except Exception:
         db.rollback()
@@ -664,6 +775,51 @@ def generate_project_script(
         db.close()
 
     return script
+
+
+@router.get("/{project_id}/review-scenes")
+async def get_project_review_scenes(
+    project_id: str,
+    story_style: str = "dramatic",
+) -> list[dict[str, Any]]:
+    """Returns AI review scenes in the strict TikTok storytelling schema: [ { scene_index, stage, visual_direction, voiceover, target_page_hint } ]."""
+    cached = PROJECT_SCRIPTS_CACHE.get(project_id)
+    if cached and "scenes" in cached and cached["scenes"]:
+        return cached["scenes"]
+
+    db = SessionLocal()
+    ocr_texts: list[str] = []
+    try:
+        assets = (
+            db.query(Asset)
+            .filter(Asset.project_id == project_id)
+            .order_by(Asset.page_order.asc())
+            .all()
+        )
+        for asset in assets:
+            if asset.ocr_text and asset.ocr_text.strip():
+                ocr_texts.append(asset.ocr_text.strip())
+            elif asset.dialogues:
+                try:
+                    d_list = json.loads(asset.dialogues)
+                    if isinstance(d_list, list):
+                        for d in d_list:
+                            txt = d.get("text", d.get("clean_text", d.get("raw_text", "")))
+                            if txt and txt.strip():
+                                ocr_texts.append(txt.strip())
+                except Exception:
+                    pass
+    except Exception:
+        pass
+    finally:
+        db.close()
+
+    script = generate_script(
+        ocr_texts=ocr_texts,
+        story_style=normalize_style(story_style),
+        project_id=project_id,
+    )
+    return script.to_scenes_json()
 
 
 @router.post("/{project_id}/ingest-chapter")
@@ -725,6 +881,111 @@ async def ingest_chapter_endpoint(
                 pass
 
 
+@router.post("/{project_id}/upload-pages")
+async def upload_project_pages(
+    project_id: str,
+    files: list[UploadFile] = File(...),
+):
+    """Uploads multiple chapter manga pages and saves them permanently to the project."""
+    db = SessionLocal()
+    try:
+        # 1. Ensure project exists in DB
+        proj = db.query(Project).filter(Project.id == project_id).first()
+        if proj is None:
+            proj = Project(
+                id=project_id,
+                name=f"Project {project_id[:8]}",
+                content_type="short",
+                status="ready",
+                created_at=datetime.now(timezone.utc),
+            )
+            db.add(proj)
+            db.commit()
+            db.refresh(proj)
+
+        # 2. Find current max page_order
+        max_order = (
+            db.query(func.max(Asset.page_order))
+            .filter(Asset.project_id == project_id)
+            .scalar()
+            or 0
+        )
+
+        # 3. Create target directory
+        project_upload_dir = Path(__file__).resolve().parents[2] / "uploads" / project_id
+        project_upload_dir.mkdir(parents=True, exist_ok=True)
+
+        from app.services.asset_processor import natural_sort_key
+        sorted_files = sorted(files, key=lambda f: natural_sort_key(f.filename or ""))
+
+        saved_assets: list[Asset] = []
+        for idx, file in enumerate(sorted_files, start=1):
+            order = max_order + idx
+            ext = Path(file.filename or "").suffix.lower()
+            if ext not in {".jpg", ".jpeg", ".png", ".webp", ".bmp"}:
+                ext = ".jpg"
+            disk_filename = f"page_{order:02d}{ext}"
+            file_dest = project_upload_dir / disk_filename
+
+            content = await file.read()
+            file_dest.write_bytes(content)
+
+            rel_path = f"uploads/{project_id}/{disk_filename}"
+            asset = Asset(
+                id=str(uuid4()),
+                project_id=project_id,
+                filename=file.filename or disk_filename,
+                file_type="image/jpeg" if ext in {".jpg", ".jpeg"} else f"image/{ext.lstrip('.')}",
+                file_path=rel_path,
+                page_order=order,
+                created_at=datetime.now(timezone.utc),
+                status="ready",
+            )
+            db.add(asset)
+            saved_assets.append(asset)
+
+        db.commit()
+
+        # 4. Ingest chapter so metadata cache and panel extraction is fresh
+        all_project_assets = (
+            db.query(Asset)
+            .filter(Asset.project_id == project_id)
+            .order_by(Asset.page_order.asc())
+            .all()
+        )
+        asset_file_paths = [
+            Path(__file__).resolve().parents[2] / a.file_path
+            for a in all_project_assets
+            if (Path(__file__).resolve().parents[2] / a.file_path).is_file()
+        ]
+        try:
+            ingest_chapter(project_id, asset_file_paths, db=db)
+        except Exception as e:
+            logger.warning(f"Chapter auto-ingestion warning: {e}")
+
+        return {
+            "project_id": project_id,
+            "total_pages": len(all_project_assets),
+            "uploaded_count": len(saved_assets),
+            "pages": [
+                {
+                    "id": a.id,
+                    "page_order": a.page_order,
+                    "filename": a.filename,
+                    "file_path": a.file_path,
+                    "url": f"http://127.0.0.1:8000/{a.file_path}",
+                    "status": a.status,
+                }
+                for a in all_project_assets
+            ],
+        }
+    except Exception:
+        db.rollback()
+        raise
+    finally:
+        db.close()
+
+
 @router.post("/{project_id}/auto-align-chapter")
 async def auto_align_chapter_endpoint(
     project_id: str,
@@ -740,7 +1001,7 @@ async def auto_align_chapter_endpoint(
 
     try:
         chapter_dict = CHAPTER_METADATA_CACHE.get(project_id)
-        if chapter_dict:
+        if chapter_dict and chapter_dict.get("total_pages", 0) > 1:
             chapter_meta = ChapterMetadata(**chapter_dict)
         else:
             asset_paths: list[Path] = []
@@ -757,38 +1018,80 @@ async def auto_align_chapter_endpoint(
                     pass
 
             if not asset_paths:
+                proj_upload_dir = Path(__file__).resolve().parents[2] / "uploads" / project_id
+                if proj_upload_dir.is_dir():
+                    from app.services.asset_processor import natural_sort_key
+                    disk_files = [
+                        f for f in proj_upload_dir.iterdir()
+                        if f.is_file() and f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
+                    ]
+                    disk_files.sort(key=lambda p: natural_sort_key(p.name))
+                    if disk_files:
+                        asset_paths = disk_files
+
+            if len(asset_paths) <= 1 and project_id in (DEFAULT_PROJECT_ID, "project_wedding_vows"):
                 uploads_dir = Path(__file__).resolve().parents[2] / "uploads"
-                asset_paths = sorted(list(uploads_dir.glob(f"{DEFAULT_PROJECT_ID}*.jpg")))[:10]
+                manga_files = list(uploads_dir.glob("*vo-trong-game-cua-toi-la-idol-noi-tieng-ngoai-doi-*.jpg"))
+                if not manga_files:
+                    manga_files = [f for f in uploads_dir.glob("*.jpg") if not f.name.startswith("temp_") and not f.name.startswith("render_")]
+
+                def extract_page_num(path: Path) -> int:
+                    m = re.search(r'-(\d+)\.jpg$', path.name)
+                    if m:
+                        return int(m.group(1))
+                    m2 = re.search(r'(\d+)', path.name)
+                    return int(m2.group(1)) if m2 else 999
+
+                manga_files.sort(key=extract_page_num)
+                if manga_files:
+                    asset_paths = manga_files[:15]
 
             if not asset_paths:
-                raise HTTPException(status_code=404, detail="Chapter metadata not found. Please ingest chapter first.")
+                raise HTTPException(status_code=400, detail="Dự án chưa có trang truyện. Vui lòng upload chapter trước khi tạo video.")
             chapter_meta = ingest_chapter(project_id, asset_paths, db=db)
 
-        # 2. Get or generate script
-        if request.custom_script:
-            script = GeneratedScriptResponse(**request.custom_script)
+        # 2. Get or reuse existing script, fallback to generation
+        norm_style = normalize_style(request.story_style)
+        client_script = request.existing_script or request.custom_script
+        db_script = None
+        if db is not None:
+            try:
+                proj_record = db.query(Project).filter(Project.id == project_id).first()
+                if proj_record and proj_record.script_content:
+                    db_script = proj_record.script_content
+            except Exception:
+                pass
+        if not db_script:
+            db_script = PROJECT_SCRIPTS_CACHE.get(project_id)
+
+        if client_script:
+            script = GeneratedScriptResponse(**client_script)
+        elif db_script and isinstance(db_script, dict) and db_script.get("segments"):
+            script = GeneratedScriptResponse(**db_script)
         else:
             script = generate_script(
                 ocr_texts=chapter_meta.all_ocr_texts,
-                story_style=request.story_style,
+                story_style=norm_style,
                 target_duration_sec=request.target_duration,
                 project_id=project_id,
             )
 
-        # 3. Select keyframe panels
-        selected_panels = select_keyframe_panels(
-            chapter_data=chapter_meta,
-            script=script,
-            target_count=request.target_panel_count,
-        )
-
-        # 4. Synthesize voice audio track
+        # 3. Synthesize voice audio track
         tts_manager = UnifiedTTSManager(offline_fallback=True)
         out_dir = Path(__file__).resolve().parents[2] / "uploads" / "audio" / project_id
         out_dir.mkdir(parents=True, exist_ok=True)
         synthesized_segments = await tts_manager.synthesize_script(script, out_dir)
 
-        # 5. Build audio clips and track intervals
+        # Stitch continuous preview audio for instant web playback
+        preview_audio_url: str | None = None
+        preview_audio_path = out_dir / "preview_full.mp3"
+        try:
+            tts_manager.stitch_speech_track(synthesized_segments, preview_audio_path)
+            preview_audio_url = f"/uploads/audio/{project_id}/preview_full.mp3"
+        except Exception:
+            pass
+
+        # 4. Build audio clips and track intervals
         audio_clips: list[AudioClip] = []
         voice_intervals: list[tuple[float, float]] = []
 
@@ -800,12 +1103,22 @@ async def auto_align_chapter_endpoint(
                 voice_id=UNIFIED_VOICE_ID,
                 text=seg["text"],
                 file_path=seg["file_path"],
+                audio_url=f"/uploads/audio/{project_id}/{Path(seg['file_path']).name}",
                 start_time=seg["start_time"],
                 end_time=seg["end_time"],
                 duration=seg["duration"],
+                source="ai_review_script",
             )
             audio_clips.append(clip)
             voice_intervals.append((seg["start_time"], seg["end_time"]))
+
+        # 5. Select keyframe panels with 1:1 audio clip synchronization
+        selected_panels = select_keyframe_panels(
+            chapter_data=chapter_meta,
+            script=script,
+            target_count=request.target_panel_count,
+            audio_clips=audio_clips,
+        )
 
         # 6. Audio Ducking
         total_audio_duration = audio_clips[-1].end_time if audio_clips else script.total_duration
@@ -821,7 +1134,12 @@ async def auto_align_chapter_endpoint(
             visual_clips[-1].end_time = total_audio_duration
             visual_clips[-1].duration = round(total_audio_duration - visual_clips[-1].start_time, 3)
 
-        source_img = chapter_meta.pages[0].image_path if chapter_meta.pages else "chapter_01.jpg"
+        raw_source_img = chapter_meta.pages[0].image_path if chapter_meta.pages else "chapter_01.jpg"
+        source_img = str(raw_source_img).replace("\\", "/")
+        if "uploads/" in source_img:
+            source_img = source_img[source_img.index("uploads/"):]
+        elif source_img.startswith("backend/"):
+            source_img = source_img[len("backend/"):]
 
         timeline = TimelineContract(
             version="1.0.0",
@@ -839,7 +1157,11 @@ async def auto_align_chapter_endpoint(
                 "total_chapter_pages": chapter_meta.total_pages,
                 "total_chapter_panels": chapter_meta.total_panels,
                 "selected_panel_count": len(selected_panels),
-                "story_style": request.story_style,
+                "story_style": norm_style,
+                "preview_audio_url": preview_audio_url,
+                "bgm_path": None,
+                "script": script.model_dump(),
+                "scenes": [s.model_dump() for s in script.scenes] if script.scenes else [],
                 "ducking": {
                     "keyframes": ducking_keyframes,
                     "ffmpeg_filter": ducking_filter,
@@ -848,9 +1170,53 @@ async def auto_align_chapter_endpoint(
             },
         )
 
+        PROJECT_TIMELINES_CACHE[project_id] = timeline.model_dump()
+        PROJECT_SCRIPTS_CACHE[project_id] = script.model_dump()
+
+        if db is not None:
+            try:
+                proj_record = db.query(Project).filter(Project.id == project_id).first()
+                if proj_record is not None:
+                    proj_record.timeline_data = timeline.model_dump()
+                    proj_record.script_content = script.model_dump()
+                    db.commit()
+            except Exception as save_err:
+                logger.warning(f"Could not persist timeline to Project DB: {save_err}")
+                db.rollback()
+
         return timeline
     finally:
-        db.close()
+        if db is not None:
+            db.close()
+
+
+@router.put("/{project_id}/timeline")
+@router.post("/{project_id}/timeline")
+async def save_project_timeline(
+    project_id: str,
+    payload: dict[str, Any],
+):
+    """Saves or updates timeline contract for a project."""
+    PROJECT_TIMELINES_CACHE[project_id] = payload
+    try:
+        db = SessionLocal()
+    except Exception:
+        db = None
+
+    if db is not None:
+        try:
+            proj_record = db.query(Project).filter(Project.id == project_id).first()
+            if proj_record is not None:
+                proj_record.timeline_data = payload
+                db.commit()
+                return {"status": "success", "message": "Timeline saved successfully"}
+        except Exception as exc:
+            db.rollback()
+            return {"status": "warning", "message": str(exc)}
+        finally:
+            db.close()
+    return {"status": "cached", "message": "Timeline saved in cache"}
+
 
 
 @router.post(
@@ -893,7 +1259,11 @@ async def render_project_video(
         fps=timeline.fps,
     )
 
-    bgm_p = Path(req.bgm_path) if req.bgm_path else None
+    bgm_p: Path | None = None
+    if req.bgm_path:
+        bgm_p = Path(req.bgm_path)
+    elif timeline.metadata.get("bgm_path"):
+        bgm_p = Path(str(timeline.metadata["bgm_path"]))
 
     try:
         render_summary = renderer.render_chapter_video(

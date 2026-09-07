@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 
 
 class ProjectCreate(BaseModel):
+    id: str | None = None
     name: str
     content_type: Literal["short", "long"]
     story_style: Literal["dramatic", "humorous", "romantic"] | None = "dramatic"
@@ -31,8 +32,11 @@ class StoryEvidenceAdd(StoryEvidenceResolution):
 
 
 class GenerateScriptRequest(BaseModel):
-    story_style: Literal["humorous", "dramatic", "romantic"] = "dramatic"
-    target_duration: int = Field(default=45, ge=10, le=300)
+    story_style: str = Field(default="dramatic", description="Story style or alias (dramatic, humorous, romantic, romcom, etc.)")
+    target_duration: float = Field(default=45.0, ge=1.0, le=600.0, description="Target duration in seconds")
+    panel_id: str | None = Field(default=None, description="Optional target panel ID")
+    page_order: int | None = Field(default=None, description="Optional page sequence number")
+    image_path: str | None = Field(default=None, description="Optional source image path")
 
 
 class IngestChapterRequest(BaseModel):
@@ -41,16 +45,17 @@ class IngestChapterRequest(BaseModel):
 
 
 class AutoAlignChapterRequest(BaseModel):
-    story_style: Literal["dramatic", "humorous", "romantic"] = "dramatic"
-    target_duration: int = Field(default=45, ge=10, le=300)
-    target_panel_count: int = Field(default=8, ge=6, le=10)
+    story_style: str = Field(default="dramatic", description="Story style or alias")
+    target_duration: float = Field(default=45.0, ge=1.0, le=600.0, description="Target duration in seconds")
+    target_panel_count: int = Field(default=8, ge=1, le=50, description="Target number of panels")
     custom_script: dict[str, Any] | None = None
+    existing_script: dict[str, Any] | None = None
 
 
 class ProjectRenderRequest(BaseModel):
     timeline: dict[str, Any] | None = None
     output_filename: str | None = None
     bgm_path: str | None = None
-    story_style: Literal["dramatic", "humorous", "romantic"] = "dramatic"
+    story_style: str = Field(default="dramatic", description="Story style or alias")
 
 

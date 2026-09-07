@@ -15,6 +15,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 import shutil
+import subprocess
 import tempfile
 import unittest
 import uuid
@@ -324,6 +325,35 @@ class TestDay20RenderPipeline(unittest.TestCase):
         self.assertEqual(data["status"], "success")
         self.assertIn("video_path", data)
         self.assertEqual(data["fps"], 30.0)
+
+    def test_multi_page_chapter_different_images_and_audio_streams(self) -> None:
+        """Visual clips from full chapter must map to multiple distinct page images and output valid audio/video."""
+        import asyncio
+        from app.routers.projects import auto_align_chapter_endpoint, AutoAlignChapterRequest
+
+        req = AutoAlignChapterRequest(story_style="dramatic", target_duration=45, target_panel_count=8)
+        timeline = asyncio.run(auto_align_chapter_endpoint(self.project_id, req))
+        self.assertGreater(len(timeline.visual_clips), 0)
+
+        # Verify clips contain different image_paths
+        clip_images = set(vc.image_path for vc in timeline.visual_clips if vc.image_path)
+        self.assertGreaterEqual(len(clip_images), 2, f"Expected multiple page images, got {clip_images}")
+
+        # Render video and verify both video and audio streams
+        out_mp4 = self.test_dir / f"test_multipage_render_{uuid.uuid4().hex[:6]}.mp4"
+        renderer = VideoRenderer(canvas_size=(1080, 1920), fps=30.0)
+        res = renderer.render_chapter_video(timeline, out_mp4)
+        self.assertEqual(res["status"], "success")
+
+        ffprobe_bin = ROOT / ".venv" / "bin" / "ffprobe"
+        if ffprobe_bin.is_file():
+            probe = subprocess.run(
+                [str(ffprobe_bin), "-v", "error", "-show_entries", "stream=codec_type", "-of", "default=noprint_wrappers=1", str(out_mp4)],
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn("codec_type=video", probe.stdout)
+            self.assertIn("codec_type=audio", probe.stdout)
 
 
 if __name__ == "__main__":

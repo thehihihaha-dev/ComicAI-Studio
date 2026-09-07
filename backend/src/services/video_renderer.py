@@ -53,8 +53,8 @@ class VerticalFrameBuilder:
         self,
         canvas_width: int = 1080,
         canvas_height: int = 1920,
-        max_fg_width: int = 980,
-        max_fg_height: int = 1500,
+        max_fg_width: int = 1040,
+        max_fg_height: int = 1680,
         border_width: int = 4,
         border_color: tuple[int, int, int] = (255, 255, 255),
     ) -> None:
@@ -94,8 +94,8 @@ class VerticalFrameBuilder:
         bg = cv2.GaussianBlur(bg, (ksize, ksize), 30)
         bg = (bg * float(darkness)).astype(np.uint8)
 
-        # 2. Foreground: Scale preserving aspect ratio with Ken Burns zoom
-        base_scale = min(self.max_fg_width / float(w_crop), self.max_fg_height / float(h_crop))
+        # 2. Foreground: Scale preserving aspect ratio with Ken Burns zoom and 1.18x prominence
+        base_scale = min(self.max_fg_width / float(w_crop), self.max_fg_height / float(h_crop)) * 1.18
         final_scale = base_scale * float(zoom_scale)
 
         fg_w = max(10, int(round(float(w_crop) * final_scale)))
@@ -157,22 +157,35 @@ class VideoRenderer:
             canvas_height=canvas_size[1],
         )
 
-    def _resolve_image(self, path_str: str, cache: dict[str, np.ndarray]) -> np.ndarray:
+    def _resolve_image(self, path_str: str | None, cache: dict[str, np.ndarray]) -> np.ndarray:
         """Loads and caches image from disk, falling back to a synthetic canvas if missing."""
+        if not path_str:
+            path_str = "default_page.jpg"
         if path_str in cache:
             return cache[path_str]
 
+        clean_str = path_str
+        if "://" in clean_str:
+            clean_str = clean_str.split("://", 1)[1]
+            if "/" in clean_str:
+                clean_str = clean_str.split("/", 1)[1]
+        clean_str = clean_str.lstrip("/")
+
         candidate_paths = [
             Path(path_str),
-            ROOT / path_str,
-            ROOT / "backend" / path_str,
+            Path(clean_str),
+            ROOT / clean_str,
+            ROOT / "backend" / clean_str,
+            Path(__file__).resolve().parents[2] / clean_str,
+            Path(__file__).resolve().parents[2] / "uploads" / Path(clean_str).name,
+            ROOT / "backend" / "uploads" / Path(clean_str).name,
         ]
 
         img: np.ndarray | None = None
         for p in candidate_paths:
             if p.is_file():
                 img = cv2.imread(str(p))
-                if img is not None:
+                if img is not None and img.size > 0:
                     break
 
         if img is None:
@@ -186,6 +199,33 @@ class VideoRenderer:
 
         cache[path_str] = img
         return img
+
+    def _resolve_audio_file(self, raw_path: str | Path | None) -> Path | None:
+        """Resolves audio file path across relative, absolute, and upload locations."""
+        if not raw_path:
+            return None
+        p_str = str(raw_path).strip()
+        if "://" in p_str:
+            p_str = p_str.split("://", 1)[1]
+            if "/" in p_str:
+                p_str = p_str.split("/", 1)[1]
+        clean_str = p_str.lstrip("/")
+
+        candidates = [
+            Path(str(raw_path)),
+            Path(clean_str),
+            ROOT / clean_str,
+            ROOT / "backend" / clean_str,
+            Path.cwd() / clean_str,
+            Path(__file__).resolve().parents[2] / clean_str,
+            Path(__file__).resolve().parents[2] / "uploads" / "audio" / Path(clean_str).name,
+            ROOT / "backend" / "uploads" / "audio" / Path(clean_str).name,
+            ROOT / "backend" / "uploads" / "audio" / "default_bgm.mp3",
+        ]
+        for c in candidates:
+            if c.is_file() and c.stat().st_size > 0:
+                return c
+        return None
 
     def render_chapter_video(
         self,
@@ -217,10 +257,17 @@ class VideoRenderer:
             img = self._resolve_image(src_path, image_cache)
             h_img, w_img = img.shape[:2]
 
-            bx1 = max(0, min(w_img - 1, int(round(vc.bbox[0]))))
-            by1 = max(0, min(h_img - 1, int(round(vc.bbox[1]))))
-            bx2 = max(bx1 + 1, min(w_img, int(round(vc.bbox[2]))))
-            by2 = max(by1 + 1, min(h_img, int(round(vc.bbox[3]))))
+            x1_r, y1_r, x2_r, y2_r = vc.bbox
+            if x2_r <= 1.05 and y2_r <= 1.05:
+                x1_r *= w_img
+                y1_r *= h_img
+                x2_r *= w_img
+                y2_r *= h_img
+
+            bx1 = max(0, min(w_img - 1, int(round(x1_r))))
+            by1 = max(0, min(h_img - 1, int(round(y1_r))))
+            bx2 = max(bx1 + 1, min(w_img, int(round(x2_r))))
+            by2 = max(by1 + 1, min(h_img, int(round(y2_r))))
 
             crop = img[by1:by2, bx1:bx2]
             if crop.size == 0:
@@ -230,42 +277,103 @@ class VideoRenderer:
         # Fallback default crop if visual_clips is empty
         default_img = self._resolve_image(timeline.source_image_path, image_cache)
 
-        # 2. Voice Audio Stitching
-        temp_voice_path = output_path.with_name(f"temp_voice_{output_path.stem}.mp3")
+        # 2. Stage A: Voice Narration Assembly
+        temp_voice_path = output_path.with_name(f"temp_voice_{output_path.stem}.wav")
         total_audio_ms = int(round(total_dur * 1000.0))
 
-        if timeline.audio_clips:
+        preview_audio_meta = timeline.metadata.get("preview_audio_url") or timeline.metadata.get("preview_audio_path")
+        preview_full_file = self._resolve_audio_file(preview_audio_meta)
+
+        if preview_full_file and preview_full_file.is_file() and preview_full_file.stat().st_size > 1000:
+            cmd_conv = [
+                self.ffmpeg_exe, "-y", "-i", str(preview_full_file),
+                "-c:a", "pcm_s16le", "-ar", "44100", "-ac", "2",
+                "-t", str(total_dur), str(temp_voice_path)
+            ]
+            subprocess.run(cmd_conv, capture_output=True, check=True)
+        else:
             stitched_audio = bytearray()
             curr_pos_ms = 0
 
-            for ac in timeline.audio_clips:
-                clip_candidates = [
-                    Path(ac.file_path),
-                    ROOT / ac.file_path,
-                    ROOT / "backend" / ac.file_path,
-                ]
-                clip_file = next((p for p in clip_candidates if p.is_file()), None)
+            if timeline.audio_clips:
+                for ac in timeline.audio_clips:
+                    clip_file = self._resolve_audio_file(ac.file_path)
+                    target_start_ms = int(round(ac.start_time * 1000.0))
+                    if target_start_ms > curr_pos_ms:
+                        stitched_audio.extend(generate_mp3_silence(target_start_ms - curr_pos_ms))
+                        curr_pos_ms = target_start_ms
 
-                target_start_ms = int(round(ac.start_time * 1000.0))
-                if target_start_ms > curr_pos_ms:
-                    stitched_audio.extend(generate_mp3_silence(target_start_ms - curr_pos_ms))
-                    curr_pos_ms = target_start_ms
+                    clip_dur_ms = int(round(ac.duration * 1000.0))
+                    if clip_file:
+                        stitched_audio.extend(clip_file.read_bytes())
+                    else:
+                        stitched_audio.extend(generate_mp3_silence(clip_dur_ms))
+                    curr_pos_ms += clip_dur_ms
 
-                clip_dur_ms = int(round(ac.duration * 1000.0))
-                if clip_file:
-                    stitched_audio.extend(clip_file.read_bytes())
-                else:
-                    stitched_audio.extend(generate_mp3_silence(clip_dur_ms))
-                curr_pos_ms += clip_dur_ms
+                if curr_pos_ms < total_audio_ms:
+                    stitched_audio.extend(generate_mp3_silence(total_audio_ms - curr_pos_ms))
+            else:
+                stitched_audio.extend(generate_mp3_silence(total_audio_ms))
 
-            if curr_pos_ms < total_audio_ms:
-                stitched_audio.extend(generate_mp3_silence(total_audio_ms - curr_pos_ms))
+            temp_mp3 = output_path.with_name(f"temp_voice_raw_{output_path.stem}.mp3")
+            temp_mp3.write_bytes(stitched_audio)
+            cmd_conv = [
+                self.ffmpeg_exe, "-y", "-i", str(temp_mp3),
+                "-c:a", "pcm_s16le", "-ar", "44100", "-ac", "2",
+                "-t", str(total_dur), str(temp_voice_path)
+            ]
+            subprocess.run(cmd_conv, capture_output=True, check=True)
+            if temp_mp3.is_file():
+                temp_mp3.unlink()
 
-            temp_voice_path.write_bytes(stitched_audio)
+        if not temp_voice_path.is_file() or temp_voice_path.stat().st_size == 0:
+            raise RuntimeError(f"Voice narration track generation failed: {temp_voice_path} is empty or missing")
+
+        # 3. Stage B: Resolve BGM and Audio Ducking Mixing into final_audio.wav
+        final_audio_path = output_path.with_name(f"final_audio_{output_path.stem}.wav")
+        resolved_bgm: Path | None = None
+        if bgm_path:
+            resolved_bgm = self._resolve_audio_file(bgm_path)
+        if not resolved_bgm and timeline.metadata.get("bgm_path"):
+            bgm_meta = str(timeline.metadata["bgm_path"])
+            if "default_bgm.mp3" not in bgm_meta:
+                resolved_bgm = self._resolve_audio_file(bgm_meta)
+
+        voice_intervals = timeline.metadata.get("ducking", {}).get("voice_intervals", [])
+        if not voice_intervals and timeline.audio_clips:
+            voice_intervals = [(ac.start_time, ac.end_time) for ac in timeline.audio_clips]
+
+        if resolved_bgm and resolved_bgm.is_file() and resolved_bgm.stat().st_size > 1000:
+            duck_filter = build_ffmpeg_ducking_filter(voice_intervals)
+            cmd_mix = [
+                self.ffmpeg_exe, "-y",
+                "-i", str(temp_voice_path),
+                "-stream_loop", "-1", "-i", str(resolved_bgm),
+                "-filter_complex",
+                f"[1:a]{duck_filter}[ducked_bgm]; [0:a][ducked_bgm]amix=inputs=2:duration=first:dropout_transition=2[aout]",
+                "-map", "[aout]",
+                "-c:a", "pcm_s16le",
+                "-t", str(total_dur),
+                str(final_audio_path),
+            ]
         else:
-            temp_voice_path.write_bytes(generate_mp3_silence(total_audio_ms))
+            cmd_mix = [
+                self.ffmpeg_exe, "-y",
+                "-i", str(temp_voice_path),
+                "-c:a", "pcm_s16le",
+                "-t", str(total_dur),
+                str(final_audio_path),
+            ]
 
-        # 3. Visual Animation Frames via cv2.VideoWriter
+        proc_mix = subprocess.run(cmd_mix, capture_output=True, text=True)
+        if proc_mix.returncode != 0:
+            logger.error("Audio mixing error: %s", proc_mix.stderr)
+            raise RuntimeError(f"Audio mixing failed: {proc_mix.stderr}")
+
+        if not final_audio_path.is_file() or final_audio_path.stat().st_size == 0:
+            raise RuntimeError(f"Generated final audio track is invalid or empty: {final_audio_path} (size: 0 bytes)")
+
+        # 4. Stage C: Visual Animation Frames via cv2.VideoWriter
         total_frames = max(1, int(round(total_dur * fps)))
         temp_video_path = output_path.with_name(f"temp_video_{output_path.stem}.mp4")
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
@@ -290,16 +398,28 @@ class VideoRenderer:
                 dur = max(0.001, active_clip.duration)
                 alpha = min(1.0, max(0.0, (t - active_clip.start_time) / dur))
 
-                # Smoothstep easing
-                if active_clip.motion.easing == "smoothstep":
-                    eased_alpha = alpha * alpha * (3.0 - 2.0 * alpha)
-                else:
-                    eased_alpha = alpha
-
                 m = active_clip.motion
-                zoom = m.zoom_start + (m.zoom_end - m.zoom_start) * eased_alpha
-                pan_x = int(round(m.pan_start[0] + (m.pan_end[0] - m.pan_start[0]) * eased_alpha))
-                pan_y = int(round(m.pan_start[1] + (m.pan_end[1] - m.pan_start[1]) * eased_alpha))
+                is_punch = (
+                    active_clip.shot_type.lower().startswith("punch")
+                    or "punch" in active_clip.clip_id.lower()
+                    or (m.zoom_end > 1.2 and m.pan_end[1] == 0)
+                )
+
+                if is_punch:
+                    t_punch = min(1.0, max(0.0, (t - active_clip.start_time) / 0.4))
+                    eased_punch = t_punch * t_punch * (3.0 - 2.0 * t_punch)
+                    zoom = m.zoom_start + (m.zoom_end - m.zoom_start) * eased_punch + 0.01 * alpha
+                    pan_x = int(round(m.pan_start[0] + (m.pan_end[0] - m.pan_start[0]) * eased_punch))
+                    pan_y = int(round(m.pan_start[1] + (m.pan_end[1] - m.pan_start[1]) * eased_punch))
+                else:
+                    if m.easing == "smoothstep":
+                        eased_alpha = alpha * alpha * (3.0 - 2.0 * alpha)
+                    else:
+                        eased_alpha = alpha
+                    zoom = m.zoom_start + (m.zoom_end - m.zoom_start) * eased_alpha
+                    pan_x = int(round(m.pan_start[0] + (m.pan_end[0] - m.pan_start[0]) * eased_alpha))
+                    pan_y = int(round(m.pan_start[1] + (m.pan_end[1] - m.pan_start[1]) * eased_alpha))
+
                 bg_cfg = active_clip.background
                 blur_r = bg_cfg.blur_radius
                 darkness = bg_cfg.darkness
@@ -321,66 +441,48 @@ class VideoRenderer:
 
         writer.release()
 
-        # 4. Resolve BGM and Audio Ducking
-        resolved_bgm: Path | None = None
-        if bgm_path and Path(bgm_path).is_file():
-            resolved_bgm = Path(bgm_path)
-        elif timeline.metadata.get("bgm_path"):
-            meta_bgm = Path(str(timeline.metadata["bgm_path"]))
-            if meta_bgm.is_file():
-                resolved_bgm = meta_bgm
-            elif (ROOT / meta_bgm).is_file():
-                resolved_bgm = ROOT / meta_bgm
-
-        # 5. FFmpeg Muxing with Ducking Filter
-        cmd = [self.ffmpeg_exe, "-y", "-i", str(temp_video_path), "-i", str(temp_voice_path)]
-
-        if resolved_bgm and resolved_bgm.is_file():
-            # Get voice intervals for ducking
-            voice_intervals = timeline.metadata.get("ducking", {}).get("voice_intervals", [])
-            if not voice_intervals and timeline.audio_clips:
-                voice_intervals = [(ac.start_time, ac.end_time) for ac in timeline.audio_clips]
-
-            duck_filter = build_ffmpeg_ducking_filter(voice_intervals)
-
-            # Input 0: video, Input 1: voice, Input 2: bgm looped
-            cmd.extend([
-                "-stream_loop", "-1",
-                "-i", str(resolved_bgm),
-                "-filter_complex",
-                f"[2:a]{duck_filter}[ducked_bgm]; [1:a][ducked_bgm]amix=inputs=2:duration=first:dropout_transition=2[aout]",
-                "-map", "0:v",
-                "-map", "[aout]",
-            ])
-        else:
-            cmd.extend([
-                "-map", "0:v",
-                "-map", "1:a",
-            ])
-
-        cmd.extend([
+        # 5. Stage D: Final FFmpeg Muxing of Video + Final Audio
+        cmd_mux = [
+            self.ffmpeg_exe, "-y",
+            "-i", str(temp_video_path),
+            "-i", str(final_audio_path),
             "-c:v", "libx264",
             "-preset", "veryfast",
             "-pix_fmt", "yuv420p",
             "-c:a", "aac",
-            "-b:a", "128k",
+            "-b:a", "192k",
             "-shortest",
             str(output_path),
-        ])
+        ]
 
-        proc = subprocess.run(cmd, capture_output=True, text=True)
+        proc = subprocess.run(cmd_mux, capture_output=True, text=True)
 
         # Cleanup temporary files
         if temp_video_path.is_file():
             temp_video_path.unlink()
         if temp_voice_path.is_file():
             temp_voice_path.unlink()
+        if final_audio_path.is_file():
+            final_audio_path.unlink()
 
         if proc.returncode != 0:
             logger.error("FFmpeg execution error: %s", proc.stderr)
             raise RuntimeError(f"FFmpeg muxing failed: {proc.stderr}")
 
-        # 6. Verify outputs and calculate metrics
+        # 6. Stream & Output Verification
+        if not output_path.is_file() or output_path.stat().st_size == 0:
+            raise RuntimeError(f"Render failed: output file {output_path} does not exist or is empty")
+
+        probe_proc = subprocess.run([self.ffmpeg_exe, "-i", str(output_path)], capture_output=True, text=True)
+        probe_err = probe_proc.stderr
+        has_video_stream = "Video:" in probe_err
+        has_audio_stream = "Audio:" in probe_err
+
+        if not has_video_stream:
+            raise RuntimeError("Render validation failed: Output MP4 has no video stream!")
+        if not has_audio_stream:
+            raise RuntimeError("Render validation failed: Output MP4 has no audio stream!")
+
         file_size_bytes = output_path.stat().st_size
         file_sha256 = hashlib.sha256(output_path.read_bytes()).hexdigest()
         video_dur = float(total_frames) / fps

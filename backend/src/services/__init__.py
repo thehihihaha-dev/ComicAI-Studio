@@ -1,8 +1,10 @@
 # services package
 from src.services.script_generator import (
     GeneratedScriptResponse,
+    SceneSegment,
     ScriptSegment,
     generate_script,
+    normalize_style,
 )
 from src.services.unified_tts import (
     UNIFIED_PITCH,

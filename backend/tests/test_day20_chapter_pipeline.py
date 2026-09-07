@@ -327,7 +327,134 @@ class TestDay20ChapterPipeline(unittest.TestCase):
         self.assertEqual(len(timeline["visual_clips"]), 6)
         self.assertGreaterEqual(len(timeline["audio_clips"]), 3)
 
+    def test_timeline_persistence_and_retrieval(self) -> None:
+        """Timeline and script should be cached/persisted and returned by get_project."""
+        from fastapi.testclient import TestClient
+
+        client = TestClient(app)
+
+        # Ingest chapter
+        client.post(
+            f"/projects/{self.project_id}/ingest-chapter",
+            json={"chapter_dir": str(self.temp_dir)},
+        )
+
+        # Auto-align chapter
+        align_res = client.post(
+            f"/projects/{self.project_id}/auto-align-chapter",
+            json={"story_style": "dramatic", "target_panel_count": 6},
+        )
+        self.assertEqual(align_res.status_code, 200)
+        timeline = align_res.json()
+
+        # Get project should now return timeline_data and script_content
+        proj_res = client.get(f"/projects/{self.project_id}")
+        self.assertEqual(proj_res.status_code, 200)
+        data = proj_res.json()
+        self.assertIn("timeline_data", data)
+        self.assertIsNotNone(data["timeline_data"])
+        self.assertEqual(len(data["timeline_data"]["visual_clips"]), 6)
+        self.assertIn("script_content", data)
+        self.assertIsNotNone(data["script_content"])
+
+        # Manual timeline save via PUT
+        modified_timeline = dict(timeline)
+        modified_timeline["total_duration"] = 99.9
+        save_res = client.put(f"/projects/{self.project_id}/timeline", json=modified_timeline)
+        self.assertEqual(save_res.status_code, 200)
+
+        # Verify updated timeline
+        proj_res2 = client.get(f"/projects/{self.project_id}")
+        data2 = proj_res2.json()
+        self.assertEqual(data2["timeline_data"]["total_duration"], 99.9)
+
+    def test_existing_script_reuse_and_duration_sync(self) -> None:
+        """auto-align-chapter must reuse existing_script and sync durations 1:1 without rewriting script."""
+        from fastapi.testclient import TestClient
+
+        client = TestClient(app)
+
+        # Ingest chapter
+        client.post(
+            f"/projects/{self.project_id}/ingest-chapter",
+            json={"chapter_dir": str(self.temp_dir)},
+        )
+
+        romcom_script = {
+            "project_id": self.project_id,
+            "story_style": "romantic",
+            "total_duration": 15.0,
+            "segments": [
+                {
+                    "id": "SEG_ROMCOM_01",
+                    "section_type": "hook",
+                    "text": "Romcom kịch bản đã duyệt: Kazuto và Rin đám cưới trong game!",
+                    "estimated_duration": 4.5,
+                    "suggested_effect": "punch_zoom",
+                    "target_page_hint": 1,
+                },
+                {
+                    "id": "SEG_ROMCOM_02",
+                    "section_type": "body",
+                    "text": "Ai ngờ ngoài đời thực Rin lại là idol nổi tiếng học cùng lớp!",
+                    "estimated_duration": 6.0,
+                    "suggested_effect": "zoom_in",
+                    "target_page_hint": 5,
+                },
+                {
+                    "id": "SEG_ROMCOM_03",
+                    "section_type": "call_to_action",
+                    "text": "Đón xem diễn biến tiếp theo của cặp đôi nhé!",
+                    "estimated_duration": 4.5,
+                    "suggested_effect": "zoom_out",
+                    "target_page_hint": 10,
+                },
+            ],
+        }
+
+        # 1. First call passing existing_script
+        res1 = client.post(
+            f"/projects/{self.project_id}/auto-align-chapter",
+            json={
+                "story_style": "romantic",
+                "target_panel_count": 6,
+                "existing_script": romcom_script,
+            },
+        )
+        self.assertEqual(res1.status_code, 200)
+        timeline1 = res1.json()
+
+        # Check script text is preserved 100%
+        script_meta1 = timeline1["metadata"]["script"]
+        self.assertEqual(script_meta1["segments"][0]["text"], romcom_script["segments"][0]["text"])
+        self.assertEqual(script_meta1["segments"][1]["text"], romcom_script["segments"][1]["text"])
+
+        # Check audio clips match the script segments
+        audio_clips1 = timeline1["audio_clips"]
+        self.assertEqual(len(audio_clips1), 3)
+        self.assertEqual(audio_clips1[0]["text"], romcom_script["segments"][0]["text"])
+
+        # Check physical duration synchronization
+        for seg in script_meta1["segments"]:
+            matching_audio = next((a for a in audio_clips1 if a["dialogue_id"] == seg["id"]), None)
+            self.assertIsNotNone(matching_audio)
+            self.assertEqual(round(seg["estimated_duration"], 2), round(matching_audio["duration"], 2))
+
+        # 2. Second call WITHOUT passing existing_script: must reuse persisted/cached script
+        res2 = client.post(
+            f"/projects/{self.project_id}/auto-align-chapter",
+            json={
+                "story_style": "romantic",
+                "target_panel_count": 6,
+            },
+        )
+        self.assertEqual(res2.status_code, 200)
+        timeline2 = res2.json()
+        script_meta2 = timeline2["metadata"]["script"]
+        self.assertEqual(script_meta2["segments"][0]["text"], romcom_script["segments"][0]["text"])
+
 
 if __name__ == "__main__":
     unittest.main()
+
 

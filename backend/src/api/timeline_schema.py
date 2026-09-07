@@ -59,6 +59,8 @@ class AudioClip(BaseModel):
     start_time: float = Field(..., ge=0.0, description="Audio playback start time in seconds")
     end_time: float = Field(..., ge=0.0, description="Audio playback end time in seconds")
     duration: float = Field(..., ge=0.0, description="Speech duration in seconds")
+    audio_url: str | None = Field(default=None, description="Public URL for web playback")
+    source: str = Field(default="ai_review_script", description="'ai_review_script' or 'manga_dialogue'")
 
 
 class TimelineContract(BaseModel):

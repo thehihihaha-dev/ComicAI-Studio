@@ -277,6 +277,12 @@ class ComicPipelineOrchestrator:
             pause_between_panels_ms=self.pause_between_panels_ms,
         )
 
+        # 6. Resolve relative image path
+        try:
+            rel_img_path = str(img_p.relative_to(ROOT))
+        except ValueError:
+            rel_img_path = str(img_p)
+
         visual_clips: list[VisualClip] = []
         for seg in motion_segments:
             s_idx = seg["segment_index"]
@@ -291,6 +297,7 @@ class ComicPipelineOrchestrator:
                 end_time=round(seg["end_sec"], 3),
                 duration=round(seg["duration_sec"], 3),
                 shot_type=seg.get("shot_type", "PANEL_SHOT"),
+                image_path=rel_img_path,
                 motion=MotionConfig(
                     zoom_start=round(seg["zoom_start"], 3),
                     zoom_end=round(seg["zoom_end"], 3),
@@ -306,12 +313,6 @@ class ComicPipelineOrchestrator:
                 ),
             )
             visual_clips.append(v_clip)
-
-        # 6. Assemble TimelineContract
-        try:
-            rel_img_path = str(img_p.relative_to(ROOT))
-        except ValueError:
-            rel_img_path = str(img_p)
 
         return TimelineContract(
             version="1.0.0",

@@ -67,11 +67,15 @@ class UnifiedTTSManager:
         try:
             import edge_tts
 
+            pitch_val = self.pitch
+            if pitch_val == "0%" or not (pitch_val.startswith(("+", "-")) and pitch_val.endswith("Hz")):
+                pitch_val = "+0Hz"
+
             communicate = edge_tts.Communicate(
                 text=text,
                 voice=self.voice_id,
                 rate=self.speaking_rate,
-                pitch=self.pitch,
+                pitch=pitch_val,
             )
             await communicate.save(str(output_path))
             audio_info = mutagen.mp3.MP3(str(output_path)).info
@@ -79,7 +83,8 @@ class UnifiedTTSManager:
         except Exception as exc:
             if not self.offline_fallback:
                 raise exc
-            logger.info(
+            print(f"[Edge TTS Warning] Synthesis unavailable ({type(exc).__name__}: {exc}), writing surrogate silence for: {output_path.name}")
+            logger.warning(
                 f"Edge TTS synthesis unavailable ({exc}), writing deterministic surrogate silence for: {output_path.name}"
             )
             fallback_ms = int(round(fallback_duration_sec * 1000.0))
@@ -118,6 +123,8 @@ class UnifiedTTSManager:
             end_t = round(current_time + dur_sec, 3)
             current_time = end_t + pause_between_sec
 
+            segment.estimated_duration = round(dur_sec, 3)
+
             results.append({
                 "segment_id": segment.id,
                 "section_type": segment.section_type,
@@ -131,6 +138,9 @@ class UnifiedTTSManager:
                 "start_time": start_t,
                 "end_time": end_t,
             })
+
+        if results:
+            script.total_duration = round(results[-1]["end_time"], 3)
 
         return results
 

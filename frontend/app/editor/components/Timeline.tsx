@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { TimelineContract } from "../types";
+import { TimelineContract, VisualClip, resolveImageUrl } from "../types";
 
 interface TimelineProps {
   timeline: TimelineContract;
@@ -20,6 +20,21 @@ export default function Timeline({
 }: TimelineProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const totalDur = Math.max(0.1, timeline.total_duration);
+
+  // Helper for Ken Burns motion badge
+  const getMotionLabel = (clip: VisualClip) => {
+    const m = clip.motion;
+    if (clip.shot_type?.includes("HOOK") || (m && m.zoom_end >= 1.18)) {
+      return "💥 PUNCH ZOOM";
+    }
+    if (m && m.pan_end && (m.pan_end[1] < -5 || m.pan_end[1] > 5)) {
+      return "📜 PAN DOWN";
+    }
+    if (m && m.zoom_end && m.zoom_end < 1.0) {
+      return "🌐 ZOOM OUT";
+    }
+    return "🔍 ZOOM IN";
+  };
 
   // Handle timeline scrub click/drag
   const handleTimelineClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -125,40 +140,6 @@ export default function Timeline({
     }
   }
 
-  // SFX Cue markers (Matte Finish)
-  const sfxMarkers = [
-    {
-      id: "sfx_1",
-      label: "✨ Whoosh",
-      type: "Chuyển cảnh",
-      startTime: 0.0,
-      duration: Math.min(1.2, totalDur * 0.15),
-      color:
-        "bg-[#181522] border-purple-500/25 text-zinc-200 hover:border-purple-500/45",
-      accent: "text-purple-300",
-    },
-    {
-      id: "sfx_2",
-      label: "🔔 Bell",
-      type: "Chuông lễ đường",
-      startTime: Math.min(5.2, totalDur * 0.5),
-      duration: Math.min(1.5, totalDur * 0.15),
-      color:
-        "bg-[#1a1814] border-amber-500/25 text-zinc-200 hover:border-amber-500/45",
-      accent: "text-amber-300",
-    },
-    {
-      id: "sfx_3",
-      label: "💓 Heartbeat",
-      type: "Nhịp tim cảm xúc",
-      startTime: Math.min(8.1, totalDur * 0.78),
-      duration: Math.min(1.8, totalDur * 0.2),
-      color:
-        "bg-[#1c1416] border-rose-500/25 text-zinc-200 hover:border-rose-500/45",
-      accent: "text-rose-300",
-    },
-  ];
-
   return (
     <div className="w-full h-full flex flex-col bg-[#0b0b0e] select-none text-xs border-t border-white/[0.08]">
       {/* Main Multi-Track Container */}
@@ -170,36 +151,25 @@ export default function Timeline({
             TRACK
           </div>
 
-          {/* Track 1 Label: Thoại */}
+          {/* Track 0 Label: Visual Panels */}
           <div className="flex-1 min-h-0 border-b border-white/[0.06] px-2.5 flex flex-col justify-center gap-0.5 text-white/80">
+            <div className="flex items-center gap-1.5 text-xs font-semibold">
+              <span>🎬</span>
+              <span className="truncate">Visual</span>
+            </div>
+            <span className="text-[9px] text-white/40 font-mono uppercase tracking-wider">
+              {timeline.visual_clips.length} Panels
+            </span>
+          </div>
+
+          {/* Track 1 Label: Thoại */}
+          <div className="flex-1 min-h-0 px-2.5 flex flex-col justify-center gap-0.5 text-white/80">
             <div className="flex items-center gap-1.5 text-xs font-semibold">
               <span>🎙️</span>
               <span className="truncate">Thoại</span>
             </div>
             <span className="text-[9px] text-white/40 font-mono uppercase tracking-wider">
               Voice
-            </span>
-          </div>
-
-          {/* Track 2 Label: BGM */}
-          <div className="flex-1 min-h-0 border-b border-white/[0.06] px-2.5 flex flex-col justify-center gap-0.5 text-white/80">
-            <div className="flex items-center gap-1.5 text-xs font-semibold">
-              <span>🎵</span>
-              <span className="truncate">BGM</span>
-            </div>
-            <span className="text-[9px] text-white/40 font-mono uppercase tracking-wider">
-              Music
-            </span>
-          </div>
-
-          {/* Track 3 Label: SFX */}
-          <div className="flex-1 min-h-0 px-2.5 flex flex-col justify-center gap-0.5 text-white/80">
-            <div className="flex items-center gap-1.5 text-xs font-semibold">
-              <span>⚡</span>
-              <span className="truncate">SFX</span>
-            </div>
-            <span className="text-[9px] text-white/40 font-mono uppercase tracking-wider">
-              Effects
             </span>
           </div>
         </div>
@@ -226,8 +196,76 @@ export default function Timeline({
             ))}
           </div>
 
-          {/* 2. Track 1: Thoại (Voice Clips) */}
+          {/* 2. Track 0: Visual Panels (Khung tranh & Hiệu ứng Ken Burns) */}
           <div className="flex-1 min-h-0 relative border-b border-white/[0.06] px-1 py-1.5">
+            {timeline.visual_clips.map((clip) => {
+              const leftPct = (clip.start_time / totalDur) * 100;
+              const widthPct = Math.max(3, (clip.duration / totalDur) * 100);
+              const isCurrent =
+                currentTime >= clip.start_time && currentTime < clip.end_time;
+              const isSelected = clip.clip_id === selectedClipId;
+              const thumbUrl = resolveImageUrl(
+                clip.image_path || timeline.source_image_path,
+              );
+              const motionLabel = getMotionLabel(clip);
+
+              return (
+                <div
+                  key={clip.clip_id}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSeek(clip.start_time);
+                    if (onSelectClip) {
+                      onSelectClip(clip.clip_id);
+                    }
+                  }}
+                  className={`absolute top-1.5 bottom-1.5 rounded-lg border px-2 py-1 transition flex items-center gap-2 overflow-hidden cursor-pointer ${
+                    isSelected
+                      ? "bg-[#1f1a30] border-violet-400 ring-1 ring-violet-400/70 shadow-md shadow-black/50 z-20"
+                      : isCurrent
+                        ? "bg-[#191924] border-white/60 ring-1 ring-white/50 shadow-sm shadow-black/40 z-15"
+                        : "bg-[#12121a] border-white/10 hover:border-white/25 text-zinc-300 z-10"
+                  }`}
+                  style={{
+                    left: `${leftPct}%`,
+                    width: `calc(${widthPct}% - 3px)`,
+                  }}
+                  title={`${clip.panel_id || clip.clip_id} (${clip.duration.toFixed(1)}s) - ${motionLabel}`}
+                >
+                  {/* Thumbnail */}
+                  <div className="w-8 h-8 rounded shrink-0 overflow-hidden bg-zinc-900 border border-white/10 relative">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={thumbUrl}
+                      alt={clip.panel_id}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "/page_01.jpg";
+                      }}
+                    />
+                  </div>
+
+                  {/* Info */}
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <div className="flex items-center justify-between w-full">
+                      <span className="text-[10px] font-mono font-bold text-violet-300 truncate">
+                        {motionLabel}
+                      </span>
+                      <span className="text-[9px] font-mono text-zinc-400 shrink-0 ml-1">
+                        {clip.duration.toFixed(1)}s
+                      </span>
+                    </div>
+                    <span className="text-[9px] font-mono text-zinc-500 truncate">
+                      {clip.panel_id || clip.clip_id}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* 3. Track 1: Thoại (Voice Clips) */}
+          <div className="flex-1 min-h-0 relative px-1 py-1.5">
             {timeline.audio_clips.map((clip) => {
               const leftPct = (clip.start_time / totalDur) * 100;
               const widthPct = Math.max(3, (clip.duration / totalDur) * 100);
@@ -281,147 +319,6 @@ export default function Timeline({
                   <div className="text-[11px] text-zinc-400 line-clamp-2 leading-snug break-words">
                     &ldquo;{clip.text}&rdquo;
                   </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 3. Track 2: BGM (Nhạc nền Manga & Audio Ducking) */}
-          <div className="flex-1 min-h-0 relative border-b border-white/[0.06] px-1 py-1.5">
-            {/* Base BGM Container */}
-            <div
-              className="absolute inset-y-1.5 rounded-lg border border-emerald-500/25 bg-[#111815] text-zinc-200 px-3 py-2 flex items-center justify-between overflow-hidden cursor-pointer shadow-sm hover:border-emerald-500/40 transition"
-              style={{ left: "0%", right: "0%" }}
-            >
-              <div className="flex flex-col justify-center h-full min-w-0 mr-4 z-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm">🎵</span>
-                  <span className="text-xs font-semibold truncate text-emerald-300/90">
-                    Cathedral Romance (BGM Loop)
-                  </span>
-                  <span className="text-[9px] font-mono text-emerald-400/70 bg-emerald-950/50 px-1.5 py-0.5 rounded border border-emerald-800/30 shrink-0">
-                    100% Vol
-                  </span>
-                  {timeline.audio_clips.some(
-                    (c) =>
-                      currentTime >= c.start_time && currentTime < c.end_time,
-                  ) ? (
-                    <span className="text-[9px] font-mono text-amber-300 bg-amber-950/70 px-1.5 py-0.5 rounded border border-amber-600/40 shrink-0 flex items-center gap-1 animate-pulse">
-                      <span>🔉</span>
-                      <span>25% Vol (Ducking)</span>
-                    </span>
-                  ) : (
-                    <span className="text-[9px] font-mono text-emerald-400/70 bg-emerald-950/50 px-1.5 py-0.5 rounded border border-emerald-800/30 shrink-0 flex items-center gap-1">
-                      <span>🔊</span>
-                      <span>100% Vol</span>
-                    </span>
-                  )}
-                </div>
-                <span className="text-[10px] text-zinc-400 font-mono mt-0.5 truncate">
-                  Bản phối lofi cảm xúc tự động lặp lại theo độ dài trang truyện
-                  Tự động hạ xuống 25% khi có giọng nói NamMinh và hồi phục 100%
-                  khi nghỉ
-                </span>
-              </div>
-
-              {/* Decorative Audio Waveform */}
-              <div className="flex items-center gap-1 opacity-50 pointer-events-none shrink-0 pr-2 z-0">
-                <span className="w-[2px] h-3 bg-emerald-400/80 rounded-full animate-pulse" />
-                <span className="w-[2px] h-6 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-4 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-8 bg-emerald-400/80 rounded-full animate-pulse" />
-                <span className="w-[2px] h-5 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-9 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-6 bg-emerald-400/80 rounded-full animate-pulse" />
-                <span className="w-[2px] h-4 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-7 bg-emerald-400/80 rounded-full" />
-                <span className="w-[2px] h-3 bg-emerald-400/80 rounded-full" />
-              </div>
-            </div>
-
-            {/* Audio Ducking Regions Visualization Overlaid on BGM Track */}
-            {timeline.audio_clips.map((clip) => {
-              const leftPct = (clip.start_time / totalDur) * 100;
-              const widthPct = Math.max(3, (clip.duration / totalDur) * 100);
-              const isCurrent =
-                currentTime >= clip.start_time && currentTime < clip.end_time;
-
-              return (
-                <div
-                  key={`duck_${clip.clip_id}`}
-                  className={`absolute inset-y-1.5 rounded-md border border-dashed transition flex items-center justify-between px-2 overflow-hidden pointer-events-none z-10 ${
-                    isCurrent
-                      ? "bg-amber-950/65 border-amber-400/80 shadow-md ring-1 ring-amber-400/50"
-                      : "bg-emerald-950/50 border-emerald-500/40"
-                  }`}
-                  style={{
-                    left: `${leftPct}%`,
-                    width: `calc(${widthPct}% - 2px)`,
-                  }}
-                >
-                  <span
-                    className={`text-[9px] font-mono truncate select-none ${
-                      isCurrent
-                        ? "text-amber-200 font-bold"
-                        : "text-emerald-300/80"
-                    }`}
-                  >
-                    🔉 25% (Ducking)
-                  </span>
-                  <span
-                    className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                      isCurrent
-                        ? "bg-amber-400 animate-ping"
-                        : "bg-emerald-400/60"
-                    }`}
-                  />
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 4. Track 3: SFX (Hiệu ứng âm thanh) */}
-          <div className="flex-1 min-h-0 relative px-1 py-1.5">
-            {sfxMarkers.map((sfx) => {
-              const leftPct = (sfx.startTime / totalDur) * 100;
-              const widthPct = Math.max(4, (sfx.duration / totalDur) * 100);
-
-              return (
-                <div
-                  key={sfx.id}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSeek(sfx.startTime);
-                    const matchingVisual =
-                      timeline.visual_clips.find(
-                        (v) =>
-                          sfx.startTime >= v.start_time &&
-                          sfx.startTime < v.end_time,
-                      ) || timeline.visual_clips[0];
-                    if (matchingVisual && onSelectClip) {
-                      onSelectClip(matchingVisual.clip_id);
-                    }
-                  }}
-                  className={`absolute top-1.5 bottom-1.5 rounded-lg border px-2.5 py-1.5 flex flex-col justify-between overflow-hidden transition cursor-pointer ${sfx.color}`}
-                  style={{
-                    left: `${leftPct}%`,
-                    width: `calc(${widthPct}% - 3px)`,
-                  }}
-                  title={`${sfx.label} (${sfx.duration.toFixed(1)}s)`}
-                >
-                  <div className="flex items-center justify-between w-full">
-                    <span
-                      className={`text-xs font-bold truncate leading-none ${sfx.accent}`}
-                    >
-                      {sfx.label}
-                    </span>
-                    <span className="text-[10px] font-mono opacity-60 shrink-0 ml-1">
-                      {sfx.duration.toFixed(1)}s
-                    </span>
-                  </div>
-                  <span className="text-[10px] text-zinc-400 font-mono truncate leading-none">
-                    {sfx.type}
-                  </span>
                 </div>
               );
             })}

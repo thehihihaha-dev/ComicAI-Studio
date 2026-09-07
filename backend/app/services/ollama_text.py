@@ -77,8 +77,10 @@ def call_text_model(
                 f"Text model returned invalid JSON: {raw_response}"
             ) from error
 
+        if isinstance(parsed, list):
+            return {"scenes": parsed}
         if not isinstance(parsed, dict):
-            raise RuntimeError("Text model JSON response must be an object.")
+            raise RuntimeError("Text model JSON response must be an object or array.")
         return parsed
 
 

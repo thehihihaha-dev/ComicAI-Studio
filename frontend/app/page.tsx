@@ -58,7 +58,7 @@ export default function Home() {
         }
 
         const data = await response.json();
-        if (data && Array.isArray(data.projects) && data.projects.length > 0) {
+        if (data && Array.isArray(data.projects)) {
           setProjects(data.projects);
         } else {
           setProjects(FALLBACK_PROJECTS);
@@ -156,11 +156,11 @@ export default function Home() {
       setIsModalOpen(false);
       setProjectName("");
       router.push(`/projects/${newProj.id}`);
-    } catch (err) {
-      console.warn("Backend create failed, fallback to mock project:", err);
-      const fallbackId = `proj_${Date.now()}`;
-      setIsModalOpen(false);
-      router.push(`/projects/${fallbackId}`);
+    } catch (err: unknown) {
+      console.error("Backend create project failed:", err);
+      setCreateError(
+        "Không thể tạo dự án trên server. Vui lòng đảm bảo backend đang chạy tại port 8000 và thử lại.",
+      );
     } finally {
       setIsCreating(false);
     }
